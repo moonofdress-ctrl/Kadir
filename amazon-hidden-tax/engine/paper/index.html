@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>Paper Trail — style frames</title>
+    <script src="vendor/gsap.min.js"></script>
+    <style>
+      /* Fonts: OFL, bundled from @fontsource (licenses in assets/fonts). */
+      @font-face { font-family: "Anton"; src: url("assets/fonts/anton-latin-400-normal.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Plex Mono"; src: url("assets/fonts/ibm-plex-mono-latin-400-normal.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Plex Mono"; src: url("assets/fonts/ibm-plex-mono-latin-500-normal.woff2") format("woff2"); font-weight: 500; }
+      @font-face { font-family: "Plex Mono"; src: url("assets/fonts/ibm-plex-mono-latin-700-normal.woff2") format("woff2"); font-weight: 700; }
+      @font-face { font-family: "Source Serif"; src: url("assets/fonts/source-serif-4-latin-400-normal.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "Source Serif"; src: url("assets/fonts/source-serif-4-latin-600-normal.woff2") format("woff2"); font-weight: 600; }
+      @font-face { font-family: "Source Serif"; src: url("assets/fonts/source-serif-4-latin-700-normal.woff2") format("woff2"); font-weight: 700; }
+      @font-face { font-family: "Inter Tight"; src: url("assets/fonts/inter-tight-latin-700-normal.woff2") format("woff2"); font-weight: 700; }
+      @font-face { font-family: "Inter Tight"; src: url("assets/fonts/inter-tight-latin-800-normal.woff2") format("woff2"); font-weight: 800; }
+
+      :root {
+        --paper: #ede6d6;
+        --paper-hi: #faf7ef;
+        --ink: #1b1a17;
+        --ink-2: #4a463d;
+        --marker: #ffe74c;
+        --stamp: #c8102e;
+        --money: #2f6b4f;
+        --kraft: #c9a774;
+        --serif: "Source Serif", Georgia, serif;
+        --mono: "Plex Mono", monospace;
+        --kin: "Anton", sans-serif;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #14100c; }
+      #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; }
+      .seg { position: absolute; inset: 0; overflow: hidden; }
+      .fill { position: absolute; inset: 0; }
+
+      /* shared finishing layers */
+      .vignette { position: absolute; inset: 0; pointer-events: none;
+        background: radial-gradient(ellipse at 50% 45%, transparent 55%, rgba(10, 6, 2, 0.55) 100%); }
+      .grain { position: absolute; left: -60px; top: -60px; width: 2040px; height: 1200px; pointer-events: none;
+        filter: url(#grain); opacity: 0.22; mix-blend-mode: multiply; }
+
+      /* ---------- A: evidence desk ---------- */
+      .desk { position: absolute; inset: 0; background: url("assets/tex/Wood051.jpg") center / 900px; }
+      .desk::after { content: ""; position: absolute; inset: 0; background: rgba(28, 16, 8, 0.25); }
+      .cam { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; }
+      .doc { position: absolute; left: 230px; top: 46px; width: 760px; height: 983px;
+        background: url("assets/docs/complaint_p9.jpg") 0 0 / 100% 100%;
+        box-shadow: 0 2px 2px rgba(0,0,0,.35), 0 18px 40px rgba(0,0,0,.45); transform: rotate(-2.2deg); transform-origin: 50% 50%; }
+      .doc .tex { position: absolute; inset: 0; background: url("assets/tex/Paper004.jpg") center / 700px; mix-blend-mode: multiply; opacity: .28; }
+      .hl { position: absolute; background: var(--marker); mix-blend-mode: multiply; opacity: .8; border-radius: 3px 8px 5px 9px; transform-origin: 0 50%; }
+      .note { position: absolute; left: 1080px; top: 120px; width: 300px; height: 280px; padding: 28px 26px; background: #f7e36b;
+        transform: rotate(4deg); box-shadow: 0 14px 26px rgba(0,0,0,.35); font-family: var(--mono); color: #2b2614; }
+      .note .k { font-size: 20px; font-weight: 700; letter-spacing: .08em; }
+      .note .v { margin-top: 18px; font-size: 30px; font-weight: 500; line-height: 1.25; }
+      .card { position: absolute; left: 1150px; top: 560px; width: 520px; padding: 30px 34px; background: var(--paper-hi);
+        transform: rotate(-3deg); box-shadow: 0 16px 30px rgba(0,0,0,.4); }
+      .card .k { font-family: var(--mono); font-size: 20px; font-weight: 700; letter-spacing: .14em; color: var(--ink-2); }
+      .card .v { margin-top: 12px; font-family: var(--serif); font-size: 44px; font-weight: 700; color: var(--ink); line-height: 1.1; }
+      .card .bar { display: inline-block; width: 120px; height: 38px; background: #111; vertical-align: -6px; }
+      .pin { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px; border-radius: 50%;
+        background: radial-gradient(circle at 35% 35%, #ff6b6b, #9a0d1f 70%); box-shadow: 0 4px 6px rgba(0,0,0,.45); }
+      .string { position: absolute; inset: 0; overflow: visible; }
+      .stamp { position: absolute; left: 1130px; top: 470px; padding: 16px 30px 12px; border: 7px double var(--stamp); color: var(--stamp);
+        font-family: var(--kin); font-size: 96px; letter-spacing: .06em; line-height: 1; transform: rotate(-9deg); filter: url(#ink); opacity: .9; }
+      .stamp small { display: block; font-family: var(--mono); font-weight: 700; font-size: 24px; letter-spacing: .16em; margin-top: 6px; }
+      .strip { position: absolute; left: 110px; bottom: 74px; max-width: 1240px; padding: 22px 34px 24px; transform: rotate(-.6deg); isolation: isolate; }
+      .strip::before, .d-strip::before, .c-title::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--paper-hi);
+        filter: url(#deckle) drop-shadow(0 10px 14px rgba(0,0,0,.4)); }
+      .strip .q { font-family: var(--serif); font-size: 40px; font-weight: 600; color: var(--ink); line-height: 1.2; }
+      .strip .s { margin-top: 10px; font-family: var(--mono); font-size: 20px; color: var(--ink-2); letter-spacing: .04em; }
+
+      /* ---------- B: receipt + scissors ---------- */
+      .kraft { position: absolute; inset: 0; background: url("assets/tex/Cardboard002.jpg") center / 1100px; }
+      .kraft::after { content: ""; position: absolute; inset: 0; background: rgba(60, 38, 14, .18); }
+      .rc-wrap { position: absolute; left: 150px; top: 0; width: 600px; height: 1080px; overflow: hidden; }
+      .receipt { position: absolute; left: 30px; top: 1080px; width: 540px; padding: 50px 40px 60px; background: var(--paper-hi);
+        font-family: var(--mono); color: #26241f; box-shadow: 0 18px 34px rgba(0,0,0,.35);
+        -webkit-mask: linear-gradient(#000 0 0) content-box, conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% 100% / 26px 100% repeat-x;
+        mask: conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) 50% 0 / 26px 51% repeat-x, conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% 100% / 26px 51% repeat-x; }
+      .receipt .tex { position: absolute; inset: 0; background: url("assets/tex/Paper001.jpg") center / 600px; mix-blend-mode: multiply; opacity: .25; }
+      .rc-h { text-align: center; font-size: 30px; font-weight: 700; letter-spacing: .1em; }
+      .rc-sub { text-align: center; font-size: 20px; margin-top: 6px; color: #6a665c; }
+      .rc-hr { margin: 22px 0; border-top: 3px dashed #8d887c; }
+      .rc-l { display: flex; justify-content: space-between; font-size: 29px; line-height: 1.9; font-weight: 500; }
+      .rc-l.amz { color: var(--stamp); }
+      .rc-l.tot { font-weight: 700; font-size: 32px; }
+      .rc-l.keep { color: #fff; background: var(--money); padding: 2px 12px; margin: 6px -12px 0; }
+      .bill-area { position: absolute; left: 840px; top: 170px; width: 960px; height: 820px; }
+      .slice { position: absolute; top: 0; height: 410px; overflow: hidden; box-shadow: 0 10px 18px rgba(0,0,0,.3); }
+      .slice svg { position: absolute; top: 0; }
+      .slice .tint { position: absolute; inset: 0; background: var(--stamp); mix-blend-mode: multiply; opacity: 0; }
+      .scissors { position: absolute; left: 0; top: 0; width: 110px; height: 110px; margin: -55px 0 0 -55px; opacity: 0; }
+      .pile-label { position: absolute; font-family: var(--kin); font-size: 74px; letter-spacing: .03em; line-height: 1; }
+      .pile-label small { display: block; font-family: var(--mono); font-size: 22px; letter-spacing: .14em; font-weight: 700; margin-top: 8px; }
+
+      /* ---------- C: 3D tollbooth ---------- */
+      #three-wrap { position: absolute; inset: 0; background: #d9c9a8; }
+      #three-wrap canvas { position: absolute; inset: 0; width: 1920px; height: 1080px; }
+      .paper-over { position: absolute; inset: 0; background: url("assets/tex/Paper004.jpg") center / 900px; mix-blend-mode: multiply; opacity: .35; pointer-events: none; }
+      .c-title { position: absolute; left: 90px; bottom: 70px; padding: 20px 34px 18px; color: var(--ink); isolation: isolate;
+        font-family: var(--kin); font-size: 64px; letter-spacing: .04em; transform: rotate(-1.5deg); }
+      .c-title small { display: block; font-family: var(--mono); font-weight: 700; font-size: 22px; letter-spacing: .12em; color: var(--ink-2); margin-top: 6px; }
+      .c-stamp { left: 1330px; top: 740px; font-size: 84px; background: var(--paper-hi); filter: none; box-shadow: 0 12px 22px rgba(0,0,0,.35); }
+
+      /* ---------- D: footage + kinetic type ---------- */
+      .foot-vid { position: absolute; inset: -40px; width: 2000px; height: 1160px; object-fit: cover;
+        filter: sepia(.35) saturate(.6) contrast(1.15) brightness(.72); }
+      .grade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(40, 24, 8, .15), rgba(20, 10, 4, .55)); }
+      .kin { position: absolute; left: 0; width: 1920px; text-align: center; font-family: var(--kin); color: var(--paper-hi);
+        text-shadow: 0 8px 30px rgba(0,0,0,.45); line-height: .9; }
+      .kin.big { top: 230px; font-size: 330px; letter-spacing: -.01em; }
+      .kin.mid { top: 560px; font-size: 140px; letter-spacing: .12em; }
+      .d-strip { position: absolute; left: 50%; top: 790px; transform: translateX(-50%) rotate(-1deg); padding: 18px 34px 16px;
+        isolation: isolate; font-family: var(--mono); font-size: 34px; font-weight: 700; color: var(--ink);
+        letter-spacing: .06em; white-space: nowrap; }
+      .d-strip mark { background: var(--marker); color: var(--ink); padding: 0 8px; }
+      .src { position: absolute; left: 110px; bottom: 40px; font-family: var(--mono); font-size: 18px; color: rgba(250, 247, 239, .75); letter-spacing: .06em; }
+      .label-chip { position: absolute; left: 110px; top: 70px; font-family: var(--mono); font-size: 22px; font-weight: 700; letter-spacing: .2em;
+        color: var(--paper-hi); background: rgba(0,0,0,.35); padding: 8px 14px; }
+    </style>
+  </head>
+  <body>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <filter id="grain" x="0" y="0" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="11" stitchTiles="stitch" />
+          <feColorMatrix type="saturate" values="0" />
+          <feComponentTransfer><feFuncA type="linear" slope="1" /></feComponentTransfer>
+        </filter>
+        <filter id="deckle" x="-3%" y="-10%" width="106%" height="120%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="4" seed="7" />
+          <feDisplacementMap in="SourceGraphic" scale="10" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+        <filter id="ink" x="-5%" y="-5%" width="110%" height="110%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="23" result="n" />
+          <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.6 1.75" result="m" />
+          <feComposite in="SourceGraphic" in2="m" operator="in" />
+        </filter>
+        <!-- Stylized note, clearly not currency: no portrait, no seals, "PAPER TRAIL NOTE" -->
+        <symbol id="bill-art" viewBox="0 0 960 410">
+          <rect x="0" y="0" width="960" height="410" fill="#cfd8bf" />
+          <rect x="16" y="16" width="928" height="378" fill="none" stroke="#5f7356" stroke-width="5" />
+          <rect x="30" y="30" width="900" height="350" fill="none" stroke="#7d8f70" stroke-width="2" stroke-dasharray="2 6" />
+          <g stroke="#9fb08f" stroke-width="1.4" fill="none" opacity=".8">
+            <path d="M40 205 C 160 120, 280 290, 400 205 S 640 120, 760 205 S 880 290, 920 205" />
+            <path d="M40 225 C 160 140, 280 310, 400 225 S 640 140, 760 225 S 880 310, 920 225" />
+            <path d="M40 185 C 160 100, 280 270, 400 185 S 640 100, 760 185 S 880 270, 920 185" />
+          </g>
+          <ellipse cx="480" cy="205" rx="170" ry="120" fill="#e3e8d6" stroke="#5f7356" stroke-width="4" />
+          <text x="480" y="195" text-anchor="middle" font-family="Source Serif, serif" font-weight="700" font-size="54" fill="#3f5238">ONE</text>
+          <text x="480" y="250" text-anchor="middle" font-family="Source Serif, serif" font-weight="700" font-size="44" fill="#3f5238">HUNDRED</text>
+          <text x="70" y="110" font-family="Anton, sans-serif" font-size="92" fill="#3f5238">100</text>
+          <text x="770" y="370" font-family="Anton, sans-serif" font-size="92" fill="#3f5238">100</text>
+          <text x="480" y="368" text-anchor="middle" font-family="Plex Mono, monospace" font-weight="700" font-size="20" letter-spacing="6" fill="#5f7356">PAPER TRAIL NOTE</text>
+        </symbol>
+      </defs>
+    </svg>
+
+    <div id="root" data-composition-id="main" data-start="0" data-duration="20" data-width="1920" data-height="1080">
+      <!-- A · evidence desk -->
+      <div id="segA" class="seg clip" data-start="0" data-duration="5" data-track-index="0">
+        <div class="desk"></div>
+        <div class="cam" id="camA">
+          <div class="doc" id="doc"><div class="tex"></div>
+            <div class="hl" id="hl1" style="left: 437px; top: 165px; width: 236px; height: 16px"></div>
+            <div class="hl" id="hl2" style="left: 66px; top: 200px; width: 403px; height: 16px"></div>
+            <div class="hl" id="hl3" style="left: 442px; top: 474px; width: 171px; height: 16px"></div>
+          </div>
+          <svg class="string" width="1920" height="1080"><path id="str" d="M 590 120 C 800 260, 1000 520, 1270 600" fill="none" stroke="#b3121f" stroke-width="4" /></svg>
+          <div class="pin" style="left: 590px; top: 120px"></div>
+          <div class="pin" style="left: 1270px; top: 600px"></div>
+          <div class="note" id="note"><div class="k">FTC v. AMAZON</div><div class="v">Dkt. 1 · p. 9<br />¶16–17<br />filed 9/26/23</div></div>
+          <div class="card" id="card"><div class="k">BUY BOX SHARE OF SALES</div><div class="v">FTC figure: <span class="bar"></span> %<br />(redacted)</div></div>
+        </div>
+        <div class="stamp" id="stampA">ALLEGED<small>FTC CLAIM · NOT A RULING</small></div>
+        <div class="strip" id="stripA"><div class="q">FTC: discounting sellers can become “effectively invisible.”</div><div class="s">FTC v. Amazon · W.D. Wash. No. 2:23-cv-01495 · Dkt. 1, p. 9</div></div>
+        <div class="grain"></div><div class="vignette"></div>
+      </div>
+
+      <!-- B · receipt + scissors -->
+      <div id="segB" class="seg clip" data-start="5" data-duration="5" data-track-index="0">
+        <div class="kraft"></div>
+        <div class="rc-wrap"><div class="receipt" id="receipt"><div class="tex"></div>
+          <div class="rc-h">*** CHECKOUT ***</div><div class="rc-sub">per $100 of seller sales · model</div><div class="rc-hr"></div>
+          <div class="rc-l" id="r0"><span>SALE</span><span>$100.00</span></div>
+          <div class="rc-l" id="r1"><span>PRODUCT+FREIGHT</span><span>-28.00</span></div>
+          <div class="rc-l amz" id="r2"><span>REFERRAL FEE 17%</span><span>-17.00</span></div>
+          <div class="rc-l amz" id="r3"><span>FBA + STORAGE</span><span>-20.00</span></div>
+          <div class="rc-l amz" id="r4"><span>SPONSORED ADS</span><span>-15.00</span></div>
+          <div class="rc-l" id="r5"><span>RETURNS</span><span>-10.00</span></div>
+          <div class="rc-hr"></div>
+          <div class="rc-l tot amz" id="r6"><span>AMAZON TOOK</span><span>$52.00</span></div>
+          <div class="rc-l tot keep" id="r7"><span>YOU KEEP</span><span>$10.00</span></div>
+        </div></div>
+        <div class="bill-area" id="bill"></div>
+        <svg class="scissors" id="sc" viewBox="0 0 110 110"><g fill="none" stroke="#1b1a17" stroke-width="7" stroke-linecap="round">
+          <path d="M55 8 L40 70" /><path d="M55 8 L70 70" /></g>
+          <circle cx="36" cy="86" r="16" fill="none" stroke="#c8102e" stroke-width="8" /><circle cx="74" cy="86" r="16" fill="none" stroke="#c8102e" stroke-width="8" />
+          <circle cx="55" cy="48" r="5" fill="#1b1a17" /></svg>
+        <div class="pile-label" id="lblAmz" style="left: 1480px; top: 690px; color: #c8102e">AMAZON $52<small>REFERRAL + FBA + ADS</small></div>
+        <div class="pile-label" id="lblSup" style="left: 1030px; top: 650px; color: #4a463d; font-size: 46px">FACTORY $28<small>PRODUCT + FREIGHT</small></div>
+        <div class="pile-label" id="lblYou" style="left: 800px; top: 650px; color: #2f6b4f">YOU<br />$10<small>SELLER KEEPS</small></div>
+        <div class="grain"></div><div class="vignette"></div>
+      </div>
+
+      <!-- C · 3D tollbooth -->
+      <div id="segC" class="seg clip" data-start="10" data-duration="5" data-track-index="0">
+        <div id="three-wrap"><canvas id="three" width="1920" height="1080"></canvas></div>
+        <div class="paper-over"></div>
+        <div class="c-title" id="cTitle">THE AD AUCTION<small>HIGHEST BID GETS THE SLOT. EVERYONE ELSE WAITS.</small></div>
+        <div class="stamp c-stamp" id="stampC">+250%?<small>FTC ALLEGES · PEAK DAYS</small></div>
+        <div class="grain"></div><div class="vignette"></div>
+      </div>
+
+      <!-- D · footage + kinetic type -->
+      <video id="vidD" class="foot-vid clip" src="assets/video/warehouse_aerial.mp4" muted playsinline data-start="15" data-duration="5" data-media-start="1" data-track-index="1"></video>
+      <div id="segD" class="seg clip" data-start="15" data-duration="5" data-track-index="0">
+        <div class="grade"></div>
+        <div class="label-chip" id="chipD">AMAZON · FORM 10-K · FY2025</div>
+        <div class="kin big" id="k1">$68.6</div>
+        <div class="kin mid" id="k2">BILLION</div>
+        <div class="d-strip" id="stripD">ONE LINE: <mark>ADVERTISING SERVICES</mark> · +22% IN A YEAR</div>
+        <div class="src">Source: Amazon.com, Inc. FY2025 results · footage: Mixkit</div>
+        <div class="grain"></div><div class="vignette"></div>
+      </div>
+    </div>
+
+    <script type="module">
+      import * as THREE from "./vendor/three.module.js";
+      const tl = gsap.timeline({ paused: true });
+
+      /* deterministic film-grain jitter, 12 fps */
+      let seed = 1234567;
+      const rnd = () => ((seed = (seed * 1103515245 + 12345) % 2147483648) / 2147483648);
+      document.querySelectorAll(".grain").forEach((g) => {
+        for (let t = 0; t < 20; t += 1 / 12) tl.set(g, { x: Math.round(rnd() * 60 - 30), y: Math.round(rnd() * 60 - 30) }, t);
+      });
+
+      /* ---------- A: evidence desk (0–5s) ---------- */
+      tl.fromTo("#note", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 0.15);
+      tl.fromTo("#card", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 0.3);
+      // push in to ¶16 (the "effectively invisible" lines)
+      tl.to("#camA", { scale: 2.25, x: -560, y: -170, duration: 1.3, ease: "power3.inOut" }, 1.0);
+      ["#hl1", "#hl2"].forEach((h, i) => tl.fromTo(h, { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: "power1.out" }, 2.35 + i * 0.45));
+      tl.fromTo("#stampA", { opacity: 0, scale: 1.7 }, { opacity: 0.9, scale: 1, duration: 0.18, ease: "power4.in" }, 3.4);
+      tl.fromTo("#segA", { x: 0 }, { x: 9, duration: 0.05, yoyo: true, repeat: 3, ease: "none" }, 3.58);
+      tl.fromTo("#stripA", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 2.2);
+      // drift to ¶17 ("a price floor everywhere else")
+      tl.to("#camA", { y: -900, x: -600, duration: 0.9, ease: "power2.inOut" }, 4.0);
+      tl.fromTo("#hl3", { scaleX: 0 }, { scaleX: 1, duration: 0.4 }, 4.55);
+
+      /* ---------- B: receipt + scissors (5–10s) ---------- */
+      const bill = document.getElementById("bill");
+      const parts = [ // width share, destination, label
+        { w: 0.28, to: "sup" }, { w: 0.17, to: "amz" }, { w: 0.20, to: "amz" }, { w: 0.15, to: "amz" }, { w: 0.10, to: "loss" }, { w: 0.10, to: "you" } ];
+      let x = 0; const BW = 960;
+      const slices = parts.map((p) => {
+        const w = Math.round(p.w * BW), d = document.createElement("div");
+        d.className = "slice"; d.style.left = x + "px"; d.style.width = w + "px";
+        d.innerHTML = `<svg width="960" height="410" style="left:${-x}px"><use href="#bill-art"/></svg><div class="tint"></div>`;
+        bill.appendChild(d); const s = { el: d, x, w, ...p }; x += w; return s;
+      });
+      const RC_TOP = 5.0;
+      tl.fromTo("#receipt", { y: 0 }, { y: -560, duration: 0.6, ease: "power2.out" }, RC_TOP + 0.1);
+      tl.fromTo(bill, { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.4 }, RC_TOP + 0.1);
+      const rows = ["#r0", "#r1", "#r2", "#r3", "#r4", "#r5", "#r6", "#r7"];
+      rows.forEach((r, i) => tl.fromTo(r, { opacity: 0 }, { opacity: 1, duration: 0.05 }, RC_TOP + 0.5 + i * 0.36));
+      tl.to("#receipt", { y: -900, duration: 2.5, ease: "none" }, RC_TOP + 0.7);
+      // final local x (inside .bill-area) per destination; Amazon slices pile up on the right
+      const destX = { you: 0, sup: 190, loss: 500 };
+      let amzOff = 0;
+      slices.forEach((s, i) => {
+        const t = RC_TOP + 0.5 + (i + 1) * 0.36;
+        if (i > 0) {
+          tl.fromTo("#sc", { x: 840 + s.x, y: 150, opacity: 1 }, { x: 840 + s.x, y: 600, opacity: 1, duration: 0.22, ease: "none", immediateRender: false }, t - 0.24);
+        }
+        let tx, ty = 40, rot = 0;
+        if (s.to === "amz") { tx = 640 + amzOff * 18; ty = 20 + amzOff * 22; rot = -5 + amzOff * 4; amzOff += 1; }
+        else { tx = destX[s.to]; ty = s.to === "loss" ? 80 : 40; rot = s.to === "loss" ? 9 : (s.to === "sup" ? -2 : 0); }
+        tl.to(s.el, { x: tx - s.x, y: ty, rotation: rot, duration: 0.5, ease: "power3.out" }, t + 0.02);
+        if (s.to === "amz") tl.to(s.el.querySelector(".tint"), { opacity: 0.55, duration: 0.3 }, t + 0.1);
+        if (s.to === "loss") tl.to(s.el, { opacity: 0.35, duration: 0.4 }, t + 0.3);
+      });
+      tl.to("#sc", { opacity: 0, duration: 0.2 }, RC_TOP + 2.8);
+      tl.fromTo("#lblAmz", { opacity: 0, scale: 1.3 }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(2)" }, RC_TOP + 3.3);
+      tl.fromTo("#lblYou", { opacity: 0, scale: 1.3 }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(2)" }, RC_TOP + 3.6);
+      tl.fromTo("#lblSup", { opacity: 0 }, { opacity: 1, duration: 0.3 }, RC_TOP + 3.0);
+
+      /* ---------- C: 3D tollbooth (10–15s) ---------- */
+      const canvas = document.getElementById("three");
+      const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, preserveDrawingBuffer: true });
+      renderer.setPixelRatio(1); renderer.setSize(1920, 1080, false);
+      renderer.setClearColor(0xd9c9a8);
+      const scene = new THREE.Scene();
+      scene.fog = new THREE.Fog(0xd9c9a8, 30, 70);
+      const camera = new THREE.PerspectiveCamera(32, 1920 / 1080, 0.1, 200);
+      // deterministic paper texture (no async image loading)
+      function paperTex(base, speck, n = 512, s0 = 99) {
+        const c = document.createElement("canvas"); c.width = c.height = n; const g = c.getContext("2d");
+        g.fillStyle = base; g.fillRect(0, 0, n, n); let s = s0;
+        const r = () => ((s = (s * 16807) % 2147483647) / 2147483647);
+        for (let i = 0; i < 9000; i++) { g.fillStyle = `rgba(${speck},${0.03 + r() * 0.07})`; g.fillRect(r() * n, r() * n, 1 + r() * 2, 1 + r() * 2); }
+        for (let i = 0; i < 260; i++) { g.strokeStyle = `rgba(${speck},0.06)`; g.beginPath(); const x0 = r() * n, y0 = r() * n; g.moveTo(x0, y0); g.lineTo(x0 + r() * 30 - 15, y0 + r() * 30 - 15); g.stroke(); }
+        const t = new THREE.CanvasTexture(c); t.wrapS = t.wrapT = THREE.RepeatWrapping; t.colorSpace = THREE.SRGBColorSpace; return t;
+      }
+      const mat = (base, speck, rep = 1) => { const t = paperTex(base, speck); t.repeat.set(rep, rep); return new THREE.MeshToonMaterial({ map: t }); };
+      const ground = new THREE.Mesh(new THREE.PlaneGeometry(120, 120), mat("#cdb88f", "60,40,20", 12));
+      ground.rotation.x = -Math.PI / 2; scene.add(ground);
+      const LANES = 3, LW = 3.2;
+      for (let i = 0; i < LANES; i++) {
+        const lane = new THREE.Mesh(new THREE.PlaneGeometry(LW - 0.3, 80), mat("#3b3833", "255,255,255", 6));
+        lane.rotation.x = -Math.PI / 2; lane.position.set((i - 1) * LW, 0.01, -20); scene.add(lane);
+        for (let z = -60; z < 18; z += 4) { const d = new THREE.Mesh(new THREE.PlaneGeometry(0.16, 1.8), new THREE.MeshBasicMaterial({ color: 0xede6d6 }));
+          d.rotation.x = -Math.PI / 2; d.position.set((i - 1) * LW + LW / 2, 0.02, z); if (i < LANES - 1) scene.add(d); }
+      }
+      // gantry with "SPONSORED" signs
+      const post = mat("#2b2925", "255,255,255"), gz = -4;
+      [-1, 1].forEach((sx) => { const p = new THREE.Mesh(new THREE.BoxGeometry(0.4, 6, 0.4), post); p.position.set(sx * (LW * 1.5 + 0.4), 3, gz); scene.add(p); });
+      const beam = new THREE.Mesh(new THREE.BoxGeometry(LW * 3 + 1.4, 0.5, 0.5), post); beam.position.set(0, 6, gz); scene.add(beam);
+      const signCanvas = document.createElement("canvas"); signCanvas.width = 512; signCanvas.height = 160;
+      const signTex = new THREE.CanvasTexture(signCanvas); signTex.colorSpace = THREE.SRGBColorSpace;
+      function drawSign() {
+        const g = signCanvas.getContext("2d"); g.fillStyle = "#c8102e"; g.fillRect(0, 0, 512, 160);
+        g.strokeStyle = "#faf7ef"; g.lineWidth = 8; g.strokeRect(10, 10, 492, 140);
+        g.fillStyle = "#faf7ef"; g.font = "96px Anton, sans-serif"; g.textAlign = "center"; g.textBaseline = "middle"; g.fillText("SPONSORED", 256, 86);
+        signTex.needsUpdate = true;
+      }
+      drawSign();
+      for (let i = 0; i < LANES; i++) { const s = new THREE.Mesh(new THREE.PlaneGeometry(2.8, 0.875), new THREE.MeshBasicMaterial({ map: signTex }));
+        s.position.set((i - 1) * LW, 5.2, gz + 0.3); scene.add(s); }
+      // barrier arms
+      const arms = [];
+      for (let i = 0; i < LANES; i++) {
+        const pivot = new THREE.Group(); pivot.position.set((i - 1) * LW - LW / 2 + 0.25, 1.1, gz + 1.2);
+        const arm = new THREE.Mesh(new THREE.BoxGeometry(LW - 0.4, 0.18, 0.18), mat("#faf7ef", "200,16,46")); arm.position.x = (LW - 0.4) / 2; pivot.add(arm);
+        for (let k = 0; k < 4; k++) { const st = new THREE.Mesh(new THREE.BoxGeometry(0.32, 0.2, 0.2), new THREE.MeshBasicMaterial({ color: 0xc8102e })); st.position.x = 0.4 + k * 0.75; pivot.add(st); }
+        scene.add(pivot); arms.push(pivot);
+      }
+      // booth
+      const booth = new THREE.Mesh(new THREE.BoxGeometry(1.4, 2.6, 1.6), mat("#ede6d6", "60,40,20")); booth.position.set(-LW * 1.5 - 1.6, 1.3, gz + 1.0); scene.add(booth);
+      const roof = new THREE.Mesh(new THREE.BoxGeometry(1.9, 0.25, 2.1), post); roof.position.set(booth.position.x, 2.75, booth.position.z); scene.add(roof);
+      // queued product boxes (kraft) per lane
+      const boxMat = mat("#b98e55", "70,40,10", 1), boxes = [];
+      for (let i = 0; i < LANES; i++) for (let k = 0; k < 6; k++) {
+        const b = new THREE.Mesh(new THREE.BoxGeometry(1.3, 1.0, 1.3), boxMat); b.userData = { lane: i, k }; scene.add(b); boxes.push(b);
+        const tape = new THREE.Mesh(new THREE.BoxGeometry(0.22, 1.02, 1.32), new THREE.MeshBasicMaterial({ color: 0xd9c49a })); b.add(tape);
+      }
+      // coins piling next to the booth
+      const coinMat = new THREE.MeshToonMaterial({ color: 0xc9a227 }), coins = [];
+      for (let k = 0; k < 18; k++) { const c = new THREE.Mesh(new THREE.CylinderGeometry(0.32, 0.32, 0.08, 24), coinMat); scene.add(c); coins.push(c); }
+      scene.add(new THREE.HemisphereLight(0xfff6e6, 0x8a7350, 1.6));
+      const sun = new THREE.DirectionalLight(0xffffff, 1.6); sun.position.set(-8, 14, 10); scene.add(sun);
+
+      const state = { p: 0 };
+      function render3() {
+        const p = state.p;
+        camera.position.set(9 - p * 4, 7.5 - p * 2.5, 14 - p * 4);
+        camera.lookAt(0, 2.2, gz - 2 + p * 1.5);
+        const WIN = 2; // the highest bidder's lane
+        boxes.forEach((b) => { const { lane, k } = b.userData;
+          const creep = Math.min(1.4, p * 2.2);                        // everyone rolls up to the barrier
+          const pass = lane === WIN ? Math.max(0, p - 0.45) * 18 : 0;  // only the winner goes through
+          b.position.set((lane - 1) * LW, 0.5, gz - 2.2 - k * 2.2 + creep + pass); });
+        arms.forEach((a, i) => { const open = i === WIN ? Math.max(0, Math.min(1, (p - 0.3) * 5)) : 0; a.rotation.z = open * 1.3; });
+        coins.forEach((c, k) => { const t = Math.max(0, Math.min(1, p * 2.2 - k * 0.08)); c.position.set(booth.position.x + 1.4 + (k % 3) * 0.1, 0.05 + Math.floor(k / 3) * 0.085 + (1 - t) * 4, gz + 2.4 + (k % 2) * 0.05); c.visible = t > 0; });
+        renderer.render(scene, camera);
+      }
+      render3();
+      tl.fromTo(state, { p: 0 }, { p: 1, duration: 5, ease: "none", onUpdate: render3 }, 10);
+      tl.fromTo("#cTitle", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.45, ease: "power2.out" }, 10.3);
+      tl.fromTo("#stampC", { opacity: 0, scale: 1.7 }, { opacity: 0.9, scale: 1, duration: 0.18, ease: "power4.in" }, 12.6);
+      document.fonts.ready.then(() => { drawSign(); render3(); });
+
+      /* ---------- D: footage + kinetic type (15–20s) ---------- */
+      tl.fromTo("#vidD", { scale: 1.0 }, { scale: 1.08, duration: 5, ease: "none" }, 15);
+      tl.fromTo("#chipD", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 15.2);
+      tl.fromTo("#k1", { opacity: 0, scale: 1.35 }, { opacity: 1, scale: 1, duration: 0.22, ease: "power4.in" }, 15.6);
+      tl.fromTo("#segD", { x: 0 }, { x: 10, duration: 0.04, yoyo: true, repeat: 5, ease: "none" }, 15.82);
+      tl.fromTo("#k2", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 16.1);
+      tl.fromTo("#stripD", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" }, 16.7);
+
+      tl.set({}, {}, 20);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

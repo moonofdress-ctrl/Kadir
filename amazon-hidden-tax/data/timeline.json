@@ -4,213 +4,213 @@
     {
       "scene": 1,
       "start": 0.0,
-      "duration": 122.081,
+      "duration": 115.788,
       "steps": [
         {
           "step": 1,
           "start": 0.9,
-          "duration": 46.445,
+          "duration": 44.056,
           "audio": "voiceover/steps/s1_1.wav"
         },
         {
           "step": 2,
-          "start": 47.345,
-          "duration": 19.166,
+          "start": 44.956,
+          "duration": 18.121,
           "audio": "voiceover/steps/s1_2.wav"
         },
         {
           "step": 3,
-          "start": 66.511,
-          "duration": 9.993,
+          "start": 63.077,
+          "duration": 9.374,
           "audio": "voiceover/steps/s1_3.wav"
         },
         {
           "step": 4,
-          "start": 76.504,
-          "duration": 9.31,
+          "start": 72.451,
+          "duration": 8.691,
           "audio": "voiceover/steps/s1_4.wav"
         },
         {
           "step": 5,
-          "start": 85.814,
-          "duration": 10.526,
+          "start": 81.142,
+          "duration": 10.057,
           "audio": "voiceover/steps/s1_5.wav"
         },
         {
           "step": 6,
-          "start": 96.34,
-          "duration": 2.889,
+          "start": 91.199,
+          "duration": 2.761,
           "audio": "voiceover/steps/s1_6.wav"
         },
         {
           "step": 7,
-          "start": 99.229,
-          "duration": 22.153,
+          "start": 93.959,
+          "duration": 21.129,
           "audio": "voiceover/steps/s1_7.wav"
         }
       ]
     },
     {
       "scene": 2,
-      "start": 122.081,
-      "duration": 123.231,
+      "start": 115.788,
+      "duration": 117.322,
       "steps": [
         {
           "step": 1,
-          "start": 122.981,
-          "duration": 36.355,
+          "start": 116.688,
+          "duration": 34.691,
           "audio": "voiceover/steps/s2_1.wav"
         },
         {
           "step": 2,
-          "start": 159.336,
-          "duration": 16.777,
+          "start": 151.379,
+          "duration": 16.009,
           "audio": "voiceover/steps/s2_2.wav"
         },
         {
           "step": 3,
-          "start": 176.113,
-          "duration": 15.774,
+          "start": 167.387,
+          "duration": 14.921,
           "audio": "voiceover/steps/s2_3.wav"
         },
         {
           "step": 4,
-          "start": 191.887,
-          "duration": 41.304,
+          "start": 182.308,
+          "duration": 39.107,
           "audio": "voiceover/steps/s2_4.wav"
         },
         {
           "step": 5,
-          "start": 233.191,
-          "duration": 11.422,
+          "start": 221.415,
+          "duration": 10.995,
           "audio": "voiceover/steps/s2_5.wav"
         }
       ]
     },
     {
       "scene": 3,
-      "start": 245.313,
-      "duration": 105.315,
+      "start": 233.11,
+      "duration": 100.302,
       "steps": [
         {
           "step": 1,
-          "start": 246.213,
-          "duration": 22.174,
+          "start": 234.01,
+          "duration": 20.979,
           "audio": "voiceover/steps/s3_1.wav"
         },
         {
           "step": 2,
-          "start": 268.387,
-          "duration": 44.312,
+          "start": 254.989,
+          "duration": 42.328,
           "audio": "voiceover/steps/s3_2.wav"
         },
         {
           "step": 3,
-          "start": 312.699,
-          "duration": 37.229,
+          "start": 297.317,
+          "duration": 35.395,
           "audio": "voiceover/steps/s3_3.wav"
         }
       ]
     },
     {
       "scene": 4,
-      "start": 350.628,
-      "duration": 95.598,
+      "start": 333.412,
+      "duration": 90.585,
       "steps": [
         {
           "step": 1,
-          "start": 351.528,
-          "duration": 39.811,
+          "start": 334.312,
+          "duration": 37.891,
           "audio": "voiceover/steps/s4_1.wav"
         },
         {
           "step": 2,
-          "start": 391.339,
-          "duration": 11.294,
+          "start": 372.203,
+          "duration": 10.867,
           "audio": "voiceover/steps/s4_2.wav"
         },
         {
           "step": 3,
-          "start": 402.633,
-          "duration": 7.198,
+          "start": 383.07,
+          "duration": 6.878,
           "audio": "voiceover/steps/s4_3.wav"
         },
         {
           "step": 4,
-          "start": 409.831,
-          "duration": 4.147,
+          "start": 389.948,
+          "duration": 3.87,
           "audio": "voiceover/steps/s4_4.wav"
         },
         {
           "step": 5,
-          "start": 413.978,
-          "duration": 10.718,
+          "start": 393.818,
+          "duration": 9.929,
           "audio": "voiceover/steps/s4_5.wav"
         },
         {
           "step": 6,
-          "start": 424.696,
-          "duration": 20.83,
+          "start": 403.747,
+          "duration": 19.55,
           "audio": "voiceover/steps/s4_6.wav"
         }
       ]
     },
     {
       "scene": 5,
-      "start": 446.226,
-      "duration": 91.485,
+      "start": 423.997,
+      "duration": 86.962,
       "steps": [
         {
           "step": 1,
-          "start": 447.126,
-          "duration": 9.651,
+          "start": 424.897,
+          "duration": 9.161,
           "audio": "voiceover/steps/s5_1.wav"
         },
         {
           "step": 2,
-          "start": 456.777,
-          "duration": 19.358,
+          "start": 434.057,
+          "duration": 18.462,
           "audio": "voiceover/steps/s5_2.wav"
         },
         {
           "step": 3,
-          "start": 476.135,
-          "duration": 23.326,
+          "start": 452.519,
+          "duration": 22.067,
           "audio": "voiceover/steps/s5_3.wav"
         },
         {
           "step": 4,
-          "start": 499.461,
-          "duration": 37.549,
+          "start": 474.587,
+          "duration": 35.672,
           "audio": "voiceover/steps/s5_4.wav"
         }
       ]
     },
     {
       "scene": 6,
-      "start": 537.711,
-      "duration": 84.933,
+      "start": 510.959,
+      "duration": 81.135,
       "steps": [
         {
           "step": 1,
-          "start": 538.611,
-          "duration": 28.233,
+          "start": 511.859,
+          "duration": 27.123,
           "audio": "voiceover/steps/s6_1.wav"
         },
         {
           "step": 2,
-          "start": 566.843,
-          "duration": 27.657,
+          "start": 538.982,
+          "duration": 26.355,
           "audio": "voiceover/steps/s6_2.wav"
         },
         {
           "step": 3,
-          "start": 594.5,
-          "duration": 27.443,
+          "start": 565.337,
+          "duration": 26.057,
           "audio": "voiceover/steps/s6_3.wav"
         }
       ]
     }
   ],
-  "total": 622.643
+  "total": 592.094
 }

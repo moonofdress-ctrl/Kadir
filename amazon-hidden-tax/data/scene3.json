@@ -37,12 +37,12 @@
       "rightTo": "supplier",
       "sub": "FTC: discounting sellers can become \"effectively invisible.\"",
       "evidence": {
-        "doc": "FTC et al. v. Amazon.com, Inc., No. 2:23-cv-01495 (W.D. Wash.)",
-        "quote": "\"artificial price floor everywhere\""
+        "doc": "FTC et al. v. Amazon.com, Inc., No. 2:23-cv-01495 (W.D. Wash.), Dkt. 1, p. 9",
+        "quote": "\"a price floor everywhere else\""
       },
       "step": 2,
       "cue": "According to the FTC, Amazon's algorithms scan",
-      "narration": "According to the FTC, Amazon's algorithms scan the internet for lower prices. If they find one, your offer can lose the Buy Box — that yellow \"Add to Cart\" button. Industry estimates — never confirmed by Amazon — say more than eighty percent of sales go through it. The complaint goes further. It says Amazon can bury discounting sellers so far down in search results that they become — quote — \"effectively invisible.\" So sellers do the rational thing: they raise prices everywhere else. The FTC calls it an \"artificial price floor everywhere\"... which means, if the government is right, you pay the Amazon tax even at other stores."
+      "narration": "According to the FTC, Amazon's algorithms scan the internet for lower prices. If they find one, your offer can lose the Buy Box — that yellow \"Add to Cart\" button. Industry estimates — never confirmed by Amazon — say more than eighty percent of sales go through it. The complaint goes further. It says Amazon can bury discounting sellers so far down in search results that they become — quote — \"effectively invisible.\" So sellers do the rational thing. In the FTC's words, they use their inflated Amazon prices as \"a price floor everywhere else\"... which means, if the government is right, you pay the Amazon tax even at other stores."
     },
     {
       "label": "3. Project Nessie",

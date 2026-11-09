@@ -88,7 +88,7 @@ SCENES = [
             {"label": "2. The Buy Box", "unit": "%", "leftVal": 80, "rightVal": 20, "estimate": True,
              "leftText": "Through the Buy Box: 80%+", "rightText": "Everything else: <20%", "leftTo": "amazon", "rightTo": "supplier",
              "sub": "FTC: discounting sellers can become \"effectively invisible.\"",
-             "evidence": {"doc": FTC_CASE, "quote": "\"artificial price floor everywhere\""}},
+             "evidence": {"doc": FTC_CASE + ", Dkt. 1, p. 9", "quote": "\"a price floor everywhere else\""}},
             {"label": "3. Project Nessie", "unit": "$", "leftVal": 110, "rightVal": 110, "illustrative": True,
              "leftText": "Amazon raises its price", "rightText": "Rival algorithms follow", "leftTo": "amazon", "rightTo": "supplier",
              "sub": "FTC alleges $1B+ in extra profit. Amazon: the FTC \"grossly mischaracterizes\" the tool.",

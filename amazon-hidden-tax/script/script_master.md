@@ -95,12 +95,12 @@ Source: FTC press release and complaint (2023).
 > In 2023, the Federal Trade Commission and a group of states sued Amazon for illegally maintaining a monopoly. The complaint describes what happens when a seller tries to undercut Amazon.
 > Say you sell a dress for one hundred dollars on Amazon... and eighty-five on your own Shopify store, where your fees are lower.
 
-**[Step 2 · The Buy Box]** Bars: "Through the Buy Box: 80%+ (industry est.)". Evidence quote: "effectively invisible" / "artificial price floor everywhere".
-Sources: FTC complaint (quotes); Feedvisor (Buy Box share estimate, not confirmed by Amazon).
+**[Step 2 · The Buy Box]** Bars: "Through the Buy Box: 80%+ (industry est.)". Evidence: real page 9 of the complaint (¶16–17), "effectively invisible" and "a price floor everywhere else" highlighted; the redacted Buy Box share ("Nearly ■ %") shown as-is.
+Sources: FTC v. Amazon complaint, Dkt. 1, p. 9 ¶16–17 (quotes verified against the filing); Feedvisor (Buy Box share estimate, not confirmed by Amazon; the FTC's own figure is redacted).
 
 > According to the FTC, Amazon's algorithms scan the internet for lower prices. If they find one, your offer can lose the Buy Box — that yellow "Add to Cart" button. Industry estimates — never confirmed by Amazon — say more than eighty percent of sales go through it.
 > The complaint goes further. It says Amazon can bury discounting sellers so far down in search results that they become — quote — "effectively invisible."
-> So sellers do the rational thing: they raise prices everywhere else. The FTC calls it an "artificial price floor everywhere"... which means, if the government is right, you pay the Amazon tax even at other stores.
+> So sellers do the rational thing. In the FTC's words, they use their inflated Amazon prices as "a price floor everywhere else"... which means, if the government is right, you pay the Amazon tax even at other stores.
 
 **[Step 3 · Project Nessie]** Illustrative bars: Amazon raises price → rival algorithms follow. Evidence box: "FTC alleges: $1B+ excess profit" + Amazon's response.
 Sources: unredacted FTC complaint (Nov 2023) via The Register, GeekWire; Amazon statements.
