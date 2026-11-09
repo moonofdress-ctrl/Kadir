@@ -34,13 +34,6 @@
 
   function chrome(sc, data, T, stripPos) {
     el("div", "part-chip", sc, "PART " + data.part + "/6 · " + esc(data.tag));
-    data.steps.forEach((st, i) => {
-      if (st._nocap) return;
-      const ts = T.steps[i], last = i === data.steps.length - 1;
-      const c = px(el("div", "strip", sc), stripPos || { left: 110, bottom: 70 });
-      c.innerHTML = '<div class="chip">' + esc(st.label.replace(/^\d+\.\s*/, "").toUpperCase()) + '</div><div class="q">' + esc(st.sub || "") + "</div>";
-      win(c, ts.start + 0.6, last ? T.start + T.duration : end(ts));
-    });
   }
   function finish(sc) { el("div", "grain", sc); el("div", "vignette", sc); }
 
@@ -161,9 +154,9 @@
     const gr = el("div", "grade", sc); at(gr, kEnd, { opacity: 0 });
     data.steps[0]._nocap = true;
     kinetic(sc, X.kinetic["2-1"], kEnd);
-    const render = X.toll(canvas), state = { p: 0 };
+    const render = X.toll(canvas), state = { p: 0, shot: 0 };
     render(0);
-    tl.fromTo(state, { p: 0 }, { p: 1, duration: T.start + T.duration - kEnd, ease: "none", onUpdate: () => render(state.p) }, kEnd);
+    tl.fromTo(state, { p: 0 }, { p: 1, duration: T.start + T.duration - kEnd, ease: "none", onUpdate: () => { const t = tl.time(); let sh = 0; for (let k = 2; k <= 4; k++) if (t >= S[k].start) sh = k - 1; render(state.p, sh); } }, kEnd);
     data.steps.forEach((st, i) => {
       if (i === 0) return;
       const v = card(sc, "valcard" + (st.accent === "loss" ? " red" : ""), { left: 60, top: 110 }, "", st.val, "", -1.5);
@@ -228,7 +221,7 @@
   /* ---------- scene 5: the cash-flow corridor ---------- */
   function scene5(sc, data, T) {
     const S = T.steps;
-    el("div", "bgk desk", sc);
+    const gr5 = el("div", "grade", sc); gr5.style.background = "rgba(20,12,6,.45)";
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg"); svg.setAttribute("class", "string"); svg.setAttribute("width", 1920); svg.setAttribute("height", 1080); sc.appendChild(svg);
     const dsc = ["Factory is paid long before the first sale.", "Funds release 7 days after confirmed delivery.", "Placement fee since 2024. Surcharge since 2026.", "Aged-inventory fee or low-inventory fee."];
     const cs = [];
@@ -255,11 +248,28 @@
   function scene6(sc, data, T) {
     const S = T.steps, titles = ["WHAT IT COSTS TO REACH THE CUSTOMER (PER $100)", "AMAZON’S AVERAGE CUT OF SELLER SALES", "WHO GETS YOUR $100"];
     el("div", "bgk kraft", sc);
-    data.steps.forEach((st, i) => bars(sc, st, S[i], titles[i], i === 2));
-    const n = el("div", "endnote", sc, "EVERY NUMBER IN THIS VIDEO IS SOURCED IN THE DESCRIPTION"); n.style.color = "#1b1a17";
+    data.steps.forEach((st, i) => { if (i < 2) bars(sc, st, S[i], titles[i], false); });
+    const c3 = S[2].cues, area = px(el('div', 'bill-area', sc), { left: 410, top: 200, width: 1100 }); area.style.opacity = 0;
+    tl.fromTo(area, { opacity: 0, scale: 1.15 }, { opacity: 1, scale: 1, duration: 0.4, ease: 'power3.out' }, S[2].start + 0.3);
+    let bx = 0; [[0.10, 'you', -260, c3.cut1], [0.38, 'cost', 0, null], [0.52, 'amz', 260, c3.cut2]].forEach((p) => {
+      const w = Math.round(p[0] * 1100), d = px(el('div', 'slice', area), { left: bx, width: w, height: 470 });
+      d.innerHTML = '<svg width="1100" height="470" viewBox="0 0 960 410" preserveAspectRatio="none" style="left:' + (-bx) + 'px"><use href="#bill-art"/></svg><div class="tint"></div>';
+      if (p[3] != null) tl.to(d, { x: p[2], rotation: p[1] === 'amz' ? 3 : -3, duration: 0.5, ease: 'power3.out' }, p[3]);
+      if (p[1] === 'amz') tl.to(d.querySelector('.tint'), { opacity: 0.55, duration: 0.3 }, p[3] + 0.1);
+      if (p[1] === 'cost') tl.to(d, { opacity: 0.45, duration: 0.4 }, c3.cut2 + 0.2);
+      bx += w; });
+    const fl = (html, left, color, t) => { const l = px(el('div', 'pile-label', sc, html), { left: left, top: 720 }); l.style.color = color; l.style.fontSize = '110px'; slam(l, t, null); };
+    fl('SELLER $10<small>MADE THE PRODUCT</small>', 120, COL.seller, c3.cut1 + 0.4);
+    fl('AMAZON $52<small>OWNS THE SHELF</small>', 1230, COL.amazon, c3.cut2 + 0.4);
+    const n = el("div", "endnote", sc, "EVERY NUMBER IN THIS VIDEO IS SOURCED IN THE DESCRIPTION"); n.style.color = "#1b1a17"; n.style.bottom = "auto"; n.style.top = "120px";
     win(n, S[2].start + S[2].duration * 0.75, null);
     chrome(sc, data, T, { left: 230, bottom: 96, maxWidth: "1460px" });
     finish(sc);
+  }
+
+  function subtitles(root, subs) {
+    const box = el('div', 'subs', root);
+    subs.forEach((s) => { const d = el('div', 'sub', box, '<span>' + esc(s.x) + '</span>'); d.style.opacity = 0; at(d, s.a, { opacity: 1 }); at(d, s.b, { opacity: 0 }); });
   }
 
   window.Paper = {
@@ -267,6 +277,7 @@
       tl = timeline;
       const fns = [scene1, scene2, scene3, scene4, scene5, scene6];
       SCENES.forEach((data, i) => fns[i](document.getElementById("scene-" + data.scene), data, T.scenes[i], X));
+      subtitles(document.getElementById('root'), X.subs);
       // deterministic 12 fps grain jitter
       let seed = 1234567; const rnd = () => ((seed = (seed * 1103515245 + 12345) % 2147483648) / 2147483648);
       const grains = document.querySelectorAll(".grain");

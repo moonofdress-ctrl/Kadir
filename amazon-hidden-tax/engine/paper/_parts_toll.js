@@ -63,9 +63,11 @@
       const sun = new THREE.DirectionalLight(0xffffff, 1.6); sun.position.set(-8, 14, 10); scene.add(sun);
 
         document.fonts.ready.then(() => { drawSign(); });
-        return function (p) {
-        camera.position.set(9 - p * 4, 7.5 - p * 2.5, 14 - p * 4);
-        camera.lookAt(0, 2.2, gz - 2 + p * 1.5);
+        return function (p, shot) {
+        if (shot === 1) { camera.position.set(-1.5 + p * 3, 4.6, 7.5 - p * 2); camera.lookAt(0, 4.9, gz); }
+        else if (shot === 2) { camera.position.set(6.2 - p, 1.5, 7.5 - p * 3); camera.lookAt(2.6, 1.3, gz - 5); }
+        else if (shot === 3) { camera.position.set(0.01, 19 - p * 3, gz + 1); camera.lookAt(0, 0, gz - 4); }
+        else { camera.position.set(9 - p * 6, 7.5 - p * 3, 14 - p * 5); camera.lookAt(0, 2.2, gz - 2 + p * 1.5); }
         const WIN = 2; // the highest bidder's lane
         boxes.forEach((b) => { const { lane, k } = b.userData;
           const creep = Math.min(1.4, p * 2.2);                        // everyone rolls up to the barrier
