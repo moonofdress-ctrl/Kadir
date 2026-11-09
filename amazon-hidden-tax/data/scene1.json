@@ -20,7 +20,7 @@
       },
       "step": 1,
       "cue": "Every time you spend one hundred dollars",
-      "narration": "Every time you spend one hundred dollars with a seller on Amazon... about fifty-two of those dollars never reach the seller. Not the brand. Not the factory. Amazon. Last year, a single line in Amazon's annual report — advertising — brought in sixty-eight point six billion dollars. That's roughly one hundred and eighty-eight million dollars... every single day. In the next nine minutes, we'll follow one hundred dollars of sales — dollar by dollar — through every fee, every auction, and every return. And by the end, you'll see why the U.S. government has taken Amazon to court over it — twice... and why, according to the FTC, you may be paying this tax even if you never shop on Amazon at all."
+      "narration": "Every time you spend one hundred dollars with a seller on Amazon... about fifty-two of those dollars never reach the seller. Not the brand. Not the factory. Amazon. And according to the U.S. government, you're paying for it too — even if you never shop on Amazon. In 2025, one line in Amazon's annual report — advertising — brought in sixty-eight point six billion dollars. That's one hundred and eighty-eight million dollars... every single day. So let's follow one hundred dollars. Dollar by dollar. Through every fee, every auction, and every return... and find out who actually gets your money."
     },
     {
       "label": "Product & Freight",
@@ -29,8 +29,8 @@
       "to": "supplier",
       "sub": "Manufacturing, ocean freight and import duties — paid months before anything sells.",
       "step": 2,
-      "cue": "Here's a typical apparel seller on Amazon",
-      "narration": "Here's a typical apparel seller on Amazon — modeled from Marketplace Pulse data and Amazon's own fee schedule — per hundred dollars in sales. First, the product itself. Manufacturing, ocean freight, and import duties. Twenty-eight dollars — paid months before anything sells."
+      "cue": "Meet a typical clothing seller on Amazon.",
+      "narration": "Meet a typical clothing seller on Amazon. For every hundred dollars in sales, here's where the money goes. First, the product itself. Manufacturing, ocean freight, and import duties. Twenty-eight dollars — paid months before anything sells."
     },
     {
       "label": "Referral Fee (17%)",
@@ -50,7 +50,7 @@
       "sub": "Picking, packing, shipping, storage — plus a 3.5% surcharge since April 2026.",
       "step": 4,
       "cue": "Next, Fulfillment by Amazon. Picking, packing, shipping,",
-      "narration": "Next, Fulfillment by Amazon. Picking, packing, shipping, storage... plus a new surcharge added this April. About twenty dollars."
+      "narration": "Next, Fulfillment by Amazon. Picking, packing, shipping, storage... plus a new surcharge added in 2026. About twenty dollars."
     },
     {
       "label": "Sponsored Ads",
@@ -104,7 +104,7 @@
       },
       "step": 7,
       "cue": "The final split? The seller — who",
-      "narration": "The final split? The seller — who designed the product, paid the factory, and carried all the risk — keeps about ten dollars. Amazon — without owning a single thread — collects about fifty-two. More than five times what the seller keeps. And that fifteen-dollar ad line? That's the one that quietly became a sixty-eight-billion-dollar business."
+      "narration": "The final split? The seller — who designed the product, paid the factory, and carried all the risk — keeps about ten dollars. Amazon — without owning a single thread — collects about fifty-two. More than five times what the seller keeps. But hold on to that fifteen-dollar ad line. That's where this story gets strange."
     }
   ]
 }

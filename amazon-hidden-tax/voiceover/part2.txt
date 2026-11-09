@@ -1,6 +1,6 @@
 How did an online bookstore become a toll collector? The answer is buried in Amazon's SEC Form ten-K, under a line called "advertising services."
 In 2025, it brought in sixty-eight point six billion dollars — up twenty-two percent in a single year. For perspective... that's more than half the combined revenue of every daily and weekly newspaper on Earth.
-Not all of it comes from sellers — Prime Video and Twitch ads count too — but sponsored search listings are widely estimated to be the biggest piece.
+Not all of it comes from sellers — streaming ads count too — but sponsored listings are widely estimated to be the biggest piece.
 
 Here's how it works. Depending on the survey, between half and two-thirds of American online shoppers now start their product searches directly on Amazon.
 And once the buyers are all in one room... whoever controls the shelf controls the business.

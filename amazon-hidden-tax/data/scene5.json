@@ -43,8 +43,8 @@
       "activeLayer": 0,
       "sub": "Sellers pay factories long before a single unit reaches a customer.",
       "step": 1,
-      "cue": "Selling on Amazon starts with a bet.",
-      "narration": "Selling on Amazon starts with a bet. Sellers pay their factories up front — often two or three months before a single unit reaches a customer."
+      "cue": "So far, that's fifty-two dollars in fees",
+      "narration": "So far, that's fifty-two dollars in fees and ads... and forty more every time a dress comes back. But the last trap isn't a fee at all. Selling on Amazon starts with a bet. Sellers pay their factories up front — often two or three months before a single unit reaches a customer."
     },
     {
       "label": "2. The Payout Reserve",
@@ -61,8 +61,8 @@
       "activeLayer": 2,
       "sub": "Inbound placement fee (since 2024) + 3.5% on every fulfillment fee (April 2026).",
       "step": 3,
-      "cue": "Meanwhile, the fees around the inventory keep",
-      "narration": "Meanwhile, the fees around the inventory keep multiplying. Since 2024, Amazon has charged an inbound placement fee — essentially, a fee based on how your boxes get distributed across its warehouses. And in April 2026, it added a three-and-a-half percent surcharge on every fulfillment fee."
+      "cue": "Meanwhile, the fees keep multiplying. Since 2024,",
+      "narration": "Meanwhile, the fees keep multiplying. Since 2024, there's a fee for how your boxes get spread across Amazon's warehouses. And in 2026, a three-and-a-half percent surcharge landed on top of every fulfillment fee."
     },
     {
       "label": "4. The Corridor",
@@ -71,7 +71,7 @@
       "sub": "Aged-inventory surcharge vs. low-inventory fee. 49% of sellers call fees their #1 margin concern.",
       "step": 4,
       "cue": "And then there's the corridor. Keep too",
-      "narration": "And then there's the corridor. Keep too much stock for too long, and you pay aged inventory surcharges. But let your stock fall below roughly twenty-eight days of supply... and you pay a low-inventory-level fee on every unit shipped. Too much costs money. Too little costs money. Amazon collects on both sides. No surprise, then, that in Marketplace Pulse's 2026 Seller Index, forty-nine percent of sellers named fees as their biggest margin concern — and forty-six percent named advertising. So... why does anyone stay?"
+      "narration": "And then there's the corridor. Keep too much stock for too long, and you pay aged inventory surcharges. But let your stock fall below roughly twenty-eight days of supply... and you pay a low-inventory-level fee on every unit shipped. Too much costs money. Too little costs money. Amazon collects on both sides. So... why does anyone stay?"
     }
   ]
 }

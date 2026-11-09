@@ -18,13 +18,14 @@ Source: Amazon FY2025 Form 10-K (advertising services, $68.6B).
 
 > Every time you spend one hundred dollars with a seller on Amazon... about fifty-two of those dollars never reach the seller.
 > Not the brand. Not the factory. Amazon.
-> Last year, a single line in Amazon's annual report — advertising — brought in sixty-eight point six billion dollars. That's roughly one hundred and eighty-eight million dollars... every single day.
-> In the next nine minutes, we'll follow one hundred dollars of sales — dollar by dollar — through every fee, every auction, and every return. And by the end, you'll see why the U.S. government has taken Amazon to court over it — twice... and why, according to the FTC, you may be paying this tax even if you never shop on Amazon at all.
+> And according to the U.S. government, you're paying for it too — even if you never shop on Amazon.
+> In 2025, one line in Amazon's annual report — advertising — brought in sixty-eight point six billion dollars. That's one hundred and eighty-eight million dollars... every single day.
+> So let's follow one hundred dollars. Dollar by dollar. Through every fee, every auction, and every return... and find out who actually gets your money.
 
 **[Step 2 · Product & freight −$28]** On screen: "Illustrative model · typical apparel seller · per $100 of sales".
 Source: model built from Marketplace Pulse take-rate data and Amazon's 2026 fee schedule.
 
-> Here's a typical apparel seller on Amazon — modeled from Marketplace Pulse data and Amazon's own fee schedule — per hundred dollars in sales.
+> Meet a typical clothing seller on Amazon. For every hundred dollars in sales, here's where the money goes.
 > First, the product itself. Manufacturing, ocean freight, and import duties. Twenty-eight dollars — paid months before anything sells.
 
 **[Step 3 · Referral fee −$17]** Bar turns Amazon orange. Label: "Referral fee · 17% (apparel over $20)".
@@ -33,7 +34,7 @@ Source: model built from Marketplace Pulse take-rate data and Amazon's 2026 fee 
 
 **[Step 4 · FBA & storage −$20]** Amazon orange.
 
-> Next, Fulfillment by Amazon. Picking, packing, shipping, storage... plus a new surcharge added this April. About twenty dollars.
+> Next, Fulfillment by Amazon. Picking, packing, shipping, storage... plus a new surcharge added in 2026. About twenty dollars.
 
 **[Step 5 · Sponsored ads −$15]** Amazon orange. Small tag: "the line shoppers never see".
 
@@ -47,7 +48,7 @@ Source: model built from Marketplace Pulse take-rate data and Amazon's 2026 fee 
 
 > The final split? The seller — who designed the product, paid the factory, and carried all the risk — keeps about ten dollars.
 > Amazon — without owning a single thread — collects about fifty-two. More than five times what the seller keeps.
-> And that fifteen-dollar ad line? That's the one that quietly became a sixty-eight-billion-dollar business.
+> But hold on to that fifteen-dollar ad line. That's where this story gets strange.
 
 ---
 
@@ -59,7 +60,7 @@ Sources: Amazon FY2025 Form 10-K; WAN-IFRA World Press Trends Outlook (via Press
 
 > How did an online bookstore become a toll collector? The answer is buried in Amazon's SEC Form ten-K, under a line called "advertising services."
 > In 2025, it brought in sixty-eight point six billion dollars — up twenty-two percent in a single year. For perspective... that's more than half the combined revenue of every daily and weekly newspaper on Earth.
-> Not all of it comes from sellers — Prime Video and Twitch ads count too — but sponsored search listings are widely estimated to be the biggest piece.
+> Not all of it comes from sellers — streaming ads count too — but sponsored listings are widely estimated to be the biggest piece.
 
 **[Step 2 · Demand lock-in]** Layer 1 lights up: "Amazon search · 56–63% of US shoppers start here".
 Sources: Jungle Scout Consumer Trends 2024 (56%); Constructor State of Ecommerce 2025 (63%).
@@ -118,7 +119,7 @@ Sources: unredacted FTC complaint (Nov 2023) via The Register, GeekWire; Amazon 
 Sources: NRF 2025 Retail Returns Landscape; Appriss Retail / Deloitte consumer returns report.
 
 > Now for the cost that comes back in a box. According to the National Retail Federation, roughly one in five online purchases gets sent back.
-> In fashion, there's a name for one of the most common forms of abuse. Wardrobing. Buy an evening dress on Friday. Wear it to a wedding on Saturday. Return it on Monday — "didn't fit." In one industry survey, sixty percent of retail executives said they'd seen wardrobing — the most common type of return fraud on the list.
+> And in fashion, one kind of return has its own name. Wardrobing. Buy an evening dress on Friday. Wear it to a wedding on Saturday. Return it on Monday — "didn't fit." In one industry survey, six in ten retail executives said they'd seen it.
 > For the shopper, the return is free. For the seller, here's what one worn, one-hundred-dollar dress actually costs.
 
 **[Step 2 · Refund admin fee −$3.40]** Amazon orange. Label: "20% of the $17 referral fee (max $5)".
@@ -143,7 +144,7 @@ Source: Amazon apparel returns processing fee (range ~$1.65–$3.89+).
 **[Step 6 · Net loss −$40.40]** Callout: "= profit from 4 full-price sales".
 
 > Total: a loss of about forty dollars and forty cents — on a sale that no longer exists. At a ten percent margin, that's four full-price sales... just to pay for one wardrobed dress.
-> And even the sellers who survive returns run into a trap that has nothing to do with customers. It's about time.
+> And even the sellers who survive returns run into one more problem. Time.
 
 ---
 
@@ -152,6 +153,7 @@ Source: Amazon apparel returns processing fee (range ~$1.65–$3.89+).
 
 **[Step 1 · Factory cash goes out first]** Layer 0 lights up.
 
+> So far, that's fifty-two dollars in fees and ads... and forty more every time a dress comes back. But the last trap isn't a fee at all.
 > Selling on Amazon starts with a bet. Sellers pay their factories up front — often two or three months before a single unit reaches a customer.
 
 **[Step 2 · Payout reserve]** Layer 1: "Funds released 7 days after confirmed delivery".
@@ -162,14 +164,13 @@ Source: Amazon delivery-date-based reserve (DD+7), seller documentation / covera
 **[Step 3 · Fees around the inventory]** Layer 2: "Inbound placement fee (2024) · +3.5% surcharge (Apr 2026)".
 Sources: Amazon inbound placement fee; 3.5% fuel & logistics surcharge effective April 17, 2026.
 
-> Meanwhile, the fees around the inventory keep multiplying. Since 2024, Amazon has charged an inbound placement fee — essentially, a fee based on how your boxes get distributed across its warehouses. And in April 2026, it added a three-and-a-half percent surcharge on every fulfillment fee.
+> Meanwhile, the fees keep multiplying. Since 2024, there's a fee for how your boxes get spread across Amazon's warehouses. And in 2026, a three-and-a-half percent surcharge landed on top of every fulfillment fee.
 
 **[Step 4 · The corridor]** Layer 3: "Too much stock → aged inventory surcharge · Under ~28 days → low-inventory-level fee".
 Sources: Amazon low-inventory-level fee (per variant since Jan 2026); Marketplace Pulse 2026 Seller Index.
 
 > And then there's the corridor. Keep too much stock for too long, and you pay aged inventory surcharges. But let your stock fall below roughly twenty-eight days of supply... and you pay a low-inventory-level fee on every unit shipped.
 > Too much costs money. Too little costs money. Amazon collects on both sides.
-> No surprise, then, that in Marketplace Pulse's 2026 Seller Index, forty-nine percent of sellers named fees as their biggest margin concern — and forty-six percent named advertising.
 > So... why does anyone stay?
 
 ---
@@ -188,9 +189,8 @@ Sources: Stripe standard pricing (2.9% + 30¢); Amazon 2020 shareholder letter (
 > What's changed is the price. In 2016, Amazon's cut was about a third of a seller's revenue. By 2022, it was more than half.
 > And in 2027, a federal judge in Seattle will start deciding whether parts of how Amazon got here broke the law. If the FTC wins, the Buy Box rules could change... and with them, prices across the internet. If Amazon wins, the tollbooth stays.
 
-**[Step 3 · Back to the $100]** Bars: Seller $10 vs Amazon $52. Final frame mirrors the opening frame (loop).
+**[Step 3 · Back to the $100]** Bars: Seller $10 vs Amazon $52. Final frame mirrors the opening frame (loop). On-screen text: "Every number is sourced in the description."
 
 > So... back to where we started. When you spend one hundred dollars with a seller on Amazon — who actually gets your money?
 > About ten dollars goes to the business that made the product. About fifty-two goes to the company that owns the shelf.
 > In modern commerce, the company that makes the product rarely gets rich. The fortune belongs to whoever controls the last three seconds before checkout.
-> Every number in this video is sourced in the description.

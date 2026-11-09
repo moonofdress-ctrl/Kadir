@@ -23,7 +23,7 @@
           },
           "step": 1,
           "cue": "Every time you spend one hundred dollars",
-          "narration": "Every time you spend one hundred dollars with a seller on Amazon... about fifty-two of those dollars never reach the seller. Not the brand. Not the factory. Amazon. Last year, a single line in Amazon's annual report — advertising — brought in sixty-eight point six billion dollars. That's roughly one hundred and eighty-eight million dollars... every single day. In the next nine minutes, we'll follow one hundred dollars of sales — dollar by dollar — through every fee, every auction, and every return. And by the end, you'll see why the U.S. government has taken Amazon to court over it — twice... and why, according to the FTC, you may be paying this tax even if you never shop on Amazon at all."
+          "narration": "Every time you spend one hundred dollars with a seller on Amazon... about fifty-two of those dollars never reach the seller. Not the brand. Not the factory. Amazon. And according to the U.S. government, you're paying for it too — even if you never shop on Amazon. In 2025, one line in Amazon's annual report — advertising — brought in sixty-eight point six billion dollars. That's one hundred and eighty-eight million dollars... every single day. So let's follow one hundred dollars. Dollar by dollar. Through every fee, every auction, and every return... and find out who actually gets your money."
         },
         {
           "label": "Product & Freight",
@@ -32,8 +32,8 @@
           "to": "supplier",
           "sub": "Manufacturing, ocean freight and import duties — paid months before anything sells.",
           "step": 2,
-          "cue": "Here's a typical apparel seller on Amazon",
-          "narration": "Here's a typical apparel seller on Amazon — modeled from Marketplace Pulse data and Amazon's own fee schedule — per hundred dollars in sales. First, the product itself. Manufacturing, ocean freight, and import duties. Twenty-eight dollars — paid months before anything sells."
+          "cue": "Meet a typical clothing seller on Amazon.",
+          "narration": "Meet a typical clothing seller on Amazon. For every hundred dollars in sales, here's where the money goes. First, the product itself. Manufacturing, ocean freight, and import duties. Twenty-eight dollars — paid months before anything sells."
         },
         {
           "label": "Referral Fee (17%)",
@@ -53,7 +53,7 @@
           "sub": "Picking, packing, shipping, storage — plus a 3.5% surcharge since April 2026.",
           "step": 4,
           "cue": "Next, Fulfillment by Amazon. Picking, packing, shipping,",
-          "narration": "Next, Fulfillment by Amazon. Picking, packing, shipping, storage... plus a new surcharge added this April. About twenty dollars."
+          "narration": "Next, Fulfillment by Amazon. Picking, packing, shipping, storage... plus a new surcharge added in 2026. About twenty dollars."
         },
         {
           "label": "Sponsored Ads",
@@ -107,7 +107,7 @@
           },
           "step": 7,
           "cue": "The final split? The seller — who",
-          "narration": "The final split? The seller — who designed the product, paid the factory, and carried all the risk — keeps about ten dollars. Amazon — without owning a single thread — collects about fifty-two. More than five times what the seller keeps. And that fifteen-dollar ad line? That's the one that quietly became a sixty-eight-billion-dollar business."
+          "narration": "The final split? The seller — who designed the product, paid the factory, and carried all the risk — keeps about ten dollars. Amazon — without owning a single thread — collects about fifty-two. More than five times what the seller keeps. But hold on to that fifteen-dollar ad line. That's where this story gets strange."
         }
       ]
     },
@@ -165,7 +165,7 @@
           },
           "step": 1,
           "cue": "How did an online bookstore become a",
-          "narration": "How did an online bookstore become a toll collector? The answer is buried in Amazon's SEC Form ten-K, under a line called \"advertising services.\" In 2025, it brought in sixty-eight point six billion dollars — up twenty-two percent in a single year. For perspective... that's more than half the combined revenue of every daily and weekly newspaper on Earth. Not all of it comes from sellers — Prime Video and Twitch ads count too — but sponsored search listings are widely estimated to be the biggest piece."
+          "narration": "How did an online bookstore become a toll collector? The answer is buried in Amazon's SEC Form ten-K, under a line called \"advertising services.\" In 2025, it brought in sixty-eight point six billion dollars — up twenty-two percent in a single year. For perspective... that's more than half the combined revenue of every daily and weekly newspaper on Earth. Not all of it comes from sellers — streaming ads count too — but sponsored listings are widely estimated to be the biggest piece."
         },
         {
           "label": "2. Demand Lock-In",
@@ -300,7 +300,7 @@
           ],
           "step": 1,
           "cue": "Now for the cost that comes back",
-          "narration": "Now for the cost that comes back in a box. According to the National Retail Federation, roughly one in five online purchases gets sent back. In fashion, there's a name for one of the most common forms of abuse. Wardrobing. Buy an evening dress on Friday. Wear it to a wedding on Saturday. Return it on Monday — \"didn't fit.\" In one industry survey, sixty percent of retail executives said they'd seen wardrobing — the most common type of return fraud on the list. For the shopper, the return is free. For the seller, here's what one worn, one-hundred-dollar dress actually costs."
+          "narration": "Now for the cost that comes back in a box. According to the National Retail Federation, roughly one in five online purchases gets sent back. And in fashion, one kind of return has its own name. Wardrobing. Buy an evening dress on Friday. Wear it to a wedding on Saturday. Return it on Monday — \"didn't fit.\" In one industry survey, six in ten retail executives said they'd seen it. For the shopper, the return is free. For the seller, here's what one worn, one-hundred-dollar dress actually costs."
         },
         {
           "label": "Refund Admin Fee",
@@ -363,7 +363,7 @@
           },
           "step": 6,
           "cue": "Total: a loss of about forty dollars",
-          "narration": "Total: a loss of about forty dollars and forty cents — on a sale that no longer exists. At a ten percent margin, that's four full-price sales... just to pay for one wardrobed dress. And even the sellers who survive returns run into a trap that has nothing to do with customers. It's about time."
+          "narration": "Total: a loss of about forty dollars and forty cents — on a sale that no longer exists. At a ten percent margin, that's four full-price sales... just to pay for one wardrobed dress. And even the sellers who survive returns run into one more problem. Time."
         }
       ]
     },
@@ -412,8 +412,8 @@
           "activeLayer": 0,
           "sub": "Sellers pay factories long before a single unit reaches a customer.",
           "step": 1,
-          "cue": "Selling on Amazon starts with a bet.",
-          "narration": "Selling on Amazon starts with a bet. Sellers pay their factories up front — often two or three months before a single unit reaches a customer."
+          "cue": "So far, that's fifty-two dollars in fees",
+          "narration": "So far, that's fifty-two dollars in fees and ads... and forty more every time a dress comes back. But the last trap isn't a fee at all. Selling on Amazon starts with a bet. Sellers pay their factories up front — often two or three months before a single unit reaches a customer."
         },
         {
           "label": "2. The Payout Reserve",
@@ -430,8 +430,8 @@
           "activeLayer": 2,
           "sub": "Inbound placement fee (since 2024) + 3.5% on every fulfillment fee (April 2026).",
           "step": 3,
-          "cue": "Meanwhile, the fees around the inventory keep",
-          "narration": "Meanwhile, the fees around the inventory keep multiplying. Since 2024, Amazon has charged an inbound placement fee — essentially, a fee based on how your boxes get distributed across its warehouses. And in April 2026, it added a three-and-a-half percent surcharge on every fulfillment fee."
+          "cue": "Meanwhile, the fees keep multiplying. Since 2024,",
+          "narration": "Meanwhile, the fees keep multiplying. Since 2024, there's a fee for how your boxes get spread across Amazon's warehouses. And in 2026, a three-and-a-half percent surcharge landed on top of every fulfillment fee."
         },
         {
           "label": "4. The Corridor",
@@ -440,7 +440,7 @@
           "sub": "Aged-inventory surcharge vs. low-inventory fee. 49% of sellers call fees their #1 margin concern.",
           "step": 4,
           "cue": "And then there's the corridor. Keep too",
-          "narration": "And then there's the corridor. Keep too much stock for too long, and you pay aged inventory surcharges. But let your stock fall below roughly twenty-eight days of supply... and you pay a low-inventory-level fee on every unit shipped. Too much costs money. Too little costs money. Amazon collects on both sides. No surprise, then, that in Marketplace Pulse's 2026 Seller Index, forty-nine percent of sellers named fees as their biggest margin concern — and forty-six percent named advertising. So... why does anyone stay?"
+          "narration": "And then there's the corridor. Keep too much stock for too long, and you pay aged inventory surcharges. But let your stock fall below roughly twenty-eight days of supply... and you pay a low-inventory-level fee on every unit shipped. Too much costs money. Too little costs money. Amazon collects on both sides. So... why does anyone stay?"
         }
       ]
     },
@@ -497,7 +497,7 @@
           "sub": "The fortune belongs to whoever controls the last three seconds before checkout.",
           "step": 3,
           "cue": "So... back to where we started. When",
-          "narration": "So... back to where we started. When you spend one hundred dollars with a seller on Amazon — who actually gets your money? About ten dollars goes to the business that made the product. About fifty-two goes to the company that owns the shelf. In modern commerce, the company that makes the product rarely gets rich. The fortune belongs to whoever controls the last three seconds before checkout. Every number in this video is sourced in the description."
+          "narration": "So... back to where we started. When you spend one hundred dollars with a seller on Amazon — who actually gets your money? About ten dollars goes to the business that made the product. About fifty-two goes to the company that owns the shelf. In modern commerce, the company that makes the product rarely gets rich. The fortune belongs to whoever controls the last three seconds before checkout."
         }
       ]
     }
