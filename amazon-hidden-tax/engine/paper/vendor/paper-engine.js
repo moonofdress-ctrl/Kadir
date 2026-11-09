@@ -97,6 +97,13 @@
     return c;
   }
 
+  function picture(sc, src, pos, t0, t1, zoom) {
+    const im = px(el("img", "aiimg", sc), pos); im.src = "assets/ai/" + src; im.style.opacity = 0;
+    at(im, t0, { opacity: 1 }); if (t1 != null) at(im, t1, { opacity: 0 });
+    if (zoom) tl.fromTo(im, { scale: 1 }, { scale: zoom, duration: (t1 || t0 + 20) - t0, ease: "none", immediateRender: false }, t0);
+    return im;
+  }
+
   /* ---------- scene 1: hook + receipt + scissors ---------- */
   function scene1(sc, data, T, X) {
     const S = T.steps, hookEnd = S[1].start;
@@ -184,10 +191,13 @@
     [[h1, c.hl1], [h2, c.hl2], [h3, c.hl3]].forEach((p) => tl.fromTo(p[0], { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: "power1.out" }, p[1]));
     tl.to(cam, { y: -900, x: -600, duration: 0.9, ease: "power2.inOut" }, c.drift);
     void bb;
-    const sh3 = bars(sc, data.steps[2], S[2], "PROJECT NESSIE · HOW THE FTC SAYS IT WORKED", true);
-    void sh3;
-    stamp(sc, "ALLEGED", "FTC: $1B+ EXTRA PROFIT", { left: 1230, top: 26, background: "#faf7ef", filter: "none", fontSize: "58px" }, S[2].cues.stamp, null);
-    const rep = card(sc, "yellow", { left: 1200, top: 800, width: 600 }, "AMAZON’S RESPONSE", "", "The FTC “grossly mischaracterizes” the tool. It was scrapped.", 3);
+    const fr = px(el("div", "frame", sc), { left: 110, top: 110 }); fr.style.transform = "rotate(-1deg)";
+    picture(fr, "nessie.jpg", { left: 22, top: 22, width: 1180, height: 666 }, S[2].start, null, 1.05);
+    win(fr, S[2].start + 0.3, null);
+    const nm = card(sc, "", { left: 1390, top: 120, width: 440 }, "CODE NAME", "PROJECT NESSIE", "An algorithm the FTC says raised prices, then waited for rivals to follow.", 2);
+    win(nm, S[2].start + 0.8, null);
+    stamp(sc, "ALLEGED", "FTC: $1B+ EXTRA PROFIT", { left: 1390, top: 520, background: "#faf7ef", filter: "none", fontSize: "58px" }, S[2].cues.stamp, null);
+    const rep = card(sc, "yellow", { left: 1380, top: 740, width: 460 }, "AMAZON’S RESPONSE", "", "The FTC “grossly mischaracterizes” the tool. It was scrapped.", 3);
     win(rep, S[2].cues.reply, null);
     chrome(sc, data, T, { left: 110, bottom: 60, maxWidth: "1020px" });
     finish(sc);
@@ -197,10 +207,11 @@
   function scene4(sc, data, T) {
     const S = T.steps, c = (i, k) => S[i].cues[k], d0 = S[0].duration;
     el("div", "bgk kraft", sc);
-    const cards = [["1 IN 5", "online purchases gets sent back (NRF)", 150, 190, -2, 0.08], ["FRIDAY", "Buy the dress.", 150, 520, 2, 0.36],
-      ["SATURDAY", "Wear it to a wedding.", 700, 520, -1.5, 0.46], ["MONDAY", "Return it: “didn’t fit.”", 1250, 520, 2.5, 0.56]];
+    picture(sc, "dress.jpg", { left: 0, top: 0, width: 1920, height: 1080 }, S[0].start, end(S[0]), 1.07);
+    const cards = [["1 IN 5", "online purchases gets sent back (NRF)", 90, 130, -2, 0.08], ["FRIDAY", "Buy the dress.", 1330, 150, 2, 0.36],
+      ["SATURDAY", "Wear it to a wedding.", 1330, 370, -1.5, 0.46], ["MONDAY", "Return it: “didn’t fit.”", 1330, 590, 2.5, 0.56]];
     cards.forEach((k) => { const e = card(sc, k[0] === "MONDAY" ? "red" : "", { left: k[2], top: k[3], width: 500 }, "", k[0], k[1], k[4]); win(e, S[0].start + d0 * k[5], end(S[0])); });
-    const w = px(el("div", "pile-label", sc, "WARDROBING"), { left: 700, top: 210 }); w.style.color = COL.amazon; w.style.fontSize = "150px"; slam(w, S[0].start + d0 * 0.28, end(S[0]));
+    const w = px(el("div", "pile-label", sc, "WARDROBING"), { left: 90, top: 820 }); w.style.color = "#faf7ef"; w.style.background = COL.amazon; w.style.padding = "10px 26px"; w.style.fontSize = "120px"; slam(w, S[0].start + d0 * 0.28, end(S[0]));
     receipt(sc, "*** RETURN ***", "one worn $100 dress", [
       { l: "REFUND TO CUSTOMER", r: "-100.00", t: c(1, "head") }, { l: "SALE REVERSED", r: "+100.00", t: c(1, "head") + 0.5 }, { hr: 1 },
       { l: "REFUND ADMIN FEE", r: "-3.40", cls: "amz", t: c(1, "line") }, { l: "FBA FEE KEPT", r: "≈-6.00", cls: "amz", t: c(2, "line") },
@@ -222,20 +233,20 @@
     const dsc = ["Factory is paid long before the first sale.", "Funds release 7 days after confirmed delivery.", "Placement fee since 2024. Surcharge since 2026.", "Aged-inventory fee or low-inventory fee."];
     const cs = [];
     data.steps.forEach((st, i) => {
-      const x = 90 + i * 445, y = 230 + (i % 2) * 60;
+      const x = i === 3 ? 90 : 90 + i * 445, y = i === 3 ? 150 : 230 + (i % 2) * 60;
+      if (i === 3) { picture(sc, "corridor.jpg", { left: 0, top: 0, width: 1920, height: 1080 }, S[3].start, null, 1.1); cs.forEach((c0) => at(c0, S[3].start, { opacity: 0 })); at(svg, S[3].start, { opacity: 0 }); sc.querySelectorAll(".pin").forEach((pn) => tl.set(pn, { opacity: 0 }, S[3].start + 0.31)); }
       const e = card(sc, i === 3 ? "red" : "", { left: x, top: y, width: 400, minHeight: "330px" }, st.label.replace(/^\d+\.\s*/, "").toUpperCase(), st.val, dsc[i], [-2, 1.5, -1, 2][i]);
       win(e, S[i].start + 0.3, null); cs.push(e);
-      if (i > 0) tl.to(cs[i - 1], { opacity: 0.55, duration: 0.3 }, S[i].start + 0.3);
-      el("div", "pin", sc).style.cssText = "left:" + (x + 200) + "px;top:" + (y + 6) + "px;opacity:0";
-      at(sc.lastChild, S[i].start + 0.3, { opacity: 1 });
-      if (i > 0) {
+      if (i > 0 && i < 3) tl.to(cs[i - 1], { opacity: 0.55, duration: 0.3 }, S[i].start + 0.3);
+      if (i < 3) { el("div", "pin", sc).style.cssText = "left:" + (x + 200) + "px;top:" + (y + 6) + "px;opacity:0"; at(sc.lastChild, S[i].start + 0.3, { opacity: 1 }); }
+      if (i > 0 && i < 3) {
         const p = document.createElementNS("http://www.w3.org/2000/svg", "path"), px0 = 90 + (i - 1) * 445 + 200, py0 = 230 + ((i - 1) % 2) * 60 + 6;
         p.setAttribute("d", "M " + px0 + " " + py0 + " Q " + ((px0 + x + 200) / 2) + " " + (py0 + 110) + " " + (x + 200) + " " + (y + 6));
         p.setAttribute("fill", "none"); p.setAttribute("stroke", "#b3121f"); p.setAttribute("stroke-width", "4"); p.style.opacity = 0; svg.appendChild(p);
         at(p, S[i].start + 0.3, { opacity: 1 });
       }
     });
-    stamp(sc, "FEE EITHER WAY", "TOO MUCH STOCK · OR TOO LITTLE", { left: 1090, top: 690, background: "#faf7ef", filter: "none", fontSize: "76px" }, S[3].cues.stamp, null);
+    stamp(sc, "FEE EITHER WAY", "TOO MUCH STOCK · OR TOO LITTLE", { left: 1160, top: 800, background: "#faf7ef", filter: "none", fontSize: "64px" }, S[3].cues.stamp, null);
     chrome(sc, data, T, { left: 90, bottom: 60, maxWidth: "960px" });
     finish(sc);
   }

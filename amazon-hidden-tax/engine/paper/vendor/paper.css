@@ -147,3 +147,5 @@ html, body { width: 1920px; height: 1080px; overflow: hidden; background: #14100
 .sheet .rn { position: absolute; font-family: var(--kin); font-size: 76px; line-height: 84px; }
 .valcard { position: absolute; left: 60px; top: 110px; }
 .endnote { position: absolute; left: 0; width: 1920px; bottom: 26px; text-align: center; font-family: var(--mono); font-weight: 700; font-size: 26px; letter-spacing: .1em; color: var(--paper-hi); }
+.aiimg { position: absolute; object-fit: cover; }
+.frame { position: absolute; width: 1224px; height: 710px; background: var(--paper-hi); box-shadow: 0 18px 40px rgba(0,0,0,.45); overflow: hidden; }
