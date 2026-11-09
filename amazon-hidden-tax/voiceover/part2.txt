@@ -1,0 +1,15 @@
+How did an online bookstore become a toll collector? The answer is buried in Amazon's SEC Form ten-K, under a line called "advertising services."
+In 2025, it brought in sixty-eight point six billion dollars — up twenty-two percent in a single year. For perspective... that's more than half the combined revenue of every daily and weekly newspaper on Earth.
+Not all of it comes from sellers — Prime Video and Twitch ads count too — but sponsored search listings are widely estimated to be the biggest piece.
+
+Here's how it works. Depending on the survey, between half and two-thirds of American online shoppers now start their product searches directly on Amazon.
+And once the buyers are all in one room... whoever controls the shelf controls the business.
+
+So Amazon turned the shelf into an auction. Try it yourself: search for almost anything on your phone... and count the "Sponsored" results before the first one that isn't. Every slot is a seller bidding, per click, against other sellers.
+
+And according to a new lawsuit, even the auction may not be what it seems. In August 2026, the FTC and twenty-two states sued Amazon, alleging that since 2019 it secretly added a surcharge on top of auction prices.
+Documents unsealed in November allege prices up to fifty percent above the auction result on ordinary days... and up to two hundred and fifty percent on days like Prime Day. The FTC puts the total overcharge at more than twenty billion dollars.
+Amazon calls the suit misguided, and says it never charges more than an advertiser's maximum bid.
+
+For sellers, it's a prisoner's dilemma: bid away your margin... or disappear.
+So why don't they just charge less everywhere else? Because if they try... a bot is watching.
