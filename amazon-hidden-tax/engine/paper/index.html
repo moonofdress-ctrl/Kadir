@@ -3,124 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=1920, height=1080" />
-    <title>Paper Trail — style frames</title>
+    <title>Amazon's $69 Billion Hidden Tax</title>
+    <link rel="stylesheet" href="vendor/paper.css" />
     <script src="vendor/gsap.min.js"></script>
-    <style>
-      /* Fonts: OFL, bundled from @fontsource (licenses in assets/fonts). */
-      @font-face { font-family: "Anton"; src: url("assets/fonts/anton-latin-400-normal.woff2") format("woff2"); font-weight: 400; }
-      @font-face { font-family: "Plex Mono"; src: url("assets/fonts/ibm-plex-mono-latin-400-normal.woff2") format("woff2"); font-weight: 400; }
-      @font-face { font-family: "Plex Mono"; src: url("assets/fonts/ibm-plex-mono-latin-500-normal.woff2") format("woff2"); font-weight: 500; }
-      @font-face { font-family: "Plex Mono"; src: url("assets/fonts/ibm-plex-mono-latin-700-normal.woff2") format("woff2"); font-weight: 700; }
-      @font-face { font-family: "Source Serif"; src: url("assets/fonts/source-serif-4-latin-400-normal.woff2") format("woff2"); font-weight: 400; }
-      @font-face { font-family: "Source Serif"; src: url("assets/fonts/source-serif-4-latin-600-normal.woff2") format("woff2"); font-weight: 600; }
-      @font-face { font-family: "Source Serif"; src: url("assets/fonts/source-serif-4-latin-700-normal.woff2") format("woff2"); font-weight: 700; }
-      @font-face { font-family: "Inter Tight"; src: url("assets/fonts/inter-tight-latin-700-normal.woff2") format("woff2"); font-weight: 700; }
-      @font-face { font-family: "Inter Tight"; src: url("assets/fonts/inter-tight-latin-800-normal.woff2") format("woff2"); font-weight: 800; }
-
-      :root {
-        --paper: #ede6d6;
-        --paper-hi: #faf7ef;
-        --ink: #1b1a17;
-        --ink-2: #4a463d;
-        --marker: #ffe74c;
-        --stamp: #c8102e;
-        --money: #2f6b4f;
-        --kraft: #c9a774;
-        --serif: "Source Serif", Georgia, serif;
-        --mono: "Plex Mono", monospace;
-        --kin: "Anton", sans-serif;
-      }
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      html, body { width: 1920px; height: 1080px; overflow: hidden; background: #14100c; }
-      #root { position: relative; width: 1920px; height: 1080px; overflow: hidden; }
-      .seg { position: absolute; inset: 0; overflow: hidden; }
-      .fill { position: absolute; inset: 0; }
-
-      /* shared finishing layers */
-      .vignette { position: absolute; inset: 0; pointer-events: none;
-        background: radial-gradient(ellipse at 50% 45%, transparent 55%, rgba(10, 6, 2, 0.55) 100%); }
-      .grain { position: absolute; left: -60px; top: -60px; width: 2040px; height: 1200px; pointer-events: none;
-        filter: url(#grain); opacity: 0.22; mix-blend-mode: multiply; }
-
-      /* ---------- A: evidence desk ---------- */
-      .desk { position: absolute; inset: 0; background: url("assets/tex/Wood051.jpg") center / 900px; }
-      .desk::after { content: ""; position: absolute; inset: 0; background: rgba(28, 16, 8, 0.25); }
-      .cam { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; }
-      .doc { position: absolute; left: 230px; top: 46px; width: 760px; height: 983px;
-        background: url("assets/docs/complaint_p9.jpg") 0 0 / 100% 100%;
-        box-shadow: 0 2px 2px rgba(0,0,0,.35), 0 18px 40px rgba(0,0,0,.45); transform: rotate(-2.2deg); transform-origin: 50% 50%; }
-      .doc .tex { position: absolute; inset: 0; background: url("assets/tex/Paper004.jpg") center / 700px; mix-blend-mode: multiply; opacity: .28; }
-      .hl { position: absolute; background: var(--marker); mix-blend-mode: multiply; opacity: .8; border-radius: 3px 8px 5px 9px; transform-origin: 0 50%; }
-      .note { position: absolute; left: 1080px; top: 120px; width: 300px; height: 280px; padding: 28px 26px; background: #f7e36b;
-        transform: rotate(4deg); box-shadow: 0 14px 26px rgba(0,0,0,.35); font-family: var(--mono); color: #2b2614; }
-      .note .k { font-size: 20px; font-weight: 700; letter-spacing: .08em; }
-      .note .v { margin-top: 18px; font-size: 30px; font-weight: 500; line-height: 1.25; }
-      .card { position: absolute; left: 1150px; top: 560px; width: 520px; padding: 30px 34px; background: var(--paper-hi);
-        transform: rotate(-3deg); box-shadow: 0 16px 30px rgba(0,0,0,.4); }
-      .card .k { font-family: var(--mono); font-size: 20px; font-weight: 700; letter-spacing: .14em; color: var(--ink-2); }
-      .card .v { margin-top: 12px; font-family: var(--serif); font-size: 44px; font-weight: 700; color: var(--ink); line-height: 1.1; }
-      .card .bar { display: inline-block; width: 120px; height: 38px; background: #111; vertical-align: -6px; }
-      .pin { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px; border-radius: 50%;
-        background: radial-gradient(circle at 35% 35%, #ff6b6b, #9a0d1f 70%); box-shadow: 0 4px 6px rgba(0,0,0,.45); }
-      .string { position: absolute; inset: 0; overflow: visible; }
-      .stamp { position: absolute; left: 1130px; top: 470px; padding: 16px 30px 12px; border: 7px double var(--stamp); color: var(--stamp);
-        font-family: var(--kin); font-size: 96px; letter-spacing: .06em; line-height: 1; transform: rotate(-9deg); filter: url(#ink); opacity: .9; }
-      .stamp small { display: block; font-family: var(--mono); font-weight: 700; font-size: 24px; letter-spacing: .16em; margin-top: 6px; }
-      .strip { position: absolute; left: 110px; bottom: 74px; max-width: 1240px; padding: 22px 34px 24px; transform: rotate(-.6deg); isolation: isolate; }
-      .strip::before, .d-strip::before, .c-title::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--paper-hi);
-        filter: url(#deckle) drop-shadow(0 10px 14px rgba(0,0,0,.4)); }
-      .strip .q { font-family: var(--serif); font-size: 40px; font-weight: 600; color: var(--ink); line-height: 1.2; }
-      .strip .s { margin-top: 10px; font-family: var(--mono); font-size: 20px; color: var(--ink-2); letter-spacing: .04em; }
-
-      /* ---------- B: receipt + scissors ---------- */
-      .kraft { position: absolute; inset: 0; background: url("assets/tex/Cardboard002.jpg") center / 1100px; }
-      .kraft::after { content: ""; position: absolute; inset: 0; background: rgba(60, 38, 14, .18); }
-      .rc-wrap { position: absolute; left: 150px; top: 0; width: 600px; height: 1080px; overflow: hidden; }
-      .receipt { position: absolute; left: 30px; top: 1080px; width: 540px; padding: 50px 40px 60px; background: var(--paper-hi);
-        font-family: var(--mono); color: #26241f; box-shadow: 0 18px 34px rgba(0,0,0,.35);
-        -webkit-mask: linear-gradient(#000 0 0) content-box, conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% 100% / 26px 100% repeat-x;
-        mask: conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) 50% 0 / 26px 51% repeat-x, conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% 100% / 26px 51% repeat-x; }
-      .receipt .tex { position: absolute; inset: 0; background: url("assets/tex/Paper001.jpg") center / 600px; mix-blend-mode: multiply; opacity: .25; }
-      .rc-h { text-align: center; font-size: 30px; font-weight: 700; letter-spacing: .1em; }
-      .rc-sub { text-align: center; font-size: 20px; margin-top: 6px; color: #6a665c; }
-      .rc-hr { margin: 22px 0; border-top: 3px dashed #8d887c; }
-      .rc-l { display: flex; justify-content: space-between; font-size: 29px; line-height: 1.9; font-weight: 500; }
-      .rc-l.amz { color: var(--stamp); }
-      .rc-l.tot { font-weight: 700; font-size: 32px; }
-      .rc-l.keep { color: #fff; background: var(--money); padding: 2px 12px; margin: 6px -12px 0; }
-      .bill-area { position: absolute; left: 840px; top: 170px; width: 960px; height: 820px; }
-      .slice { position: absolute; top: 0; height: 410px; overflow: hidden; box-shadow: 0 10px 18px rgba(0,0,0,.3); }
-      .slice svg { position: absolute; top: 0; }
-      .slice .tint { position: absolute; inset: 0; background: var(--stamp); mix-blend-mode: multiply; opacity: 0; }
-      .scissors { position: absolute; left: 0; top: 0; width: 110px; height: 110px; margin: -55px 0 0 -55px; opacity: 0; }
-      .pile-label { position: absolute; font-family: var(--kin); font-size: 74px; letter-spacing: .03em; line-height: 1; }
-      .pile-label small { display: block; font-family: var(--mono); font-size: 22px; letter-spacing: .14em; font-weight: 700; margin-top: 8px; }
-
-      /* ---------- C: 3D tollbooth ---------- */
-      #three-wrap { position: absolute; inset: 0; background: #d9c9a8; }
-      #three-wrap canvas { position: absolute; inset: 0; width: 1920px; height: 1080px; }
-      .paper-over { position: absolute; inset: 0; background: url("assets/tex/Paper004.jpg") center / 900px; mix-blend-mode: multiply; opacity: .35; pointer-events: none; }
-      .c-title { position: absolute; left: 90px; bottom: 70px; padding: 20px 34px 18px; color: var(--ink); isolation: isolate;
-        font-family: var(--kin); font-size: 64px; letter-spacing: .04em; transform: rotate(-1.5deg); }
-      .c-title small { display: block; font-family: var(--mono); font-weight: 700; font-size: 22px; letter-spacing: .12em; color: var(--ink-2); margin-top: 6px; }
-      .c-stamp { left: 1330px; top: 740px; font-size: 84px; background: var(--paper-hi); filter: none; box-shadow: 0 12px 22px rgba(0,0,0,.35); }
-
-      /* ---------- D: footage + kinetic type ---------- */
-      .foot-vid { position: absolute; inset: -40px; width: 2000px; height: 1160px; object-fit: cover;
-        filter: sepia(.35) saturate(.6) contrast(1.15) brightness(.72); }
-      .grade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(40, 24, 8, .15), rgba(20, 10, 4, .55)); }
-      .kin { position: absolute; left: 0; width: 1920px; text-align: center; font-family: var(--kin); color: var(--paper-hi);
-        text-shadow: 0 8px 30px rgba(0,0,0,.45); line-height: .9; }
-      .kin.big { top: 230px; font-size: 330px; letter-spacing: -.01em; }
-      .kin.mid { top: 560px; font-size: 140px; letter-spacing: .12em; }
-      .d-strip { position: absolute; left: 50%; top: 790px; transform: translateX(-50%) rotate(-1deg); padding: 18px 34px 16px;
-        isolation: isolate; font-family: var(--mono); font-size: 34px; font-weight: 700; color: var(--ink);
-        letter-spacing: .06em; white-space: nowrap; }
-      .d-strip mark { background: var(--marker); color: var(--ink); padding: 0 8px; }
-      .src { position: absolute; left: 110px; bottom: 40px; font-family: var(--mono); font-size: 18px; color: rgba(250, 247, 239, .75); letter-spacing: .06em; }
-      .label-chip { position: absolute; left: 110px; top: 70px; font-family: var(--mono); font-size: 22px; font-weight: 700; letter-spacing: .2em;
-        color: var(--paper-hi); background: rgba(0,0,0,.35); padding: 8px 14px; }
-    </style>
+    <script src="vendor/paper-engine.js"></script>
   </head>
   <body>
     <svg width="0" height="0" style="position: absolute" aria-hidden="true">
@@ -158,139 +44,95 @@
         </symbol>
       </defs>
     </svg>
-
-    <div id="root" data-composition-id="main" data-start="0" data-duration="20" data-width="1920" data-height="1080">
-      <!-- A · evidence desk -->
-      <div id="segA" class="seg clip" data-start="0" data-duration="5" data-track-index="0">
-        <div class="desk"></div>
-        <div class="cam" id="camA">
-          <div class="doc" id="doc"><div class="tex"></div>
-            <div class="hl" id="hl1" style="left: 437px; top: 165px; width: 236px; height: 16px"></div>
-            <div class="hl" id="hl2" style="left: 66px; top: 200px; width: 403px; height: 16px"></div>
-            <div class="hl" id="hl3" style="left: 442px; top: 474px; width: 171px; height: 16px"></div>
-          </div>
-          <svg class="string" width="1920" height="1080"><path id="str" d="M 590 120 C 800 260, 1000 520, 1270 600" fill="none" stroke="#b3121f" stroke-width="4" /></svg>
-          <div class="pin" style="left: 590px; top: 120px"></div>
-          <div class="pin" style="left: 1270px; top: 600px"></div>
-          <div class="note" id="note"><div class="k">FTC v. AMAZON</div><div class="v">Dkt. 1 · p. 9<br />¶16–17<br />filed 9/26/23</div></div>
-          <div class="card" id="card"><div class="k">BUY BOX SHARE OF SALES</div><div class="v">FTC figure: <span class="bar"></span> %<br />(redacted)</div></div>
-        </div>
-        <div class="stamp" id="stampA">ALLEGED<small>FTC CLAIM · NOT A RULING</small></div>
-        <div class="strip" id="stripA"><div class="q">FTC: discounting sellers can become “effectively invisible.”</div><div class="s">FTC v. Amazon · W.D. Wash. No. 2:23-cv-01495 · Dkt. 1, p. 9</div></div>
-        <div class="grain"></div><div class="vignette"></div>
-      </div>
-
-      <!-- B · receipt + scissors -->
-      <div id="segB" class="seg clip" data-start="5" data-duration="5" data-track-index="0">
-        <div class="kraft"></div>
-        <div class="rc-wrap"><div class="receipt" id="receipt"><div class="tex"></div>
-          <div class="rc-h">*** CHECKOUT ***</div><div class="rc-sub">per $100 of seller sales · model</div><div class="rc-hr"></div>
-          <div class="rc-l" id="r0"><span>SALE</span><span>$100.00</span></div>
-          <div class="rc-l" id="r1"><span>PRODUCT+FREIGHT</span><span>-28.00</span></div>
-          <div class="rc-l amz" id="r2"><span>REFERRAL FEE 17%</span><span>-17.00</span></div>
-          <div class="rc-l amz" id="r3"><span>FBA + STORAGE</span><span>-20.00</span></div>
-          <div class="rc-l amz" id="r4"><span>SPONSORED ADS</span><span>-15.00</span></div>
-          <div class="rc-l" id="r5"><span>RETURNS</span><span>-10.00</span></div>
-          <div class="rc-hr"></div>
-          <div class="rc-l tot amz" id="r6"><span>AMAZON TOOK</span><span>$52.00</span></div>
-          <div class="rc-l tot keep" id="r7"><span>YOU KEEP</span><span>$10.00</span></div>
-        </div></div>
-        <div class="bill-area" id="bill"></div>
-        <svg class="scissors" id="sc" viewBox="0 0 110 110"><g fill="none" stroke="#1b1a17" stroke-width="7" stroke-linecap="round">
-          <path d="M55 8 L40 70" /><path d="M55 8 L70 70" /></g>
-          <circle cx="36" cy="86" r="16" fill="none" stroke="#c8102e" stroke-width="8" /><circle cx="74" cy="86" r="16" fill="none" stroke="#c8102e" stroke-width="8" />
-          <circle cx="55" cy="48" r="5" fill="#1b1a17" /></svg>
-        <div class="pile-label" id="lblAmz" style="left: 1480px; top: 690px; color: #c8102e">AMAZON $52<small>REFERRAL + FBA + ADS</small></div>
-        <div class="pile-label" id="lblSup" style="left: 1030px; top: 650px; color: #4a463d; font-size: 46px">FACTORY $28<small>PRODUCT + FREIGHT</small></div>
-        <div class="pile-label" id="lblYou" style="left: 800px; top: 650px; color: #2f6b4f">YOU<br />$10<small>SELLER KEEPS</small></div>
-        <div class="grain"></div><div class="vignette"></div>
-      </div>
-
-      <!-- C · 3D tollbooth -->
-      <div id="segC" class="seg clip" data-start="10" data-duration="5" data-track-index="0">
-        <div id="three-wrap"><canvas id="three" width="1920" height="1080"></canvas></div>
-        <div class="paper-over"></div>
-        <div class="c-title" id="cTitle">THE AD AUCTION<small>HIGHEST BID GETS THE SLOT. EVERYONE ELSE WAITS.</small></div>
-        <div class="stamp c-stamp" id="stampC">+250%?<small>FTC ALLEGES · PEAK DAYS</small></div>
-        <div class="grain"></div><div class="vignette"></div>
-      </div>
-
-      <!-- D · footage + kinetic type -->
-      <video id="vidD" class="foot-vid clip" src="assets/video/warehouse_aerial.mp4" muted playsinline data-start="15" data-duration="5" data-media-start="1" data-track-index="1"></video>
-      <div id="segD" class="seg clip" data-start="15" data-duration="5" data-track-index="0">
-        <div class="grade"></div>
-        <div class="label-chip" id="chipD">AMAZON · FORM 10-K · FY2025</div>
-        <div class="kin big" id="k1">$68.6</div>
-        <div class="kin mid" id="k2">BILLION</div>
-        <div class="d-strip" id="stripD">ONE LINE: <mark>ADVERTISING SERVICES</mark> · +22% IN A YEAR</div>
-        <div class="src">Source: Amazon.com, Inc. FY2025 results · footage: Mixkit</div>
-        <div class="grain"></div><div class="vignette"></div>
-      </div>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="563.279" data-width="1920" data-height="1080">
+      <video id="v0" class="foot-vid clip" src="assets/video/mk_42133.mp4" muted playsinline data-start="0.9" data-duration="10.3" data-track-index="2"></video>
+      <video id="v1" class="foot-vid clip" src="assets/video/mk_20770.mp4" muted playsinline data-start="11.2" data-duration="7.8" data-track-index="2"></video>
+      <video id="v2" class="foot-vid clip" src="assets/video/warehouse_aerial.mp4" muted playsinline data-start="19.0" data-duration="16.3" data-track-index="2"></video>
+      <video id="v3" class="foot-vid clip" src="assets/video/mk_42137.mp4" muted playsinline data-start="35.3" data-duration="4.771" data-track-index="2"></video>
+      <video id="v4" class="foot-vid clip" src="assets/video/mk_47627.mp4" muted playsinline data-start="109.029" data-duration="13.5" data-track-index="2"></video>
+      <video id="v5" class="foot-vid clip" src="assets/video/mk_31155.mp4" muted playsinline data-start="122.529" data-duration="9.2" data-track-index="2"></video>
+      <video id="v6" class="foot-vid clip" src="assets/video/mk_20847.mp4" muted playsinline data-start="131.729" data-duration="6.4" data-track-index="2"></video>
+      <div id="scene-1" class="seg clip" data-start="0.0" data-duration="108.129" data-track-index="0"></div>
+      <div id="scene-2" class="seg clip" data-start="108.129" data-duration="116.234" data-track-index="0"></div>
+      <div id="scene-3" class="seg clip" data-start="224.363" data-duration="100.302" data-track-index="0"></div>
+      <div id="scene-4" class="seg clip" data-start="324.665" data-duration="83.587" data-track-index="0"></div>
+      <div id="scene-5" class="seg clip" data-start="408.253" data-duration="76.323" data-track-index="0"></div>
+      <div id="scene-6" class="seg clip" data-start="484.575" data-duration="78.703" data-track-index="0"></div>
+      <audio id="a0" src="assets/sfx/whoosh.wav" data-start="0.05" data-duration="0.5" data-volume="0.35" data-track-index="4"></audio>
+      <audio id="a1" src="assets/vo/s1_1.wav" data-start="0.9" data-duration="39.171" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a2" src="assets/sfx/whoosh.wav" data-start="0.95" data-duration="0.5" data-volume="0.22" data-track-index="4"></audio>
+      <audio id="a3" src="assets/sfx/whoosh.wav" data-start="5.445" data-duration="0.5" data-volume="0.22" data-track-index="4"></audio>
+      <audio id="a4" src="assets/sfx/whoosh.wav" data-start="11.562" data-duration="0.5" data-volume="0.22" data-track-index="4"></audio>
+      <audio id="a5" src="assets/sfx/whoosh.wav" data-start="20.176" data-duration="0.5" data-volume="0.22" data-track-index="4"></audio>
+      <audio id="a6" src="assets/sfx/whoosh.wav" data-start="25.205" data-duration="0.5" data-volume="0.22" data-track-index="4"></audio>
+      <audio id="a7" src="assets/sfx/whoosh.wav" data-start="29.95" data-duration="0.5" data-volume="0.22" data-track-index="4"></audio>
+      <audio id="a8" src="assets/vo/s1_2.wav" data-start="40.071" data-duration="15.646" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a9" src="assets/sfx/printer.wav" data-start="41.295" data-duration="0.45" data-volume="0.3" data-track-index="4"></audio>
+      <audio id="a10" src="assets/sfx/snip.wav" data-start="49.255" data-duration="0.2" data-volume="0.45" data-track-index="4"></audio>
+      <audio id="a11" src="assets/sfx/printer.wav" data-start="49.555" data-duration="0.45" data-volume="0.3" data-track-index="4"></audio>
+      <audio id="a12" src="assets/vo/s1_3.wav" data-start="55.717" data-duration="9.374" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a13" src="assets/sfx/snip.wav" data-start="60.38" data-duration="0.2" data-volume="0.45" data-track-index="4"></audio>
+      <audio id="a14" src="assets/sfx/printer.wav" data-start="60.68" data-duration="0.45" data-volume="0.3" data-track-index="4"></audio>
+      <audio id="a15" src="assets/vo/s1_4.wav" data-start="65.091" data-duration="9.801" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a16" src="assets/sfx/snip.wav" data-start="70.462" data-duration="0.2" data-volume="0.45" data-track-index="4"></audio>
+      <audio id="a17" src="assets/sfx/printer.wav" data-start="70.762" data-duration="0.45" data-volume="0.3" data-track-index="4"></audio>
+      <audio id="a18" src="assets/vo/s1_5.wav" data-start="74.891" data-duration="10.057" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a19" src="assets/sfx/snip.wav" data-start="80.609" data-duration="0.2" data-volume="0.45" data-track-index="4"></audio>
+      <audio id="a20" src="assets/sfx/printer.wav" data-start="80.909" data-duration="0.45" data-volume="0.3" data-track-index="4"></audio>
+      <audio id="a21" src="assets/vo/s1_6.wav" data-start="84.948" data-duration="2.761" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a22" src="assets/sfx/snip.wav" data-start="85.612" data-duration="0.2" data-volume="0.45" data-track-index="4"></audio>
+      <audio id="a23" src="assets/sfx/printer.wav" data-start="85.912" data-duration="0.45" data-volume="0.3" data-track-index="4"></audio>
+      <audio id="a24" src="assets/vo/s1_7.wav" data-start="87.709" data-duration="19.721" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a25" src="assets/sfx/printer.wav" data-start="93.52" data-duration="0.45" data-volume="0.3" data-track-index="4"></audio>
+      <audio id="a26" src="assets/sfx/printer.wav" data-start="99.719" data-duration="0.45" data-volume="0.3" data-track-index="4"></audio>
+      <audio id="a27" src="assets/sfx/whoosh.wav" data-start="108.179" data-duration="0.5" data-volume="0.35" data-track-index="4"></audio>
+      <audio id="a28" src="assets/vo/s2_1.wav" data-start="109.029" data-duration="33.603" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a29" src="assets/sfx/whoosh.wav" data-start="109.079" data-duration="0.5" data-volume="0.22" data-track-index="4"></audio>
+      <audio id="a30" src="assets/sfx/whoosh.wav" data-start="112.666" data-duration="0.5" data-volume="0.22" data-track-index="4"></audio>
+      <audio id="a31" src="assets/sfx/whoosh.wav" data-start="119.014" data-duration="0.5" data-volume="0.22" data-track-index="4"></audio>
+      <audio id="a32" src="assets/sfx/whoosh.wav" data-start="127.896" data-duration="0.5" data-volume="0.22" data-track-index="4"></audio>
+      <audio id="a33" src="assets/sfx/whoosh.wav" data-start="133.432" data-duration="0.5" data-volume="0.22" data-track-index="4"></audio>
+      <audio id="a34" src="assets/vo/s2_2.wav" data-start="142.632" data-duration="16.009" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a35" src="assets/vo/s2_3.wav" data-start="158.641" data-duration="14.921" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a36" src="assets/vo/s2_4.wav" data-start="173.561" data-duration="39.107" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a37" src="assets/sfx/thud.wav" data-start="192.94" data-duration="0.45" data-volume="0.5" data-track-index="4"></audio>
+      <audio id="a38" src="assets/vo/s2_5.wav" data-start="212.668" data-duration="10.995" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a39" src="assets/sfx/whoosh.wav" data-start="224.413" data-duration="0.5" data-volume="0.35" data-track-index="4"></audio>
+      <audio id="a40" src="assets/vo/s3_1.wav" data-start="225.263" data-duration="20.979" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a41" src="assets/vo/s3_2.wav" data-start="246.243" data-duration="42.328" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a42" src="assets/vo/s3_3.wav" data-start="288.571" data-duration="35.395" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a43" src="assets/sfx/thud.wav" data-start="306.094" data-duration="0.45" data-volume="0.5" data-track-index="4"></audio>
+      <audio id="a44" src="assets/sfx/whoosh.wav" data-start="324.715" data-duration="0.5" data-volume="0.35" data-track-index="4"></audio>
+      <audio id="a45" src="assets/vo/s4_1.wav" data-start="325.565" data-duration="33.005" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a46" src="assets/vo/s4_2.wav" data-start="358.571" data-duration="10.867" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a47" src="assets/sfx/printer.wav" data-start="359.097" data-duration="0.45" data-volume="0.3" data-track-index="4"></audio>
+      <audio id="a48" src="assets/sfx/printer.wav" data-start="365.092" data-duration="0.45" data-volume="0.3" data-track-index="4"></audio>
+      <audio id="a49" src="assets/vo/s4_3.wav" data-start="369.438" data-duration="6.878" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a50" src="assets/sfx/printer.wav" data-start="372.702" data-duration="0.45" data-volume="0.3" data-track-index="4"></audio>
+      <audio id="a51" src="assets/vo/s4_4.wav" data-start="376.316" data-duration="3.87" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a52" src="assets/sfx/printer.wav" data-start="378.076" data-duration="0.45" data-volume="0.3" data-track-index="4"></audio>
+      <audio id="a53" src="assets/vo/s4_5.wav" data-start="380.186" data-duration="9.929" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a54" src="assets/sfx/printer.wav" data-start="385.933" data-duration="0.45" data-volume="0.3" data-track-index="4"></audio>
+      <audio id="a55" src="assets/vo/s4_6.wav" data-start="390.115" data-duration="17.438" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a56" src="assets/sfx/printer.wav" data-start="392.166" data-duration="0.45" data-volume="0.3" data-track-index="4"></audio>
+      <audio id="a57" src="assets/sfx/thud.wav" data-start="395.241" data-duration="0.45" data-volume="0.5" data-track-index="4"></audio>
+      <audio id="a58" src="assets/sfx/whoosh.wav" data-start="408.303" data-duration="0.5" data-volume="0.35" data-track-index="4"></audio>
+      <audio id="a59" src="assets/vo/s5_1.wav" data-start="409.153" data-duration="18.419" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a60" src="assets/vo/s5_2.wav" data-start="427.572" data-duration="18.462" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a61" src="assets/vo/s5_3.wav" data-start="446.034" data-duration="16.521" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a62" src="assets/vo/s5_4.wav" data-start="462.555" data-duration="21.321" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a63" src="assets/sfx/thud.wav" data-start="474.089" data-duration="0.45" data-volume="0.5" data-track-index="4"></audio>
+      <audio id="a64" src="assets/sfx/whoosh.wav" data-start="484.625" data-duration="0.5" data-volume="0.35" data-track-index="4"></audio>
+      <audio id="a65" src="assets/vo/s6_1.wav" data-start="485.475" data-duration="27.123" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a66" src="assets/vo/s6_2.wav" data-start="512.599" data-duration="26.355" data-volume="1.0" data-track-index="3"></audio>
+      <audio id="a67" src="assets/vo/s6_3.wav" data-start="538.954" data-duration="23.625" data-volume="1.0" data-track-index="3"></audio>
     </div>
-
     <script type="module">
       import * as THREE from "./vendor/three.module.js";
-      const tl = gsap.timeline({ paused: true });
-
-      /* deterministic film-grain jitter, 12 fps */
-      let seed = 1234567;
-      const rnd = () => ((seed = (seed * 1103515245 + 12345) % 2147483648) / 2147483648);
-      document.querySelectorAll(".grain").forEach((g) => {
-        for (let t = 0; t < 20; t += 1 / 12) tl.set(g, { x: Math.round(rnd() * 60 - 30), y: Math.round(rnd() * 60 - 30) }, t);
-      });
-
-      /* ---------- A: evidence desk (0–5s) ---------- */
-      tl.fromTo("#note", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 0.15);
-      tl.fromTo("#card", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 0.3);
-      // push in to ¶16 (the "effectively invisible" lines)
-      tl.to("#camA", { scale: 2.25, x: -560, y: -170, duration: 1.3, ease: "power3.inOut" }, 1.0);
-      ["#hl1", "#hl2"].forEach((h, i) => tl.fromTo(h, { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: "power1.out" }, 2.35 + i * 0.45));
-      tl.fromTo("#stampA", { opacity: 0, scale: 1.7 }, { opacity: 0.9, scale: 1, duration: 0.18, ease: "power4.in" }, 3.4);
-      tl.fromTo("#segA", { x: 0 }, { x: 9, duration: 0.05, yoyo: true, repeat: 3, ease: "none" }, 3.58);
-      tl.fromTo("#stripA", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 2.2);
-      // drift to ¶17 ("a price floor everywhere else")
-      tl.to("#camA", { y: -900, x: -600, duration: 0.9, ease: "power2.inOut" }, 4.0);
-      tl.fromTo("#hl3", { scaleX: 0 }, { scaleX: 1, duration: 0.4 }, 4.55);
-
-      /* ---------- B: receipt + scissors (5–10s) ---------- */
-      const bill = document.getElementById("bill");
-      const parts = [ // width share, destination, label
-        { w: 0.28, to: "sup" }, { w: 0.17, to: "amz" }, { w: 0.20, to: "amz" }, { w: 0.15, to: "amz" }, { w: 0.10, to: "loss" }, { w: 0.10, to: "you" } ];
-      let x = 0; const BW = 960;
-      const slices = parts.map((p) => {
-        const w = Math.round(p.w * BW), d = document.createElement("div");
-        d.className = "slice"; d.style.left = x + "px"; d.style.width = w + "px";
-        d.innerHTML = `<svg width="960" height="410" style="left:${-x}px"><use href="#bill-art"/></svg><div class="tint"></div>`;
-        bill.appendChild(d); const s = { el: d, x, w, ...p }; x += w; return s;
-      });
-      const RC_TOP = 5.0;
-      tl.fromTo("#receipt", { y: 0 }, { y: -560, duration: 0.6, ease: "power2.out" }, RC_TOP + 0.1);
-      tl.fromTo(bill, { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.4 }, RC_TOP + 0.1);
-      const rows = ["#r0", "#r1", "#r2", "#r3", "#r4", "#r5", "#r6", "#r7"];
-      rows.forEach((r, i) => tl.fromTo(r, { opacity: 0 }, { opacity: 1, duration: 0.05 }, RC_TOP + 0.5 + i * 0.36));
-      tl.to("#receipt", { y: -900, duration: 2.5, ease: "none" }, RC_TOP + 0.7);
-      // final local x (inside .bill-area) per destination; Amazon slices pile up on the right
-      const destX = { you: 0, sup: 190, loss: 500 };
-      let amzOff = 0;
-      slices.forEach((s, i) => {
-        const t = RC_TOP + 0.5 + (i + 1) * 0.36;
-        if (i > 0) {
-          tl.fromTo("#sc", { x: 840 + s.x, y: 150, opacity: 1 }, { x: 840 + s.x, y: 600, opacity: 1, duration: 0.22, ease: "none", immediateRender: false }, t - 0.24);
-        }
-        let tx, ty = 40, rot = 0;
-        if (s.to === "amz") { tx = 640 + amzOff * 18; ty = 20 + amzOff * 22; rot = -5 + amzOff * 4; amzOff += 1; }
-        else { tx = destX[s.to]; ty = s.to === "loss" ? 80 : 40; rot = s.to === "loss" ? 9 : (s.to === "sup" ? -2 : 0); }
-        tl.to(s.el, { x: tx - s.x, y: ty, rotation: rot, duration: 0.5, ease: "power3.out" }, t + 0.02);
-        if (s.to === "amz") tl.to(s.el.querySelector(".tint"), { opacity: 0.55, duration: 0.3 }, t + 0.1);
-        if (s.to === "loss") tl.to(s.el, { opacity: 0.35, duration: 0.4 }, t + 0.3);
-      });
-      tl.to("#sc", { opacity: 0, duration: 0.2 }, RC_TOP + 2.8);
-      tl.fromTo("#lblAmz", { opacity: 0, scale: 1.3 }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(2)" }, RC_TOP + 3.3);
-      tl.fromTo("#lblYou", { opacity: 0, scale: 1.3 }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(2)" }, RC_TOP + 3.6);
-      tl.fromTo("#lblSup", { opacity: 0 }, { opacity: 1, duration: 0.3 }, RC_TOP + 3.0);
-
-      /* ---------- C: 3D tollbooth (10–15s) ---------- */
-      const canvas = document.getElementById("three");
+      const SCENES = [{"scene": 1, "part": 1, "mode": "waterfall", "tag": "UNIT ECONOMICS AUTOPSY", "title": "Where $100 of Amazon Sales Actually Goes", "unit": " USD", "currency": "USD", "footnote": "Illustrative model · typical third-party apparel seller · per $100 of sales · Sources: Marketplace Pulse; Amazon 2026 fee schedule", "steps": [{"label": "Customer Sales", "val": 100, "type": "start", "to": "seller", "sub": "$100 of sales. Who actually keeps it?", "evidence": {"doc": "Amazon.com, Inc. — Form 10-K, fiscal year 2025", "line": "Advertising services: $68.6B (+22% YoY)"}, "step": 1, "cue": "Every time you spend one hundred dollars", "narration": "Every time you spend one hundred dollars with a seller on Amazon... about fifty-two of those dollars never reach the seller. Not the brand. Not the factory. Amazon. And according to the U.S. government, you're paying for it too — even if you never shop on Amazon. In 2025, one line in Amazon's annual report — advertising — brought in sixty-eight point six billion dollars. That's one hundred and eighty-eight million dollars... every single day. So let's follow one hundred dollars. Dollar by dollar. Through every fee, every auction, and every return... and find out who actually gets your money."}, {"label": "Product & Freight", "val": -28, "type": "cost", "to": "supplier", "sub": "Manufacturing, ocean freight and import duties — paid months before anything sells.", "step": 2, "cue": "Meet a typical clothing seller on Amazon.", "narration": "Meet a typical clothing seller on Amazon. For every hundred dollars in sales, here's where the money goes. First, the product itself. Manufacturing, ocean freight, and import duties. Twenty-eight dollars — paid months before anything sells."}, {"label": "Referral Fee (17%)", "val": -17, "type": "cost", "to": "amazon", "sub": "Amazon's first cut: a 17% referral fee on apparel over $20.", "step": 3, "cue": "The moment a customer clicks \"Buy Now\"...", "narration": "The moment a customer clicks \"Buy Now\"... Amazon takes its first cut. A seventeen percent referral fee on clothing. Seventeen dollars."}, {"label": "FBA, Storage & Surcharges", "val": -20, "type": "cost", "to": "amazon", "sub": "Picking, packing, shipping, storage — plus a 3.5% surcharge since April 2026.", "step": 4, "cue": "Next, Fulfillment by Amazon. Picking, packing, shipping,", "narration": "Next, Fulfillment by Amazon. Picking, packing, shipping, storage... plus a new surcharge added in 2026. About twenty dollars."}, {"label": "Sponsored Ads", "val": -15, "type": "cost", "to": "amazon", "sub": "The line shoppers never see: about $15 of every $100 goes to sponsored listings.", "step": 5, "cue": "Then, the line shoppers never see. Advertising.", "narration": "Then, the line shoppers never see. Advertising. Just to show up where buyers look, a typical seller spends around fifteen dollars on sponsored listings."}, {"label": "Returns & Write-offs", "val": -10, "type": "cost", "to": "loss", "sub": "Refunds, return fees and inventory that can't be resold.", "step": 6, "cue": "Returns and write-offs take another ten.", "narration": "Returns and write-offs take another ten."}, {"label": "Seller Keeps", "val": 10, "type": "final", "to": "seller", "sub": "The seller keeps $10. Amazon collects $52 — more than five times as much.", "callout": {"label": "Amazon's take", "val": 52, "parts": [17, 20, 15], "pos": "tr", "boxes": [{"title": "Amazon collects", "big": "$52", "sub": "$17 referral + $20 FBA + $15 ads", "to": "amazon"}, {"title": "Seller keeps", "big": "$10", "sub": "after product, fees, ads and returns", "to": "seller"}]}, "step": 7, "cue": "The final split? The seller — who", "narration": "The final split? The seller — who designed the product, paid the factory, and carried all the risk — keeps about ten dollars. Amazon — without owning a single thread — collects about fifty-two. More than five times what the seller keeps. But hold on to that fifteen-dollar ad line. That's where this story gets strange."}]}, {"scene": 2, "part": 2, "mode": "network", "tag": "THE $68.6 BILLION TOLLBOOTH", "title": "How a Digital Shelf Became an Ad Auction", "unit": "", "footnote": "Sources: Amazon FY2025 Form 10-K; WAN-IFRA 2025; Jungle Scout 2024; Constructor 2025; FTC v. Amazon (2026, allegations); Marketplace Pulse", "layers": [[{"name": "Third-party sellers", "y": 0.25}, {"name": "Apparel brands", "y": 0.5}, {"name": "Factory-direct sellers", "y": 0.75}], [{"name": "Amazon search (56–63% of US shoppers start here)", "y": 0.5}], [{"name": "Sponsored-ads auction ($68.6B in 2025)", "y": 0.5}], [{"name": "Shopper's first screen (≈52% total take)", "y": 0.5}]], "steps": [{"label": "1. The 10-K Line", "val": "$68.6B Ad Revenue", "activeLayer": 0, "sub": "More than half the revenue of every daily and weekly newspaper on Earth ($125.7B).", "evidence": {"doc": "Amazon.com, Inc. — Form 10-K, fiscal year 2025", "line": "Advertising services: $68.6B (+22% YoY)"}, "step": 1, "cue": "How did an online bookstore become a", "narration": "How did an online bookstore become a toll collector? The answer is buried in Amazon's SEC Form ten-K, under a line called \"advertising services.\" In 2025, it brought in sixty-eight point six billion dollars — up twenty-two percent in a single year. For perspective... that's more than half the combined revenue of every daily and weekly newspaper on Earth. Not all of it comes from sellers — streaming ads count too — but sponsored listings are widely estimated to be the biggest piece."}, {"label": "2. Demand Lock-In", "val": "56–63% Start on Amazon", "activeLayer": 1, "sub": "Share of US online shoppers who start product searches on Amazon (Jungle Scout 2024 · Constructor 2025).", "step": 2, "cue": "Here's how it works. Depending on the", "narration": "Here's how it works. Depending on the survey, between half and two-thirds of American online shoppers now start their product searches directly on Amazon. And once the buyers are all in one room... whoever controls the shelf controls the business."}, {"label": "3. The Pay-to-Play Shelf", "val": "Count the 'Sponsored'", "activeLayer": 2, "sub": "Every slot is a seller bidding per click against other sellers for the same customer.", "broll": "Creator's own phone screen recording of an Amazon search", "step": 3, "cue": "So Amazon turned the shelf into an", "narration": "So Amazon turned the shelf into an auction. Try it yourself: search for almost anything on your phone... and count the \"Sponsored\" results before the first one that isn't. Every slot is a seller bidding, per click, against other sellers."}, {"label": "4. The Hidden Surcharge (Alleged)", "val": "Up to +250% on Peak Days", "activeLayer": 2, "accent": "loss", "sub": "FTC + 22 states allege a secret surcharge on top of auction prices since 2019: $20B+ overcharged.", "evidence": {"doc": "FTC et al. v. Amazon.com, Inc. (W.D. Wash.), filed Aug. 31, 2026", "quote": "Alleged: up to 50% above auction results on ordinary days, up to 250% on peak days"}, "step": 4, "cue": "And according to a new lawsuit, even", "narration": "And according to a new lawsuit, even the auction may not be what it seems. In August 2026, the FTC and twenty-two states sued Amazon, alleging that since 2019 it secretly added a surcharge on top of auction prices. Documents unsealed in November allege prices up to fifty percent above the auction result on ordinary days... and up to two hundred and fifty percent on days like Prime Day. The FTC puts the total overcharge at more than twenty billion dollars. Amazon calls the suit misguided, and says it never charges more than an advertiser's maximum bid."}, {"label": "5. The Bottleneck", "val": "≈52% Take Rate", "activeLayer": 3, "sub": "Fees + ads ≈ 52% of seller sales (Marketplace Pulse, 2022 average: 51.8%).", "step": 5, "cue": "For sellers, it's a prisoner's dilemma: bid", "narration": "For sellers, it's a prisoner's dilemma: bid away your margin... or disappear. So why don't they just charge less everywhere else? Because if they try... a bot is watching."}]}, {"scene": 3, "part": 3, "mode": "compare", "tag": "FTC v. AMAZON · ALLEGATIONS", "title": "The Price Floor & Project Nessie", "unit": "", "footnote": "FTC claims are allegations; Amazon denies wrongdoing. Buy Box share is an industry estimate not confirmed by Amazon.", "steps": [{"label": "1. The Price-Parity Trap", "unit": "$", "leftVal": 100, "rightVal": 85, "leftText": "Amazon listing: $100", "rightText": "Own Shopify store: $85", "leftTo": "amazon", "rightTo": "seller", "sub": "What happens when a seller charges less off Amazon?", "evidence": {"doc": "FTC et al. v. Amazon.com, Inc., No. 2:23-cv-01495 (W.D. Wash.)", "line": "Complaint filed Sept. 26, 2023"}, "step": 1, "cue": "In 2023, the Federal Trade Commission and", "narration": "In 2023, the Federal Trade Commission and a group of states sued Amazon for illegally maintaining a monopoly. The complaint describes what happens when a seller tries to undercut Amazon. Say you sell a dress for one hundred dollars on Amazon... and eighty-five on your own Shopify store, where your fees are lower."}, {"label": "2. The Buy Box", "unit": "%", "leftVal": 80, "rightVal": 20, "estimate": true, "leftText": "Through the Buy Box: 80%+", "rightText": "Everything else: <20%", "leftTo": "amazon", "rightTo": "supplier", "sub": "FTC: discounting sellers can become \"effectively invisible.\"", "evidence": {"doc": "FTC et al. v. Amazon.com, Inc., No. 2:23-cv-01495 (W.D. Wash.), Dkt. 1, p. 9", "quote": "\"a price floor everywhere else\""}, "step": 2, "cue": "According to the FTC, Amazon's algorithms scan", "narration": "According to the FTC, Amazon's algorithms scan the internet for lower prices. If they find one, your offer can lose the Buy Box — that yellow \"Add to Cart\" button. Industry estimates — never confirmed by Amazon — say more than eighty percent of sales go through it. The complaint goes further. It says Amazon can bury discounting sellers so far down in search results that they become — quote — \"effectively invisible.\" So sellers do the rational thing. In the FTC's words, they use their inflated Amazon prices as \"a price floor everywhere else\"... which means, if the government is right, you pay the Amazon tax even at other stores."}, {"label": "3. Project Nessie", "unit": "$", "leftVal": 110, "rightVal": 110, "illustrative": true, "leftText": "Amazon raises its price", "rightText": "Rival algorithms follow", "leftTo": "amazon", "rightTo": "supplier", "sub": "FTC alleges $1B+ in extra profit. Amazon: the FTC \"grossly mischaracterizes\" the tool.", "evidence": {"doc": "Unredacted FTC complaint (Nov. 2023)", "quote": "Alleged: more than $1 billion in excess profit"}, "step": 3, "cue": "Then there's Project Nessie — an algorithm", "narration": "Then there's Project Nessie — an algorithm the FTC says predicted when competitors would match Amazon's price increases... so Amazon could raise prices and watch rivals follow. The agency alleges it generated more than one billion dollars in extra profit. Amazon says the FTC \"grossly mischaracterizes\" the tool — and that it was scrapped because it didn't work as intended. More broadly, Amazon says the lawsuit is wrong on the facts and the law. But there's one cost we haven't counted yet... the one that arrives after the sale is over."}]}, {"scene": 4, "part": 4, "mode": "waterfall", "tag": "REVERSE LOGISTICS AUTOPSY", "title": "The True Cost of One \"Free\" $100 Return", "unit": " USD", "currency": "USD", "footnote": "One worn $100 dress · 17% referral fee · ≈ values vary by size and weight · Sources: NRF 2025; Appriss Retail; Amazon fee policies 2026", "steps": [{"label": "Sale Reversed", "val": 0, "type": "start", "to": "seller", "sub": "The customer gets $100 back. The sale no longer exists.", "stats": ["~$850B returned in 2025 (NRF)", "~1 in 5 online purchases returned"], "step": 1, "cue": "Now for the cost that comes back", "narration": "Now for the cost that comes back in a box. According to the National Retail Federation, roughly one in five online purchases gets sent back. And in fashion, one kind of return has its own name. Wardrobing. Buy an evening dress on Friday. Wear it to a wedding on Saturday. Return it on Monday — \"didn't fit.\" In one industry survey, six in ten retail executives said they'd seen it. For the shopper, the return is free. For the seller, here's what one worn, one-hundred-dollar dress actually costs."}, {"label": "Refund Admin Fee", "val": -3.4, "type": "cost", "to": "amazon", "sub": "Amazon keeps 20% of the $17 referral fee (capped at $5).", "step": 2, "cue": "The customer gets their hundred dollars back.", "narration": "The customer gets their hundred dollars back. Amazon refunds most of its referral fee... but keeps a refund administration fee. Three dollars and forty cents."}, {"label": "FBA Fee Not Refunded", "val": -6, "display": "≈−$6", "type": "cost", "to": "amazon", "sub": "The fulfillment fee Amazon charged to ship the dress is gone.", "step": 3, "cue": "The fulfillment fee Amazon charged to ship", "narration": "The fulfillment fee Amazon charged to ship the dress? Not refunded. About six dollars... gone."}, {"label": "Returns Processing", "val": -3, "display": "≈−$3", "type": "cost", "to": "amazon", "sub": "Apparel returns processing fee (roughly $1.65–$3.89 by size).", "step": 4, "cue": "Then, a returns processing fee. Around three", "narration": "Then, a returns processing fee. Around three dollars more."}, {"label": "Worn Dress Written Off", "val": -28, "type": "cost", "to": "loss", "sub": "Makeup and perfume: it can't be sold as new.", "step": 5, "cue": "And the dress itself comes back with", "narration": "And the dress itself comes back with makeup on the collar and perfume in the fabric. It can't be sold as new. Twenty-eight dollars of inventory... written off."}, {"label": "Net Loss", "val": -40.4, "type": "final", "to": "loss", "sub": "= the profit from four full-price sales at a 10% margin.", "callout": {"pos": "bl", "boxes": [{"title": "One wardrobed return", "big": "−$40.40", "sub": "wipes out the profit from 4 full-price sales", "to": "loss"}]}, "step": 6, "cue": "Total: a loss of about forty dollars", "narration": "Total: a loss of about forty dollars and forty cents — on a sale that no longer exists. At a ten percent margin, that's four full-price sales... just to pay for one wardrobed dress. And even the sellers who survive returns run into one more problem. Time."}]}, {"scene": 5, "part": 5, "mode": "network", "tag": "THE WORKING-CAPITAL SQUEEZE", "title": "Cash Out First, Paid Last — Fined Either Way", "unit": "", "footnote": "Sources: Amazon seller policies (delivery-date reserve, inbound placement, low-inventory-level fee); 3.5% surcharge eff. Apr 17, 2026; Marketplace Pulse 2026 Seller Index", "layers": [[{"name": "Factory (paid up front)", "y": 0.5}], [{"name": "Payout reserve (delivery + 7 days)", "y": 0.5}], [{"name": "Inbound placement fee · +3.5% surcharge", "y": 0.5}], [{"name": "Too much stock: aged-inventory surcharge", "y": 0.3}, {"name": "Under ~28 days: low-inventory fee", "y": 0.7}]], "steps": [{"label": "1. Factory Cash Goes Out", "val": "2–3 Months Early", "activeLayer": 0, "sub": "Sellers pay factories long before a single unit reaches a customer.", "step": 1, "cue": "So far, that's fifty-two dollars in fees", "narration": "So far, that's fifty-two dollars in fees and ads... and forty more every time a dress comes back. But the last trap isn't a fee at all. Selling on Amazon starts with a bet. Sellers pay their factories up front — often two or three months before a single unit reaches a customer."}, {"label": "2. The Payout Reserve", "val": "Delivery + 7 Days", "activeLayer": 1, "sub": "Funds release 7 days after confirmed delivery — often 2–4 weeks from sale to bank.", "step": 2, "cue": "Then, when the sale finally happens, the", "narration": "Then, when the sale finally happens, the money still doesn't arrive. Under Amazon's current rules, seller funds generally become available seven days after the customer's confirmed delivery. Add settlement cycles on top, and many sellers wait two to four weeks to touch their own revenue."}, {"label": "3. Fees Around Inventory", "val": "+3.5% Surcharge", "activeLayer": 2, "sub": "Inbound placement fee (since 2024) + 3.5% on every fulfillment fee (April 2026).", "step": 3, "cue": "Meanwhile, the fees keep multiplying. Since 2024,", "narration": "Meanwhile, the fees keep multiplying. Since 2024, there's a fee for how your boxes get spread across Amazon's warehouses. And in 2026, a three-and-a-half percent surcharge landed on top of every fulfillment fee."}, {"label": "4. The Corridor", "val": "Too Much OR Too Little", "activeLayer": 3, "sub": "Aged-inventory surcharge vs. low-inventory fee. 49% of sellers call fees their #1 margin concern.", "step": 4, "cue": "And then there's the corridor. Keep too", "narration": "And then there's the corridor. Keep too much stock for too long, and you pay aged inventory surcharges. But let your stock fall below roughly twenty-eight days of supply... and you pay a low-inventory-level fee on every unit shipped. Too much costs money. Too little costs money. Amazon collects on both sides. So... why does anyone stay?"}]}, {"scene": 6, "part": 6, "mode": "compare", "tag": "WHO REALLY GETS YOUR $100", "title": "The Tollbooth, Then and Now", "unit": "", "footnote": "Sources: Stripe standard pricing; Amazon 2020 shareholder letter; Marketplace Pulse; FTC v. Amazon (W.D. Wash.)", "steps": [{"label": "1. The Alternative Isn't Free", "unit": "$", "leftVal": 52, "rightVal": 3.2, "leftText": "Amazon: fees + ads ≈ $52", "rightText": "Own store: card fee ≈ $3.20 + paid traffic (?)", "leftTo": "amazon", "rightTo": "seller", "sub": "2.9% + 30¢ to process the card — but the customers still have to be bought on Google, Meta or TikTok.", "step": 1, "cue": "On your own website, the payment processor", "narration": "On your own website, the payment processor takes about three dollars on a hundred-dollar sale. Sounds like a bargain... until you realize the customers don't come with it. You have to buy them — one click at a time — on Google, Meta, or TikTok. A different auction... with the same tollbooth logic. And Amazon does deliver something real. Over two hundred million Prime members, fast delivery, and a checkout button people trust without thinking. That's what sellers are paying for."}, {"label": "2. What Changed Is the Price", "unit": "%", "leftVal": 35.2, "rightVal": 51.8, "leftText": "2016: 35.2%", "rightText": "2022: 51.8%", "leftTo": "supplier", "rightTo": "amazon", "sub": "Amazon's average cut of seller sales (Marketplace Pulse).", "evidence": {"doc": "FTC et al. v. Amazon.com, Inc., No. 2:23-cv-01495 (W.D. Wash.)", "line": "Bench trial scheduled for 2027"}, "step": 2, "cue": "What's changed is the price. In 2016,", "narration": "What's changed is the price. In 2016, Amazon's cut was about a third of a seller's revenue. By 2022, it was more than half. And in 2027, a federal judge in Seattle will start deciding whether parts of how Amazon got here broke the law. If the FTC wins, the Buy Box rules could change... and with them, prices across the internet. If Amazon wins, the tollbooth stays."}, {"label": "3. Back to the $100", "unit": "$", "leftVal": 10, "rightVal": 52, "leftText": "Seller keeps: $10", "rightText": "Amazon collects: $52", "leftTo": "seller", "rightTo": "amazon", "sub": "The fortune belongs to whoever controls the last three seconds before checkout.", "step": 3, "cue": "So... back to where we started. When", "narration": "So... back to where we started. When you spend one hundred dollars with a seller on Amazon — who actually gets your money? About ten dollars goes to the business that made the product. About fifty-two goes to the company that owns the shelf. In modern commerce, the company that makes the product rarely gets rich. The fortune belongs to whoever controls the last three seconds before checkout."}]}];
+      const TIMELINE = {"source": "audio", "scenes": [{"scene": 1, "start": 0.0, "duration": 108.129, "steps": [{"step": 1, "start": 0.9, "duration": 39.171, "audio": "voiceover/steps/s1_1.wav", "cues": {}}, {"step": 2, "start": 40.071, "duration": 15.646, "audio": "voiceover/steps/s1_2.wav", "cues": {"sale": 41.295, "line": 49.555}}, {"step": 3, "start": 55.717, "duration": 9.374, "audio": "voiceover/steps/s1_3.wav", "cues": {"line": 60.68}}, {"step": 4, "start": 65.091, "duration": 9.801, "audio": "voiceover/steps/s1_4.wav", "cues": {"line": 70.762}}, {"step": 5, "start": 74.891, "duration": 10.057, "audio": "voiceover/steps/s1_5.wav", "cues": {"line": 80.909}}, {"step": 6, "start": 84.948, "duration": 2.761, "audio": "voiceover/steps/s1_6.wav", "cues": {"line": 85.912}}, {"step": 7, "start": 87.709, "duration": 19.721, "audio": "voiceover/steps/s1_7.wav", "cues": {"keep": 93.52, "took": 99.719}}]}, {"scene": 2, "start": 108.129, "duration": 116.234, "steps": [{"step": 1, "start": 109.029, "duration": 33.603, "audio": "voiceover/steps/s2_1.wav", "cues": {}}, {"step": 2, "start": 142.632, "duration": 16.009, "audio": "voiceover/steps/s2_2.wav", "cues": {}}, {"step": 3, "start": 158.641, "duration": 14.921, "audio": "voiceover/steps/s2_3.wav", "cues": {}}, {"step": 4, "start": 173.561, "duration": 39.107, "audio": "voiceover/steps/s2_4.wav", "cues": {"stamp": 192.94}}, {"step": 5, "start": 212.668, "duration": 10.995, "audio": "voiceover/steps/s2_5.wav", "cues": {}}]}, {"scene": 3, "start": 224.363, "duration": 100.302, "steps": [{"step": 1, "start": 225.263, "duration": 20.979, "audio": "voiceover/steps/s3_1.wav", "cues": {}}, {"step": 2, "start": 246.243, "duration": 42.328, "audio": "voiceover/steps/s3_2.wav", "cues": {"zoom": 258.836, "hl1": 268.072, "hl2": 270.59, "drift": 278.986, "hl3": 282.344}}, {"step": 3, "start": 288.571, "duration": 35.395, "audio": "voiceover/steps/s3_3.wav", "cues": {"stamp": 306.094, "reply": 312.402}}]}, {"scene": 4, "start": 324.665, "duration": 83.587, "steps": [{"step": 1, "start": 325.565, "duration": 33.005, "audio": "voiceover/steps/s4_1.wav", "cues": {}}, {"step": 2, "start": 358.571, "duration": 10.867, "audio": "voiceover/steps/s4_2.wav", "cues": {"head": 359.097, "line": 365.092}}, {"step": 3, "start": 369.438, "duration": 6.878, "audio": "voiceover/steps/s4_3.wav", "cues": {"line": 372.702}}, {"step": 4, "start": 376.316, "duration": 3.87, "audio": "voiceover/steps/s4_4.wav", "cues": {"line": 378.076}}, {"step": 5, "start": 380.186, "duration": 9.929, "audio": "voiceover/steps/s4_5.wav", "cues": {"line": 385.933}}, {"step": 6, "start": 390.115, "duration": 17.438, "audio": "voiceover/steps/s4_6.wav", "cues": {"line": 392.166, "stamp": 395.241}}]}, {"scene": 5, "start": 408.253, "duration": 76.323, "steps": [{"step": 1, "start": 409.153, "duration": 18.419, "audio": "voiceover/steps/s5_1.wav", "cues": {}}, {"step": 2, "start": 427.572, "duration": 18.462, "audio": "voiceover/steps/s5_2.wav", "cues": {}}, {"step": 3, "start": 446.034, "duration": 16.521, "audio": "voiceover/steps/s5_3.wav", "cues": {}}, {"step": 4, "start": 462.555, "duration": 21.321, "audio": "voiceover/steps/s5_4.wav", "cues": {"stamp": 474.089}}]}, {"scene": 6, "start": 484.575, "duration": 78.703, "steps": [{"step": 1, "start": 485.475, "duration": 27.123, "audio": "voiceover/steps/s6_1.wav", "cues": {}}, {"step": 2, "start": 512.599, "duration": 26.355, "audio": "voiceover/steps/s6_2.wav", "cues": {}}, {"step": 3, "start": 538.954, "duration": 23.625, "audio": "voiceover/steps/s6_3.wav", "cues": {}}]}], "total": 563.279};
+      const KINETIC = {"1-1": [{"big": "$100", "small": "SPENT WITH A SELLER ON AMAZON", "t": 1.05}, {"big": "$52", "small": "NEVER REACHES THE SELLER", "t": 5.545}, {"big": "YOU PAY TOO", "small": "EVEN IF YOU NEVER SHOP THERE · FTC ALLEGATION", "t": 11.662}, {"big": "$68.6 BILLION", "small": "AMAZON AD REVENUE · 2025", "t": 20.276}, {"big": "$188M", "small": "EVERY SINGLE DAY", "t": 25.305}, {"big": "FOLLOW $100", "small": "WHO ACTUALLY GETS YOUR MONEY?", "t": 30.05}], "2-1": [{"big": "HOW?", "small": "FROM ONLINE BOOKSTORE TO TOLL COLLECTOR", "t": 109.179}, {"big": "FORM 10-K", "small": "LINE ITEM: ADVERTISING SERVICES", "t": 112.766}, {"big": "$68.6 BILLION", "small": "UP 22% IN A SINGLE YEAR", "t": 119.114}, {"big": "> HALF", "small": "OF ALL NEWSPAPER REVENUE ON EARTH ($125.7B)", "t": 127.996}, {"big": "NOT ALL SELLERS", "small": "STREAMING ADS COUNT TOO", "t": 133.532}]};
+      function toll(canvas) {
       const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, preserveDrawingBuffer: true });
       renderer.setPixelRatio(1); renderer.setSize(1920, 1080, false);
       renderer.setClearColor(0xd9c9a8);
@@ -354,9 +196,8 @@
       scene.add(new THREE.HemisphereLight(0xfff6e6, 0x8a7350, 1.6));
       const sun = new THREE.DirectionalLight(0xffffff, 1.6); sun.position.set(-8, 14, 10); scene.add(sun);
 
-      const state = { p: 0 };
-      function render3() {
-        const p = state.p;
+        document.fonts.ready.then(() => { drawSign(); });
+        return function (p) {
         camera.position.set(9 - p * 4, 7.5 - p * 2.5, 14 - p * 4);
         camera.lookAt(0, 2.2, gz - 2 + p * 1.5);
         const WIN = 2; // the highest bidder's lane
@@ -367,22 +208,12 @@
         arms.forEach((a, i) => { const open = i === WIN ? Math.max(0, Math.min(1, (p - 0.3) * 5)) : 0; a.rotation.z = open * 1.3; });
         coins.forEach((c, k) => { const t = Math.max(0, Math.min(1, p * 2.2 - k * 0.08)); c.position.set(booth.position.x + 1.4 + (k % 3) * 0.1, 0.05 + Math.floor(k / 3) * 0.085 + (1 - t) * 4, gz + 2.4 + (k % 2) * 0.05); c.visible = t > 0; });
         renderer.render(scene, camera);
+        };
       }
-      render3();
-      tl.fromTo(state, { p: 0 }, { p: 1, duration: 5, ease: "none", onUpdate: render3 }, 10);
-      tl.fromTo("#cTitle", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.45, ease: "power2.out" }, 10.3);
-      tl.fromTo("#stampC", { opacity: 0, scale: 1.7 }, { opacity: 0.9, scale: 1, duration: 0.18, ease: "power4.in" }, 12.6);
-      document.fonts.ready.then(() => { drawSign(); render3(); });
 
-      /* ---------- D: footage + kinetic type (15–20s) ---------- */
-      tl.fromTo("#vidD", { scale: 1.0 }, { scale: 1.08, duration: 5, ease: "none" }, 15);
-      tl.fromTo("#chipD", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 15.2);
-      tl.fromTo("#k1", { opacity: 0, scale: 1.35 }, { opacity: 1, scale: 1, duration: 0.22, ease: "power4.in" }, 15.6);
-      tl.fromTo("#segD", { x: 0 }, { x: 10, duration: 0.04, yoyo: true, repeat: 5, ease: "none" }, 15.82);
-      tl.fromTo("#k2", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 16.1);
-      tl.fromTo("#stripD", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" }, 16.7);
-
-      tl.set({}, {}, 20);
+      const tl = gsap.timeline({ paused: true });
+      Paper.build(tl, SCENES, TIMELINE, { kinetic: KINETIC, toll });
+      tl.set({}, {}, 563.279);
       window.__timelines = window.__timelines || {};
       window.__timelines["main"] = tl;
       tl.seek(0);
