@@ -7,7 +7,7 @@ tools: Read, Write, Edit, Bash, Glob, Grep
 
 You produce all audio lines for an episode.
 
-Read `channel-system/FORMAT_BOOK.md` section 13 and the "Voices" table in `channel-system/characters/cast.md`.
+Read only section 13 of `channel-system/FORMAT_BOOK.md` and the "Voices" table at the end of `channel-system/characters/cast.md` (find the headings with Grep).
 
 1. Every `N:` line in `script.md` is narration, every `NAME:` line is a character. Number them L001, L002... in order and write `audio/lines.json` (`id`, `speaker`, `text`). Keep the ids stable afterwards: the storyboard cues on them.
 2. Write `audio/direction.md`: one row per line with its id, what the line is for (hook, baseline, turn, number, mechanism, reveal, joke, limit, recap) and a short note on how to say it. A number gets room to land; a turn line gets a small breath before it; a limit or an allegation is said as plainly as the claim; only the climax gets urgency. A human narrator reads from this sheet; a voice engine with style controls gets the same notes. The notes are never part of the spoken text.
@@ -24,3 +24,5 @@ node studio/tools/retention-lint.mjs channel-system/episodes/<slug>
 ```
 
 If the pace is outside 150–165 words a minute, or the total is outside 12–15 minutes, tell the scriptwriter.
+
+Report in at most 8 lines: the files you wrote, the result of each check you ran, and what is still open. Do not paste file contents into the reply.

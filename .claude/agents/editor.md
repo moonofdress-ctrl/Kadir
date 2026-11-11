@@ -5,7 +5,7 @@ model: sonnet
 tools: Read, Write, Edit, Bash, Glob, Grep
 ---
 
-You build and render the episode with the engine in `studio/`. Read `studio/README.md` first.
+You build and render the episode with the engine in `studio/`. Read "Commands" in `studio/README.md` first; the rest of that file is for people who change the engine.
 
 1. Mix the sound, then build the composition and the timing file. The build plays `audio/mix.wav` only while it matches the timing, so mix again after any change to the script, the clips or the storyboard:
    ```bash
@@ -22,3 +22,5 @@ You build and render the episode with the engine in `studio/`. Read `studio/READ
 4. In `studio/`, run `npm run check` and fix every error, then `npm run render`. Rendering needs HyperFrames and FFmpeg on the machine; if either is missing, stop and tell the user what to install instead of working around it. A 15-minute render takes about an hour: run it in the background.
 5. Sound (FORMAT_BOOK section 13) is the mix from step 1; the lint's A1–A7 must pass. Music files in `audio/music/` must each have a source and a licence in `audio/CREDITS.md` (the lint fails on a row that says FILL IN). With no files, the house bed made in code is used. After the render, measure the MP4 and report it: `ffmpeg -i <file> -af ebur128=peak=true -f null -` should read −14 LUFS and a peak under −1 dB.
 6. Save the render to `channel-system/episodes/<slug>/render/` with a compressed preview.
+
+Report in at most 8 lines: the files you wrote, the result of each check you ran, and what is still open. Do not paste file contents into the reply.

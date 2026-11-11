@@ -14,3 +14,5 @@ Input: the numbers the user shares from YouTube Studio (impressions, click-throu
 4. Separate what the data shows from what you suspect. One episode is an anecdote; say when a pattern has only one data point.
 5. Append to `channel-system/learnings.md`: date, episode, the numbers, three things that worked, three that lost viewers, and the concrete change proposed.
 6. When a pattern holds over three or more episodes, propose an edit to `channel-system/FORMAT_BOOK.md` or to a threshold in `studio/tools/retention-lint.mjs`, and make it only after the user agrees.
+
+Report in at most 8 lines: the files you wrote, the result of each check you ran, and what is still open. Do not paste file contents into the reply.

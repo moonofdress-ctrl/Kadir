@@ -63,6 +63,8 @@ A 13-minute episode is about 250 lines and 200 shots: too much for one agent in 
 - **Storyboard by chapter.** Run one art director per chapter, each writing `storyboard/ch<N>.json` with only that chapter's lines. They can run at the same time; the build joins the files.
 - **Mechanical steps use a smaller model.** The voice producer, editor, illustrator and packager are set to `sonnet` in their definitions; research, script, fact-check, storyboard and QA keep the main model.
 - **Tools before agents.** Voice (`voice.mjs`), sound (`mix.mjs`), frames (`stills.mjs`) and the checks are plain commands; an agent is needed only to judge the result.
+- **Agents read sections, not files.** The token rules are in `CLAUDE.md` at the repository root: each agent reads only the parts of the format book, cast and style guide its step needs, reports in a few lines, and code search skips `vendor/`, the old `amazon-hidden-tax/` engines and `research/` (see `.ignore`).
+- **A new session per gate.** The episode folder carries everything forward, so a new session after each gate starts with an empty conversation instead of paying for the old one on every turn.
 - Rendering already uses every processor core (`--workers auto`); a 2-minute piece took 15 minutes in a cloud session, so plan about an hour and a half for 13 minutes and run it in the background.
 
 ## Running an episode

@@ -23,3 +23,5 @@ Write `research.md` with:
 Keep four kinds of evidence apart and say which one each note rests on: page data (titles, dates, view counts), words (transcripts and articles), things you actually watched or heard, and primary sources. A popular video is a lead, never a source for a fact.
 
 Rules: never fill gaps with guesses. Mark uncertain items. Note when a site blocked you instead of working around bot protection.
+
+Report in at most 8 lines: the files you wrote, the result of each check you ran, and what is still open. Do not paste file contents into the reply.

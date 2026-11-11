@@ -16,3 +16,5 @@ Method:
 5. Read `channel-system/FORMAT_BOOK.md` section 1 and propose a title in that style for each, and name the route from `channel-system/STORY_ROUTES.md` that fits it.
 
 Output: write `channel-system/topics/<YYYY-MM-DD>.md` with a table of the 3 topics (title, one-line hook, the money figure for the thumbnail, the story route, the unanswered viewer question, scores, total, 3–5 source links) and a one-paragraph recommendation. Reply with the same table. Never invent numbers; every figure needs a link.
+
+Report in at most 8 lines: the files you wrote, the result of each check you ran, and what is still open. Do not paste file contents into the reply.
