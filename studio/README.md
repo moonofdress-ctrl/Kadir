@@ -6,14 +6,17 @@ Turns a storyboard and a set of voice clips into a HyperFrames composition. Ever
 
 | Path | What |
 |---|---|
-| `engine/rig.js` | The character skeleton, the cast, expressions, poses, hand props, lip sync. |
-| `engine/sets.js` | Sets (places) and world props (charts, the banknote, the tower, signs). |
+| `engine/rig.js` | The character skeleton, the cast, expressions, poses, hats, badges, hand props, lip sync, and the living things (`THINGS`). |
+| `engine/sets.js` | Sets (places) and world props (charts, the banknote, the tower, signs, banners, price tags, stalls, crates, the hidden piggy bank). |
 | `engine/overlays.js` | Counters, slams, labels, stamps, tags, lower thirds, calendar, clock, document and post cards. |
-| `engine/core.js` | Shot types (scene, card, chapter, split), camera, grades. |
+| `engine/core.js` | Shot types (scene, card, chapter, split), camera, shot size, light, grades. |
 | `engine/timing.js` | Line and shot timing, shared by the browser and the tools. |
 | `tools/build.mjs` | Episode folder → `index.html` + `timing.json`. |
-| `tools/retention-lint.mjs` | Checks script and storyboard against `channel-system/FORMAT_BOOK.md`. |
-| `tools/preview.mjs`, `sheet.html` | Look at frames in a browser without rendering. |
+| `tools/retention-lint.mjs` | Checks script, storyboard and sound against `channel-system/FORMAT_BOOK.md`. |
+| `tools/voice.mjs` | Scratch voice track: one Kokoro clip per script line. |
+| `tools/mix.mjs` | The sound mix: voice levelling, music bed, effects, −14 LUFS. `tools/sounds.mjs` makes the house effects and bed in code; `tools/cues.mjs` decides where effects fall; `tools/audio-lib.mjs` reads, measures and limits audio. |
+| `tools/stills.mjs` | Saves pictures: contact sheets of frames, the thumbnail, the cast's model sheets. |
+| `tools/preview.mjs`, `sheet.html`, `cast.html`, `thumb.html` | Look at frames in a browser without rendering. |
 | `gallery/` | One silent reel that uses every component. Copy from its `storyboard.json`. |
 
 ## Commands (run from the repository root; Node 22+, no Python)
@@ -30,9 +33,29 @@ node studio/tools/preview.mjs
 
 With the preview running, `http://127.0.0.1:8780/?fit&t=12.5` shows the frame at 12.5 seconds and `http://127.0.0.1:8780/sheet.html?t=2,6,11,15&cols=2` shows several frames side by side.
 
+To save frames as a picture instead (this is how agents and reviewers look at an episode):
+```bash
+node studio/tools/stills.mjs frames channel-system/episodes/<slug>
+```
+It writes `render/frames.jpg` in the episode folder: the first frame, the middle of every shot and the last second. `--t 0,3,9.5` picks moments, `--every 10` samples the whole episode. It needs Playwright with a Chromium (`npm install --no-save playwright` and `npx playwright install chromium`, once), or `CHROME_PATH` pointing at an installed Chrome.
+
+Sound, once every line has a clip (`voice.mjs` makes a scratch track when there is no recording yet):
+```bash
+node studio/tools/voice.mjs channel-system/episodes/<slug>
+```
+```bash
+node studio/tools/mix.mjs channel-system/episodes/<slug> --tighten
+```
+Then build again: the video plays `audio/mix.wav` when it matches the current timing, and the bare voice clips otherwise. WAV needs nothing installed; MP3 and other formats are decoded with FFmpeg.
+
+The thumbnail, from the first shot or from an illustration:
+```bash
+node studio/tools/stills.mjs thumb channel-system/episodes/<slug> --white "AMAZON KEEPS" --red "\$52"
+```
+
 Clips that do not exist yet are timed from their word count, so a storyboard can be built, linted and looked at before any voice is recorded. Add `--silent` to build without audio.
 
-Rendering to MP4 needs HyperFrames and FFmpeg on the machine:
+Rendering to MP4 needs HyperFrames and FFmpeg on the machine. `check` must pass first; a 19-second piece renders in about two minutes on a cloud machine:
 ```bash
 cd studio && npm run check && npm run render
 ```
@@ -61,6 +84,11 @@ cd studio && npm run check && npm run render
 - **When things happen.** A shot starts on its `cue` line; add `"word": n` to start on the nth word of that line (counting from 0) or `"at": seconds` to shift it. The same three keys work on overlays, actors, `acts`, panels and prop parts. Without a cue, `at` counts from the start of the shot.
 - **Shots are hard cuts** and last until the next shot starts.
 - **Cameras**: `push_in`, `pull_out`, `pan_left`, `pan_right`, `tilt_up`, `tilt_down`, `still`, `shake`.
+- **Shot size**: `"frame": "medium"` or `"close"` moves in on the figures; `"focus": [x, y]` aims it somewhere else.
+- **Light**: `"light": { "x": 960, "y": 430, "r": 900, "color": "#ffd9a0", "dark": 0.6 }`: one source, darkness around it (screen position).
+- **Living things**: an actor with `"thing": "box"` (or `chip`, `tower`, `dome`, `bank`, `factory`, `server`, `cloud`, `coin`, `bag`, `house`, `barrel`, `note`) and a `"label"`. It takes `face`, `pose`, `prop`, `speaks` and `acts` like a person.
+- **On a figure**: `"hat"`, `"badge": "62"`, and hand props with text: `"prop": "placard", "sign": "SELL"`, `"prop": "tag", "tag": "$52"`.
+- **Sound**: stamps, slams, cards, chapter cards and document cards get a soft effect by themselves. `"sound": "ding"` on a shot, panel or overlay adds one (`stamp`, `slam`, `card`, `chapter`, `paper`, `whoosh`, `ding`, `pop`, `tick`, `riser`); `"sound": false` removes one. Episode options: `"audio": { "music": "house" | "none", "music_db": -19, "climax": [5, 6], "sfx": true }`.
 - **Grades**: `green`, `red`, `sepia`, `night`, `gold`.
 - **Faces, poses, props, sets, overlays**: the lists at the top of `rig.js`, `sets.js` and `overlays.js`, each with a one-line comment showing its fields. `gallery/storyboard.json` has a working example of every one.
 - `motif` and `callback` do not change the picture. They tell the lint which shots carry the anchor motif and which ones pay off an earlier image.

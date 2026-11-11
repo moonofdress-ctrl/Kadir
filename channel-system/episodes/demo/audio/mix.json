@@ -1,5 +1,5 @@
 {
-  "signature": "be1b1b101372e734",
+  "signature": "ab4d22a4ad859238",
   "total": 18.84,
   "lufs": -14.02,
   "true_peak_db": -1.1,
@@ -38,12 +38,12 @@
       {
         "t": 8.21,
         "name": "stamp",
-        "why": "s03 panel 1 stamp"
+        "why": "s04 panel 1 stamp"
       },
       {
         "t": 8.996,
         "name": "stamp",
-        "why": "s03 panel 2 stamp"
+        "why": "s04 panel 2 stamp"
       },
       {
         "t": 14.13,

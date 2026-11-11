@@ -43,6 +43,36 @@
       "actors": [ { "who": "MARTHA", "x": 1420, "y": 960, "face": "angry", "prop": "bill", "flip": true } ],
       "overlays": [ { "type": "label", "t": "+$27 A MONTH", "pos": "tl", "at": 1.0 }, { "type": "sfx", "t": "THUD", "x": 520, "y": 620, "at": 0.3 } ] },
     { "id": "g13", "cue": "L013", "set": "night_city", "camera": "pull_out", "grade": "night", "callback": "bill",
-      "actors": [ { "who": "MARTHA", "x": 960, "y": 1000, "scale": 0.8, "face": "sad", "look": "up", "prop": "bill" } ] }
+      "actors": [ { "who": "MARTHA", "x": 960, "y": 1000, "scale": 0.8, "face": "sad", "look": "up", "prop": "bill" } ] },
+    { "id": "g14", "cue": "L014", "set": "stage", "camera": "push_in",
+      "actors": [
+        { "thing": "box", "label": "MARKETPLACE", "x": 300, "y": 930, "face": "smug", "enter": "none" },
+        { "thing": "chip", "label": "CHIPS INC", "x": 720, "y": 930, "face": "happy", "pose": "cheer", "enter": "none" },
+        { "thing": "coin", "label": "INDEX FUND", "x": 1150, "y": 930, "face": "shocked", "pose": "shrug", "enter": "none" },
+        { "thing": "bag", "label": "PENSION", "x": 1580, "y": 930, "face": "scared", "pose": "panic", "enter": "none" } ],
+      "props": [ { "type": "bunting", "y": 230 } ] },
+    { "id": "g15", "cue": "L015", "set": "lawn", "camera": "tilt_up",
+      "actors": [
+        { "thing": "dome", "label": "CONGRESS", "x": 1060, "y": 790, "scale": 1.15, "face": "smug", "prop": "pen", "enter": "none" },
+        { "who": "CHAD", "x": 360, "y": 1000, "scale": 0.5, "prop": "briefcase", "face": "scared", "enter": "none" },
+        { "thing": "bank", "x": 1680, "y": 800, "scale": 0.6, "face": "happy", "enter": "none" } ],
+      "props": [ { "type": "banner", "x": 420, "y": 250, "w": 560, "t": "NEW RULES", "at": 0.9 } ] },
+    { "id": "g16", "cue": "L016", "set": "suburb", "camera": "pan_right",
+      "actors": [
+        { "who": "MARTHA", "x": 520, "y": 940, "badge": "52", "prop": "bill", "face": "furious", "enter": "none" },
+        { "thing": "house", "label": "OHIO", "x": 1280, "y": 900, "scale": 0.9, "face": "panic", "pose": "panic", "enter": "none" } ],
+      "props": [ { "type": "pricetag", "x": 900, "y": 300, "t": "+$27", "at": 0.8 }, { "type": "piggy", "x": 1690, "y": 846, "k": 0.36, "state": "cracked" } ] },
+    { "id": "g17", "cue": "L017", "set": "server_room", "camera": "push_in", "frame": "medium",
+      "light": { "x": 960, "y": 420, "r": 950, "color": "#ffe14d", "dark": 0.62 },
+      "actors": [
+        { "who": "BENNY", "x": 700, "face": "panic", "pose": "panic", "enter": "none", "acts": [ { "at": 1.6, "face": "crying" } ] },
+        { "who": "HAL", "x": 1240, "face": "greedy", "prop": "tag", "tag": "$9B", "hat": "crown", "enter": "none" } ] },
+    { "id": "g18", "cue": "L018", "set": "warehouse", "camera": "pull_out",
+      "actors": [
+        { "who": "SELLER", "x": 420, "y": 900, "face": "happy", "pose": "wave", "enter": "none" },
+        { "who": "REGGIE", "x": 1020, "y": 900, "hat": "hardhat", "prop": "magnifier", "face": "deadpan", "enter": "none" },
+        { "who": "CHAD", "x": 1500, "y": 920, "hat": "party", "prop": "placard", "sign": "BUY", "face": "happy", "flip": false, "enter": "none" } ],
+      "props": [ { "type": "stall", "x": 420, "y": 985, "t": "HANDMADE", "price": "$19", "layer": "front" }, { "type": "podium", "x": 1020, "y": 960, "t": "AUDIT", "layer": "front" },
+        { "type": "cashpile", "x": 1780, "y": 930, "n": 7, "layer": "front" }, { "type": "crates", "x": 1220, "y": 930, "n": 3, "w": 130, "t": "FEES" }, { "type": "piggy", "x": 110, "y": 936, "k": 0.34, "state": "rich" } ] }
   ]
 }

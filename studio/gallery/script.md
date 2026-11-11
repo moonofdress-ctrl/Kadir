@@ -15,3 +15,8 @@ N: Then the line turned.
 N: One official needed two words.
 N: And at a kitchen table, the power bill arrived.
 N: Same city, same lights. The bill is still on the table.
+N: Companies and markets get a face, and a name written on them.
+N: Buildings act too. Scale is part of the joke.
+N: Facts live in the scene: a badge, a price tag, a sign.
+N: In a skit, the faces fill the frame, under one light.
+N: A stall, a podium, a pile of cash. And somewhere, a piggy bank.

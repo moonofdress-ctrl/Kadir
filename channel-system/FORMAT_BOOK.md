@@ -117,6 +117,21 @@ Measured on the reference video; the lint checks them.
 - **Every analogy is a place**, drawn literally.
 - Background ticker boards use made-up names. Real figures appear only as overlays, with a source.
 
+### Every shot is a small joke
+What holds a viewer is the middle of the video, not its first frame. A shot of somebody standing in a room while the narrator talks is a wasted shot. Every scene and every split panel answers four questions (lint G1–G5):
+
+1. **Where are we?** A specific place that fits the sentence, never a plain wall.
+2. **Who is doing what?** Somebody acts the sentence out: hands the money over, grabs it, hides, celebrates, shrugs.
+3. **What is written in the scene?** One sign, banner, price tag, badge or label carries the fact: a name, a price, an age, a date. Facts live in the scene first and in overlays second.
+4. **Who is the abstract player?** A company, a market, a regulator or a bill becomes a **living thing**: a plain object with a face and gloves and its name written on it (a parcel for a marketplace, a chip for a chipmaker, a domed building for a parliament, a banknote for "your hundred dollars"). Never a logo.
+
+- **Faces fill the frame in skits**: `"frame": "medium"` or `"close"`. Wide shots are for places and crowds.
+- **One light per mood**: night, a server room, a deal behind closed doors or a phone at 2 a.m. get a `"light"`: one source, darkness around it.
+- **Scale is a joke**: a giant building over a tiny person, a pile of cash taller than the buyer.
+- **The loud faces** (`panic`, `furious`, `crying`, `greedy`) are for hooks, climaxes and the thumbnail. Everyday reactions use the quiet ones.
+- **The hidden piggy bank**: a small `piggy` tucked into a corner of a scene about every three minutes, never mentioned by the narrator. Its state follows the story: cracked on bad news, asleep at night, sunglasses on a good day. The pinned comment may ask who found it.
+- Write our own gags. Never reuse another channel's analogy, object or running joke.
+
 ## 12. The loop ledger (plant and pay off)
 Fill in `## DEVICES` before writing the chapters.
 
@@ -133,7 +148,13 @@ Measured on the reference: the voice never stops, and everything else stays out 
 - **Breathe only at chapter cards**: about one second of near-silence under each card, and before a punchline.
 - **Music is a quiet bed**, about 18–20 dB under the voice, a little louder in the climax chapters and rising under the last 15 seconds.
 - **Sound effects are rare and soft.** Use them on stamps, slams and card hits, not on every cut.
-- Loudness of the final mix: −14 LUFS.
+- Loudness of the final mix: −14 LUFS, peaks under −1 dBTP.
+
+The tools do this, and the lint checks the result (A1–A7):
+```bash
+node studio/tools/mix.mjs channel-system/episodes/<slug> --tighten
+```
+`--tighten` cuts silence at the ends of every clip and shortens pauses inside them; the mix levels the speakers, lays the bed 19 dB under the voice, dips it at chapter cards, lifts it in the climax and under the last lines, and places effects on stamps, slams and cards. Music: put files you have a licence for in `audio/music/` and credit each one in `audio/CREDITS.md`; with none, the house bed made in code is used.
 
 ## 14. Originality and YouTube policy
 Since 16 July 2026 YouTube does not monetize three kinds of "inauthentic content": repetitive template videos, content built to manipulate emotions, and AI personas discussing sensitive topics such as finance. Every episode must clear all three.

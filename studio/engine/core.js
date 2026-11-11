@@ -18,6 +18,8 @@
     still: [{ scale: 1.0 }, { scale: 1.04 }], shake: [{ scale: 1.06 }, { scale: 1.08 }],
   };
 
+  const FRAME = { wide: 1, medium: 1.4, close: 1.9 };
+
   // Scene contents: set, props, figures. `vb` crops the stage (used by split panels).
   function world(parent, s, t0, t1, vb) {
     const svg = document.createElementNS(NS, "svg");
@@ -32,10 +34,10 @@
       x.def.play(tl, e, o, t0); };
     props.filter((x) => x.p.layer !== "front").forEach(drawProp);
     (s.actors || []).forEach((a, i) => {
-      const x = a.x != null ? a.x : 960, k = a.scale || 1, flip = a.flip != null ? a.flip : x > 960;
+      const x = a.x != null ? a.x : 960, k = a.scale || 1, flip = a.flip != null ? a.flip : a.thing ? false : x > 960;
       const wrap = g(svg); wrap.setAttribute("transform", `translate(${x},${a.y || 900}) scale(${flip ? -k : k},${k})`);
-      const r = Rig.make(a.who, a); wrap.appendChild(r.el);
-      Rig.init(r, a.face || "neutral", a.pose || (a.prop ? "phone" : "rest"), a.look);
+      const r = Rig.make(a.who, a); wrap.appendChild(r.el); if (flip) Rig.unflip(r);
+      Rig.init(r, a.face || "neutral", a.pose || (a.prop ? Rig.PROP_POSE[a.prop] || "phone" : "rest"), a.look);
       const tin = a.cue || a.at != null ? TM.when(a, t0, L) : t0 + 0.05 + i * 0.2;
       if (a.enter !== "none") { r.el.style.opacity = 0; tl.set(r.el, { opacity: 1 }, tin); Rig.enter(tl, r, a.enter, tin); }
       (a.acts || []).forEach((act) => { const t = TM.when(act, t0, L); if (act.face) Rig.face(tl, r, act.face, t); if (act.pose) Rig.pose(tl, r, act.pose, t); });
@@ -60,11 +62,24 @@
 
   function scene(root, s, t0, t1, last) {
     const sh = div("shot", root); show(sh, t0, last ? null : t1);
-    const w = div("world", sh); world(w, s, t0, t1);
+    const w = div("world", sh), inner = div("inner", w); world(inner, s, t0, t1);
+    // Shot size: "frame": "medium" or "close" moves in on the figures (or on "focus": [x, y]) so faces fill the picture.
+    const box = (s.actors || []).map((a) => { const T = a.thing && Rig.THINGS[a.thing] ? Rig.THINGS[a.thing]({}) : null, sc = a.scale || 1, x = a.x != null ? a.x : 960, y = a.y || 900, half = (T ? T.w + 200 : 250) * sc, h = (T ? T.h + (T.hover ? 70 : 0) : 600) * sc;
+      return { l: x - half, r: x + half, top: y - h, mid: y - h * (T ? 0.55 : s.frame === "close" ? 0.72 : 0.62) }; });
+    const L0 = Math.min(...box.map((b) => b.l)), R0 = Math.max(...box.map((b) => b.r));
+    const k = s.focus ? FRAME[s.frame] || 1 : box.length ? Math.max(1, Math.min(FRAME[s.frame] || 1, 1920 / (R0 - L0))) : 1; // never so close that a figure is cut off
+    if (k > 1) { const fx = s.focus ? s.focus[0] : (L0 + R0) / 2, fy = s.focus ? s.focus[1] : box.reduce((p, b) => p + b.mid, 0) / box.length;
+      // the focus goes to the centre of the frame, but only as far as the picture still covers it
+      const lim = (v, half) => Math.max(-half * (1 - 1 / k), Math.min(half * (1 - 1 / k), v));
+      inner.style.transformOrigin = "960px 540px"; inner.style.transform = `scale(${k.toFixed(3)}) translate(${lim(960 - fx, 960).toFixed(1)}px, ${lim(540 - fy, 540).toFixed(1)}px)`; }
     const m = CAM[s.camera] || CAM.still;
     tl.fromTo(w, Object.assign({ x: 0, y: 0 }, m[0]), Object.assign({ x: 0, y: 0, duration: t1 - t0, ease: "none", immediateRender: false }, m[1]), t0);
     if (s.camera === "shake") tl.fromTo(sh, { x: 0 }, { x: 14, duration: 0.05, yoyo: true, repeat: 7, ease: "none", immediateRender: false }, t0);
     if (s.grade) div("grade " + s.grade, sh);
+    // "light": { x, y, r, color, dark }: one light source and darkness around it (a screen, a lamp, a doorway). Screen position, after framing.
+    if (s.light) { const l = s.light, r = l.r || 700, d = l.dark == null ? 0.72 : l.dark, at = `${l.x == null ? 960 : l.x}px ${l.y == null ? 480 : l.y}px`;
+      div("light", sh).style.background = `radial-gradient(circle at ${at}, rgba(8,10,28,0) 0, rgba(8,10,28,${(d * 0.25).toFixed(2)}) ${Math.round(r * 0.45)}px, rgba(8,10,28,${d}) ${r}px)`;
+      const glow = div("light glow", sh); glow.style.background = `radial-gradient(circle at ${at}, ${l.color || "#ffd9a0"} 0, rgba(0,0,0,0) ${Math.round(r * 0.75)}px)`; }
     overlays(div("hud", sh), s.overlays, t0, t1, w);
   }
 

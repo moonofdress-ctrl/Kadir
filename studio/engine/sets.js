@@ -113,6 +113,63 @@
       return { back: b, front: f };
     },
 
+    // A street of houses with a fence: the household, the neighbourhood, an analogy that happens at home. { night }
+    suburb(o) {
+      const n = !!o.night, r = rng(83), cols = ["#e9dfc8", "#d9b99b", "#cfe3df", "#e6c9c0"], roofs = ["#c9705a", "#7a5a4a", "#3d6fb6", "#8a5a3c"];
+      let b = R(0, 0, 1920, 760, n ? "#1f2a44" : "#bfe0ea", 0, "") + `<circle cx="1620" cy="150" r="70" fill="${n ? "#f6f1e4" : "#ffe14d"}" ${st}/>` + (n ? "" : cloud(200, 110) + cloud(900, 70, 0.8));
+      for (let i = 0; i < 4; i++) { const x = 60 + i * 470, w = 330 + r() * 40, h = 250 + (i % 2) * 50, top = 700 - h, lit = n ? (r() > 0.4 ? "#ffe14d" : "#2c3766") : "#dff0f4";
+        b += cut(R(x, top, w, h + 10, cols[i], 0) + `<path d="M${x - 34},${top} L${x + w / 2},${top - 150} L${x + w + 34},${top}Z" fill="${roofs[i]}" ${st}/>` +
+          R(x + 40, top + 50, 80, 80, lit, 4) + R(x + w - 120, top + 50, 80, 80, n ? "#ffe14d" : "#dff0f4", 4) + R(x + w / 2 - 38, top + h - 130, 76, 140, "#8a5a3c", 6));
+        b += cut(R(x + w + 54, 560, 22, 150, "#8a5a3c", 0) + `<circle cx="${x + w + 65}" cy="520" r="74" fill="${n ? "#2f6f4a" : "#3f9b5a"}" ${st}/>`); }
+      b += R(0, 700, 1920, 150, n ? "#3f7f52" : "#7fbf6a", 0, "") + `<path d="M0,700 L1920,700" ${st}/>`;
+      let fence = ""; for (let x = 10; x < 1920; x += 58) fence += `<path d="M${x},800 L${x},720 L${x + 20},696 L${x + 40},720 L${x + 40},800Z" fill="#f6f1e4" ${st}/>`;
+      b += cut(fence + R(0, 742, 1920, 16, "#f6f1e4", 0)) + R(0, 850, 1920, 110, "#d9cfb8", 0, "") + `<path d="M0,850 L1920,850 M0,960 L1920,960" ${st}/>` + R(0, 960, 1920, 120, "#4a4f66", 0, "");
+      return { back: b };
+    },
+
+    // Rows of server racks running away from the camera: the data center, "the cloud", where the money is being spent.
+    server_room(o) {
+      const r = rng(41); let b = R(0, 0, 1920, 1080, "#0f1326", 0, "") + `<path d="M0,1080 L1920,1080 L1180,640 L740,640Z" fill="#232c54" ${st}/><path d="M960,640 L960,1080" stroke="rgba(246,241,228,.12)" stroke-width="10"/>`;
+      b += R(800, 330, 320, 312, "#141a36", 0) + R(846, 380, 228, 262, "#ffe14d", 6) + `<ellipse cx="960" cy="560" rx="330" ry="250" fill="rgba(255,225,77,.13)"/>`;
+      for (let i = 3; i >= 0; i--) for (const side of [0, 1]) { const w = 300 - i * 52, x = side ? 1920 - i * 196 - w : i * 196, top = 70 + i * 86, bot = 1010 - i * 100, h = bot - top; let rack = R(x, top, w, h, i % 2 ? "#232c54" : "#1c2340", 8);
+        for (let y = top + 22; y < bot - 40; y += 44 - i * 5) { rack += R(x + 16, y, w - 32, 24 - i * 3, "#101528", 4, "");
+          for (let k = 0; k < 4; k++) if (r() > 0.25) rack += `<circle class="tick" cx="${x + 34 + k * (22 - i * 3)}" cy="${y + 12 - i * 1.5}" r="${6 - i}" fill="${r() > 0.3 ? "#46e08a" : r() > 0.5 ? "#ffe14d" : "#7fd0f0"}"/>`; }
+        b += rack; }
+      for (let i = 0; i < 5; i++) { const x = 380 + i * 290; b += `<path d="M${x},0 Q${x + 40},${120 + (i % 2) * 60} ${x + 110},0" fill="none" stroke="${["#3d6fb6", "#f0b429", "#3d6fb6", "#e0262b", "#f0b429"][i]}" stroke-width="9"/>`; }
+      return { back: b };
+    },
+
+    // An open lawn under a big sky: put a living building on it (a "dome", a "bank", a "tower") and let it act.
+    lawn(o) {
+      const dusk = o.time === "dusk"; let b = R(0, 0, 1920, 660, dusk ? "#f3b27a" : "#bfe0ea", 0, "") + `<circle cx="1660" cy="150" r="72" fill="${dusk ? "#ff7a4f" : "#ffe14d"}" ${st}/>` + cloud(160, 120) + cloud(1100, 70, 0.8);
+      const r = rng(19); for (let x = -40; x < 1960; x += 150) b += `<circle cx="${x + r() * 40}" cy="${640 - r() * 26}" r="${70 + r() * 40}" fill="#3f9b5a" ${st}/>`;
+      b += R(0, 650, 1920, 430, "#7fbf6a", 0, "") + `<path d="M0,650 L1920,650" ${st}/><path d="M760,1080 L1160,1080 L1040,650 L880,650Z" fill="#e9dfc8" ${st}/>`;
+      return { back: b };
+    },
+
+    // A theatre stage with a curtain and a spotlight: a reveal, a winner, a company showing off. { color }
+    stage(o) {
+      const c = o.color || "#7a2a4f"; let b = R(0, 0, 1920, 860, c, 0, "");
+      for (let x = 60; x < 1920; x += 120) b += `<path d="M${x},0 Q${x + 26},430 ${x},860" fill="none" stroke="rgba(15,18,40,.28)" stroke-width="16"/>`;
+      b += `<path d="M700,0 L1220,0 L1420,860 L500,860Z" fill="rgba(255,240,190,.20)"/>`;
+      let val = ""; for (let x = -20; x < 1920; x += 240) val += `<path d="M${x},0 L${x + 240},0 L${x + 240},110 Q${x + 120},210 ${x},110Z" fill="${Rig.shade(c, 0.25)}" ${st}/>`;
+      b += cut(val) + R(0, 860, 1920, 220, "#8a5a3c", 0, "") + `<path d="M0,860 L1920,860" ${st}/>` + `<ellipse cx="960" cy="940" rx="520" ry="70" fill="rgba(255,240,190,.22)"/>`;
+      for (let x = 160; x < 1920; x += 320) b += `<path d="M${x},860 L${x - 40},1080" stroke="rgba(27,29,54,.22)" stroke-width="6"/>`;
+      return { back: b };
+    },
+
+    // Shelves of parcels and a conveyor: a marketplace, logistics, "where your order goes".
+    warehouse(o) {
+      const r = rng(67), kraft = ["#d2a56d", "#c99a5b", "#e0b983", "#b9844a"]; let b = R(0, 0, 1920, 860, "#d8d0bc", 0, "") + R(0, 860, 1920, 220, "#a59f8f", 0, "") + `<path d="M0,860 L1920,860" ${st}/>`;
+      for (let u = 0; u < 3; u++) { const x = 70 + u * 620; let sh = R(x, 150, 540, 660, "#8f9bb0", 0);
+        for (let lv = 0; lv < 3; lv++) { const y = 150 + lv * 220; sh += R(x, y + 196, 540, 24, "#56606f", 0); let bx = x + 18;
+          while (bx < x + 460) { const w = 70 + r() * 80, h = 80 + r() * 100; sh += R(bx, y + 196 - h, w, h, kraft[Math.floor(r() * 4)], 4, `stroke="${INK}" stroke-width="5"`) + R(bx + w / 2 - 9, y + 196 - h, 18, h * 0.35, "rgba(27,29,54,.18)", 0, ""); bx += w + 10; } }
+        b += cut(sh); }
+      for (let i = 0; i < 3; i++) b += `<path d="M${330 + i * 620},0 L${330 + i * 620},70" ${st}/>` + `<path d="M${270 + i * 620},130 Q${330 + i * 620},50 ${390 + i * 620},130Z" fill="#f0b429" ${st}/>`;
+      let belt = R(0, 946, 1920, 54, "#3d4a5c", 0); for (let x = 30; x < 1920; x += 90) belt += `<circle cx="${x}" cy="1016" r="20" fill="#c9ced6" ${st}/>`;
+      return { back: b, front: o.belt === false ? "" : cut(belt) };
+    },
+
     night_city(o) {
       const r = rng(57); let b = R(0, 0, 1920, 1080, "#141a36", 0, "") + `<circle cx="1560" cy="190" r="70" fill="#f6f1e4" ${st}/><circle cx="1590" cy="170" r="60" fill="#141a36"/>`;
       for (let i = 0; i < 40; i++) b += `<circle cx="${(r() * 1920).toFixed(0)}" cy="${(r() * 420).toFixed(0)}" r="${(2 + r() * 3).toFixed(1)}" fill="#f6f1e4"/>`;
@@ -120,6 +177,10 @@
       return { back: b };
     },
   };
+
+  // Static props appear with the shot; give them "at" (or a cue) to make them land later.
+  function pop(tl, el, o, t0) { if (o.at == null) return; const b = el.getBBox ? null : null; void b; el.style.opacity = 0; gsap.set(el, { svgOrigin: o.x + " " + o.y, smoothOrigin: false });
+    tl.fromTo(el, { opacity: 0, scale: 1.35 }, { opacity: 1, scale: 1, duration: 0.2, ease: "back.out(2)", immediateRender: false }, t0 + o.at); }
 
   /* ---- world props: drawn in the scene, moved by the camera ---- */
   const PROPS = {
@@ -167,6 +228,42 @@
           tl.fromTo(b, { y: -700, opacity: 1 }, { y: 0, opacity: 1, duration: 0.34, ease: "bounce.out", immediateRender: false }, t0 + at); });
         if (tilt) tl.fromTo(tw, { rotation: tilt * 0.4 }, { rotation: tilt, duration: 0.9, yoyo: true, repeat: 5, ease: "sine.inOut", immediateRender: false }, t0); },
     },
+    // { type:"banner", x, y, w, t, color, ink }: a cloth banner hung by two cords (x, y = top middle)
+    banner: { draw(o) { const w = o.w || 700, h = o.h || 150, size = Math.min(h * 0.62, (w * 1.75) / Math.max(4, String(o.t).length));
+        return cut(`<path d="M${o.x - w / 2 + 30},${o.y - 90} L${o.x - w / 2 + 30},${o.y} M${o.x + w / 2 - 30},${o.y - 90} L${o.x + w / 2 - 30},${o.y}" ${st}/>` +
+          `<path d="M${o.x - w / 2},${o.y} L${o.x + w / 2},${o.y} L${o.x + w / 2 - 14},${o.y + h} Q${o.x},${o.y + h + 22} ${o.x - w / 2 + 14},${o.y + h}Z" fill="${o.color || "#3d6fb6"}" ${st}/>`) + T(o.x, o.y + h / 2 + size * 0.36, o.t, size, o.ink || "#f6f1e4"); },
+      play: pop },
+    // { type:"podium", x, y, t, layer:"front" }: a lectern with a plaque; put it in front so the speaker stands behind it
+    podium: { draw(o) { return cut(`<path d="M${o.x - 130},${o.y - 250} L${o.x + 130},${o.y - 250} L${o.x + 104},${o.y} L${o.x - 104},${o.y}Z" fill="#8a5a3c" ${st}/>` + R(o.x - 150, o.y - 282, 300, 36, "#6f452c", 8) +
+        (o.t ? `<circle cx="${o.x}" cy="${o.y - 140}" r="62" fill="#1f2a44" ${st}/>` + T(o.x, o.y - 128, o.t, Math.min(34, 200 / Math.max(3, String(o.t).length)), "#f6f1e4") : "")); }, play: pop },
+    // { type:"bunting", x, y, w }: party flags
+    bunting: { draw(o) { const w = o.w || 1920, x0 = o.x || 0, cols = ["#e0262b", "#f0b429", "#7fd0f0", "#1fa85b", "#c95f8d"]; let s = `<path d="M${x0},${o.y} Q${x0 + w / 2},${o.y + 70} ${x0 + w},${o.y}" fill="none" ${st}/>`;
+        for (let i = 0; i < Math.floor(w / 110); i++) { const u = (i + 0.5) / Math.floor(w / 110), x = x0 + u * w, y = o.y + 70 * 4 * u * (1 - u) * 0.5; s += `<path d="M${x - 36},${y} L${x + 36},${y} L${x},${y + 78}Z" fill="${cols[i % 5]}" ${st}/>`; }
+        return s; }, play: pop },
+    // { type:"crates", x, y, n, t }: a pile of n labelled crates (x, y = bottom middle)
+    crates: { draw(o) { const n = o.n || 3, w = o.w || 190, h = w * 0.72; let s = "", k = 0;
+        for (let row = 0; k < n; row++) { const cols = Math.min(n - k, Math.max(1, Math.ceil(Math.sqrt(n)) - row)); for (let c = 0; c < cols; c++, k++) { const x = o.x - (cols * (w + 8)) / 2 + c * (w + 8), y = o.y - (row + 1) * (h + 4);
+          s += `<g class="blk cut">${R(x, y, w, h, o.color || "#d2a56d", 6)}${R(x + w / 2 - 14, y, 28, h * 0.3, "rgba(27,29,54,.2)", 0, "")}${o.t ? T(x + w / 2, y + h * 0.78, o.t, Math.min(h * 0.34, (w * 1.5) / Math.max(3, String(o.t).length))) : ""}</g>`; } }
+        return s; }, play: pop },
+    // { type:"stall", x, y, t, price, color, layer:"front" }: a shop counter with an awning (x, y = bottom middle); in front, a figure stands behind it
+    stall: { draw(o) { const c = o.color || "#e0262b"; let aw = ""; for (let i = 0; i < 6; i++) aw += `<path d="M${o.x - 240 + i * 80},${o.y - 720} L${o.x - 160 + i * 80},${o.y - 720} L${o.x - 160 + i * 80},${o.y - 650} Q${o.x - 200 + i * 80},${o.y - 618} ${o.x - 240 + i * 80},${o.y - 650}Z" fill="${i % 2 ? "#f6f1e4" : c}" ${st}/>`;
+        return cut(R(o.x - 232, o.y - 700, 16, 500, "#8a5a3c", 0) + R(o.x + 216, o.y - 700, 16, 500, "#8a5a3c", 0) + aw + R(o.x - 240, o.y - 190, 480, 190, "#c99a5b", 8) + R(o.x - 260, o.y - 214, 520, 34, "#8a5a3c", 8) +
+          `<g transform="rotate(-3 ${o.x} ${o.y - 100})">${R(o.x - 180, o.y - 150, 360, 96, "#f6f1e4", 6)}${T(o.x, o.y - 80, o.t || "OPEN", Math.min(64, 560 / Math.max(4, String(o.t || "OPEN").length)))}</g>`) +
+          (o.price ? `<g class="cut" transform="rotate(8 ${o.x + 250} ${o.y - 330})"><path d="M${o.x + 180},${o.y - 372} L${o.x + 330},${o.y - 372} L${o.x + 366},${o.y - 330} L${o.x + 330},${o.y - 288} L${o.x + 180},${o.y - 288}Z" fill="#ffe14d" ${st}/>${T(o.x + 258, o.y - 308, o.price, 58, "#e0262b")}</g>` : ""); }, play: pop },
+    // { type:"pricetag", x, y, t, rot, color }: a number that lives in the scene, tied to the thing it prices
+    pricetag: { draw(o) { const w = String(o.t).length * 46 + 120; return `<g class="cut" transform="rotate(${o.rot == null ? -6 : o.rot} ${o.x} ${o.y})"><path d="M${o.x - w / 2},${o.y - 58} L${o.x + w / 2 - 40},${o.y - 58} L${o.x + w / 2},${o.y} L${o.x + w / 2 - 40},${o.y + 58} L${o.x - w / 2},${o.y + 58}Z" fill="${o.color || "#ffe14d"}" ${st}/>` +
+        `<circle cx="${o.x + w / 2 - 44}" cy="${o.y}" r="11" fill="${INK}"/>${T(o.x - 26, o.y + 30, o.t, 84, o.ink || "#e0262b")}</g>`; }, play: pop },
+    // { type:"cashpile", x, y, n }: n bundles of notes (x, y = bottom middle); a pile people can see instead of a number they must imagine
+    cashpile: { draw(o) { const n = o.n || 6, per = Math.max(1, Math.ceil(Math.sqrt(n))); let s = "";
+        for (let i = 0; i < n; i++) { const col = i % per, row = Math.floor(i / per), x = o.x - (per * 128) / 2 + col * 128 + (row % 2) * 12, y = o.y - (row + 1) * 46;
+          s += `<g class="blk">${R(x, y, 120, 42, "#1fa85b", 6)}${R(x + 46, y, 28, 42, "#f6f1e4", 0, `stroke="${INK}" stroke-width="5"`)}</g>`; }
+        return cut(s); }, play: pop },
+    // { type:"piggy", x, y, k, state }: the channel's hidden piggy bank. Tuck one small into a corner of a scene now and then: viewers hunt for it.
+    //   state: "calm" | "cracked" (bad news) | "asleep" (night) | "rich" (good news, sunglasses)
+    piggy: { draw(o) { const k = o.k || 0.5, st2 = o.state || "calm", eye = st2 === "asleep" ? `<path d="M34,-92 Q44,-84 54,-92" fill="none" ${st}/>` : st2 === "rich" ? R(14, -108, 70, 26, INK, 8, "") : `<circle cx="44" cy="-92" r="9" fill="${INK}"/>`;
+        return `<g class="cut" transform="translate(${o.x},${o.y}) scale(${o.flip ? -k : k},${k})">` + R(-78, -34, 30, 38, "#e58fa2", 8) + R(40, -34, 30, 38, "#e58fa2", 8) +
+          `<ellipse cx="0" cy="-84" rx="112" ry="78" fill="#f4a9b8" ${st}/><path d="M-30,-150 L-4,-186 L16,-148Z" fill="#f4a9b8" ${st}/>` + R(-26, -164, 52, 12, INK, 6, "") + `<ellipse cx="104" cy="-78" rx="30" ry="24" fill="#e58fa2" ${st}/><circle cx="96" cy="-78" r="5" fill="${INK}"/><circle cx="112" cy="-78" r="5" fill="${INK}"/>` +
+          `<path d="M-110,-94 Q-146,-110 -132,-76" fill="none" ${st}/>` + eye + (st2 === "cracked" ? `<path d="M-40,-158 L-22,-118 L-46,-96 L-18,-60" fill="none" ${st}/>` : "") + (st2 === "asleep" ? T(96, -170, "z", 70, INK) : "") + `</g>`; }, play: pop },
     // { type:"sign", x, y, t, size, rot, color }
     sign: {
       draw(o) { const size = o.size || 70, w = String(o.t).length * size * 0.5 + 70;

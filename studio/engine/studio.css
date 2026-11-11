@@ -30,6 +30,9 @@ svg text { font-family: var(--kin); }
 .grade.gold { background: radial-gradient(ellipse at 50% 30%, rgba(255, 215, 110, .35), rgba(120, 70, 0, .35)); mix-blend-mode: soft-light; }
 .grain { position: absolute; inset: 0; pointer-events: none; background: url("../assets/tex/Paper001.jpg") center / cover; mix-blend-mode: multiply; opacity: .5; }
 .vig { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 50% 46%, transparent 62%, rgba(12, 14, 34, .38) 100%); }
+.inner { position: absolute; inset: 0; }
+.light { position: absolute; inset: 0; pointer-events: none; mix-blend-mode: multiply; }
+.light.glow { mix-blend-mode: screen; opacity: .42; }
 .hud { position: absolute; inset: 0; pointer-events: none; }
 
 /* full-frame word cards and chapter cards */
@@ -96,4 +99,4 @@ svg text { font-family: var(--kin); }
 .panel { position: absolute; top: 0; bottom: 0; overflow: hidden; border-right: 10px solid var(--ink); background: var(--ink); }
 .panel:last-child { border-right: 0; }
 .panel .plabel { position: absolute; left: 0; right: 0; bottom: 70px; text-align: center; font-family: var(--kin); font-size: 84px; color: var(--paper); -webkit-text-stroke: 10px var(--ink); paint-order: stroke fill; }
-.panel .pstamp { position: absolute; left: 50%; top: 120px; transform: translateX(-50%) rotate(-9deg); padding: 6px 26px 0; border: 10px solid var(--red); color: var(--red); font-family: var(--kin); font-size: 110px; line-height: 1.1; background: rgba(246, 241, 228, .92); white-space: nowrap; }
+.panel .pstamp { position: absolute; left: 50%; top: 120px; transform: translateX(-50%) rotate(-9deg); padding: 6px 26px 0; border: 10px solid var(--red); color: var(--red); font-family: var(--kin); font-size: 110px; line-height: 1.1; background: rgba(246, 241, 228, .96); white-space: nowrap; }

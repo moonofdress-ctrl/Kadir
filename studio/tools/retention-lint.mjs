@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* Retention lint: checks an episode's script, storyboard and sound mix against the measured targets in
    channel-system/FORMAT_BOOK.md (sections 3-4, 8, 11-13). Run it before voice, before render and in QA.
-   The sound checks (A1-A7) read audio/mix.json, written by tools/mix.mjs.
+   G1-G5 check that pictures carry a joke; the sound checks (A1-A7) read audio/mix.json, written by tools/mix.mjs.
 
    Usage: node studio/tools/retention-lint.mjs <episode_dir> [--json]
    Exit code 1 when any check FAILS. WARN does not fail the run. Checks that need a long video
@@ -103,6 +103,22 @@ need(story.demo ? Infinity : 30, "T5", "Title question spoken by 0:25", () => { 
 const wc = lines.reduce((n, l) => n + l.text.split(/\s+/).filter(Boolean).length, 0), wpm = wc / (total / 60), est = lines.some((l) => l.est);
 need(120, "V1", "Speaking pace", () => add("V1", "Speaking pace", g(wpm >= 148 && wpm <= 166, true), `${wpm.toFixed(0)} wpm${est ? " (estimated, no audio yet)" : ""}`, "150-165 wpm (reference: 157)"));
 if (!story.demo) add("V2", "Length 12-15 minutes", g(total >= 690 && total <= 915, true), mmss(total), "11:30-15:15");
+
+/* ---- every shot is a small joke (FORMAT_BOOK 11) ---- */
+// Scenes and split panels, each with what is in it.
+const pictures = shots.flatMap((s) => (isCard(s) ? [] : s.type === "split" ? s.panels.map((p) => ({ ...p, t0: s.t0 })) : [s]));
+const TEXT_PROPS = ["sign", "banner", "pricetag", "stall", "podium", "crates"];
+const busy = (a) => a.thing || a.prop || a.hat || a.badge != null || (a.pose && a.pose !== "rest") || (a.acts || []).length > 0;
+const alive = pictures.filter((p) => (p.props || []).length || (p.actors || []).some(busy)).length, share = alive / Math.max(1, pictures.length);
+add("G1", "Pictures show something happening", g(share >= 0.85, share >= 0.7), `${alive} of ${pictures.length} (${Math.round(share * 100)}%)`, "85% or more with a prop, a living thing or a figure doing something");
+need(60, "G2", "Companies and institutions are living things", () => { const n = pictures.filter((p) => (p.actors || []).some((a) => a.thing)).length, want = Math.max(2, Math.round(total / 45));
+  add("G2", "Companies and institutions are living things", g(n >= want, true), `${n} pictures`, `${want} or more (one every 45s)`); });
+const skits = shots.filter(isSkit), near = skits.filter((s) => s.frame === "medium" || s.frame === "close" || s.type === "split").length;
+if (skits.length) add("G3", "Faces fill the frame in skits", g(near >= skits.length * 0.6, true), `${near} of ${skits.length} skits`, "60% or more with \"frame\": \"medium\" or \"close\"");
+need(60, "G4", "Facts are written inside the scene", () => { const n = pictures.reduce((k, p) => k + (p.props || []).filter((x) => TEXT_PROPS.includes(x.type) && (x.t || x.type === "stall")).length + (p.actors || []).filter((a) => a.label || a.sign || a.tag || a.badge != null).length, 0), want = Math.round(total / 20);
+  add("G4", "Facts are written inside the scene", g(n >= want, true), `${n} signs, tags, labels and badges`, `${want} or more (one every 20s)`); });
+need(180, "G5", "The hidden piggy bank", () => { const n = pictures.filter((p) => (p.props || []).some((x) => x.type === "piggy")).length, lo = Math.max(1, Math.floor(total / 180)), hi = Math.ceil(total / 45);
+  add("G5", "The hidden piggy bank", g(n >= lo && n <= hi, true), `${n} pictures`, `${lo} to ${hi}: there to be found, not to be noticed`); });
 
 /* ---- sound (FORMAT_BOOK 13) ---- */
 if (est) add("A1", "Sound mix", "n/a", "voice not recorded yet", "every line recorded");

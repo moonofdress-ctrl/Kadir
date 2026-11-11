@@ -2,7 +2,7 @@
   "episode": "slug",
   "title": "",
   "viewer": "BENNY",
-  "notes": "See studio/README.md for the format and studio/gallery/storyboard.json for a working example of every component.",
+  "notes": "See studio/README.md for the format and studio/gallery/storyboard.json for a working example of every component. Every shot is a small joke: a place, somebody doing something, a fact written in the scene, a living thing for each company or institution (FORMAT_BOOK 11).",
   "shots": [
     {
       "id": "s01",

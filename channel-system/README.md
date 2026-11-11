@@ -12,8 +12,8 @@ A newsroom of agents that turns a market event into a 12–15 minute cartoon exp
 4  fact-checker   → factcheck.md, fixes in the script            ─── GATE 2: you approve the script
 5  art-director   → storyboard.json, thumbnails.md, build-requests.md
 6  scene-builder  → new sets, props and guest figures in studio/engine/
-7  voice-producer → audio/<id>.wav (narrator + character lines)
-8  editor         → build, lint, frame check, render → render/
+7  voice-producer → audio/<id>.wav (narrator + character lines), dead air cut
+8  editor         → sound mix, build, lint, frame check, render → render/
 9  qa-reviewer    → qa.md, sends fixes back
 10 illustrator    → thumbnail art that matches the first frame
 11 packager       → package.md, thumbnail, captions             ─── GATE 3: you approve and upload
@@ -36,7 +36,7 @@ node studio/tools/retention-lint.mjs channel-system/episodes/<slug>
 | `characters/STYLE_GUIDE.md` | The house look, limits for real people and logos, the thumbnail formula. |
 | `characters/cast.md` | Recurring characters: who they are and how to use them. |
 | `episodes/_template/` | Empty episode folder to copy. |
-| `episodes/demo/` | A 20-second demo with real voice clips. |
+| `episodes/demo/` | A 19-second demo with scratch voices, staged by the picture rules. |
 | `research/` | How the rules were measured: the reference video's analysis and retention review. |
 | `learnings.md` | Written by the analyst after each upload (created with the first one). |
 | `../studio/` | The engine, the build and lint tools and a gallery of every component. |
@@ -47,11 +47,11 @@ node studio/tools/retention-lint.mjs channel-system/episodes/<slug>
 |---|---|---|
 | Research, script, fact-check | Claude (web search, primary documents) | Ready |
 | Pictures | `studio/` engine, drawn in code | Ready; each new story adds sets and props |
-| Frame check | `node studio/tools/preview.mjs` and a browser | Ready, needs nothing installed |
-| Voice | Open decision: a human narrator or a disclosed synthetic voice. Kokoro scratch track until then. | Pending |
-| Music and effects | Files the user has a licence for (the YouTube Audio Library is the safe source) | Pending |
-| Render to MP4 | HyperFrames (Apache 2.0) + FFmpeg | Needs FFmpeg installed on the machine |
-| Thumbnail art | Higgsfield, from the illustrator's prompts | Manual step |
+| Frame check | `node studio/tools/stills.mjs frames <episode>` saves a contact sheet; `preview.mjs` for a browser | Ready (the contact sheet needs Playwright) |
+| Voice | Open decision: a human narrator or a disclosed synthetic voice. `studio/tools/voice.mjs` makes a Kokoro scratch track until then. | Scratch ready, final voice pending |
+| Music and effects | `studio/tools/mix.mjs`: effects and a house music bed made in code, so nothing to license. Drop licensed tracks in `audio/music/` to use those instead (the YouTube Audio Library is the safe source). | Ready; the choice of music is yours |
+| Render to MP4 | HyperFrames (Apache 2.0) + FFmpeg | Tested in a cloud session; a local machine needs FFmpeg on its PATH |
+| Thumbnail | `studio/tools/stills.mjs thumb`: the first shot with the text band. Richer art from Higgsfield is optional. | Ready; painted art is a manual step |
 | Upload | The user, in YouTube Studio | Manual step |
 
 ## Running an episode
