@@ -1,0 +1,15 @@
+{
+  "episode": "demo",
+  "shots": [
+    {"id": "c01", "type": "chapter", "cue": "L001", "chapter": "Where your $100 goes", "number": 1},
+    {"id": "s01", "type": "scene", "cue": "L001", "image": "images/bg_warehouse.jpg", "camera": "push_in",
+     "text": [{"t": "$52 OF $100", "style": "slam", "pos": "top", "at": 2.2}]},
+    {"id": "s02", "type": "scene", "cue": "L002", "image": "images/bg_corridor.jpg", "camera": "pan_left",
+     "text": [{"t": "NOT THE BRAND. NOT THE FACTORY.", "style": "label"}]},
+    {"id": "k01", "type": "skit", "cue": "L003", "image": "images/bg_dress.jpg", "camera": "still",
+     "characters": [{"name": "BENNY", "image": "images/benny_placeholder.png", "enter": "pop", "pos": "left", "speaks": ["L003"]},
+                    {"name": "HAL", "image": "images/hal_placeholder.png", "enter": "slide_right", "pos": "right", "speaks": ["L004"]}]},
+    {"id": "s03", "type": "scene", "cue": "L005", "image": "images/bg_nessie.jpg", "camera": "tilt_up",
+     "text": [{"t": "FEES · FBA · ADS", "style": "stamp", "at": 1.6}]}
+  ]
+}
