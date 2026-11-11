@@ -52,7 +52,7 @@
     (list || []).forEach((o, i) => {
       const def = Overlays[o.type]; if (!def) return;
       const e = def.build(o); hud.appendChild(e);
-      const t = o.cue || o.at != null ? TM.when(o, t0, L) : t0 + 0.25 + i * 0.35;
+      const t = o.cue || o.at != null ? TM.when(o, t0, L) : t0 + TM.K.OV_LEAD + i * TM.K.OV_STEP;
       def.play(tl, e, o, t, { world: worldEl, t1 });
       if (o.until != null) tl.set(e, { opacity: 0 }, t0 + o.until);
     });

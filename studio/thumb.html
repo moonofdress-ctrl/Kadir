@@ -1,0 +1,32 @@
+<!doctype html>
+<!-- Thumbnail composer (1280x720): a frame of the video, or an image, under the two-part text band.
+     /thumb.html?t=2&white=AMAZON%20KEEPS&red=%2452          the frame at 2 s of the current build
+     /thumb.html?image=assets/ep/slug/thumb_src.png&white=...  an illustration instead
+     Saved to PNG by tools/stills.mjs thumb. House formula: characters/STYLE_GUIDE.md. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>thumbnail</title>
+    <link rel="stylesheet" href="engine/studio.css" />
+    <style>
+      html, body { margin: 0; width: 1280px; height: 720px; overflow: hidden; background: #111; }
+      #pic { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; border: 0; transform: scale(.666667); transform-origin: 0 0; }
+      #img { position: absolute; inset: 0; width: 1280px; height: 720px; object-fit: cover; }
+      #shade { position: absolute; left: 0; top: 0; width: 1280px; height: 300px; background: linear-gradient(#0b0d1ecc, #0b0d1e00); }
+      #band { position: absolute; left: 0; top: 18px; width: 1280px; text-align: center; white-space: nowrap; font-family: "Anton", sans-serif; line-height: 1; text-transform: uppercase;
+        color: #fff; -webkit-text-stroke: 14px #0b0d1e; paint-order: stroke fill; letter-spacing: .01em; }
+      #band .r { color: #ff3b30; }
+    </style>
+  </head>
+  <body>
+    <script>
+      const q = new URLSearchParams(location.search), esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;");
+      if (q.get("image")) { const i = document.createElement("img"); i.id = "img"; i.src = q.get("image"); document.body.appendChild(i); }
+      else { const f = document.createElement("iframe"); f.id = "pic"; f.src = "index.html?thumb&t=" + (q.get("t") || "2"); document.body.appendChild(f); }
+      const sh = document.createElement("div"); sh.id = "shade"; document.body.appendChild(sh);
+      const b = document.createElement("div"); b.id = "band"; b.innerHTML = `<span>${esc(q.get("white") || "")}</span> <span class="r">${esc(q.get("red") || "")}</span>`; document.body.appendChild(b);
+      // Largest size that keeps the band inside the frame.
+      document.fonts.ready.then(() => { let size = 190; b.style.fontSize = size + "px"; while (b.scrollWidth > 1200 && size > 60) { size -= 4; b.style.fontSize = size + "px"; } document.body.setAttribute("data-ready", "1"); });
+    </script>
+  </body>
+</html>

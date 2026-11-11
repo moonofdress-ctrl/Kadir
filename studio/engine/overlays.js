@@ -10,15 +10,16 @@
   const shake = (tl, world, t) => { if (world) tl.fromTo(world, { x: 0 }, { x: 12, duration: 0.04, yoyo: true, repeat: 5, ease: "none", immediateRender: false }, t); };
 
   const O = {
-    // { type:"counter", from, to, prefix, suffix, decimals, dur, tone, cap, pos }
+    // { type:"counter", from, to, prefix, suffix, decimals, dur, tone, cap, pos, plate }  plate:true puts a dark halo behind it, for busy backgrounds
+    // (the same option works on a slam)
     counter: {
-      build(o) { return place(el("counter " + (o.tone || ""), `${esc(o.prefix || "")}<span class="num">${fmt(o.from || 0, o.decimals)}</span>${esc(o.suffix || "")}${o.cap ? `<span class="cap">${esc(o.cap)}</span>` : ""}`), o, "tr"); },
+      build(o) { return place(el("counter " + (o.tone || "") + (o.plate ? " plate" : ""), `${esc(o.prefix || "")}<span class="num">${fmt(o.from || 0, o.decimals)}</span>${esc(o.suffix || "")}${o.cap ? `<span class="cap">${esc(o.cap)}</span>` : ""}`), o, "tr"); },
       // No callbacks here: a seek does not fire onUpdate, so the number is tweened as a property and formatted by a modifier.
       play(tl, e, o, t) { const num = e.querySelector(".num"); slam(tl, e, t);
         tl.fromTo(num, { textContent: o.from || 0 }, { textContent: o.to, duration: o.dur || 1.2, ease: "power2.out", immediateRender: false, modifiers: { textContent: (v) => fmt(parseFloat(v), o.decimals) } }, t + 0.1);
         tl.fromTo(e, { scale: 1 }, { scale: 1.12, duration: 0.1, yoyo: true, repeat: 1, immediateRender: false }, t + 0.1 + (o.dur || 1.2)); },
     },
-    slam: { build(o) { return place(el("slam " + (o.tone || ""), esc(o.t)), o, "tc"); }, play(tl, e, o, t, ctx) { slam(tl, e, t, true); shake(tl, ctx.world, t + 0.16); } },
+    slam: { build(o) { return place(el("slam " + (o.tone || "") + (o.plate ? " plate" : ""), esc(o.t)), o, "tc"); }, play(tl, e, o, t, ctx) { slam(tl, e, t, true); shake(tl, ctx.world, t + 0.16); } },
     label: { build(o) { return place(el("label", esc(o.t)), o, "bl"); }, play(tl, e, o, t) { slam(tl, e, t); } },
     stamp: { build(o) { return place(el("stamp", esc(o.t)), o, "tr"); }, play(tl, e, o, t, ctx) { e.style.opacity = 0;
       tl.fromTo(e, { opacity: 0, scale: 2.2, rotation: -24 }, { opacity: 1, scale: 1, rotation: -9, duration: 0.14, ease: "power4.in", immediateRender: false }, t); shake(tl, ctx.world, t + 0.14); } },
@@ -37,6 +38,7 @@
     calendar: {
       build(o) { const page = (p, cls) => `<div class="pg ${cls}"><div class="mo">${esc(p.month)}</div><div class="dy">${esc(p.day)}</div>${p.dow ? `<div class="dw">${esc(p.dow)}</div>` : ""}</div>`;
         const e = place(el("cal", page(o, "new") + (o.from ? page(o.from, "old") : "")), o, "tr");
+        e.setAttribute("data-layout-allow-overlap", ""); // the old page covers the new one until it drops away
         const old = e.querySelector(".old"); if (old) Object.assign(old.style, { position: "absolute", left: "-7px", top: "-7px", right: "-7px", background: "#f6f1e4", border: "7px solid #1b1d36", transformOrigin: "50% 0" });
         return e; },
       play(tl, e, o, t) { slam(tl, e, t); const old = e.querySelector(".old");

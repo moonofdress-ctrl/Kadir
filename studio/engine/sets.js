@@ -64,7 +64,7 @@
       const up = o.mood !== "red", r = rng(up ? 11 : 23), cg = "#46e08a", cr = "#ff5a4f";
       let b = R(0, 0, 1920, 1080, "#1c2340", 0, "") + R(70, 60, 1780, 400, "#101528", 10);
       for (let i = 0; i < 24; i++) { const x = 100 + (i % 8) * 218, y = 96 + Math.floor(i / 8) * 122, good = r() < (up ? 0.85 : 0.12), col = good ? cg : cr;
-        b += `<g class="tick">${T(x, y + 40, ticker(r), 36, "#c9cfe6", "start", 'font-family="IBM Plex Mono" font-weight="700"')}` +
+        b += `<g class="tick" data-layout-ignore>${T(x, y + 40, ticker(r), 36, "#c9cfe6", "start", 'font-family="IBM Plex Mono" font-weight="700"')}` +
           `${T(x, y + 86, (good ? "▲ " : "▼ ") + (20 + r() * 180).toFixed(1), 34, col, "start", 'font-family="IBM Plex Mono" font-weight="700"')}</g>`; }
       b += R(0, 700, 1920, 380, "#2a3152", 0, "") + `<path d="M0,700 L1920,700" ${st}/>`;
       for (let i = 0; i < 26; i++) { const x = 40 + i * 72 + r() * 20, y = 610 + (i % 2) * 34, c = Rig.extra(i * 3 + 1);
@@ -178,7 +178,7 @@
 
   // Ambient motion that keeps a held shot alive.
   function animate(tl, svg, t0, t1) {
-    gsap.set(svg.querySelectorAll(".bit"), { transformOrigin: "50% 50%", smoothOrigin: false });
+    const bits = svg.querySelectorAll(".bit"); if (bits.length) gsap.set(bits, { transformOrigin: "50% 50%", smoothOrigin: false });
     const d = t1 - t0;
     svg.querySelectorAll(".cloud").forEach((c, i) => tl.fromTo(c, { x: 0 }, { x: 60 + i * 30, duration: d, ease: "none", immediateRender: false }, t0));
     svg.querySelectorAll(".bit").forEach((b, i) => tl.fromTo(b, { y: -160 - (i % 7) * 60 }, { y: 760 + (i % 5) * 90, rotation: (i % 2 ? 1 : -1) * (90 + i * 7), duration: Math.max(d, 2.5) * (0.8 + (i % 4) * 0.22), ease: "none", immediateRender: false }, t0));

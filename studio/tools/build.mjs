@@ -5,12 +5,16 @@
 
    Reads <episode_dir>/storyboard.json and audio/lines.json (made from script.md if missing).
    Line lengths come from audio/<id>.wav; a missing clip is estimated from its word count (animatic mode).
-   Writes studio/index.html, copies the clips to studio/assets/ep/<slug>/audio/ and writes <episode_dir>/timing.json
+   Sound: when audio/mix.wav (made by tools/mix.mjs) matches the current timing, the video plays that one track.
+   Otherwise it plays the bare voice clips, which is fine for looking at pictures and not for publishing.
+   Writes studio/index.html, copies the audio to studio/assets/ep/<slug>/audio/ and writes <episode_dir>/timing.json
    (line, shot and chapter times, for the QA reviewer and the YouTube description). */
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
+
+import { mixState } from "./cues.mjs";
 
 const TM = createRequire(import.meta.url)("../engine/timing.js");
 const STUDIO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -63,8 +67,11 @@ function main() {
   const out = path.join(STUDIO, "assets", "ep", slug, "audio");
   fs.rmSync(path.join(STUDIO, "assets", "ep", slug), { recursive: true, force: true });
   fs.mkdirSync(out, { recursive: true });
-  const tags = [];
-  if (!silent) for (const ln of lines) {
+  const tags = [], mix = silent ? null : mixState(ep, { story, lines, total, res });
+  if (mix && mix.current) {
+    fs.copyFileSync(path.join(ep, "audio", "mix.wav"), path.join(out, "mix.wav"));
+    tags.push(`      <audio id="amix" src="assets/ep/${slug}/audio/mix.wav" data-start="0" data-duration="${total}" data-track-index="1"></audio>`);
+  } else if (!silent) for (const ln of lines) {
     if (durations[ln.id] == null) continue;
     fs.copyFileSync(path.join(ep, "audio", ln.id + ".wav"), path.join(out, ln.id + ".wav"));
     tags.push(`      <audio id="a${ln.id}" src="assets/ep/${slug}/audio/${ln.id}.wav" data-start="${ln.a}" data-duration="${ln.d}" data-track-index="1"></audio>`);
@@ -109,6 +116,7 @@ ${tags.join("\n")}
     chapters: res.chapters.map((c) => ({ number: c.number, title: c.title, t: +c.t.toFixed(2), stamp: stamp(c.t) })),
   }, null, 2) + "\n");
   console.log(`${slug}: ${lines.length} lines, ${res.shots.length} shots, ${stamp(total)} (${total}s)` + (est ? `, ${est} line(s) without audio (estimated)` : "") + (silent ? ", silent" : ""));
+  if (!silent && !est) console.log(mix && mix.current ? `  sound: audio/mix.wav (${mix.report.lufs} LUFS)` : `  sound: bare voice clips, ${mix ? "the mix is out of date" : "no mix yet"}. Run: node studio/tools/mix.mjs ${path.relative(process.cwd(), ep)}`);
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) main();

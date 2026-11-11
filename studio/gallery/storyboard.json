@@ -7,11 +7,11 @@
     { "id": "g01", "cue": "L001", "set": "trading_floor", "opts": { "mood": "red", "papers": true }, "grade": "red", "camera": "shake",
       "overlays": [
         { "type": "clock", "t": "10:35", "ap": "AM", "tz": "ET", "at": 0 },
-        { "type": "counter", "from": 0, "to": 2000, "prefix": "-$", "suffix": "B", "tone": "red", "pos": "tr", "cap": "S&P 500, BY MIDMORNING", "at": 0.4, "dur": 1.4 },
+        { "type": "counter", "from": 0, "to": 2000, "prefix": "-$", "suffix": "B", "tone": "red", "pos": "tr", "cap": "S&P 500, BY MIDMORNING", "at": 0.4, "dur": 1.4, "plate": true },
         { "type": "tag", "t": "THURSDAY", "tone": "red", "at": 0.2 }
       ] },
     { "id": "g02", "cue": "L002", "set": "trading_floor", "opts": { "mood": "green", "party": true }, "grade": "green", "camera": "pan_right",
-      "overlays": [ { "type": "slam", "t": "+3%", "tone": "green", "at": 0.9 }, { "type": "tag", "t": "WEDNESDAY", "tone": "green", "at": 0.2 } ] },
+      "overlays": [ { "type": "slam", "t": "+3%", "tone": "green", "at": 0.9, "plate": true }, { "type": "tag", "t": "WEDNESDAY", "tone": "green", "at": 0.2 } ] },
     { "id": "g03", "cue": "L003", "set": "street", "opts": { "signs": ["BANK", "CAFE", "PHARMACY"] }, "camera": "push_in",
       "actors": [
         { "who": "CHAD", "x": 620, "face": "happy", "pose": "cheer", "speaks": ["L003"] },

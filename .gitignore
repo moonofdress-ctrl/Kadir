@@ -23,3 +23,8 @@ amazon-hidden-tax/amazon_hidden_tax_v3_preview.mp4
 studio/assets/ep/
 studio/renders/
 channel-system/episodes/*/render/
+# Sound: the mix and the pre-tighten originals are rebuilt by studio/tools/mix.mjs; the house kit by studio/tools/sounds.mjs
+channel-system/episodes/*/audio/mix.wav
+channel-system/episodes/*/audio/raw/
+studio/assets/sounds/
+channel-system/episodes/*/thumbnail_small.png

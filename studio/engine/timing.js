@@ -2,7 +2,8 @@
    Lines get a start `a` and a duration `d`; shots get `t0` / `t1` from the line (and word) they cue on. */
 (function (root) {
   "use strict";
-  const K = { LEAD: 0.2, GAP: 0.18, SKIT_GAP: 0.35, CH_GAP: 1.0, TAIL: 1.0, WPS: 157 / 60, CH_LEAD: 0.95, CH_MIN: 1.45, CARD_MIN: 0.9 };
+  // GAP and SKIT_GAP keep every pause between lines under a quarter of a second (FORMAT_BOOK 13); the only long breath is CH_GAP at a chapter card.
+  const K = { LEAD: 0.2, GAP: 0.14, SKIT_GAP: 0.04, CH_GAP: 1.0, TAIL: 1.0, WPS: 157 / 60, CH_LEAD: 0.95, CH_MIN: 1.45, CARD_MIN: 0.9, OV_LEAD: 0.25, OV_STEP: 0.35 };
 
   const words = (text) => String(text).split(/\s+/).filter(Boolean);
   const estimate = (text) => +(words(text).length / K.WPS + 0.1).toFixed(3);

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
-/* Retention lint: checks an episode's script and storyboard against the measured targets in
+/* Retention lint: checks an episode's script, storyboard and sound mix against the measured targets in
    channel-system/FORMAT_BOOK.md (sections 3-4, 8, 11-13). Run it before voice, before render and in QA.
+   The sound checks (A1-A7) read audio/mix.json, written by tools/mix.mjs.
 
    Usage: node studio/tools/retention-lint.mjs <episode_dir> [--json]
    Exit code 1 when any check FAILS. WARN does not fail the run. Checks that need a long video
@@ -8,6 +9,7 @@
 import path from "node:path";
 import { createRequire } from "node:module";
 import { load } from "./build.mjs";
+import { mixState } from "./cues.mjs";
 
 const TM = createRequire(import.meta.url)("../engine/timing.js");
 
@@ -101,6 +103,23 @@ need(story.demo ? Infinity : 30, "T5", "Title question spoken by 0:25", () => { 
 const wc = lines.reduce((n, l) => n + l.text.split(/\s+/).filter(Boolean).length, 0), wpm = wc / (total / 60), est = lines.some((l) => l.est);
 need(120, "V1", "Speaking pace", () => add("V1", "Speaking pace", g(wpm >= 148 && wpm <= 166, true), `${wpm.toFixed(0)} wpm${est ? " (estimated, no audio yet)" : ""}`, "150-165 wpm (reference: 157)"));
 if (!story.demo) add("V2", "Length 12-15 minutes", g(total >= 690 && total <= 915, true), mmss(total), "11:30-15:15");
+
+/* ---- sound (FORMAT_BOOK 13) ---- */
+if (est) add("A1", "Sound mix", "n/a", "voice not recorded yet", "every line recorded");
+else {
+  const mix = mixState(ep, data), run = "run node studio/tools/mix.mjs";
+  add("A1", "Sound mix is made and up to date", g(mix && mix.current, !mix && story.demo), mix ? (mix.current ? "ok" : "out of date") : "no mix", run);
+  if (mix && mix.current) { const m = mix.report;
+    add("A2", "Loudness -14 LUFS", g(Math.abs(m.lufs + 14) <= 0.5), m.lufs + " LUFS", "-14.5 to -13.5");
+    add("A3", "Peaks under -1 dBTP", g(m.true_peak_db <= -0.9), m.true_peak_db + " dBTP", "-1 or lower");
+    const u = m.music.db_under_voice;
+    add("A4", "Quiet music bed under the voice", g(u != null && u >= 17 && u <= 22, true), u == null ? "no music" : `${u} dB under (${m.music.source})`, "18-20 dB under the voice");
+    add("A5", "Music is credited", g(m.music.uncredited.length === 0), m.music.uncredited.length ? m.music.uncredited.join(", ") : "ok", "source and licence in audio/CREDITS.md");
+    const allow = Math.max(2, Math.round(total / 75)), dp = m.dead_air.pauses_over_250ms, worst = m.dead_air.longest[0];
+    add("A6", "No dead air in the voice", g(dp <= allow, true), `${dp} pauses over 0.25s${worst ? `, longest ${worst.d}s at ${mmss(worst.t)}` : ""}`, `${allow} or fewer (mix.mjs --tighten cuts them)`);
+    add("A7", "Effects are rare", g(m.effects.per_minute <= 8 || m.effects.count <= 4, true), `${m.effects.count} (${m.effects.per_minute} a minute)`, "8 a minute or fewer");
+  }
+}
 
 if (args.includes("--json")) console.log(JSON.stringify({ episode: path.basename(ep), total, rows }, null, 2));
 else {
