@@ -4,8 +4,8 @@
   "lufs": -14.02,
   "true_peak_db": -1.05,
   "limiter": {
-    "max_cut_db": 4.2,
-    "pct_cut_over_1db": 1.79
+    "max_cut_db": 4.1,
+    "pct_cut_over_1db": 1.78
   },
   "voice": {
     "speakers": {
@@ -31,6 +31,10 @@
   "music": {
     "source": "house bed (made in code)",
     "files": [],
+    "beds": [
+      "steady",
+      "calm"
+    ],
     "climax_chapters": [],
     "db_under_voice": 19,
     "uncredited": []

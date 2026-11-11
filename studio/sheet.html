@@ -14,7 +14,7 @@
   <body>
     <script>
       const q = new URLSearchParams(location.search), ts = (q.get("t") || "0").split(","), cols = +(q.get("cols") || 2);
-      const w = Math.floor((window.innerWidth - (cols - 1) * 4) / cols), h = Math.round(w * 9 / 16);
+      const w = Math.floor((window.innerWidth - (cols - 1) * 4) / cols), h = Math.round(q.get("v") ? w * 16 / 9 : w * 9 / 16); // &v=1: vertical frames
       document.body.style.gridTemplateColumns = `repeat(${cols}, ${w}px)`;
       for (const t of ts) {
         const f = document.createElement("div"); f.className = "f"; f.style.width = w + "px"; f.style.height = h + "px";

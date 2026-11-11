@@ -2,6 +2,12 @@
 /* Build studio/index.html for one episode.
 
    Usage: node studio/tools/build.mjs <episode_dir> [--silent]
+          node studio/tools/build.mjs <episode_dir> --short L012-L020 --title "WHO PAYS THE FEE?" [--name short1]
+              makes <episode_dir>/shorts/<name>/ : a vertical 1080x1920 cut of those lines, built like any episode
+              (then mix, lint, look at frames and render that folder the same way).
+
+   The storyboard may be split by chapter: storyboard.json holds the header (title, viewer, audio) and any shots,
+   and every storyboard/*.json adds its "shots" in file-name order. One art director per chapter can then work at once.
 
    Reads <episode_dir>/storyboard.json and audio/lines.json (made from script.md if missing).
    Line lengths come from audio/<id>.wav; a missing clip is estimated from its word count (animatic mode).
@@ -45,7 +51,11 @@ export function wavSeconds(file) {
 }
 
 export function load(ep) {
-  const story = JSON.parse(fs.readFileSync(path.join(ep, "storyboard.json"), "utf8"));
+  const story = JSON.parse(fs.readFileSync(path.join(ep, "storyboard.json"), "utf8")), parts = path.join(ep, "storyboard");
+  story.shots = story.shots || [];
+  if (fs.existsSync(parts)) for (const f of fs.readdirSync(parts).filter((x) => x.endsWith(".json")).sort()) {
+    const more = JSON.parse(fs.readFileSync(path.join(parts, f), "utf8")); story.shots.push(...(Array.isArray(more) ? more : more.shots || [])); }
+  const seen = new Set(); for (const sh of story.shots) { if (seen.has(sh.id)) throw new Error(`two shots are called ${sh.id}`); seen.add(sh.id); }
   const lj = path.join(ep, "audio", "lines.json");
   let lines;
   if (fs.existsSync(lj)) lines = JSON.parse(fs.readFileSync(lj, "utf8"));
@@ -61,8 +71,26 @@ export function load(ep) {
 
 const stamp = (t) => Math.floor(t / 60) + ":" + String(Math.floor(t % 60)).padStart(2, "0");
 
+// Cut a vertical Short out of an episode: the lines in the range, the shots that cue on them, the same clips.
+function makeShort(ep, range, title, name) {
+  const { story, lines } = load(ep), [a, b] = range.split("-"), i0 = lines.findIndex((l) => l.id === a), i1 = lines.findIndex((l) => l.id === (b || a));
+  if (i0 < 0 || i1 < i0) throw new Error(`--short needs a line range such as L012-L020 (got ${range})`);
+  const keep = lines.slice(i0, i1 + 1), ids = new Set(keep.map((l) => l.id)), dir = path.join(ep, "shorts", name);
+  let shots = story.shots.filter((s) => s.type !== "chapter" && ids.has(s.cue));
+  // The picture that was on screen when the range starts comes along, so the Short never opens on nothing.
+  if (!shots.length || shots[0].cue !== keep[0].id || shots[0].word || shots[0].at) { const before = story.shots.filter((s) => s.type !== "chapter" && lines.findIndex((l) => l.id === s.cue) <= i0 && !ids.has(s.cue)).pop() || story.shots.filter((s) => s.cue === keep[0].id)[0];
+    if (before && !shots.includes(before)) { const first = Object.assign({}, before, { cue: keep[0].id }); delete first.word; delete first.at; shots = [first, ...shots]; } }
+  fs.rmSync(dir, { recursive: true, force: true }); fs.mkdirSync(path.join(dir, "audio"), { recursive: true });
+  fs.writeFileSync(path.join(dir, "storyboard.json"), JSON.stringify({ episode: name, demo: true, vertical: true, vtitle: title || story.title || "", title: story.title, viewer: story.viewer, audio: story.audio, shots }, null, 2) + "\n");
+  fs.writeFileSync(path.join(dir, "audio", "lines.json"), JSON.stringify(keep.map((l) => ({ id: l.id, speaker: l.speaker, text: l.text })), null, 2) + "\n");
+  for (const l of keep) { const f = path.join(ep, "audio", l.id + ".wav"); if (fs.existsSync(f)) fs.copyFileSync(f, path.join(dir, "audio", l.id + ".wav")); }
+  return dir;
+}
+
 function main() {
-  const args = process.argv.slice(2), ep = path.resolve(args.find((a) => !a.startsWith("--")) || "");
+  const args = process.argv.slice(2), val = (k) => { const i = args.indexOf(k); return i >= 0 ? args[i + 1] : null; };
+  let ep = path.resolve(args.find((a, i) => !a.startsWith("--") && !["--short", "--title", "--name"].includes(args[i - 1])) || "");
+  if (val("--short") && fs.existsSync(path.join(ep, "storyboard.json"))) { ep = makeShort(ep, val("--short"), val("--title"), val("--name") || "short1"); console.log(`short written to ${path.relative(process.cwd(), ep)}`); }
   if (!fs.existsSync(path.join(ep, "storyboard.json"))) { console.error("usage: node studio/tools/build.mjs <episode_dir> [--silent]"); process.exit(2); }
   const silent = args.includes("--silent"), slug = path.basename(ep);
   const { story, lines, total, durations, res } = load(ep);
@@ -81,10 +109,10 @@ function main() {
   }
   const js = (o) => JSON.stringify(o).replace(/<\//g, "<\\/");
   const page = `<!doctype html>
-<html lang="en" data-resolution="landscape">
+<html lang="en" data-resolution="${story.vertical ? "portrait" : "landscape"}">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=1920, height=1080" />
+    <meta name="viewport" content="width=${story.vertical ? 1080 : 1920}, height=${story.vertical ? 1920 : 1080}" />
     <title>${slug}</title>
     <link rel="stylesheet" href="engine/studio.css" />
     <script src="vendor/gsap.min.js"></script>
@@ -95,7 +123,7 @@ function main() {
     <script src="engine/core.js"></script>
   </head>
   <body>
-    <div id="root" data-composition-id="main" data-start="0" data-duration="${total}" data-width="1920" data-height="1080">
+    <div id="root" data-composition-id="main" data-start="0" data-duration="${total}" data-width="${story.vertical ? 1080 : 1920}" data-height="${story.vertical ? 1920 : 1080}">
 ${tags.join("\n")}
     </div>
     <script>

@@ -20,6 +20,7 @@ You review a finished episode as a viewer with a thumb on the "next video" butto
    - Are the plants in `## DEVICES` really paid off on screen? Does the motif change each time?
    - Does it stop on the last line, with a callback picture?
    - Anything that looks like another channel's figures, lettering or signature object; any logo; any real person shown or quoted outside the style guide's limits.
+   - Does something move in every shot longer than three seconds, beyond a face change?
    - Any frame with cropped text, overlapping elements, an empty background or a figure off the floor.
 4. Sound: the lint's A1–A7 must pass. If there is a render, measure it (`ffmpeg -i <file> -af ebur128=peak=true -f null -`): −14 LUFS, peak under −1 dB. You cannot hear it, so say so, and ask the user to listen for music that fights the voice.
 5. Check that `factcheck.md` is complete and that every on-screen figure matches it, including numbers on price tags, badges and signs.

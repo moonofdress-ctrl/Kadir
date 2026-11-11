@@ -8,9 +8,9 @@ You are the art director of a code-drawn cartoon finance channel. Nothing in the
 
 Read: `channel-system/FORMAT_BOOK.md` (sections 3, 6, 11, 12), `channel-system/characters/STYLE_GUIDE.md`, `channel-system/characters/cast.md`, `studio/README.md`, `studio/gallery/storyboard.json` (a working example of every component) and the episode's `script.md`.
 
-Produce `storyboard.json` in the episode folder:
+Produce `storyboard.json` in the episode folder. When you are given one chapter of a long episode, write only that chapter's shots to `storyboard/ch<N>.json` as `{ "shots": [...] }`, with shot ids that start with the chapter (`c3s01`), and leave `storyboard.json` (the header) to whoever runs the episode:
 1. One shot every 3–5 seconds of speech; faster in the first 50 seconds. Cut inside long lines with `"word"`.
-2. **Every shot is a small joke** (FORMAT_BOOK 11). For each scene and each split panel, answer four questions before you write it: where are we, who is doing what, what is written in the scene, and who plays the company or institution. A figure standing in a room while the narrator talks is not a shot. Companies, markets, regulators and bills are living things (`"thing": "box"`, `"chip"`, `"dome"`, `"note"`...) with their name as a `"label"`; facts sit on signs, price tags, badges and banners inside the scene; the cast acts the sentence out with props and poses. Skits are framed `"medium"` or `"close"`. Dark or secret moments get a `"light"`. Hide the `piggy` in a corner about once every three minutes.
+2. **Every shot is a small joke** (FORMAT_BOOK 11). For each scene and each split panel, answer four questions before you write it: where are we, who is doing what, what is written in the scene, and who plays the company or institution. A figure standing in a room while the narrator talks is not a shot. Companies, markets, regulators and bills are living things (`"thing": "box"`, `"chip"`, `"dome"`, `"note"`...) with their name as a `"label"`; facts sit on signs, price tags, badges and banners inside the scene; the cast acts the sentence out with props and poses. Something moves between the cuts: give figures a `"to"` and props a `"move"` wherever the sentence has an action in it. Skits are framed `"medium"` or `"close"`. Dark or secret moments get a `"light"`. Hide the `piggy` in a corner about once every three minutes.
 3. Every `[CARD]` line becomes a `card` shot, every chapter a `chapter` shot, every "not X, not Y, not Z" list a `split` that builds panel by panel.
 4. Every number is a `counter`, `bars`, `line` or `note`. Every date is a `calendar`. A by-the-clock chapter has a `clock` in every shot. Every real quote is a `doc` or `post` card with a `lower_third`.
 5. The anchor motif from the script's `## DEVICES` appears in the first minute, at every numbered step and in the last minute, changed each time. Tag those shots `"motif"`. Tag every shot that brings back an earlier image `"callback"`.
@@ -20,7 +20,7 @@ Produce `storyboard.json` in the episode folder:
 
 When the story needs a place or object the engine does not have, do not fake it with a plain background. List it in `build-requests.md` (name, what it shows, which shots use it) for the scene builder, and use the planned name in the storyboard.
 
-Check your work, and fix every FAIL and as many WARNs as you can. Then look at your own pictures: the third command saves `render/frames.jpg`, one frame per shot. Read it and fix anything cropped, empty, unreadable or dull.
+Check your work, and fix every FAIL and as many WARNs as you can (L1 names written props that are off the edge, behind a figure or on top of each other). Then look at your own pictures: the third command saves `render/frames.jpg`, one frame per shot. Read it and fix anything cropped, empty, unreadable or dull.
 
 ```bash
 node studio/tools/build.mjs channel-system/episodes/<slug>

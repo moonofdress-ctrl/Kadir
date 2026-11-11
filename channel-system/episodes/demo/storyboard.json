@@ -34,7 +34,18 @@
           "face": "happy",
           "pose": "wave",
           "cue": "L001",
-          "word": 4
+          "word": 4,
+          "acts": [
+            {
+              "cue": "L001",
+              "word": 6,
+              "to": [
+                1560,
+                930
+              ],
+              "dur": 0.9
+            }
+          ]
         }
       ],
       "props": [],
@@ -89,7 +100,16 @@
           "y": 905,
           "n": 3,
           "w": 170,
-          "t": "ORDER"
+          "t": "ORDER",
+          "move": {
+            "to": [
+              1100,
+              905
+            ],
+            "cue": "L001",
+            "word": 9,
+            "dur": 1.2
+          }
         },
         {
           "type": "piggy",
@@ -116,7 +136,24 @@
           "y": 920,
           "face": "panic",
           "pose": "panic",
-          "enter": "none"
+          "enter": "none",
+          "acts": [
+            {
+              "cue": "L001",
+              "word": 13,
+              "at": 0.3,
+              "to": [
+                520,
+                930
+              ],
+              "dur": 0.3
+            },
+            {
+              "cue": "L001",
+              "word": 16,
+              "face": "crying"
+            }
+          ]
         },
         {
           "thing": "box",
@@ -126,7 +163,28 @@
           "face": "greedy",
           "prop": "cash",
           "pose": "grab",
-          "enter": "slide_right"
+          "enter": "slide_right",
+          "acts": [
+            {
+              "cue": "L001",
+              "word": 13,
+              "to": [
+                1040,
+                930
+              ],
+              "dur": 0.45
+            },
+            {
+              "cue": "L001",
+              "word": 16,
+              "to": [
+                1240,
+                930
+              ],
+              "dur": 0.6,
+              "face": "happy"
+            }
+          ]
         }
       ],
       "overlays": [
@@ -278,7 +336,6 @@
           "actors": [
             {
               "thing": "bag",
-              "label": "FEES",
               "x": 960,
               "y": 900,
               "face": "greedy",
@@ -297,7 +354,6 @@
           "actors": [
             {
               "thing": "box",
-              "label": "SHIPPING",
               "x": 960,
               "y": 935,
               "face": "happy",

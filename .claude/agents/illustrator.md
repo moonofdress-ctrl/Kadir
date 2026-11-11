@@ -1,6 +1,7 @@
 ---
 name: illustrator
 description: Makes the thumbnail art for an episode. Use when the storyboard is approved and the first frame is fixed.
+model: sonnet
 tools: Read, Write, Edit, Bash, Glob, Grep
 ---
 

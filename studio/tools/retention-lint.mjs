@@ -127,6 +127,26 @@ need(60, "G4", "Facts are written inside the scene", () => { const n = pictures.
 need(180, "G5", "The hidden piggy bank", () => { const n = pictures.filter((p) => (p.props || []).some((x) => x.type === "piggy")).length, lo = Math.max(1, Math.floor(total / 180)), hi = Math.ceil(total / 45);
   add("G5", "The hidden piggy bank", g(n >= lo && n <= hi, true), `${n} pictures`, `${lo} to ${hi}: there to be found, not to be noticed`); });
 
+/* ---- layout: written things that sit on top of each other (an early, rough version of the HyperFrames check) ---- */
+{ const rig = {}; try { new Function("window", "document", fs.readFileSync(new URL("../engine/rig.js", import.meta.url), "utf8"))(rig, {}); } catch { /* no rig: skip thing sizes */ }
+  const THINGS = (rig.Rig || {}).THINGS || {}, len = (t) => String(t == null ? "" : t).length;
+  // rough boxes [left, top, right, bottom] of everything that carries text, and of figures (which hide what is behind them)
+  const propBox = (p) => { const x = p.x || 0, y = p.y || 0;
+    if (p.type === "sign") { const sz = p.size || 70, w = len(p.t) * sz * 0.5 + 70; return [x - w / 2, y - sz, x + w / 2, y + sz * 0.5]; }
+    if (p.type === "banner") { const w = p.w || 700, h = p.h || 150; return [x - w / 2, y, x + w / 2, y + h]; }
+    if (p.type === "pricetag") { const w = len(p.t) * 46 + 120; return [x - w / 2, y - 58, x + w / 2, y + 58]; }
+    if (p.type === "crates" && p.t) { const n = p.n || 3, w = p.w || 190, c = Math.ceil(Math.sqrt(n)); return [x - (c * w) / 2, y - c * w * 0.72, x + (c * w) / 2, y]; }
+    return null; };
+  const actorBox = (a) => { const T = a.thing && THINGS[a.thing] ? THINGS[a.thing]({}) : null, k = a.scale || 1, x = a.x != null ? a.x : 960, y = a.y || 900, hw = (T ? T.w : 150) * k, h = (T ? T.h : 600) * k; return [x - hw, y - h, x + hw, y]; };
+  const hit = (a, b) => { const w = Math.min(a[2], b[2]) - Math.max(a[0], b[0]), h = Math.min(a[3], b[3]) - Math.max(a[1], b[1]); return w > 0 && h > 0 ? (w * h) / ((a[2] - a[0]) * (a[3] - a[1])) : 0; };
+  const bad = [];
+  shots.forEach((s) => (s.type === "split" ? s.panels : isCard(s) ? [] : [s]).forEach((pic) => {
+    const texts = (pic.props || []).map((p) => ({ p, b: propBox(p) })).filter((x) => x.b), figs = (pic.actors || []).map(actorBox);
+    texts.forEach((t, i) => { const off = t.b[0] < 60 || t.b[2] > 1860 || t.b[1] < 20;
+      const covered = t.p.layer !== "front" && figs.some((f) => hit(t.b, f) > 0.35), clash = texts.some((u, j) => j > i && hit(t.b, u.b) > 0.2);
+      if (off || covered || clash) bad.push(`${s.id} ${t.p.type} "${String(t.p.t).slice(0, 14)}" ${off ? "off the edge" : covered ? "behind a figure" : "on another text"}`); }); }));
+  add("L1", "Written props are readable", g(bad.length === 0, true), bad.length ? bad.slice(0, 4).join("; ") + (bad.length > 4 ? ` (+${bad.length - 4} more)` : "") : "ok", "no sign, banner, tag or crate label off the edge, behind a figure or on another text"); }
+
 /* ---- sound (FORMAT_BOOK 13) ---- */
 if (est) add("A1", "Sound mix", "n/a", "voice not recorded yet", "every line recorded");
 else {

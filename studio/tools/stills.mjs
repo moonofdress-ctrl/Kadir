@@ -59,15 +59,15 @@ function currentBuild(ep) {
 async function frames() {
   const ep = epArg(); if (!ep) throw new Error("usage: node studio/tools/stills.mjs frames <episode_dir> [--t 0,3,9.5] [--every 10] [--cols 3]");
   currentBuild(ep);
-  const { res, total } = load(ep), every = parseFloat(opt("every", "0"));
+  const { res, total, story } = load(ep), every = parseFloat(opt("every", "0"));
   let ts = opt("t") ? opt("t").split(",").map(Number) : every > 0 ? Array.from({ length: Math.ceil(total / every) }, (_, i) => i * every) : [0.05, ...res.shots.map((s) => (s.t0 + s.t1) / 2), total - 0.5];
   ts = [...new Set(ts.filter((t) => t >= 0 && t <= total).map((t) => +t.toFixed(2)))].sort((a, b) => a - b);
-  const cols = parseInt(opt("cols", "4"), 10), w = 640, out = path.resolve(opt("out", path.join(ep, "render", "frames.jpg")));
+  const vert = !!story.vertical, cols = parseInt(opt("cols", vert ? "6" : "4"), 10), w = vert ? 320 : 640, fh = vert ? 569 : 360, out = path.resolve(opt("out", path.join(ep, "render", "frames.jpg")));
   // Long episodes: several sheets of at most 12 frames, so each stays readable and loads quickly.
   const pages = []; for (let i = 0; i < ts.length; i += 12) pages.push(ts.slice(i, i + 12));
   for (const [i, page] of pages.entries()) {
     const file = pages.length > 1 ? out.replace(/(\.\w+)$/, `_${String(i + 1).padStart(2, "0")}$1`) : out, rows = Math.ceil(page.length / cols);
-    await shoot(`sheet.html?t=${page.join(",")}&cols=${cols}`, file, cols * w + (cols - 1) * 4, rows * 360 + (rows - 1) * 4);
+    await shoot(`sheet.html?t=${page.join(",")}&cols=${cols}${vert ? "&v=1" : ""}`, file, cols * w + (cols - 1) * 4, rows * fh + (rows - 1) * 4);
     console.log(`${path.relative(process.cwd(), file)}: ${page.length} frames (${page[0]}s to ${page[page.length - 1]}s)`);
   }
 }

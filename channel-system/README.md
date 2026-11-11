@@ -10,7 +10,8 @@ A newsroom of agents that turns a market event into a 12–15 minute cartoon exp
 2  researcher     → episodes/<slug>/research.md (sourced)        ─┘
 3  scriptwriter   → script.md (FORMAT_BOOK, with the loop ledger)
 4  fact-checker   → factcheck.md, fixes in the script            ─── GATE 2: you approve the script
-5  art-director   → storyboard.json, thumbnails.md, build-requests.md
+5  art-director   → storyboard.json (or one file per chapter in storyboard/), thumbnails.md, build-requests.md
+5b fact-checker   → second pass on screen-text.md: every word and number on screen
 6  scene-builder  → new sets, props and guest figures in studio/engine/
 7  voice-producer → audio/<id>.wav (narrator + character lines), dead air cut
 8  editor         → sound mix, build, lint, frame check, render → render/
@@ -55,6 +56,14 @@ node studio/tools/retention-lint.mjs channel-system/episodes/<slug>
 | Render to MP4 | HyperFrames (Apache 2.0) + FFmpeg | Tested in a cloud session; a local machine needs FFmpeg on its PATH |
 | Thumbnail | `studio/tools/stills.mjs thumb`: the first shot with the text band. Richer art from Higgsfield is optional. | Ready; painted art is a manual step |
 | Upload | The user, in YouTube Studio | Manual step |
+
+## Keeping a full episode affordable
+A 13-minute episode is about 250 lines and 200 shots: too much for one agent in one go.
+
+- **Storyboard by chapter.** Run one art director per chapter, each writing `storyboard/ch<N>.json` with only that chapter's lines. They can run at the same time; the build joins the files.
+- **Mechanical steps use a smaller model.** The voice producer, editor, illustrator and packager are set to `sonnet` in their definitions; research, script, fact-check, storyboard and QA keep the main model.
+- **Tools before agents.** Voice (`voice.mjs`), sound (`mix.mjs`), frames (`stills.mjs`) and the checks are plain commands; an agent is needed only to judge the result.
+- Rendering already uses every processor core (`--workers auto`); a 2-minute piece took 15 minutes in a cloud session, so plan about an hour and a half for 13 minutes and run it in the background.
 
 ## Running an episode
 

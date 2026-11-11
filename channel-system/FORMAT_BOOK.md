@@ -74,7 +74,7 @@ Then pick one route from `STORY_ROUTES.md` as the backbone. Three tests, which t
 - Every claim has an owner on screen or in narration: a person, a firm, a filing, a news agency.
 - Allegations stay allegations: "the FTC alleges", "according to the lawsuit". Include the other side's response.
 - No financial advice. Never "buy", "sell" or "you should" about a security.
-- Numbers are checked by the fact-checker against a primary or two independent sources before voice is recorded.
+- Numbers are checked by the fact-checker against a primary or two independent sources before voice is recorded. The fact-checker comes back once more after the storyboard: `node studio/tools/screen-text.mjs <episode>` lists every word and number on screen, and each one that states a fact is checked the same way.
 
 ## 8. The ending
 - Answer the title question honestly, in one short line ("No." "Not this time.").
@@ -131,6 +131,7 @@ Measured on the reference video; the lint checks them.
 
 - **Text cards** carry the turn lines and the big numbers. The words appear with the voice, one at a time.
 - **Every number is drawn**: counters that roll, bars that grow, lines that draw themselves. Every date is a calendar page. A by-the-clock chapter keeps a clock in the corner of every shot.
+- **Subtitles are on** in every video; they rest while a text card is showing its own words.
 - **Every quote is evidence**: a document card, a post card or a lower third with the name and role, with the key words highlighted. Lesser-known people get a name strip, not a caricature.
 - **Lists build on screen**: one short sentence, one new panel of a split screen.
 - **Every analogy is a place**, drawn literally.
@@ -144,6 +145,7 @@ What holds a viewer is the middle of the video, not its first frame. A shot of s
 3. **What is written in the scene?** One sign, banner, price tag, badge or label carries the fact: a name, a price, an age, a date. Facts live in the scene first and in overlays second.
 4. **Who is the abstract player?** A company, a market, a regulator or a bill becomes a **living thing**: a plain object with a face and gloves and its name written on it (a parcel for a marketplace, a chip for a chipmaker, a domed building for a parliament, a banknote for "your hundred dollars"). Never a logo.
 
+- **Something moves between the cuts.** A figure walks, lunges or backs away (`"to"`); a prop travels (`"move"`). A shot where only a face changes is a still picture.
 - **Faces fill the frame in skits**: `"frame": "medium"` or `"close"`. Wide shots are for places and crowds.
 - **One light per mood**: night, a server room, a deal behind closed doors or a phone at 2 a.m. get a `"light"`: one source, darkness around it.
 - **Scale is a joke**: a giant building over a tiny person, a pile of cash taller than the buyer.
@@ -165,6 +167,7 @@ Measured on the reference: the voice never stops, and everything else stays out 
 
 - **No dead air.** Cut every pause between sentences to under a quarter of a second. In 15 minutes the reference has only ten gaps longer than that.
 - **Breathe only at chapter cards**: about one second of near-silence under each card, and before a punchline.
+- **Music changes with the chapter.** The house music has three beds (`steady`, `calm`, `uneasy`) that take turns under the chapter cards; `"audio": { "beds": [...] }` sets the order.
 - **Music is a quiet bed**, about 18–20 dB under the voice, a little louder in the climax chapters and rising under the last 15 seconds.
 - **Sound effects are rare and soft.** Use them on stamps, slams and card hits, not on every cut.
 - Loudness of the final mix: −14 LUFS, peaks under −1 dBTP.
@@ -211,4 +214,4 @@ A Short is its own small video, not the loudest twenty seconds of the long one.
 - **Three per episode, three different lessons**: one surprising consequence, one common belief corrected, one comparison or limit. Each may point to the long video only after it has delivered its own answer.
 - **Starts on the event**, like the long video: no greeting, no "in this video". If the chosen moment leans on something said earlier, write a new first line for it.
 - The packager picks the three moments from the finished episode and lists them in `package.md` with their line ids, a new opening line where needed and the on-screen question.
-- Status: the engine draws 16:9 only. The vertical (9:16) cut is built after the first long episode is published; until then the list in `package.md` is the plan.
+- The engine builds them: `node studio/tools/build.mjs <episode> --short L012-L020 --title "..."` makes a vertical cut with the question on top, the picture in the middle and large subtitles below. Then mix, lint, look at the frames and render that folder like any episode.

@@ -57,19 +57,29 @@ export const EFFECTS = {
 /* ---------- music: one loop in two layers ----------
    `base` is pad, bass and a plucked figure. `drive` is a pulse for the climax; it sits on the same bars, so it can fade in and out anywhere. */
 
-const BPM = 92, BEAT = 60 / BPM, BARS = 16, LOOP = BARS * 4 * BEAT;
+const BARS = 16;
 const hz = (m) => 440 * Math.pow(2, (m - 69) / 12);
-// Two bars per chord, in A minor: root (MIDI), pad notes, pluck notes.
-const CHORDS = [
-  { root: 45, pad: [57, 60, 64, 71], arp: [69, 72, 76, 79] }, // Am(add9)
-  { root: 45, pad: [57, 60, 64, 67], arp: [69, 72, 76, 79] }, // Am7
-  { root: 41, pad: [57, 60, 65, 69], arp: [69, 72, 77, 81] }, // F
-  { root: 41, pad: [57, 60, 64, 65], arp: [69, 72, 76, 77] }, // Fmaj7
-  { root: 48, pad: [55, 60, 64, 67], arp: [67, 72, 76, 79] }, // C
-  { root: 48, pad: [55, 60, 64, 69], arp: [67, 72, 76, 81] }, // C6
-  { root: 43, pad: [55, 59, 62, 67], arp: [67, 71, 74, 79] }, // G
-  { root: 40, pad: [55, 59, 64, 67], arp: [67, 71, 76, 79] }, // Em
-];
+// Three beds so a long episode does not sit on one loop. Two bars per chord: root (MIDI), pad notes, pluck notes.
+export const BEDS = {
+  // A minor, even pulse: the default explaining voice
+  steady: { bpm: 92, chords: [
+    { root: 45, pad: [57, 60, 64, 71], arp: [69, 72, 76, 79] }, { root: 45, pad: [57, 60, 64, 67], arp: [69, 72, 76, 79] },
+    { root: 41, pad: [57, 60, 65, 69], arp: [69, 72, 77, 81] }, { root: 41, pad: [57, 60, 64, 65], arp: [69, 72, 76, 77] },
+    { root: 48, pad: [55, 60, 64, 67], arp: [67, 72, 76, 79] }, { root: 48, pad: [55, 60, 64, 69], arp: [67, 72, 76, 81] },
+    { root: 43, pad: [55, 59, 62, 67], arp: [67, 71, 74, 79] }, { root: 40, pad: [55, 59, 64, 67], arp: [67, 71, 76, 79] } ] },
+  // C major, slower: history, set-up, the calm before
+  calm: { bpm: 84, chords: [
+    { root: 48, pad: [55, 60, 64, 67], arp: [72, 76, 79, 84] }, { root: 45, pad: [57, 60, 64, 67], arp: [72, 76, 79, 81] },
+    { root: 41, pad: [57, 60, 65, 67], arp: [72, 77, 81, 84] }, { root: 43, pad: [55, 59, 62, 67], arp: [71, 74, 79, 83] },
+    { root: 48, pad: [55, 60, 64, 71], arp: [72, 76, 79, 83] }, { root: 45, pad: [57, 60, 64, 69], arp: [72, 76, 81, 84] },
+    { root: 38, pad: [57, 62, 65, 69], arp: [74, 77, 81, 86] }, { root: 43, pad: [55, 59, 62, 65], arp: [71, 74, 77, 79] } ] },
+  // D minor, quicker: trouble, the investigation, the bill arriving
+  uneasy: { bpm: 100, chords: [
+    { root: 38, pad: [57, 62, 65, 69], arp: [69, 74, 77, 81] }, { root: 38, pad: [57, 62, 65, 72], arp: [69, 74, 77, 84] },
+    { root: 46, pad: [58, 62, 65, 70], arp: [70, 74, 77, 82] }, { root: 46, pad: [58, 62, 65, 69], arp: [70, 74, 77, 81] },
+    { root: 43, pad: [55, 58, 62, 67], arp: [70, 74, 79, 82] }, { root: 43, pad: [55, 58, 62, 65], arp: [70, 74, 77, 79] },
+    { root: 45, pad: [57, 61, 64, 69], arp: [69, 73, 76, 81] }, { root: 45, pad: [57, 61, 64, 67], arp: [69, 73, 76, 79] } ] },
+};
 
 function wrapAdd(ch, at, note, gain) { const n = ch.length; let i = Math.round(at * SR) % n; if (i < 0) i += n; for (let k = 0; k < note.length; k++) { ch[i] += note[k] * gain; if (++i === n) i = 0; } }
 function padNote(f, dur) { const n = Math.round((dur + 1.6) * SR), x = new Float32Array(n), att = 0.9 * SR, rel = 1.6 * SR, hold = dur * SR; let p1 = 0, p2 = 0;
@@ -86,7 +96,8 @@ function pluck(f, dur, bright, rand) { // Karplus-Strong string
 function lowpassLoop(ch, f, passes = 2) { const a = 1 - Math.exp((-TAU * f) / SR); for (let p = 0; p < passes; p++) { let y = 0; for (let r = 0; r < 2; r++) for (let i = 0; i < ch.length; i++) { y += a * (ch[i] - y); if (r) ch[i] = y; } } }
 function highpassLoop(ch, f) { const a = 1 - Math.exp((-TAU * f) / SR); let y = 0; for (let r = 0; r < 2; r++) for (let i = 0; i < ch.length; i++) { y += a * (ch[i] - y); if (r) ch[i] -= y; } }
 
-export function music() {
+export function music(name = "steady") {
+  const bed = BEDS[name] || BEDS.steady, BPM = bed.bpm, BEAT = 60 / BPM, LOOP = BARS * 4 * BEAT, CHORDS = bed.chords;
   const n = Math.round(LOOP * SR), base = [new Float32Array(n), new Float32Array(n)], drive = [new Float32Array(n), new Float32Array(n)], r = rng(92);
   const pat = [0, 2, 1, 2, 3, 2, 1, 2];
   CHORDS.forEach((c, ci) => {
@@ -118,6 +129,6 @@ export const SOUNDS_DIR = path.resolve(path.dirname(fileURLToPath(import.meta.ur
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   fs.mkdirSync(SOUNDS_DIR, { recursive: true });
   for (const [name, f] of Object.entries(EFFECTS)) writeWav(path.join(SOUNDS_DIR, name + ".wav"), { rate: SR, ch: [f().x] });
-  const m = music(); writeWav(path.join(SOUNDS_DIR, "house_bed.wav"), { rate: SR, ch: m.base }); writeWav(path.join(SOUNDS_DIR, "house_bed_drive.wav"), { rate: SR, ch: m.drive });
-  console.log(`wrote ${Object.keys(EFFECTS).length} effects and the house bed (${m.loop.toFixed(1)}s loop, ${m.bpm} bpm) to ${path.relative(process.cwd(), SOUNDS_DIR)}`);
+  for (const name of Object.keys(BEDS)) { const m = music(name); writeWav(path.join(SOUNDS_DIR, `bed_${name}.wav`), { rate: SR, ch: m.base }); writeWav(path.join(SOUNDS_DIR, `bed_${name}_drive.wav`), { rate: SR, ch: m.drive }); }
+  console.log(`wrote ${Object.keys(EFFECTS).length} effects and ${Object.keys(BEDS).length} music beds (${Object.keys(BEDS).join(", ")}) to ${path.relative(process.cwd(), SOUNDS_DIR)}`);
 }

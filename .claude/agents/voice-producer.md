@@ -1,6 +1,7 @@
 ---
 name: voice-producer
 description: Produces narration and character voice clips for an episode. Use after the script is approved.
+model: sonnet
 tools: Read, Write, Edit, Bash, Glob, Grep
 ---
 

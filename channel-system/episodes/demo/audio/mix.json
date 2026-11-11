@@ -27,6 +27,9 @@
   "music": {
     "source": "house bed (made in code)",
     "files": [],
+    "beds": [
+      "steady"
+    ],
     "climax_chapters": [],
     "db_under_voice": 19,
     "uncredited": []

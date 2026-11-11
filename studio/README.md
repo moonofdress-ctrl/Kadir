@@ -15,6 +15,7 @@ Turns a storyboard and a set of voice clips into a HyperFrames composition. Ever
 | `tools/retention-lint.mjs` | Checks script, storyboard and sound against `channel-system/FORMAT_BOOK.md`. |
 | `tools/voice.mjs` | Scratch voice track: one Kokoro clip per script line. |
 | `tools/mix.mjs` | The sound mix: voice levelling, music bed, effects, −14 LUFS. `tools/sounds.mjs` makes the house effects and bed in code; `tools/cues.mjs` decides where effects fall; `tools/audio-lib.mjs` reads, measures and limits audio. |
+| `tools/screen-text.mjs` | Lists every word and number the picture shows, for the fact-checker's second pass. |
 | `tools/stills.mjs` | Saves pictures: contact sheets of frames, the thumbnail, the cast's model sheets. |
 | `tools/preview.mjs`, `sheet.html`, `cast.html`, `thumb.html` | Look at frames in a browser without rendering. |
 | `gallery/` | One silent reel that uses every component. Copy from its `storyboard.json`. |
@@ -47,6 +48,22 @@ node studio/tools/voice.mjs channel-system/episodes/<slug>
 node studio/tools/mix.mjs channel-system/episodes/<slug> --tighten
 ```
 Then build again: the video plays `audio/mix.wav` when it matches the current timing, and the bare voice clips otherwise. WAV needs nothing installed; MP3 and other formats are decoded with FFmpeg.
+
+Every word and number on screen, for the second fact-check:
+```bash
+node studio/tools/screen-text.mjs channel-system/episodes/<slug>
+```
+
+A vertical Short (1080×1920) from a range of lines. It becomes its own small episode folder, which is then mixed, linted, looked at and rendered like any other:
+```bash
+node studio/tools/build.mjs channel-system/episodes/<slug> --short L012-L020 --title "WHO PAYS THE FEE?" --name short1
+```
+```bash
+node studio/tools/mix.mjs channel-system/episodes/<slug>/shorts/short1
+```
+```bash
+node studio/tools/build.mjs channel-system/episodes/<slug>/shorts/short1
+```
 
 The thumbnail, from the first shot or from an illustration:
 ```bash
@@ -84,6 +101,9 @@ cd studio && npm run check && npm run render
 - **When things happen.** A shot starts on its `cue` line; add `"word": n` to start on the nth word of that line (counting from 0) or `"at": seconds` to shift it. The same three keys work on overlays, actors, `acts`, panels and prop parts. Without a cue, `at` counts from the start of the shot.
 - **Shots are hard cuts** and last until the next shot starts.
 - **Cameras**: `push_in`, `pull_out`, `pan_left`, `pan_right`, `tilt_up`, `tilt_down`, `still`, `shake`.
+- **Movement**: an act with `"to": [x, y]` walks the figure there (`"dur"` seconds); a prop with `"move": { "to": [x, y], "cue", "word", "dur" }` travels. Use them so something happens between cuts: the parcel lunges at the banknote, the crates ride the belt, the buyer steps back.
+- **Subtitles** are on by default and rest during text cards; `"subtitles": false` at the top of the storyboard turns them off.
+- **Split by chapter**: `storyboard.json` holds the header and every file in `storyboard/` (`ch1.json`, `ch2.json`...) adds its `"shots"`, in file-name order. Shot ids must be unique across files.
 - **Shot size**: `"frame": "medium"` or `"close"` moves in on the figures; `"focus": [x, y]` aims it somewhere else.
 - **Light**: `"light": { "x": 960, "y": 430, "r": 900, "color": "#ffd9a0", "dark": 0.6 }`: one source, darkness around it (screen position).
 - **Living things**: an actor with `"thing": "box"` (or `chip`, `tower`, `dome`, `bank`, `factory`, `server`, `cloud`, `coin`, `bag`, `house`, `barrel`, `note`) and a `"label"`. It takes `face`, `pose`, `prop`, `speaks` and `acts` like a person.

@@ -99,4 +99,24 @@ svg text { font-family: var(--kin); }
 .panel { position: absolute; top: 0; bottom: 0; overflow: hidden; border-right: 10px solid var(--ink); background: var(--ink); }
 .panel:last-child { border-right: 0; }
 .panel .plabel { position: absolute; left: 0; right: 0; bottom: 70px; text-align: center; font-family: var(--kin); font-size: 84px; color: var(--paper); -webkit-text-stroke: 10px var(--ink); paint-order: stroke fill; }
-.panel .pstamp { position: absolute; left: 50%; top: 120px; transform: translateX(-50%) rotate(-9deg); padding: 6px 26px 0; border: 10px solid var(--red); color: var(--red); font-family: var(--kin); font-size: 110px; line-height: 1.1; background: rgba(246, 241, 228, .96); white-space: nowrap; }
+.panel .pstamp { position: absolute; left: 50%; top: 120px; transform: translateX(-50%) rotate(-9deg); padding: 6px 26px 0; border: 10px solid var(--red); color: var(--red); font-family: var(--kin); font-size: 110px; line-height: 1.1; background: #f6f1e4; white-space: nowrap; }
+
+/* Subtitles (on by default). The screen furniture moves up to make room. */
+.subs { position: absolute; left: 0; right: 0; bottom: 46px; height: 0; pointer-events: none; z-index: 6; }
+.sub { position: absolute; left: 0; right: 0; bottom: 0; text-align: center; }
+.sub span { display: inline-block; max-width: 1500px; padding: 6px 24px 9px; background: rgba(15, 16, 32, .88); color: #fff; font-family: var(--ui); font-weight: 800; font-size: 46px; line-height: 1.15; border-radius: 8px; }
+.sub.who span { color: var(--hl); }
+.subs-on .hud { bottom: 92px; }
+.subs-on .panel .plabel { bottom: 150px; }
+
+/* Vertical build for Shorts (1080x1920): the question, a square window of the stage, subtitles. */
+#root.vertical { width: 1080px; height: 1920px; background: var(--ink); }
+.vtitle { position: absolute; left: 60px; right: 60px; top: 70px; height: 300px; display: flex; align-items: center; justify-content: center; text-align: center; font-family: var(--kin); font-size: 84px; line-height: 1.06; color: var(--paper); text-transform: uppercase; }
+.vstage { position: absolute; left: 0; top: 400px; width: 1080px; height: 1080px; overflow: hidden; }
+.vertical .subs { bottom: 250px; }
+.vertical .sub span { font-size: 66px; max-width: 980px; }
+.vertical.subs-on .hud { bottom: 0; }
+.vertical.subs-on .panel .plabel { bottom: 24px; font-size: 64px; }
+.vertical .card { padding: 0 60px; } .vertical .card .words { font-size: 96px; }
+.vertical .counter { font-size: 128px; } .vertical .slam { font-size: 140px; }
+.vertical .panel { border-right: 0; border-bottom: 10px solid var(--ink); }

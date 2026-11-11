@@ -1,0 +1,256 @@
+{
+  "episode": "short1",
+  "demo": true,
+  "vertical": true,
+  "vtitle": "Where does your $100 go?",
+  "title": "Engine demo (code-drawn)",
+  "viewer": "BENNY",
+  "shots": [
+    {
+      "id": "s01",
+      "cue": "L001",
+      "set": "suburb",
+      "camera": "push_in",
+      "actors": [
+        {
+          "who": "BENNY",
+          "x": 520,
+          "y": 940,
+          "prop": "wallet",
+          "face": "happy",
+          "enter": "none",
+          "acts": [
+            {
+              "cue": "L001",
+              "word": 4,
+              "pose": "offer"
+            }
+          ]
+        },
+        {
+          "thing": "note",
+          "label": "$100",
+          "x": 1180,
+          "y": 930,
+          "face": "happy",
+          "pose": "wave",
+          "cue": "L001",
+          "word": 4,
+          "acts": [
+            {
+              "cue": "L001",
+              "word": 6,
+              "to": [
+                1560,
+                930
+              ],
+              "dur": 0.9
+            }
+          ]
+        }
+      ],
+      "props": [],
+      "overlays": [
+        {
+          "type": "counter",
+          "from": 0,
+          "to": 100,
+          "prefix": "$",
+          "dur": 0.8,
+          "pos": "tr",
+          "cap": "YOUR ORDER",
+          "cue": "L001",
+          "word": 4
+        }
+      ]
+    },
+    {
+      "id": "s02",
+      "cue": "L001",
+      "word": 7,
+      "set": "street",
+      "opts": {
+        "signs": [
+          "SMALL SELLER",
+          "CAFE",
+          "BAKERY"
+        ]
+      },
+      "camera": "pan_left",
+      "actors": [
+        {
+          "who": "SELLER",
+          "x": 700,
+          "y": 900,
+          "face": "happy",
+          "pose": "wave",
+          "enter": "none"
+        }
+      ],
+      "props": [
+        {
+          "type": "stall",
+          "x": 700,
+          "y": 985,
+          "t": "HANDMADE",
+          "layer": "front"
+        },
+        {
+          "type": "crates",
+          "x": 1380,
+          "y": 905,
+          "n": 3,
+          "w": 170,
+          "t": "ORDER",
+          "move": {
+            "to": [
+              1100,
+              905
+            ],
+            "cue": "L001",
+            "word": 9,
+            "dur": 1.2
+          }
+        },
+        {
+          "type": "piggy",
+          "x": 1700,
+          "y": 905,
+          "k": 0.34,
+          "flip": true
+        }
+      ]
+    },
+    {
+      "id": "s03",
+      "cue": "L001",
+      "word": 12,
+      "set": "warehouse",
+      "camera": "push_in",
+      "frame": "medium",
+      "grade": "red",
+      "actors": [
+        {
+          "thing": "note",
+          "label": "$100",
+          "x": 640,
+          "y": 920,
+          "face": "panic",
+          "pose": "panic",
+          "enter": "none",
+          "acts": [
+            {
+              "cue": "L001",
+              "word": 13,
+              "at": 0.3,
+              "to": [
+                520,
+                930
+              ],
+              "dur": 0.3
+            },
+            {
+              "cue": "L001",
+              "word": 16,
+              "face": "crying"
+            }
+          ]
+        },
+        {
+          "thing": "box",
+          "label": "MARKETPLACE",
+          "x": 1240,
+          "y": 930,
+          "face": "greedy",
+          "prop": "cash",
+          "pose": "grab",
+          "enter": "slide_right",
+          "acts": [
+            {
+              "cue": "L001",
+              "word": 13,
+              "to": [
+                1040,
+                930
+              ],
+              "dur": 0.45
+            },
+            {
+              "cue": "L001",
+              "word": 16,
+              "to": [
+                1240,
+                930
+              ],
+              "dur": 0.6,
+              "face": "happy"
+            }
+          ]
+        }
+      ],
+      "overlays": [
+        {
+          "type": "counter",
+          "from": 0,
+          "to": 52,
+          "prefix": "-$",
+          "dur": 0.7,
+          "tone": "red",
+          "pos": "tr",
+          "cap": "NEVER REACHES THE SELLER",
+          "cue": "L001",
+          "word": 13,
+          "plate": true
+        }
+      ]
+    },
+    {
+      "id": "s04",
+      "type": "split",
+      "cue": "L002",
+      "panels": [
+        {
+          "set": "lawn",
+          "focus": 960,
+          "actors": [
+            {
+              "thing": "tower",
+              "label": "THE BRAND",
+              "x": 960,
+              "y": 930,
+              "scale": 1.05,
+              "face": "confused",
+              "pose": "shrug",
+              "enter": "none"
+            }
+          ],
+          "stamp": "NOT HERE",
+          "stampAt": 0.45
+        },
+        {
+          "set": "lawn",
+          "opts": {
+            "time": "dusk"
+          },
+          "focus": 960,
+          "cue": "L002",
+          "word": 3,
+          "actors": [
+            {
+              "thing": "factory",
+              "label": "THE FACTORY",
+              "x": 960,
+              "y": 930,
+              "face": "sad",
+              "pose": "shrug",
+              "enter": "none",
+              "scale": 1.2
+            }
+          ],
+          "stamp": "NOT HERE",
+          "stampAt": 0.45
+        }
+      ]
+    }
+  ]
+}

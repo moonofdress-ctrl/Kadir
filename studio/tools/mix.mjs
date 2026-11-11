@@ -12,14 +12,15 @@
    --tighten  First cut dead air inside the clips: silence at both ends, and pauses over 0.3 s down to 0.22 s.
               Originals are kept in audio/raw/. This changes clip lengths, so do it before the storyboard is timed.
 
-   Storyboard options: "audio": { "music": "house" | "none", "music_db": -19, "climax": [5, 6], "sfx": true }
+   Storyboard options: "audio": { "music": "house" | "none", "beds": ["steady", "calm", "uneasy"], "music_db": -19, "climax": [5, 6], "sfx": true }
+   The house music has three beds (steady, calm, uneasy); they take turns by chapter unless "beds" sets the order.
    WAV files need nothing installed; other formats are decoded with FFmpeg. */
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { load } from "./build.mjs";
 import { soundCues, climaxChapters, mixSignature, musicFiles, clipStats, musicStats } from "./cues.mjs";
-import { EFFECTS, music as houseMusic } from "./sounds.mjs";
+import { EFFECTS, BEDS, music as houseMusic } from "./sounds.mjs";
 import { RATE, db, lin, readWav, writeWav, loadAudio, mono, loudness, peakLoudness, truePeakDb, limit, compress, silences, speechFloor, addInto } from "./audio-lib.mjs";
 
 const TARGET = -14, CEILING_TP = -1, MUSIC_DB = -19, CARD_DIP = -10, CLIMAX_DB = 3, END_RISE_DB = 5;
@@ -120,7 +121,14 @@ function main() {
   let musicReport = { source: "none" }, underDb = null;
   if (useMusic) {
     let bed, drive = null;
-    if (house) { const m = houseMusic(), n = m.base[0].length; bed = [0, 1].map((c) => { const o = new Float32Array(N); for (let i = 0; i < N; i++) o[i] = m.base[c][i % n]; return o; }); drive = [0, 1].map((c) => { const o = new Float32Array(N); for (let i = 0; i < N; i++) o[i] = m.drive[c][i % n]; return o; }); }
+    if (house) { // one bed per chapter, in rotation, switched under the chapter card where the music is already down; "audio": { "beds": ["calm", "uneasy"] } sets the order
+      const order = (Array.isArray(cfg.beds) && cfg.beds.length ? cfg.beds : ["steady", "calm", "uneasy"]).filter((b) => BEDS[b]), cuts = res.chapters.map((c) => at(c.t + 0.5)).concat([N]), made = {};
+      bed = [new Float32Array(N), new Float32Array(N)]; drive = [new Float32Array(N), new Float32Array(N)]; let from = 0; const ref = {};
+      cuts.forEach((to, ci) => { const name = order[ci % order.length], m = made[name] || (made[name] = houseMusic(name)), n = m.base[0].length;
+        const lv = ref[name] || (ref[name] = loudness(m.base)), fix = lin((ref[order[0]] || lv) - lv); // every bed plays at the first one's loudness
+        for (let c = 0; c < 2; c++) for (let i = from; i < to; i++) { bed[c][i] = m.base[c][(i - from) % n] * fix; drive[c][i] = m.drive[c][(i - from) % n] * fix; }
+        from = to; });
+      musicReport.beds = cuts.map((_, ci) => order[ci % order.length]); }
     else bed = playlist(files.map((f) => { const a = loadAudio(f); return a.ch.length > 1 ? [a.ch[0], a.ch[1]] : [a.ch[0], a.ch[0]]; }), N);
     const wantDb = Number.isFinite(cfg.music_db) ? cfg.music_db : MUSIC_DB, g = lin(voiceLufs + wantDb - loudness(bed));
     const rise = Math.min(15, total * 0.2), climax = climaxChapters(story, res), chEnd = (i) => (i + 1 < res.chapters.length ? res.chapters[i + 1].t : total);
@@ -135,7 +143,7 @@ function main() {
       g0 = g1; d0 = d1;
     }
     underDb = -wantDb;
-    musicReport = house ? { source: "house bed (made in code)", files: [] } : { source: "files", files: files.map((f) => path.basename(f)) };
+    musicReport = house ? { source: "house bed (made in code)", files: [], beds: musicReport.beds } : { source: "files", files: files.map((f) => path.basename(f)) };
     musicReport.climax_chapters = climax;
   }
 

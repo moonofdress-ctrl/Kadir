@@ -1,6 +1,7 @@
 ---
 name: editor
 description: Builds and renders the episode with the studio engine. Use when storyboard and audio are ready.
+model: sonnet
 tools: Read, Write, Edit, Bash, Glob, Grep
 ---
 
