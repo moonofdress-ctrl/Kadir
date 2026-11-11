@@ -17,10 +17,10 @@ Target: ~9:30 at ~155 words per minute (ElevenLabs speed ~1.03).
 Source: Amazon FY2025 Form 10-K (advertising services, $68.6B).
 
 > Every time you spend one hundred dollars with a seller on Amazon... about fifty-two of those dollars never reach the seller.
-> Not the brand. Not the factory. Amazon.
-> And according to the U.S. government, you're paying for it too — even if you never shop on Amazon.
-> In 2025, one line in Amazon's annual report — advertising — brought in sixty-eight point six billion dollars. That's one hundred and eighty-eight million dollars... every single day.
-> So let's follow one hundred dollars. Dollar by dollar. Through every fee, every auction, and every return... and find out who actually gets your money.
+> And in 2026, the U.S. government accused Amazon of secretly overcharging the businesses that advertise there — by more than twenty billion dollars.
+> Amazon denies it. But according to the FTC, you're paying for it too — even if you never shop on Amazon.
+> In 2025, one line in Amazon's annual report — advertising — brought in sixty-eight point six billion dollars.
+> So let's follow one hundred dollars. Dollar by dollar... and find out who actually gets your money.
 
 **[Step 2 · Product & freight −$28]** On screen: "Illustrative model · typical apparel seller · per $100 of sales".
 Source: model built from Marketplace Pulse take-rate data and Amazon's 2026 fee schedule.

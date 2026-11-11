@@ -1,818 +1,810 @@
 1
-00:00:00,900 --> 00:00:05,314
+00:00:00,900 --> 00:00:05,575
 Every time you spend one hundred dollars
 with a seller on Amazon...
 
 2
-00:00:05,354 --> 00:00:09,036
+00:00:05,615 --> 00:00:09,516
 about fifty-two of those dollars never
 reach the seller.
 
 3
-00:00:09,076 --> 00:00:09,967
-Not the brand.
+00:00:09,556 --> 00:00:10,993
+And in 2026, the U.S.
 
 4
-00:00:10,007 --> 00:00:11,031
-Not the factory.
+00:00:11,033 --> 00:00:16,623
+government accused Amazon of secretly
+overcharging the businesses that advertise
 
 5
-00:00:11,071 --> 00:00:11,496
-Amazon.
+00:00:16,663 --> 00:00:19,719
+there — by more than twenty billion
+dollars.
 
 6
-00:00:11,536 --> 00:00:13,158
-And according to the U.S.
+00:00:19,759 --> 00:00:20,916
+Amazon denies it.
 
 7
-00:00:13,198 --> 00:00:17,944
-government, you're paying for it too —
-even if you never shop on Amazon.
+00:00:20,956 --> 00:00:24,434
+But according to the FTC, you're paying
+for it too
 
 8
-00:00:17,984 --> 00:00:21,733
+00:00:24,474 --> 00:00:26,897
+— even if you never shop on Amazon.
+
+9
+00:00:26,937 --> 00:00:30,908
 In 2025, one line in Amazon's annual
 report — advertising
 
-9
-00:00:21,773 --> 00:00:25,123
+10
+00:00:30,948 --> 00:00:34,497
 — brought in sixty-eight point six billion
 dollars.
 
-10
-00:00:25,163 --> 00:00:28,713
-That's one hundred and eighty-eight
-million dollars...
-
 11
-00:00:28,753 --> 00:00:29,843
-every single day.
-
-12
-00:00:29,883 --> 00:00:32,236
+00:00:34,537 --> 00:00:37,030
 So let's follow one hundred dollars.
 
+12
+00:00:37,070 --> 00:00:38,367
+Dollar by dollar...
+
 13
-00:00:32,276 --> 00:00:33,366
-Dollar by dollar.
-
-14
-00:00:33,406 --> 00:00:36,889
-Through every fee, every auction, and
-every return...
-
-15
-00:00:36,929 --> 00:00:39,681
+00:00:38,407 --> 00:00:41,323
 and find out who actually gets your money.
 
-16
-00:00:40,071 --> 00:00:42,688
+14
+00:00:41,713 --> 00:00:44,330
 Meet a typical clothing seller on Amazon.
 
-17
-00:00:42,728 --> 00:00:46,836
+15
+00:00:44,370 --> 00:00:48,478
 For every hundred dollars in sales, here's
 where the money goes.
 
-18
-00:00:46,876 --> 00:00:48,522
+16
+00:00:48,518 --> 00:00:50,164
 First, the product itself.
 
-19
-00:00:48,562 --> 00:00:51,633
+17
+00:00:50,204 --> 00:00:53,275
 Manufacturing, ocean freight, and import
 duties.
 
-20
-00:00:51,673 --> 00:00:55,327
+18
+00:00:53,315 --> 00:00:56,969
 Twenty-eight dollars — paid months before
 anything sells.
 
-21
-00:00:55,717 --> 00:00:58,501
+19
+00:00:57,359 --> 00:01:00,143
 The moment a customer clicks "Buy Now"...
 
-22
-00:00:58,541 --> 00:01:00,361
+20
+00:01:00,183 --> 00:01:02,003
 Amazon takes its first cut.
 
-23
-00:01:00,401 --> 00:01:03,461
+21
+00:01:02,043 --> 00:01:05,103
 A seventeen percent referral fee on
 clothing.
 
-24
-00:01:03,501 --> 00:01:04,701
+22
+00:01:05,143 --> 00:01:06,343
 Seventeen dollars.
 
-25
-00:01:05,091 --> 00:01:07,220
+23
+00:01:06,733 --> 00:01:08,862
 Next, Fulfillment by Amazon.
 
-26
-00:01:07,260 --> 00:01:10,164
+24
+00:01:08,902 --> 00:01:11,806
 Picking, packing, shipping, storage...
 
-27
-00:01:10,204 --> 00:01:12,875
+25
+00:01:11,846 --> 00:01:14,517
 plus a new surcharge added in 2026.
 
-28
-00:01:12,915 --> 00:01:14,502
+26
+00:01:14,557 --> 00:01:16,144
 About twenty dollars.
 
-29
-00:01:14,891 --> 00:01:17,066
+27
+00:01:16,534 --> 00:01:18,709
 Then, the line shoppers never see.
 
-30
-00:01:17,106 --> 00:01:17,848
+28
+00:01:18,749 --> 00:01:19,491
 Advertising.
 
-31
-00:01:17,888 --> 00:01:20,063
+29
+00:01:19,531 --> 00:01:21,706
 Just to show up where buyers look,
 
-32
-00:01:20,103 --> 00:01:24,558
+30
+00:01:21,746 --> 00:01:26,201
 a typical seller spends around fifteen
 dollars on sponsored listings.
 
-33
-00:01:24,948 --> 00:01:27,319
+31
+00:01:26,591 --> 00:01:28,962
 Returns and write-offs take another ten.
 
-34
-00:01:27,709 --> 00:01:28,659
+32
+00:01:29,351 --> 00:01:30,301
 The final split?
 
-35
-00:01:28,699 --> 00:01:33,672
+33
+00:01:30,341 --> 00:01:35,314
 The seller — who designed the product,
 paid the factory, and carried all the risk
 
-36
-00:01:33,712 --> 00:01:35,281
+34
+00:01:35,354 --> 00:01:36,923
 — keeps about ten dollars.
 
-37
-00:01:35,321 --> 00:01:39,428
+35
+00:01:36,963 --> 00:01:41,070
 Amazon — without owning a single thread —
 collects about fifty-two.
 
-38
-00:01:39,468 --> 00:01:42,089
+36
+00:01:41,110 --> 00:01:43,731
 More than five times what the seller
 keeps.
 
-39
-00:01:42,129 --> 00:01:44,750
+37
+00:01:43,771 --> 00:01:46,392
 But hold on to that fifteen-dollar ad
 line.
 
-40
-00:01:44,790 --> 00:01:47,040
+38
+00:01:46,432 --> 00:01:48,682
 That's where this story gets strange.
 
-41
-00:01:49,029 --> 00:01:52,614
+39
+00:01:50,672 --> 00:01:54,257
 How did an online bookstore become a toll
 collector?
 
-42
-00:01:52,654 --> 00:01:55,960
+40
+00:01:54,297 --> 00:01:57,603
 The answer is buried in Amazon's SEC Form
 ten-K,
 
-43
-00:01:56,000 --> 00:01:59,585
+41
+00:01:57,643 --> 00:02:01,228
 under a line called "advertising
 services." In 2025,
 
-44
-00:01:59,625 --> 00:02:03,141
+42
+00:02:01,268 --> 00:02:04,784
 it brought in sixty-eight point six
 billion dollars
 
-45
-00:02:03,181 --> 00:02:05,999
+43
+00:02:04,824 --> 00:02:07,642
 — up twenty-two percent in a single year.
 
-46
-00:02:06,039 --> 00:02:07,254
+44
+00:02:07,682 --> 00:02:08,897
 For perspective...
 
-47
-00:02:07,294 --> 00:02:12,900
+45
+00:02:08,937 --> 00:02:14,543
 that's more than half the combined revenue
 of every daily and weekly newspaper on
 
-48
-00:02:12,940 --> 00:02:13,319
+46
+00:02:14,583 --> 00:02:14,962
 Earth.
 
-49
-00:02:13,359 --> 00:02:17,362
+47
+00:02:15,002 --> 00:02:19,005
 Not all of it comes from sellers —
 streaming ads count too
 
-50
-00:02:17,402 --> 00:02:22,242
+48
+00:02:19,045 --> 00:02:23,885
 — but sponsored listings are widely
 estimated to be the biggest piece.
 
-51
-00:02:22,632 --> 00:02:23,881
+49
+00:02:24,275 --> 00:02:25,524
 Here's how it works.
 
-52
-00:02:23,921 --> 00:02:29,036
+50
+00:02:25,564 --> 00:02:30,679
 Depending on the survey, between half and
 two-thirds of American online shoppers
 
-53
-00:02:29,076 --> 00:02:32,387
+51
+00:02:30,719 --> 00:02:34,030
 now start their product searches directly
 on Amazon.
 
-54
-00:02:32,427 --> 00:02:35,093
+52
+00:02:34,070 --> 00:02:36,736
 And once the buyers are all in one room...
 
-55
-00:02:35,133 --> 00:02:38,251
+53
+00:02:36,776 --> 00:02:39,894
 whoever controls the shelf controls the
 business.
 
-56
-00:02:38,641 --> 00:02:41,279
+54
+00:02:40,283 --> 00:02:42,921
 So Amazon turned the shelf into an
 auction.
 
-57
-00:02:41,319 --> 00:02:45,015
+55
+00:02:42,961 --> 00:02:46,657
 Try it yourself: search for almost
 anything on your phone...
 
-58
-00:02:45,055 --> 00:02:49,124
+56
+00:02:46,697 --> 00:02:50,766
 and count the "Sponsored" results before
 the first one that isn't.
 
-59
-00:02:49,164 --> 00:02:53,172
+57
+00:02:50,806 --> 00:02:54,814
 Every slot is a seller bidding, per click,
 against other sellers.
 
-60
-00:02:53,561 --> 00:02:58,745
+58
+00:02:55,204 --> 00:03:00,388
 And according to a new lawsuit, even the
 auction may not be what it seems.
 
-61
-00:02:58,785 --> 00:03:02,840
+59
+00:03:00,428 --> 00:03:04,483
 In August 2026, the FTC and twenty-two
 states sued Amazon,
 
-62
-00:03:02,880 --> 00:03:08,487
+60
+00:03:04,523 --> 00:03:10,130
 alleging that since 2019 it secretly added
 a surcharge on top of auction prices.
 
-63
-00:03:08,527 --> 00:03:14,276
+61
+00:03:10,170 --> 00:03:15,919
 Documents unsealed in November allege prices
 up to fifty percent above the auction
 
-64
-00:03:14,316 --> 00:03:16,112
+62
+00:03:15,959 --> 00:03:17,755
 result on ordinary days...
 
-65
-00:03:16,152 --> 00:03:20,559
+63
+00:03:17,795 --> 00:03:22,202
 and up to two hundred and fifty percent on
 days like Prime Day.
 
-66
-00:03:20,599 --> 00:03:25,501
+64
+00:03:22,242 --> 00:03:27,144
 The FTC puts the total overcharge at more
 than twenty billion dollars.
 
-67
-00:03:25,541 --> 00:03:27,760
+65
+00:03:27,184 --> 00:03:29,403
 Amazon calls the suit misguided,
 
-68
-00:03:27,800 --> 00:03:32,278
+66
+00:03:29,443 --> 00:03:33,921
 and says it never charges more than an
 advertiser's maximum bid.
 
-69
-00:03:32,668 --> 00:03:36,644
+67
+00:03:34,311 --> 00:03:38,287
 For sellers, it's a prisoner's dilemma:
 bid away your margin...
 
-70
-00:03:36,684 --> 00:03:37,472
+68
+00:03:38,327 --> 00:03:39,115
 or disappear.
 
-71
-00:03:37,512 --> 00:03:40,723
+69
+00:03:39,155 --> 00:03:42,366
 So why don't they just charge less
 everywhere else?
 
-72
-00:03:40,763 --> 00:03:42,126
+70
+00:03:42,406 --> 00:03:43,769
 Because if they try...
 
-73
-00:03:42,166 --> 00:03:43,273
+71
+00:03:43,809 --> 00:03:44,916
 a bot is watching.
 
-74
-00:03:45,263 --> 00:03:50,214
+72
+00:03:46,906 --> 00:03:51,857
 In 2023, the Federal Trade Commission and
 a group of states sued Amazon for
 
-75
-00:03:50,254 --> 00:03:52,410
+73
+00:03:51,897 --> 00:03:54,053
 illegally maintaining a monopoly.
 
-76
-00:03:52,450 --> 00:03:57,467
+74
+00:03:54,093 --> 00:03:59,110
 The complaint describes what happens when
 a seller tries to undercut Amazon.
 
-77
-00:03:57,507 --> 00:04:01,260
+75
+00:03:59,150 --> 00:04:02,903
 Say you sell a dress for one hundred
 dollars on Amazon...
 
-78
-00:04:01,300 --> 00:04:05,852
+76
+00:04:02,943 --> 00:04:07,495
 and eighty-five on your own Shopify store,
 where your fees are lower.
 
-79
-00:04:06,243 --> 00:04:11,383
+77
+00:04:07,885 --> 00:04:13,025
 According to the FTC, Amazon's algorithms
 scan the internet for lower prices.
 
-80
-00:04:11,423 --> 00:04:14,679
+78
+00:04:13,065 --> 00:04:16,321
 If they find one, your offer can lose the
 Buy Box
 
-81
-00:04:14,719 --> 00:04:17,034
+79
+00:04:16,361 --> 00:04:18,676
 — that yellow "Add to Cart" button.
 
-82
-00:04:17,074 --> 00:04:20,128
+80
+00:04:18,716 --> 00:04:21,770
 Industry estimates — never confirmed by
 Amazon
 
-83
-00:04:20,168 --> 00:04:23,761
+81
+00:04:21,810 --> 00:04:25,403
 — say more than eighty percent of sales go
 through it.
 
-84
-00:04:23,801 --> 00:04:25,577
+82
+00:04:25,443 --> 00:04:27,219
 The complaint goes further.
 
-85
-00:04:25,617 --> 00:04:31,161
+83
+00:04:27,259 --> 00:04:32,803
 It says Amazon can bury discounting sellers so
 far down in search results that they
 
-86
-00:04:31,201 --> 00:04:36,207
+84
+00:04:32,843 --> 00:04:37,849
 become — quote — "effectively invisible."
 So sellers do the rational thing.
 
-87
-00:04:36,247 --> 00:04:41,252
+85
+00:04:37,889 --> 00:04:42,894
 In the FTC's words, they use their
 inflated Amazon prices as "a price floor
 
-88
-00:04:41,292 --> 00:04:42,530
+86
+00:04:42,934 --> 00:04:44,172
 everywhere else"...
 
-89
-00:04:42,570 --> 00:04:45,221
+87
+00:04:44,212 --> 00:04:46,863
 which means, if the government is right,
 
-90
-00:04:45,261 --> 00:04:48,181
+88
+00:04:46,903 --> 00:04:49,823
 you pay the Amazon tax even at other
 stores.
 
-91
-00:04:48,571 --> 00:04:53,943
+89
+00:04:50,213 --> 00:04:55,585
 Then there's Project Nessie — an algorithm
 the FTC says predicted when competitors
 
-92
-00:04:53,983 --> 00:04:56,517
+90
+00:04:55,625 --> 00:04:58,159
 would match Amazon's price increases...
 
-93
-00:04:56,557 --> 00:05:00,015
+91
+00:04:58,199 --> 00:05:01,657
 so Amazon could raise prices and watch
 rivals follow.
 
-94
-00:05:00,055 --> 00:05:05,163
+92
+00:05:01,697 --> 00:05:06,805
 The agency alleges it generated more than
 one billion dollars in extra profit.
 
-95
-00:05:05,203 --> 00:05:08,792
+93
+00:05:06,845 --> 00:05:10,434
 Amazon says the FTC "grossly
 mischaracterizes" the tool
 
-96
-00:05:08,832 --> 00:05:12,884
+94
+00:05:10,474 --> 00:05:14,526
 — and that it was scrapped because it
 didn't work as intended.
 
-97
-00:05:12,924 --> 00:05:17,636
+95
+00:05:14,566 --> 00:05:19,278
 More broadly, Amazon says the lawsuit is
 wrong on the facts and the law.
 
-98
-00:05:17,676 --> 00:05:20,672
+96
+00:05:19,318 --> 00:05:22,314
 But there's one cost we haven't counted
 yet...
 
-99
-00:05:20,712 --> 00:05:23,576
+97
+00:05:22,354 --> 00:05:25,218
 the one that arrives after the sale is
 over.
 
-100
-00:05:25,565 --> 00:05:28,341
+98
+00:05:27,208 --> 00:05:29,984
 Now for the cost that comes back in a box.
 
-101
-00:05:28,381 --> 00:05:31,292
+99
+00:05:30,024 --> 00:05:32,935
 According to the National Retail
 Federation,
 
-102
-00:05:31,332 --> 00:05:34,778
+100
+00:05:32,975 --> 00:05:36,421
 roughly one in five online purchases gets
 sent back.
 
-103
-00:05:34,818 --> 00:05:38,265
+101
+00:05:36,461 --> 00:05:39,908
 And in fashion, one kind of return has its
 own name.
 
-104
-00:05:38,305 --> 00:05:39,003
+102
+00:05:39,948 --> 00:05:40,646
 Wardrobing.
 
-105
-00:05:39,043 --> 00:05:41,081
+103
+00:05:40,686 --> 00:05:42,724
 Buy an evening dress on Friday.
 
-106
-00:05:41,121 --> 00:05:43,294
+104
+00:05:42,764 --> 00:05:44,937
 Wear it to a wedding on Saturday.
 
-107
-00:05:43,334 --> 00:05:47,250
+105
+00:05:44,977 --> 00:05:48,893
 Return it on Monday — "didn't fit." In one
 industry survey,
 
-108
-00:05:47,290 --> 00:05:50,536
+106
+00:05:48,933 --> 00:05:52,179
 six in ten retail executives said they'd
 seen it.
 
-109
-00:05:50,576 --> 00:05:52,950
+107
+00:05:52,219 --> 00:05:54,593
 For the shopper, the return is free.
 
-110
-00:05:52,990 --> 00:05:58,180
+108
+00:05:54,633 --> 00:05:59,823
 For the seller, here's what one worn, one-
 hundred-dollar dress actually costs.
 
-111
-00:05:58,571 --> 00:06:01,584
+109
+00:06:00,213 --> 00:06:03,226
 The customer gets their hundred dollars
 back.
 
-112
-00:06:01,624 --> 00:06:04,434
+110
+00:06:03,266 --> 00:06:06,076
 Amazon refunds most of its referral fee...
 
-113
-00:06:04,474 --> 00:06:07,012
+111
+00:06:06,116 --> 00:06:08,654
 but keeps a refund administration fee.
 
-114
-00:06:07,052 --> 00:06:09,048
+112
+00:06:08,694 --> 00:06:10,690
 Three dollars and forty cents.
 
-115
-00:06:09,438 --> 00:06:13,200
+113
+00:06:11,081 --> 00:06:14,843
 The fulfillment fee Amazon charged to ship
 the dress?
 
-116
-00:06:13,240 --> 00:06:14,133
+114
+00:06:14,883 --> 00:06:15,776
 Not refunded.
 
-117
-00:06:14,173 --> 00:06:15,567
+115
+00:06:15,816 --> 00:06:17,210
 About six dollars...
 
-118
-00:06:15,607 --> 00:06:15,926
+116
+00:06:17,250 --> 00:06:17,569
 gone.
 
-119
-00:06:16,316 --> 00:06:18,190
+117
+00:06:17,959 --> 00:06:19,833
 Then, a returns processing fee.
 
-120
-00:06:18,230 --> 00:06:19,796
+118
+00:06:19,873 --> 00:06:21,439
 Around three dollars more.
 
-121
-00:06:20,186 --> 00:06:25,304
+119
+00:06:21,829 --> 00:06:26,947
 And the dress itself comes back with makeup on
 the collar and perfume in the fabric.
 
-122
-00:06:25,344 --> 00:06:26,778
+120
+00:06:26,987 --> 00:06:28,421
 It can't be sold as new.
 
-123
-00:06:26,818 --> 00:06:28,988
+121
+00:06:28,461 --> 00:06:30,631
 Twenty-eight dollars of inventory...
 
-124
-00:06:29,028 --> 00:06:29,725
+122
+00:06:30,671 --> 00:06:31,368
 written off.
 
-125
-00:06:30,115 --> 00:06:33,629
+123
+00:06:31,757 --> 00:06:35,271
 Total: a loss of about forty dollars and
 forty cents
 
-126
-00:06:33,669 --> 00:06:35,953
+124
+00:06:35,311 --> 00:06:37,595
 — on a sale that no longer exists.
 
-127
-00:06:35,993 --> 00:06:39,781
+125
+00:06:37,635 --> 00:06:41,423
 At a ten percent margin, that's four full-
 price sales...
 
-128
-00:06:39,821 --> 00:06:42,242
+126
+00:06:41,463 --> 00:06:43,884
 just to pay for one wardrobed dress.
 
-129
-00:06:42,282 --> 00:06:46,821
+127
+00:06:43,924 --> 00:06:48,463
 And even the sellers who survive returns
 run into one more problem.
 
-130
-00:06:46,861 --> 00:06:47,163
+128
+00:06:48,503 --> 00:06:48,805
 Time.
 
-131
-00:06:49,153 --> 00:06:52,489
+129
+00:06:50,795 --> 00:06:54,131
 So far, that's fifty-two dollars in fees
 and ads...
 
-132
-00:06:52,529 --> 00:06:55,467
+130
+00:06:54,171 --> 00:06:57,109
 and forty more every time a dress comes
 back.
 
-133
-00:06:55,507 --> 00:06:57,916
+131
+00:06:57,149 --> 00:06:59,558
 But the last trap isn't a fee at all.
 
-134
-00:06:57,956 --> 00:07:00,299
+132
+00:06:59,598 --> 00:07:01,941
 Selling on Amazon starts with a bet.
 
-135
-00:07:00,339 --> 00:07:02,681
+133
+00:07:01,981 --> 00:07:04,323
 Sellers pay their factories up front
 
-136
-00:07:02,721 --> 00:07:07,182
+134
+00:07:04,363 --> 00:07:08,824
 — often two or three months before a
 single unit reaches a customer.
 
-137
-00:07:07,572 --> 00:07:11,869
+135
+00:07:09,215 --> 00:07:13,512
 Then, when the sale finally happens, the
 money still doesn't arrive.
 
-138
-00:07:11,909 --> 00:07:16,971
+136
+00:07:13,552 --> 00:07:18,614
 Under Amazon's current rules, seller funds
 generally become available seven days
 
-139
-00:07:17,011 --> 00:07:19,522
+137
+00:07:18,654 --> 00:07:21,165
 after the customer's confirmed delivery.
 
-140
-00:07:19,562 --> 00:07:24,496
+138
+00:07:21,205 --> 00:07:26,139
 Add settlement cycles on top, and many
 sellers wait two to four weeks to touch
 
-141
-00:07:24,536 --> 00:07:25,644
+139
+00:07:26,179 --> 00:07:27,287
 their own revenue.
 
-142
-00:07:26,034 --> 00:07:28,871
+140
+00:07:27,677 --> 00:07:30,514
 Meanwhile, the fees keep multiplying.
 
-143
-00:07:28,911 --> 00:07:35,323
+141
+00:07:30,554 --> 00:07:36,966
 Since 2024, there's a fee for how your boxes
 get spread across Amazon's warehouses.
 
-144
-00:07:35,363 --> 00:07:40,921
+142
+00:07:37,006 --> 00:07:42,564
 And in 2026, a three-and-a-half percent
 surcharge landed on top of every
 
-145
-00:07:40,961 --> 00:07:42,165
+143
+00:07:42,604 --> 00:07:43,808
 fulfillment fee.
 
-146
-00:07:42,555 --> 00:07:44,421
+144
+00:07:44,197 --> 00:07:46,063
 And then there's the corridor.
 
-147
-00:07:44,461 --> 00:07:48,997
+145
+00:07:46,103 --> 00:07:50,639
 Keep too much stock for too long, and you
 pay aged inventory surcharges.
 
-148
-00:07:49,037 --> 00:07:53,318
+146
+00:07:50,679 --> 00:07:54,960
 But let your stock fall below roughly
 twenty-eight days of supply...
 
-149
-00:07:53,358 --> 00:07:57,131
+147
+00:07:55,000 --> 00:07:58,773
 and you pay a low-inventory-level fee on
 every unit shipped.
 
-150
-00:07:57,171 --> 00:07:58,466
+148
+00:07:58,813 --> 00:08:00,108
 Too much costs money.
 
-151
-00:07:58,506 --> 00:07:59,927
+149
+00:08:00,148 --> 00:08:01,569
 Too little costs money.
 
-152
-00:07:59,967 --> 00:08:01,834
+150
+00:08:01,609 --> 00:08:03,476
 Amazon collects on both sides.
 
-153
-00:08:01,874 --> 00:08:02,151
+151
+00:08:03,516 --> 00:08:03,793
 So...
 
-154
-00:08:02,191 --> 00:08:03,486
+152
+00:08:03,833 --> 00:08:05,128
 why does anyone stay?
 
-155
-00:08:05,475 --> 00:08:09,576
+153
+00:08:07,118 --> 00:08:11,219
 On your own website, the payment processor
 takes about three dollars on a
 
-156
-00:08:09,616 --> 00:08:10,710
+154
+00:08:11,259 --> 00:08:12,353
 hundred-dollar sale.
 
-157
-00:08:10,750 --> 00:08:12,072
+155
+00:08:12,393 --> 00:08:13,715
 Sounds like a bargain...
 
-158
-00:08:12,112 --> 00:08:14,964
+156
+00:08:13,755 --> 00:08:16,607
 until you realize the customers don't come
 with it.
 
-159
-00:08:15,004 --> 00:08:19,048
+157
+00:08:16,647 --> 00:08:20,691
 You have to buy them — one click at a time
 — on Google, Meta, or TikTok.
 
-160
-00:08:19,088 --> 00:08:20,296
+158
+00:08:20,731 --> 00:08:21,939
 A different auction...
 
-161
-00:08:20,336 --> 00:08:21,998
+159
+00:08:21,979 --> 00:08:23,641
 with the same tollbooth logic.
 
-162
-00:08:22,038 --> 00:08:24,210
+160
+00:08:23,681 --> 00:08:25,853
 And Amazon does deliver something real.
 
-163
-00:08:24,250 --> 00:08:27,273
+161
+00:08:25,893 --> 00:08:28,916
 Over two hundred million Prime members,
 fast delivery,
 
-164
-00:08:27,313 --> 00:08:30,223
+162
+00:08:28,956 --> 00:08:31,866
 and a checkout button people trust without
 thinking.
 
-165
-00:08:30,263 --> 00:08:32,208
+163
+00:08:31,906 --> 00:08:33,851
 That's what sellers are paying for.
 
-166
-00:08:32,599 --> 00:08:34,587
+164
+00:08:34,241 --> 00:08:36,229
 What's changed is the price.
 
-167
-00:08:34,627 --> 00:08:39,078
+165
+00:08:36,269 --> 00:08:40,720
 In 2016, Amazon's cut was about a third of
 a seller's revenue.
 
-168
-00:08:39,118 --> 00:08:41,324
+166
+00:08:40,760 --> 00:08:42,966
 By 2022, it was more than half.
 
-169
-00:08:41,364 --> 00:08:47,119
+167
+00:08:43,006 --> 00:08:48,761
 And in 2027, a federal judge in Seattle
 will start deciding whether parts of how
 
-170
-00:08:47,159 --> 00:08:49,292
+168
+00:08:48,801 --> 00:08:50,934
 Amazon got here broke the law.
 
-171
-00:08:49,332 --> 00:08:52,914
+169
+00:08:50,974 --> 00:08:54,556
 If the FTC wins, the Buy Box rules could
 change...
 
-172
-00:08:52,954 --> 00:08:55,956
+170
+00:08:54,596 --> 00:08:57,598
 and with them, prices across the internet.
 
-173
-00:08:55,996 --> 00:08:58,564
+171
+00:08:57,638 --> 00:09:00,206
 If Amazon wins, the tollbooth stays.
 
-174
-00:08:58,954 --> 00:08:59,215
+172
+00:09:00,597 --> 00:09:00,858
 So...
 
-175
-00:08:59,255 --> 00:09:00,718
+173
+00:09:00,898 --> 00:09:02,361
 back to where we started.
 
-176
-00:09:00,758 --> 00:09:04,207
+174
+00:09:02,401 --> 00:09:05,850
 When you spend one hundred dollars with a
 seller on Amazon
 
-177
-00:09:04,247 --> 00:09:06,071
+175
+00:09:05,890 --> 00:09:07,714
 — who actually gets your money?
 
-178
-00:09:06,111 --> 00:09:09,740
+176
+00:09:07,754 --> 00:09:11,383
 About ten dollars goes to the business
 that made the product.
 
-179
-00:09:09,780 --> 00:09:13,108
+177
+00:09:11,423 --> 00:09:14,751
 About fifty-two goes to the company that
 owns the shelf.
 
-180
-00:09:13,148 --> 00:09:17,438
+178
+00:09:14,791 --> 00:09:19,081
 In modern commerce, the company that makes
 the product rarely gets rich.
 
-181
-00:09:17,478 --> 00:09:22,189
+179
+00:09:19,121 --> 00:09:23,832
 The fortune belongs to whoever controls
 the last three seconds before checkout.

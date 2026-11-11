@@ -1,7 +1,11 @@
 # YouTube Package
 
 ## Title
-**Main:** Amazon's $69 Billion Hidden Tax: The $100 Unit Economics Breakdown
+**Main:** Why Amazon Keeps $52 of Every $100 You Spend
+
+News-led alternative (use while the FTC case is in the headlines): Why Amazon Is Being Sued for $20 Billion
+
+Previous working title: Amazon's $69 Billion Hidden Tax: The $100 Unit Economics Breakdown
 
 A/B alternatives (thumbnail and title tests):
 - Amazon Keeps $52 of Every $100. Here's Where It Goes.

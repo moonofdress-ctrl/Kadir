@@ -1,0 +1,40 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../engine/paper/vendor/paper.css">
+<style>
+html,body{width:1280px;height:720px;overflow:hidden;background:#b98a4a}
+.bg{position:absolute;inset:0;background:url("../../engine/paper/assets/tex/Cardboard002.jpg") center/900px}
+.bg::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,transparent 50%,rgba(40,20,5,.55) 100%)}
+.top{position:absolute;left:44px;top:30px;font-family:"Anton";font-size:132px;line-height:1;color:#faf7ef;background:#c8102e;padding:6px 26px 2px;transform:rotate(-2deg);box-shadow:0 10px 20px rgba(0,0,0,.4)}
+.sub2{position:absolute;left:54px;top:206px;font-family:"Anton";font-size:76px;color:#1b1a17;background:#ffe74c;padding:2px 20px;transform:rotate(-1deg)}
+.bill{position:absolute;right:40px;top:300px;width:620px;height:265px;transform:rotate(5deg);box-shadow:0 14px 26px rgba(0,0,0,.45)}
+.bill .t{position:absolute;inset:0 0 0 48%;background:#c8102e;mix-blend-mode:multiply;opacity:.6}
+.cut{position:absolute;right:345px;top:270px;width:0;height:330px;border-left:8px dashed #1b1a17;transform:rotate(5deg)}
+.lab{position:absolute;font-family:"Anton";line-height:1}
+.you{left:640px;top:590px;font-size:74px;color:#2f6b4f;background:#faf7ef;padding:2px 14px;transform:rotate(-3deg)}
+.amz{right:36px;top:590px;font-size:96px;color:#faf7ef;background:#c8102e;padding:2px 18px;transform:rotate(3deg)}
+.guy{position:absolute;left:30px;top:300px;width:520px;height:410px}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="bill-art" viewBox="0 0 960 410"><rect width="960" height="410" fill="#cfd8bf"/><rect x="16" y="16" width="928" height="378" fill="none" stroke="#5f7356" stroke-width="5"/>
+<ellipse cx="480" cy="205" rx="170" ry="120" fill="#e3e8d6" stroke="#5f7356" stroke-width="4"/>
+<text x="480" y="195" text-anchor="middle" font-family="Source Serif" font-weight="700" font-size="54" fill="#3f5238">ONE</text>
+<text x="480" y="250" text-anchor="middle" font-family="Source Serif" font-weight="700" font-size="44" fill="#3f5238">HUNDRED</text>
+<text x="70" y="110" font-family="Anton" font-size="92" fill="#3f5238">100</text><text x="770" y="370" font-family="Anton" font-size="92" fill="#3f5238">100</text></symbol></defs></svg>
+<div class="bg"></div>
+<div class="top">AMAZON TOOK $52</div><div class="sub2">OF YOUR $100</div>
+<svg class="bill" viewBox="0 0 960 410"><use href="#bill-art"/></svg><div class="bill" style="background:none;box-shadow:none"><div class="t"></div></div><div class="cut"></div>
+<!-- original mascot: a cardboard-box seller, shocked -->
+<svg class="guy" viewBox="0 0 560 440">
+ <ellipse cx="280" cy="425" rx="190" ry="16" fill="rgba(0,0,0,.3)"/>
+ <path d="M150 210 L410 210 L430 440 L130 440 Z" fill="#c79a5b" stroke="#1b1a17" stroke-width="8" stroke-linejoin="round"/>
+ <path d="M150 210 L110 160 L250 150 L280 210 Z M410 210 L450 160 L310 150 L280 210 Z" fill="#dab77f" stroke="#1b1a17" stroke-width="8" stroke-linejoin="round"/>
+ <rect x="255" y="210" width="50" height="230" fill="#e9d9b5" stroke="#1b1a17" stroke-width="5"/>
+ <circle cx="215" cy="300" r="46" fill="#fff" stroke="#1b1a17" stroke-width="8"/><circle cx="345" cy="300" r="46" fill="#fff" stroke="#1b1a17" stroke-width="8"/>
+ <circle cx="222" cy="308" r="16" fill="#1b1a17"/><circle cx="338" cy="308" r="16" fill="#1b1a17"/>
+ <path d="M160 238 L250 256 M400 238 L310 256" stroke="#1b1a17" stroke-width="10" stroke-linecap="round" transform="rotate(0)"/>
+ <ellipse cx="280" cy="392" rx="38" ry="30" fill="#5a1e14" stroke="#1b1a17" stroke-width="8"/>
+ <path d="M132 330 Q70 300 96 236" fill="none" stroke="#1b1a17" stroke-width="14" stroke-linecap="round"/><circle cx="98" cy="226" r="22" fill="#c79a5b" stroke="#1b1a17" stroke-width="8"/>
+ <path d="M428 330 Q490 300 464 236" fill="none" stroke="#1b1a17" stroke-width="14" stroke-linecap="round"/><circle cx="462" cy="226" r="22" fill="#c79a5b" stroke="#1b1a17" stroke-width="8"/>
+ <path d="M452 286 q10 26 0 36 q-10 -10 0 -36Z" fill="#7fd3ff" stroke="#1b1a17" stroke-width="4"/>
+</svg>
+<div class="lab you">SELLER: $10</div><div class="lab amz">GONE</div>
+</body></html>

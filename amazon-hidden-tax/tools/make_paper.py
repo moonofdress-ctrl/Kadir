@@ -31,8 +31,8 @@ SFX = {"cut1": "snip", "cut2": "snip", "sale": "printer", "line": "printer", "he
 # kinetic lines: (big, small, sentence index, fraction inside that sentence)
 KINETIC = {
     (1, 1): [("$100", "SPENT WITH A SELLER ON AMAZON", 0, 0), ("$52", "NEVER REACHES THE SELLER", 0, .55),
-             ("YOU PAY TOO", "EVEN IF YOU NEVER SHOP THERE · FTC ALLEGATION", 4, 0), ("$68.6 BILLION", "AMAZON AD REVENUE · 2025", 5, .3),
-             ("$188M", "EVERY SINGLE DAY", 6, 0), ("FOLLOW $100", "WHO ACTUALLY GETS YOUR MONEY?", 7, 0)],
+             ("$20 BILLION", "FTC: SECRET AD SURCHARGE \u00b7 ALLEGED", 1, .35), ("YOU PAY TOO", "EVEN IF YOU NEVER SHOP THERE \u00b7 FTC ALLEGATION", 3, 0),
+             ("$68.6 BILLION", "AMAZON AD REVENUE \u00b7 2025", 4, .3), ("FOLLOW $100", "WHO ACTUALLY GETS YOUR MONEY?", 5, 0)],
     (2, 1): [("HOW?", "FROM ONLINE BOOKSTORE TO TOLL COLLECTOR", 0, 0), ("FORM 10-K", "LINE ITEM: ADVERTISING SERVICES", 1, 0),
              ("$68.6 BILLION", "UP 22% IN A SINGLE YEAR", 2, 0), ("> HALF", "OF ALL NEWSPAPER REVENUE ON EARTH ($125.7B)", 3, .25),
              ("NOT ALL SELLERS", "STREAMING ADS COUNT TOO", 4, 0)],
