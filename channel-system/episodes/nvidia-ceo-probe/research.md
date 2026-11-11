@@ -126,3 +126,95 @@ Not researched: no comment sections were read.
 - https://www.sec.gov/Archives/edgar/data/0001045810/000104581007000008/fy2007annualreportonform10-k.htm
 - https://lapaasvoice.com/nvidia-shares-plunge-6-5-wiping-out-1-7-trillion-in-market-value-since-record-high
 - https://www.tipranks.com/news/u-s-stocks-fall-as-october-cpi-report-sparks-rate-hike-fears
+
+## Added 2026-11-11: material for the extension
+
+**What this section rests on.** Words (news articles and law-firm texts as opened or as returned by web search). Nothing watched or heard. Each item carries a tag: FACT (reported figure or document), ESTIMATE (analyst view or own arithmetic), ALLEGATION. "Opened" means the page was fetched and read; "Search" means only a search-result summary, to be opened before recording. Nothing here repeats a claim the fact-check removed or corrected (BofA "crucial", Reuters "could not verify", "20 to 30 percent", "flatly denied", "has passed nothing", Wedbush label, $0.78 index point rule). All dollar-per-$10,000 sums are own arithmetic.
+
+### A. Key-person risk with history (three cases, three different outcomes)
+
+| Case | What happened | Move | Source | Tag |
+|---|---|---|---|---|
+| Apple, 24-25 Aug 2011 | Steve Jobs resigned as CEO, announced after the close on Wed 24 Aug. Tim Cook, already named, took over. | After hours on 24 Aug: down about 5.5% to $355.76 from a $376.18 close (search). On Thu 25 Aug Apple closed down 0.65% (Fortune, opened) while the Dow and S&P 500 fell about 1.5%, so it did better than the market. | https://money.cnn.com/2011/08/24/technology/apple_after_hours_shares/index.htm (search snippet, 24 Aug 2011); https://fortune.com/2011/08/25/wall-street-shrugs-off-steve-jobs-resignation/ (opened, 25 Aug 2011) | FACT. The -5.5% was after-hours only; the regular-session fall was small. The lesson: a named successor ready in advance. Nvidia has none publicly named (factcheck row 11). Later price path not checked. |
+| Tesla, 27-28 Sep 2018 | The SEC sued Elon Musk for securities fraud over an Aug 2018 tweet that funding was "secured" to take Tesla private at $420. The SEC sought to bar him from running a public company. Musk's lawyers had rejected a settlement the day before (WSJ via Fortune). | Closed down 13.9% (about 14%) on Fri 28 Sep at $264.77, from $307.52, the biggest one-day fall since Nov 2013 (search; Fortune opened gives "nearly 14%" and $264.77). Bloomberg put the loss at $7.3B (search). | https://fortune.com/2018/09/28/tesla-stock-elon-musk-sec-fraud/ (opened); https://www.gurufocus.com/news/746369 (search) | FACT for the move. The allegation was against the CEO's own conduct as an officer; the suit named him, the company was not the defendant. Settlement date and later price not verified; do not use. |
+| Berkshire Hathaway, 5 May 2025 | Warren Buffett told shareholders on 3 May he would step down as CEO at year-end; Greg Abel (named heir years before) to take over. Buffett stays chairman. | Closed down about 5% on Mon 5 May, cutting market value by about $59B to $1.11T (Reuters via Yahoo, opened). | https://finance.yahoo.com/news/berkshire-hathaway-shares-fall-buffett-082154502.html (opened, 5 May 2025) | FACT. Even with a successor known for four years and Buffett staying as chairman, the shares fell 5% in a day. Later price: a Barchart headline (search) says "declined over 10%" since the announcement; not opened, do not use the number. |
+
+Writer's note: three cases, three lessons. Apple: a ready successor made the shock small. Berkshire: even a ready successor cost 5%. Tesla: a 14% fall when the legal danger was to the person who ran it. Nvidia's two days (9.51%) sit between Berkshire and Tesla. This is a comparison of size, not a forecast.
+
+### B. How big Nvidia is in an index fund, and the arithmetic on $10,000
+
+- Weight: 7.30% of SPY, State Street holdings as of 4 Nov 2026 (Trefis, article dated 6 Nov 2026, opened): https://www.trefis.com/articles/623122/how-much-nvidia-do-you-really-own/2026-11-06 . FACT. Trefis says other S&P 500 funds hold "nearly the same weights". QQQ about 8% (approximate, Trefis). The weight at the Friday 6 Nov close was not published in any opened source; own estimate about 7.0% (factcheck row 5). Use "about seven".
+- Trefis' own conversion: about $730 per $10,000 in an S&P 500 fund; about $800 per $10,000 in QQQ.
+- Two-day fall: 9.51% (0.9573 x 0.9453; factcheck row 33).
+
+Sums (own arithmetic, ESTIMATE, other stocks held flat):
+
+| Nvidia falls | At 7.3% weight, per $10,000 | At 7.0% weight, per $10,000 |
+|---|---|---|
+| 9.51% (the two days) | $730 x 0.0951 = $69.42 | $700 x 0.0951 = $66.57 |
+| 5% | $36.50 | $35.00 |
+| 25% (low end of Ives' "worth 25-30% less if removed") | $182.50 | $175.00 |
+| 30% | $219.00 | $210.00 |
+
+In plain words: on $10,000, the Nvidia slice was about $700-730; the two days took about $67-69 of it. A 25-30% fall would take about $175-219, which is 1.75-2.2 percent of the whole fund. Keep the factcheck row 7 caveat: the whole fund rose Monday (S&P 500 +2.35%), so this is Nvidia's contribution, not the fund's result. Ives' 25-30% is a conditional view (if Huang were removed), not a forecast by the channel.
+
+### C. What a board investigation is and how it usually runs
+
+- Nvidia's own wording (PRIMARY, opened by the fact-check): a committee of independent directors, assisted by outside independent counsel; Huang remains CEO. https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors (8 Nov 2026). The statement and CNBC 8 Nov also report that Huang "fully supports the review" and will cooperate (search: ABC7/AP; verify wording before quoting).
+- What a special committee is (Seyfarth Shaw lawyers Markel and Murray, Harvard Law School Forum on Corporate Governance, 6 Jul 2017, opened): https://corpgov.law.harvard.edu/2017/07/06/internal-investigations-special-committees-resource/ . FACT, practitioner guidance, not law:
+  - "the board creates a special committee of independent board members specifically to conduct the investigation"; used for large matters, such as when allegations touch senior management.
+  - "The committee (and not its counsel) directs the investigation." Committee counsel "should represent only the committee and not the company or the full board".
+  - At the end it "should provide an oral or a written final report of its findings and conclusions"; remedial steps may follow (discipline, new controls, reports to regulators). The board need not publish the report.
+- Length: **no authoritative average was found.** A Delaware-focused article says there is no set number and reasonableness depends on the subject (search). A compliance vendor (Ethico) gives roughly 3-6+ months for complex multi-party cases (search, vendor, indicative only). Do not state a typical length in the script; say "these reviews usually take months, not days" only if the writer accepts that vendor-level support, otherwise say "no deadline was given" (Nvidia named none: factcheck row 48).
+- One worked example with dates: Wells Fargo. Independent-director committee formed 25 Sep 2016 (four members), outside counsel Shearman & Sterling, 100 interviews and over 35 million documents, 110-page report published 10 Apr 2017, about 6.5 months later. It found former CEO John Stumpf too slow to challenge the sales practices. Sources: https://corpgov.law.harvard.edu/2017/04/22/lessons-learned-from-the-wells-fargo-sales-practices-investigation-report/ and SEC DEFA14A https://www.sec.gov/Archives/edgar/data/0000072971/000119312517118654/d375947ddefa14a.htm (both search results only, not opened). FACT per summary; open before use. Different facts (sales fraud, not a foreign-intelligence claim), so offer it only as an example of pace and scale.
+- The point for the money story: the committee's finding could land after 17 Nov. Nobody outside it knows when. That open date is part of the risk investors are pricing.
+
+### D. The 17 Nov 2026 earnings: what is known
+
+- Date and time: Tue 17 Nov 2026; results about 1:20 p.m. PT, call 2 p.m. PT (PRIMARY, opened in the fact-check, row 45): https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/ . One calendar site lists 18 Nov (search); the company release governs.
+- Guidance: revenue $108.0B plus or minus 2%; gross margin 74% plus or minus 50 basis points (company outlook; margin figure from Crypto Briefing, opened, 1 Nov 2026; the Q2 release on EDGAR is the primary, margin line not re-opened). No China data center compute revenue assumed (PRIMARY, factcheck row 43).
+- Consensus: about $108.9B revenue and EPS $2.47 (Motley Fool, Adam Spatacco, 10 Nov 2026, 7:00 a.m. ET, opened): https://www.fool.com/investing/2026/11/10/prediction-nov-17-will-be-a-huge-day-for-the-stock-market/ . ESTIMATE (analyst compilation). The same range ($108.8-109B, EPS $2.47) appears in a search summary; one calendar page says no consensus was yet published. Some projections go as high as $113-114B (Crypto Briefing; unnamed). Last quarter (Q2 FY27) revenue was $96.22B, up 106%; data center $89B (Crypto Briefing; check against the EDGAR release before quoting).
+- Beating the forecast is routine: a May 2026 Benzinga preview says 14 straight quarters of revenue beats (search; not opened). So a beat alone may not calm the shares.
+- What the previews say to watch (words of writers, not analysts quoted by name):
+  - Spatacco (Fool): data center sales growth, gross margin, and the fourth-quarter outlook; he argues weak Q4 guidance "could signal slowing AI infrastructure spending". ESTIMATE/opinion.
+  - Crypto Briefing (1 Nov, before the probe): long-term supply and capacity agreements $279B at 26 Jul 2026 versus $119B a quarter earlier, "primarily focused on memory components"; whether it keeps rising; contribution of the Vera Rubin platform. This preview says nothing on China or the CEO.
+  - Not found: any named analyst's published list of what they will ask about Huang or the probe on the call. Marked open.
+- Other dated item for the clock: three House committee chairs want a closed-door briefing on 18 Nov (factcheck row 39), the day after earnings.
+
+### E. Possible spine for 450-600 more words (suggestion, the writer decides)
+
+1. Three past cases, one line of money each (Apple, Berkshire, Tesla), then "Nvidia's two days sit between them" (A).
+2. The $10,000 sum on screen, with the 25-30% conditional line (B).
+3. What the committee is, who runs it, no deadline, Wells Fargo as the only worked example with a clock (C).
+4. The 17 Nov test: a $108B forecast with no China chip sales in it, consensus about $108.9B, and what the questions will be (D).
+
+### F. Not verified in this pass
+
+- Regular-session close for Apple on 25 Aug 2011 beyond Fortune's -0.65%; any later price paths for Apple, Tesla, Berkshire.
+- Tesla's later settlement and price; Berkshire "over 10%" claim.
+- Duration benchmarks for special committees (none authoritative found).
+- Wells Fargo pages were search results only.
+- No named analyst preview of the Huang questions for the 17 Nov call.
+- Comment sections were still not read; "What viewers are asking" remains unresearched. Titles of videos seen (not watched) suggest the questions people ask: "What does that mean for your 401(k) and retirement savings?", "What Happens to Your Money If NVIDIA's CEO Resigns?", "Who Could Replace Nvidia's CEO?", odds of him leaving ("about a 15% chance", Ives, as quoted in a video description, unverified). Page data only.
+
+## Title check 2026-11-11
+
+Method: web searches restricted to youtube.com for each phrase, 11 Nov 2026. Search results give titles and snippets (page data), not YouTube's own search page; "not found" means not returned, not proof of absence. No video was watched. FORMAT_BOOK section 1: the question a viewer types, plain words, under 60 characters, no money figure.
+
+Already in use, so rejected:
+- "Why Nvidia Stock Keeps Falling" (30 characters): the existing video, per the user.
+- "Why Is Nvidia Stock Falling?": used by an investing video ("Why Is Nvidia Stock Falling? Wall Street Reacts to NVDA Selloff!", about 172 days old).
+- "Why Nvidia Stock Dropped?" (Barron's, Adam Levine); "Why is Nvidia stock going down?"; "Why NVDA Is Falling & Can It Rebound?"; "Why Nvidia Stock Plunged 6.5%"; "Why Did NVIDIA (NVDA) Stock Drop 5%? CEO Scandal Explained" (about 1 day old); "Why Is NVIDIA Crashing?!" (2024) and others.
+- "What Happens to Your Money If NVIDIA's CEO Resigns?" and "What Happens If Jensen Huang Leaves Nvidia"-type titles ("Nvidia faces major leadership risk if Jensen Huang is forced out", "Who Could Replace Nvidia's CEO Jensen Huang?") are close; avoid "resigns/leaves/replace" wording.
+
+Candidates (ranked; characters counted by script):
+
+| Rank | Title | Characters | Found |
+|---|---|---|---|
+| 3 | Why One Man Can Move Your Index Fund | 36 | Not found. Search for it and near variants returned only generic index-fund explainers. Names no company, which suits an evergreen question but is less tied to the search "nvidia"; put Nvidia on the thumbnail. |
+| 2 | Why Nvidia Fell When Its CEO Was Probed | 39 | Not found. Closest are news-clip titles such as "Nvidia Shares Fall Amid CEO Probe". Contains "Nvidia" and the cause; "probed" is accurate (board review, not a government probe). |
+| 1 | Why Is Nvidia Down Over Its CEO? | 32 | Not found as exact; neighbours exist ("Why Nvidia Is Down Today", "The Real Reason NVIDIA's Stock is Down"). Plain, closest to what people type. |
+| 4 | Why Does Nvidia's CEO Matter to Your Fund? | 42 | Not found. Weaker as a typed question. |
+| 5 | What Is Nvidia's CEO Risk to Your Index Fund? | 45 | Not found; "CEO risk" is jargon, breaks the plain-words rule. |
+
+Recommendation: ranks 1 and 2 for search match (contain "Nvidia" and "CEO"); rank 3 for the money angle but it loses the search term. Writer/user picks; the brief's own limit says the story is the money, not the man, and "Probed" keeps that neutral. Top by the format-book test (typed question, plain, under 60, no figure, not in use) is rank 1, "Why Is Nvidia Down Over Its CEO?". Re-run the search on the day of upload: new videos on this story appear hourly.
