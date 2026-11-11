@@ -20,8 +20,11 @@ const TM = createRequire(import.meta.url)("../engine/timing.js");
 const STUDIO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
 export function linesFromScript(md) {
-  const out = [];
+  const out = []; let spoken = true;
   for (const raw of md.split(/\r?\n/)) {
+    // Only chapters hold spoken lines: "## DEVICES" (MOTIF:, PLANT:, VIEWER:) and "## SELF-CHECK" are notes, and "# TITLE:" is the title.
+    if (/^##\s/.test(raw)) spoken = /^##\s+CH\d/i.test(raw.trim());
+    if (!spoken || /^#/.test(raw.trim())) continue;
     const m = /^([A-Z][A-Z0-9_ ]{0,20}):\s+(.+)$/.exec(raw.trim());
     if (m) out.push({ id: "L" + String(out.length + 1).padStart(3, "0"), speaker: m[1] === "N" ? "N" : m[1].trim(), text: m[2].trim() });
   }
