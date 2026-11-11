@@ -1,0 +1,110 @@
+{
+  "scene": 1,
+  "part": 1,
+  "mode": "waterfall",
+  "tag": "UNIT ECONOMICS AUTOPSY",
+  "title": "Where $100 of Amazon Sales Actually Goes",
+  "unit": " USD",
+  "currency": "USD",
+  "footnote": "Illustrative model · typical third-party apparel seller · per $100 of sales · Sources: Marketplace Pulse; Amazon 2026 fee schedule",
+  "steps": [
+    {
+      "label": "Customer Sales",
+      "val": 100,
+      "type": "start",
+      "to": "seller",
+      "sub": "$100 of sales. Who actually keeps it?",
+      "evidence": {
+        "doc": "Amazon.com, Inc. — Form 10-K, fiscal year 2025",
+        "line": "Advertising services: $68.6B (+22% YoY)"
+      },
+      "step": 1,
+      "cue": "Every time you spend one hundred dollars",
+      "narration": "Every time you spend one hundred dollars with a seller on Amazon... about fifty-two of those dollars never reach the seller. And in 2026, the U.S. government accused Amazon of secretly overcharging the businesses that advertise there — by more than twenty billion dollars. Amazon denies it. But according to the FTC, you're paying for it too — even if you never shop on Amazon. In 2025, one line in Amazon's annual report — advertising — brought in sixty-eight point six billion dollars. So let's follow one hundred dollars. Dollar by dollar... and find out who actually gets your money."
+    },
+    {
+      "label": "Product & Freight",
+      "val": -28,
+      "type": "cost",
+      "to": "supplier",
+      "sub": "Manufacturing, ocean freight and import duties — paid months before anything sells.",
+      "step": 2,
+      "cue": "Meet a typical clothing seller on Amazon.",
+      "narration": "Meet a typical clothing seller on Amazon. For every hundred dollars in sales, here's where the money goes. First, the product itself. Manufacturing, ocean freight, and import duties. Twenty-eight dollars — paid months before anything sells."
+    },
+    {
+      "label": "Referral Fee (17%)",
+      "val": -17,
+      "type": "cost",
+      "to": "amazon",
+      "sub": "Amazon's first cut: a 17% referral fee on apparel over $20.",
+      "step": 3,
+      "cue": "The moment a customer clicks \"Buy Now\"...",
+      "narration": "The moment a customer clicks \"Buy Now\"... Amazon takes its first cut. A seventeen percent referral fee on clothing. Seventeen dollars."
+    },
+    {
+      "label": "FBA, Storage & Surcharges",
+      "val": -20,
+      "type": "cost",
+      "to": "amazon",
+      "sub": "Picking, packing, shipping, storage — plus a 3.5% surcharge since April 2026.",
+      "step": 4,
+      "cue": "Next, Fulfillment by Amazon. Picking, packing, shipping,",
+      "narration": "Next, Fulfillment by Amazon. Picking, packing, shipping, storage... plus a new surcharge added in 2026. About twenty dollars."
+    },
+    {
+      "label": "Sponsored Ads",
+      "val": -15,
+      "type": "cost",
+      "to": "amazon",
+      "sub": "The line shoppers never see: about $15 of every $100 goes to sponsored listings.",
+      "step": 5,
+      "cue": "Then, the line shoppers never see. Advertising.",
+      "narration": "Then, the line shoppers never see. Advertising. Just to show up where buyers look, a typical seller spends around fifteen dollars on sponsored listings."
+    },
+    {
+      "label": "Returns & Write-offs",
+      "val": -10,
+      "type": "cost",
+      "to": "loss",
+      "sub": "Refunds, return fees and inventory that can't be resold.",
+      "step": 6,
+      "cue": "Returns and write-offs take another ten.",
+      "narration": "Returns and write-offs take another ten."
+    },
+    {
+      "label": "Seller Keeps",
+      "val": 10,
+      "type": "final",
+      "to": "seller",
+      "sub": "The seller keeps $10. Amazon collects $52 — more than five times as much.",
+      "callout": {
+        "label": "Amazon's take",
+        "val": 52,
+        "parts": [
+          17,
+          20,
+          15
+        ],
+        "pos": "tr",
+        "boxes": [
+          {
+            "title": "Amazon collects",
+            "big": "$52",
+            "sub": "$17 referral + $20 FBA + $15 ads",
+            "to": "amazon"
+          },
+          {
+            "title": "Seller keeps",
+            "big": "$10",
+            "sub": "after product, fees, ads and returns",
+            "to": "seller"
+          }
+        ]
+      },
+      "step": 7,
+      "cue": "The final split? The seller — who",
+      "narration": "The final split? The seller — who designed the product, paid the factory, and carried all the risk — keeps about ten dollars. Amazon — without owning a single thread — collects about fifty-two. More than five times what the seller keeps. But hold on to that fifteen-dollar ad line. That's where this story gets strange."
+    }
+  ]
+}

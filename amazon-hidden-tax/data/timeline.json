@@ -1,0 +1,216 @@
+{
+  "source": "audio",
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.0,
+      "duration": 109.772,
+      "steps": [
+        {
+          "step": 1,
+          "start": 0.9,
+          "duration": 40.813,
+          "audio": "voiceover/steps/s1_1.wav"
+        },
+        {
+          "step": 2,
+          "start": 41.713,
+          "duration": 15.646,
+          "audio": "voiceover/steps/s1_2.wav"
+        },
+        {
+          "step": 3,
+          "start": 57.359,
+          "duration": 9.374,
+          "audio": "voiceover/steps/s1_3.wav"
+        },
+        {
+          "step": 4,
+          "start": 66.733,
+          "duration": 9.801,
+          "audio": "voiceover/steps/s1_4.wav"
+        },
+        {
+          "step": 5,
+          "start": 76.534,
+          "duration": 10.057,
+          "audio": "voiceover/steps/s1_5.wav"
+        },
+        {
+          "step": 6,
+          "start": 86.591,
+          "duration": 2.761,
+          "audio": "voiceover/steps/s1_6.wav"
+        },
+        {
+          "step": 7,
+          "start": 89.351,
+          "duration": 19.721,
+          "audio": "voiceover/steps/s1_7.wav"
+        }
+      ]
+    },
+    {
+      "scene": 2,
+      "start": 109.772,
+      "duration": 116.234,
+      "steps": [
+        {
+          "step": 1,
+          "start": 110.672,
+          "duration": 33.603,
+          "audio": "voiceover/steps/s2_1.wav"
+        },
+        {
+          "step": 2,
+          "start": 144.275,
+          "duration": 16.009,
+          "audio": "voiceover/steps/s2_2.wav"
+        },
+        {
+          "step": 3,
+          "start": 160.283,
+          "duration": 14.921,
+          "audio": "voiceover/steps/s2_3.wav"
+        },
+        {
+          "step": 4,
+          "start": 175.204,
+          "duration": 39.107,
+          "audio": "voiceover/steps/s2_4.wav"
+        },
+        {
+          "step": 5,
+          "start": 214.311,
+          "duration": 10.995,
+          "audio": "voiceover/steps/s2_5.wav"
+        }
+      ]
+    },
+    {
+      "scene": 3,
+      "start": 226.006,
+      "duration": 100.302,
+      "steps": [
+        {
+          "step": 1,
+          "start": 226.906,
+          "duration": 20.979,
+          "audio": "voiceover/steps/s3_1.wav"
+        },
+        {
+          "step": 2,
+          "start": 247.885,
+          "duration": 42.328,
+          "audio": "voiceover/steps/s3_2.wav"
+        },
+        {
+          "step": 3,
+          "start": 290.213,
+          "duration": 35.395,
+          "audio": "voiceover/steps/s3_3.wav"
+        }
+      ]
+    },
+    {
+      "scene": 4,
+      "start": 326.308,
+      "duration": 83.587,
+      "steps": [
+        {
+          "step": 1,
+          "start": 327.208,
+          "duration": 33.005,
+          "audio": "voiceover/steps/s4_1.wav"
+        },
+        {
+          "step": 2,
+          "start": 360.213,
+          "duration": 10.867,
+          "audio": "voiceover/steps/s4_2.wav"
+        },
+        {
+          "step": 3,
+          "start": 371.081,
+          "duration": 6.878,
+          "audio": "voiceover/steps/s4_3.wav"
+        },
+        {
+          "step": 4,
+          "start": 377.959,
+          "duration": 3.87,
+          "audio": "voiceover/steps/s4_4.wav"
+        },
+        {
+          "step": 5,
+          "start": 381.829,
+          "duration": 9.929,
+          "audio": "voiceover/steps/s4_5.wav"
+        },
+        {
+          "step": 6,
+          "start": 391.757,
+          "duration": 17.438,
+          "audio": "voiceover/steps/s4_6.wav"
+        }
+      ]
+    },
+    {
+      "scene": 5,
+      "start": 409.895,
+      "duration": 76.323,
+      "steps": [
+        {
+          "step": 1,
+          "start": 410.795,
+          "duration": 18.419,
+          "audio": "voiceover/steps/s5_1.wav"
+        },
+        {
+          "step": 2,
+          "start": 429.215,
+          "duration": 18.462,
+          "audio": "voiceover/steps/s5_2.wav"
+        },
+        {
+          "step": 3,
+          "start": 447.677,
+          "duration": 16.521,
+          "audio": "voiceover/steps/s5_3.wav"
+        },
+        {
+          "step": 4,
+          "start": 464.197,
+          "duration": 21.321,
+          "audio": "voiceover/steps/s5_4.wav"
+        }
+      ]
+    },
+    {
+      "scene": 6,
+      "start": 486.218,
+      "duration": 78.703,
+      "steps": [
+        {
+          "step": 1,
+          "start": 487.118,
+          "duration": 27.123,
+          "audio": "voiceover/steps/s6_1.wav"
+        },
+        {
+          "step": 2,
+          "start": 514.241,
+          "duration": 26.355,
+          "audio": "voiceover/steps/s6_2.wav"
+        },
+        {
+          "step": 3,
+          "start": 540.597,
+          "duration": 23.625,
+          "audio": "voiceover/steps/s6_3.wav"
+        }
+      ]
+    }
+  ],
+  "total": 564.921
+}

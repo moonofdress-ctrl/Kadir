@@ -1,0 +1,155 @@
+/* Fonts: OFL, bundled from @fontsource (licenses in assets/fonts). */
+@font-face { font-family: "Anton"; src: url("../assets/fonts/anton-latin-400-normal.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "Plex Mono"; src: url("../assets/fonts/ibm-plex-mono-latin-400-normal.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "Plex Mono"; src: url("../assets/fonts/ibm-plex-mono-latin-500-normal.woff2") format("woff2"); font-weight: 500; }
+@font-face { font-family: "Plex Mono"; src: url("../assets/fonts/ibm-plex-mono-latin-700-normal.woff2") format("woff2"); font-weight: 700; }
+@font-face { font-family: "Source Serif"; src: url("../assets/fonts/source-serif-4-latin-400-normal.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "Source Serif"; src: url("../assets/fonts/source-serif-4-latin-600-normal.woff2") format("woff2"); font-weight: 600; }
+@font-face { font-family: "Source Serif"; src: url("../assets/fonts/source-serif-4-latin-700-normal.woff2") format("woff2"); font-weight: 700; }
+@font-face { font-family: "Inter Tight"; src: url("../assets/fonts/inter-tight-latin-700-normal.woff2") format("woff2"); font-weight: 700; }
+@font-face { font-family: "Inter Tight"; src: url("../assets/fonts/inter-tight-latin-800-normal.woff2") format("woff2"); font-weight: 800; }
+
+:root {
+  --paper: #ede6d6;
+  --paper-hi: #faf7ef;
+  --ink: #1b1a17;
+  --ink-2: #4a463d;
+  --marker: #ffe74c;
+  --stamp: #c8102e;
+  --money: #2f6b4f;
+  --kraft: #c9a774;
+  --serif: "Source Serif", Georgia, serif;
+  --mono: "Plex Mono", monospace;
+  --kin: "Anton", sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1920px; height: 1080px; overflow: hidden; background: #14100c; }
+#root { position: relative; width: 1920px; height: 1080px; overflow: hidden; }
+.seg { position: absolute; inset: 0; overflow: hidden; }
+.fill { position: absolute; inset: 0; }
+
+/* shared finishing layers */
+.vignette { position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse at 50% 45%, transparent 55%, rgba(10, 6, 2, 0.55) 100%); }
+.grain { position: absolute; left: -60px; top: -60px; width: 2040px; height: 1200px; pointer-events: none;
+  filter: url(#grain); opacity: 0.22; mix-blend-mode: multiply; }
+
+/* ---------- A: evidence desk ---------- */
+.desk { position: absolute; inset: 0; background: url("../assets/tex/Wood051.jpg") center / 900px; }
+.desk::after { content: ""; position: absolute; inset: 0; background: rgba(28, 16, 8, 0.25); }
+.cam { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; }
+.doc { position: absolute; left: 230px; top: 46px; width: 760px; height: 983px;
+  background: url("../assets/docs/complaint_p9.jpg") 0 0 / 100% 100%;
+  box-shadow: 0 2px 2px rgba(0,0,0,.35), 0 18px 40px rgba(0,0,0,.45); transform: rotate(-2.2deg); transform-origin: 50% 50%; }
+.doc .tex { position: absolute; inset: 0; background: url("../assets/tex/Paper004.jpg") center / 700px; mix-blend-mode: multiply; opacity: .28; }
+.hl { position: absolute; background: var(--marker); mix-blend-mode: multiply; opacity: .8; border-radius: 3px 8px 5px 9px; transform-origin: 0 50%; }
+.note { position: absolute; left: 1080px; top: 120px; width: 300px; height: 280px; padding: 28px 26px; background: #f7e36b;
+  transform: rotate(4deg); box-shadow: 0 14px 26px rgba(0,0,0,.35); font-family: var(--mono); color: #2b2614; }
+.note .k { font-size: 20px; font-weight: 700; letter-spacing: .08em; }
+.note .v { margin-top: 18px; font-size: 30px; font-weight: 500; line-height: 1.25; }
+.card { position: absolute; left: 1150px; top: 560px; width: 520px; padding: 30px 34px; background: var(--paper-hi);
+  transform: rotate(-3deg); box-shadow: 0 16px 30px rgba(0,0,0,.4); }
+.card .k { font-family: var(--mono); font-size: 20px; font-weight: 700; letter-spacing: .14em; color: var(--ink-2); }
+.card .v { margin-top: 12px; font-family: var(--serif); font-size: 44px; font-weight: 700; color: var(--ink); line-height: 1.1; }
+.card .bar { display: inline-block; width: 120px; height: 38px; background: #111; vertical-align: -6px; }
+.pin { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ff6b6b, #9a0d1f 70%); box-shadow: 0 4px 6px rgba(0,0,0,.45); }
+.string { position: absolute; inset: 0; overflow: visible; }
+.stamp { position: absolute; left: 1130px; top: 470px; padding: 16px 30px 12px; border: 7px double var(--stamp); color: var(--stamp);
+  font-family: var(--kin); font-size: 96px; letter-spacing: .06em; line-height: 1; transform: rotate(-9deg); filter: url(#ink); opacity: .9; }
+.stamp small { display: block; font-family: var(--mono); font-weight: 700; font-size: 24px; letter-spacing: .16em; margin-top: 6px; }
+.strip { position: absolute; left: 110px; bottom: 74px; max-width: 1240px; padding: 22px 34px 24px; transform: rotate(-.6deg); isolation: isolate; }
+.strip::before, .d-strip::before, .c-title::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--paper-hi);
+  filter: url(#deckle) drop-shadow(0 10px 14px rgba(0,0,0,.4)); }
+.strip .q { font-family: var(--serif); font-size: 40px; font-weight: 600; color: var(--ink); line-height: 1.2; }
+.strip .s { margin-top: 10px; font-family: var(--mono); font-size: 20px; color: var(--ink-2); letter-spacing: .04em; }
+
+/* ---------- B: receipt + scissors ---------- */
+.kraft { position: absolute; inset: 0; background: url("../assets/tex/Cardboard002.jpg") center / 1100px; }
+.kraft::after { content: ""; position: absolute; inset: 0; background: rgba(60, 38, 14, .18); }
+.rc-wrap { position: absolute; left: 150px; top: 0; width: 600px; height: 1080px; overflow: hidden; }
+.receipt { position: absolute; left: 30px; top: 1080px; width: 540px; padding: 50px 40px 60px; background: var(--paper-hi);
+  font-family: var(--mono); color: #26241f; box-shadow: 0 18px 34px rgba(0,0,0,.35);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% 100% / 26px 100% repeat-x;
+  mask: conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) 50% 0 / 26px 51% repeat-x, conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% 100% / 26px 51% repeat-x; }
+.receipt .tex { position: absolute; inset: 0; background: url("../assets/tex/Paper001.jpg") center / 600px; mix-blend-mode: multiply; opacity: .25; }
+.rc-h { text-align: center; font-size: 30px; font-weight: 700; letter-spacing: .1em; }
+.rc-sub { text-align: center; font-size: 20px; margin-top: 6px; color: #6a665c; }
+.rc-hr { margin: 22px 0; border-top: 3px dashed #8d887c; }
+.rc-l { display: flex; justify-content: space-between; font-size: 29px; line-height: 1.9; font-weight: 500; }
+.rc-l.amz { color: var(--stamp); }
+.rc-l.tot { font-weight: 700; font-size: 32px; }
+.rc-l.keep { color: #fff; background: var(--money); padding: 2px 12px; margin: 6px -12px 0; }
+.bill-area { position: absolute; left: 840px; top: 170px; width: 960px; height: 820px; }
+.slice { position: absolute; top: 0; height: 410px; overflow: hidden; box-shadow: 0 10px 18px rgba(0,0,0,.3); }
+.slice svg { position: absolute; top: 0; }
+.slice .tint { position: absolute; inset: 0; background: var(--stamp); mix-blend-mode: multiply; opacity: 0; }
+.scissors { position: absolute; left: 0; top: 0; width: 110px; height: 110px; margin: -55px 0 0 -55px; opacity: 0; }
+.pile-label { position: absolute; font-family: var(--kin); font-size: 74px; letter-spacing: .03em; line-height: 1; }
+.pile-label small { display: block; font-family: var(--mono); font-size: 22px; letter-spacing: .14em; font-weight: 700; margin-top: 8px; }
+
+/* ---------- C: 3D tollbooth ---------- */
+#three-wrap { position: absolute; inset: 0; background: #d9c9a8; }
+#three-wrap canvas { position: absolute; inset: 0; width: 1920px; height: 1080px; }
+.paper-over { position: absolute; inset: 0; background: url("../assets/tex/Paper004.jpg") center / 900px; mix-blend-mode: multiply; opacity: .35; pointer-events: none; }
+.c-title { position: absolute; left: 90px; bottom: 70px; padding: 20px 34px 18px; color: var(--ink); isolation: isolate;
+  font-family: var(--kin); font-size: 64px; letter-spacing: .04em; transform: rotate(-1.5deg); }
+.c-title small { display: block; font-family: var(--mono); font-weight: 700; font-size: 22px; letter-spacing: .12em; color: var(--ink-2); margin-top: 6px; }
+.c-stamp { left: 1330px; top: 740px; font-size: 84px; background: var(--paper-hi); filter: none; box-shadow: 0 12px 22px rgba(0,0,0,.35); }
+
+/* ---------- D: footage + kinetic type ---------- */
+.foot-vid { position: absolute; inset: -40px; width: 2000px; height: 1160px; object-fit: cover;
+  filter: sepia(.35) saturate(.6) contrast(1.15) brightness(.72); }
+.grade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(40, 24, 8, .15), rgba(20, 10, 4, .55)); }
+.kin { position: absolute; left: 0; width: 1920px; text-align: center; font-family: var(--kin); color: var(--paper-hi);
+  text-shadow: 0 8px 30px rgba(0,0,0,.45); line-height: .9; }
+.kin.big { top: 230px; font-size: 330px; letter-spacing: -.01em; }
+.kin.mid { top: 560px; font-size: 140px; letter-spacing: .12em; }
+.d-strip { position: absolute; left: 50%; top: 790px; transform: translateX(-50%) rotate(-1deg); padding: 18px 34px 16px;
+  isolation: isolate; font-family: var(--mono); font-size: 34px; font-weight: 700; color: var(--ink);
+  letter-spacing: .06em; white-space: nowrap; }
+.d-strip mark { background: var(--marker); color: var(--ink); padding: 0 8px; }
+.src { position: absolute; left: 110px; bottom: 40px; font-family: var(--mono); font-size: 18px; color: rgba(250, 247, 239, .75); letter-spacing: .06em; }
+.label-chip { position: absolute; left: 110px; top: 70px; font-family: var(--mono); font-size: 22px; font-weight: 700; letter-spacing: .2em;
+  color: var(--paper-hi); background: rgba(0,0,0,.35); padding: 8px 14px; }
+    
+/* ---------- full-film additions ---------- */
+.foot-vid { z-index: 0; }
+.seg { z-index: 1; }
+.bgk { position: absolute; inset: 0; }
+.part-chip { position: absolute; left: 60px; top: 44px; font-family: var(--mono); font-size: 20px; font-weight: 700; letter-spacing: .16em;
+  color: var(--paper-hi); background: rgba(20, 14, 8, .62); padding: 8px 14px; }
+.strip .chip { display: inline-block; font-family: var(--mono); font-size: 20px; font-weight: 700; letter-spacing: .12em; color: var(--paper-hi);
+  background: var(--ink); padding: 4px 10px; margin-bottom: 10px; }
+.strip .q { font-size: 36px; }
+.kin-wrap { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+.kin-wrap .b { position: absolute; left: 0; width: 1920px; text-align: center; font-family: var(--kin); color: var(--paper-hi);
+  text-shadow: 0 8px 30px rgba(0,0,0,.55); line-height: .95; white-space: nowrap; }
+.kin-wrap .s { position: absolute; left: 0; top: 700px; width: 1920px; text-align: center; }
+.kin-wrap .s span { display: inline-block; background: var(--marker); color: var(--ink); font-family: var(--mono); font-weight: 700; font-size: 38px;
+  letter-spacing: .08em; padding: 10px 22px; transform: rotate(-1deg); }
+.receipt.fixed { top: 130px; }
+.bignum { position: absolute; left: 840px; top: 200px; padding: 26px 40px 30px; background: var(--paper-hi); box-shadow: 0 16px 30px rgba(0,0,0,.4); transform: rotate(-1deg); }
+.bignum .n { font-family: var(--kin); font-size: 250px; line-height: 1; color: var(--stamp); }
+.bignum .l { margin-top: 14px; font-family: var(--mono); font-weight: 700; font-size: 34px; letter-spacing: .1em; color: var(--ink); }
+.pcard { position: absolute; padding: 26px 30px; background: var(--paper-hi); box-shadow: 0 16px 30px rgba(0,0,0,.4); }
+.pcard .k { font-family: var(--mono); font-size: 24px; font-weight: 700; letter-spacing: .12em; color: var(--ink-2); }
+.pcard .v { margin-top: 10px; font-family: var(--kin); font-size: 64px; line-height: 1.02; color: var(--ink); }
+.pcard .d { margin-top: 12px; font-family: var(--serif); font-size: 30px; line-height: 1.25; color: var(--ink-2); }
+.pcard.red .v { color: var(--stamp); }
+.pcard.yellow { background: #f7e36b; }
+.sheet { position: absolute; left: 230px; top: 190px; width: 1460px; height: 560px; background: var(--paper-hi); box-shadow: 0 18px 40px rgba(0,0,0,.45); transform: rotate(-.5deg); }
+.sheet .tex { position: absolute; inset: 0; background: url("../assets/tex/Paper004.jpg") center / 700px; mix-blend-mode: multiply; opacity: .3; }
+.sheet .ttl { position: absolute; left: 60px; top: 36px; font-family: var(--mono); font-weight: 700; font-size: 28px; letter-spacing: .14em; color: var(--ink-2); }
+.sheet .flag { position: absolute; right: 60px; top: 32px; font-family: var(--mono); font-weight: 700; font-size: 24px; letter-spacing: .12em; color: var(--paper-hi); background: var(--ink-2); padding: 6px 12px; }
+.sheet .rl { position: absolute; left: 60px; font-family: var(--serif); font-weight: 600; font-size: 36px; color: var(--ink); }
+.sheet .rb { position: absolute; left: 60px; height: 84px; transform-origin: 0 50%; }
+.sheet .rn { position: absolute; font-family: var(--kin); font-size: 76px; line-height: 84px; }
+.valcard { position: absolute; left: 60px; top: 110px; }
+.endnote { position: absolute; left: 0; width: 1920px; bottom: 26px; text-align: center; font-family: var(--mono); font-weight: 700; font-size: 26px; letter-spacing: .1em; color: var(--paper-hi); }
+.aiimg { position: absolute; object-fit: cover; }
+.frame { position: absolute; width: 1224px; height: 710px; background: var(--paper-hi); box-shadow: 0 18px 40px rgba(0,0,0,.45); overflow: hidden; }
+.subs { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; z-index: 5; pointer-events: none; }
+.sub { position: absolute; left: 0; bottom: 54px; width: 1920px; text-align: center; }
+.sub span { display: inline-block; max-width: 1500px; padding: 10px 26px 12px; background: rgba(20, 14, 8, .86); color: #faf7ef;
+  font-family: "Inter Tight", sans-serif; font-weight: 800; font-size: 50px; line-height: 1.18; letter-spacing: -.005em; }

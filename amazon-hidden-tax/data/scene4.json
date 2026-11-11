@@ -1,0 +1,89 @@
+{
+  "scene": 4,
+  "part": 4,
+  "mode": "waterfall",
+  "tag": "REVERSE LOGISTICS AUTOPSY",
+  "title": "The True Cost of One \"Free\" $100 Return",
+  "unit": " USD",
+  "currency": "USD",
+  "footnote": "One worn $100 dress · 17% referral fee · ≈ values vary by size and weight · Sources: NRF 2025; Appriss Retail; Amazon fee policies 2026",
+  "steps": [
+    {
+      "label": "Sale Reversed",
+      "val": 0,
+      "type": "start",
+      "to": "seller",
+      "sub": "The customer gets $100 back. The sale no longer exists.",
+      "stats": [
+        "~$850B returned in 2025 (NRF)",
+        "~1 in 5 online purchases returned"
+      ],
+      "step": 1,
+      "cue": "Now for the cost that comes back",
+      "narration": "Now for the cost that comes back in a box. According to the National Retail Federation, roughly one in five online purchases gets sent back. And in fashion, one kind of return has its own name. Wardrobing. Buy an evening dress on Friday. Wear it to a wedding on Saturday. Return it on Monday — \"didn't fit.\" In one industry survey, six in ten retail executives said they'd seen it. For the shopper, the return is free. For the seller, here's what one worn, one-hundred-dollar dress actually costs."
+    },
+    {
+      "label": "Refund Admin Fee",
+      "val": -3.4,
+      "type": "cost",
+      "to": "amazon",
+      "sub": "Amazon keeps 20% of the $17 referral fee (capped at $5).",
+      "step": 2,
+      "cue": "The customer gets their hundred dollars back.",
+      "narration": "The customer gets their hundred dollars back. Amazon refunds most of its referral fee... but keeps a refund administration fee. Three dollars and forty cents."
+    },
+    {
+      "label": "FBA Fee Not Refunded",
+      "val": -6,
+      "display": "≈−$6",
+      "type": "cost",
+      "to": "amazon",
+      "sub": "The fulfillment fee Amazon charged to ship the dress is gone.",
+      "step": 3,
+      "cue": "The fulfillment fee Amazon charged to ship",
+      "narration": "The fulfillment fee Amazon charged to ship the dress? Not refunded. About six dollars... gone."
+    },
+    {
+      "label": "Returns Processing",
+      "val": -3,
+      "display": "≈−$3",
+      "type": "cost",
+      "to": "amazon",
+      "sub": "Apparel returns processing fee (roughly $1.65–$3.89 by size).",
+      "step": 4,
+      "cue": "Then, a returns processing fee. Around three",
+      "narration": "Then, a returns processing fee. Around three dollars more."
+    },
+    {
+      "label": "Worn Dress Written Off",
+      "val": -28,
+      "type": "cost",
+      "to": "loss",
+      "sub": "Makeup and perfume: it can't be sold as new.",
+      "step": 5,
+      "cue": "And the dress itself comes back with",
+      "narration": "And the dress itself comes back with makeup on the collar and perfume in the fabric. It can't be sold as new. Twenty-eight dollars of inventory... written off."
+    },
+    {
+      "label": "Net Loss",
+      "val": -40.4,
+      "type": "final",
+      "to": "loss",
+      "sub": "= the profit from four full-price sales at a 10% margin.",
+      "callout": {
+        "pos": "bl",
+        "boxes": [
+          {
+            "title": "One wardrobed return",
+            "big": "−$40.40",
+            "sub": "wipes out the profit from 4 full-price sales",
+            "to": "loss"
+          }
+        ]
+      },
+      "step": 6,
+      "cue": "Total: a loss of about forty dollars",
+      "narration": "Total: a loss of about forty dollars and forty cents — on a sale that no longer exists. At a ten percent margin, that's four full-price sales... just to pay for one wardrobed dress. And even the sellers who survive returns run into one more problem. Time."
+    }
+  ]
+}

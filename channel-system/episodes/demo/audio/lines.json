@@ -1,0 +1,27 @@
+[
+  {
+    "id": "L001",
+    "speaker": "N",
+    "text": "Every time you spend one hundred dollars with a seller on Amazon, about fifty-two of those dollars never reach the seller."
+  },
+  {
+    "id": "L002",
+    "speaker": "N",
+    "text": "Not the brand. Not the factory."
+  },
+  {
+    "id": "L003",
+    "speaker": "BENNY",
+    "text": "Wait. Fifty-two?"
+  },
+  {
+    "id": "L004",
+    "speaker": "HAL",
+    "text": "Fifty-two. Per hundred. Locking in gains."
+  },
+  {
+    "id": "L005",
+    "speaker": "N",
+    "text": "So where does it go? Three places. Fees, fulfillment, and ads."
+  }
+]

@@ -1,0 +1,67 @@
+{
+  "scene": 3,
+  "part": 3,
+  "mode": "compare",
+  "tag": "FTC v. AMAZON · ALLEGATIONS",
+  "title": "The Price Floor & Project Nessie",
+  "unit": "",
+  "footnote": "FTC claims are allegations; Amazon denies wrongdoing. Buy Box share is an industry estimate not confirmed by Amazon.",
+  "steps": [
+    {
+      "label": "1. The Price-Parity Trap",
+      "unit": "$",
+      "leftVal": 100,
+      "rightVal": 85,
+      "leftText": "Amazon listing: $100",
+      "rightText": "Own Shopify store: $85",
+      "leftTo": "amazon",
+      "rightTo": "seller",
+      "sub": "What happens when a seller charges less off Amazon?",
+      "evidence": {
+        "doc": "FTC et al. v. Amazon.com, Inc., No. 2:23-cv-01495 (W.D. Wash.)",
+        "line": "Complaint filed Sept. 26, 2023"
+      },
+      "step": 1,
+      "cue": "In 2023, the Federal Trade Commission and",
+      "narration": "In 2023, the Federal Trade Commission and a group of states sued Amazon for illegally maintaining a monopoly. The complaint describes what happens when a seller tries to undercut Amazon. Say you sell a dress for one hundred dollars on Amazon... and eighty-five on your own Shopify store, where your fees are lower."
+    },
+    {
+      "label": "2. The Buy Box",
+      "unit": "%",
+      "leftVal": 80,
+      "rightVal": 20,
+      "estimate": true,
+      "leftText": "Through the Buy Box: 80%+",
+      "rightText": "Everything else: <20%",
+      "leftTo": "amazon",
+      "rightTo": "supplier",
+      "sub": "FTC: discounting sellers can become \"effectively invisible.\"",
+      "evidence": {
+        "doc": "FTC et al. v. Amazon.com, Inc., No. 2:23-cv-01495 (W.D. Wash.), Dkt. 1, p. 9",
+        "quote": "\"a price floor everywhere else\""
+      },
+      "step": 2,
+      "cue": "According to the FTC, Amazon's algorithms scan",
+      "narration": "According to the FTC, Amazon's algorithms scan the internet for lower prices. If they find one, your offer can lose the Buy Box — that yellow \"Add to Cart\" button. Industry estimates — never confirmed by Amazon — say more than eighty percent of sales go through it. The complaint goes further. It says Amazon can bury discounting sellers so far down in search results that they become — quote — \"effectively invisible.\" So sellers do the rational thing. In the FTC's words, they use their inflated Amazon prices as \"a price floor everywhere else\"... which means, if the government is right, you pay the Amazon tax even at other stores."
+    },
+    {
+      "label": "3. Project Nessie",
+      "unit": "$",
+      "leftVal": 110,
+      "rightVal": 110,
+      "illustrative": true,
+      "leftText": "Amazon raises its price",
+      "rightText": "Rival algorithms follow",
+      "leftTo": "amazon",
+      "rightTo": "supplier",
+      "sub": "FTC alleges $1B+ in extra profit. Amazon: the FTC \"grossly mischaracterizes\" the tool.",
+      "evidence": {
+        "doc": "Unredacted FTC complaint (Nov. 2023)",
+        "quote": "Alleged: more than $1 billion in excess profit"
+      },
+      "step": 3,
+      "cue": "Then there's Project Nessie — an algorithm",
+      "narration": "Then there's Project Nessie — an algorithm the FTC says predicted when competitors would match Amazon's price increases... so Amazon could raise prices and watch rivals follow. The agency alleges it generated more than one billion dollars in extra profit. Amazon says the FTC \"grossly mischaracterizes\" the tool — and that it was scrapped because it didn't work as intended. More broadly, Amazon says the lawsuit is wrong on the facts and the law. But there's one cost we haven't counted yet... the one that arrives after the sale is over."
+    }
+  ]
+}

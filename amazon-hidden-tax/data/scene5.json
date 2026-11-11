@@ -1,0 +1,77 @@
+{
+  "scene": 5,
+  "part": 5,
+  "mode": "network",
+  "tag": "THE WORKING-CAPITAL SQUEEZE",
+  "title": "Cash Out First, Paid Last — Fined Either Way",
+  "unit": "",
+  "footnote": "Sources: Amazon seller policies (delivery-date reserve, inbound placement, low-inventory-level fee); 3.5% surcharge eff. Apr 17, 2026; Marketplace Pulse 2026 Seller Index",
+  "layers": [
+    [
+      {
+        "name": "Factory (paid up front)",
+        "y": 0.5
+      }
+    ],
+    [
+      {
+        "name": "Payout reserve (delivery + 7 days)",
+        "y": 0.5
+      }
+    ],
+    [
+      {
+        "name": "Inbound placement fee · +3.5% surcharge",
+        "y": 0.5
+      }
+    ],
+    [
+      {
+        "name": "Too much stock: aged-inventory surcharge",
+        "y": 0.3
+      },
+      {
+        "name": "Under ~28 days: low-inventory fee",
+        "y": 0.7
+      }
+    ]
+  ],
+  "steps": [
+    {
+      "label": "1. Factory Cash Goes Out",
+      "val": "2–3 Months Early",
+      "activeLayer": 0,
+      "sub": "Sellers pay factories long before a single unit reaches a customer.",
+      "step": 1,
+      "cue": "So far, that's fifty-two dollars in fees",
+      "narration": "So far, that's fifty-two dollars in fees and ads... and forty more every time a dress comes back. But the last trap isn't a fee at all. Selling on Amazon starts with a bet. Sellers pay their factories up front — often two or three months before a single unit reaches a customer."
+    },
+    {
+      "label": "2. The Payout Reserve",
+      "val": "Delivery + 7 Days",
+      "activeLayer": 1,
+      "sub": "Funds release 7 days after confirmed delivery — often 2–4 weeks from sale to bank.",
+      "step": 2,
+      "cue": "Then, when the sale finally happens, the",
+      "narration": "Then, when the sale finally happens, the money still doesn't arrive. Under Amazon's current rules, seller funds generally become available seven days after the customer's confirmed delivery. Add settlement cycles on top, and many sellers wait two to four weeks to touch their own revenue."
+    },
+    {
+      "label": "3. Fees Around Inventory",
+      "val": "+3.5% Surcharge",
+      "activeLayer": 2,
+      "sub": "Inbound placement fee (since 2024) + 3.5% on every fulfillment fee (April 2026).",
+      "step": 3,
+      "cue": "Meanwhile, the fees keep multiplying. Since 2024,",
+      "narration": "Meanwhile, the fees keep multiplying. Since 2024, there's a fee for how your boxes get spread across Amazon's warehouses. And in 2026, a three-and-a-half percent surcharge landed on top of every fulfillment fee."
+    },
+    {
+      "label": "4. The Corridor",
+      "val": "Too Much OR Too Little",
+      "activeLayer": 3,
+      "sub": "Aged-inventory surcharge vs. low-inventory fee. 49% of sellers call fees their #1 margin concern.",
+      "step": 4,
+      "cue": "And then there's the corridor. Keep too",
+      "narration": "And then there's the corridor. Keep too much stock for too long, and you pay aged inventory surcharges. But let your stock fall below roughly twenty-eight days of supply... and you pay a low-inventory-level fee on every unit shipped. Too much costs money. Too little costs money. Amazon collects on both sides. So... why does anyone stay?"
+    }
+  ]
+}

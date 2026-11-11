@@ -1,0 +1,10 @@
+In 2023, the Federal Trade Commission and a group of states sued Amazon for illegally maintaining a monopoly. The complaint describes what happens when a seller tries to undercut Amazon.
+Say you sell a dress for one hundred dollars on Amazon... and eighty-five on your own Shopify store, where your fees are lower.
+
+According to the FTC, Amazon's algorithms scan the internet for lower prices. If they find one, your offer can lose the Buy Box — that yellow "Add to Cart" button. Industry estimates — never confirmed by Amazon — say more than eighty percent of sales go through it.
+The complaint goes further. It says Amazon can bury discounting sellers so far down in search results that they become — quote — "effectively invisible."
+So sellers do the rational thing. In the FTC's words, they use their inflated Amazon prices as "a price floor everywhere else"... which means, if the government is right, you pay the Amazon tax even at other stores.
+
+Then there's Project Nessie — an algorithm the FTC says predicted when competitors would match Amazon's price increases... so Amazon could raise prices and watch rivals follow. The agency alleges it generated more than one billion dollars in extra profit.
+Amazon says the FTC "grossly mischaracterizes" the tool — and that it was scrapped because it didn't work as intended. More broadly, Amazon says the lawsuit is wrong on the facts and the law.
+But there's one cost we haven't counted yet... the one that arrives after the sale is over.

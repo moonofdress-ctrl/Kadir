@@ -1,0 +1,35 @@
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <filter id="grain" x="0" y="0" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="11" stitchTiles="stitch" />
+          <feColorMatrix type="saturate" values="0" />
+          <feComponentTransfer><feFuncA type="linear" slope="1" /></feComponentTransfer>
+        </filter>
+        <filter id="deckle" x="-3%" y="-10%" width="106%" height="120%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="4" seed="7" />
+          <feDisplacementMap in="SourceGraphic" scale="10" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+        <filter id="ink" x="-5%" y="-5%" width="110%" height="110%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="23" result="n" />
+          <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -1.6 1.75" result="m" />
+          <feComposite in="SourceGraphic" in2="m" operator="in" />
+        </filter>
+        <!-- Stylized note, clearly not currency: no portrait, no seals, "PAPER TRAIL NOTE" -->
+        <symbol id="bill-art" viewBox="0 0 960 410">
+          <rect x="0" y="0" width="960" height="410" fill="#cfd8bf" />
+          <rect x="16" y="16" width="928" height="378" fill="none" stroke="#5f7356" stroke-width="5" />
+          <rect x="30" y="30" width="900" height="350" fill="none" stroke="#7d8f70" stroke-width="2" stroke-dasharray="2 6" />
+          <g stroke="#9fb08f" stroke-width="1.4" fill="none" opacity=".8">
+            <path d="M40 205 C 160 120, 280 290, 400 205 S 640 120, 760 205 S 880 290, 920 205" />
+            <path d="M40 225 C 160 140, 280 310, 400 225 S 640 140, 760 225 S 880 310, 920 225" />
+            <path d="M40 185 C 160 100, 280 270, 400 185 S 640 100, 760 185 S 880 270, 920 185" />
+          </g>
+          <ellipse cx="480" cy="205" rx="170" ry="120" fill="#e3e8d6" stroke="#5f7356" stroke-width="4" />
+          <text x="480" y="195" text-anchor="middle" font-family="Source Serif, serif" font-weight="700" font-size="54" fill="#3f5238">ONE</text>
+          <text x="480" y="250" text-anchor="middle" font-family="Source Serif, serif" font-weight="700" font-size="44" fill="#3f5238">HUNDRED</text>
+          <text x="70" y="110" font-family="Anton, sans-serif" font-size="92" fill="#3f5238">100</text>
+          <text x="770" y="370" font-family="Anton, sans-serif" font-size="92" fill="#3f5238">100</text>
+          <text x="480" y="368" text-anchor="middle" font-family="Plex Mono, monospace" font-weight="700" font-size="20" letter-spacing="6" fill="#5f7356">PAPER TRAIL NOTE</text>
+        </symbol>
+      </defs>
+    </svg>
