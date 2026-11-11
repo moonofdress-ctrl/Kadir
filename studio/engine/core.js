@@ -127,7 +127,7 @@
       // Thumbnail helper: ?thumb hides the screen overlays, so the thumbnail's own text band is the only lettering on top.
       if (/[?&]thumb/.test(location.search)) root.querySelectorAll(".hud").forEach((h) => { h.style.display = "none"; });
       // Preview helper: add ?fit to the URL to scale the 1920x1080 stage to the window.
-      if (/[?&]fit/.test(location.search)) { root.style.transform = "scale(" + window.innerWidth / 1920 + ")"; document.documentElement.style.cssText = document.body.style.cssText = "width:auto;height:auto"; }
+      if (/[?&]fit/.test(location.search)) { root.querySelectorAll("audio").forEach((x) => x.remove()); /* still frames need no sound; a sheet would load the mix once per frame */ root.style.transform = "scale(" + window.innerWidth / 1920 + ")"; document.documentElement.style.cssText = document.body.style.cssText = "width:auto;height:auto"; }
       return res;
     },
     // Preview helper: ?t=12.5 shows the frame at 12.5 seconds (the render never passes a query).

@@ -41,9 +41,9 @@ async function shoot(url, file, width, height, scale = 1, ready = null) {
   try {
     const p = await b.newPage({ viewport: { width, height }, deviceScaleFactor: scale }), errors = [];
     p.on("pageerror", (e) => errors.push(e.message));
-    await p.goto(`http://127.0.0.1:${port}/${url}`);
+    await p.goto(`http://127.0.0.1:${port}/${url}`, { waitUntil: "domcontentloaded", timeout: 60000 });
     if (ready) await p.waitForSelector(ready, { timeout: 15000 });
-    await p.evaluate(() => document.fonts.ready); await p.waitForTimeout(1200);
+    await p.evaluate(() => document.fonts.ready); await p.waitForTimeout(/sheet\.html/.test(url) ? 4500 : 1200); // a sheet is many copies of the episode: give them time to draw
     fs.mkdirSync(path.dirname(file), { recursive: true });
     await p.screenshot({ path: file, type: /\.jpe?g$/i.test(file) ? "jpeg" : "png", ...(/\.jpe?g$/i.test(file) ? { quality: 84 } : {}) });
     if (errors.length) console.warn("page errors: " + [...new Set(errors)].join(" | "));
@@ -62,9 +62,9 @@ async function frames() {
   const { res, total } = load(ep), every = parseFloat(opt("every", "0"));
   let ts = opt("t") ? opt("t").split(",").map(Number) : every > 0 ? Array.from({ length: Math.ceil(total / every) }, (_, i) => i * every) : [0.05, ...res.shots.map((s) => (s.t0 + s.t1) / 2), total - 0.5];
   ts = [...new Set(ts.filter((t) => t >= 0 && t <= total).map((t) => +t.toFixed(2)))].sort((a, b) => a - b);
-  const cols = parseInt(opt("cols", ts.length > 12 ? "4" : "3"), 10), w = 640, out = path.resolve(opt("out", path.join(ep, "render", "frames.jpg")));
-  // Long episodes: several sheets of at most 24 frames, so each stays readable.
-  const pages = []; for (let i = 0; i < ts.length; i += 24) pages.push(ts.slice(i, i + 24));
+  const cols = parseInt(opt("cols", "4"), 10), w = 640, out = path.resolve(opt("out", path.join(ep, "render", "frames.jpg")));
+  // Long episodes: several sheets of at most 12 frames, so each stays readable and loads quickly.
+  const pages = []; for (let i = 0; i < ts.length; i += 12) pages.push(ts.slice(i, i + 12));
   for (const [i, page] of pages.entries()) {
     const file = pages.length > 1 ? out.replace(/(\.\w+)$/, `_${String(i + 1).padStart(2, "0")}$1`) : out, rows = Math.ceil(page.length / cols);
     await shoot(`sheet.html?t=${page.join(",")}&cols=${cols}`, file, cols * w + (cols - 1) * 4, rows * 360 + (rows - 1) * 4);
