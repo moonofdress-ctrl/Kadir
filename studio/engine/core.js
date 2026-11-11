@@ -124,6 +124,8 @@
       const root = document.getElementById("root"), res = TM.resolve(story, lines, total); L = res.L;
       res.shots.forEach((s, i) => { const last = i === res.shots.length - 1, f = s.type === "card" ? card : s.type === "chapter" ? chapter : s.type === "split" ? split : scene; f(root, s, s.t0, s.t1, last); });
       div("grain", root); div("vig", root);
+      // Thumbnail helper: ?thumb hides the screen overlays, so the thumbnail's own text band is the only lettering on top.
+      if (/[?&]thumb/.test(location.search)) root.querySelectorAll(".hud").forEach((h) => { h.style.display = "none"; });
       // Preview helper: add ?fit to the URL to scale the 1920x1080 stage to the window.
       if (/[?&]fit/.test(location.search)) { root.style.transform = "scale(" + window.innerWidth / 1920 + ")"; document.documentElement.style.cssText = document.body.style.cssText = "width:auto;height:auto"; }
       return res;

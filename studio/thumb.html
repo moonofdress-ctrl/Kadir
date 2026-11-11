@@ -24,9 +24,9 @@
       if (q.get("image")) { const i = document.createElement("img"); i.id = "img"; i.src = q.get("image"); document.body.appendChild(i); }
       else { const f = document.createElement("iframe"); f.id = "pic"; f.src = "index.html?thumb&t=" + (q.get("t") || "2"); document.body.appendChild(f); }
       const sh = document.createElement("div"); sh.id = "shade"; document.body.appendChild(sh);
-      const b = document.createElement("div"); b.id = "band"; b.innerHTML = `<span>${esc(q.get("white") || "")}</span> <span class="r">${esc(q.get("red") || "")}</span>`; document.body.appendChild(b);
+      const b = document.createElement("div"); b.id = "band"; b.innerHTML = `<span id="fit"><span>${esc(q.get("white") || "")}</span> <span class="r">${esc(q.get("red") || "")}</span></span>`; document.body.appendChild(b);
       // Largest size that keeps the band inside the frame.
-      document.fonts.ready.then(() => { let size = 190; b.style.fontSize = size + "px"; while (b.scrollWidth > 1200 && size > 60) { size -= 4; b.style.fontSize = size + "px"; } document.body.setAttribute("data-ready", "1"); });
+      document.fonts.ready.then(() => { let size = 190; b.style.fontSize = size + "px"; const fit = document.getElementById("fit"); while (fit.getBoundingClientRect().width > 1180 && size > 60) { size -= 4; b.style.fontSize = size + "px"; } document.body.setAttribute("data-ready", "1"); });
     </script>
   </body>
 </html>
