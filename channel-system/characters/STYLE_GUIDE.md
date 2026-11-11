@@ -1,32 +1,53 @@
-# Character style guide
+# Style guide
 
-One look for every character, every video. The illustrator agent pastes the STYLE LOCK into every image prompt.
+Our videos are **drawn in code**, not generated as images. Every figure, set, chart and card is SVG and HTML built by the engine in `studio/`, so the look stays identical from shot to shot and a new scene costs minutes, not a round of image generation.
 
-## STYLE LOCK (paste into every prompt)
+The look is ours. Do not imitate another channel's figures, lettering, palette or signature objects.
 
-```
-Bold-outline editorial cartoon. Big head, small body (head about 1/3 of total height).
-Thick clean black outlines, flat colors with soft two-tone cel shading.
-Very expressive face: large round eyes, eyebrows doing most of the acting, sweat drops for stress.
-Simple, slightly desaturated background with one dramatic light source; character in full saturation.
-No text, no letters, no logos, no watermarks. 16:9 unless stated.
-```
+## House look: cut paper and ink
+- **Paper collage.** Flat shapes with an ink-navy outline (`#1b1d36`, 7 px) and a hard offset shadow, as if cut out and laid on a desk. A paper grain covers the whole frame.
+- **Warm, bright base**: cream walls, kraft floors. Night scenes are navy, never black.
+- **Accents**: red `#e0262b` (loss, danger), green `#1fa85b` (gain), mustard `#e8a317`, teal `#1f8a8a`, highlighter yellow `#ffe14d`.
+- **Type**: Anton (capitals) for cards, counters, signs and labels; Inter Tight for small captions; Source Serif for quoted documents; IBM Plex Mono for sources and ticker boards. No handwriting fonts.
+- **Colour follows the mood** through a grade over the whole shot: `green` euphoria, `red` panic, `sepia` history, `night` aftermath, `gold` money and vaults. Use three or more per episode.
 
-## Rules for every character
-- Same proportions, outline weight and palette in every image. Always attach the character's model sheet as an image reference.
-- One emotion per image, pushed to the extreme (thumbnails need it readable at phone size).
-- Each character has one signature color and one signature prop, so viewers recognize them in half a second.
+## Figures
+One skeleton for everybody (`studio/engine/rig.js`):
+- Squircle head, about 45% of the height. Block body. **Floating mitten hands, no arms.** Short legs, big shoes.
+- Tall white eyes with pupils, thick eyebrows that do most of the acting, a small nose.
+- Ten expressions: neutral, happy, shocked, scared, angry, smug, sad, confused, relieved, deadpan. One clear emotion at a time, changed on the word that causes it.
+- Hand poses: rest, hips, shrug, cheer, point, think, facepalm, hold, phone, wave, present.
+- Mouths move with the words when a figure speaks. Figures blink and breathe when idle.
+- Each cast member has one signature colour and one signature prop (`cast.md`).
+- Crowds are the same skeleton with palettes picked by number, so they vary but never change between renders.
+
+## Sets and props
+- A set is a function in `studio/engine/sets.js` that returns a back layer and a front layer; figures stand between them. Current sets: `studio`, `office`, `trading_floor`, `kitchen`, `street`, `board`, `night_city`, `plain`.
+- New stories need new places. The scene builder adds them in the same construction: flat shapes, ink outline, cut shadow, no gradients except skies and spotlights.
+- **Safe area.** The camera crops up to 7% from each edge. Keep faces, text and numbers inside x 170–1750, y 110–970.
+- Every held shot has something moving: the camera, drifting clouds, blinking boards, falling paper.
+- Charts are props (`bars`, `line`, `note`), drawn on the `board` set or over a scene. They animate: bars grow, lines draw, the number arrives last.
+
+## Screen furniture
+Counters, slams, labels, stamps, day tags, source chips, lower thirds, calendar pages, the corner clock, document cards and post cards live in `studio/engine/overlays.js`. Rules for using them are in `FORMAT_BOOK.md` section 11.
+
+## Companies and logos
+- **No real logos, no mascots made from logos.** A company appears as its name in our lettering on a sign, a building, a crate or a chip, or as a generic object for what it sells.
+- Ticker boards in the background show made-up names. Real prices appear only as overlays with a source.
 
 ## Real people (guest caricatures)
 Allowed, with these limits:
 - Only public figures (CEOs, politicians, famous investors), only about their public role.
-- Clearly a cartoon: exaggerated features, never photorealistic, never a deepfake.
-- No invented quotes presented as real. Real quotes are cited on screen; skit lines are obviously jokes.
+- Built from the same skeleton with two or three traits (hair, glasses, signature clothing). Clearly a cartoon, never realistic.
+- A name strip (lower third) the first time they appear.
+- No invented quotes presented as real, and no imitation of their voice. Real quotes go on a document or post card, verbatim, with source and date. Skit lines are obviously jokes.
 - No sexual, degrading or hateful depictions; never shown endorsing a product.
-- Keep a likeness through two or three traits (hair, glasses, signature clothing), not a portrait.
+- Lesser-known people (analysts, officials) get a name strip over a neutral figure, not a caricature.
 
-## Thumbnail layout (house formula)
-1. Top band: 2–4 words or one money figure, white or red, heavy sans, black outline.
-2. Center: one character, extreme emotion, holding or reacting to the story's object.
-3. Background: the dramatic situation (fire, cliff, crash chart, courtroom), darker and blurred.
-4. One accent color only (our red: #E0262B). Readable at 160×90 px.
+## Thumbnail (house formula)
+The thumbnail is the one place a richer illustration is allowed; it may be painted or generated, then checked by a person.
+1. Top band: the subject in white and one figure in red. Heavy sans, dark outline. Four words at most.
+2. Centre: one character, one extreme emotion, holding or facing the story's object.
+3. Background: one dramatic situation, darker and softer than the character.
+4. Readable at 160×90 px.
+5. **It shows the first frame of the video**: same scene, same object, same number.

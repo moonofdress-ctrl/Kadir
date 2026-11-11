@@ -1,0 +1,48 @@
+{
+  "episode": "demo",
+  "demo": true,
+  "title": "Engine demo (code-drawn)",
+  "viewer": "BENNY",
+  "shots": [
+    {
+      "id": "s01", "cue": "L001", "set": "office", "opts": { "screen": "green" }, "camera": "push_in",
+      "actors": [
+        { "who": "BENNY", "x": 520, "prop": "phone", "screen": "green", "look": "right", "enter": "none",
+          "acts": [ { "cue": "L001", "word": 9, "face": "confused" } ] }
+      ],
+      "overlays": [ { "type": "counter", "from": 0, "to": 100, "prefix": "$", "dur": 0.9, "pos": "br", "cap": "YOUR ORDER", "at": 0.5 } ]
+    },
+    {
+      "id": "s02", "cue": "L001", "word": 12, "set": "board", "opts": { "title": "WHERE YOUR $100 GOES" }, "camera": "pull_out",
+      "props": [ { "type": "note", "x": 400, "y": 330, "w": 1080, "amount": "$100", "slice": 0.52, "sliceLabel": "$52", "at": 0.9 } ],
+      "overlays": [ { "type": "counter", "from": 0, "to": 52, "prefix": "-$", "dur": 0.8, "tone": "red", "pos": "br", "cap": "NEVER REACHES THE SELLER", "at": 0.9 } ]
+    },
+    {
+      "id": "s03", "type": "split", "cue": "L002",
+      "panels": [
+        { "set": "street", "opts": { "signs": ["THE BRAND"] }, "focus": 946, "stamp": "NOT HERE", "stampAt": 0.45 },
+        { "set": "street", "opts": { "signs": ["THE FACTORY"], "time": "dusk" }, "focus": 946, "cue": "L002", "word": 3, "stamp": "NOT HERE", "stampAt": 0.45 }
+      ]
+    },
+    {
+      "id": "k01", "cue": "L003", "set": "studio", "opts": { "wall": "#cfe3df", "floor": "#9fbdb6" }, "camera": "push_in",
+      "actors": [
+        { "who": "BENNY", "x": 600, "face": "shocked", "prop": "phone", "screen": "red", "speaks": ["L003"],
+          "acts": [ { "cue": "L004", "at": 1.2, "face": "deadpan" } ] },
+        { "who": "HAL", "x": 1320, "face": "smug", "prop": "mug", "pose": "phone", "enter": "slide_right", "cue": "L003", "at": 0.5, "speaks": ["L004"] }
+      ]
+    },
+    { "id": "t01", "type": "card", "cue": "L005", "text": "So where does it go? Three places.", "emph": ["three"] },
+    {
+      "id": "s04", "type": "split", "cue": "L005", "word": 7,
+      "panels": [
+        { "set": "plain", "opts": { "color": "#e8a317" }, "props": [ { "type": "sign", "x": 960, "y": 300, "t": "FEES", "size": 120 } ],
+          "actors": [ { "who": "HAL", "x": 960, "y": 1010, "face": "smug", "prop": "cash", "flip": false } ] },
+        { "set": "plain", "opts": { "color": "#9db7d1" }, "cue": "L005", "word": 8, "props": [ { "type": "sign", "x": 960, "y": 300, "t": "FULFILLMENT", "size": 92 } ],
+          "actors": [ { "who": "REGGIE", "x": 960, "y": 1010, "face": "deadpan", "prop": "stamp", "flip": false } ] },
+        { "set": "plain", "opts": { "color": "#c9705a" }, "cue": "L005", "word": 10, "props": [ { "type": "sign", "x": 960, "y": 300, "t": "ADS", "size": 120 } ],
+          "actors": [ { "who": "CHAD", "x": 960, "y": 1010, "face": "happy", "pose": "cheer", "flip": false } ] }
+      ]
+    }
+  ]
+}

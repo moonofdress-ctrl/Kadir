@@ -19,3 +19,7 @@ amazon-hidden-tax/engine/cartoon/assets/ep/
 amazon-hidden-tax/engine/cartoon/renders/
 channel-system/episodes/*/demo_preview.mp4
 amazon-hidden-tax/amazon_hidden_tax_v3_preview.mp4
+# Studio engine: episode audio is copied in by studio/tools/build.mjs
+studio/assets/ep/
+studio/renders/
+channel-system/episodes/*/render/
