@@ -1,0 +1,49 @@
+{
+  "signature": "d39d2c72c5a92d46",
+  "total": 10.28,
+  "lufs": -14.03,
+  "true_peak_db": -1.1,
+  "limiter": {
+    "max_cut_db": 4.6,
+    "pct_cut_over_1db": 2.85
+  },
+  "voice": {
+    "speakers": {
+      "N": {
+        "clips": 2,
+        "gain_db": 0
+      }
+    },
+    "clips_with_silent_edges": 0
+  },
+  "music": {
+    "source": "house bed (made in code)",
+    "files": [],
+    "beds": [
+      "steady"
+    ],
+    "climax_chapters": [],
+    "db_under_voice": 19,
+    "uncredited": []
+  },
+  "effects": {
+    "count": 2,
+    "per_minute": 11.7,
+    "list": [
+      {
+        "t": 8.21,
+        "name": "stamp",
+        "why": "s04 panel 1 stamp"
+      },
+      {
+        "t": 8.996,
+        "name": "stamp",
+        "why": "s04 panel 2 stamp"
+      }
+    ]
+  },
+  "dead_air": {
+    "pauses_over_250ms": 0,
+    "longest": []
+  }
+}
