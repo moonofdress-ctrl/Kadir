@@ -1,5 +1,5 @@
-# Image prompts
+# Thumbnail prompts
 
-Generate in Higgsfield with Nano Banana Pro, 2k, 16:9 unless noted. Attach the listed model sheet as reference.
+One prompt per concept in `thumbnails.md`. 16:9, no text in the image (the text band is added afterwards). The image must show the first shot of the video.
 
-1. 
+1.

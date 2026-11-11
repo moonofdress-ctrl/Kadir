@@ -1,6 +1,13 @@
-# TITLE: 
-## CH1 
-[SCENE s01 | bg:  | cam: push_in | text: ""]
-N: 
-[SKIT k01 | bg: ]
-BENNY: 
+# TITLE:
+## DEVICES
+MOTIF:
+PLANT:  -> PAYOFF:
+PLANT:  -> PAYOFF:
+VIEWER:
+## CH1
+[SCENE s01 | set:  | text: ]
+N:
+[CARD]
+N:
+[SKIT k01 | set: ]
+BENNY:
