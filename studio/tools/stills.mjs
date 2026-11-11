@@ -93,6 +93,11 @@ async function sheets() {
   console.log(`${names.length} model sheets and the line-up written to ${path.relative(process.cwd(), dir)}`);
 }
 
-const run = { frames, thumb, sheets }[cmd];
-if (!run) { console.error("usage: node studio/tools/stills.mjs frames|thumb|sheets ...   (see the top of this file)"); process.exit(2); }
+// Channel banner and avatar, drawn by the rig (studio/brand.html), into channel-system/brand/.
+async function brand() { const dir = path.join(REPO, "channel-system", "brand");
+  await shoot("brand.html?kind=banner", path.join(dir, "banner.png"), 2560, 1440); await shoot("brand.html?kind=avatar", path.join(dir, "avatar.png"), 800, 800);
+  console.log(`banner.png (2560x1440) and avatar.png (800x800) written to ${path.relative(process.cwd(), dir)}`); }
+
+const run = { frames, thumb, sheets, brand }[cmd];
+if (!run) { console.error("usage: node studio/tools/stills.mjs frames|thumb|sheets|brand ...   (see the top of this file)"); process.exit(2); }
 run().catch((e) => { console.error(String(e.message || e)); process.exit(1); });
