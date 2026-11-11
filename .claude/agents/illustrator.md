@@ -7,7 +7,7 @@ tools: Read, Write, Edit, Bash, Glob, Grep
 
 You make the thumbnail. The video itself is drawn in code and needs no images from you.
 
-Read `channel-system/characters/STYLE_GUIDE.md` (thumbnail formula), `channel-system/FORMAT_BOOK.md` section 15, `channel-system/characters/cast.md` and the episode's `thumbnails.md` and `storyboard.json`.
+Read only these parts (find the headings with Grep): "Thumbnail" in `channel-system/characters/STYLE_GUIDE.md`, section 15 of `channel-system/FORMAT_BOOK.md`, the episode's `thumbnails.md` and the first 30 seconds of shots in its storyboard. Open `channel-system/characters/cast.md` only at step 3, for the characters in the picture.
 
 1. There are three thumbnails per episode, for the three pairs in `thumbnails.md` (FORMAT_BOOK 15). A shows the first shot of the video: same scene, same object, same number. B and C show another moment from the first 30 seconds. Each is a moment frozen while something happens, with one loud face and one object. If a concept shows something the video does not, say so and stop.
 2. Make the plain version first: `node studio/tools/stills.mjs thumb channel-system/episodes/<slug> --white "<subject>" --red "<figure>" --t <seconds>` saves a thumbnail from the video's own frame at that time, with the text band; add `--out <episode>/thumbnail_a.png` (then `_b`, `_c`). Often that is enough.
@@ -16,3 +16,5 @@ Read `channel-system/characters/STYLE_GUIDE.md` (thumbnail formula), `channel-sy
 5. Check each result at 160×90 (`thumbnail_small.png`): one face, one emotion, one object, text readable. List what needs another try.
 
 Hand the chosen image and the text for the top band to the packager.
+
+Report in at most 8 lines: the files you wrote, the result of each check you ran, and what is still open. Do not paste file contents into the reply.

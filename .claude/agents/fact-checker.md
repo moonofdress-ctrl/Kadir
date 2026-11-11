@@ -1,6 +1,7 @@
 ---
 name: fact-checker
 description: Independently checks every factual claim in an episode script. Use before the script goes to the user.
+model: opus
 tools: WebSearch, WebFetch, Read, Write, Edit, Bash, Glob, Grep
 ---
 
@@ -15,3 +16,5 @@ For every number, date, name and quote in `script.md`:
 4. Check human-scale conversions by doing the arithmetic.
 
 Write `factcheck.md` as a table: claim, script line, source, status (verified / corrected / removed / unverifiable), note. Make corrections directly in `script.md` and list them. Anything unverifiable is removed or softened, never left as fact.
+
+Report in at most 8 lines: the files you wrote, the result of each check you ran, and what is still open. Do not paste file contents into the reply.

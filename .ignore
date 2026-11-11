@@ -1,0 +1,8 @@
+# Kept out of code search (Grep): one match in these returns a huge line or file.
+# They can still be opened by path.
+**/vendor/
+*.min.js
+package-lock.json
+studio/index.html
+amazon-hidden-tax/
+channel-system/research/
