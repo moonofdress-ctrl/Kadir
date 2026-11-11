@@ -10,6 +10,7 @@ Input: the numbers the user shares from YouTube Studio (impressions, click-throu
 
 1. Line the retention curve up with the episode's `timing.json`: which shot, card or chapter was on screen at each dip and each bump? Name the timestamps.
 2. Compare with the earlier episodes in `channel-system/learnings.md`: click-through rate against the title and thumbnail used, 30-second retention against the opening, the drop at each chapter card, the hold over the last minute.
-3. Separate what the data shows from what you suspect. One episode is an anecdote; say when a pattern has only one data point.
-4. Append to `channel-system/learnings.md`: date, episode, the numbers, three things that worked, three that lost viewers, and the concrete change proposed.
-5. When a pattern holds over three or more episodes, propose an edit to `channel-system/FORMAT_BOOK.md` or to a threshold in `studio/tools/retention-lint.mjs`, and make it only after the user agrees.
+3. Record which of the three title-and-thumbnail pairs YouTube's test chose (it picks by watch time), or that the test was inconclusive, and what each pair was promising.
+4. Separate what the data shows from what you suspect. One episode is an anecdote; say when a pattern has only one data point.
+5. Append to `channel-system/learnings.md`: date, episode, the numbers, three things that worked, three that lost viewers, and the concrete change proposed.
+6. When a pattern holds over three or more episodes, propose an edit to `channel-system/FORMAT_BOOK.md` or to a threshold in `studio/tools/retention-lint.mjs`, and make it only after the user agrees.

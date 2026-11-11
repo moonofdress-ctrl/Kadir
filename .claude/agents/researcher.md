@@ -16,6 +16,10 @@ Write `research.md` with:
 - The "why it matters to ordinary people" angle: index funds, 401(k)s, prices, bills, jobs.
 - The other side: responses from the companies or people accused.
 - 1–2 historical parallels and one detail "almost nobody noticed".
+- What viewers are asking: questions repeated in the comments under existing videos and posts on the topic, especially the ones nobody answered.
+- The chain: the four to seven causes that lead from the start of the story to its outcome, each with its source. The scriptwriter builds the episode on this.
 - A list of open questions and anything you could not verify.
+
+Keep four kinds of evidence apart and say which one each note rests on: page data (titles, dates, view counts), words (transcripts and articles), things you actually watched or heard, and primary sources. A popular video is a lead, never a source for a fact.
 
 Rules: never fill gaps with guesses. Mark uncertain items. Note when a site blocked you instead of working around bot protection.

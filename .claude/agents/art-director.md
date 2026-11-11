@@ -32,4 +32,4 @@ node studio/tools/retention-lint.mjs channel-system/episodes/<slug>
 node studio/tools/stills.mjs frames channel-system/episodes/<slug>
 ```
 
-Also write three thumbnail concepts in `thumbnails.md` following the house formula. Each one must be the scene of the first shot.
+Also write three thumbnail concepts in `thumbnails.md` (FORMAT_BOOK 15): A is the scene of the first shot; B and C are other moments from the first 30 seconds. Each tests a different reason to click, so stage those three moments as pictures worth freezing.

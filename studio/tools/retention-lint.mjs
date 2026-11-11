@@ -6,6 +6,7 @@
    Usage: node studio/tools/retention-lint.mjs <episode_dir> [--json]
    Exit code 1 when any check FAILS. WARN does not fail the run. Checks that need a long video
    are reported as n/a for short pieces (demos, tests). */
+import fs from "node:fs";
 import path from "node:path";
 import { createRequire } from "node:module";
 import { load } from "./build.mjs";
@@ -100,6 +101,12 @@ need(240, "T4", "Viewer addressed directly", () => { const n = narr.filter((l) =
 need(story.demo ? Infinity : 30, "T5", "Title question spoken by 0:25", () => { const t = story.title || ""; const key = t.toLowerCase().replace(/[^a-z0-9 ]/g, "").split(" ").filter((w) => w.length > 3);
   const hit = lines.find((l) => l.a <= 25 && key.length && key.every((w) => l.text.toLowerCase().includes(w)));
   add("T5", "Title question spoken by 0:25", g(!!hit, !key.length), hit ? mmss(hit.a) : key.length ? "not found" : "no title set", "the title's words in a line by 0:25"); });
+// The promise and the chain (FORMAT_BOOK 4): the script says what it will answer and how the causes connect.
+const scriptFile = path.join(ep, "script.md");
+if (fs.existsSync(scriptFile) && !story.demo) { const md = fs.readFileSync(scriptFile, "utf8"), blk = (/^##\s+PROMISE\s*$([\s\S]*?)(?=^##\s)/m.exec(md) || [])[1] || "";
+  const val = (k) => ((new RegExp("^" + k + ":[ \\t]*(.*)$", "m").exec(blk) || [])[1] || "").trim(), links = val("CHAIN").split(/->|→/).map((x) => x.trim()).filter(Boolean).length;
+  const ok = val("QUESTION") && val("ANSWER") && links >= 4;
+  add("T6", "The promise and the chain are written", g(ok, !!blk), blk ? `question ${val("QUESTION") ? "yes" : "missing"}, answer ${val("ANSWER") ? "yes" : "missing"}, ${links} links in the chain` : "no ## PROMISE block", "QUESTION, ANSWER and a CHAIN of 4-7 causes in script.md"); }
 const wc = lines.reduce((n, l) => n + l.text.split(/\s+/).filter(Boolean).length, 0), wpm = wc / (total / 60), est = lines.some((l) => l.est);
 need(120, "V1", "Speaking pace", () => add("V1", "Speaking pace", g(wpm >= 148 && wpm <= 166, true), `${wpm.toFixed(0)} wpm${est ? " (estimated, no audio yet)" : ""}`, "150-165 wpm (reference: 157)"));
 if (!story.demo) add("V2", "Length 12-15 minutes", g(total >= 690 && total <= 915, true), mmss(total), "11:30-15:15");

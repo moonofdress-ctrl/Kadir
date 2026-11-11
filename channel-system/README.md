@@ -16,7 +16,8 @@ A newsroom of agents that turns a market event into a 12–15 minute cartoon exp
 8  editor         → sound mix, build, lint, frame check, render → render/
 9  qa-reviewer    → qa.md, sends fixes back
 10 illustrator    → thumbnail art that matches the first frame
-11 packager       → package.md, thumbnail, captions             ─── GATE 3: you approve and upload
+11 packager       → package.md: three title+thumbnail pairs,     ─── GATE 3: you approve and upload
+                    captions, the Shorts plan
 12 analyst        → learnings.md, a few days after the upload
 ```
 
@@ -32,7 +33,8 @@ node studio/tools/retention-lint.mjs channel-system/episodes/<slug>
 
 | Path | What |
 |---|---|
-| `FORMAT_BOOK.md` | The rules for script, picture, sound, policy and packaging. The single most important file. |
+| `FORMAT_BOOK.md` | The rules for script, picture, sound, policy, packaging and Shorts. The single most important file. |
+| `STORY_ROUTES.md` | Twelve ways to organise a money story so each beat makes the next one necessary. |
 | `characters/STYLE_GUIDE.md` | The house look, limits for real people and logos, the thumbnail formula. |
 | `characters/cast.md` | Recurring characters: who they are and how to use them. |
 | `episodes/_template/` | Empty episode folder to copy. |
