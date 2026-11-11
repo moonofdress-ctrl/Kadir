@@ -1,0 +1,48 @@
+{
+  "episode": "gallery",
+  "demo": true,
+  "title": "Component gallery",
+  "viewer": "MARTHA",
+  "shots": [
+    { "id": "g01", "cue": "L001", "set": "trading_floor", "opts": { "mood": "red", "papers": true }, "grade": "red", "camera": "shake",
+      "overlays": [
+        { "type": "clock", "t": "10:35", "ap": "AM", "tz": "ET", "at": 0 },
+        { "type": "counter", "from": 0, "to": 2000, "prefix": "-$", "suffix": "B", "tone": "red", "pos": "tr", "cap": "S&P 500, BY MIDMORNING", "at": 0.4, "dur": 1.4 },
+        { "type": "tag", "t": "THURSDAY", "tone": "red", "at": 0.2 }
+      ] },
+    { "id": "g02", "cue": "L002", "set": "trading_floor", "opts": { "mood": "green", "party": true }, "grade": "green", "camera": "pan_right",
+      "overlays": [ { "type": "slam", "t": "+3%", "tone": "green", "at": 0.9 }, { "type": "tag", "t": "WEDNESDAY", "tone": "green", "at": 0.2 } ] },
+    { "id": "g03", "cue": "L003", "set": "street", "opts": { "signs": ["BANK", "CAFE", "PHARMACY"] }, "camera": "push_in",
+      "actors": [
+        { "who": "CHAD", "x": 620, "face": "happy", "pose": "cheer", "speaks": ["L003"] },
+        { "who": "MARTHA", "x": 1260, "face": "deadpan", "pose": "hips", "enter": "slide_right", "cue": "L004", "at": -0.3, "speaks": ["L004"],
+          "acts": [ { "cue": "L004", "word": 2, "face": "smug", "pose": "present" } ] }
+      ] },
+    { "id": "g04", "type": "card", "cue": "L005", "text": "So what actually broke?", "emph": ["broke"] },
+    { "id": "g05", "type": "chapter", "cue": "L006", "number": 2, "title": "The Top" },
+    { "id": "g06", "cue": "L006", "set": "studio", "camera": "tilt_up",
+      "overlays": [ { "type": "calendar", "month": "OCT", "day": 6, "dow": "TUESDAY", "from": { "month": "NOV", "day": 5 }, "x": 845, "y": 300, "at": 0.3, "flipAt": 1.3 } ] },
+    { "id": "g07", "cue": "L007", "set": "office", "opts": { "desk": false }, "camera": "push_in",
+      "overlays": [
+        { "type": "doc", "source": "Sample earnings call \u00b7 transcript", "date": "26 AUG", "by": "Chief financial officer", "quote": "We know some people will call this circular.", "hl": ["circular"], "at": 0.3, "hlAt": 1.6 },
+        { "type": "lower_third", "name": "SAMPLE NAME", "role": "Chief financial officer", "at": 1.0 }
+      ] },
+    { "id": "g08", "cue": "L008", "set": "plain", "opts": { "color": "#bfe0ea" }, "camera": "pull_out", "motif": "tower",
+      "props": [ { "type": "tower", "x": 960, "y": 900, "tilt": 5, "blocks": [
+        { "t": "CRACK 1", "color": "#e8a317", "cue": "L008", "word": 2 }, { "t": "CRACK 2", "color": "#1f8a8a", "cue": "L008", "word": 3 },
+        { "t": "CRACK 3", "color": "#c9705a", "cue": "L008", "word": 4 }, { "t": "CRACK 4", "color": "#e0262b", "cue": "L008", "word": 5 } ] } ] },
+    { "id": "g09", "cue": "L009", "set": "board", "opts": { "title": "QUARTERLY SALES" }, "camera": "push_in",
+      "props": [ { "type": "bars", "x": 420, "y": 240, "w": 1080, "h": 620, "items": [ { "label": "A YEAR AGO", "val": 47, "show": "$47B", "color": "#9aa0b4" }, { "label": "LAST QUARTER", "val": 96, "show": "$96B", "color": "#1fa85b" } ] } ],
+      "overlays": [ { "type": "source", "t": "sample data", "at": 0.4 }, { "type": "stamp", "t": "x2", "at": 1.3 } ] },
+    { "id": "g10", "cue": "L010", "set": "board", "opts": { "title": "SHARE PRICE" }, "camera": "pan_left", "grade": "red",
+      "props": [ { "type": "line", "x": 260, "y": 280, "w": 1400, "h": 520, "pts": [60, 66, 64, 72, 78, 74, 70, 52, 40, 31], "label": "-9%", "dur": 1.1, "at": 0.1 } ] },
+    { "id": "g11", "cue": "L011", "set": "studio", "opts": { "wall": "#d9d3e6", "floor": "#a59fbf" }, "camera": "push_in",
+      "actors": [ { "who": "REGGIE", "x": 380, "face": "deadpan", "prop": "stamp" } ],
+      "overlays": [ { "type": "post", "source": "Post", "date": "5 NOV", "name": "Sample Official", "handle": "@sample_official", "text": "Not yet.", "x": 1210, "y": 220, "at": 0.3 } ] },
+    { "id": "g12", "cue": "L012", "set": "kitchen", "opts": { "night": true, "window": "datacenter" }, "camera": "tilt_down", "callback": "bill",
+      "actors": [ { "who": "MARTHA", "x": 1420, "y": 960, "face": "angry", "prop": "bill", "flip": true } ],
+      "overlays": [ { "type": "label", "t": "+$27 A MONTH", "pos": "tl", "at": 1.0 }, { "type": "sfx", "t": "THUD", "x": 520, "y": 620, "at": 0.3 } ] },
+    { "id": "g13", "cue": "L013", "set": "night_city", "camera": "pull_out", "grade": "night", "callback": "bill",
+      "actors": [ { "who": "MARTHA", "x": 960, "y": 1000, "scale": 0.8, "face": "sad", "look": "up", "prop": "bill" } ] }
+  ]
+}
