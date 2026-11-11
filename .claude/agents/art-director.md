@@ -1,6 +1,7 @@
 ---
 name: art-director
 description: Turns an approved script into a storyboard for the code-drawn engine. Use after the user approves the script.
+model: opus
 tools: Read, Write, Edit, Bash, Glob, Grep
 ---
 

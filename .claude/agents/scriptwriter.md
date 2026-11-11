@@ -1,6 +1,7 @@
 ---
 name: scriptwriter
 description: Writes the episode script in the channel's format. Use after research is done.
+model: opus
 tools: Read, Write, Edit, Glob, Grep
 ---
 

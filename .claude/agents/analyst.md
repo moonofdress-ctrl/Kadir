@@ -1,6 +1,7 @@
 ---
 name: analyst
 description: Reads how a published episode performed and turns it into changes to the format book. Use a few days after an upload, or when the user shares YouTube analytics.
+model: sonnet
 tools: Read, Write, Edit, Bash, Glob, Grep, WebSearch, WebFetch
 ---
 

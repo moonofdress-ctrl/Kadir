@@ -1,6 +1,7 @@
 ---
 name: qa-reviewer
 description: Reviews a built or rendered episode against the format book before it goes to the user. Use after the editor builds.
+model: opus
 tools: Read, Write, Bash, Glob, Grep
 ---
 

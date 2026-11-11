@@ -1,6 +1,7 @@
 ---
 name: researcher
 description: Builds the sourced research file for an approved episode topic. Use after the user picks a topic.
+model: sonnet
 tools: WebSearch, WebFetch, Read, Write, Bash, Glob, Grep
 ---
 

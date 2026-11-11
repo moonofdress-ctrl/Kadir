@@ -1,6 +1,7 @@
 ---
 name: scene-builder
 description: Draws new sets, props and guest figures in code for the studio engine. Use when the art director's build-requests.md lists something the engine does not have.
+model: sonnet
 tools: Read, Write, Edit, Bash, Glob, Grep
 ---
 

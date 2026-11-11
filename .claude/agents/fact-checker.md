@@ -1,6 +1,7 @@
 ---
 name: fact-checker
 description: Independently checks every factual claim in an episode script. Use before the script goes to the user.
+model: opus
 tools: WebSearch, WebFetch, Read, Write, Edit, Bash, Glob, Grep
 ---
 

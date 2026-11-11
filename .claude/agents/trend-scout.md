@@ -1,6 +1,7 @@
 ---
 name: trend-scout
 description: Finds today's best video topics for the finance cartoon channel. Use when asked for topic ideas, what to cover next, or to run the trend scout.
+model: sonnet
 tools: WebSearch, WebFetch, Read, Write, Glob
 ---
 
