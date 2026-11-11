@@ -218,3 +218,103 @@ Candidates (ranked; characters counted by script):
 | 5 | What Is Nvidia's CEO Risk to Your Index Fund? | 45 | Not found; "CEO risk" is jargon, breaks the plain-words rule. |
 
 Recommendation: ranks 1 and 2 for search match (contain "Nvidia" and "CEO"); rank 3 for the money angle but it loses the search term. Writer/user picks; the brief's own limit says the story is the money, not the man, and "Probed" keeps that neutral. Top by the format-book test (typed question, plain, under 60, no figure, not in use) is rank 1, "Why Is Nvidia Down Over Its CEO?". Re-run the search on the day of upload: new videos on this story appear hourly.
+
+## Update 2026-11-11 evening: after-hours fall
+
+**What this rests on.** Words only (news articles opened by fetch, plus search-result summaries). Nothing watched or heard. No primary source (no WSJ or NYT text, no Nvidia release after 8 Nov) was opened: WSJ and NYT were not fetched (paywalled; no attempt to bypass). Every outlet below is therefore a report OF a report. Tags: FACT (reported figure), ESTIMATE (own arithmetic or analyst view), ALLEGATION. "Opened" = page fetched; "search only" = search-result summary. The story is still moving; everything here is as of the evening of Wed 11 Nov 2026, before the 12 Nov session. Nothing on 12 Nov pre-market or trading exists yet (search returned only 9 Nov items).
+
+### 1. What each outlet reported, and on whose authority
+
+| Item | Detail | Authority | Source | Tag / status |
+|---|---|---|---|---|
+| WSJ | Nvidia's board is preparing to remove ("oust") Huang. Board could meet "as soon as" Wednesday (CNBC, Trending Topics) to decide his future. GamesBeat says "as soon as Thursday"; the Yahoo Finance live blog says "as soon as today". Whether any meeting happened: not reported. | "People familiar with the matter", number not given, none named | CNBC https://www.cnbc.com/2026/11/11/nvidia-jensen-huang-affair-employee.html (opened, published Wed 11 Nov 5:06 p.m. ET); CBS https://www.cbsnews.com/news/nvidia-stock-dives-report-board-prepares-oust-jensen-huang/ (opened); Trending Topics https://www.trendingtopics.eu/nvidia-board-oust-jensen-huang-second-affair/ (opened); GamesBeat https://gamesbeat.com/nvidia-shares-fall-8-on-new-allegations-of-ceos-2nd-affair-and-board-preparing-ouster/ (opened) | ALLEGATION (unconfirmed by Nvidia). Day of the meeting differs between outlets: Wed vs Thu. Do not state a day. |
+| NYT | Huang had a second relationship, with a senior Nvidia executive, a vice president (health care) who joined in 2008 and reports directly to him. Reported to have been seen "being affectionate" at a San Jose hotel during the company's March conference (GTC). Yahoo Finance's summary adds that a bystander photographed them and a security guard "sequestered them" and offered a nondisclosure agreement; CNBC says "captured on camera". | NYT: "five people who worked at the company" (Trending Topics, opened; Reuters cited there as unable to verify either report). CNBC's own add-on: one former employee, anonymous, says rumours circulated for years. | Yahoo Finance live blog https://finance.yahoo.com/technology/live/nvidia-live-updates-nvidia-stock-tanks-in-after-hours-after-allegations-of-a-second-affair-surface-222438011.html (opened); Yahoo article https://finance.yahoo.com/technology/article/nvidia-reportedly-preparing-to-oust-ceo-huang-after-alleged-affairs-with-spy-nvidia-exec-231315876.html (opened, truncated); CNBC (opened) | ALLEGATION. "Five people" rests on one aggregator (Trending Topics) plus a search summary; the NYT text was not opened. NOT TO BE NAMED IN THE SCRIPT (the woman; also the first woman, a Megaspeed executive). If the script mentions it at all: "a second relationship, reported by the New York Times". |
+| Order of events | Trending Topics: NYT came first, WSJ after; shares were about 3% lower after the NYT, about 8% after the WSJ, about 9% at the latest check. Clock times for each report are NOT established: the Yahoo live blog stamps ("10:31 PM", "10:44 PM", labelled Tue 10 Nov) cannot be reconciled with CNBC's 5:06 p.m. ET Wed publication and the "after the Wednesday close" framing. Page stamps are probably a different time zone or mis-bucketed. | n/a | as above | OPEN: do not give clock times for the two reports in the script. |
+| Bloomberg | Live-blog headline (22 min before the page's last update): "Bloomberg reported Nvidia is working with an outside firm to explore replacements for Huang." Not found anywhere else; a separate search found no such Bloomberg article. | Unknown (Bloomberg, not opened) | Yahoo live blog (opened, one line only) | SEARCH/SECOND-HAND ONLY. UNVERIFIED. Do not use. |
+| Reuters | Could not verify either report (as stated in Trending Topics; Reuters text not opened). | | Trending Topics (opened) | Do not use as a fact without opening Reuters. |
+
+### 2. Replies and silences (record all)
+
+- Nvidia: declined to comment on the second relationship or a possible removal (Trending Topics, opened). CNBC: "Neither responded immediately" (Nvidia and the executive); crisis-PR firm Heller also did not respond. GamesBeat: Nvidia asked for comment, no response reported. These differ ("declined" vs "did not respond"): use "did not respond to requests for comment" only if the writer wants the safer wording. FACT per the outlets; no Nvidia statement on either new report was found.
+- The executive named by the NYT: "did not immediately respond" (CNBC; Trending Topics). No denial found. NOT TO BE NAMED.
+- Huang: no statement on the new reports found. His earlier Sunday 8 Nov staff memo (CNBC, opened): "I was unfaithful to my wife. My actions hurt her and our children. There is no excuse for what I did." and "I am deeply sorry." Trending Topics: he reportedly ended a phone call with the NYT by saying he should not be contacted directly (second-hand, ALLEGATION/report).
+- Board: no new statement on the WSJ report found (CNBC). Its Sunday 8 Nov statement (primary, already in this file, section C): independent-director committee, outside counsel; "no reason to believe that either national security or NVIDIA secrets were compromised"; expressed confidence in Huang. CNBC and GamesBeat say the board hired Wachtell, Lipton, Rosen & Katz (outside counsel; secondary, opened).
+- Earlier in the week, a Nvidia spokesperson told Axios that Huang was committed to continuing as CEO "without interruption" (paraphrase in Fortune, 11 Nov 3:02 a.m. ET, opened; Axios not opened). Citi's Atif Malik, 10 Nov: "The company has stated that Mr. Huang will remain CEO while the investigation proceeds" (Yahoo live blog, opened). That sentence is now at risk of being stale.
+- President Trump: called Huang "an honorable guy"; said the FBI is "looking into" it (Yahoo live blog, Mon 9 Nov entries). Trump reaction to the new reports: none found.
+- Congress: Rep. Brian Mast said he is prepared to subpoena Huang; Huang had until 11 Nov to respond to a closed-door briefing request (Yahoo live blog; Trending Topics: deadline passed Wednesday). Whether he replied: not reported. Sens. Warren and Banks issued a joint statement seeking answers (Fortune, opened). Pending too: an FBI inquiry and an investor lawsuit in California (Trending Topics).
+
+### 3. After-hours moves (SNAPSHOTS, not closes)
+
+- Reference: regular session Wed 11 Nov closed up 2.9% at $173.73 (Trending Topics, opened; matches the script). Fri 6 Nov close $186.64 (stockanalysis, search only). Mon 9 Nov -4.27% (a ticker widget reads "161.59, down 7.21 (-4.27%)" on the Yahoo pages; unlabelled, taken as the Monday figure) and the 9.51% two-day fall is already in this file.
+- Snapshots, in order of the reports (clock times not given by any outlet):
+  - about -3% after the NYT report (Trending Topics). A search aggregation gave -3.7% as the early figure (search only; not opened; this is the "-3.7%" the brief mentions).
+  - "more than 8%" down, to $159.51, after the WSJ report (CBS, opened; GamesBeat says "8%"). Arithmetic check: $159.51 / $173.73 = -8.19%.
+  - "more than 9%" (CNBC, opened, 5:06 p.m. ET article time; Trending Topics "most recently about 9%").
+  - Trending Topics: if the fall held to Thursday's open the stock would trade near $158 and the market value would fall below $4 trillion (writer's projection, ESTIMATE).
+- CBS: market value down "more than $450 billion" since the 8 Nov probe announcement (opened; this uses the after-hours price, so it is a snapshot figure).
+- CNBC: shares down about 7% for the week and on pace for a sixth straight weekly decline, tied to AI-buildout worries and a post-midterm selloff on data-center rules (opened). The six-week claim is CNBC's; not checked.
+- Thin after-hours trading: figures from 4:00-8:00 p.m. ET are noisy; figures from the earlier 9 Nov after-hours session ranged 3.4% to 5.6% depending on the venue (search only). Say "in after-hours trading, before Thursday's open".
+- 12 Nov pre-market and regular session: not available as of this research.
+
+### 4. Succession: what is and is not reported
+
+- Neither the WSJ nor the NYT report, as relayed, names an interim CEO or a successor (Trending Topics, CBS, CNBC, Yahoo: all opened). Analysts say Nvidia "lacks any obvious successors" (CBS).
+- Board process per the reports: a board meeting "as soon as" 11 or 12 Nov to decide Huang's future; nothing on a vote, a search firm (the Bloomberg line is unverified), or an interim. The existing independent-director investigation continues (Wachtell). The WSJ text itself was not read: whether it describes a process, a vote count or a name is OPEN.
+- Board facts (Fortune, 11 Nov, opened): 11 members; all but Huang classed independent; no board chair; lead independent director Stephen Neal, who can convene independent directors without Huang. Four directors including Huang have served since 1993, one joined 1997, Mark Stevens served 1993-2006 and returned 2008. Fortune quotes Prof. Jo-Ellen Pozner (Santa Clara): the CEO "is either replaced or put on leave while investigations are carried out"; "doubtful that it has taken succession planning very seriously". Prof. Jason Schloetzer (Georgetown): "I don't expect a 'stay or go' decision. It will be more like a 'stay, with less'". Fortune's search summary says Neal could be interim CEO: that is Fortune speculation, not a report.
+- Speculation (search only, not opened): CFO Colette Kress and co-founder Chris Malachowsky; The Information floated Lisa Su and Rene Haas. All unconfirmed; none is reported by the WSJ.
+- Patrick Moorhead (Moor Insights), Wed 11 Nov: "This one will be hard, if not impossible, to recover from" (GamesBeat, opened, from his X post); Yahoo live blog says he said removal "doesn't pose short-term risk" but Nvidia has no planned successor (second-hand).
+- Motif note: the empty chair and the spare pole. The reports still name no spare pole. The earlier line in this file (Apple: successor ready in advance, small fall; Berkshire: successor ready, still -5%) now has a sharper contrast: a reported removal with no named successor.
+- Ownership (CNBC, opened): about 800 million shares co-owned with his wife and held in trusts; about 70 million personally; CNBC says he "has limited economic control over the company". Not verified against filings. Not needed for the script.
+
+### 5. 17 Nov earnings, analysts, officials
+
+- 17 Nov date: unchanged in all opened sources; Trending Topics says results come "Tuesday of next week" with CFO Colette Kress commenting (consistent with the company release in section D). A search summary that said "Monday 17 Nov" is a day-of-week error. No postponement reported. Whether Huang will take part in the call if removed or on leave: not reported; the script line "its chief executive takes questions" is now a risk.
+- Baird (Tristan Gerra), Wed 11 Nov, 2:47 p.m. per the live blog: downgrade to Neutral, note title "Icarus' Rise and Fall; Company Will Be Fine." The script already uses Baird (opened here only via the live blog; the earlier fact-check covers it).
+- Dan Ives (Wedbush; script labelling per fact-check): Nvidia could be worth 25-30% less if Huang were removed; "is not replaceable" (live blog, Tue 10 Nov). Trending Topics: "nearly 30%".
+- Dan Niles, Mon 9 Nov: Huang not essential to near-term products but "very important to the company" (live blog).
+- No post-WSJ rating changes or target cuts found yet; the analyst quotes above were all made before or around the reports.
+- Other new facts on the live blog (second-hand): The Information, 10 Nov, reported the relationship enabled about $7.5B of chip sales to China; Century Litong said "Our company has no business dealings with Ms. Huang." Megaspeed denied diverting banned chips to China (9 Nov). China denied the espionage claims (GamesBeat). Not used in the script; flagged only. ALLEGATION.
+
+### 6. Index-fund arithmetic, extended (ESTIMATE, own arithmetic, other stocks held flat)
+
+Base from section B: Nvidia 7.30% of SPY (4 Nov holdings; Trefis), own estimate about 7.0% at the Fri 6 Nov close; start of the slice on $10,000: $730 (or $700). The weight already shrank with the two-day fall and rose a little Wednesday; the true Wednesday-close weight was not published. Treat "Nvidia slice at the Wed close" as the Friday slice times the Friday-to-Wednesday move: $173.73 / $186.64 = 0.9308, or -6.92%. Slice at Wed close: $730 x 0.9308 = $679.5; $700 x 0.9308 = $651.6.
+
+An additional fall measured from the Wednesday close (after-hours SNAPSHOTS, not closes):
+
+| Additional fall | Level | Slice lost at 7.3% | Slice lost at 7.0% |
+|---|---|---|---|
+| 3.7% (early snapshot, search only) | about $167.3 | $25.1 | $24.1 |
+| 8.19% (the $159.51 snapshot, CBS) | $159.51 | $55.7 | $53.4 |
+| 9% (snapshot, CNBC) | about $158.1 | $61.2 | $58.6 |
+
+Cumulative from the Friday close, if the 9% snapshot held at Thursday's open: $158.1 / $186.64 = 0.847, a fall of 15.3%. On $10,000: $730 x 0.153 = $111.7 (7.3%); $700 x 0.153 = $107.1 (7.0%). Check on arithmetic: that is about 1.1% of the whole fund. Compare with Monday-Tuesday's $67-69. Plain words: "on every $10,000 in an S&P 500 fund, the extra after-hours fall is about $55-60, bringing the total from last Friday to about $105-110, if it holds." Caveats: it is a snapshot, not a close; it may be higher or lower by morning; and it is Nvidia's contribution only, not the fund's result (other stocks move). The caveat in section B (fund rose Monday) still applies. S&P-level effect: 9% of a weight near 7% is about 0.6% of the index from Nvidia alone (own arithmetic; weight at the Wed close not published, so rough). The earlier "0.78 points per 10%" rule stays removed.
+
+### 7. Script claims out of date or needing a qualifier (script.md read: CH8 and CH9 only, plus Grep)
+
+| Line | Text | Problem | Suggested handling (writer decides) |
+|---|---|---|---|
+| 226 (end CH7) | "And then, on Wednesday, it went up." | Still true for the regular session; but the story now continues after the bell. | Keep, add a turn or an on-screen line "after the bell". |
+| 236 (CH8) | "Nothing about the investigation had changed." | Out of date as an ending: after the close, new reports (NYT, WSJ) changed the picture. True only for the daytime. | Qualify: "By the closing bell, nothing about the investigation had changed. After it, that changed." |
+| 236 (CH8) | "...the demand had not changed either." | Still supported by the forecast fact (no company change to $108B). | Keep with "by the close". |
+| 241 | "Your seven dollars got a little of itself back. Not all." | After-hours snapshot erases some or most of it ($55-60 more on $10,000 if it holds). | Add the snapshot, labelled. |
+| 259 | "Not yet." (is it over) | Strengthened by the new reports. | Keep. |
+| 261 | "Door one, the board's investigation, which has found nothing in public so far." | Still true as stated, but the WSJ says the board may act before any finding. | Add: "...and the WSJ reports the board may not wait for it" (attributed, unconfirmed). |
+| 269-270 | "Nvidia's board gave no deadline. So the finding could land before Nvidia's next results, or after them." | Board meeting reportedly imminent. | Qualify with the WSJ report. |
+| 275 | "its chief executive takes questions from the people who price the stock" | Premise at risk if Huang is removed or on leave. | Write "Nvidia's results, with whoever is leading the company then" or qualify. |
+| 280 | Skit "What's the first question going to be?" | Still works. | Keep. |
+| 291 | "Investors have now seen the empty chair." | Gains a literal reading; still a metaphor. | Keep; attribution "reported" for any board decision. |
+| 295-302 | One pole / count the poles | Strengthened by the reports (no spare named). | Keep; do not state a successor, none is reported. |
+| Any "Huang remains CEO" statement | | Board said so on 8 Nov; WSJ now reports otherwise. | Always "as of the board's 8 Nov statement". |
+
+Editorial limits: private life stated once ("a second relationship, reported by the New York Times, which the company has not commented on"); no woman named or drawn; both reports are allegations with attribution; Nvidia's silence is "did not respond / declined to comment", not a denial and not a confirmation.
+
+### 8. Not verified / open
+
+- Clock times for the NYT and WSJ reports, and which came first by the minute (live-blog stamps inconsistent).
+- Day of the board meeting (Wed vs Thu) and whether it happened.
+- WSJ and NYT texts: not opened. The "five people", the hotel, the guard and NDA detail, and any detail on board process or successor are second-hand.
+- Bloomberg "outside firm exploring replacements": appears only as a live-blog headline; unverified.
+- Reuters "could not verify": second-hand.
+- CNN page (cnn.com/2026/11/11/investing/nvidia-stock-jensen-huang) returned HTTP 451 (legal block) when fetched; not worked around. Yahoo Finance's live blog and article were readable but truncated and carried no after-hours percentages. investing.com and investinglive: searched; no 11 Nov Huang item found (search returned only 2024-25 items and 9 Nov coverage), so not opened.
+- 12 Nov pre-market and session; any post-WSJ analyst rating or target changes; any Nvidia, board or Huang statement after 5 p.m. ET; whether Huang answered the congressional deadline; whether the 17 Nov call goes ahead as scheduled.
+- Whether CNBC's phrase that Huang's Sunday admission was of an affair "with" the Megaspeed executive is accurate: Yahoo says his memo did not name the person. Do not repeat; not needed.
