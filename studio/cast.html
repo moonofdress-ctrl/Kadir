@@ -1,0 +1,50 @@
+<!doctype html>
+<!-- Model sheet of one cast member, drawn by the rig: /cast.html?who=BENNY (saved to PNG by tools/stills.mjs sheets).
+     /cast.html?who=ALL shows the whole cast side by side. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>cast</title>
+    <link rel="stylesheet" href="engine/studio.css" />
+    <script src="vendor/gsap.min.js"></script>
+    <script src="engine/rig.js"></script>
+    <style>
+      html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #f6f1e4; }
+      svg { position: absolute; left: 0; top: 0; }
+      .h { font-family: "Anton", sans-serif; fill: #1b1d36; }
+      .c { font-family: "Inter Tight", sans-serif; font-weight: 800; fill: #1b1d36; letter-spacing: .08em; }
+    </style>
+  </head>
+  <body>
+    <script>
+      const NS = "http://www.w3.org/2000/svg", q = new URLSearchParams(location.search), who = (q.get("who") || "BENNY").toUpperCase();
+      const svg = document.createElementNS(NS, "svg"); svg.setAttribute("viewBox", "0 0 1920 1080"); svg.setAttribute("width", 1920); svg.setAttribute("height", 1080); document.body.appendChild(svg);
+      const text = (x, y, t, size, cls, anchor) => { const e = document.createElementNS(NS, "text"); e.setAttribute("x", x); e.setAttribute("y", y); e.setAttribute("font-size", size); e.setAttribute("class", cls); e.setAttribute("text-anchor", anchor || "start"); e.textContent = t; svg.appendChild(e); };
+      // Draw one figure. `clip` = [x, y, w, h] shows only that window (used for head shots).
+      function figure(name, x, y, k, o, clip) {
+        let parent = svg;
+        if (clip) { const id = "c" + svg.querySelectorAll("clipPath").length, cp = document.createElementNS(NS, "clipPath"); cp.setAttribute("id", id);
+          cp.innerHTML = `<rect x="${clip[0]}" y="${clip[1]}" width="${clip[2]}" height="${clip[3]}" rx="18"/>`; svg.appendChild(cp);
+          const bg = document.createElementNS(NS, "rect"); [["x", clip[0]], ["y", clip[1]], ["width", clip[2]], ["height", clip[3]], ["rx", 18], ["fill", "#e9e1cf"]].forEach(([a, v]) => bg.setAttribute(a, v)); svg.appendChild(bg);
+          parent = document.createElementNS(NS, "g"); parent.setAttribute("clip-path", `url(#${id})`); svg.appendChild(parent); }
+        const wrap = document.createElementNS(NS, "g"); wrap.setAttribute("transform", `translate(${x},${y}) scale(${k})`); parent.appendChild(wrap);
+        const r = Rig.make(name, o || {}); wrap.appendChild(r.el); Rig.init(r, (o && o.face) || "neutral", (o && o.pose) || (o && o.prop ? "phone" : "rest"), o && o.look);
+      }
+      const names = Object.keys(Rig.CAST);
+      if (who === "ALL") {
+        text(90, 130, "THE CAST", 96, "h");
+        names.forEach((n, i) => { const x = 250 + i * 355; figure(n, x, 930, 0.8, { face: ["happy", "happy", "smug", "deadpan", "deadpan"][i] || "neutral", flip: false }); text(x, 1030, n, 44, "h", "middle"); });
+      } else {
+        const faces = Object.keys(Rig.FACES), poses = Object.keys(Rig.POSES), props = Object.keys(Rig.PROPS);
+        text(90, 130, who, 110, "h"); text(92, 176, "MODEL SHEET · DRAWN BY studio/engine/rig.js", 24, "c");
+        figure(who, 330, 980, 1.18, { face: "neutral" });
+        text(640, 212, "EXPRESSIONS", 26, "c");
+        faces.forEach((f, i) => { const cx = 640 + (i % 5) * 250, cy = 232 + Math.floor(i / 5) * 248, w = 226, h = 204;
+          figure(who, cx + w / 2, cy + 344, 0.55, { face: f }, [cx, cy, w, h]); text(cx + w / 2, cy + h + 30, f.toUpperCase(), 22, "c", "middle"); });
+        text(640, 768, "POSES AND PROPS", 26, "c");
+        const row = poses.slice(1, 6).map((p) => ({ pose: p, label: p })).concat(props.slice(0, 2).map((p) => ({ prop: p, label: p })));
+        row.forEach((o, i) => { const x = 720 + i * 172; figure(who, x, 1026, 0.34, Object.assign({ face: "neutral" }, o)); text(x, 1062, o.label.toUpperCase(), 18, "c", "middle"); });
+      }
+    </script>
+  </body>
+</html>

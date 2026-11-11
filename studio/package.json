@@ -1,0 +1,12 @@
+{
+  "name": "studio",
+  "private": true,
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "lint:retention": "node tools/retention-lint.mjs",
+    "preview:frames": "node tools/preview.mjs",
+    "dev": "npx --yes hyperframes@0.9.26 preview",
+    "check": "npx --yes hyperframes@0.9.26 check",
+    "render": "npx --yes hyperframes@0.9.26 render"
+  }
+}

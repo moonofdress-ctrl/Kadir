@@ -2,9 +2,30 @@
 
 Five recurring characters plus a template for guest caricatures. Designs are deliberately different from other finance cartoon channels: no glasses-and-green-suit host, no bow ties.
 
-## How to make the model sheets (one-time, in Higgsfield)
+## In the video: drawn in code
+The cast is built into the engine (`studio/engine/rig.js`, the `CAST` table). Use the names below in `storyboard.json`:
+
+| Name | Role in a story | Signature colour | Props that suit them |
+|---|---|---|---|
+| `BENNY` | The viewer: an ordinary saver | Mustard hoodie | `phone` (green or red screen) |
+| `CHAD` | The hype trader | Purple hoodie and cap | `phone` |
+| `HAL` | The fund manager | Navy suit, gold tie | `tablet`, `mug`, `cash` |
+| `MARTHA` | The household that pays the bill | Teal cardigan | `bill` |
+| `REGGIE` | Any regulator or rule-maker | Grey suit, red tie, lanyard | `stamp` |
+
+Model sheets drawn by the rig are in `sheets/` (one per character and `cast_lineup.png`). Redraw them after any change to the rig: `node studio/tools/stills.mjs sheets`.
+
+Companies, markets and institutions are not cast members: they are **living things** (`"thing": "box"`, `"chip"`, `"dome"`...), listed in `STYLE_GUIDE.md`.
+
+Any other name gives a background figure with a palette picked from the name. A guest caricature is a figure with a `style` override (hair, glasses, clothes); see `STYLE_GUIDE.md` for the limits.
+
+The viewer stand-in for an episode (usually `BENNY`, sometimes `MARTHA`) is named in the storyboard's `"viewer"` field and must own the final shot.
+
+The descriptions below are the character bible. The image prompts under each character are for **thumbnail art only**; the video never uses generated images.
+
+## Thumbnail art: model sheets (one-time, in Higgsfield)
 1. Model: **Nano Banana Pro**, 2k, aspect 16:9 (expression sheets 1:1).
-2. For each character, generate the **model sheet** first. Pick the best one and save it to `sheets/<name>_model.png` (or just tell Claude which generation to pull from your Higgsfield history).
+2. Attach the rig's sheet from `sheets/<name>_model.png` as the image reference, so the painted character matches the one in the video. Save a painted sheet you like next to it as `sheets/<name>_painted.png`.
 3. Generate the expression and pose sheets with the chosen model sheet attached as an image reference.
 4. Every later scene image attaches the model sheet as a reference so the character stays the same.
 

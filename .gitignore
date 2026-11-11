@@ -18,3 +18,17 @@ amazon-hidden-tax/amazon_hidden_tax_v2_preview.mp4
 amazon-hidden-tax/engine/cartoon/assets/ep/
 amazon-hidden-tax/engine/cartoon/renders/
 channel-system/episodes/*/demo_preview.mp4
+amazon-hidden-tax/amazon_hidden_tax_v3_preview.mp4
+# Studio engine: episode audio is copied in by studio/tools/build.mjs
+studio/assets/ep/
+studio/renders/
+channel-system/episodes/*/render/
+# Sound: the mix and the pre-tighten originals are rebuilt by studio/tools/mix.mjs; the house kit by studio/tools/sounds.mjs
+channel-system/episodes/*/audio/mix.wav
+channel-system/episodes/*/audio/raw/
+studio/assets/sounds/
+channel-system/episodes/*/thumbnail_small.png
+channel-system/episodes/*/shorts/*/audio/mix.wav
+channel-system/episodes/*/shorts/*/audio/raw/
+channel-system/episodes/*/render/
+studio/gallery/render/

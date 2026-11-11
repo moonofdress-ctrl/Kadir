@@ -1,38 +1,28 @@
-# Channel identity (draft)
+# Channel identity
 
 ## Name
-**Recommended: Sketchy Markets** (handle `@SketchyMarketsTV`)
-- Double meaning: the videos are sketched cartoons, and the stories are about markets behaving badly.
-- Fits the investigative, "follow the money" tone and the allegation-heavy topics.
-- Note: `@SketchyMarkets` (without TV) is already taken by another channel; check it before committing so the names don't get confused.
+**Cutout Billions** (handle `@CutoutBillions`)
+- "Cutout" is how the videos look: figures and places cut from paper. It also says what we do: cut the story out of the noise.
+- "Billions" says big-money stories at a glance.
+- Chosen by the user on 2026-11-11. The handle had no page on YouTube that day; confirm it in YouTube Studio when creating the channel.
 
-Other handles that looked free on 2026-11-11 (a 404 on youtube.com/@handle; reserved handles can also return 404, so confirm in YouTube Studio):
-
-| Name | Handle | Angle |
-|---|---|---|
-| Benny Explains | `@BennyExplains` | Mascot-led; the host is the brand. |
-| Market Sketch | `@MarketSketchTV` | Plain and descriptive. |
-| Stock Sketch | `@StockSketchTV` | Plain, stock-focused. |
-| Benny and the Bulls | `@BennyAndTheBulls` | Playful, mascot-led. |
-
-Avoid names starting with "Paper" (too close to Paper Billions) and anything with "Explainer" alone (too close to Ink Explainer).
+Names we dropped, and why: Sketchy Markets (two channels called Sketch Markets and Sketching Markets already exist), Benny's Billions (many channels use the name), Penny Panels (searches return wall and quilt panels), Cutout Capital (the handle is taken, and "Capital" reads like an investment firm).
 
 ## Tagline
-"Big market news, explained in cartoons."
+"Big money news, cut out and explained."
 
-## Channel description (draft)
+## Channel description
 ```
-When the market crashes, a company implodes or a CEO makes headlines, we explain what actually happened and what it means for your money, in cartoons.
+When a market crashes, a company implodes or a lawsuit lands, we cut the story out of the noise and explain what happened and what it means for your money, in cartoons.
 
-New episodes within a day or two of the news. Every number is sourced in the description.
-
-Nothing here is financial advice.
+Every number is sourced in the description. Nothing here is financial advice.
 ```
 
 ## Visual identity
-- Colors: mustard yellow #E8A317 (Benny), ink black #111111, alarm red #E0262B.
+- Colours: mustard #E8A317 (Benny), ink navy #1B1D36, paper #F6F1E4, alarm red #E0262B, money green #1FA85B.
 - Fonts: Anton (headlines, thumbnails), Inter Tight (subtitles, labels). Both OFL.
-- Avatar: Benny's shocked face on mustard yellow.
-- Banner: name on a black band (inside YouTube's 1546×423 safe area), faint market lines above and below.
+- Avatar: Benny's shocked face on a paper disc (`avatar.png`, 800×800).
+- Banner: the name on an ink band inside YouTube's 1546×423 safe area, banknotes around it (`banner.png`, 2560×1440).
+- The hidden piggy bank in the videos is called Penny.
 
-`banner_draft.png` and `avatar_draft.png` use a placeholder Benny drawn in code. Replace with the real Benny once his model sheet is generated in Higgsfield.
+Both pictures are drawn by the rig. Redraw them after a change to the cast: `node studio/tools/stills.mjs brand`.
