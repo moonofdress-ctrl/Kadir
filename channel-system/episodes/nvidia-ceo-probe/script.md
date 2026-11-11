@@ -3,16 +3,17 @@
 ROUTE: 4 Pull out one support
 QUESTION: Why is Nvidia down over its CEO?
 ANSWER: Because investors just saw how much of a four-trillion-dollar company rests on one man, and nobody knows yet whether he stays.
-CHAIN: Nvidia grows to about seven percent of the index -> so every saver owns it -> its value leans on one founder with no named successor, who is also its voice in Washington -> reporters start asking about one customer and the rules it may have got around -> the board opens an investigation into him -> so investors price two risks at once, losing him and losing the China argument (a fall between Berkshire's planned handover and Tesla's lawsuit against its boss) -> but the business itself has not changed, so the price waits on a board review with no deadline, on Washington and on 17 November
+CHAIN: Nvidia grows to about seven percent of the index, so every saver owns it -> its value leans on one founder with no named successor, who is also its voice in Washington -> reporters start asking about one customer and the rules it may have got around -> the board opens an investigation into him -> so investors price two risks at once, losing him and losing the China argument (a fall between Berkshire's planned handover and Tesla's lawsuit against its boss) -> but the business itself has not changed, so the shares bounce at Wednesday's close -> until, after the close, two newspaper reports from unnamed sources (one: the board is preparing to remove him; unconfirmed by Nvidia) erase the bounce, so as of Wednesday night the price waits on the board, Washington and 17 November, with nobody named for the empty chair
 ## DEVICES
 MOTIF: the big tent | one centre pole holds the whole tent up; every cause frays a rope or tilts the pole, and more people stand under it each time it returns
 PLANT: Benny's phone showing the Nvidia slice of his index fund in red, minus six hundred dollars (0:10) -> PAYOFF: CH2, CH7 and the final shot
 PLANT: the empty chair with a nameplate that says NEXT (0:38) -> PAYOFF: CH3 and the last minute
-PLANT: "Keep that seven in mind" (CH2) -> PAYOFF: CH7 and CH8
+PLANT: "Keep that seven in mind" (CH2) -> PAYOFF: CH8 (the close) and CH9 (after the close, "Remember the seven dollars?")
+PLANT: Hal's "We're Wednesday." (CH8 k12) -> PAYOFF: CH9 k15a on the night bus, "It's still Wednesday."
 PLANT: the kitchen for rent (CH4) -> PAYOFF: CH6 and CH8
 PLANT: Benny's jar RETIREMENT $100,000 (CH2) -> PAYOFF: CH6 what-if scoop, CH8 kitchen table
-PLANT: the spare pole (CH7 Apple tent, "NAMED") -> PAYOFF: CH7 Berkshire skit, CH9 empty chair being dusted
-VIEWER: BENNY on his phone (CH1), at the kitchen table with MARTHA (CH2), under the tent (CH3, CH6), with the tape measure at the four tents (CH7), on the bus (CH8), final shot
+PLANT: the spare pole (CH7 Apple tent, "NAMED") -> PAYOFF: CH7 Berkshire skit, CH9 (the Journal's report and still no spare pole named; the chair dusted but empty)
+VIEWER: BENNY on his phone (CH1), at the kitchen table with MARTHA (CH2), under the tent (CH3, CH6), with the tape measure at the four tents (CH7), on the bus with a green arrow (CH8), on the night bus with the arrow red again (CH9), final shot
 ## CH1 The two-day drop
 [SCENE s01 | set: a huge striped tent at dusk, one centre pole, a chip with a worried face sitting on top of the pole | text: counter -$430B]
 N: In two days, Nvidia lost about four hundred and thirty billion dollars in value... and it hadn't sold one chip less.
@@ -130,7 +131,7 @@ N: The same day, the company publishes an email from the chief executive to staf
 [SCENE s28 | set: the boardroom, the board as five figures behind a banner NO REASON TO BELIEVE]
 N: The board adds one more line. It says it has no reason to believe that national security or company secrets were compromised.
 [SCENE s29 | set: a door marked INDEPENDENT DIRECTORS, a law firm with a face and a briefcase knocking]
-N: The investigation is run by directors who don't work for him, with an outside law firm. He stays in the job while they look.
+N: The investigation is run by directors who don't work for him, with an outside law firm. At the time, the company said he would stay in the job while they look.
 [SKIT k08 | set: Benny's sofa, phone light on his face, Martha asleep beside him]
 BENNY: Should I be reading this at midnight?
 MARTHA: No.
@@ -233,12 +234,12 @@ N: A company called CoreWeave, which rents out Nvidia chips, had reported strong
 CHAD: We're back!
 HAL: We're Wednesday.
 [SCENE s44 | set: the chip factory from the opening, belts still running, the same sign BUSINESS AS USUAL]
-N: Nothing about the investigation had changed. What Wednesday showed is that the demand had not changed either.
+N: By the closing bell, nothing about the investigation had changed. What Wednesday's trading showed is that the demand had not changed either.
 [SCENE s45 | set: a board, a single bar growing to $108B, a tag COMPANY FORECAST, a source chip]
 [CARD]
 N: Nvidia's own forecast for this quarter is about one hundred and eight billion dollars in sales. It has announced no change to that number.
-[SCENE s46 | set: Benny on the bus again, phone screen a small green arrow, still below where it started]
-N: Your seven dollars got a little of itself back. Not all.
+[SCENE s46 | set: Benny on the bus again in afternoon light, phone screen a small green arrow, still below where it started, a sticker on the screen AT THE CLOSE]
+N: By the close, your seven dollars got a little of itself back. Not all.
 [CARD]
 N: And here is the part almost nobody noticed.
 [SCENE s47 | set: the forecast bar under a magnifying glass, a tiny footnote: CHINA DATA CENTER CHIPS $0]
@@ -253,7 +254,29 @@ MARTHA: So the business is fine.
 BENNY: The business is fine.
 MARTHA: Then why did it cost me six hundred dollars?
 BENNY: ...Look up.
-## CH9 What holds
+[CARD]
+N: Then the closing bell rang. And Wednesday wasn't over.
+## CH9 After the bell
+[CARD]
+N: After the close, the bounce ran out.
+[SCENE s49b | set: the trading floor after hours, half the lights off, a cleaner mopping round the bell; two folded newspapers with faces slide in under the door, mastheads THE NEW YORK TIMES and THE WALL STREET JOURNAL, each wearing a sticker UNNAMED SOURCES; the wall calendar still on WED 11 NOV | text: TWO REPORTS, NOT CONFIRMED]
+N: Two newspapers published reports. Both rest on people they did not name.
+[SCENE s49c | set: evidence card: the New York Times newspaper with a face holding a sealed envelope marked PRIVATE behind its back, a tag REPORTED; no person drawn]
+N: The New York Times reported a second relationship, which the company has not commented on.
+[SCENE s49d | set: the corridor outside the boardroom, light under the door, the Wall Street Journal newspaper with a face pressing its ear to the keyhole; down the corridor the empty chair NEXT, still empty | text: REPORT, NOT CONFIRMED BY NVIDIA]
+[CARD]
+N: And The Wall Street Journal reported that Nvidia's board is preparing to remove its chief executive.
+N: Nvidia did not respond to requests for comment on that report.
+N: As of Wednesday night, the board had made no new public statement.
+[SCENE s49e | set: Benny on the night bus, phone screen MY INDEX FUND, the small green arrow from the afternoon flipping back into a long red line, a rubber stamp thumping across the screen AFTER HOURS: SNAPSHOT, NOT A CLOSE | text: NVIDIA down more than 8% after the close (snapshot, as of Wed night)]
+[CARD]
+N: In after-hours trading, before Thursday's open, the shares fell more than eight percent.
+N: That wiped out Wednesday's gain, and more.
+N: Remember the seven dollars? On a hundred thousand dollars in that fund, that's roughly another five or six hundred dollars from Nvidia's slice... if it holds.
+N: It's a snapshot, not a close. And that's our arithmetic, not a forecast.
+[SKIT k15a | set: the night bus, Benny and Hal squeezed into one seat as in the opening, Benny's red phone lighting both faces, a stop sign outside the window WED 11 NOV]
+BENNY: You said, "We're Wednesday."
+HAL: It's still Wednesday.
 N: So is it over?
 [CARD]
 N: Not yet.
@@ -266,13 +289,14 @@ N: The committee directs the review, not its lawyers. And the lawyers should ans
 N: At the end, the committee reports its findings to the board. The guide doesn't say they must be published.
 [SCENE s50c | set: the boardroom wall calendar with every page blank, a director shrugging with a pen hovering over it, the tent pole waiting outside the window]
 [CARD]
-N: And Nvidia's board gave no deadline.
-N: So the finding could land before Nvidia's next results, or after them. Nobody outside that room knows.
+N: Nvidia's board gave no deadline.
+N: But The Wall Street Journal reports the board could meet soon to decide his future.
+N: No decision had been reported by Wednesday night.
 [SCENE s51 | set: the domed building holding three folders marked BILL, none of them stamped]
 N: Door two, Washington, where none of those bills is law so far.
 [SCENE s52 | set: a calendar page TUE 17 NOV, an envelope with a face marked RESULTS]
 [CARD]
-N: Door three is a date. Tuesday, the seventeenth of November. After the closing bell, Nvidia reports its results, and its chief executive takes questions from the people who price the stock.
+N: Door three is a date. Tuesday, the seventeenth of November. After the closing bell, Nvidia is due to report its results, and whoever leads it then takes questions from the people who price the stock.
 [SCENE s52a | set: the domed building with a face pulling down blinds on a room marked CLOSED DOOR, calendar page WED 18 NOV, three chairs with nameplates HOUSE COMMITTEE CHAIR]
 N: The next day, three House committee chairs want a closed-door briefing.
 [SKIT k14 | set: the bus, Chad and Benny, close]
@@ -286,9 +310,9 @@ N: That's more than a billion dollars of sales a day.
 N: Listen for three things that day. Does the forecast move? Does the board say anything new? And does anyone say the word China?
 [SCENE s53b | set: a fortune-teller's booth with a sign OPINION, a crystal ball with a face marked NEXT QUARTER, inside it a small cloud with a face marked AI SPENDING drooping; on the table a press card as a name strip: ADAM SPATACCO, THE MOTLEY FOOL]
 N: On the first one, a writer at The Motley Fool points to the forecast for the next quarter. A weak one, he argues, could be a sign that AI spending is slowing. That's an opinion, not a fact.
-[SCENE s54 | set: the empty chair with the nameplate NEXT, someone dusting it]
+[SCENE s54 | set: the empty chair with the nameplate NEXT, a duster passing over it, the seat still empty, a card propped on it AS OF WED 11 NOV, NIGHT: NOBODY NAMED]
 [CARD]
-N: Whatever the board finds, one thing has already changed. Investors have now seen the empty chair. A company this big does not get to leave it empty forever.
+N: Whatever the board decides, one thing has already changed. Investors have now seen the empty chair. As of Wednesday night, neither report names anyone to fill it. A company this big does not get to leave it empty forever.
 [SCENE s55 | set: the hundred-dollar note with its seven-dollar strip, taped back on a little crooked]
 N: And you have seen your seven dollars. You own this story whether you follow it or not.
 [SKIT k15 | set: under the tent at night, Benny and Hal looking up, close]
@@ -296,7 +320,7 @@ BENNY: Is one pole normal?
 HAL: It's not unusual.
 [CARD]
 N: So why is Nvidia down over its CEO?
-[SCENE s56 | set: the tent at night, one pole, a light at the top, the chip with a face still sitting up there]
+[SCENE s56 | set: the tent at night, one pole, a light at the top, the chip with a face still sitting up there, a small flag on the pole AS OF WED 11 NOV, NIGHT]
 N: Not because it sold one chip less. Because one man's trouble made everyone look up at the same time...
 [SCENE s57 | set: Benny alone under the tent, jar in his arms, looking up at the pole]
 N: ...and count the poles.
@@ -312,13 +336,13 @@ N: ...and count the poles.
 | CH5 -> CH6 | The investigation does not change chip sales, **so** the fall must be pricing something else: two fears. |
 | CH6 -> CH7 | Both fears pushed the price down, **but** is nine and a half percent big for a company whose boss is in trouble? |
 | CH7 -> CH8 | Nvidia's fall sits between Berkshire's and Tesla's, **but** on Wednesday it went up. |
-| CH8 -> CH9 | The business is unchanged, **so** the price is waiting on things that have not happened yet. |
+| CH8 -> CH9 | By the close the business looked unchanged and the shares had bounced, **but** after the bell two newspaper reports erased the bounce, **so** as of Wednesday night the price waits on the board, Washington and 17 November. |
 | Title | "Why Is Nvidia Down Over Its CEO?" (32 characters): rank 1 in research.md "Title check 2026-11-11"; a typed question, plain words, under 60, no money figure (FORMAT_BOOK 1). The opening card (CH1) and the last question (CH9) say it word for word; the last line answers it with the PROMISE answer ("one man"). Re-run the title search on upload day. |
-| Count | 1,996 spoken words after the extension fact-check (shell count 2026-11-11: N and character lines from CH1 to this self-check, `wc -w`; the same count gave 1,972 before the fact-check edits), about 12.7 minutes at 157 words a minute. 9 chapters, 16 skits (k11b new; longest gap about 168 words, about 64 seconds, CH9 k13 -> k14; shortest 47 seconds), 35 `[CARD]` lines (one every 21.5 seconds; every chapter after CH1 opens on a card), 8 narration lines that address the viewer, average sentence about 8.5 words. |
-| Plants | Benny's red phone (CH1) -> CH8 bus, final shot. Empty chair (CH1) -> CH3, CH7 (n09), CH9. "Keep that seven in mind" (CH2) -> CH8, CH9. Kitchen for rent (CH4) -> CH6, CH8. Benny's $100,000 jar (CH2) -> CH6 what-if scoop, CH8 kitchen table. Spare pole "NAMED" (CH7 Apple) -> CH7 Berkshire skit, CH9 dusted chair. "Not unusual" (CH4) -> CH9 last skit. |
-| Where the evidence stops | CH4 ("according to news reports"), CH5 (the allegation, the denial, the untested lawsuit), CH6 (forecast, "our arithmetic on his what-if, not a prediction", "reported", Megaspeed's denial, no finding), CH7 (Tesla: "accused", "the company wasn't the defendant", his "unjustified" reply and the no-admit settlement; "a comparison of size, not a forecast"), CH9 ("found nothing in public so far", no deadline, analysts' tally, "an opinion, not a fact"). |
-| Editorial limits | No CEO caricature appears or speaks; Jobs, Buffett, Musk are not drawn (tents and living things only); the woman is not named or drawn; the Motley Fool writer is a name strip. No buy/sell language. |
-| Not used (research "open" notes) | No typical length for a board review. No later price paths for Apple, Tesla or Berkshire. Search-only items not used: Wells Fargo committee, Apple after-hours -5.5%, Tesla $7.3B, Benzinga "14 straight beats", "fully supports the review", Ives "15% chance". |
+| Count | About 2,178 spoken words after the 11 Nov evening update: 1,996 (last shell count) plus +182 counted by hand on the changed lines (CH5 +7, CH8 +17, CH9 +158 incl. skit k15a); no shell in this session, so re-run `wc -w` at the lint. About 13.9 minutes at 157 words a minute. 9 chapters, 17 skits (k15a new; longest gap about 177 words, about 68 seconds, CH9 k15a -> k14; k13 -> k15a about 141 words, 54 s; k14 -> k15 about 158 words, 60 s; shortest still 47 s), 39 `[CARD]` lines (one every 21.3 seconds; every chapter after CH1 opens on a card), 9 narration lines that address the viewer (new: "Remember the seven dollars?"), average sentence about 8.6 words. |
+| Plants | Benny's red phone (CH1) -> CH8 bus (green, at the close), CH9 night bus (red again, after the close), final shot. Empty chair (CH1) -> CH3, CH7 (n09), CH9 (s49d corridor, s54 "nobody named"). "Keep that seven in mind" (CH2) -> CH8 (by the close), CH9 ("Remember the seven dollars?", s55). Hal's "We're Wednesday." (CH8 k12) -> CH9 k15a "It's still Wednesday." Kitchen for rent (CH4) -> CH6, CH8. Benny's $100,000 jar (CH2) -> CH6 what-if scoop, CH8 kitchen table, CH9 after-hours sum. Spare pole "NAMED" (CH7 Apple) -> CH7 Berkshire skit, CH9 (still none named). "Not unusual" (CH4) -> CH9 last skit. |
+| Where the evidence stops | CH4 ("according to news reports"), CH5 (the allegation, the denial, the untested lawsuit), CH6 (forecast, "our arithmetic on his what-if, not a prediction", "reported", Megaspeed's denial, no finding), CH7 (Tesla: "accused", "the company wasn't the defendant", his "unjustified" reply and the no-admit settlement; "a comparison of size, not a forecast"), CH9 ("found nothing in public so far", no deadline, analysts' tally, "an opinion, not a fact"; after the bell: "rest on people they did not name", each report attributed to its paper by name, "not confirmed", Nvidia "did not respond", "a snapshot, not a close", "our arithmetic, not a forecast", "if it holds", "no decision had been reported by Wednesday night", "neither report names anyone"). CH5: "he stays in the job" is now "At the time, the company said he would stay". |
+| Editorial limits | No CEO caricature appears or speaks; Jobs, Buffett, Musk are not drawn (tents and living things only); neither woman is named or drawn (s49c shows a newspaper and a sealed envelope only); the second relationship gets one plain sentence; the newspapers are living newspapers, not caricatures of reporters; no successor is named, implied or drawn (s54 chair stays empty). The Motley Fool writer is a name strip. No buy/sell language. Thursday-proof: nothing says what happens on 12 Nov; "as of Wednesday night" is spoken three times and shown on s49e, s54, s56. |
+| Not used (research "open" notes) | No typical length for a board review. No later price paths for Apple, Tesla or Berkshire. Search-only items not used: Wells Fargo committee, Apple after-hours -5.5%, Tesla $7.3B, Benzinga "14 straight beats", "fully supports the review", Ives "15% chance". 11 Nov evening, not used: Bloomberg "outside firm" (unverified), clock times and order of the two reports, the board meeting day, the hotel/guard/NDA and "five people" details, Reuters "could not verify", the $159.51 and "more than 9%" snapshots, CBS "$450 billion", the $4 trillion projection, Moorhead, the speculative successor names, the six-week CNBC claim, the congressional deadline. |
 
 ### New claims 2026-11-11 (for the fact-checker)
 
@@ -343,3 +367,26 @@ N: ...and count the poles.
 | "On the first one, a writer at The Motley Fool points to the forecast for the next quarter. A weak one, he argues, could be a sign that AI spending is slowing. That's an opinion, not a fact." | CH9 | Added D: Spatacco (Fool, opened), paraphrase of "could signal slowing AI infrastructure spending"; ESTIMATE/opinion. |
 | Added by the fact-check: "He had called the case unjustified, and settled the day after without admitting or denying it." (after the Tesla fall, no scene yet) | CH7 | factcheck.md, Extension check row X8b: Musk statement 27 Sep 2018; SEC release 2018-226, 29 Sep 2018. |
 | Moved, unchanged: "And then, on Wednesday, it went up." now ends CH7 instead of CH6. | CH7 | factchecked sentence; position only. |
+
+### New claims 2026-11-11 evening
+
+All rest on research.md "## Update 2026-11-11 evening: after-hours fall" (cited below as U, with its subsection number). Everything is as of Wednesday night, before the 12 Nov session.
+
+| Line (as spoken or on screen) | Chapter | Rests on |
+|---|---|---|
+| "At the time, the company said he would stay in the job while they look." (was "He stays in the job while they look.") | CH5 | U2: Nvidia spokesperson to Axios, CEO "without interruption" (Fortune paraphrase); Citi's Malik, 10 Nov: "The company has stated that Mr. Huang will remain CEO while the investigation proceeds"; U7 last row ("as of the board's 8 Nov statement"). |
+| "By the closing bell, nothing about the investigation had changed. What Wednesday's trading showed is that the demand had not changed either." | CH8 | U7 rows 236 (qualify with the close); U3: Wed close up 2.9% at $173.73; forecast unchanged (existing fact-check). |
+| "By the close, your seven dollars got a little of itself back. Not all." / screen sticker AT THE CLOSE | CH8 | U3 reference: Wed close $173.73, below the Fri close $186.64; U7 row 241. |
+| "Then the closing bell rang. And Wednesday wasn't over." | CH8 | U3: the fall came in after-hours trading on Wed 11 Nov. No clock time given. |
+| "After the close, the bounce ran out." / "That wiped out Wednesday's gain, and more." | CH9 | U3: +2.9% at the close, then "more than 8%" down after the close (CBS). Own comparison of the two figures. |
+| "Two newspapers published reports. Both rest on people they did not name." / screen TWO REPORTS, NOT CONFIRMED; stickers UNNAMED SOURCES | CH9 | U1: WSJ "people familiar with the matter", none named; NYT sources unnamed former staff (second-hand); both ALLEGATION, unconfirmed by Nvidia. Order and times not stated (U1 row "Order of events", U8). |
+| "The New York Times reported a second relationship, which the company has not commented on." | CH9 | U1 NYT row (ALLEGATION; script wording as advised there); U2: Nvidia declined to comment / did not respond; U7 editorial limits. No name, no detail, no drawing. |
+| "And The Wall Street Journal reported that Nvidia's board is preparing to remove its chief executive." / screen REPORT, NOT CONFIRMED BY NVIDIA | CH9 | U1 WSJ row ("preparing to remove ('oust') Huang"; CNBC, CBS, Trending Topics, GamesBeat, all opened). ALLEGATION. |
+| "Nvidia did not respond to requests for comment on that report." | CH9 | U2 first bullet: CNBC "Neither responded immediately"; GamesBeat no response reported; the safer of the two wordings, as advised. |
+| "As of Wednesday night, the board had made no new public statement." | CH9 | U2 board bullet: "no new statement on the WSJ report found (CNBC)". |
+| "In after-hours trading, before Thursday's open, the shares fell more than eight percent." / screen NVIDIA down more than 8% after the close (snapshot, as of Wed night) | CH9 | U3: "more than 8%" to $159.51 (CBS, opened; GamesBeat "8%"); check $159.51 / $173.73 = -8.19%. Later "more than 9%" snapshot not used; "more than eight" stays true of both. |
+| "Remember the seven dollars? On a hundred thousand dollars in that fund, that's roughly another five or six hundred dollars from Nvidia's slice... if it holds." / "It's a snapshot, not a close. And that's our arithmetic, not a forecast." | CH9 | U6 table, ESTIMATE: on $10,000, $53-56 at 8.19% and $59-61 at 9% (7.0-7.3% weight); x10 for $100,000 = about $530-610. Nvidia's contribution only, other stocks held flat. |
+| "Nvidia's board gave no deadline." / "But The Wall Street Journal reports the board could meet soon to decide his future." / "No decision had been reported by Wednesday night." | CH9 | Existing: no deadline (factcheck row 48). U1 WSJ row and U4: board could meet "as soon as" Wed or Thu "to decide his future"; meeting day deliberately not stated (U8); whether it met: not reported. Replaces "So the finding could land before Nvidia's next results, or after them. Nobody outside that room knows." (U7 rows 269-270). |
+| "After the closing bell, Nvidia is due to report its results, and whoever leads it then takes questions from the people who price the stock." | CH9 | U5: 17 Nov date unchanged in all opened sources, no postponement reported; whether Huang takes part is not reported (U7 row 275). Names nobody. |
+| "Whatever the board decides, ... As of Wednesday night, neither report names anyone to fill it." / screen AS OF WED 11 NOV, NIGHT: NOBODY NAMED | CH9 | U4 first bullet: neither the WSJ nor the NYT report, as relayed, names an interim CEO or successor (Trending Topics, CBS, CNBC, Yahoo, opened). Speculative names elsewhere (search only) deliberately not used. |
+| Skit k15a "You said, 'We're Wednesday.'" / "It's still Wednesday." and flag AS OF WED 11 NOV, NIGHT (s56) | CH9 | No fact beyond the date; pays off CH8 k12. |
