@@ -1,11 +1,11 @@
 {
-  "signature": "401899051463a191",
-  "total": 789.399,
+  "signature": "447c5504e307bd14",
+  "total": 789.291,
   "lufs": -14.02,
   "true_peak_db": -1.04,
   "limiter": {
-    "max_cut_db": 5.3,
-    "pct_cut_over_1db": 1.28
+    "max_cut_db": 5.2,
+    "pct_cut_over_1db": 1.25
   },
   "voice": {
     "speakers": {
@@ -107,318 +107,318 @@
         "why": "c3t01 card"
       },
       {
-        "t": 112.912,
+        "t": 112.884,
         "name": "paper",
         "why": "c3s14 doc"
       },
       {
-        "t": 120.682,
+        "t": 120.654,
         "name": "card",
         "why": "c3t02 card"
       },
       {
-        "t": 128.912,
+        "t": 128.884,
         "name": "stamp",
         "why": "c3k04b stamp"
       },
       {
-        "t": 133.962,
+        "t": 133.934,
         "name": "paper",
         "why": "c3s16 doc"
       },
       {
-        "t": 140.922,
+        "t": 140.894,
         "name": "paper",
         "why": "c3s17 doc"
       },
       {
-        "t": 160.091,
+        "t": 160.063,
         "name": "card",
         "why": "c3t03 card"
       },
       {
-        "t": 162.771,
+        "t": 162.743,
         "name": "chapter",
         "why": "c4ch chapter"
       },
       {
-        "t": 164.379,
+        "t": 164.351,
         "name": "card",
         "why": "c4t01 card"
       },
       {
-        "t": 184.901,
+        "t": 184.873,
         "name": "card",
         "why": "c4t02 card"
       },
       {
-        "t": 221.497,
+        "t": 221.469,
         "name": "paper",
         "why": "c4s24b doc"
       },
       {
-        "t": 237.064,
+        "t": 237.036,
         "name": "card",
         "why": "c4t03 card"
       },
       {
-        "t": 239.864,
+        "t": 239.836,
         "name": "chapter",
         "why": "c5ch chapter"
       },
       {
-        "t": 241.564,
+        "t": 241.536,
         "name": "card",
         "why": "c5t01 card"
       },
       {
-        "t": 246.431,
+        "t": 246.403,
         "name": "paper",
         "why": "c5s25b doc"
       },
       {
-        "t": 265.442,
+        "t": 265.414,
         "name": "stamp",
         "why": "c5p26 panel 3 stamp"
       },
       {
-        "t": 275.005,
+        "t": 274.977,
         "name": "paper",
         "why": "c5s27b doc"
       },
       {
-        "t": 317.494,
+        "t": 317.466,
         "name": "stamp",
         "why": "c5s31b stamp"
       },
       {
-        "t": 332.304,
+        "t": 332.276,
         "name": "card",
         "why": "c5t02 card"
       },
       {
-        "t": 340.634,
+        "t": 340.606,
         "name": "chapter",
         "why": "c6ch chapter"
       },
       {
-        "t": 342.234,
+        "t": 342.206,
         "name": "card",
         "why": "c6t01 card"
       },
       {
-        "t": 354.272,
+        "t": 354.244,
         "name": "stamp",
         "why": "c6s36b stamp"
       },
       {
-        "t": 359.164,
+        "t": 359.136,
         "name": "card",
         "why": "c6t02 card"
       },
       {
-        "t": 364.184,
+        "t": 364.156,
         "name": "stamp",
         "why": "c6s36d stamp"
       },
       {
-        "t": 382.474,
+        "t": 382.366,
         "name": "card",
         "why": "c6t03 card"
       },
       {
-        "t": 430.152,
+        "t": 430.044,
         "name": "card",
         "why": "c6t04 card"
       },
       {
-        "t": 432.475,
+        "t": 432.367,
         "name": "card",
         "why": "c6t05 card"
       },
       {
-        "t": 434.805,
+        "t": 434.697,
         "name": "chapter",
         "why": "c7ch chapter"
       },
       {
-        "t": 436.405,
+        "t": 436.297,
         "name": "card",
         "why": "c7t01 card"
       },
       {
-        "t": 450.785,
+        "t": 450.677,
         "name": "card",
         "why": "c7t02 card"
       },
       {
-        "t": 471.685,
+        "t": 471.577,
         "name": "card",
         "why": "c7t03 card"
       },
       {
-        "t": 499.931,
+        "t": 499.823,
         "name": "stamp",
         "why": "c7n06c panel 2 stamp"
       },
       {
-        "t": 500.495,
+        "t": 500.387,
         "name": "card",
         "why": "c7t04 card"
       },
       {
-        "t": 503.975,
+        "t": 503.867,
         "name": "paper",
         "why": "c7n07 doc"
       },
       {
-        "t": 506.38,
+        "t": 506.272,
         "name": "paper",
         "why": "c7n07b doc"
       },
       {
-        "t": 521.275,
+        "t": 521.167,
         "name": "card",
         "why": "c7t05 card"
       },
       {
-        "t": 535.345,
+        "t": 535.237,
         "name": "card",
         "why": "c7t06 card"
       },
       {
-        "t": 537.105,
+        "t": 536.997,
         "name": "chapter",
         "why": "c8ch chapter"
       },
       {
-        "t": 538.605,
+        "t": 538.497,
         "name": "card",
         "why": "c8t01 card"
       },
       {
-        "t": 563.231,
+        "t": 563.123,
         "name": "card",
         "why": "c8t02 card"
       },
       {
-        "t": 567.272,
+        "t": 567.164,
         "name": "stamp",
         "why": "c8s45b stamp"
       },
       {
-        "t": 573.394,
+        "t": 573.286,
         "name": "card",
         "why": "c8t03 card"
       },
       {
-        "t": 577.561,
+        "t": 576.126,
         "name": "card",
         "why": "c8t04 card"
       },
       {
-        "t": 601.654,
+        "t": 601.546,
         "name": "card",
         "why": "c8t05 card"
       },
       {
-        "t": 604.544,
+        "t": 604.436,
         "name": "chapter",
         "why": "c9ch chapter"
       },
       {
-        "t": 606.144,
+        "t": 606.036,
         "name": "card",
         "why": "c9t01 card"
       },
       {
-        "t": 623.784,
+        "t": 623.676,
         "name": "card",
         "why": "c9t02 card"
       },
       {
-        "t": 632.344,
+        "t": 632.236,
         "name": "card",
         "why": "c9t03 card"
       },
       {
-        "t": 639.124,
+        "t": 639.016,
         "name": "stamp",
         "why": "c9s49e stamp"
       },
       {
-        "t": 651.214,
+        "t": 651.106,
         "name": "stamp",
         "why": "c9s49h stamp"
       },
       {
-        "t": 658.089,
+        "t": 657.981,
         "name": "card",
         "why": "c9t04 card"
       },
       {
-        "t": 668.869,
+        "t": 668.761,
         "name": "paper",
         "why": "c9s50c doc"
       },
       {
-        "t": 688.279,
+        "t": 688.171,
         "name": "card",
         "why": "c9t05 card"
       },
       {
-        "t": 700.975,
+        "t": 700.867,
         "name": "stamp",
         "why": "c9s51 stamp"
       },
       {
-        "t": 702.709,
+        "t": 702.601,
         "name": "card",
         "why": "c9t06 card"
       },
       {
-        "t": 722.449,
+        "t": 722.341,
         "name": "card",
         "why": "c9t07 card"
       },
       {
-        "t": 754.488,
+        "t": 754.38,
         "name": "stamp",
         "why": "c9s53d stamp"
       },
       {
-        "t": 755.999,
+        "t": 755.891,
         "name": "card",
         "why": "c9t08 card"
       },
       {
-        "t": 777.489,
+        "t": 777.381,
         "name": "card",
         "why": "c9t09 card"
       }
     ]
   },
   "dead_air": {
-    "pauses_over_250ms": 23,
+    "pauses_over_250ms": 26,
     "longest": [
-      {
-        "t": 179.96,
-        "d": 0.3
-      },
-      {
-        "t": 364.26,
-        "d": 0.3
-      },
       {
         "t": 65.68,
         "d": 0.29
       },
       {
-        "t": 519.17,
+        "t": 519.07,
         "d": 0.29
       },
       {
-        "t": 563.61,
+        "t": 563.5,
+        "d": 0.29
+      },
+      {
+        "t": 656.52,
+        "d": 0.29
+      },
+      {
+        "t": 662.1,
         "d": 0.29
       }
     ]
