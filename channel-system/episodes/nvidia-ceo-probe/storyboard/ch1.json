@@ -1,6 +1,6 @@
 { "shots": [
   { "id": "c1s01", "cue": "L001", "set": "lawn", "opts": { "time": "dusk" }, "camera": "push_in", "grade": "red", "motif": "tent",
-    "props": [ { "type": "tent", "x": 960, "y": 930, "w": 1500, "pole": "", "ropes": 6, "frayed": 0, "crowd": 30, "flag": "NVIDIA" } ],
+    "props": [ { "type": "tent", "x": 960, "y": 930, "w": 1500, "pole": "", "ropes": 6, "frayed": 0, "crowd": 30 } ],
     "actors": [ { "who": "BENNY", "x": 620, "y": 960, "scale": 0.6, "face": "scared", "look": "up", "prop": "phone", "screen": "red", "enter": "none" },
                 { "who": "SAVER", "x": 1320, "y": 960, "scale": 0.55, "face": "shocked", "look": "up", "enter": "none" },
                 { "who": "MARTHA", "x": 1520, "y": 960, "scale": 0.55, "face": "scared", "look": "up", "prop": "bill", "enter": "none" }, { "thing": "chip", "label": "NVIDIA", "x": 960, "y": 380, "scale": 0.55, "face": "scared", "pose": "panic", "enter": "none",

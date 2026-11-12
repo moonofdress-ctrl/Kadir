@@ -14,7 +14,7 @@
     "actors": [ { "thing": "chip", "label": "NVIDIA", "x": 1560, "y": 900, "scale": 0.7, "face": "smug", "pose": "wave", "enter": "slide_right" } ] },
   { "id": "c2s08b", "cue": "L013", "set": "warehouse", "opts": { "belt": false }, "camera": "pan_left",
     "actors": [ { "who": "CLERK", "x": 520, "face": "deadpan", "prop": "magnifier", "badge": "TREFIS", "enter": "none" },
-                { "thing": "chip", "label": "NVIDIA", "x": 1150, "y": 640, "scale": 0.5, "face": "shocked", "enter": "none" } ],
+                { "thing": "chip", "label": "NVIDIA", "x": 1150, "y": 620, "scale": 0.5, "face": "shocked", "enter": "none" } ],
     "props": [ { "type": "scale", "x": 1150, "y": 900, "t": "7.3%", "at": 1.0 }, { "type": "sign", "x": 1180, "y": 200, "t": "ONE BIG S&P 500 FUND", "size": 58 } ],
     "overlays": [ { "type": "calendar", "month": "NOV", "day": 4, "dow": "AS OF", "x": 210, "y": 150, "cue": "L013", "word": 12 },
                   { "type": "counter", "from": 0, "to": 7.3, "decimals": 1, "suffix": "%", "tone": "green", "pos": "tr", "cap": "NVIDIA'S WEIGHT", "cue": "L013", "word": 16, "dur": 0.9, "plate": true },
