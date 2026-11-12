@@ -1,6 +1,6 @@
 # Channel system
 
-A newsroom of agents that turns a market event into a 12–15 minute cartoon explainer, with three human approval gates. From the second episode the picture is a **hybrid** (the user's decision of 12 Nov 2026, after the first upload; see `LESSONS.md`): every place is a painted picture, generated in the house style and checked by a person, and the engine in `../studio/` draws everything that is read (cards, counters, signs, name strips, subtitles) over it and times it to the voice.
+A newsroom of agents that turns a market event into a 12–15 minute cartoon explainer, with three human approval gates. The engine in `../studio/` draws the whole video in code: the cast, the places, the light, the numbers and the subtitles, timed to the voice. Only the thumbnails are painted (and a background, when a place is too costly to draw). This was settled on 13 Nov 2026, after the rival's video on our first story was measured: it is made the same way, and it won on staging, not on paint (`LESSONS.md`; the targets are in `FORMAT_BOOK.md` 3, 4 and 11).
 
 ## Pipeline
 
@@ -13,18 +13,17 @@ A newsroom of agents that turns a market event into a 12–15 minute cartoon exp
 4  fact-checker   → factcheck.md, fixes in the script
 4b voice-producer → the hook in each candidate voice (once per    ─── GATE 2: you approve the script
                     voice product), then audio/<id>.wav                and the voice
-5  art-director   → storyboard.json (or one file per chapter in storyboard/), art-requests.md (one row per
-                    painted picture), thumbnails.md, build-requests.md; the first 30 seconds first
-5a illustrator    → art/<id>.jpg: the painted pictures, from the  ─── LOOK GATE: you put six frames of the first
-                    style sheet and the cast sheets                    30 seconds beside the reference, before the rest
+5  art-director   → the first 30 seconds of the storyboard,      ─── LOOK GATE: twelve frames of the first 30
+                    thumbnails.md, build-requests.md (new places)      seconds beside the rival's, before the rest
+5a scene-builder  → the new sets, props and living things the episode needs (15-25 places)
+5c art-director   → the rest: storyboard/ch<N>.json, one chapter at a time
 5b fact-checker   → second pass on screen-text.md: every word and number on screen
-6  scene-builder  → props and overlays the engine lacks (places are painted, not coded)
 7  voice-producer → audio/<id>.wav in the chosen voice (narrator + character lines), dead air cut
 8  editor         → sound mix, build, lint, frame check (no render yet)
 9  qa-reviewer    → qa.md from the frames, sends fixes back; repeat 5–9 until it passes
 9a fact-checker   → currency check on the render day, for a story that is still moving (FORMAT_BOOK 1)
 9b editor         → render to MP4 once, after QA passes → render/
-10 illustrator    → three painted close-up thumbnails, judged beside the competing ones
+10 illustrator    → three painted thumbnails (one or two figures, one glowing object), judged beside the competing ones
 11 packager       → package.md and youtube-upload.txt: three       ─── GATE 3: you approve and upload
                     title+thumbnail pairs,
                     captions, the Shorts plan
@@ -59,12 +58,12 @@ node studio/tools/retention-lint.mjs channel-system/episodes/<slug>
 | Step | Tool | Status |
 |---|---|---|
 | Research, script, fact-check | Claude (web search, primary documents) | Ready |
-| Pictures | Painted pictures (`"set": "picture"`, files in the episode's `art/`) under the `studio/` engine's text, numbers and timing. Generated with the image tool the session has (FLUX), or by the user from `prompts.md` (Gemini's Nano Banana Pro, Higgsfield) | Engine ready and tested in the gallery; the style sheet and painted cast sheets are still to be made; needs a paid image budget (100-150 pictures an episode) |
+| Pictures | The `studio/` engine: cast, sets, light, shot sizes, numbers and timing in code. New places are built per episode by the scene builder. | Ready; the lint holds the staging targets (P, D, K, W, S, H checks) |
 | Frame check | `node studio/tools/stills.mjs frames <episode>` saves a contact sheet; `preview.mjs` for a browser | Ready (the contact sheet needs Playwright) |
 | Voice | Decided by the user on 2026-11-12: a synthetic voice, disclosed in the video and the description, with YouTube's altered-content label set. Re-check the policy text before the first upload. Which voice product makes the final track is still open; `studio/tools/voice.mjs` makes a Kokoro scratch track. | Scratch ready, final voice product pending |
 | Music and effects | `studio/tools/mix.mjs`: effects and a house music bed made in code, so nothing to license. Drop licensed tracks in `audio/music/` to use those instead (the YouTube Audio Library is the safe source). | Ready; the choice of music is yours |
 | Render to MP4 | HyperFrames (Apache 2.0) + FFmpeg | Tested in a cloud session; a local machine needs FFmpeg on its PATH |
-| Thumbnail | Three painted close-ups, banded with `studio/tools/stills.mjs thumb --image` | Ready |
+| Thumbnail | Three painted pictures, generated with the image tool the session has or by the user from `prompts.md` (Gemini's Nano Banana Pro, Higgsfield), banded with `studio/tools/stills.mjs thumb --image` | Ready; three pictures an episode |
 | Upload | The user, in YouTube Studio | Manual step |
 
 ## Keeping a full episode affordable
@@ -82,5 +81,7 @@ A 13-minute episode is about 250 lines and 200 shots: too much for one agent in 
 In a Claude Code session in this repo:
 1. "Run trend-scout" → pick one of the three topics.
 2. "Make the episode for <topic>" → the agents run steps 2–4 and stop at Gate 2.
-3. Approve the script and the voice → the first 30 seconds are painted and built, and you compare them with the reference (Look gate). Then steps 5–11 run. When the session has no image tool, the illustrator hands you `prompts.md` and you generate the pictures.
+3. Approve the script and the voice → the first 30 seconds are storyboarded and built, and you compare them with the rival's (Look gate). Then steps 5–11 run. When the session has no image tool, the illustrator hands you `prompts.md` and you generate the three thumbnails.
+
+**When you say "do it all".** The user may waive Gate 1, Gate 2 and the Look gate for an episode ("pick the topic and finish it"). The session records that in `brief.md` with the date, takes the trend scout's first topic, and replaces each waived approval with a check it can run itself: the fact-checker and the lint for the script, the QA reviewer's written comparison for the Look gate. Gate 3 is never waived: the upload is the user's, and the open choices (the final voice, the thumbnail pictures) are put to the user there, once, with a recommendation.
 4. A few days after the upload, share the YouTube Studio numbers → the analyst updates `learnings.md`.

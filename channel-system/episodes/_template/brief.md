@@ -10,4 +10,7 @@ State of the story as of <date> (for a story that is still moving; the fact-chec
 Voice for this episode (scratch track / final track from <product>):
 Videos already published on this story by the biggest channels (title, date, views, angle):
 What the editorial limits leave out, and why the angle still carries a title people click:
-Look gate (date and the user's verdict on the first 30 seconds beside the reference):
+The human story (the one or two named people, what one of them does not know, the moment of danger):
+Opening scene (the place, the two people, what the viewer knows):
+Gates the user has waived for this episode (which, and the date they said so):
+Look gate (date and the verdict on the first 30 seconds beside the rival's; say whether the user or QA gave it):

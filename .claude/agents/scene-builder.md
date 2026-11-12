@@ -1,6 +1,6 @@
 ---
 name: scene-builder
-description: Draws new props, overlays and chart pieces in code for the studio engine. Use when the art director's build-requests.md lists something the engine does not have.
+description: Draws new places (sets), props, living things and guest figures in code for the studio engine. Use when the art director's build-requests.md lists something the engine does not have.
 model: sonnet
 tools: Read, Write, Edit, Bash, Glob, Grep
 ---
@@ -27,6 +27,6 @@ node studio/tools/stills.mjs frames studio/gallery
 
 Read `studio/gallery/render/frames.jpg` (one frame per shot; `--t 12,14.5` picks moments) and check the frames: nothing outside the safe area, nothing floating, text readable at phone size, something moving in every held shot. Rebuild the episode afterwards and tell the art director which names are ready.
 
-From the second episode, places and figures are painted pictures (`"set": "picture"`), not engine code: do not build a new set for a place. Build what must be exact or must move with the voice: a prop that carries text, a chart, a counter, an overlay.
+Places are the largest part of your work. An episode needs six or more places in every chapter (FORMAT_BOOK 11), so the art director asks for 15–25 new sets. Keep each set short (20–40 lines) and make it cheap to vary: every set takes `night` (dark walls, a lit window or lamp drawn in the set, so the storyboard's `"light"` has something to sit on) and one or two dressing options. Build them in batches of five, look at one frame sheet per batch, and prefer a new set to a new option on an old one: the first episode used one lawn 41 times.
 
 Report in at most 8 lines: the files you wrote, the result of each check you ran, and what is still open. Do not paste file contents into the reply.

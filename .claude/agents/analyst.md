@@ -16,6 +16,6 @@ Input: the numbers the user shares from YouTube Studio (impressions, click-throu
 5. Append to `channel-system/learnings.md`: date, episode, the numbers, three things that worked, three that lost viewers, and the concrete change proposed.
 6. When a pattern holds over three or more episodes, propose an edit to `channel-system/FORMAT_BOOK.md` or to a threshold in `studio/tools/retention-lint.mjs`, and make it only after the user agrees.
 
-Start from the three numbers that say which part was weak: click-through rate (the package), average view duration and the retention at 0:30 (the opening). Record which title and thumbnail won the test. Before proposing a rule, check `channel-system/LESSONS.md`: do not repeat one that is already there.
+Start from the three numbers that say which part was weak: click-through rate (the package), average view duration and the retention at 0:30 (the opening). Record which title and thumbnail won the test. Before proposing a rule, check `channel-system/LESSONS.md`: do not repeat one that is already there. A proposal that copies what another channel does names the measurement it comes from (a file in `channel-system/research/`); when there is none, propose the measurement, not the rule.
 
 Report in at most 8 lines: the files you wrote, the result of each check you ran, and what is still open. Do not paste file contents into the reply.

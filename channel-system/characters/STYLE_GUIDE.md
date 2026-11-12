@@ -73,15 +73,16 @@ Allowed, with these limits:
 ## Painted pictures
 - **The look**: the cut-paper house look, painted. Thick ink-navy outlines, clean simple shapes, big heads, vivid saturated colour with soft painted shading, one clear light source with dark teal shadows around it, a detailed textured background behind simple figures. Clearly a cartoon, never realistic.
 - **The style lock**, pasted at the start of every prompt: "Bold editorial cartoon illustration: thick dark ink outlines, clean simple shapes, exaggerated proportions with big heads, vivid saturated colours, soft painted shading, one warm light source, deep teal-blue shadows, detailed textured background. No text, no letters, no numbers, no logos anywhere."
-- **The sheets**: `sheets/style_painted.png` (one picture that fixes the look) and `sheets/<name>_painted.png` for each cast member and the chip (prompts in `cast.md`). They are attached as references to every generation. Made once, approved by the user, then not changed.
+- **Where it is used**: the three thumbnails, and a background for a place that is too costly to build as a set. Not the cast: the figures in the video are the engine's (decision of 13 Nov 2026; the rival's video is code-drawn like ours and only its thumbnails are painted). No painted cast sheets are made.
+- **A background** shows the place and its one light, with no figures; the engine's figures act in front of it.
 - **Room for the engine**: say in each prompt which part stays plain and dark (the upper third for a band or counter, or one side for a card), because the engine writes there.
 - **Files**: 1920x1080 JPEG, under 500 KB, in the episode's `art/`, named by the picture's id in `art-requests.md`.
 - **Never**: words, numbers, logos, a real person's realistic face, another channel's figures or objects.
 
 ## Thumbnail (house formula)
-The thumbnail is a painted close-up in the same look, checked by a person: one face filling a third of the frame or more, one object, one situation, one strong background colour. `node studio/tools/stills.mjs thumb` makes one from the video's own first shot, or from an illustration, with the text band added.
-1. Top band: the subject in white and one figure in red. Heavy sans, dark outline. Four words at most.
-2. Centre: one character, one extreme emotion, holding or facing the story's object.
-3. Background: one dramatic situation, darker and softer than the character.
+The thumbnail is a painted close-up in the same look, checked by a person: one figure or two (never more), one face filling a third of the frame or more, one object that glows, a dark ground. `node studio/tools/stills.mjs thumb --image` adds the text band to the painted picture.
+1. Top band: the subject in white and one figure in red. Heavy sans, dark outline. Two to four words.
+2. Centre: one character with one extreme emotion (a second only when the story is the two of them), holding or facing the story's object, which is the brightest thing in the picture.
+3. Background: dark and soft, one situation, nothing to read.
 4. Readable at 160×90 px.
 5. **It shows the first frame of the video**: same scene, same object, same number.

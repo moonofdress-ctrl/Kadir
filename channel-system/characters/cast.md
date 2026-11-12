@@ -21,13 +21,13 @@ Any other name gives a background figure with a palette picked from the name. A 
 
 The viewer stand-in for an episode (usually `BENNY`, sometimes `MARTHA`) is named in the storyboard's `"viewer"` field and must own the final shot.
 
-The descriptions below are the character bible. The image prompts under each character make the **painted model sheets**. From the second episode the painted pictures of the video and the thumbnails are generated with these sheets attached, so a character looks the same in every picture.
+The descriptions below are the character bible. The image prompts under each character are used for **thumbnails only**: the figures in the video are the engine's (decision of 13 Nov 2026), so painted model sheets are optional and are attached only when a thumbnail shows that character.
 
 ## Painted model sheets (one-time; Nano Banana Pro in Gemini or Higgsfield, or FLUX in a session that has it)
 1. Model: **Nano Banana Pro**, 2k, aspect 16:9 (expression sheets 1:1).
 2. Attach the rig's sheet from `sheets/<name>_model.png` as the image reference, so the painted character matches the one in the video. Save a painted sheet you like next to it as `sheets/<name>_painted.png`.
 3. Generate the expression and pose sheets with the chosen model sheet attached as an image reference.
-4. Every later scene image attaches the model sheet as a reference so the character stays the same.
+4. A later thumbnail with that character attaches the model sheet as a reference so the character stays the same.
 
 Each prompt below already includes the style lock from `STYLE_GUIDE.md`.
 
