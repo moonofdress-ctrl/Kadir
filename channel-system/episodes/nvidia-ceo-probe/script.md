@@ -312,7 +312,7 @@ N: Listen for three things that day. Does the forecast move? Does the board say 
 N: On the first one, a writer at The Motley Fool points to the forecast for the next quarter. A weak one, he argues, could be a sign that AI spending is slowing. That's an opinion, not a fact.
 [SCENE s54 | set: the empty chair with the nameplate NEXT, a duster passing over it, the seat still empty, a card propped on it AS OF THU 12 NOV, MORNING: NOBODY APPOINTED]
 [CARD]
-N: Whatever the board decides, one thing has already changed. Investors have now seen the empty chair. As of Wednesday night, neither report names anyone to fill it. A company this big does not get to leave it empty forever.
+N: Whatever the board decides, one thing has already changed. Investors have now seen the empty chair. As of Thursday morning, nobody has been appointed to fill it. A company this big does not get to leave it empty forever.
 [SCENE s55 | set: the hundred-dollar note with its seven-dollar strip, taped back on a little crooked]
 N: And you have seen your seven dollars. You own this story whether you follow it or not.
 [SKIT k15 | set: under the tent at night, Benny and Hal looking up, close]

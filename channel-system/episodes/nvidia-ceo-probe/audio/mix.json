@@ -1,11 +1,11 @@
 {
-  "signature": "e7cd387f1141dd37",
-  "total": 789.701,
+  "signature": "90f502a57c42ab5f",
+  "total": 790.581,
   "lufs": -14.02,
   "true_peak_db": -1.04,
   "limiter": {
     "max_cut_db": 5.2,
-    "pct_cut_over_1db": 1.26
+    "pct_cut_over_1db": 1.24
   },
   "voice": {
     "speakers": {
@@ -337,57 +337,57 @@
         "why": "c9t02 card"
       },
       {
-        "t": 632.236,
+        "t": 632.456,
         "name": "card",
         "why": "c9t03 card"
       },
       {
-        "t": 651.106,
+        "t": 651.486,
         "name": "stamp",
         "why": "c9s49h stamp"
       },
       {
-        "t": 657.981,
+        "t": 659.191,
         "name": "card",
         "why": "c9t04 card"
       },
       {
-        "t": 668.761,
+        "t": 669.971,
         "name": "paper",
         "why": "c9s50c doc"
       },
       {
-        "t": 688.171,
+        "t": 689.381,
         "name": "card",
         "why": "c9t05 card"
       },
       {
-        "t": 701.277,
+        "t": 702.377,
         "name": "stamp",
         "why": "c9s51 stamp"
       },
       {
-        "t": 703.011,
+        "t": 704.111,
         "name": "card",
         "why": "c9t06 card"
       },
       {
-        "t": 722.751,
+        "t": 723.851,
         "name": "card",
         "why": "c9t07 card"
       },
       {
-        "t": 754.79,
+        "t": 755.89,
         "name": "stamp",
         "why": "c9s53d stamp"
       },
       {
-        "t": 756.301,
+        "t": 757.401,
         "name": "card",
         "why": "c9t08 card"
       },
       {
-        "t": 777.791,
+        "t": 778.671,
         "name": "card",
         "why": "c9t09 card"
       }
@@ -409,11 +409,11 @@
         "d": 0.29
       },
       {
-        "t": 656.52,
+        "t": 657.73,
         "d": 0.29
       },
       {
-        "t": 662.1,
+        "t": 663.31,
         "d": 0.29
       }
     ]

@@ -267,3 +267,53 @@ Scope: qa.md fix 23 (row 40, WSJ/NYT texts, 12 Nov trading). Pages opened: IANS/
 - Row E13's "soon avoids the Wed/Thu conflict" no longer holds; Q4 replaces it.
 
 **Open:** 12 Nov close and any board decision (re-check on the day of upload; if the board announces anything, CH9 s49d-s56 must change, not just one line). Bennet release PRIMARY mark (a human with a browser). WSJ/NYT texts unread. Side note: the Nvidia newsroom lists "Statement From the Independent Members of the NVIDIA Board" on 10 Nov, while earlier rows and TradingKey call it the 8 Nov statement; check the date on the release page before upload.
+
+## Currency check 2026-11-12
+
+Scope: CH8 and CH9 of script.md (L115-L168, ids as in timing.json and the storyboard), for a viewer on Fri 13 Nov. Checked on the morning of Thu 12 Nov, before the US regular session; the latest price seen is pre-market. Pages opened in this pass are listed per finding.
+
+### Findings
+
+| # | Finding | Kind | Source |
+|---|---|---|---|
+| C1 | No new statement from Nvidia, its board or Huang on 11 or 12 Nov; newest board item is still the 10 Nov independent directors' statement | PRIMARY (newsroom list, opened) + reported | https://nvidianews.nvidia.com/news ; CNBC 12 Nov 5:13 a.m. ET "Nvidia is yet to make a public statement about Huang's future" (https://www.cnbc.com/2026/11/12/jensen-huang-nvidia-affair-ceo.html, opened) |
+| C2 | No 8-K on a CEO change | PRIMARY (EDGAR 8-K list, opened; newest 8-K 3 Sep 2026) | https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=8-K |
+| C3 | The board met on Wednesday 11 Nov to discuss removing Huang; no decision announced | Reported: CNBC "confirmed" the meeting (https://www.cnbc.com/2026/11/12/nvidia-nvda-jensen-huang-second-affair.html, opened); Reuters via TNW, "no decision had been announced by the end of the night" (https://thenextweb.com/news/nvidia-board-meeting-jensen-huang-ouster-no-decision, opened) | Not PRIMARY |
+| C4 | Interim CEO / successor search: Bloomberg reports an outside search firm; some directors reportedly favour CFO Colette Kress as interim if he is removed; Citi suggests Kress as an analyst view | Reported: Semafor upd. 11 Nov 10:27 p.m. EST (https://www.semafor.com/article/11/11/2026/nvidia-board-preparing-to-oust-ceo-huang-wsj, opened; unnamed people + Bloomberg); TNW; CNBC (Citi) | Not PRIMARY. Nobody appointed. Not put in the script. |
+| C5 | Shares 12 Nov: no regular-session price or close yet. Pre-market -8.1% at 7:05 a.m. ET (CNBC); $160.48, -7.63% at 8:00 a.m. ET (stockanalysis.com, opened). Wed close $173.73 confirmed | Reported / market data | https://stockanalysis.com/stocks/nvda/history/ |
+| C6 | 17 Nov results still stand: results about 1:20 p.m. PT, call 2 p.m. PT (5 p.m. ET), Tue 17 Nov; no change notice found; TNW 12 Nov still says due 17 Nov | PRIMARY (release 28 Oct 2026, opened) | https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873 |
+| C7 | SEC: no statement found. Officials: CNBC says lawmakers have called for Huang to resign (no names, not opened further); no bill enacted found | Reported (CNBC) / search | Not used in the script |
+| C8 | Reuters "independently confirmed" the WSJ report | Search summary only (qz.com), not opened | Not used |
+
+### Lines
+
+CH8 (L115-L130): all still true. They describe Wednesday's session and are dated; nothing a Friday viewer knows contradicts them. L120 ("no change to that number") still true (C1, C6).
+
+CH9: L131-L135, L137-L138, L141-L151, L153-L161, L163-L168 still true. L151 is now supported by CNBC's own confirmation as well (C3). L154 confirmed PRIMARY (C6). No line was WRONG. Five lines were STALE and are changed:
+
+| Line | Old | New | Why |
+|---|---|---|---|
+| L136 | As of Wednesday night, the board had made no new public statement. | As of Thursday morning, the board had made no new public statement. | C1, C2. Still true at the check; dated. |
+| L139 | ...from Nvidia's slice... if it holds. | ...from Nvidia's slice... at that price. | By Friday the viewer knows whether it held; the sum is now tied to the snapshot price. Arithmetic unchanged (E12). |
+| L140 | It's a snapshot, not a close. And that's our arithmetic, not a forecast. | That was a snapshot, before Thursday's trading. And it's our arithmetic, not a forecast. | Thursday's close will exist on upload day and is not known here (C5); the line now says so without stating a figure. |
+| L152 | No decision had been reported by Wednesday night. | No decision had been announced by Thursday morning. | C3, C1, C2. |
+| L162 (third sentence) | As of Wednesday night, neither report names anyone to fill it. | As of Thursday morning, nobody has been appointed to fill it. | C4: Kress and others are now named in reports as candidates, so "neither report names anyone" reads out of date; "nobody appointed" is true and does not repeat candidate names. |
+
+Script scene brackets updated to match: s54 card -> AS OF THU 12 NOV, MORNING: NOBODY APPOINTED; s56 flag -> AS OF THU 12 NOV, MORNING. Re-record L136, L139, L140, L152, L162 (word counts within one word of the old lines).
+
+### Screen text that must change (storyboard not touched)
+
+- c9s49d2 (L136): "AS OF WEDNESDAY NIGHT" -> "AS OF THURSDAY MORNING".
+- c9s49g (L139): counter cap "ROUGHLY, ON $100K, IF IT HOLDS (OUR SUM)" -> "ROUGHLY, ON $100K, AT THAT PRICE (OUR SUM)".
+- c9s49h (L140): "NOT A CLOSE, NOT A FORECAST" -> "BEFORE THURSDAY'S TRADING, NOT A FORECAST" (still true as is; change for match with the narration).
+- c9s50g (L152): "AS OF WEDNESDAY NIGHT" -> "AS OF THURSDAY MORNING" ("NO DECISION YET" stays).
+- c9s54 (L162): "AS OF WED 11 NOV, NIGHT: NOBODY NAMED" -> "AS OF THU 12 NOV, MORNING: NOBODY APPOINTED".
+- c9s56 (L167): flag "AS OF WED 11 NOV, NIGHT" -> "AS OF THU 12 NOV, MORNING".
+- Unchanged and still true: c9t03, c9s49e, c9k15a (STILL WED 11 NOV, scene setting), c9s50f, ch8 texts.
+
+### Older open items
+
+- **8 vs 10 Nov board statement: settled, both are right.** Two PRIMARY releases, both opened: "Statement From NVIDIA Board of Directors", dated November 8, 2026 (investigation, committee of independent directors, "confidence in Jensen"), and "Statement From the Independent Members of the NVIDIA Board", dated November 10, 2026 (retains Joon H. Kim and Wachtell, Lipton, Rosen & Katz; refers to the investigation "announced on Sunday"). Rows citing 8 Nov for the investigation/confidence and 10 Nov for the law firm are both correct; TradingKey's labelling was the confusion.
+- **Bennet release: PRIMARY, opened this time** (https://www.bennet.senate.gov/2026/11/11/bennet-presses-trump-administration-on-failure-to-stop-megaspeeds-apparent-ai-tech-diversion-to-china/): dated 11 Nov 2026, letter to Lutnick, Blanche, Rubio and Clayton, asks for an update on the Megaspeed investigation and on Commerce steps to stop Megaspeed buying Nvidia chips, answers by 24 Nov. Row 40 / S15 / Q1 stand. The release names the woman; nothing from it beyond the title is used.
+
+**Open:** Thursday's close and any board decision or Nvidia statement after this morning are unknown. If the board announces anything before upload, CH9 L134-L136, L145, L151-L152, L154 and L162 need another pass, not these wordings. WSJ/NYT texts still unread. The writer's claims table and self-check rows (script.md, after "## Self-check") still quote the Wednesday-night wordings.
