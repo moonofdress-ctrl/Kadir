@@ -116,9 +116,10 @@ if (!story.demo) add("V2", "Length 12-15 minutes", g(total >= 690 && total <= 91
 const pictures = shots.flatMap((s) => (isCard(s) ? [] : s.type === "split" ? s.panels.map((p) => ({ ...p, t0: s.t0 })) : [s]));
 const TEXT_PROPS = ["sign", "banner", "pricetag", "stall", "podium", "crates"];
 const busy = (a) => a.thing || a.prop || a.hat || a.badge != null || (a.pose && a.pose !== "rest") || (a.acts || []).length > 0;
-const alive = pictures.filter((p) => (p.props || []).length || (p.actors || []).some(busy)).length, share = alive / Math.max(1, pictures.length);
+const painted = (p) => p.set === "picture"; // a painted picture says what is in it with "shows" and "living"
+const alive = pictures.filter((p) => (p.props || []).length || (p.actors || []).some(busy) || (painted(p) && (p.opts || {}).shows)).length, share = alive / Math.max(1, pictures.length);
 add("G1", "Pictures show something happening", g(share >= 0.85, share >= 0.7), `${alive} of ${pictures.length} (${Math.round(share * 100)}%)`, "85% or more with a prop, a living thing or a figure doing something");
-need(60, "G2", "Companies and institutions are living things", () => { const n = pictures.filter((p) => (p.actors || []).some((a) => a.thing)).length, want = Math.max(2, Math.round(total / 45));
+need(60, "G2", "Companies and institutions are living things", () => { const n = pictures.filter((p) => (p.actors || []).some((a) => a.thing) || (painted(p) && (p.opts || {}).living)).length, want = Math.max(2, Math.round(total / 45));
   add("G2", "Companies and institutions are living things", g(n >= want, true), `${n} pictures`, `${want} or more (one every 45s)`); });
 const skits = shots.filter(isSkit), near = skits.filter((s) => s.frame === "medium" || s.frame === "close" || s.type === "split").length;
 if (skits.length) add("G3", "Faces fill the frame in skits", g(near >= skits.length * 0.6, true), `${near} of ${skits.length} skits`, "60% or more with \"frame\": \"medium\" or \"close\"");
@@ -126,6 +127,8 @@ need(60, "G4", "Facts are written inside the scene", () => { const n = pictures.
   add("G4", "Facts are written inside the scene", g(n >= want, true), `${n} signs, tags, labels and badges`, `${want} or more (one every 20s)`); });
 need(180, "G5", "The hidden piggy bank", () => { const n = pictures.filter((p) => (p.props || []).some((x) => x.type === "piggy")).length, lo = Math.max(1, Math.floor(total / 180)), hi = Math.ceil(total / 45);
   add("G5", "The hidden piggy bank", g(n >= lo && n <= hi, true), `${n} pictures`, `${lo} to ${hi}: there to be found, not to be noticed`); });
+{ const pp = pictures.filter(painted), missing = pp.filter((p) => !(p.opts && p.opts.src && fs.existsSync(path.join(ep, p.opts.src)))), blind = pp.filter((p) => !(p.opts || {}).shows);
+  if (pp.length) add("G6", "Painted pictures are in the folder and described", g(!missing.length && !blind.length, !missing.length), `${pp.length} pictures, ${missing.length} missing, ${blind.length} without "shows"`, "every file in the episode folder, each with a one-line \"shows\""); }
 
 /* ---- layout: written things that sit on top of each other (an early, rough version of the HyperFrames check) ---- */
 { const rig = {}; try { new Function("window", "document", fs.readFileSync(new URL("../engine/rig.js", import.meta.url), "utf8"))(rig, {}); } catch { /* no rig: skip thing sizes */ }

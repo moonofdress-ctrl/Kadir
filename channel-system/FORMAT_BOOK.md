@@ -14,6 +14,7 @@ A FAIL blocks the episode from moving to the next step.
 - A market event people are searching for **now**. Publish within 72 hours; faster is better. For a scheduled event (earnings, a vote, a court date), research and build the sets in advance and publish within hours.
 - The title is the exact question a viewer types: "Why the Stock Market Just Crashed", "Why Your Power Bill Just Jumped". Plain words, no jargon, under 60 characters.
 - **A story that is still moving** (an investigation, a vote count, a price still falling) goes out of date between the script and the upload. Keep everything that can change in the last chapter, in as few lines as possible, each with its date in the sentence ("as of Thursday, the twelfth"); the other chapters say only what stays true. Never "so far", "yet", "nobody has" or "today" without a date. `brief.md` records "State of the story as of <date>", and the fact-checker repeats the currency check on the day of the render and again on the day of the upload. If the story moved, only the last chapter's lines, clips and shots change. Render on the upload day, after that day's check. If the story moves after the render, the fact-checker writes a dated update note for the top of the description and the pinned comment and checks that the title does not promise what the video lacks; the user chooses between that note and a new last chapter.
+- **Story before lesson.** The viewer clicks on people in trouble, not on a finance lesson. The topic file lists what the largest channels in the niche have already published on the story (title, date, views, angle). If one of them told the same story in the last three days, we take a different angle or a different story. `brief.md` says what the editorial limits leave out and why the angle still carries a title people click.
 - The money figure goes in the thumbnail, not in the title. Title asks, thumbnail answers with a number.
 
 ## 2. Length and shape
@@ -154,6 +155,17 @@ What holds a viewer is the middle of the video, not its first frame. A shot of s
 - **The hidden piggy bank**: a small `piggy` tucked into a corner of a scene about every three minutes, never mentioned by the narrator. Its state follows the story: cracked on bad news, asleep at night, sunglasses on a good day. The pinned comment may ask who found it.
 - Write our own gags. Never reuse another channel's analogy, object or running joke.
 
+### Painted pictures (from the second episode)
+The reference channel's frames are detailed, lit pictures with a slow camera move; flat code-drawn figures lost to them. So the picture is a hybrid:
+
+- **Each place is one painted picture**: a shot with `"set": "picture"` and `"opts": { "src": "art/<id>.jpg", "shows": "who does what, where", "living": "the company or institution in it" }`. About 40-60 pictures an episode; several shots move the camera over the same picture. An action is a second picture of the same place (same figures, new pose), cut in on the word.
+- **Nothing to read inside a picture**: no words, numbers or logos. Every sign, tag, counter, card and name strip is drawn by the engine over it, so the screen-text list and the fact-check stay complete.
+- **One look.** Every picture is generated with the style sheet and the painted cast sheets attached (STYLE_GUIDE, Painted pictures). A picture that drifts from them is made again.
+- **Figures are in the picture.** The cast and the living things are painted from their sheets. The engine's own figures are for engine-drawn shots (charts, evidence cards, splits) and are not laid over a painted picture.
+- **The story's real people act.** A public figure of the story appears in the scenes as a caricature doing what they did in public: signing, phoning, walking out. Never an invented line in their mouth (STYLE_GUIDE, Real people).
+- **A person looks at every picture** on a contact sheet before the build: hands, faces, stray letters, a likeness that became realistic.
+- **The first 30 seconds first.** They are painted, built and shown to the user beside the reference (the Look gate) before the rest is painted. No lint replaces this look.
+
 ## 12. The loop ledger (plant and pay off)
 Fill in `## DEVICES` before writing the chapters.
 
@@ -180,6 +192,7 @@ The tools do this, and the lint checks the result (A1–A7):
 node studio/tools/mix.mjs channel-system/episodes/<slug> --tighten
 ```
 `--tighten` cuts silence at the ends of every clip and shortens pauses inside them; the mix levels the speakers, lays the bed 19 dB under the voice, dips it at chapter cards, lifts it in the climax and under the last lines, and places effects on stamps, slams and cards. Music: put files you have a licence for in `audio/music/` and credit each one in `audio/CREDITS.md`; with none, the house bed made in code is used.
+- **The voice is chosen before Gate 2.** The voice producer makes the hook (the first 30 seconds) in each candidate voice; the user chooses by ear; the choice is recorded in `README.md`. No upload on the scratch voice: the first episode went out on it.
 
 ## 14. Originality and YouTube policy
 Since 16 July 2026 YouTube does not monetize three kinds of "inauthentic content": repetitive template videos, content built to manipulate emotions, and AI personas discussing sensitive topics such as finance. Every episode must clear all three.
@@ -190,6 +203,7 @@ Since 16 July 2026 YouTube does not monetize three kinds of "inauthentic content
 - **No imitation of real people**: no cloned voices, no invented quotes, no realistic likeness. Caricatures are clearly cartoons and only say obviously comic lines.
 - **A human decides**: three approval gates per episode (topic, script, final cut).
 - Voice: decide with the user between a human narrator and a disclosed synthetic voice before the first upload, and re-check the policy text at that point.
+- **Painted pictures** are generated illustrations in our own style: clearly cartoons, made for this story only, each checked by a person. Re-read YouTube's current text on generated and altered content before each upload and set the label it asks for.
 
 ## 15. Packaging
 The title and the thumbnail are one promise made in two parts. The picture shows a moment; the title supplies the question. Neither repeats the other.

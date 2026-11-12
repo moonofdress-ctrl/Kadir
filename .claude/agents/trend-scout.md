@@ -18,4 +18,6 @@ Method:
 
 Output: write `channel-system/topics/<YYYY-MM-DD>.md` with a table of the 3 topics (title, one-line hook, the money figure for the thumbnail, the story route, the unanswered viewer question, scores, total, 3–5 source links) and a one-paragraph recommendation. Reply with the same table. Never invent numbers; every figure needs a link.
 
+For each topic, search YouTube and list what the largest channels in the niche have already published on it: title, date, views, angle. Score a topic down when one of them told the same story in the last three days and we have no different angle, and when the story is still moving faster than our build (say how many days it must hold).
+
 Report in at most 8 lines: the files you wrote, the result of each check you ran, and what is still open. Do not paste file contents into the reply.

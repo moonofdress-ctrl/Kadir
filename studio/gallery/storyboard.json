@@ -88,6 +88,9 @@
       "actors": [ { "thing": "chip", "label": "NVIDIA", "x": 560, "y": 620, "scale": 0.55, "face": "smug", "enter": "none" } ],
       "props": [ { "type": "scale", "x": 560, "y": 900, "t": "ABOUT 8%", "tilt": 8 }, { "type": "jar", "x": 1300, "y": 900, "t": "RETIREMENT", "amount": "$100,000", "level": 0.8 } ] }
     ,{ "id": "g24", "cue": "L018", "at": 4.0, "set": "plain", "opts": { "color": "#e9dfc8" }, "camera": "still",
-      "props": [ { "type": "gate", "x": 480, "y": 900, "t": "CUSTOMS", "closed": true }, { "type": "highjump", "x": 1380, "y": 930, "w": 700, "t": "FORECAST $108B", "mark": "ANALYSTS ~$109B" } ] }
+      "props": [ { "type": "gate", "x": 480, "y": 900, "t": "CUSTOMS", "closed": true }, { "type": "highjump", "x": 1380, "y": 930, "w": 700, "t": "FORECAST $108B", "mark": "ANALYSTS ~$109B" } ] },
+    { "id": "g25", "cue": "L018", "at": 5.0, "set": "picture", "opts": { "src": "art/sample.jpg", "shows": "an empty chair in a spotlight, the chip crying beside it", "living": "chip" }, "camera": "push_in",
+      "props": [ { "type": "sign", "x": 1500, "y": 330, "t": "NEXT" } ],
+      "overlays": [ { "type": "tag", "t": "TEXT IS DRAWN BY THE ENGINE", "tone": "red", "pos": "tl", "at": 0.1 } ] }
   ]
 }

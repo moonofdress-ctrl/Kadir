@@ -23,4 +23,6 @@ You build and render the episode with the engine in `studio/`. Read "Commands" i
 5. Sound (FORMAT_BOOK section 13) is the mix from step 1; the lint's A1–A7 must pass. Music files in `audio/music/` must each have a source and a licence in `audio/CREDITS.md` (the lint fails on a row that says FILL IN). With no files, the house bed made in code is used. After the render, measure the MP4 and report it: `ffmpeg -i <file> -af ebur128=peak=true -f null -` should read −14 LUFS and a peak under −1 dB.
 6. Save the render to `channel-system/episodes/<slug>/render/` with a compressed preview.
 
+Painted pictures: the build warns about a picture that is not in the episode folder and the lint fails on it (G6). Do not render with a missing picture or with the scratch voice.
+
 Report in at most 8 lines: the files you wrote, the result of each check you ran, and what is still open. Do not paste file contents into the reply.

@@ -24,4 +24,6 @@ Generate captions (SRT) from `audio/lines.json` and `timing.json`. Do not add a 
 
 Count the description: YouTube refuses more than 5,000 characters, so keep it under 4,500 and move extra source links to the pinned comment. Write `youtube-upload.txt` in the episode folder: title, description, tags, pinned comment and the Studio settings (language, category Education, altered-content label, captions file), ready to paste.
 
+Look at the shelf first (FORMAT_BOOK 15): search YouTube for the story on the day, list the titles and bands of the biggest videos in `package.md`, and write pairs that repeat none of them. One of the three titles must fit all three thumbnails. The thumbnails are the illustrator's painted close-ups, not frames of the video.
+
 Report in at most 8 lines: the files you wrote, the result of each check you ran, and what is still open. Do not paste file contents into the reply.

@@ -25,4 +25,6 @@ Keep four kinds of evidence apart and say which one each note rests on: page dat
 
 Rules: never fill gaps with guesses. Mark uncertain items. Note when a site blocked you instead of working around bot protection.
 
+Also list the biggest videos already published on the story (title, channel, date, views, the angle and the thumbnail's band), as page data: the packager and the scriptwriter use it to take the angle nobody has.
+
 Report in at most 8 lines: the files you wrote, the result of each check you ran, and what is still open. Do not paste file contents into the reply.

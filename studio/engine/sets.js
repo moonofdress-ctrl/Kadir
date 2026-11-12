@@ -34,6 +34,13 @@
   const SETS = {
     plain(o) { return { back: R(0, 0, 1920, 1080, o.color || "#efe6d0", 0, "") }; },
 
+    // A painted picture as the whole background: { src: "art/tent.jpg", shows: "who does what", living: "chip", dim: 0.2 }.
+    // The file sits in the episode folder; the build copies it and fills in `href`. No text inside the picture: signs, tags and counters are drawn over it.
+    picture(o) { const href = String(o.href || "").replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+      return { back: R(0, 0, 1920, 1080, o.color || "#101226", 0, "") +
+        (href ? `<image href="${href}" x="0" y="0" width="1920" height="1080" preserveAspectRatio="xMidYMid slice"/>` : T(960, 560, "PICTURE MISSING: " + (o.src || "no src"), 56, "#fff")) +
+        (o.dim ? R(0, 0, 1920, 1080, `rgba(11,13,30,${+o.dim})`, 0, "") : "") }; },
+
     studio(o) {
       const wall = o.wall || "#e9dfc8", floor = o.floor || "#cbb894"; let s = R(0, 0, 1920, 820, wall, 0, "");
       for (let x = 240; x < 1920; x += 240) s += `<path d="M${x},0 L${x},820" stroke="rgba(27,29,54,.08)" stroke-width="6"/>`;

@@ -1,6 +1,6 @@
 # Style guide
 
-Our videos are **drawn in code**, not generated as images. Every figure, set, chart and card is SVG and HTML built by the engine in `studio/`, so the look stays identical from shot to shot and a new scene costs minutes, not a round of image generation.
+From the second episode a video has two layers. **Places and figures are painted pictures**, generated in one fixed look and checked by a person. **Everything that is read is drawn in code** by the engine in `studio/`: cards, counters, charts, signs, tags, name strips and subtitles, in the house type and colours. The first episode was drawn in code alone and looked flat beside the reference channel (`LESSONS.md`).
 
 The look is ours. Do not imitate another channel's figures, lettering, palette or signature objects.
 
@@ -70,8 +70,16 @@ Allowed, with these limits:
 - No sexual, degrading or hateful depictions; never shown endorsing a product.
 - Lesser-known people in the story (analysts, officials) are drawn the same way: a caricature with two or three of their own traits and a name strip, only about what they said or did in public. The figure must not contradict the name (a man's name over a woman figure), and two named people in one episode must not share one look.
 
+## Painted pictures
+- **The look**: the cut-paper house look, painted. Thick ink-navy outlines, clean simple shapes, big heads, vivid saturated colour with soft painted shading, one clear light source with dark teal shadows around it, a detailed textured background behind simple figures. Clearly a cartoon, never realistic.
+- **The style lock**, pasted at the start of every prompt: "Bold editorial cartoon illustration: thick dark ink outlines, clean simple shapes, exaggerated proportions with big heads, vivid saturated colours, soft painted shading, one warm light source, deep teal-blue shadows, detailed textured background. No text, no letters, no numbers, no logos anywhere."
+- **The sheets**: `sheets/style_painted.png` (one picture that fixes the look) and `sheets/<name>_painted.png` for each cast member and the chip (prompts in `cast.md`). They are attached as references to every generation. Made once, approved by the user, then not changed.
+- **Room for the engine**: say in each prompt which part stays plain and dark (the upper third for a band or counter, or one side for a card), because the engine writes there.
+- **Files**: 1920x1080 JPEG, under 500 KB, in the episode's `art/`, named by the picture's id in `art-requests.md`.
+- **Never**: words, numbers, logos, a real person's realistic face, another channel's figures or objects.
+
 ## Thumbnail (house formula)
-The thumbnail is the one place a richer illustration is allowed; it may be painted or generated, then checked by a person. `node studio/tools/stills.mjs thumb` makes one from the video's own first shot, or from an illustration, with the text band added.
+The thumbnail is a painted close-up in the same look, checked by a person: one face filling a third of the frame or more, one object, one situation, one strong background colour. `node studio/tools/stills.mjs thumb` makes one from the video's own first shot, or from an illustration, with the text band added.
 1. Top band: the subject in white and one figure in red. Heavy sans, dark outline. Four words at most.
 2. Centre: one character, one extreme emotion, holding or facing the story's object.
 3. Background: one dramatic situation, darker and softer than the character.

@@ -19,4 +19,6 @@ For every number, date, name and quote in `script.md`:
 
 Write `factcheck.md` as a table: claim, script line, source, status (verified / corrected / removed / unverifiable), note. Make corrections directly in `script.md` and list them. Anything unverifiable is removed or softened, never left as fact.
 
+On the second pass also look at the contact sheet for letters or numbers inside painted pictures: a generated picture can invent a sign or a figure that nobody checked. Send each one back to the illustrator.
+
 Report in at most 8 lines: the files you wrote, the result of each check you ran, and what is still open. Do not paste file contents into the reply.

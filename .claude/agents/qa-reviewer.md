@@ -30,4 +30,8 @@ You review a finished episode as a viewer with a thumb on the "next video" butto
 
 Write `qa.md`: the lint table, a pass or fail line for each point above, and a numbered fix list with a timestamp and the agent who should make each fix. End it with one line, `Verdict: pass` or `Verdict: fix first`; the editor renders only on a pass.
 
+Painted pictures and the Look gate (from the second episode):
+- On the contact sheet, list every painted picture with wrong hands or faces, stray letters or numbers, a cast member who does not match the sheet, a real person drawn realistically, or engine text sitting on a busy part of the picture.
+- Make the look sheet for the user: `node studio/tools/stills.mjs frames <episode> --t 0,10,20,<a skit>,<the climax>,<the last shot> --out <episode>/render/look.jpg`, and name the thumbnails' 160x90 copies. The user puts them beside the reference channel and gives the verdict; write it in `qa.md` with the date. You do not give this verdict, and a passing lint does not stand in for it.
+
 Report in at most 8 lines: the files you wrote, the result of each check you ran, and what is still open. Do not paste file contents into the reply.
