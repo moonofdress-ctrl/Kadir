@@ -128,3 +128,55 @@ Retention lint: nvidia-ceo-probe  (13:09, 200 shots, 2186 words)
 11. **"SALE TODAY ONLY" poster.** It sits behind the Nvidia loss on the bus (0:10-0:23, 10:55) and can read as "buy the dip". Swap it for a neutral ad. Art director.
 12. **Short empty waits in builds.** About 3 s at 1:24-1:27 (c2s10b) and 11:15-11:18 (c9s50d). Cut them to about 1.5 s or show the set behind. Art director.
 13. **Gate 3.** Per brief.md the user re-reads CH8 and CH9 before upload. After B1, B2 and B7, rebuild, re-render and re-pull frames at the times above. Owner: editor.
+
+## Re-check 2026-11-12
+
+Judged from frames of the current build (201 shots, 13:09), pulled with `stills.mjs frames --t` at each shot below. The mp4s in render/ are older than the fixes and were not used. Lint today: `0 failed, 3 warnings, 38 passed` (A2 -14.02 LUFS, A3 -1.04 dBTP on the mix; A6 26 pauses, scratch voice). Shot times below are from the current build.
+
+### The seven blockers
+
+| # | Shots (time) | Result | What I saw |
+|---|---|---|---|
+| B1 | c4s24 (3:35-3:41), c4s24b (3:41-3:50), c5s27 (4:30-4:35), c5s27b (4:35-4:42) | **Cleared** | c4s24: two newspapers with a magnifier at the tent, NVIDIA flag on the pole. c4s24b: doc card plus the JENSEN HUANG strip; the only figure is a newspaper in the far corner, which reads as the press, not as him. c5s27: Benny in the kitchen reading the email on his phone under SAME DAY / EMAIL TO STAFF. c5s27b: card and strip only. Nobody can be read as the CEO |
+| B2 | c5s26 (4:14-4:24), c5p26 (4:24-4:30), c6s38 (6:25-6:28), c9s49d2 (10:29-10:32) | **Cleared** | c5s26: Benny on his phone at the news street, newspaper at the kiosk. Panel 3 of c5p26 is an old man in glasses with a magnifier (an inspector), not a woman. c6s38: newspaper THE INFORMATION at the customs dock. c9s49d2: newspaper at the podium. No REPORTER is left in ch1-ch9 (Grep: REPORTER, STAFFER, COLUMNIST, ANALYST, SENATOR, no matches) |
+| B3 | c5p26 (4:24-4:30) | **Cleared (now a build, with advice)** | Panel 2 (CHINA DENIES IT) is in by 4:24.5, panel 3 (NOTHING PROVEN IN PUBLIC) at about 4:27.2. The right third is empty for about 2.7 s, not 9 s. UNNAMED SOURCES lands at about 4:26.5 on panel 1 (the news kiosk, CLAIM (REPORTED)), clear of China's denial |
+| B4 | c7n06c (8:18-8:20) | **Cleared** | Panel 2: DEFENDANT stamp over a bare pole signed TESLA'S CEO, HE WAS at the foot. No person drawn. Panel 1 is the TESLA box company. Empty for about 1.5 s before panel 2: a build |
+| B5 | c1s01 (0:00-0:05), c1s04 (0:12-0:13), c2s10 (1:16-1:23), c9s52e (12:08-12:14) | **Cleared** | No black smear on any counter; the counters have an outline and no dark plate. c9s52e: ~$109B sits in clear sky at top left; the RESULTS envelope is fully visible. c1s04: the red caption MY INDEX FUND: NVIDIA SLICE (ON $100K) reads over the bus windows at full size, but it is thin (advice 6 stays). New overlap in c2s10, see advice 15 |
+| B6 | c9s50e (11:22-11:28) | **Cleared** | PUBLISHED? GUIDE DOESN'T SAY is a yellow tag in front of the two directors' heads, fully readable. It covers their eyes and the calendar's edge for about a second; acceptable |
+| B7 | c9s54 (12:39-12:46) | **Cleared** | Only the NEXT chair, AS OF WED 11 NOV, NIGHT: NOBODY NAMED, and the Nvidia chip watching from the floor. Nothing reads as a successor. The room is bare (pale wall), but the chair is the joke |
+
+### Replacement shots for Ives, Bennet and Spatacco
+
+All still make sense as pictures: c3s16 / c3s17 (2:14-2:26) doc cards with DAN IVES strip and the empty NEXT chair; c6s36 (5:45-5:54) the IF HE IS REMOVED (ANALYST VIEW) bars with the chip reacting; c6s36b (5:54-5:56) Benny under a NOT A FACT stamp with a FORECAST tag; c6s41 (6:53-6:59) a Senate dome with a letter and the MICHAEL BENNET strip; c9s53b (12:25-12:30) an AI SPENDING cloud at an OPINION stall with the ADAM SPATACCO strip. Weakest: c3s16-c3s17 are 11 s of cards with no one acting (advice 4 still applies).
+
+### New finding
+
+**B8 (blocking). c9s49b (10:08-10:12): a man in a suit stands alone on the night trading floor as the narration says "Two newspapers published reports. Both rest on people they did not name."** It is the CLEANER (`ch9.json` c9s49b, `"who": "CLEANER"`), the same topknot man in a blue jacket that B7 removed from c9s54. He has no duster, no label and a deadpan face, half in shadow, beside the two newspapers, in the shot that introduces the reports about the CEO's private life. He reads as the CEO. Fix: remove the actor, or give him the mop/duster and push him to the edge away from the newspapers. **Owner: art director.**
+
+### New advice (does not block)
+
+14. **c5p26 (4:24.5-4:27.2):** the right third is still empty navy for about 2.7 s. Bring panel 3 in about 1 s earlier (on "unnamed"). Art director.
+15. **c2s10 (1:21-1:23):** the -$600+ counter and its caption NVIDIA'S TWO-DAY FALL, ON $100K (OUR SUM) run across Benny's hair; the minus sign sits on the sun and touches the red marker, so the number can read as "$600+". Move the counter left above the jar or move Benny right. Art director.
+16. **Small overlaps in the new shots:** c9s52e caption crossed by the left high-jump post (12:08-12:14); c6s41 MICHAEL BENNET strip covers the Senate dome's base (6:53); c9s53b the AI SPENDING label on the cloud is half hidden by the OPINION stall (12:25-12:28). Art director.
+17. **c9p50d (11:15-11:22):** the COMMITTEE figure has the same face and jacket as the CLEANER. With the badge and briefcase under LAWYERS ANSWER TO THE COMMITTEE ONLY he reads as a lawyer, so it does not block; a different palette would end the one-face-many-people problem (advice 1). Art director.
+
+### Verdict
+
+**FAIL, one blocker left.** All seven blockers are cleared (B1 c4s24, c4s24b, c5s27, c5s27b; B2 c5s26, c6s38, c9s49d2; B3 c5p26; B4 c7n06c; B5 c1s01, c1s04, c2s10, c9s52e; B6 c9s50e; B7 c9s54). New blocker B8 in c9s49b. After B8 the picture passes this review.
+
+### What remains before upload
+
+1. B8: take the CLEANER out of c9s49b (art director), rebuild, lint, re-pull a frame at 10:08-10:12 (editor).
+2. The final voice replaces the scratch voice; then `mix.mjs --tighten`, re-lint (V1, A6) (voice, editor).
+3. Remake the full render from the current build; measure it with ebur128 (-14 LUFS, true peak under -1 dB) and pull a frame sheet from the mp4 (editor). render/nvidia-ceo-probe.mp4 and render/preview.mp4 are older than all fixes and must not be uploaded.
+4. Out of date against Thursday's reporting (factcheck.md Q9): L132 and c9s49b (TWO REPORTS undercounts), L151 and c9s50f (WSJ REPORTS: COULD MEET SOON; the meeting has reportedly happened), L162 and c9s54 / thumbnail C (NOBODY NAMED while a search and an interim are reported). Scriptwriter and art director, then the fact-checker on the day of upload (also L032 / c3s15, L112, L138).
+5. Thumbnail B's band (SAME SALES -9.5%) back with the art director (factcheck.md Q8).
+6. Gate 3: the user re-reads CH8 and CH9.
+7. The user listens to the final mix for music that fights the voice, especially under CH9. I cannot hear it.
+8. Advice 14-17 above, and the open advice from the first review (1, 4, 5, 6, 10, 11, 12), at the art director's discretion.
+
+## After the re-check, 2026-11-12
+
+- B8 (c9s49b): the unlabelled man in a suit is replaced by BENNY, panicking at his red phone (storyboard/ch9.json). Checked on one frame at 610.5 s: the figure reads as the viewer, not the CEO. Build 201 shots, lint `0 failed, 3 warnings, 38 passed`, `npm run check` passed. Not yet re-reviewed by QA.
+- The advice items of the re-check (c5p26 right third, the c2s10 counter over Benny's hair, small overlaps in c9s52e, c6s41, c9s53b, the COMMITTEE figure's face in c9p50d) are open.
+- screen-text.md was restored from git with its Checked column filled; the c9s49b change adds no wording.

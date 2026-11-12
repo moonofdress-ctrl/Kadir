@@ -3,7 +3,7 @@
   { "id": "c9t01", "type": "card", "cue": "L131", "at": 0.4, "text": "After the close, the bounce ran out.", "emph": ["ran", "out."] },
   { "id": "c9s49b", "cue": "L132", "set": "trading_floor", "opts": { "mood": "red" }, "camera": "tilt_down", "grade": "night",
     "light": { "x": 960, "y": 560, "r": 900, "color": "#ffd9a0", "dark": 0.6 },
-    "actors": [ { "who": "CLEANER", "x": 1500, "face": "deadpan", "pose": "hold", "enter": "none" },
+    "actors": [ { "who": "BENNY", "x": 1500, "face": "panic", "prop": "phone", "screen": "red", "flip": true, "enter": "none" },
                 { "thing": "newspaper", "who": "NEWSPAPER", "label": "THE NEW YORK TIMES", "x": 200, "y": 940, "scale": 0.6, "face": "smug", "enter": "none", "acts": [ { "at": 0.2, "to": [560, 940], "dur": 1.0 } ] },
                 { "thing": "newspaper", "who": "NEWSPAPER", "label": "THE WALL STREET JOURNAL", "x": 100, "y": 960, "scale": 0.6, "face": "smug", "enter": "none", "acts": [ { "at": 0.6, "to": [960, 960], "dur": 1.0 } ] } ],
     "props": [ { "type": "piggy", "x": 1760, "y": 960, "k": 0.3, "state": "cracked" } ],
