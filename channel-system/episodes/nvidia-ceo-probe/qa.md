@@ -106,4 +106,33 @@ Not blocking:
 - Listen (user): scratch voice, V1 166 wpm, A6 pauses, music against the voice; render and measure -14 LUFS / peak under -1 dB.
 - factcheck.md: re-record L151 (voice-producer); 12 Nov close and any board decision (CH9 s49d-s56 change if the board acts); Bennet release as PRIMARY; WSJ/NYT texts unread; 8 vs 10 Nov board statement date; thumbnail B band; Gate 3.
 
-Verdict: fix first
+Previous build (above): fix first.
+
+## Re-check
+
+Build of 203 shots, 13:09, lint `0 failed, 3 warnings, 38 passed`. Judged from `--t` frames (no render).
+
+| # | Shot | State | What I saw |
+|---|------|-------|------------|
+| 1 | c7n02 / c7n02b 7:21-7:30 | cleared | No human. A grey box labelled PLAN B stands at the tent (7:22, 7:27); a small APPLE box sits on the TEA podium; APPLE 2011 flag reads whole; READY sign clear. |
+| 2 | c5s31 5:10-5:15 | cleared | A gold coin labelled SHAREHOLDERS holds the paper; the LAWSUIT tag sits above the shops, clear of the coin. COURT box beside it. |
+| 3 | c2s08b 0:52-0:57 | cleared | A TREFIS tower holds the magnifier over the 7.3% scale; no person. Source line readable. |
+| 4 | c7n08 8:29-8:34 | cleared | Benny stands left between the small APPLE and BERKSHIRE tents; all four flags read. |
+| 5 | c7n08x / c7n08y 8:34-8:41 | cleared | Benny between BERKSHIRE and NVIDIA (8:35), then between NVIDIA and TESLA (8:39); every flag clear of his head. |
+| 6 | c7n08b ~8:44.6-8:47 | cleared (tight) | -0.65% at 8:44.8, ~-5% and ~-9.5% by 8:45.1, -13.9% by 8:45.4; all four held about 1.5 s before the cut at 8:47. The shot is still only ~2.3 s; confirm on the render that it reads. |
+| 7 | c3k04 2:04-2:08 / c3k04b 2:08-2:10 | cleared | INSURE ANYTHING is a hanging sign fully inside the frame; 1 POLE reads whole on "One." and on "Next." (2:09), no head over it. |
+
+Changed shots, looked at once:
+- c3s16 2:16: office poster gone behind the Newsweek card; card reads. The DAN IVES strip still overlaps Ives' legs (note 8, not blocking).
+- c3s17 2:23: poster gone; card and NOTE TO CLIENTS read. The DAN IVES strip now sits beside the NEXT chair, with Ives at the right holding a pointer; it puts his name on no other person, so not a real-person fault, but move the strip next to him (art director, not blocking).
+- c9s54b 12:49: no shop name behind the tower; the NEXT chair covers the "O" of a background OFFICES sign (fine).
+- c6s38b 6:31-6:35: CHIPS crates read; the counter rolls through $6.2B and lands on $7.5B (REPORTED), matching factcheck.
+- c5s26 4:15: NEWSPAPER label reads whole; the REPORTED tag sits on the shop sign (note 15 cleared).
+- c7n07 8:24: no ELON MUSK strip; the card names him (note 16 cleared).
+- Seen in passing: c7n06 8:05-8:09, the SEC figure is still half out of frame right (note 9, not blocking).
+
+Layout check: 44 rows, exit 1 (was 55). New rows since the review: c2s09 499 OTHERS on the plank (the box carries the same label, fine) and c3s18b NVIDIA on the chip behind the AGAINST podium (the chip is the established Nvidia character, fine). The earlier must-read rows c3k04, c3k04b, c7n08, c7n08x, c7n02b are gone; c2p11 NEWS and c6k10 IT'S FINE remain (notes 13, 14, not blocking). No new must-read row.
+
+New blocking findings: none.
+
+Verdict: pass
