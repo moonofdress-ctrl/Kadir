@@ -3,7 +3,7 @@
   { "id": "c8t01", "type": "card", "cue": "L115", "at": 0.3, "text": "Wednesday, the 11th.", "emph": ["11th."] },
   { "id": "c8s43", "cue": "L116", "set": "trading_floor", "opts": { "mood": "green" }, "camera": "pan_right", "grade": "green",
     "actors": [ { "thing": "cloud", "label": "COREWEAVE", "x": 760, "y": 880, "scale": 0.7, "face": "happy", "pose": "cheer", "enter": "none", "acts": [ { "cue": "L116", "word": 10, "face": "greedy" } ] } ],
-    "props": [ { "type": "pricetag", "x": 1380, "y": 560, "t": "STRONG RESULTS (TUE NIGHT)", "rot": 6, "cue": "L116", "word": 10 } ],
+    "props": [ { "type": "pricetag", "x": 1180, "y": 270, "t": "STRONG RESULTS (TUE NIGHT)", "rot": 4, "cue": "L116", "word": 10 } ],
     "overlays": [ { "type": "calendar", "month": "NOV", "day": 11, "dow": "WEDNESDAY", "x": 210, "y": 150, "at": 0.2 },
                   { "type": "tag", "t": "RENTS OUT NVIDIA CHIPS", "tone": "green", "cue": "L116", "word": 4 } ] },
   { "id": "c8s43b", "cue": "L116", "word": 16, "set": "trading_floor", "opts": { "mood": "green", "party": true }, "camera": "tilt_up", "grade": "green",

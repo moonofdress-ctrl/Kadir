@@ -11,7 +11,7 @@
     "overlays": [ { "type": "counter", "from": 0, "to": 33, "suffix": " YEARS", "tone": "", "pos": "tl", "cap": "ONE BOSS", "at": 0.2, "dur": 1.0, "plate": true } ] },
   { "id": "c3s13", "cue": "L025", "set": "lawn", "opts": { "time": "dusk" }, "camera": "pull_out", "motif": "tent",
     "props": [ { "type": "tent", "x": 960, "y": 930, "w": 1600, "ropes": 6, "crowd": 60, "grow": [ { "cue": "L025", "word": 0, "k": 0.35 }, { "cue": "L025", "word": 6, "k": 0.65 }, { "cue": "L025", "word": 11, "k": 1 } ] },
-               { "type": "pricetag", "x": 420, "y": 300, "t": "START-UP", "rot": -8 }, { "type": "pricetag", "x": 1300, "y": 260, "t": "ONE OF EARTH'S BIGGEST", "rot": 5, "at": 2.6 } ],
+               { "type": "pricetag", "x": 420, "y": 300, "t": "START-UP", "rot": -8 }, { "type": "pricetag", "x": 1240, "y": 260, "t": "ONE OF EARTH'S BIGGEST", "rot": 5, "at": 2.6 } ],
     "actors": [ { "thing": "chip", "label": "NVIDIA", "x": 960, "y": 420, "scale": 0.4, "face": "happy", "pose": "cheer", "enter": "none", "acts": [ { "cue": "L025", "word": 11, "to": [960, 300], "dur": 0.8 } ] } ] },
   { "id": "c3s14", "cue": "L026", "set": "office", "opts": { "poster": "KEY", "poster2": "PEOPLE" }, "camera": "tilt_up",
     "actors": [ { "who": "BENNY", "x": 460, "face": "confused", "prop": "magnifier", "enter": "none", "acts": [ { "cue": "L026", "word": 10, "face": "shocked" } ] } ],
