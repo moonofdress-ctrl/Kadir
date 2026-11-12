@@ -1,52 +1,8 @@
 {
-  "episode": "slug",
-  "title": "",
+  "episode": "nvidia-ceo-probe",
+  "title": "Why Is Nvidia Down Over Its CEO?",
   "viewer": "BENNY",
-  "notes": "See studio/README.md for the format and studio/gallery/storyboard.json for a working example of every component. Every shot is a small joke: a place, somebody doing something, a fact written in the scene, a living thing for each company or institution (FORMAT_BOOK 11).",
-  "shots": [
-    {
-      "id": "s01",
-      "cue": "L001",
-      "set": "studio",
-      "camera": "push_in",
-      "motif": "",
-      "actors": [
-        {
-          "who": "BENNY",
-          "x": 600,
-          "face": "shocked"
-        }
-      ],
-      "overlays": [
-        {
-          "type": "counter",
-          "from": 0,
-          "to": 0,
-          "prefix": "$",
-          "at": 0.5
-        }
-      ]
-    },
-    {
-      "id": "t01",
-      "type": "card",
-      "cue": "L002",
-      "text": ""
-    },
-    {
-      "id": "k01",
-      "cue": "L003",
-      "set": "office",
-      "camera": "pan_left",
-      "actors": [
-        {
-          "who": "BENNY",
-          "x": 600,
-          "speaks": [
-            "L003"
-          ]
-        }
-      ]
-    }
-  ]
+  "notes": "Header only: the shots are in storyboard/ch1.json ... ch9.json, joined in file-name order. Planned names not yet in the engine (tent, chair, jar, seesaw, scale, gate, highjump, bus, boardroom, newspaper) are listed in build-requests.md.",
+  "audio": { "music": "house", "climax": [6, 9] },
+  "shots": []
 }
