@@ -16,6 +16,7 @@ A newsroom of agents that turns a market event into a 12–15 minute cartoon exp
 7  voice-producer → audio/<id>.wav (narrator + character lines), dead air cut
 8  editor         → sound mix, build, lint, frame check (no render yet)
 9  qa-reviewer    → qa.md from the frames, sends fixes back; repeat 5–9 until it passes
+9a fact-checker   → currency check on the render day, for a story that is still moving (FORMAT_BOOK 1)
 9b editor         → render to MP4 once, after QA passes → render/
 10 illustrator    → thumbnail art that matches the first frame
 11 packager       → package.md: three title+thumbnail pairs,     ─── GATE 3: you approve and upload
@@ -43,6 +44,7 @@ node studio/tools/retention-lint.mjs channel-system/episodes/<slug>
 | `episodes/demo/` | A 19-second demo with scratch voices, staged by the picture rules. |
 | `research/` | How the rules were measured: the reference video's analysis and retention review. |
 | `learnings.md` | Written by the analyst after each upload (created with the first one). |
+| `LESSONS.md` | What went wrong while making each episode and which rule now prevents it. |
 | `../studio/` | The engine, the build and lint tools and a gallery of every component. |
 
 ## Tools and who does what today
