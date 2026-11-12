@@ -15,7 +15,7 @@ The look is ours. Do not imitate another channel's figures, lettering, palette o
 One skeleton for everybody (`studio/engine/rig.js`):
 - Squircle head, about 45% of the height. Block body. **Floating mitten hands, no arms.** Short legs, big shoes.
 - Tall white eyes with pupils, thick eyebrows that do most of the acting, a small nose.
-- Ten everyday expressions: neutral, happy, shocked, scared, angry, smug, sad, confused, relieved, deadpan. Four loud ones for hooks, climaxes and thumbnails: panic, furious, crying, greedy. One clear emotion at a time, changed on the word that causes it.
+- Eleven everyday expressions: neutral (a small smile), plain (no smile, for a real person saying something serious), happy, shocked, scared, angry, smug, sad, confused, relieved, deadpan. Four loud ones for hooks, climaxes and thumbnails: panic, furious, crying, greedy. One clear emotion at a time, changed on the word that causes it.
 - Hand poses: rest, hips, shrug, cheer, point, think, facepalm, hold, phone, wave, present, raise, carry, panic, grab, offer.
 - Things to wear and hold: a `hat` (party, crown, hardhat), a `badge` with a number (an age, a rank, a count), and hand props (phone, bill, tablet, mug, stamp, cash, wallet, price tag, pen, placard, briefcase, magnifier). A prop picks a fitting pose by itself.
 - Mouths move with the words when a figure speaks. Figures blink and breathe when idle.
@@ -68,7 +68,7 @@ Allowed, with these limits:
 - A name strip (lower third) the first time they appear.
 - No invented quotes presented as real, and no imitation of their voice. Real quotes go on a document or post card, verbatim, with source and date. Skit lines are obviously jokes.
 - No sexual, degrading or hateful depictions; never shown endorsing a product.
-- Lesser-known people (analysts, officials) get a name strip over a neutral figure, not a caricature.
+- Lesser-known people in the story (analysts, officials) are drawn the same way: a caricature with two or three of their own traits and a name strip, only about what they said or did in public. The figure must not contradict the name (a man's name over a woman figure), and two named people in one episode must not share one look.
 
 ## Thumbnail (house formula)
 The thumbnail is the one place a richer illustration is allowed; it may be painted or generated, then checked by a person. `node studio/tools/stills.mjs thumb` makes one from the video's own first shot, or from an illustration, with the text band added.

@@ -14,8 +14,9 @@ A newsroom of agents that turns a market event into a 12–15 minute cartoon exp
 5b fact-checker   → second pass on screen-text.md: every word and number on screen
 6  scene-builder  → new sets, props and guest figures in studio/engine/
 7  voice-producer → audio/<id>.wav (narrator + character lines), dead air cut
-8  editor         → sound mix, build, lint, frame check, render → render/
-9  qa-reviewer    → qa.md, sends fixes back
+8  editor         → sound mix, build, lint, frame check (no render yet)
+9  qa-reviewer    → qa.md from the frames, sends fixes back; repeat 5–9 until it passes
+9b editor         → render to MP4 once, after QA passes → render/
 10 illustrator    → thumbnail art that matches the first frame
 11 packager       → package.md: three title+thumbnail pairs,     ─── GATE 3: you approve and upload
                     captions, the Shorts plan
@@ -65,7 +66,7 @@ A 13-minute episode is about 250 lines and 200 shots: too much for one agent in 
 - **Tools before agents.** Voice (`voice.mjs`), sound (`mix.mjs`), frames (`stills.mjs`) and the checks are plain commands; an agent is needed only to judge the result.
 - **Agents read sections, not files.** The token rules are in `CLAUDE.md` at the repository root: each agent reads only the parts of the format book, cast and style guide its step needs, reports in a few lines, and code search skips `vendor/`, the old `amazon-hidden-tax/` engines and `research/` (see `.ignore`).
 - **A new session per gate.** The episode folder carries everything forward, so a new session after each gate starts with an empty conversation instead of paying for the old one on every turn.
-- Rendering already uses every processor core (`--workers auto`); a 2-minute piece took 15 minutes in a cloud session, so plan about an hour and a half for 13 minutes and run it in the background.
+- Render once, after QA passes. A 13-minute episode took 1 h 4 min on the user's laptop (2 workers); a fix found after the render costs the whole hour again. To look at a fix, render only that part (`--start <s> --end <s>`). Run the full render in the background.
 
 ## Running an episode
 

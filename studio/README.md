@@ -16,6 +16,7 @@ Turns a storyboard and a set of voice clips into a HyperFrames composition. Ever
 | `tools/voice.mjs` | Scratch voice track: one Kokoro clip per script line. |
 | `tools/mix.mjs` | The sound mix: voice levelling, music bed, effects, −14 LUFS. `tools/sounds.mjs` makes the house effects and bed in code; `tools/cues.mjs` decides where effects fall; `tools/audio-lib.mjs` reads, measures and limits audio. |
 | `tools/screen-text.mjs` | Lists every word and number the picture shows, for the fact-checker's second pass. |
+| `tools/layout-check.mjs` | Opens the build in a browser and lists text that something covers, names beside figures and counters cut short. |
 | `tools/stills.mjs` | Saves pictures: contact sheets of frames, the thumbnail, the cast's model sheets. |
 | `tools/preview.mjs`, `sheet.html`, `cast.html`, `thumb.html` | Look at frames in a browser without rendering. |
 | `gallery/` | One silent reel that uses every component. Copy from its `storyboard.json`. |
@@ -38,7 +39,13 @@ To save frames as a picture instead (this is how agents and reviewers look at an
 ```bash
 node studio/tools/stills.mjs frames channel-system/episodes/<slug>
 ```
-It writes `render/frames.jpg` in the episode folder: the first frame, the middle of every shot and the last second. `--t 0,3,9.5` picks moments, `--every 10` samples the whole episode. It needs Playwright with a Chromium (`npm install --no-save playwright` and `npx playwright install chromium`, once), or `CHROME_PATH` pointing at an installed Chrome.
+It writes `render/frames.jpg` in the episode folder: the first frame, the middle of every shot and the last second. `--t 0,3,9.5` picks moments, `--every 10` samples the whole episode. It needs a browser driver, once, in `studio/`: `npm install --no-save playwright-core` uses the Chrome or Edge already installed (set `CHROME_PATH` if it is somewhere unusual); or `npm install --no-save playwright` and `npx playwright install chromium` for Playwright's own.
+
+What covers what, read from the real picture (about half a minute for a 13-minute episode):
+```bash
+node studio/tools/layout-check.mjs channel-system/episodes/<slug>
+```
+It lists every text that something covers late in its shot (a lamp pole over a sign, a tag over a sign, a head in front of a banner, text past the edge) and every counter whose shot is too short. A background shop name behind a head is fine; anything the viewer is meant to read is a fault. Run it after every build, before QA.
 
 Sound, once every line has a clip (`voice.mjs` makes a scratch track when there is no recording yet):
 ```bash

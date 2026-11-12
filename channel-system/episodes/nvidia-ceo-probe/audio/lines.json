@@ -1,0 +1,842 @@
+[
+  {
+    "id": "L001",
+    "speaker": "N",
+    "text": "In two days, Nvidia lost about four hundred and thirty billion dollars in value... and no one had reported it selling one chip less."
+  },
+  {
+    "id": "L002",
+    "speaker": "N",
+    "text": "No factory closed."
+  },
+  {
+    "id": "L003",
+    "speaker": "N",
+    "text": "No customer walked away."
+  },
+  {
+    "id": "L004",
+    "speaker": "N",
+    "text": "No forecast was cut."
+  },
+  {
+    "id": "L005",
+    "speaker": "N",
+    "text": "So why is Nvidia down over its CEO?"
+  },
+  {
+    "id": "L006",
+    "speaker": "BENNY",
+    "text": "I don't even own Nvidia."
+  },
+  {
+    "id": "L007",
+    "speaker": "HAL",
+    "text": "You own an index fund. You own a lot of Nvidia."
+  },
+  {
+    "id": "L008",
+    "speaker": "N",
+    "text": "The short answer is three things. One man. One empty chair. And one argument in Washington."
+  },
+  {
+    "id": "L009",
+    "speaker": "N",
+    "text": "It starts on a Sunday, the eighth of November, with a statement from the board."
+  },
+  {
+    "id": "L010",
+    "speaker": "N",
+    "text": "But first... why is this your problem?"
+  },
+  {
+    "id": "L011",
+    "speaker": "N",
+    "text": "The most popular kind of index fund in America holds five hundred companies. They are not equal slices. The bigger the company, the bigger its slice."
+  },
+  {
+    "id": "L012",
+    "speaker": "N",
+    "text": "Before the drop, about seven dollars of every hundred in that fund was one company. This one."
+  },
+  {
+    "id": "L013",
+    "speaker": "N",
+    "text": "The research firm Trefis checked one big S&P 500 fund as of the fourth of November: seven point three percent. A popular Nasdaq fund, about eight."
+  },
+  {
+    "id": "L014",
+    "speaker": "N",
+    "text": "Keep that seven in mind."
+  },
+  {
+    "id": "L015",
+    "speaker": "MARTHA",
+    "text": "I picked the boring fund on purpose."
+  },
+  {
+    "id": "L016",
+    "speaker": "CHAD",
+    "text": "Boring fund. Spicy chip."
+  },
+  {
+    "id": "L017",
+    "speaker": "N",
+    "text": "The arithmetic is simple. When Nvidia moves ten percent, the whole index moves about seven tenths of one percent... with every other company standing still."
+  },
+  {
+    "id": "L018",
+    "speaker": "N",
+    "text": "So do the sum. If you had a hundred thousand dollars in that fund, Nvidia's two-day fall alone took more than six hundred dollars off it. The rest of the market rose on Monday, and hid it."
+  },
+  {
+    "id": "L019",
+    "speaker": "N",
+    "text": "You didn't pick the stock. You didn't read the headline. You were just standing under the tent."
+  },
+  {
+    "id": "L020",
+    "speaker": "BENNY",
+    "text": "What's holding this thing up?"
+  },
+  {
+    "id": "L021",
+    "speaker": "HAL",
+    "text": "Don't look up."
+  },
+  {
+    "id": "L022",
+    "speaker": "N",
+    "text": "He looks up."
+  },
+  {
+    "id": "L023",
+    "speaker": "N",
+    "text": "It's one pole."
+  },
+  {
+    "id": "L024",
+    "speaker": "N",
+    "text": "Nvidia was founded in 1993. Its chief executive, Jensen Huang, has run it ever since. Thirty-three years, one boss."
+  },
+  {
+    "id": "L025",
+    "speaker": "N",
+    "text": "The company grew from a start-up into one of the most valuable businesses on earth. The pole never changed."
+  },
+  {
+    "id": "L026",
+    "speaker": "N",
+    "text": "The company knew it. Years ago, its own annual report warned that losing its key people, and it named him, would harm the business."
+  },
+  {
+    "id": "L027",
+    "speaker": "N",
+    "text": "And it said it carried no insurance on him."
+  },
+  {
+    "id": "L028",
+    "speaker": "HAL",
+    "text": "I'd like to insure one pole."
+  },
+  {
+    "id": "L029",
+    "speaker": "REGGIE",
+    "text": "How many poles do you have?"
+  },
+  {
+    "id": "L030",
+    "speaker": "HAL",
+    "text": "One."
+  },
+  {
+    "id": "L031",
+    "speaker": "REGGIE",
+    "text": "Next."
+  },
+  {
+    "id": "L032",
+    "speaker": "N",
+    "text": "So who takes over if he goes? Publicly, nobody has been named."
+  },
+  {
+    "id": "L033",
+    "speaker": "N",
+    "text": "One Wall Street analyst, Dan Ives of Yorkville Ives, put it bluntly. He said there is no succession plan."
+  },
+  {
+    "id": "L034",
+    "speaker": "N",
+    "text": "In a note to clients, he used two more words about the chief executive. Not replaceable."
+  },
+  {
+    "id": "L035",
+    "speaker": "N",
+    "text": "And the pole has a second job. When Washington talks about banning chip sales to China, he is the one who shows up to argue against it."
+  },
+  {
+    "id": "L036",
+    "speaker": "REGGIE",
+    "text": "Who speaks for the chip business?"
+  },
+  {
+    "id": "L037",
+    "speaker": "CHAD",
+    "text": "Him."
+  },
+  {
+    "id": "L038",
+    "speaker": "REGGIE",
+    "text": "And if he can't?"
+  },
+  {
+    "id": "L039",
+    "speaker": "CHAD",
+    "text": "...Also him."
+  },
+  {
+    "id": "L040",
+    "speaker": "N",
+    "text": "One man. Two jobs. Now meet the customer."
+  },
+  {
+    "id": "L041",
+    "speaker": "N",
+    "text": "Because this story did not start with a board. It started with a buyer."
+  },
+  {
+    "id": "L042",
+    "speaker": "N",
+    "text": "Megaspeed is a company based in Singapore. According to news reports, it was spun out of a Chinese firm, and it has bought billions of dollars of Nvidia's chips."
+  },
+  {
+    "id": "L043",
+    "speaker": "N",
+    "text": "Here is why that matters. American rules stop Nvidia from selling its most advanced chips to China."
+  },
+  {
+    "id": "L044",
+    "speaker": "N",
+    "text": "But what about renting them?"
+  },
+  {
+    "id": "L045",
+    "speaker": "N",
+    "text": "Think of an oven you're not allowed to ship abroad. Fine. The oven stays put. But can a customer far away rent the kitchen... and cook over the phone?"
+  },
+  {
+    "id": "L046",
+    "speaker": "REGGIE",
+    "text": "Did the oven leave the country?"
+  },
+  {
+    "id": "L047",
+    "speaker": "CHAD",
+    "text": "No, sir."
+  },
+  {
+    "id": "L048",
+    "speaker": "REGGIE",
+    "text": "Did the dinner?"
+  },
+  {
+    "id": "L049",
+    "speaker": "CHAD",
+    "text": "...Define dinner."
+  },
+  {
+    "id": "L050",
+    "speaker": "N",
+    "text": "That is the gap lawmakers are now arguing about: whether renting that computing power to users in China counts as an export at all."
+  },
+  {
+    "id": "L051",
+    "speaker": "N",
+    "text": "And Singapore says it has no legal duty to enforce another country's export rules."
+  },
+  {
+    "id": "L052",
+    "speaker": "N",
+    "text": "Reporters began asking about Megaspeed back in 2025. Nvidia's answer was steady. In the last days of October this year, its chief executive told Bloomberg those dealings were, quote, \"normal and not unusual.\""
+  },
+  {
+    "id": "L053",
+    "speaker": "BENNY",
+    "text": "Anything unusual in there?"
+  },
+  {
+    "id": "L054",
+    "speaker": "HAL",
+    "text": "Nothing unusual."
+  },
+  {
+    "id": "L055",
+    "speaker": "BENNY",
+    "text": "That's what the sign says."
+  },
+  {
+    "id": "L056",
+    "speaker": "HAL",
+    "text": "I wrote the sign."
+  },
+  {
+    "id": "L057",
+    "speaker": "N",
+    "text": "Days later, the story stopped being about a customer."
+  },
+  {
+    "id": "L058",
+    "speaker": "N",
+    "text": "Sunday, the eighth of November."
+  },
+  {
+    "id": "L059",
+    "speaker": "N",
+    "text": "Nvidia's board announces an independent investigation. Its reason, in its own words: reporting that its chief executive had been, quote, \"the target of a foreign intelligence effort.\""
+  },
+  {
+    "id": "L060",
+    "speaker": "N",
+    "text": "Here is what is claimed, and by whom. News reports say American officials believe a former Megaspeed executive worked for Chinese intelligence. China denies it. The reports rest on unnamed people, and nothing has been proven in public."
+  },
+  {
+    "id": "L061",
+    "speaker": "N",
+    "text": "The same day, the company publishes an email from the chief executive to staff. In it, he admits he was unfaithful to his wife, names nobody, and writes that he had, quote, \"fallen short.\""
+  },
+  {
+    "id": "L062",
+    "speaker": "N",
+    "text": "The board adds one more line. It says it has no reason to believe that national security or company secrets were compromised."
+  },
+  {
+    "id": "L063",
+    "speaker": "N",
+    "text": "The investigation is run by directors who don't work for him, with an outside law firm. At the time, the company said he planned to stay in the job while they look."
+  },
+  {
+    "id": "L064",
+    "speaker": "BENNY",
+    "text": "Should I be reading this at midnight?"
+  },
+  {
+    "id": "L065",
+    "speaker": "MARTHA",
+    "text": "No."
+  },
+  {
+    "id": "L066",
+    "speaker": "BENNY",
+    "text": "...I'm reading it."
+  },
+  {
+    "id": "L067",
+    "speaker": "N",
+    "text": "Monday. The opening bell. By the close, the shares are down a little more than four percent."
+  },
+  {
+    "id": "L068",
+    "speaker": "N",
+    "text": "That same day, a shareholder files a lawsuit. It says calling those dealings normal was misleading, and that investors were kept in the dark. Those claims have not been tested in court."
+  },
+  {
+    "id": "L069",
+    "speaker": "N",
+    "text": "Tuesday. Down again. Almost five and a half percent."
+  },
+  {
+    "id": "L070",
+    "speaker": "N",
+    "text": "To be fair, Tuesday had a second problem. Inflation came in hot that morning, and the whole market slipped."
+  },
+  {
+    "id": "L071",
+    "speaker": "CHAD",
+    "text": "Is it the boss or is it inflation?"
+  },
+  {
+    "id": "L072",
+    "speaker": "HAL",
+    "text": "Yes."
+  },
+  {
+    "id": "L073",
+    "speaker": "N",
+    "text": "Two days. About nine and a half percent."
+  },
+  {
+    "id": "L074",
+    "speaker": "N",
+    "text": "But an investigation doesn't change how many chips you sell. So what, exactly, were investors selling?"
+  },
+  {
+    "id": "L075",
+    "speaker": "N",
+    "text": "They were selling two fears."
+  },
+  {
+    "id": "L076",
+    "speaker": "N",
+    "text": "Fear one. The pole leaves."
+  },
+  {
+    "id": "L077",
+    "speaker": "N",
+    "text": "Dan Ives, the same analyst, wrote that the company would be worth twenty-five to thirty percent less if the chief executive were removed. That's a forecast, not a fact."
+  },
+  {
+    "id": "L078",
+    "speaker": "N",
+    "text": "Put his what-if into your hundred thousand dollars from earlier."
+  },
+  {
+    "id": "L079",
+    "speaker": "N",
+    "text": "Up to about two thousand dollars, from one company."
+  },
+  {
+    "id": "L080",
+    "speaker": "N",
+    "text": "That's our arithmetic on his what-if, not a prediction."
+  },
+  {
+    "id": "L081",
+    "speaker": "N",
+    "text": "On Wednesday, the firm Baird cut its rating on the stock, and cut its price target from five hundred dollars to two hundred. One reason it gave: it can't tell whether he keeps the job."
+  },
+  {
+    "id": "L082",
+    "speaker": "BENNY",
+    "text": "What's your price target?"
+  },
+  {
+    "id": "L083",
+    "speaker": "HAL",
+    "text": "Depends."
+  },
+  {
+    "id": "L084",
+    "speaker": "BENNY",
+    "text": "On what?"
+  },
+  {
+    "id": "L085",
+    "speaker": "HAL",
+    "text": "On one guy's calendar."
+  },
+  {
+    "id": "L086",
+    "speaker": "N",
+    "text": "Fear two. The argument is lost."
+  },
+  {
+    "id": "L087",
+    "speaker": "N",
+    "text": "On Tuesday, the news site The Information reported that the former executive helped arrange about seven and a half billion dollars of Nvidia chip sales to Chinese companies."
+  },
+  {
+    "id": "L088",
+    "speaker": "N",
+    "text": "Megaspeed denies any illegal chip transfers. And no investigation has published a finding."
+  },
+  {
+    "id": "L089",
+    "speaker": "N",
+    "text": "Washington moved anyway. Remember the kitchen? Lawmakers are pushing three China chip bills into this year's defense bill, and some have asked the chief executive to come and explain."
+  },
+  {
+    "id": "L090",
+    "speaker": "N",
+    "text": "One senator, Michael Bennet, pressed the administration on why it had not stopped Megaspeed already."
+  },
+  {
+    "id": "L091",
+    "speaker": "CHAD",
+    "text": "He used to walk in here and win."
+  },
+  {
+    "id": "L092",
+    "speaker": "REGGIE",
+    "text": "He used to walk in here."
+  },
+  {
+    "id": "L093",
+    "speaker": "N",
+    "text": "So that is the trade. If he goes, the company loses its builder. If he stays, it may lose its best argument. Either way, the price had to move."
+  },
+  {
+    "id": "L094",
+    "speaker": "N",
+    "text": "But how big is big, for a boss in trouble?"
+  },
+  {
+    "id": "L095",
+    "speaker": "N",
+    "text": "Other tents have shaken before."
+  },
+  {
+    "id": "L096",
+    "speaker": "N",
+    "text": "Three companies. Three bosses. Three very different days."
+  },
+  {
+    "id": "L097",
+    "speaker": "N",
+    "text": "August 2011. Steve Jobs resigned as Apple's chief executive. His successor, Tim Cook, had already been running the company day to day."
+  },
+  {
+    "id": "L098",
+    "speaker": "N",
+    "text": "The next day, Apple's shares closed down less than one percent."
+  },
+  {
+    "id": "L099",
+    "speaker": "N",
+    "text": "The market as a whole fell more, about one and a half percent."
+  },
+  {
+    "id": "L100",
+    "speaker": "N",
+    "text": "May 2025. Warren Buffett told shareholders he would step down as Berkshire Hathaway's chief executive at the end of the year."
+  },
+  {
+    "id": "L101",
+    "speaker": "N",
+    "text": "His heir, Greg Abel, had been named years before. And Buffett would stay on as chairman."
+  },
+  {
+    "id": "L102",
+    "speaker": "N",
+    "text": "The next trading day, the shares still fell about five percent. About fifty-nine billion dollars of value, gone."
+  },
+  {
+    "id": "L103",
+    "speaker": "CHAD",
+    "text": "They had a spare pole for years!"
+  },
+  {
+    "id": "L104",
+    "speaker": "HAL",
+    "text": "Still cost five percent to swap it."
+  },
+  {
+    "id": "L105",
+    "speaker": "N",
+    "text": "September 2018. America's market regulator, the SEC, sued Elon Musk, Tesla's chief executive."
+  },
+  {
+    "id": "L106",
+    "speaker": "N",
+    "text": "It accused him of securities fraud over tweets about taking Tesla private, and asked to bar him from running a public company."
+  },
+  {
+    "id": "L107",
+    "speaker": "N",
+    "text": "The company wasn't the defendant. He was."
+  },
+  {
+    "id": "L108",
+    "speaker": "N",
+    "text": "The next day, Tesla's shares fell nearly fourteen percent."
+  },
+  {
+    "id": "L109",
+    "speaker": "N",
+    "text": "He had called the case unjustified, and settled the day after without admitting or denying it."
+  },
+  {
+    "id": "L110",
+    "speaker": "N",
+    "text": "Line them up. Apple had an heir ready, and lost less than one percent. Berkshire had one too, and still lost five percent. Tesla's danger was to the man himself, and it lost almost fourteen."
+  },
+  {
+    "id": "L111",
+    "speaker": "N",
+    "text": "Nvidia's two days, about nine and a half percent, sit between Berkshire and Tesla."
+  },
+  {
+    "id": "L112",
+    "speaker": "N",
+    "text": "Nvidia has no heir named in public. And this review is about its boss, not about its chips."
+  },
+  {
+    "id": "L113",
+    "speaker": "N",
+    "text": "That's a comparison of size, not a forecast."
+  },
+  {
+    "id": "L114",
+    "speaker": "N",
+    "text": "And then, on Wednesday, it went up."
+  },
+  {
+    "id": "L115",
+    "speaker": "N",
+    "text": "Wednesday, the eleventh."
+  },
+  {
+    "id": "L116",
+    "speaker": "N",
+    "text": "A company called CoreWeave, which rents out Nvidia chips, had reported strong results the evening before. Chip stocks jumped, and Nvidia jumped with them."
+  },
+  {
+    "id": "L117",
+    "speaker": "CHAD",
+    "text": "We're back!"
+  },
+  {
+    "id": "L118",
+    "speaker": "HAL",
+    "text": "We're Wednesday."
+  },
+  {
+    "id": "L119",
+    "speaker": "N",
+    "text": "By the closing bell, nothing about the investigation had changed. What Wednesday's trading showed is that the demand had not changed either."
+  },
+  {
+    "id": "L120",
+    "speaker": "N",
+    "text": "Nvidia's own forecast for this quarter is about one hundred and eight billion dollars in sales. It has announced no change to that number."
+  },
+  {
+    "id": "L121",
+    "speaker": "N",
+    "text": "By the close, your seven dollars got a little of itself back. Not all."
+  },
+  {
+    "id": "L122",
+    "speaker": "N",
+    "text": "And here is the part almost nobody noticed."
+  },
+  {
+    "id": "L123",
+    "speaker": "N",
+    "text": "That forecast assumes no data center chip sales to China. None."
+  },
+  {
+    "id": "L124",
+    "speaker": "N",
+    "text": "So the fight in Washington is over money that isn't in the number. The risk is not this quarter. It's the rules for the quarters after it."
+  },
+  {
+    "id": "L125",
+    "speaker": "N",
+    "text": "If the kitchen door gets locked, the buyers who rent that kitchen need fewer ovens. That is the sale investors can't see yet."
+  },
+  {
+    "id": "L126",
+    "speaker": "MARTHA",
+    "text": "So the business is fine."
+  },
+  {
+    "id": "L127",
+    "speaker": "BENNY",
+    "text": "The business is fine."
+  },
+  {
+    "id": "L128",
+    "speaker": "MARTHA",
+    "text": "Then why did it cost me six hundred dollars?"
+  },
+  {
+    "id": "L129",
+    "speaker": "BENNY",
+    "text": "...Look up."
+  },
+  {
+    "id": "L130",
+    "speaker": "N",
+    "text": "Then the closing bell rang. And Wednesday wasn't over."
+  },
+  {
+    "id": "L131",
+    "speaker": "N",
+    "text": "After the close, the bounce ran out."
+  },
+  {
+    "id": "L132",
+    "speaker": "N",
+    "text": "Two newspapers published reports. Both rest on people they did not name."
+  },
+  {
+    "id": "L133",
+    "speaker": "N",
+    "text": "The New York Times reported a second relationship, which the company has not commented on."
+  },
+  {
+    "id": "L134",
+    "speaker": "N",
+    "text": "And The Wall Street Journal reported that Nvidia's board is preparing to remove its chief executive."
+  },
+  {
+    "id": "L135",
+    "speaker": "N",
+    "text": "Nvidia did not immediately respond to requests for comment on that report."
+  },
+  {
+    "id": "L136",
+    "speaker": "N",
+    "text": "As of Wednesday night, the board had made no new public statement."
+  },
+  {
+    "id": "L137",
+    "speaker": "N",
+    "text": "In after-hours trading, before Thursday's open, the shares fell more than eight percent."
+  },
+  {
+    "id": "L138",
+    "speaker": "N",
+    "text": "That wiped out Wednesday's gain, and more."
+  },
+  {
+    "id": "L139",
+    "speaker": "N",
+    "text": "Remember the seven dollars? On a hundred thousand dollars in that fund, that's roughly another five or six hundred dollars from Nvidia's slice... if it holds."
+  },
+  {
+    "id": "L140",
+    "speaker": "N",
+    "text": "It's a snapshot, not a close. And that's our arithmetic, not a forecast."
+  },
+  {
+    "id": "L141",
+    "speaker": "BENNY",
+    "text": "You said, \"We're Wednesday.\""
+  },
+  {
+    "id": "L142",
+    "speaker": "HAL",
+    "text": "It's still Wednesday."
+  },
+  {
+    "id": "L143",
+    "speaker": "N",
+    "text": "So is it over?"
+  },
+  {
+    "id": "L144",
+    "speaker": "N",
+    "text": "Not yet."
+  },
+  {
+    "id": "L145",
+    "speaker": "N",
+    "text": "The price is waiting on three doors. Door one, the board's investigation, which has found nothing in public so far."
+  },
+  {
+    "id": "L146",
+    "speaker": "N",
+    "text": "How does a review like this work?"
+  },
+  {
+    "id": "L147",
+    "speaker": "N",
+    "text": "A guide by two corporate lawyers, published on Harvard Law School's governance forum, lays out the usual shape."
+  },
+  {
+    "id": "L148",
+    "speaker": "N",
+    "text": "The committee directs the review, not its lawyers. And the lawyers should answer to the committee alone, not to the company."
+  },
+  {
+    "id": "L149",
+    "speaker": "N",
+    "text": "At the end, the committee reports its findings to the board. The guide doesn't say they must be published."
+  },
+  {
+    "id": "L150",
+    "speaker": "N",
+    "text": "Nvidia's board gave no deadline."
+  },
+  {
+    "id": "L151",
+    "speaker": "N",
+    "text": "But The Wall Street Journal reported that the board met on Wednesday night to discuss his future."
+  },
+  {
+    "id": "L152",
+    "speaker": "N",
+    "text": "No decision had been reported by Wednesday night."
+  },
+  {
+    "id": "L153",
+    "speaker": "N",
+    "text": "Door two, Washington, where none of those bills is law so far."
+  },
+  {
+    "id": "L154",
+    "speaker": "N",
+    "text": "Door three is a date. Tuesday, the seventeenth of November. After the closing bell, Nvidia is due to report its results, and whoever leads it then takes questions from the people who price the stock."
+  },
+  {
+    "id": "L155",
+    "speaker": "N",
+    "text": "The next day, three House committee chairs want a closed-door briefing."
+  },
+  {
+    "id": "L156",
+    "speaker": "CHAD",
+    "text": "What's the first question going to be?"
+  },
+  {
+    "id": "L157",
+    "speaker": "BENNY",
+    "text": "It won't be about chips."
+  },
+  {
+    "id": "L158",
+    "speaker": "N",
+    "text": "The bar is already up. Analysts, on average, expect a little more than Nvidia's own forecast: nearly one hundred and nine billion dollars, according to a tally in The Motley Fool."
+  },
+  {
+    "id": "L159",
+    "speaker": "N",
+    "text": "That's more than a billion dollars of sales a day."
+  },
+  {
+    "id": "L160",
+    "speaker": "N",
+    "text": "Listen for three things that day. Does the forecast move? Does the board say anything new? And does anyone say the word China?"
+  },
+  {
+    "id": "L161",
+    "speaker": "N",
+    "text": "On the first one, a writer at The Motley Fool points to the forecast for the next quarter. A weak one, he argues, could be a sign that AI spending is slowing. That's an opinion, not a fact."
+  },
+  {
+    "id": "L162",
+    "speaker": "N",
+    "text": "Whatever the board decides, one thing has already changed. Investors have now seen the empty chair. As of Wednesday night, neither report names anyone to fill it. A company this big does not get to leave it empty forever."
+  },
+  {
+    "id": "L163",
+    "speaker": "N",
+    "text": "And you have seen your seven dollars. You own this story whether you follow it or not."
+  },
+  {
+    "id": "L164",
+    "speaker": "BENNY",
+    "text": "Is one pole normal?"
+  },
+  {
+    "id": "L165",
+    "speaker": "HAL",
+    "text": "It's not unusual."
+  },
+  {
+    "id": "L166",
+    "speaker": "N",
+    "text": "So why is Nvidia down over its CEO?"
+  },
+  {
+    "id": "L167",
+    "speaker": "N",
+    "text": "Not because anyone reported it selling one chip less. Because one man's trouble made everyone look up at the same time..."
+  },
+  {
+    "id": "L168",
+    "speaker": "N",
+    "text": "...and count the poles."
+  }
+]

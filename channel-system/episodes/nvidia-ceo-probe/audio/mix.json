@@ -1,0 +1,421 @@
+{
+  "signature": "e7cd387f1141dd37",
+  "total": 789.701,
+  "lufs": -14.02,
+  "true_peak_db": -1.04,
+  "limiter": {
+    "max_cut_db": 5.2,
+    "pct_cut_over_1db": 1.26
+  },
+  "voice": {
+    "speakers": {
+      "N": {
+        "clips": 121,
+        "gain_db": 0
+      },
+      "BENNY": {
+        "clips": 13,
+        "gain_db": -6.6
+      },
+      "HAL": {
+        "clips": 13,
+        "gain_db": -3
+      },
+      "MARTHA": {
+        "clips": 4,
+        "gain_db": -2.4
+      },
+      "CHAD": {
+        "clips": 10,
+        "gain_db": -6.8
+      },
+      "REGGIE": {
+        "clips": 7,
+        "gain_db": -2.6
+      }
+    },
+    "clips_with_silent_edges": 0
+  },
+  "music": {
+    "source": "house bed (made in code)",
+    "files": [],
+    "beds": [
+      "steady",
+      "calm",
+      "uneasy",
+      "steady",
+      "calm",
+      "uneasy",
+      "steady",
+      "calm",
+      "uneasy"
+    ],
+    "climax_chapters": [
+      6,
+      9
+    ],
+    "db_under_voice": 19,
+    "uncredited": []
+  },
+  "effects": {
+    "count": 66,
+    "per_minute": 5,
+    "list": [
+      {
+        "t": 13.09,
+        "name": "card",
+        "why": "c1t01 card"
+      },
+      {
+        "t": 31.694,
+        "name": "chapter",
+        "why": "c2ch chapter"
+      },
+      {
+        "t": 33.568,
+        "name": "card",
+        "why": "c2t01 card"
+      },
+      {
+        "t": 44.654,
+        "name": "card",
+        "why": "c2t02 card"
+      },
+      {
+        "t": 60.694,
+        "name": "card",
+        "why": "c2t03 card"
+      },
+      {
+        "t": 67.515,
+        "name": "card",
+        "why": "c2t04 card"
+      },
+      {
+        "t": 94.174,
+        "name": "card",
+        "why": "c2t05 card"
+      },
+      {
+        "t": 95.124,
+        "name": "chapter",
+        "why": "c3ch chapter"
+      },
+      {
+        "t": 96.524,
+        "name": "card",
+        "why": "c3t01 card"
+      },
+      {
+        "t": 112.584,
+        "name": "paper",
+        "why": "c3s14 doc"
+      },
+      {
+        "t": 116.549,
+        "name": "paper",
+        "why": "c3s14b doc"
+      },
+      {
+        "t": 120.654,
+        "name": "card",
+        "why": "c3t02 card"
+      },
+      {
+        "t": 128.884,
+        "name": "stamp",
+        "why": "c3k04b stamp"
+      },
+      {
+        "t": 133.934,
+        "name": "paper",
+        "why": "c3s16 doc"
+      },
+      {
+        "t": 140.894,
+        "name": "paper",
+        "why": "c3s17 doc"
+      },
+      {
+        "t": 160.063,
+        "name": "card",
+        "why": "c3t03 card"
+      },
+      {
+        "t": 162.743,
+        "name": "chapter",
+        "why": "c4ch chapter"
+      },
+      {
+        "t": 164.351,
+        "name": "card",
+        "why": "c4t01 card"
+      },
+      {
+        "t": 184.873,
+        "name": "card",
+        "why": "c4t02 card"
+      },
+      {
+        "t": 224.897,
+        "name": "paper",
+        "why": "c4s24b doc"
+      },
+      {
+        "t": 237.036,
+        "name": "card",
+        "why": "c4t03 card"
+      },
+      {
+        "t": 239.836,
+        "name": "chapter",
+        "why": "c5ch chapter"
+      },
+      {
+        "t": 241.536,
+        "name": "card",
+        "why": "c5t01 card"
+      },
+      {
+        "t": 246.403,
+        "name": "paper",
+        "why": "c5s25b doc"
+      },
+      {
+        "t": 274.977,
+        "name": "paper",
+        "why": "c5s27b doc"
+      },
+      {
+        "t": 317.466,
+        "name": "stamp",
+        "why": "c5s31b stamp"
+      },
+      {
+        "t": 332.276,
+        "name": "card",
+        "why": "c5t02 card"
+      },
+      {
+        "t": 340.606,
+        "name": "chapter",
+        "why": "c6ch chapter"
+      },
+      {
+        "t": 342.206,
+        "name": "card",
+        "why": "c6t01 card"
+      },
+      {
+        "t": 354.244,
+        "name": "stamp",
+        "why": "c6s36b stamp"
+      },
+      {
+        "t": 359.136,
+        "name": "card",
+        "why": "c6t02 card"
+      },
+      {
+        "t": 364.156,
+        "name": "stamp",
+        "why": "c6s36d stamp"
+      },
+      {
+        "t": 382.366,
+        "name": "card",
+        "why": "c6t03 card"
+      },
+      {
+        "t": 430.044,
+        "name": "card",
+        "why": "c6t04 card"
+      },
+      {
+        "t": 432.367,
+        "name": "card",
+        "why": "c6t05 card"
+      },
+      {
+        "t": 434.697,
+        "name": "chapter",
+        "why": "c7ch chapter"
+      },
+      {
+        "t": 436.297,
+        "name": "card",
+        "why": "c7t01 card"
+      },
+      {
+        "t": 450.677,
+        "name": "card",
+        "why": "c7t02 card"
+      },
+      {
+        "t": 471.577,
+        "name": "card",
+        "why": "c7t03 card"
+      },
+      {
+        "t": 499.823,
+        "name": "stamp",
+        "why": "c7n06c panel 2 stamp"
+      },
+      {
+        "t": 500.387,
+        "name": "card",
+        "why": "c7t04 card"
+      },
+      {
+        "t": 503.867,
+        "name": "paper",
+        "why": "c7n07 doc"
+      },
+      {
+        "t": 506.272,
+        "name": "paper",
+        "why": "c7n07b doc"
+      },
+      {
+        "t": 521.167,
+        "name": "card",
+        "why": "c7t05 card"
+      },
+      {
+        "t": 535.237,
+        "name": "card",
+        "why": "c7t06 card"
+      },
+      {
+        "t": 536.997,
+        "name": "chapter",
+        "why": "c8ch chapter"
+      },
+      {
+        "t": 538.497,
+        "name": "card",
+        "why": "c8t01 card"
+      },
+      {
+        "t": 563.123,
+        "name": "card",
+        "why": "c8t02 card"
+      },
+      {
+        "t": 567.164,
+        "name": "stamp",
+        "why": "c8s45b stamp"
+      },
+      {
+        "t": 573.286,
+        "name": "card",
+        "why": "c8t03 card"
+      },
+      {
+        "t": 576.126,
+        "name": "card",
+        "why": "c8t04 card"
+      },
+      {
+        "t": 601.546,
+        "name": "card",
+        "why": "c8t05 card"
+      },
+      {
+        "t": 604.436,
+        "name": "chapter",
+        "why": "c9ch chapter"
+      },
+      {
+        "t": 606.036,
+        "name": "card",
+        "why": "c9t01 card"
+      },
+      {
+        "t": 623.676,
+        "name": "card",
+        "why": "c9t02 card"
+      },
+      {
+        "t": 632.236,
+        "name": "card",
+        "why": "c9t03 card"
+      },
+      {
+        "t": 651.106,
+        "name": "stamp",
+        "why": "c9s49h stamp"
+      },
+      {
+        "t": 657.981,
+        "name": "card",
+        "why": "c9t04 card"
+      },
+      {
+        "t": 668.761,
+        "name": "paper",
+        "why": "c9s50c doc"
+      },
+      {
+        "t": 688.171,
+        "name": "card",
+        "why": "c9t05 card"
+      },
+      {
+        "t": 701.277,
+        "name": "stamp",
+        "why": "c9s51 stamp"
+      },
+      {
+        "t": 703.011,
+        "name": "card",
+        "why": "c9t06 card"
+      },
+      {
+        "t": 722.751,
+        "name": "card",
+        "why": "c9t07 card"
+      },
+      {
+        "t": 754.79,
+        "name": "stamp",
+        "why": "c9s53d stamp"
+      },
+      {
+        "t": 756.301,
+        "name": "card",
+        "why": "c9t08 card"
+      },
+      {
+        "t": 777.791,
+        "name": "card",
+        "why": "c9t09 card"
+      }
+    ]
+  },
+  "dead_air": {
+    "pauses_over_250ms": 26,
+    "longest": [
+      {
+        "t": 65.68,
+        "d": 0.29
+      },
+      {
+        "t": 519.07,
+        "d": 0.29
+      },
+      {
+        "t": 563.5,
+        "d": 0.29
+      },
+      {
+        "t": 656.52,
+        "d": 0.29
+      },
+      {
+        "t": 662.1,
+        "d": 0.29
+      }
+    ]
+  }
+}

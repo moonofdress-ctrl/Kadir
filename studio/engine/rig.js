@@ -70,6 +70,7 @@
       if (e === "glasses_small") s += `<rect x="-98" y="${y(-432)}" width="72" height="34" rx="8" fill="rgba(255,255,255,.25)" ${st}/><rect x="26" y="${y(-432)}" width="72" height="34" rx="8" fill="rgba(255,255,255,.25)" ${st}/><path d="M-26,${y(-418)} L26,${y(-418)}" ${st}/>`;
       if (e === "moustache") s += `<path d="M-46,${y(-372)} Q-22,${y(-392)} 0,${y(-378)} Q22,${y(-392)} 46,${y(-372)} Q22,${y(-366)} 0,${y(-370)} Q-22,${y(-366)} -46,${y(-372)}Z" fill="${c.hair}" ${st}/>`;
       if (e === "shades_up") s += `<path d="M-104,${y(-520)} L104,${y(-520)} L92,${y(-488)} Q62,${y(-478)} 30,${y(-492)} L0,${y(-506)} L-30,${y(-492)} Q-62,${y(-478)} -92,${y(-488)}Z" fill="${INK}" ${st}/>`;
+      if (e === "loud_pattern") s += [[-52, -250, "#ffd23f"], [30, -226, "#1fb5b5"], [-18, -176, "#ffffff"], [52, -168, "#ffd23f"], [-56, -140, "#1fb5b5"], [8, -272, "#ffffff"]].map((d) => `<circle cx="${d[0]}" cy="${d[1]}" r="13" fill="${d[2]}" stroke="${INK}" stroke-width="4"/>`).join("");
       if (e === "lanyard") s += `<path d="M-30,-300 L0,-196 L30,-300" fill="none" stroke="#e0262b" stroke-width="7"/><rect x="-22" y="-200" width="44" height="56" rx="6" fill="#f6f1e4" ${st}/>`;
     }
     return s;
@@ -106,6 +107,7 @@
   // brows: [rotL, rotR, dyL, dyR]; sweat / tear are optional marks.
   const FACES = {
     neutral: { eyes: "open", brows: [0, 0, 0, 0], mouth: "smile" },
+    plain: { eyes: "open", brows: [0, 0, 0, 0], mouth: "flat" }, // no smile: for a real person saying something serious
     happy: { eyes: "happy", brows: [-6, 6, -6, -6], mouth: "grin" },
     shocked: { eyes: "wide", brows: [-8, 8, -20, -20], mouth: "o" },
     scared: { eyes: "wide", brows: [18, -18, -12, -12], mouth: "wavy", sweat: 1 },
@@ -196,6 +198,14 @@
     // a barrel: oil, energy, a commodity
     barrel(o) { const c = o.color || "#3d4a5c"; return { w: 130, h: 350, feet: 1, face: [0, -206, 0.64], skin: c,
       body: rc(-124, -350, 248, 326, c, 28) + rc(-132, -298, 264, 20, shade(c, 0.35), 8) + rc(-132, -118, 264, 20, shade(c, 0.35), 8) + lab(o, -52, 110, 40, "#f6f1e4") }; },
+    // a folded newspaper standing up: the press. The masthead is the plain-text `label`, in our own lettering (never a real masthead).
+    newspaper(o) { const c = o.color || "#ece6d3", words = String(o.label || "THE DAILY").split(" "); let best = [words.join(" ")], bm = best[0].length;
+      for (let i = 1; i < words.length; i++) { const a = words.slice(0, i).join(" "), b = words.slice(i).join(" "); if (Math.max(a.length, b.length) < bm) { bm = Math.max(a.length, b.length); best = [a, b]; } }
+      const size = Math.min(50, 300 / (bm * 0.6)); let lines = "";
+      for (let i = 0; i < 4; i++) lines += `<path d="M-150,${-84 + i * 24} L${i % 2 ? 40 : 70},${-84 + i * 24}" stroke="#8d8a7e" stroke-width="8" stroke-linecap="round"/>` + `<path d="M${i % 2 ? 100 : 120},${-84 + i * 24} L150,${-84 + i * 24}" stroke="#8d8a7e" stroke-width="8" stroke-linecap="round"/>`;
+      return { w: 190, h: 500, feet: 1, face: [0, -205, 0.6], skin: c,
+        body: rc(-190, -500, 380, 480, c, 6) + rc(-190, -500, 190, 480, shade(c, 0.06), 6) + best.map((l, i) => txt(0, -500 + 12 + size * (0.95 + i * 1.05), l, size, INK)).join("") +
+          `<path d="M-170,${-500 + 20 + best.length * size * 1.05 + 6} L170,${-500 + 20 + best.length * size * 1.05 + 6}" stroke="${INK}" stroke-width="6"/>` + lines }; },
     // a banknote: "your hundred dollars", the dollar, a paycheque
     note(o) { const c = o.color || "#cfe6c8"; return { w: 210, h: 330, hover: 1, face: [0, -206, 0.6], skin: "#bfe8cf",
       body: rc(-214, -318, 428, 228, c, 8) + `<rect x="-194" y="-298" width="388" height="188" fill="none" stroke="${INK}" stroke-width="4"/><ellipse cx="0" cy="-204" rx="92" ry="88" fill="#bfe8cf" ${st}/>` +

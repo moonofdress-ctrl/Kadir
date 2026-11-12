@@ -1,0 +1,8 @@
+{
+  "episode": "nvidia-ceo-probe",
+  "title": "Why Is Nvidia Down Over Its CEO?",
+  "viewer": "BENNY",
+  "notes": "Header only: the shots are in storyboard/ch1.json ... ch9.json, joined in file-name order. Planned names not yet in the engine (tent, chair, jar, seesaw, scale, gate, highjump, bus, boardroom, newspaper) are listed in build-requests.md.",
+  "audio": { "music": "house", "climax": [6, 9] },
+  "shots": []
+}
