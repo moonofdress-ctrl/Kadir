@@ -17,7 +17,7 @@
     "actors": [ { "thing": "factory", "label": "CHIP FACTORY", "x": 560, "y": 900, "scale": 0.85, "face": "happy", "pose": "wave", "enter": "none" } ],
     "props": [ { "type": "sign", "x": 1180, "y": 230, "t": "BUSINESS AS USUAL", "size": 70 },
                { "type": "crates", "x": 1100, "y": 900, "n": 2, "w": 130, "t": "CHIPS", "move": { "to": [1500, 900], "at": 0.1, "dur": 1.3 } } ] },
-  { "id": "c1s03", "cue": "L003", "set": "street", "opts": { "signs": ["CHIPS", "CAFE", "BANK"] }, "camera": "tilt_up",
+  { "id": "c1s03", "cue": "L003", "set": "street", "opts": { "signs": ["CHIPS", "CAFE", "BANK", "ATM"] }, "camera": "tilt_up",
     "actors": [ { "thing": "cloud", "label": "CLOUD CO.", "x": 1700, "y": 900, "scale": 0.7, "face": "happy", "prop": "cash", "enter": "none", "acts": [ { "at": 0.1, "to": [1240, 900], "dur": 1.1 } ] },
                 { "thing": "cloud", "label": "AI LAB", "x": 1950, "y": 900, "scale": 0.6, "face": "greedy", "prop": "cash", "enter": "none", "acts": [ { "at": 0.2, "to": [1560, 900], "dur": 1.1 } ] } ],
     "props": [ { "type": "stall", "x": 620, "y": 985, "t": "CHIPS", "price": "OPEN", "layer": "front" } ] },
@@ -25,7 +25,7 @@
     "actors": [ { "who": "BENNY", "x": 700, "face": "neutral", "prop": "phone", "screen": "red", "enter": "none",
                   "acts": [ { "cue": "L004", "word": 2, "face": "shocked" } ] } ],
     "props": [ { "type": "sign", "x": 1320, "y": 600, "t": "FORECAST: NOT CUT", "size": 56 } ],
-    "overlays": [ { "type": "counter", "from": 0, "to": 600, "prefix": "-$", "tone": "red", "pos": "tl", "cap": "MY INDEX FUND: NVIDIA SLICE (ON $100K)", "at": 0.3, "dur": 1.0 } ] },
+    "overlays": [ { "type": "counter", "from": 0, "to": 600, "prefix": "-$", "tone": "red", "pos": "tl", "cap": "MY INDEX FUND: NVIDIA SLICE (ON $100K)", "at": 0.05, "dur": 0.6 } ] },
   { "id": "c1t01", "type": "card", "cue": "L005", "text": "So why is Nvidia down over its CEO?", "emph": ["CEO?"] },
   { "id": "c1k01", "cue": "L006", "set": "bus", "camera": "pan_left", "frame": "close",
     "actors": [ { "who": "BENNY", "x": 780, "face": "confused", "pose": "shrug", "speaks": ["L006"], "enter": "none" },
@@ -39,8 +39,8 @@
       { "set": "lawn", "cue": "L008", "word": 11, "label": "ONE ARGUMENT", "actors": [ { "thing": "dome", "label": "WASHINGTON", "x": 960, "y": 880, "scale": 0.8, "face": "angry", "pose": "hips", "enter": "none" } ] } ] },
   { "id": "c1s06", "cue": "L009", "set": "boardroom", "opts": { "night": true }, "camera": "tilt_down", "grade": "night",
     "light": { "x": 960, "y": 360, "r": 820, "color": "#ffd9a0", "dark": 0.62 },
-    "actors": [ { "who": "DIRECTOR A", "x": 640, "face": "deadpan", "pose": "think", "enter": "none" },
-                { "who": "DIRECTOR B", "x": 1280, "face": "neutral", "prop": "bill", "enter": "none", "acts": [ { "cue": "L009", "word": 11, "pose": "present", "face": "sad" } ] } ],
+    "actors": [ { "who": "DIRECTOR A", "x": 520, "face": "deadpan", "prop": "pen", "enter": "none", "acts": [ { "at": 0.2, "to": [700, 900], "dur": 0.9 }, { "cue": "L009", "word": 6, "pose": "point", "face": "scared" } ] },
+                { "who": "DIRECTOR B", "x": 1280, "face": "neutral", "prop": "bill", "enter": "none", "acts": [ { "cue": "L009", "word": 11, "pose": "present", "face": "sad", "to": [1150, 900], "dur": 0.6 } ] } ],
     "props": [ { "type": "sign", "x": 960, "y": 200, "t": "THE BOARD", "size": 70 } ],
     "overlays": [ { "type": "calendar", "month": "NOV", "day": 8, "dow": "SUNDAY", "x": 160, "y": 140, "cue": "L009", "word": 3 } ] }
 ] }

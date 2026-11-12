@@ -31,9 +31,21 @@ async function browser() {
   const req = createRequire(import.meta.url);
   for (const name of ["playwright", "playwright-core"]) {
     let pw; try { pw = req(name); } catch { continue; }
-    return pw.chromium.launch(process.env.CHROME_PATH ? { executablePath: process.env.CHROME_PATH } : {});
+    // playwright-core brings no browser of its own: use CHROME_PATH, or an installed Chrome or Edge.
+    const exe = process.env.CHROME_PATH || (name === "playwright-core" ? installedBrowser() : null);
+    return pw.chromium.launch(exe ? { executablePath: exe } : {});
   }
-  throw new Error("Playwright was not found. Once, in studio/: npm install --no-save playwright  and  npx playwright install chromium\n(or set CHROME_PATH to an installed Chrome or Edge and install only playwright-core).");
+  throw new Error("Playwright was not found. Once, in studio/: npm install --no-save playwright-core  (it drives an installed Chrome or Edge; set CHROME_PATH if it is somewhere unusual)\nor: npm install --no-save playwright  and  npx playwright install chromium.");
+}
+
+function installedBrowser() {
+  const pf = [process.env.PROGRAMFILES, process.env["PROGRAMFILES(X86)"], process.env.LOCALAPPDATA].filter(Boolean);
+  const found = [
+    ...pf.flatMap((d) => [path.join(d, "Google/Chrome/Application/chrome.exe"), path.join(d, "Microsoft/Edge/Application/msedge.exe")]),
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", "/usr/bin/google-chrome", "/usr/bin/chromium", "/usr/bin/chromium-browser",
+  ].find((f) => fs.existsSync(f));
+  if (!found) throw new Error("No Chrome or Edge was found. Set CHROME_PATH to one, or install Playwright's own: npm install --no-save playwright  and  npx playwright install chromium");
+  return found;
 }
 
 async function shoot(url, file, width, height, scale = 1, ready = null) {

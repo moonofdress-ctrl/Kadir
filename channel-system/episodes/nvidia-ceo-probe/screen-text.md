@@ -15,7 +15,7 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c1s02 | 0:08 | thing factory label | CHIP FACTORY | |
 | c1s02 | 0:08 | sign | BUSINESS AS USUAL | |
 | c1s02 | 0:08 | crates | CHIPS | |
-| c1s03 | 0:09 | set street (signs) | CHIPS, CAFE, BANK | |
+| c1s03 | 0:09 | set street (signs) | CHIPS, CAFE, BANK, ATM | |
 | c1s03 | 0:09 | thing cloud label | CLOUD CO. | |
 | c1s03 | 0:09 | thing cloud label | AI LAB | |
 | c1s03 | 0:09 | stall | CHIPS / OPEN | |
@@ -35,7 +35,7 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c1s06 | 0:27 | calendar | NOV 8 SUNDAY | |
 | c2ch | 0:31 | chapter card | Seven Dollars | |
 | c2t01 | 0:33 | text card | Why is this your problem? | |
-| c2s07 | 0:35 | set street (signs) | GROCER, CAFE, BANK | |
+| c2s07 | 0:35 | set street (signs) | GROCER, CAFE, BANK, ATM | |
 | c2s07 | 0:35 | thing chip label | NVIDIA | |
 | c2s07 | 0:35 | stall | THE S&P 500 / 500 INSIDE | |
 | c2s07b | 0:39 | set board (title) | NOT EQUAL SLICES | |
@@ -57,7 +57,7 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c2s08c | 0:58 | sign | A POPULAR NASDAQ FUND | |
 | c2s08c | 0:58 | counter | ~8% / EARLY NOVEMBER | |
 | c2t03 | 1:00 | text card | Keep that seven in mind. | |
-| c2k02 | 1:02 | pricetag | BORING FUND | |
+| c2k02 | 1:02 | MARTHA placard | BORING FUND | |
 | c2s09 | 1:05 | thing chip label | NVIDIA | |
 | c2s09 | 1:05 | thing box label | 499 OTHERS | |
 | c2t04 | 1:07 | text card | Nvidia moves 10%. The whole index moves about 0.7%. | |
@@ -71,6 +71,8 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c2s10b | 1:23 | thing box label | THE REST | |
 | c2s10b | 1:23 | jar | RETIREMENT / $100,000 | |
 | c2s10b | 1:23 | sign | MONDAY: MARKET UP | |
+| c2p11 | 1:26 | panel 1: set office (poster) | AUTO | |
+| c2p11 | 1:26 | panel 1: set office (poster2) | PILOT | |
 | c2p11 | 1:26 | panel 1: panel label | DIDN'T PICK THE STOCK | |
 | c2p11 | 1:26 | panel 2: sign | NEWS | |
 | c2p11 | 1:26 | panel 2: panel label | DIDN'T READ THE HEADLINE | |
@@ -98,6 +100,8 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c3k04 | 2:03 | set office (poster) | INSURE | |
 | c3k04 | 2:03 | set office (poster2) | ANYTHING | |
 | c3k04 | 2:03 | HAL placard | 1 POLE | |
+| c3k04b | 2:07 | set office (poster) | HOPE IS | |
+| c3k04b | 2:07 | set office (poster2) | A PLAN? | |
 | c3k04b | 2:07 | HAL placard | 1 POLE | |
 | c3k04b | 2:07 | stamp | NEXT | |
 | c3s15 | 2:09 | chair | NEXT | |
@@ -108,6 +112,8 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c3s16 | 2:13 | chair | NEXT | |
 | c3s16 | 2:13 | doc | Newsweek / NOV 2026 / Dan Ives, analyst / There is no succession plan and it would be a stretch to find a candidate internally to replace Jensen. | |
 | c3s16 | 2:13 | lower_third | DAN IVES / Analyst, Yorkville Ives | |
+| c3s17 | 2:20 | set office (poster) | PLAN B: | |
+| c3s17 | 2:20 | set office (poster2) | PLAN A | |
 | c3s17 | 2:20 | sign | NOTE TO CLIENTS | |
 | c3s17 | 2:20 | doc | Dan Ives, note to clients (as reported by AOL) / NOV 2026 / Dan Ives, Yorkville Ives / Jensen is not replaceable | |
 | c3s17 | 2:20 | lower_third | DAN IVES / Analyst, Yorkville Ives | |
@@ -120,11 +126,11 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c3t03 | 2:40 | text card | One man. Two jobs. Now meet the customer. | |
 | c4ch | 2:42 | chapter card | The Customer | |
 | c4t01 | 2:44 | text card | This story did not start with a board. It started with a buyer. | |
-| c4s19 | 2:47 | set street (signs) | SINGAPORE, OFFICES, CAFE | |
+| c4s19 | 2:47 | set street (signs) | SINGAPORE, OFFICES, CAFE, INN | |
 | c4s19 | 2:47 | thing tower label | MEGASPEED | |
 | c4s19 | 2:47 | crates | CHIPS | |
 | c4s19 | 2:47 | sign | MEGASPEED | |
-| c4s19b | 2:50 | set street (signs) | SINGAPORE, CHINA, OFFICES | |
+| c4s19b | 2:50 | set street (signs) | SINGAPORE, CHINA, OFFICES, INN | |
 | c4s19b | 2:50 | thing tower label | A CHINESE FIRM | |
 | c4s19b | 2:50 | thing tower label | MEGASPEED | |
 | c4s19b | 2:50 | tag | ACCORDING TO NEWS REPORTS | |
@@ -132,7 +138,7 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c4s19c | 2:54 | thing chip label | NVIDIA | |
 | c4s19c | 2:54 | banner | BILLIONS OF DOLLARS OF CHIPS | |
 | c4s19c | 2:54 | crates | CHIPS | |
-| c4s20 | 2:58 | set street (signs) | CUSTOMS, PORT, EXPORTS | |
+| c4s20 | 2:58 | set street (signs) | CUSTOMS, PORT, EXPORTS, TAX | |
 | c4s20 | 2:58 | gate | US EXPORT RULES | |
 | c4s20 | 2:58 | sign | NOT TO CHINA | |
 | c4s20 | 2:58 | crates | ADVANCED | |
@@ -151,15 +157,19 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c4s22 | 3:21 | banner | RULE: ? | |
 | c4s22b | 3:24 | thing dome label | LAWMAKERS | |
 | c4s22b | 3:24 | pricetag | RENTING = EXPORT? | |
-| c4s23 | 3:29 | set street (signs) | SINGAPORE, HARBOUR, OFFICES | |
+| c4s23 | 3:29 | set street (signs) | SINGAPORE, HARBOUR, OFFICES, INN | |
 | c4s23 | 3:29 | thing tower label | SINGAPORE | |
 | c4s23 | 3:29 | sign | US RULES: NOT OURS TO ENFORCE | |
 | c4s24 | 3:35 | thing newspaper label | NEWSPAPER | |
 | c4s24 | 3:35 | thing newspaper label | NEWSPAPER | |
 | c4s24 | 3:35 | tag | 2025 | |
-| c4s24b | 3:41 | thing newspaper label | NEWSPAPER | |
-| c4s24b | 3:41 | doc | Bloomberg News, as relayed by The Standard / LATE OCT 2026 / Nvidia's chief executive / normal and not unusual | |
-| c4s24b | 3:41 | lower_third | JENSEN HUANG / Nvidia chief executive, to Bloomberg | |
+| c4s24a | 3:39 | thing chip label | NVIDIA | |
+| c4s24a | 3:39 | sign | ANSWER: STEADY | |
+| c4s24a | 3:39 | sign | LATE OCTOBER 2026 | |
+| c4s24b | 3:44 | set office (poster) | QUIET | |
+| c4s24b | 3:44 | set office (poster2) | PLEASE | |
+| c4s24b | 3:44 | doc | Bloomberg News, as relayed by The Standard / LATE OCT 2026 / Nvidia's chief executive / normal and not unusual | |
+| c4s24b | 3:44 | lower_third | JENSEN HUANG / Nvidia chief executive, to Bloomberg | |
 | c4k07 | 3:50 | HAL placard | NOTHING UNUSUAL | |
 | c4t03 | 3:57 | text card | Days later, the story stopped being about a customer. | |
 | c5ch | 3:59 | chapter card | The Statement | |
@@ -170,17 +180,23 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c5s26 | 4:14 | set street (signs) | NEWS, NEWS, NEWS | |
 | c5s26 | 4:14 | thing newspaper label | NEWSPAPER | |
 | c5s26 | 4:14 | stall | NEWS / REPORTED | |
-| c5s26 | 4:14 | tag | WHO SAYS: US OFFICIALS, PER NEWS REPORTS | |
-| c5s26 | 4:14 | label | AN ALLEGATION | |
+| c5s26b | 4:16 | set street (signs) | NEWS, PRESS, CAFE, TV | |
+| c5s26b | 4:16 | thing dome label | US OFFICIALS | |
+| c5s26b | 4:16 | thing tower label | MEGASPEED | |
+| c5s26b | 4:16 | sign | EX-EXEC: CHINESE INTELLIGENCE? (REPORTED) | |
+| c5s26b | 4:16 | tag | WHO SAYS: US OFFICIALS, PER NEWS REPORTS | |
 | c5p26 | 4:23 | panel 1: set street (signs) | NEWS, NEWS, NEWS | |
 | c5p26 | 4:23 | panel 1: stall | NEWS / REPORTED | |
 | c5p26 | 4:23 | panel 1: panel label | CLAIM (REPORTED) | |
 | c5p26 | 4:23 | panel 2: thing tower label | CHINA | |
 | c5p26 | 4:23 | panel 2: panel label | CHINA DENIES IT | |
 | c5p26 | 4:23 | panel 3: panel label | NOTHING PROVEN IN PUBLIC | |
+| c5p26 | 4:23 | label | AN ALLEGATION | |
 | c5p26 | 4:23 | tag | UNNAMED SOURCES | |
 | c5s27 | 4:29 | sign | SAME DAY | |
 | c5s27 | 4:29 | sign | EMAIL TO STAFF | |
+| c5s27b | 4:34 | set office (poster) | DON'T | |
+| c5s27b | 4:34 | set office (poster2) | PANIC | |
 | c5s27b | 4:34 | doc | Nvidia newsroom, "A message to our company" / 8 NOV 2026 / Chief executive, email to staff / I have fallen short of that responsibility. | |
 | c5s27b | 4:34 | lower_third | JENSEN HUANG / Nvidia chief executive, email to staff | |
 | c5s28 | 4:41 | banner | NO REASON TO BELIEVE | |
@@ -194,10 +210,10 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c5s30 | 5:02 | thing chip label | NVIDIA | |
 | c5s30 | 5:02 | calendar | NOV 9 MONDAY | |
 | c5s30 | 5:02 | counter | -4.27% / NVIDIA AT MONDAY'S CLOSE | |
-| c5s31 | 5:08 | set street (signs) | COURTHOUSE, LAW, CAFE | |
+| c5s31 | 5:08 | set street (signs) | COURTHOUSE, LAW, CAFE, INN | |
 | c5s31 | 5:08 | thing tower label | COURT | |
 | c5s31 | 5:08 | pricetag | LAWSUIT | |
-| c5s31b | 5:16 | set street (signs) | COURTHOUSE, LAW, CAFE | |
+| c5s31b | 5:16 | set street (signs) | COURTHOUSE, LAW, CAFE, INN | |
 | c5s31b | 5:16 | thing tower label | COURT | |
 | c5s31b | 5:16 | sign | UNPROVEN | |
 | c5s31b | 5:16 | stamp | NOT TESTED IN COURT | |
@@ -205,7 +221,7 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c5s32 | 5:19 | thing chip label | NVIDIA | |
 | c5s32 | 5:19 | calendar | NOV 10 TUESDAY | |
 | c5s32 | 5:19 | counter | -5.47% / NVIDIA AT TUESDAY'S CLOSE | |
-| c5s33 | 5:22 | set street (signs) | GROCER, GAS, PHARMACY | |
+| c5s33 | 5:22 | set street (signs) | GROCER, GAS, PHARMACY, ATM | |
 | c5s33 | 5:22 | thing coin label | PRICES | |
 | c5s33 | 5:22 | thing box label | WHOLE MARKET | |
 | c5s33 | 5:22 | pricetag | INFLATION: HOT | |
@@ -221,7 +237,6 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c6s35 | 5:43 | thing chip label | NVIDIA | |
 | c6s35 | 5:43 | sign | FEAR 1: THE POLE LEAVES | |
 | c6s36 | 5:45 | set board (title) | IF HE IS REMOVED (ANALYST VIEW) | |
-| c6s36 | 5:45 | thing chip label | NVIDIA | |
 | c6s36 | 5:45 | bars part | NOW / TODAY / 100 | |
 | c6s36 | 5:45 | bars part | IF REMOVED / -25% TO -30% / 72 | |
 | c6s36 | 5:45 | lower_third | DAN IVES / Analyst, Yorkville Ives (a forecast) | |
@@ -235,18 +250,20 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c6s36d | 6:02 | jar | RETIREMENT / $100,000 | |
 | c6s36d | 6:02 | counter | -$1900 / UP TO ABOUT: OUR SUM ON HIS WHAT-IF | |
 | c6s36d | 6:02 | stamp | NOT A PREDICTION | |
-| c6s37 | 6:05 | set street (signs) | BAIRD, BANK, BROKER | |
+| c6s37 | 6:05 | set street (signs) | BAIRD, BANK, BROKER, ATM | |
 | c6s37 | 6:05 | thing bank label | BAIRD | |
-| c6s37 | 6:05 | thing bank placard | NEUTRAL | |
+| c6s37 | 6:05 | thing bank price tag | NEUTRAL | |
 | c6s37 | 6:05 | sign | OUTPERFORM | |
 | c6s37 | 6:05 | tag | WEDNESDAY | |
 | c6s37b | 6:08 | set board (title) | BAIRD'S PRICE TARGET | |
 | c6s37b | 6:08 | thing bank label | BAIRD | |
 | c6s37b | 6:08 | bars part | BEFORE / $500 / 500 | |
 | c6s37b | 6:08 | bars part | NOW / $200 / 200 | |
-| c6s37c | 6:12 | set street (signs) | BAIRD, BANK, BROKER | |
+| c6s37c | 6:12 | set street (signs) | BAIRD, BANK, BROKER, ATM | |
 | c6s37c | 6:12 | thing bank label | BAIRD | |
 | c6s37c | 6:12 | sign | KEEPS THE JOB? | |
+| c6k10 | 6:16 | set office (poster) | IT'S | |
+| c6k10 | 6:16 | set office (poster2) | FINE | |
 | c6t03 | 6:22 | text card | Fear two. The argument is lost. | |
 | c6s38 | 6:24 | thing newspaper label | THE INFORMATION | |
 | c6s38 | 6:24 | gate | CUSTOMS | |
@@ -255,7 +272,7 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c6s38b | 6:28 | gate | CUSTOMS | |
 | c6s38b | 6:28 | crates | CHIPS | |
 | c6s38b | 6:28 | counter | $7.5B / SALES THE EX-EXECUTIVE HELPED ARRANGE (REPORTED) | |
-| c6s39 | 6:35 | set street (signs) | SINGAPORE, OFFICES, CAFE | |
+| c6s39 | 6:35 | set street (signs) | SINGAPORE, OFFICES, CAFE, INN | |
 | c6s39 | 6:35 | thing tower label | MEGASPEED | |
 | c6s39 | 6:35 | sign | WE DENY IT | |
 | c6s39 | 6:35 | tag | NO PUBLISHED FINDING | |
@@ -271,7 +288,6 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c6s40c | 6:49 | pricetag | COME EXPLAIN | |
 | c6s41 | 6:53 | set office (poster) | U.S. | |
 | c6s41 | 6:53 | set office (poster2) | SENATE | |
-| c6s41 | 6:53 | thing dome label | SENATE | |
 | c6s41 | 6:53 | sign | WHY NOT STOPPED? | |
 | c6s41 | 6:53 | lower_third | MICHAEL BENNET / U.S. senator | |
 | c6k11 | 6:59 | CHAD badge | VISITOR | |
@@ -321,8 +337,12 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c7n06c | 8:17 | panel 2: panel label | HE WAS | |
 | c7n06c | 8:17 | panel 2: panel stamp | DEFENDANT | |
 | c7t04 | 8:20 | text card | The next day, Tesla's shares fell nearly 14%. | |
+| c7n07 | 8:23 | set office (poster) | ASK | |
+| c7n07 | 8:23 | set office (poster2) | LATER | |
 | c7n07 | 8:23 | doc | Statement, reported by Fortune and TechCrunch / 27 SEP 2018 / Elon Musk, Tesla chief executive / This unjustified action by the SEC leaves me deeply saddened and disappointed. | |
 | c7n07 | 8:23 | lower_third | ELON MUSK / Tesla chief executive, 2018 | |
+| c7n07b | 8:26 | set office (poster) | ASK | |
+| c7n07b | 8:26 | set office (poster2) | LATER | |
 | c7n07b | 8:26 | REGGIE badge | SEC | |
 | c7n07b | 8:26 | doc | SEC press release 2018-226 / 29 SEP 2018 / U.S. Securities and Exchange Commission / ...without admitting or denying the SEC's allegations. | |
 | c7n07b | 8:26 | calendar | SEP 29 SAT 2018 | |
@@ -396,6 +416,8 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c9s49b | 10:07 | calendar | NOV 11 WEDNESDAY | |
 | c9s49b | 10:07 | label | TWO REPORTS, UNNAMED SOURCES | |
 | c9s49c | 10:12 | set office (screen) | red | |
+| c9s49c | 10:12 | set office (poster) | SHHH | |
+| c9s49c | 10:12 | set office (poster2) | QUIET | |
 | c9s49c | 10:12 | thing newspaper label | THE NEW YORK TIMES | |
 | c9s49c | 10:12 | sign | PRIVATE | |
 | c9s49c | 10:12 | tag | REPORTED. NVIDIA HAS NOT COMMENTED | |
@@ -427,24 +449,26 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c9s50 | 10:58 | sign | WASHINGTON | |
 | c9s50 | 10:58 | sign | 17 NOV | |
 | c9s50 | 10:58 | tag | DOOR 1: NOTHING FOUND IN PUBLIC SO FAR | |
-| c9s50b | 11:06 | set street (signs) | BOARD, REVIEW, LAW | |
+| c9s50b | 11:06 | set street (signs) | BOARD, REVIEW, LAW, INN | |
 | c9s50b | 11:06 | thing box label | THE REVIEW | |
 | c9s50b | 11:06 | sign | HOW DOES IT WORK? | |
 | c9s50c | 11:08 | set office (poster) | THE | |
 | c9s50c | 11:08 | set office (poster2) | GUIDE | |
 | c9s50c | 11:08 | doc | Harvard Law School Forum on Corporate Governance / 6 JUL 2017 / Markel and Murray, Seyfarth Shaw (a guide) / The committee (and not its counsel) directs the investigation. | |
 | c9s50c | 11:08 | lower_third | A GUIDE, NOT NVIDIA'S RULES / Two corporate lawyers, Harvard Law School governance forum | |
-| c9p50d | 11:15 | panel 1: DIRECTOR A badge | INDEPENDENT | |
-| c9p50d | 11:15 | panel 1: panel label | THE COMMITTEE DRIVES | |
-| c9p50d | 11:15 | panel 2: COUNSEL badge | COMMITTEE | |
-| c9p50d | 11:15 | panel 2: panel label | LAWYERS ANSWER TO THE COMMITTEE ONLY | |
+| c9p50d | 11:17 | panel 1: DIRECTOR A badge | INDEPENDENT | |
+| c9p50d | 11:17 | panel 1: panel label | COMMITTEE DRIVES | |
+| c9p50d | 11:17 | panel 2: set office (poster) | DON'T | |
+| c9p50d | 11:17 | panel 2: set office (poster2) | PANIC | |
+| c9p50d | 11:17 | panel 2: COUNSEL badge | COMMITTEE | |
+| c9p50d | 11:17 | panel 2: panel label | LAWYERS: COMMITTEE ONLY | |
 | c9s50e | 11:22 | DIRECTOR A badge | INDEPENDENT | |
 | c9s50e | 11:22 | sign | FINDINGS GO TO THE BOARD | |
-| c9s50e | 11:22 | pricetag | PUBLISHED? GUIDE DOESN'T SAY | |
+| c9s50e | 11:22 | sign | PUBLISHED? GUIDE DOESN'T SAY | |
 | c9t05 | 11:28 | text card | Nvidia's board gave no deadline. | |
 | c9s50f | 11:30 | sign | DEADLINE: ? | |
-| c9s50f | 11:30 | calendar | NOV ? MEETING? | |
-| c9s50f | 11:30 | tag | WSJ REPORTS: COULD MEET SOON | |
+| c9s50f | 11:30 | calendar | NOV 11 WED | |
+| c9s50f | 11:30 | tag | WSJ REPORTS: BOARD MET. NO DECISION | |
 | c9s50g | 11:35 | set boardroom (doors) | BOARD | |
 | c9s50g | 11:35 | thing newspaper label | THE WALL STREET JOURNAL | |
 | c9s50g | 11:35 | sign | NO DECISION YET | |
@@ -453,48 +477,48 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c9s51 | 11:38 | crates | BILL | |
 | c9s51 | 11:38 | sign | DOOR 2 | |
 | c9s51 | 11:38 | stamp | NOT LAW SO FAR | |
-| c9t06 | 11:42 | text card | Door three is a date. | |
-| c9s52 | 11:43 | thing note label | RESULTS | |
-| c9s52 | 11:43 | calendar | NOV 17 TUESDAY | |
-| c9s52 | 11:43 | tag | AFTER THE CLOSING BELL | |
-| c9s52b | 11:49 | sign | WHOEVER LEADS IT | |
-| c9s52a | 11:54 | set lawn (time) | dusk | |
-| c9s52a | 11:54 | thing dome label | HOUSE | |
-| c9s52a | 11:54 | chair | CHAIR 1 | |
-| c9s52a | 11:54 | chair | CHAIR 2 | |
-| c9s52a | 11:54 | chair | CHAIR 3 | |
-| c9s52a | 11:54 | sign | ASKED FOR: CLOSED-DOOR BRIEFING | |
-| c9s52a | 11:54 | calendar | NOV 18 WEDNESDAY | |
+| c9t06 | 11:43 | text card | Door three is a date. | |
+| c9s52 | 11:44 | thing note label | RESULTS | |
+| c9s52 | 11:44 | calendar | NOV 17 TUESDAY | |
+| c9s52 | 11:44 | tag | AFTER THE CLOSING BELL | |
+| c9s52b | 11:50 | CHAD placard | Q? | |
+| c9s52b | 11:50 | sign | WHOEVER LEADS IT | |
+| c9s52a | 11:55 | set lawn (time) | dusk | |
+| c9s52a | 11:55 | thing dome label | HOUSE | |
+| c9s52a | 11:55 | chair | CHAIR 1 | |
+| c9s52a | 11:55 | chair | CHAIR 2 | |
+| c9s52a | 11:55 | chair | CHAIR 3 | |
+| c9s52a | 11:55 | sign | ASKED FOR: CLOSED-DOOR BRIEFING | |
+| c9s52a | 11:55 | calendar | NOV 18 WEDNESDAY | |
 | c9t07 | 12:02 | text card | The bar is already up. | |
-| c9s52c | 12:03 | thing note label | RESULTS | |
-| c9s52c | 12:03 | highjump | FORECAST $108B | |
+| c9s52c | 12:04 | thing note label | RESULTS | |
+| c9s52c | 12:04 | highjump | FORECAST $108B | |
 | c9s52e | 12:08 | thing note label | RESULTS | |
 | c9s52e | 12:08 | highjump | FORECAST $108B | |
 | c9s52e | 12:08 | counter | ~$109B / ANALYST ESTIMATE, PER A MOTLEY FOOL TALLY | |
 | c9s52d | 12:14 | thing chip label | NVIDIA | |
 | c9s52d | 12:14 | sign | EVERY DAY | |
 | c9s52d | 12:14 | counter | $1B+ A DAY / OUR SUM: ONE QUARTER'S SALES, PER DAY | |
-| c9p53 | 12:18 | panel 1: sign | ? | |
-| c9p53 | 12:18 | panel 1: panel label | FORECAST MOVES? | |
-| c9p53 | 12:18 | panel 2: panel label | BOARD SAYS SOMETHING? | |
-| c9p53 | 12:18 | panel 3: thing dome label | WASHINGTON | |
-| c9p53 | 12:18 | panel 3: panel label | ANYONE SAYS "CHINA"? | |
-| c9s53b | 12:24 | set street (signs) | FORTUNES, CAFE, NEWS | |
-| c9s53b | 12:24 | thing cloud label | AI SPENDING | |
-| c9s53b | 12:24 | stall | OPINION / FREE | |
-| c9s53b | 12:24 | lower_third | ADAM SPATACCO / Writer, The Motley Fool (opinion) | |
-| c9s53c | 12:29 | set street (signs) | FORTUNES, CAFE, NEWS | |
-| c9s53c | 12:29 | thing cloud label | AI SPENDING | |
-| c9s53c | 12:29 | pricetag | NEXT QUARTER: WEAK? | |
-| c9s53d | 12:33 | stamp | OPINION, NOT FACT | |
-| c9t08 | 12:35 | text card | Whatever the board decides, one thing has already changed. | |
+| c9p53 | 12:19 | panel 1: sign | ? | |
+| c9p53 | 12:19 | panel 1: panel label | FORECAST MOVES? | |
+| c9p53 | 12:19 | panel 2: panel label | BOARD SPEAKS? | |
+| c9p53 | 12:19 | panel 3: thing dome label | WASHINGTON | |
+| c9p53 | 12:19 | panel 3: panel label | SAYS "CHINA"? | |
+| c9s53b | 12:25 | set street (signs) | FORTUNES, NEWS, CAFE, TV | |
+| c9s53b | 12:25 | stall | OPINION / FREE | |
+| c9s53b | 12:25 | lower_third | ADAM SPATACCO / Writer, The Motley Fool (opinion) | |
+| c9s53c | 12:30 | set street (signs) | FORTUNES, NEWS, CAFE, TV | |
+| c9s53c | 12:30 | thing cloud label | AI SPENDING | |
+| c9s53c | 12:30 | pricetag | NEXT QUARTER: WEAK? | |
+| c9s53d | 12:34 | stamp | OPINION, NOT FACT | |
+| c9t08 | 12:36 | text card | Whatever the board decides, one thing has already changed. | |
 | c9s54 | 12:39 | thing chip label | NVIDIA | |
 | c9s54 | 12:39 | chair | NEXT | |
 | c9s54 | 12:39 | sign | AS OF WED 11 NOV, NIGHT: NOBODY NAMED | |
-| c9s54b | 12:45 | set street (signs) | NVIDIA, OFFICES, CAFE | |
-| c9s54b | 12:45 | thing tower label | NVIDIA | |
-| c9s54b | 12:45 | chair | NEXT | |
-| c9s54b | 12:45 | sign | NOT FOREVER | |
+| c9s54b | 12:46 | set street (signs) | NVIDIA, OFFICES, CAFE, INN | |
+| c9s54b | 12:46 | thing tower label | NVIDIA | |
+| c9s54b | 12:46 | chair | NEXT | |
+| c9s54b | 12:46 | sign | NOT FOREVER | |
 | c9s55 | 12:49 | BENNY price tag | MINE | |
 | c9s55 | 12:49 | note | $100 / $7 | |
 | c9k15 | 12:54 | set lawn (time) | dusk | |

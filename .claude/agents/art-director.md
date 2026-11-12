@@ -30,8 +30,13 @@ node studio/tools/build.mjs channel-system/episodes/<slug>
 node studio/tools/retention-lint.mjs channel-system/episodes/<slug>
 ```
 ```bash
+node studio/tools/layout-check.mjs channel-system/episodes/<slug>
+```
+```bash
 node studio/tools/stills.mjs frames channel-system/episodes/<slug>
 ```
+
+The layout check reads the real picture and lists every text that something covers and every counter cut short. Clear its list before you hand over (a background shop name behind a head may stay); these faults cost a one-hour render when they are found later. Keep signs out of a street set's lamp pole, put a real person's name strip only beside that person's own caricature (never a figure that contradicts the name or is reused for another named person), and give a counter's shot time for the last number to land and hold a second.
 
 Also write three thumbnail concepts in `thumbnails.md` (FORMAT_BOOK 15): A is the scene of the first shot; B and C are other moments from the first 30 seconds. Each tests a different reason to click, so stage those three moments as pictures worth freezing.
 
