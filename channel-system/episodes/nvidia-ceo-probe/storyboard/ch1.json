@@ -25,7 +25,7 @@
     "actors": [ { "who": "BENNY", "x": 700, "face": "neutral", "prop": "phone", "screen": "red", "enter": "none",
                   "acts": [ { "cue": "L004", "word": 2, "face": "shocked" } ] } ],
     "props": [ { "type": "sign", "x": 1320, "y": 600, "t": "FORECAST: NOT CUT", "size": 56 } ],
-    "overlays": [ { "type": "counter", "from": 0, "to": 600, "prefix": "-$", "tone": "red", "pos": "tr", "cap": "MY INDEX FUND: NVIDIA SLICE (ON $100K)", "at": 0.3, "dur": 1.0 } ] },
+    "overlays": [ { "type": "counter", "from": 0, "to": 600, "prefix": "-$", "tone": "red", "pos": "tl", "cap": "MY INDEX FUND: NVIDIA SLICE (ON $100K)", "at": 0.3, "dur": 1.0 } ] },
   { "id": "c1t01", "type": "card", "cue": "L005", "text": "So why is Nvidia down over its CEO?", "emph": ["CEO?"] },
   { "id": "c1k01", "cue": "L006", "set": "bus", "camera": "pan_left", "frame": "close",
     "actors": [ { "who": "BENNY", "x": 780, "face": "confused", "pose": "shrug", "speaks": ["L006"], "enter": "none" },
