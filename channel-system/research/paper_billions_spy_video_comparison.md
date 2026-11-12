@@ -93,7 +93,9 @@ Yöntem: iki video da tarayıcıda yarım saniyede bir kare alınarak ölçüld�
 | Karakter sesi | yaklaşık 43 an (30 skeç + 13 seslendirilmiş alıntı), 28 saniyede bir | 17 skeç, 47 replik |
 | Diyaloğun kelime payı | kabaca üçte bir (tahmin) | %9 (2.189 kelimenin 199'u) |
 
-**İlk 48 saniye, saniye saniye (rakip):** 22 çekim. Geniş plan yemek, dünya haritası, siyah kart, iki yakın plan (isim şeridiyle), pencereden bakış, yağmurda bina, fotoğraf çeken ajanlar, pano, siyah kart, kadeh, hızlı kaydırma ile masanın altı ve sayaç, siyah kart, tepeden masa, vizör, telefonlu masa ve videonun adı (0:41), bölüm kartı (0:43). Bizim ilk 48 saniyede 13 çekim var.
+**İlk 48 saniye, saniye saniye (rakip):** 22 çekim. Geniş plan yemek, dünya haritası, siyah kart, iki yakın plan (isim şeridiyle), pencereden bakış, yağmurda bina, fotoğraf çeken ajanlar, pano, siyah kart, kadeh, hızlı kaydırma ile masanın altı ve sayaç, siyah kart, tepeden masa, vizör, telefonlu masa ve videonun adı (0:41), bölüm kartı (0:43). Olayın iki kişisi ilk 12 saniyede yakın planda ve isimleriyle görünüyor; ekranda rakam yalnızca bir kez (0:29) çıkıyor.
+
+**İlk 48 saniye, saniye saniye (biz):** 13 çekim. Çadır ve akan sayaç 5 saniye aynı geniş planda; depo, fabrika, sokak (her birinde tabela ve etiket); otobüste Benny; lacivert soru kartı (0:14); Benny ve Hal aynı kadrajda 8 saniye; üç panel; karanlık toplantı odası; **0:33'te ikinci bölümün kartı**; 0:41'de çubuk grafikle "eşit olmayan dilimler" dersi. Olayın kahramanı ilk 48 saniyede hiç görünmüyor, bir isim söylenmiyor, bütün figürler kameraya dönük ve aynı boyda. Rakip 0:41'de hâlâ gizemi kuruyor; biz 0:41'de ders anlatıyoruz.
 
 **Kapaklar:** rakibin üç kapağı da **boyalı** (videonun kendisi boyalı değil). Kalıp: bir ya da iki figür, parlayan tek bir nesne, karanlık zemin, üstte 2-4 kelime ve tek rakam (kırmızı ve beyaz). Kapaktaki sahne videonun ilk karesi. Bizim kapakta dört yüz var, yarı gerçekçi çizilmiş ve bir hikâye anlatmıyor.
 
@@ -103,7 +105,11 @@ Yöntem: iki video da tarayıcıda yarım saniyede bir kare alınarak ölçüld�
 
 **Yorumlar:** 845 yorum; en çok beğenilenler olayın insan tarafı üzerine espriler. Yalnızca ilk dört yorum okunabildi.
 
-**Yapılamayanlar:** ses yine dinlenmedi; bizim ilk 48 saniyenin saniye saniye izlenmesi ve rakibin son 2,5 dakikasının ölçümü kaldı.
+**İzlenme (13 Kasım sabahı):** rakip 1.567.069 (birkaç saatte 67 bin daha), biz 4.
+
+**Ses:** bu video dinlenmedi. Aynı kanalın önceki videosunun ses ölçümü `paper_billions_retention_review.md` bölüm 4'te duruyor (konuşmada boşluk yok, müzik sesin 18-20 dB altında, efekt seyrek); aynı stüdyo ve aynı biçim olduğu için o ölçüm geçerli sayıldı.
+
+**Yapılamayanlar:** rakibin son 2,5 dakikası video içi reklam yüzünden ölçülemedi (videonun %88'i ölçüldü); yorumların yalnızca ilk dördü okunabildi.
 
 ## 2. bölüm için ölçülü hedefler (lint'e yazılacak adaylar)
 
@@ -113,6 +119,8 @@ Yöntem: iki video da tarayıcıda yarım saniyede bir kare alınarak ölçüld�
 - Yazı taşıyan çekim en fazla üçte bir; bir çekimde en fazla bir yazı öğesi.
 - Diyalog kelimelerin en az dörtte biri; 30 saniyede bir karakter sesi.
 - Kapak boyalı: en fazla iki figür, tek parlayan nesne, videonun ilk sahnesi.
+- İlk 45 saniyede bölüm kartı, grafik ve ders yok; olayın kişisi ilk 12 saniyede yakın planda ve ismiyle görünür.
+- Hız: rakip aynı hikâyeyi bizden 2 gün önce yayınladı ve aracı bir gecede video çıkarmak üzere kurulmuş. Haber konularında kapılar arasındaki süre kısalmadıkça geç kalırız; ya bir hafta dayanan hikâye seçilir ya da haber için kısa yol kullanılır (LESSONS.md, 4. madde).
 
 ## 2. bölüm için öneriler (kullanıcı onayı bekliyor)
 
