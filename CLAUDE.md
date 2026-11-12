@@ -2,6 +2,14 @@
 
 A cartoon finance channel made by the agents in `.claude/agents/`. The pipeline and the gates are in `channel-system/README.md`; the engine is in `studio/`.
 
+## Where we are (read first; rewrite these lines at the end of every session)
+
+- **State on 12 Nov 2026.** Episode 1, `channel-system/episodes/nvidia-ceo-probe/`, is rendered and packaged (`youtube-upload.txt`, three thumbnails in `images/`, captions). The user was uploading it that evening: ask once whether it is live. The MP4 is on the user's computer, not in git.
+- **What changed that night.** The first video looked weak beside the reference channel. From episode 2 the picture is painted pictures under the engine's text, with a Look gate on the first 30 seconds and the voice chosen before the script is approved. The rules, the agents and the engine already say so; the reasons are in `channel-system/LESSONS.md`.
+- **Next steps, in this order.** (1) The painted style sheet and cast sheets (`illustrator`, step 1), approved by the user. (2) The voice product: a voice test on one hook (`voice-producer`). (3) A few days after the upload: the user's YouTube numbers to the `analyst`. (4) `trend-scout` for episode 2.
+- **Open with the user.** The image budget (100-150 pictures an episode), the voice product, the numbers of episode 1.
+- **Working with the user.** The user writes short messages in Turkish and is not a developer. Answer in Turkish and plainly; do the work instead of listing options; ask one question at most, with a recommendation. Anything the user must do on their own computer (Windows) is given as numbered steps, one action each. Deliver files through the chat; nothing over 400 MB in one file.
+
 ## Token rules (for the main session and every agent)
 
 1. **Read sections, not files.** When a task names sections of `FORMAT_BOOK.md`, `cast.md`, `STYLE_GUIDE.md` or `studio/README.md`, find the headings with Grep (`^## `) and Read only those line ranges. Read a whole file only when the task says "all".
