@@ -1,18 +1,18 @@
 # YouTube package: Why Is Nvidia Down Over Its CEO?
 
-Prepared 2026-11-12 for Gate 3. Nothing is uploaded. Voice in the current render: SCRATCH (synthetic).
+Prepared 2026-11-12 for Gate 3, refreshed 2026-11-12 after the currency check. Nothing is uploaded. Voice in the current render: SCRATCH (synthetic).
 
 ## Open before upload
 
-1. **Narrator.** The render uses a scratch synthetic voice (Kokoro). Replace it with a human narrator or keep a synthetic voice and disclose it (FORMAT_BOOK 14). The narrator is the user's decision. Captions below are timed to the scratch voice and must be regenerated after any voice or line change.
-2. **Remake the full render.** `render/nvidia-ceo-probe.mp4` predates the QA fixes (B1-B7 in qa.md). Rebuild, mix, lint, render, pull frames.
-3. **The user re-reads CH8 and CH9** (brief.md, Gate 2 condition).
-4. **Lines and shots out of date against Thursday 12 Nov reporting** (factcheck.md `## QA fixes check 2026-11-12`, Q9): L132 (says "two newspapers"; Reuters, Bloomberg, the FT have reported since), L151 (Reuters says the board met late Wednesday; only "no decision" still holds), L162 and shot c9s54 (the "neither report names anyone" framing implies more of a vacuum than the latest reporting), and shots c9s49b ("TWO REPORTS") and c9s50f ("WSJ REPORTS: COULD MEET SOON"). Also check L032 and L112 ("nobody named") and L138 (the Thursday close will exist) on upload day. The writer decides whether to rewrite or to re-date.
+1. **Narrator, still open.** The render uses a scratch synthetic voice (Kokoro). The final voice product (human narrator, or a synthetic voice with disclosure, FORMAT_BOOK 14) is the user's decision. Captions are timed to the scratch voice and must be regenerated after any voice or line change.
+2. **Settled 12 Nov:** the QA fixes are in and the CH9 currency changes (L136, L139, L140, L152, L162; shots c9s49d2, c9s49g, c9s49h, c9s50g, c9s54, c9s56) are made; mix and build redone (13:10), lint 0 failed, qa.md verdict pass. Still to do: the one full render on the user's machine, then pull frames.
+3. **Partly settled:** the CH8 and CH9 lines were re-checked by the fact-checker on 12 Nov (factcheck.md `## Currency check 2026-11-12`: no line wrong, five re-dated). The user's own re-read of CH8 and CH9 (brief.md, Gate 2 condition) is still open.
+4. **Upload-day currency check, open.** Run the fact-checker's currency check again on the day: Thursday's close (L140 says only "a snapshot, before Thursday's trading"), any board decision or 8-K, and L032 and L112 ("nobody named"). If a decision is announced, the video's "as of Thursday morning" lines, the description and thumbnail C need a new look.
 5. **Thumbnail B must be re-made** with a new band (the fact-checker rejected "SAME SALES"): see pair B. Thumbnail C needs a decision (see pair C: its scene is outside the first 30 seconds).
 6. **Re-run the title search on upload day** (research.md `## Title check 2026-11-11`: searches return page data, not YouTube's own results; new videos on this story appear hourly). Re-check each title and the description against the day's news.
-7. **qa.md's re-check verdict.** qa.md says FAIL with 7 blocking findings (B1-B7); no re-check verdict is on file. Nothing ships until it is PASS.
-8. **Shorts are planned, not built** (this step wrote only package.md). Build, mix, lint and look at the frames after the full render is final; see the Shorts plan.
-9. **Captions** (end of this file) are a draft from `audio/lines.json` and `timing.json`; save the block as `nvidia-ceo-probe.srt` for upload, after item 1 and item 4.
+7. **Settled:** qa.md verdict is pass (after the 12 Nov fixes). Nothing else blocks on QA.
+8. **Shorts are planned, not built.** Build, mix, lint and look at the frames after the full render is final; see the Shorts plan.
+9. **Captions:** regenerated 12 Nov from `audio/lines.json` and `timing.json` (251 cues) and saved as `nvidia-ceo-probe.srt` in the episode folder. Regenerate after item 1 (a new voice) or any line change.
 
 ## Three pairs (FORMAT_BOOK 15)
 
@@ -22,7 +22,7 @@ Files: `images/thumbnail_a.png`, `images/thumbnail_b.png`, `images/thumbnail_c.p
 |---|---|---|---|---|---|
 | A (first frame) | Consequence: a huge loss happened to a giant | Why Is Nvidia Down Over Its CEO? (32) | Shot c1s01, 0:00-0:05: the tent at dusk, the NVIDIA chip clinging to the pole in `panic`, Benny with a red phone, Martha with a bill. Thumbnail taken at t=1.5 s. | white `NVIDIA` + red `-$430B` | Promises the reason behind a two-day fall of about $430B; paid from 0:13 (the question on a card) and answered at 12:59 ("one man's trouble made everyone look up at the same time"), with the chain in CH3 to CH9. |
 | B | Contrast: two things that should not be true together | Why Did Nvidia Fall With No Forecast Cut? (41) | Shot c1s01b, 0:05-0:08: chip warehouse, crates marked CHIPS, the sign CHIP SALES: NO DROP REPORTED, the chip shrugging at the camera. **To be re-made** (see below). | white `2 DAYS` + red `-9.5%` (new; the old band `SAME SALES` is rejected) | Promises the explanation of a fall while nothing in the business was reported to change; the setup is at 0:00-0:13 ("No forecast was cut."), paid in CH6 ("two fears", 5:40) and CH8 (forecast about $108B unchanged, assumed no China chip sales, 9:20-9:50). |
-| C | Open question: who sits here? | Why Does One Man Matter So Much to Nvidia? (42) | Shot c9s54, 12:39-12:45: one office chair, spotlit, nameplate NEXT, nobody in it, the chip looking up; card AS OF WED 11 NOV, NIGHT: NOBODY NAMED. **Outside the first 30 seconds** (see below). | white `ONE` + red `EMPTY CHAIR` | Promises why one person carries so much weight; the empty chair is planted at 0:21-0:27 ("One man. One empty chair.") and 0:38, paid in CH3 (One pole, 1:35) and the last minute (12:39). |
+| C | Open question: who sits here? | Why Does One Man Matter So Much to Nvidia? (42) | Shot c9s54, 12:39-12:45: one office chair, spotlit, nameplate NEXT, nobody in it, the chip looking up; card AS OF THU 12 NOV, MORNING: NOBODY APPOINTED. **Outside the first 30 seconds** (see below). | white `ONE` + red `EMPTY CHAIR` | Promises why one person carries so much weight; the empty chair is planted at 0:21-0:27 ("One man. One empty chair.") and 0:38, paid in CH3 (One pole, 1:35) and the last minute (12:39). |
 
 **Pair B, band.** The fact-checker rejected `SAME SALES`: it asserts a fact that cannot be shown before the 17 Nov results. The picture already carries the supported wording on its sign (screen text `CHIP SALES: NO DROP REPORTED`), so the band does not repeat it; it adds the figure the script gives (CH5: "Two days. About nine and a half percent."). If the user prefers the sign's words as the band, `CHIP SALES` + `NO DROP REPORTED` (5 words) is also supported by the script, but then the sign in the picture should change. The band `2 DAYS -9.5%` is two words and one figure and stays out of the lower right corner. Image B must be re-made; the title does not change the claim ("No forecast was cut", L004).
 
@@ -30,7 +30,7 @@ Files: `images/thumbnail_a.png`, `images/thumbnail_b.png`, `images/thumbnail_c.p
 node studio/tools/stills.mjs thumb channel-system/episodes/nvidia-ceo-probe --white "2 DAYS" --red "-9.5%" --t 6.5 --out channel-system/episodes/nvidia-ceo-probe/images/thumbnail_b.png
 ```
 
-**Pair C, the rule exception.** FORMAT_BOOK 15 lets B and C show only a moment from the first 30 seconds. The chair is drawn as a single frame only at 12:39; at 0:24 it is one panel of the three-panel c1s05 (0:23.7-0:27.6). thumbnails.md chose 12:39 on purpose. This is the one place the package departs from the rule, and it is the user's call: either accept the exception, or re-make C from c1s05 at about t=25 (the chair panel, band unchanged), which obeys the rule but may read smaller. Two more conditions on C: (a) after the QA fix B7 the CLEANER must be out of the picture or holding the duster clear of the chair, so no figure reads as a candidate; (b) the strip `NOBODY NAMED` is true as of Wednesday night only, and Thursday's reporting (factcheck.md Q9) says a search for replacements is under way, so C needs a new look, or a drop of the strip, if a decision is announced before upload. The band is the script's own words and names nobody.
+**Pair C, the rule exception.** FORMAT_BOOK 15 lets B and C show only a moment from the first 30 seconds. The chair is drawn as a single frame only at 12:39; at 0:24 it is one panel of the three-panel c1s05 (0:23.7-0:27.6). thumbnails.md chose 12:39 on purpose. This is the one place the package departs from the rule, and it is the user's call: either accept the exception, or re-make C from c1s05 at about t=25 (the chair panel, band unchanged), which obeys the rule but may read smaller. Two more conditions on C: (a) after the QA fix B7 the CLEANER must be out of the picture or holding the duster clear of the chair, so no figure reads as a candidate; (b) the card in the video now reads "as of Thursday morning, nobody appointed" (factcheck.md currency check, C4: reports of a search exist, nobody is appointed), so C needs a new look, or a drop of the card, if a decision is announced before upload. The band is the script's own words and names nobody.
 
 **Thumbnail checks (images looked at, 1280x720 and `_small` at 160x90):**
 - A: the chip's face and `-$430B` still read at 160x90; the lower right holds Martha and the tent edge, nothing that matters. **A matches the first frame**: the same shot, c1s01, the same tent, chip, Benny and Martha (the counter rolls in from 0:01, so the number is not yet on screen at frame 0; the thumbnail's band carries it). qa.md B5 (a dark smear behind the counter on c1s01) must be fixed in the render; the thumbnail is clean.
@@ -46,7 +46,7 @@ node studio/tools/stills.mjs thumb channel-system/episodes/nvidia-ceo-probe --wh
 
 Nvidia lost about $430 billion in market value over two days (the Friday 6 Nov close to the Tuesday 10 Nov close; about $428-429 billion by our own arithmetic, one outlet gives about $430 billion). Its shares fell 4.27% on Monday 9 Nov and 5.47% on Tuesday 10 Nov, about 9.5% in all, after its board announced on Sunday 8 Nov an independent investigation prompted by reporting that its chief executive had been "the target of a foreign intelligence effort." News reports say US officials believe a former executive of Megaspeed, one of its customers, worked for Chinese intelligence; China denies it, Megaspeed denies illegal chip transfers, the reports rest on unnamed sources, and nothing has been proven in public. The board said it has no reason to believe national security or company secrets were compromised. This video explains why a company's dependence on one person moves the price, and why it reaches ordinary savers: in one popular S&P 500 index fund, Nvidia was about 7% of the holdings (7.3% on 4 Nov, per Trefis), so on $100,000 in that fund Nvidia's two-day fall alone took roughly $600 off, our own arithmetic.
 
-We set the fall against Apple in 2011, Berkshire Hathaway in 2025 and Tesla in 2018, look at Nvidia's own forecast of about $108 billion in sales for the quarter (which assumes no data center chip sales to China), and cover the rebound at Wednesday's close and the fall of more than 8% in after-hours trading that followed two newspaper reports from unnamed sources, which Nvidia has not confirmed. Results are due Tuesday 17 November after the close. This video reflects what was public as of Wednesday night, 11 Nov 2026; later events are not covered.
+We set the fall against Apple in 2011, Berkshire Hathaway in 2025 and Tesla in 2018, look at Nvidia's own forecast of about $108 billion in sales for the quarter (which assumes no data center chip sales to China), and cover the rebound at Wednesday's close and the fall of more than 8% in after-hours trading that followed newspaper reports from unnamed sources that the board met to discuss the chief executive's future. As of Thursday morning, 12 Nov, no decision had been announced, Nvidia had made no new public statement and nobody had been appointed to fill the post. Results are due Tuesday 17 November after the close. This video reflects what was public as of Thursday morning, 12 Nov 2026; later events are not covered.
 
 What did you know about how much of your index fund sits in one company? Tell us in the comments.
 
@@ -61,7 +61,7 @@ Chapters
 8:56 The Bounce
 10:04 After the Bell
 
-Figures as of 11 Nov 2026 (Wednesday night), from reporting by CNBC, CBS News, Reuters (as relayed by others), The Wall Street Journal and The New York Times (as reported by others), IBTimes, Trefis, The Motley Fool, Fortune and Newsweek, and from Nvidia's own statements and filings.
+Figures as of 12 Nov 2026 (Thursday morning; share prices as of Wednesday's close), from reporting by CNBC, CBS News, Reuters (as relayed by others), The Wall Street Journal and The New York Times (as reported by others), IBTimes, Trefis, The Motley Fool, Fortune and Newsweek, and from Nvidia's own statements and filings.
 
 Sources
 - Nvidia board statement: https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors
@@ -132,7 +132,7 @@ Narration: **synthetic voice** (Kokoro scratch track) in the current render. Pic
 
 ## Captions (SRT) draft
 
-Generated from `audio/lines.json` and `timing.json` (scratch voice, 259 cues, lines of up to 42 characters). Lines L132, L151 and L162 are the out-of-date ones; regenerate after any rewrite or a new voice.
+Generated from `audio/lines.json` and `timing.json` (scratch voice, 259 cues, lines of up to 42 characters). Regenerated 12 Nov after the currency re-dating of CH9 (L136, L139, L140, L152, L162) and saved as `nvidia-ceo-probe.srt` in the episode folder, 251 cues. Regenerate after any rewrite or a new voice.
 
 ```srt
 1
@@ -171,13 +171,13 @@ You own an index fund. You own a lot of
 Nvidia.
 
 9
-00:00:21,524 --> 00:00:25,405
+00:00:21,524 --> 00:00:26,720
 The short answer is three things. One man.
-One empty chair.
+One empty chair. And one argument in
 
 10
-00:00:25,405 --> 00:00:27,444
-And one argument in Washington.
+00:00:26,720 --> 00:00:27,444
+Washington.
 
 11
 00:00:27,584 --> 00:00:31,704
@@ -189,13 +189,13 @@ November, with a statement from the board.
 But first... why is this your problem?
 
 13
-00:00:35,204 --> 00:00:39,985
+00:00:35,204 --> 00:00:40,299
 The most popular kind of index fund in
-America holds five hundred companies.
+America holds five hundred companies. They
 
 14
-00:00:39,985 --> 00:00:44,514
-They are not equal slices. The bigger the
+00:00:40,299 --> 00:00:44,514
+are not equal slices. The bigger the
 company, the bigger its slice.
 
 15
@@ -208,14 +208,14 @@ every hundred in that fund was one
 company. This one.
 
 17
-00:00:50,364 --> 00:00:55,494
+00:00:50,364 --> 00:00:56,197
 The research firm Trefis checked one big
-S&P 500 fund as of the fourth of
+S&P 500 fund as of the fourth of November:
 
 18
-00:00:55,494 --> 00:01:00,554
-November: seven point three percent. A
-popular Nasdaq fund, about eight.
+00:00:56,197 --> 00:01:00,554
+seven point three percent. A popular
+Nasdaq fund, about eight.
 
 19
 00:01:00,694 --> 00:01:02,214
@@ -245,23 +245,22 @@ So do the sum. If you had a hundred
 thousand dollars in that fund, Nvidia's
 
 25
-00:01:19,931 --> 00:01:23,483
+00:01:19,931 --> 00:01:24,414
 two-day fall alone took more than six
-hundred dollars off it.
+hundred dollars off it. The rest of the
 
 26
-00:01:23,483 --> 00:01:26,394
-The rest of the market rose on Monday, and
-hid it.
+00:01:24,414 --> 00:01:26,394
+market rose on Monday, and hid it.
 
 27
-00:01:26,534 --> 00:01:29,292
+00:01:26,534 --> 00:01:30,721
 You didn't pick the stock. You didn't read
-the headline.
+the headline. You were just standing under
 
 28
-00:01:29,292 --> 00:01:31,164
-You were just standing under the tent.
+00:01:30,721 --> 00:01:31,164
+the tent.
 
 29
 00:01:31,344 --> 00:01:32,694
@@ -289,13 +288,13 @@ executive, Jensen Huang, has run it ever
 since. Thirty-three years, one boss.
 
 35
-00:01:46,224 --> 00:01:50,684
+00:01:46,224 --> 00:01:51,094
 The company grew from a start-up into one
-of the most valuable businesses on
+of the most valuable businesses on earth.
 
 36
-00:01:50,684 --> 00:01:52,444
-earth. The pole never changed.
+00:01:51,094 --> 00:01:52,444
+The pole never changed.
 
 37
 00:01:52,584 --> 00:01:57,464
@@ -334,32 +333,32 @@ So who takes over if he goes? Publicly,
 nobody has been named.
 
 45
-00:02:13,634 --> 00:02:18,093
+00:02:13,634 --> 00:02:18,618
 One Wall Street analyst, Dan Ives of
-Yorkville Ives, put it bluntly.
+Yorkville Ives, put it bluntly. He said
 
 46
-00:02:18,093 --> 00:02:20,454
-He said there is no succession plan.
+00:02:18,618 --> 00:02:20,454
+there is no succession plan.
 
 47
-00:02:20,594 --> 00:02:25,042
+00:02:20,594 --> 00:02:25,292
 In a note to clients, he used two more
-words about the chief executive.
+words about the chief executive. Not
 
 48
-00:02:25,042 --> 00:02:26,044
-Not replaceable.
+00:02:25,292 --> 00:02:26,044
+replaceable.
 
 49
-00:02:26,184 --> 00:02:30,841
-And the pole has a second job. When Washington
-talks about banning chip sales to
+00:02:26,184 --> 00:02:30,666
+And the pole has a second job. When
+Washington talks about banning chip sales
 
 50
-00:02:30,841 --> 00:02:33,984
-China, he is the one who shows up to argue
-against it.
+00:02:30,666 --> 00:02:33,984
+to China, he is the one who shows up to
+argue against it.
 
 51
 00:02:34,164 --> 00:02:36,534
@@ -382,938 +381,895 @@ And if he can't?
 One man. Two jobs. Now meet the customer.
 
 56
-00:02:43,943 --> 00:02:46,506
+00:02:43,943 --> 00:02:47,843
 Because this story did not start with a
-board.
+board. It started with a buyer.
 
 57
-00:02:46,506 --> 00:02:47,843
-It started with a buyer.
+00:02:47,983 --> 00:02:53,513
+Megaspeed is a company based in Singapore.
+According to news reports, it was spun out
 
 58
-00:02:47,983 --> 00:02:52,959
-Megaspeed is a company based in Singapore.
-According to news reports, it was
+00:02:53,513 --> 00:02:58,393
+of a Chinese firm, and it has bought
+billions of dollars of Nvidia's chips.
 
 59
-00:02:52,959 --> 00:02:58,000
-spun out of a Chinese firm, and it has
-bought billions of dollars of Nvidia's
+00:02:58,533 --> 00:03:03,784
+Here is why that matters. American rules
+stop Nvidia from selling its most advanced
 
 60
-00:02:58,000 --> 00:02:58,393
-chips.
+00:03:03,784 --> 00:03:04,733
+chips to China.
 
 61
-00:02:58,533 --> 00:03:03,215
-Here is why that matters. American rules
-stop Nvidia from selling its most
-
-62
-00:03:03,215 --> 00:03:04,733
-advanced chips to China.
-
-63
 00:03:04,873 --> 00:03:06,233
 But what about renting them?
 
-64
-00:03:06,373 --> 00:03:09,354
+62
+00:03:06,373 --> 00:03:11,075
 Think of an oven you're not allowed to
-ship abroad.
+ship abroad. Fine. The oven stays put. But
 
-65
-00:03:09,354 --> 00:03:13,620
-Fine. The oven stays put. But can a
-customer far away rent the kitchen...
+63
+00:03:11,075 --> 00:03:15,023
+can a customer far away rent the
+kitchen... and cook over the phone?
 
-66
-00:03:13,620 --> 00:03:15,023
-and cook over the phone?
-
-67
+64
 00:03:15,203 --> 00:03:17,903
 Did the oven leave the country?
 
-68
+65
 00:03:18,043 --> 00:03:18,663
 No, sir.
 
-69
+66
 00:03:18,803 --> 00:03:20,023
 Did the dinner?
 
-70
+67
 00:03:20,163 --> 00:03:21,018
 ...Define dinner.
 
-71
+68
 00:03:21,198 --> 00:03:26,339
 That is the gap lawmakers are now arguing
 about: whether renting that computing
 
-72
+69
 00:03:26,339 --> 00:03:29,658
 power to users in China counts as an
 export at all.
 
-73
-00:03:29,798 --> 00:03:35,048
+70
+00:03:29,798 --> 00:03:35,468
 And Singapore says it has no legal duty to
-enforce another country's export
+enforce another country's export rules.
+
+71
+00:03:35,608 --> 00:03:41,227
+Reporters began asking about Megaspeed
+back in 2025. Nvidia's answer was steady.
+
+72
+00:03:41,227 --> 00:03:46,777
+In the last days of October this year, its
+chief executive told Bloomberg those
+
+73
+00:03:46,777 --> 00:03:50,078
+dealings were, quote, "normal and not
+unusual."
 
 74
-00:03:35,048 --> 00:03:35,468
-rules.
-
-75
-00:03:35,608 --> 00:03:39,261
-Reporters began asking about Megaspeed
-back in 2025.
-
-76
-00:03:39,261 --> 00:03:44,599
-Nvidia's answer was steady. In the last
-days of October this year, its chief
-
-77
-00:03:44,599 --> 00:03:50,078
-executive told Bloomberg those dealings
-were, quote, "normal and not unusual."
-
-78
 00:03:50,258 --> 00:03:51,837
 Anything unusual in there?
 
-79
+75
 00:03:51,977 --> 00:03:53,697
 Nothing unusual.
 
-80
+76
 00:03:53,837 --> 00:03:55,137
 That's what the sign says.
 
-81
+77
 00:03:55,277 --> 00:03:56,856
 I wrote the sign.
 
-82
+78
 00:03:57,036 --> 00:03:59,896
 Days later, the story stopped being about
 a customer.
 
-83
+79
 00:04:01,036 --> 00:04:02,656
 Sunday, the eighth of November.
 
-84
-00:04:02,796 --> 00:04:06,209
+80
+00:04:02,796 --> 00:04:07,663
 Nvidia's board announces an independent
-investigation.
+investigation. Its reason, in its own
 
-85
-00:04:06,209 --> 00:04:10,886
-Its reason, in its own words: reporting
-that its chief executive had been,
+81
+00:04:07,663 --> 00:04:12,909
+words: reporting that its chief executive
+had been, quote, "the target of a foreign
 
-86
-00:04:10,886 --> 00:04:14,236
-quote, "the target of a foreign
+82
+00:04:12,909 --> 00:04:14,236
 intelligence effort."
 
-87
-00:04:14,376 --> 00:04:19,149
+83
+00:04:14,376 --> 00:04:19,780
 Here is what is claimed, and by whom. News
-reports say American officials
+reports say American officials believe a
 
-88
-00:04:19,149 --> 00:04:23,661
-believe a former Megaspeed executive
-worked for Chinese intelligence.
+84
+00:04:19,780 --> 00:04:24,988
+former Megaspeed executive worked for
+Chinese intelligence. China denies it. The
 
-89
-00:04:23,661 --> 00:04:28,892
-China denies it. The reports rest on unnamed
-people, and nothing has been proven
+85
+00:04:24,988 --> 00:04:29,546
+reports rest on unnamed people, and
+nothing has been proven in public.
 
-90
-00:04:28,892 --> 00:04:29,546
-in public.
-
-91
+86
 00:04:29,686 --> 00:04:34,715
 The same day, the company publishes an
 email from the chief executive to staff.
 
-92
+87
 00:04:34,715 --> 00:04:39,807
 In it, he admits he was unfaithful to his
 wife, names nobody, and writes that he
 
-93
+88
 00:04:39,807 --> 00:04:41,526
 had, quote, "fallen short."
 
-94
+89
 00:04:41,666 --> 00:04:46,654
 The board adds one more line. It says it
 has no reason to believe that national
 
-95
+90
 00:04:46,654 --> 00:04:49,496
 security or company secrets were
 compromised.
 
-96
-00:04:49,636 --> 00:04:54,194
+91
+00:04:49,636 --> 00:04:54,431
 The investigation is run by directors who
-don't work for him, with an outside
+don't work for him, with an outside law
 
-97
-00:04:54,194 --> 00:04:58,930
-law firm. At the time, the company said he
+92
+00:04:54,431 --> 00:04:58,930
+firm. At the time, the company said he
 planned to stay in the job while they
 
-98
+93
 00:04:58,930 --> 00:04:59,226
 look.
 
-99
+94
 00:04:59,406 --> 00:05:01,106
 Should I be reading this at midnight?
 
-100
+95
 00:05:01,246 --> 00:05:01,726
 No.
 
-101
+96
 00:05:01,866 --> 00:05:02,786
 ...I'm reading it.
 
-102
+97
 00:05:02,966 --> 00:05:07,449
 Monday. The opening bell. By the close,
 the shares are down a little more than
 
-103
+98
 00:05:07,449 --> 00:05:08,196
 four percent.
 
-104
+99
 00:05:08,336 --> 00:05:12,967
 That same day, a shareholder files a
 lawsuit. It says calling those dealings
 
-105
-00:05:12,967 --> 00:05:16,866
+100
+00:05:12,967 --> 00:05:17,963
 normal was misleading, and that investors
-were kept in the dark.
+were kept in the dark. Those claims have
 
-106
-00:05:16,866 --> 00:05:19,486
-Those claims have not been tested in
-court.
+101
+00:05:17,963 --> 00:05:19,486
+not been tested in court.
 
-107
+102
 00:05:19,626 --> 00:05:22,846
 Tuesday. Down again. Almost five and a
 half percent.
 
-108
-00:05:22,986 --> 00:05:27,562
+103
+00:05:22,986 --> 00:05:27,800
 To be fair, Tuesday had a second problem.
-Inflation came in hot that morning,
+Inflation came in hot that morning, and
 
-109
-00:05:27,562 --> 00:05:29,286
-and the whole market slipped.
+104
+00:05:27,800 --> 00:05:29,286
+the whole market slipped.
 
-110
+105
 00:05:29,466 --> 00:05:31,156
 Is it the boss or is it inflation?
 
-111
+106
 00:05:31,296 --> 00:05:32,096
 Yes.
 
-112
+107
 00:05:32,276 --> 00:05:34,466
 Two days. About nine and a half percent.
 
-113
-00:05:34,606 --> 00:05:38,206
+108
+00:05:34,606 --> 00:05:39,286
 But an investigation doesn't change how
-many chips you sell.
+many chips you sell. So what, exactly,
 
-114
-00:05:38,206 --> 00:05:40,666
-So what, exactly, were investors selling?
+109
+00:05:39,286 --> 00:05:40,666
+were investors selling?
 
-115
+110
 00:05:41,806 --> 00:05:43,246
 They were selling two fears.
 
-116
+111
 00:05:43,386 --> 00:05:44,926
 Fear one. The pole leaves.
 
-117
+112
 00:05:45,066 --> 00:05:50,126
 Dan Ives, the same analyst, wrote that the
 company would be worth twenty-five to
 
-118
-00:05:50,126 --> 00:05:53,668
+113
+00:05:50,126 --> 00:05:55,250
 thirty percent less if the chief executive
-were removed.
+were removed. That's a forecast, not a
 
-119
-00:05:53,668 --> 00:05:55,566
-That's a forecast, not a fact.
+114
+00:05:55,250 --> 00:05:55,566
+fact.
 
-120
+115
 00:05:55,706 --> 00:05:58,996
 Put his what-if into your hundred thousand
 dollars from earlier.
 
-121
+116
 00:05:59,136 --> 00:06:02,276
 Up to about two thousand dollars, from one
 company.
 
-122
+117
 00:06:02,416 --> 00:06:05,376
 That's our arithmetic on his what-if, not
 a prediction.
 
-123
+118
 00:06:05,516 --> 00:06:10,090
 On Wednesday, the firm Baird cut its
 rating on the stock, and cut its price
 
-124
-00:06:10,090 --> 00:06:13,018
+119
+00:06:10,090 --> 00:06:15,091
 target from five hundred dollars to two
-hundred.
+hundred. One reason it gave: it can't tell
 
-125
-00:06:13,018 --> 00:06:16,616
-One reason it gave: it can't tell whether
-he keeps the job.
+120
+00:06:15,091 --> 00:06:16,616
+whether he keeps the job.
 
-126
+121
 00:06:16,796 --> 00:06:17,986
 What's your price target?
 
-127
+122
 00:06:18,126 --> 00:06:19,136
 Depends.
 
-128
+123
 00:06:19,276 --> 00:06:19,976
 On what?
 
-129
+124
 00:06:20,116 --> 00:06:22,186
 On one guy's calendar.
 
-130
+125
 00:06:22,366 --> 00:06:24,446
 Fear two. The argument is lost.
 
-131
-00:06:24,586 --> 00:06:29,564
+126
+00:06:24,586 --> 00:06:30,023
 On Tuesday, the news site The Information
-reported that the former executive
+reported that the former executive helped
+
+127
+00:06:30,023 --> 00:06:35,132
+arrange about seven and a half billion
+dollars of Nvidia chip sales to Chinese
+
+128
+00:06:35,132 --> 00:06:35,787
+companies.
+
+129
+00:06:35,927 --> 00:06:40,493
+Megaspeed denies any illegal chip
+transfers. And no investigation has
+
+130
+00:06:40,493 --> 00:06:41,817
+published a finding.
+
+131
+00:06:41,957 --> 00:06:46,845
+Washington moved anyway. Remember the
+kitchen? Lawmakers are pushing three China
 
 132
-00:06:29,564 --> 00:06:34,608
-helped arrange about seven and a half
-billion dollars of Nvidia chip sales to
+00:06:46,845 --> 00:06:51,978
+chip bills into this year's defense bill,
+and some have asked the chief executive to
 
 133
-00:06:34,608 --> 00:06:35,787
-Chinese companies.
-
-134
-00:06:35,927 --> 00:06:41,155
-Megaspeed denies any illegal chip transfers.
-And no investigation has published
-
-135
-00:06:41,155 --> 00:06:41,817
-a finding.
-
-136
-00:06:41,957 --> 00:06:44,768
-Washington moved anyway. Remember the
-kitchen?
-
-137
-00:06:44,768 --> 00:06:49,595
-Lawmakers are pushing three China chip
-bills into this year's defense bill, and
-
-138
-00:06:49,595 --> 00:06:53,017
-some have asked the chief executive to
+00:06:51,978 --> 00:06:53,017
 come and explain.
 
-139
-00:06:53,157 --> 00:06:57,493
+134
+00:06:53,157 --> 00:06:57,968
 One senator, Michael Bennet, pressed the
-administration on why it had not
+administration on why it had not stopped
 
-140
-00:06:57,493 --> 00:06:59,037
-stopped Megaspeed already.
+135
+00:06:57,968 --> 00:06:59,037
+Megaspeed already.
 
-141
+136
 00:06:59,217 --> 00:07:00,627
 He used to walk in here and win.
 
-142
+137
 00:07:00,767 --> 00:07:03,057
 He used to walk in here.
 
-143
-00:07:03,237 --> 00:07:07,289
+138
+00:07:03,237 --> 00:07:08,302
 So that is the trade. If he goes, the
-company loses its builder.
+company loses its builder. If he stays, it
 
-144
-00:07:07,289 --> 00:07:12,227
-If he stays, it may lose its best argument.
-Either way, the price had to move.
+139
+00:07:08,302 --> 00:07:12,227
+may lose its best argument. Either way,
+the price had to move.
 
-145
+140
 00:07:12,367 --> 00:07:14,757
 But how big is big, for a boss in trouble?
 
-146
+141
 00:07:15,897 --> 00:07:17,677
 Other tents have shaken before.
 
-147
+142
 00:07:17,817 --> 00:07:21,127
 Three companies. Three bosses. Three very
 different days.
 
-148
-00:07:21,267 --> 00:07:25,449
+143
+00:07:21,267 --> 00:07:26,494
 August 2011. Steve Jobs resigned as
-Apple's chief executive.
+Apple's chief executive. His successor,
 
-149
-00:07:25,449 --> 00:07:30,537
-His successor, Tim Cook, had already been
-running the company day to day.
+144
+00:07:26,494 --> 00:07:30,537
+Tim Cook, had already been running the
+company day to day.
 
-150
+145
 00:07:30,677 --> 00:07:34,157
 The next day, Apple's shares closed down
 less than one percent.
 
-151
+146
 00:07:34,297 --> 00:07:37,617
 The market as a whole fell more, about one
 and a half percent.
 
-152
-00:07:37,757 --> 00:07:42,734
+147
+00:07:37,757 --> 00:07:43,474
 May 2025. Warren Buffett told shareholders
-he would step down as Berkshire
+he would step down as Berkshire Hathaway's
+
+148
+00:07:43,474 --> 00:07:46,097
+chief executive at the end of the year.
+
+149
+00:07:46,237 --> 00:07:50,899
+His heir, Greg Abel, had been named years
+before. And Buffett would stay on as
+
+150
+00:07:50,899 --> 00:07:51,437
+chairman.
+
+151
+00:07:51,577 --> 00:07:56,384
+The next trading day, the shares still
+fell about five percent. About fifty-nine
+
+152
+00:07:56,384 --> 00:07:58,247
+billion dollars of value, gone.
 
 153
-00:07:42,734 --> 00:07:46,097
-Hathaway's chief executive at the end of
-the year.
-
-154
-00:07:46,237 --> 00:07:49,166
-His heir, Greg Abel, had been named years
-before.
-
-155
-00:07:49,166 --> 00:07:51,437
-And Buffett would stay on as chairman.
-
-156
-00:07:51,577 --> 00:07:55,363
-The next trading day, the shares still
-fell about five percent.
-
-157
-00:07:55,363 --> 00:07:58,247
-About fifty-nine billion dollars of value,
-gone.
-
-158
 00:07:58,427 --> 00:07:59,917
 They had a spare pole for years!
 
-159
+154
 00:08:00,057 --> 00:08:02,577
 Still cost five percent to swap it.
 
-160
-00:08:02,757 --> 00:08:08,779
-September 2018. America's market regulator,
-the SEC, sued Elon Musk, Tesla's
+155
+00:08:02,757 --> 00:08:08,145
+September 2018. America's market
+regulator, the SEC, sued Elon Musk,
 
-161
-00:08:08,779 --> 00:08:10,047
-chief executive.
+156
+00:08:08,145 --> 00:08:10,047
+Tesla's chief executive.
 
-162
+157
 00:08:10,187 --> 00:08:14,898
 It accused him of securities fraud over
 tweets about taking Tesla private, and
 
-163
+158
 00:08:14,898 --> 00:08:17,737
 asked to bar him from running a public
 company.
 
-164
+159
 00:08:17,877 --> 00:08:20,247
 The company wasn't the defendant. He was.
 
-165
+160
 00:08:20,387 --> 00:08:23,527
 The next day, Tesla's shares fell nearly
 fourteen percent.
 
-166
-00:08:23,667 --> 00:08:28,492
+161
+00:08:23,667 --> 00:08:28,675
 He had called the case unjustified, and
-settled the day after without admitting
+settled the day after without admitting or
 
-167
-00:08:28,492 --> 00:08:29,347
-or denying it.
+162
+00:08:28,675 --> 00:08:29,347
+denying it.
 
-168
-00:08:29,487 --> 00:08:33,784
+163
+00:08:29,487 --> 00:08:34,643
 Line them up. Apple had an heir ready, and
-lost less than one percent.
+lost less than one percent. Berkshire had
 
-169
-00:08:33,784 --> 00:08:36,914
-Berkshire had one too, and still lost five
-percent.
-
-170
-00:08:36,914 --> 00:08:41,027
+164
+00:08:34,643 --> 00:08:39,554
+one too, and still lost five percent.
 Tesla's danger was to the man himself, and
+
+165
+00:08:39,554 --> 00:08:41,027
 it lost almost fourteen.
 
-171
-00:08:41,167 --> 00:08:45,834
+166
+00:08:41,167 --> 00:08:46,207
 Nvidia's two days, about nine and a half
-percent, sit between Berkshire and
+percent, sit between Berkshire and Tesla.
 
-172
-00:08:45,834 --> 00:08:46,207
-Tesla.
-
-173
+167
 00:08:46,347 --> 00:08:51,627
 Nvidia has no heir named in public. And
 this review is about its boss, not about
 
-174
+168
 00:08:51,627 --> 00:08:52,287
 its chips.
 
-175
+169
 00:08:52,427 --> 00:08:55,097
 That's a comparison of size, not a
 forecast.
 
-176
+170
 00:08:55,237 --> 00:08:57,057
 And then, on Wednesday, it went up.
 
-177
+171
 00:08:58,197 --> 00:08:59,507
 Wednesday, the eleventh.
 
-178
+172
 00:08:59,647 --> 00:09:04,589
 A company called CoreWeave, which rents
 out Nvidia chips, had reported strong
 
-179
+173
 00:09:04,589 --> 00:09:09,467
 results the evening before. Chip stocks
 jumped, and Nvidia jumped with them.
 
-180
+174
 00:09:09,647 --> 00:09:10,266
 We're back!
 
-181
+175
 00:09:10,406 --> 00:09:11,776
 We're Wednesday.
 
-182
-00:09:11,956 --> 00:09:15,912
+176
+00:09:11,956 --> 00:09:16,216
 By the closing bell, nothing about the
-investigation had changed.
+investigation had changed. What
 
-183
-00:09:15,912 --> 00:09:20,416
-What Wednesday's trading showed is that
-the demand had not changed either.
+177
+00:09:16,216 --> 00:09:20,416
+Wednesday's trading showed is that the
+demand had not changed either.
 
-184
+178
 00:09:20,556 --> 00:09:25,356
 Nvidia's own forecast for this quarter is
 about one hundred and eight billion
 
-185
+179
 00:09:25,356 --> 00:09:29,096
 dollars in sales. It has announced no
 change to that number.
 
-186
-00:09:29,236 --> 00:09:32,693
+180
+00:09:29,236 --> 00:09:33,146
 By the close, your seven dollars got a
-little of itself back.
+little of itself back. Not all.
 
-187
-00:09:32,693 --> 00:09:33,146
-Not all.
-
-188
+181
 00:09:33,286 --> 00:09:35,986
 And here is the part almost nobody
 noticed.
 
-189
-00:09:36,126 --> 00:09:39,785
+182
+00:09:36,126 --> 00:09:40,106
 That forecast assumes no data center chip
-sales to China.
+sales to China. None.
 
-190
-00:09:39,785 --> 00:09:40,106
-None.
-
-191
-00:09:40,246 --> 00:09:43,854
+183
+00:09:40,246 --> 00:09:44,729
 So the fight in Washington is over money
-that isn't in the number.
+that isn't in the number. The risk is not
 
-192
-00:09:43,854 --> 00:09:47,736
-The risk is not this quarter. It's the
-rules for the quarters after it.
+184
+00:09:44,729 --> 00:09:47,736
+this quarter. It's the rules for the
+quarters after it.
 
-193
+185
 00:09:47,876 --> 00:09:52,350
 If the kitchen door gets locked, the
 buyers who rent that kitchen need fewer
 
-194
+186
 00:09:52,350 --> 00:09:55,176
 ovens. That is the sale investors can't
 see yet.
 
-195
+187
 00:09:55,356 --> 00:09:56,656
 So the business is fine.
 
-196
+188
 00:09:56,796 --> 00:09:58,096
 The business is fine.
 
-197
+189
 00:09:58,236 --> 00:10:00,506
 Then why did it cost me six hundred
 dollars?
 
-198
+190
 00:10:00,646 --> 00:10:01,366
 ...Look up.
 
-199
+191
 00:10:01,546 --> 00:10:04,496
 Then the closing bell rang. And Wednesday
 wasn't over.
 
-200
+192
 00:10:05,636 --> 00:10:07,506
 After the close, the bounce ran out.
 
-201
+193
 00:10:07,646 --> 00:10:12,116
 Two newspapers published reports. Both
 rest on people they did not name.
 
-202
+194
 00:10:12,256 --> 00:10:16,688
 The New York Times reported a second
 relationship, which the company has not
 
-203
+195
 00:10:16,688 --> 00:10:17,446
 commented on.
 
-204
-00:10:17,586 --> 00:10:22,334
+196
+00:10:17,586 --> 00:10:22,574
 And The Wall Street Journal reported that
-Nvidia's board is preparing to remove
+Nvidia's board is preparing to remove its
 
-205
-00:10:22,334 --> 00:10:23,536
-its chief executive.
+197
+00:10:22,574 --> 00:10:23,536
+chief executive.
 
-206
+198
 00:10:23,676 --> 00:10:28,496
 Nvidia did not immediately respond to
 requests for comment on that report.
 
-207
-00:10:28,636 --> 00:10:32,096
-As of Wednesday night, the board had made
+199
+00:10:28,636 --> 00:10:32,316
+As of Thursday morning, the board had made
 no new public statement.
 
-208
-00:10:32,236 --> 00:10:36,867
+200
+00:10:32,456 --> 00:10:37,087
 In after-hours trading, before Thursday's
 open, the shares fell more than eight
 
-209
-00:10:36,867 --> 00:10:37,336
+201
+00:10:37,087 --> 00:10:37,556
 percent.
 
-210
-00:10:37,476 --> 00:10:39,646
+202
+00:10:37,696 --> 00:10:39,866
 That wiped out Wednesday's gain, and more.
 
-211
-00:10:39,786 --> 00:10:44,506
+203
+00:10:40,006 --> 00:10:44,745
 Remember the seven dollars? On a hundred
 thousand dollars in that fund, that's
 
-212
-00:10:44,506 --> 00:10:48,500
+204
+00:10:44,745 --> 00:10:49,241
 roughly another five or six hundred
-dollars from Nvidia's slice...
+dollars from Nvidia's slice... at that
 
-213
-00:10:48,500 --> 00:10:49,226
-if it holds.
+205
+00:10:49,241 --> 00:10:49,606
+price.
 
-214
-00:10:49,366 --> 00:10:53,346
-It's a snapshot, not a close. And that's
-our arithmetic, not a forecast.
+206
+00:10:49,746 --> 00:10:54,058
+That was a snapshot, before Thursday's
+trading. And it's our arithmetic, not a
 
-215
-00:10:53,526 --> 00:10:54,796
+207
+00:10:54,058 --> 00:10:54,556
+forecast.
+
+208
+00:10:54,736 --> 00:10:56,006
 You said, "We're Wednesday."
 
-216
-00:10:54,936 --> 00:10:56,601
+209
+00:10:56,146 --> 00:10:57,811
 It's still Wednesday.
 
-217
-00:10:56,781 --> 00:10:57,841
+210
+00:10:57,991 --> 00:10:59,051
 So is it over?
 
-218
-00:10:57,981 --> 00:10:58,771
+211
+00:10:59,191 --> 00:10:59,981
 Not yet.
 
-219
-00:10:58,911 --> 00:11:04,074
+212
+00:11:00,121 --> 00:11:05,545
 The price is waiting on three doors. Door
-one, the board's investigation, which
+one, the board's investigation, which has
 
-220
-00:11:04,074 --> 00:11:06,361
-has found nothing in public so far.
+213
+00:11:05,545 --> 00:11:07,571
+found nothing in public so far.
 
-221
-00:11:06,501 --> 00:11:08,321
+214
+00:11:07,711 --> 00:11:09,531
 How does a review like this work?
 
-222
-00:11:08,461 --> 00:11:13,262
-A guide by two corporate lawyers, published on
-Harvard Law School's governance
+215
+00:11:09,671 --> 00:11:13,795
+A guide by two corporate lawyers,
+published on Harvard Law School's
 
-223
-00:11:13,262 --> 00:11:15,231
-forum, lays out the usual shape.
+216
+00:11:13,795 --> 00:11:16,441
+governance forum, lays out the usual
+shape.
 
-224
-00:11:15,371 --> 00:11:18,176
+217
+00:11:16,581 --> 00:11:21,237
 The committee directs the review, not its
-lawyers.
+lawyers. And the lawyers should answer to
 
-225
-00:11:18,176 --> 00:11:22,271
-And the lawyers should answer to the
-committee alone, not to the company.
+218
+00:11:21,237 --> 00:11:23,481
+the committee alone, not to the company.
 
-226
-00:11:22,411 --> 00:11:25,622
+219
+00:11:23,621 --> 00:11:27,796
 At the end, the committee reports its
-findings to the board.
+findings to the board. The guide doesn't
 
-227
-00:11:25,622 --> 00:11:28,031
-The guide doesn't say they must be
-published.
+220
+00:11:27,796 --> 00:11:29,241
+say they must be published.
 
-228
-00:11:28,171 --> 00:11:30,291
+221
+00:11:29,381 --> 00:11:31,501
 Nvidia's board gave no deadline.
 
-229
-00:11:30,431 --> 00:11:34,858
-But The Wall Street Journal reports the
-board could meet soon to decide his
+222
+00:11:31,641 --> 00:11:35,852
+But The Wall Street Journal reported that
+the board met on Wednesday night to
 
-230
-00:11:34,858 --> 00:11:35,271
-future.
+223
+00:11:35,852 --> 00:11:36,891
+discuss his future.
 
-231
-00:11:35,411 --> 00:11:38,381
-No decision had been reported by Wednesday
-night.
+224
+00:11:37,031 --> 00:11:39,891
+No decision had been announced by Thursday
+morning.
 
-232
-00:11:38,521 --> 00:11:42,461
+225
+00:11:40,031 --> 00:11:43,971
 Door two, Washington, where none of those
 bills is law so far.
 
-233
-00:11:42,601 --> 00:11:46,246
+226
+00:11:44,111 --> 00:11:48,868
 Door three is a date. Tuesday, the
-seventeenth of November.
+seventeenth of November. After the closing
 
-234
-00:11:46,246 --> 00:11:51,064
-After the closing bell, Nvidia is due to
-report its results, and whoever leads
+227
+00:11:48,868 --> 00:11:54,057
+bell, Nvidia is due to report its results,
+and whoever leads it then takes questions
 
-235
-00:11:51,064 --> 00:11:54,771
-it then takes questions from the people
-who price the stock.
+228
+00:11:54,057 --> 00:11:56,281
+from the people who price the stock.
 
-236
-00:11:54,911 --> 00:11:58,881
+229
+00:11:56,421 --> 00:12:00,391
 The next day, three House committee chairs
 want a closed-door briefing.
 
-237
-00:11:59,061 --> 00:12:00,751
+230
+00:12:00,571 --> 00:12:02,261
 What's the first question going to be?
 
-238
-00:12:00,891 --> 00:12:02,161
+231
+00:12:02,401 --> 00:12:03,671
 It won't be about chips.
 
-239
-00:12:02,341 --> 00:12:07,492
-The bar is already up. Analysts, on average,
-expect a little more than Nvidia's
+232
+00:12:03,851 --> 00:12:08,415
+The bar is already up. Analysts, on
+average, expect a little more than
 
-240
-00:12:07,492 --> 00:12:12,642
-own forecast: nearly one hundred and nine
-billion dollars, according to a tally
+233
+00:12:08,415 --> 00:12:13,761
+Nvidia's own forecast: nearly one hundred
+and nine billion dollars, according to a
 
-241
-00:12:12,642 --> 00:12:13,881
-in The Motley Fool.
+234
+00:12:13,761 --> 00:12:15,391
+tally in The Motley Fool.
 
-242
-00:12:14,021 --> 00:12:16,841
+235
+00:12:15,531 --> 00:12:18,351
 That's more than a billion dollars of
 sales a day.
 
-243
-00:12:16,981 --> 00:12:20,387
+236
+00:12:18,491 --> 00:12:23,571
 Listen for three things that day. Does the
-forecast move?
+forecast move? Does the board say anything
+
+237
+00:12:23,571 --> 00:12:25,961
+new? And does anyone say the word China?
+
+238
+00:12:26,101 --> 00:12:30,935
+On the first one, a writer at The Motley
+Fool points to the forecast for the next
+
+239
+00:12:30,935 --> 00:12:35,888
+quarter. A weak one, he argues, could be a
+sign that AI spending is slowing. That's
+
+240
+00:12:35,888 --> 00:12:37,261
+an opinion, not a fact.
+
+241
+00:12:37,401 --> 00:12:42,332
+Whatever the board decides, one thing has
+already changed. Investors have now seen
+
+242
+00:12:42,332 --> 00:12:47,143
+the empty chair. As of Thursday morning,
+nobody has been appointed to fill it. A
+
+243
+00:12:47,143 --> 00:12:50,511
+company this big does not get to leave it
+empty forever.
 
 244
-00:12:20,387 --> 00:12:24,451
-Does the board say anything new? And does
-anyone say the word China?
+00:12:50,651 --> 00:12:54,958
+And you have seen your seven dollars. You
+own this story whether you follow it or
 
 245
-00:12:24,591 --> 00:12:29,127
-On the first one, a writer at The Motley
-Fool points to the forecast for the
+00:12:54,958 --> 00:12:55,171
+not.
 
 246
-00:12:29,127 --> 00:12:33,424
-next quarter. A weak one, he argues, could
-be a sign that AI spending is
-
-247
-00:12:33,424 --> 00:12:35,751
-slowing. That's an opinion, not a fact.
-
-248
-00:12:35,891 --> 00:12:39,438
-Whatever the board decides, one thing has
-already changed.
-
-249
-00:12:39,438 --> 00:12:44,207
-Investors have now seen the empty chair.
-As of Wednesday night, neither report
-
-250
-00:12:44,207 --> 00:12:48,732
-names anyone to fill it. A company this
-big does not get to leave it empty
-
-251
-00:12:48,732 --> 00:12:49,221
-forever.
-
-252
-00:12:49,361 --> 00:12:53,509
-And you have seen your seven dollars. You
-own this story whether you follow it
-
-253
-00:12:53,509 --> 00:12:53,881
-or not.
-
-254
-00:12:54,061 --> 00:12:55,321
+00:12:55,351 --> 00:12:56,611
 Is one pole normal?
 
-255
-00:12:55,461 --> 00:12:57,201
+247
+00:12:56,751 --> 00:12:58,491
 It's not unusual.
 
-256
-00:12:57,381 --> 00:12:59,921
+248
+00:12:58,671 --> 00:13:01,211
 So why is Nvidia down over its CEO?
 
-257
-00:13:00,061 --> 00:13:03,135
+249
+00:13:01,351 --> 00:13:06,223
 Not because anyone reported it selling one
-chip less.
+chip less. Because one man's trouble made
 
-258
-00:13:03,135 --> 00:13:07,021
-Because one man's trouble made everyone
-look up at the same time...
+250
+00:13:06,223 --> 00:13:08,311
+everyone look up at the same time...
 
-259
-00:13:07,161 --> 00:13:08,291
+251
+00:13:08,451 --> 00:13:09,581
 ...and count the poles.
 ```
