@@ -51,7 +51,7 @@ node studio/tools/retention-lint.mjs channel-system/episodes/<slug>
 | Research, script, fact-check | Claude (web search, primary documents) | Ready |
 | Pictures | `studio/` engine, drawn in code | Ready; each new story adds sets and props |
 | Frame check | `node studio/tools/stills.mjs frames <episode>` saves a contact sheet; `preview.mjs` for a browser | Ready (the contact sheet needs Playwright) |
-| Voice | Open decision: a human narrator or a disclosed synthetic voice. `studio/tools/voice.mjs` makes a Kokoro scratch track until then. | Scratch ready, final voice pending |
+| Voice | Decided by the user on 2026-11-12: a synthetic voice, disclosed in the video and the description, with YouTube's altered-content label set. Re-check the policy text before the first upload. Which voice product makes the final track is still open; `studio/tools/voice.mjs` makes a Kokoro scratch track. | Scratch ready, final voice product pending |
 | Music and effects | `studio/tools/mix.mjs`: effects and a house music bed made in code, so nothing to license. Drop licensed tracks in `audio/music/` to use those instead (the YouTube Audio Library is the safe source). | Ready; the choice of music is yours |
 | Render to MP4 | HyperFrames (Apache 2.0) + FFmpeg | Tested in a cloud session; a local machine needs FFmpeg on its PATH |
 | Thumbnail | `studio/tools/stills.mjs thumb`: the first shot with the text band. Richer art from Higgsfield is optional. | Ready; painted art is a manual step |
