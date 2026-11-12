@@ -4,7 +4,7 @@
   { "id": "c7n01", "cue": "L096", "set": "lawn", "opts": { "time": "dusk" }, "camera": "pan_right", "grade": "sepia", "motif": "tent",
     "props": [ { "type": "tent", "x": 960, "y": 820, "w": 1700, "ropes": 6, "frayed": 2, "tilt": 6, "flag": "NVIDIA" },
                { "type": "tent", "x": 460, "y": 960, "w": 380, "small": true, "flag": "2011" }, { "type": "tent", "x": 960, "y": 960, "w": 380, "small": true, "flag": "2025" },
-               { "type": "tent", "x": 1460, "y": 960, "w": 380, "small": true, "flag": "2018" }, { "type": "sign", "x": 960, "y": 170, "t": "HALL OF WOBBLES", "size": 72 }, { "type": "piggy", "x": 180, "y": 960, "k": 0.28, "state": "calm" } ],
+               { "type": "tent", "x": 1460, "y": 960, "w": 380, "small": true, "flag": "2018" }, { "type": "sign", "x": 460, "y": 190, "t": "HALL OF WOBBLES", "size": 72 }, { "type": "piggy", "x": 180, "y": 960, "k": 0.28, "state": "calm" } ],
     "actors": [ { "who": "BENNY", "x": 1760, "y": 990, "scale": 0.5, "face": "confused", "prop": "phone", "screen": "red", "flip": true, "enter": "none", "acts": [ { "at": 0.3, "to": [1680, 990], "dur": 1.0 } ] } ] },
   { "id": "c7n02", "cue": "L097", "set": "lawn", "camera": "push_in", "grade": "sepia",
     "props": [ { "type": "tent", "x": 900, "y": 930, "w": 1200, "ropes": 6, "flag": "APPLE 2011", "spare": "READY" },

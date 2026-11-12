@@ -109,12 +109,12 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c3s15 | 2:09 | tag | PUBLICLY NAMED: NOBODY | |
 | c3s16 | 2:13 | set office (poster) | BUY | |
 | c3s16 | 2:13 | set office (poster2) | SELL | |
-| c3s16 | 2:13 | chair | NEXT | |
 | c3s16 | 2:13 | doc | Newsweek / NOV 2026 / Dan Ives, analyst / There is no succession plan and it would be a stretch to find a candidate internally to replace Jensen. | |
 | c3s16 | 2:13 | lower_third | DAN IVES / Analyst, Yorkville Ives | |
 | c3s17 | 2:20 | set office (poster) | PLAN B: | |
 | c3s17 | 2:20 | set office (poster2) | PLAN A | |
 | c3s17 | 2:20 | sign | NOTE TO CLIENTS | |
+| c3s17 | 2:20 | chair | NEXT | |
 | c3s17 | 2:20 | doc | Dan Ives, note to clients (as reported by AOL) / NOV 2026 / Dan Ives, Yorkville Ives / Jensen is not replaceable | |
 | c3s17 | 2:20 | lower_third | DAN IVES / Analyst, Yorkville Ives | |
 | c3s18 | 2:26 | thing dome label | WASHINGTON | |
@@ -190,6 +190,8 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c5p26 | 4:23 | panel 1: panel label | CLAIM (REPORTED) | |
 | c5p26 | 4:23 | panel 2: thing tower label | CHINA | |
 | c5p26 | 4:23 | panel 2: panel label | CHINA DENIES IT | |
+| c5p26 | 4:23 | panel 3: set office (poster) | DON'T | |
+| c5p26 | 4:23 | panel 3: set office (poster2) | PANIC | |
 | c5p26 | 4:23 | panel 3: panel label | NOTHING PROVEN IN PUBLIC | |
 | c5p26 | 4:23 | label | AN ALLEGATION | |
 | c5p26 | 4:23 | tag | UNNAMED SOURCES | |
@@ -434,7 +436,7 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c9s49d2 | 10:28 | tag | AS OF WEDNESDAY NIGHT | |
 | c9t03 | 10:32 | text card | After hours, before Thursday's open: down more than 8%. | |
 | c9s49e | 10:37 | counter | MORE THAN -8% / AFTER HOURS, AS OF WED NIGHT: SNAPSHOT, NOT A CLOSE | |
-| c9s49e | 10:37 | stamp | WEDNESDAY'S GAIN: GONE | |
+| c9s49e | 10:37 | tag | WEDNESDAY'S GAIN: GONE | |
 | c9s49f | 10:39 | thing chip label | NVIDIA | |
 | c9s49f | 10:39 | note | $100 / NVIDIA $7 | |
 | c9s49g | 10:44 | jar | RETIREMENT / $100,000 | |
@@ -495,7 +497,7 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c9s52c | 12:04 | highjump | FORECAST $108B | |
 | c9s52e | 12:08 | thing note label | RESULTS | |
 | c9s52e | 12:08 | highjump | FORECAST $108B | |
-| c9s52e | 12:08 | counter | ~$109B / ANALYST ESTIMATE, PER A MOTLEY FOOL TALLY | |
+| c9s52e | 12:08 | source | analyst estimate, per a Motley Fool tally | |
 | c9s52d | 12:14 | thing chip label | NVIDIA | |
 | c9s52d | 12:14 | sign | EVERY DAY | |
 | c9s52d | 12:14 | counter | $1B+ A DAY / OUR SUM: ONE QUARTER'S SALES, PER DAY | |

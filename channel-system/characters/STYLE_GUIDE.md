@@ -15,7 +15,7 @@ The look is ours. Do not imitate another channel's figures, lettering, palette o
 One skeleton for everybody (`studio/engine/rig.js`):
 - Squircle head, about 45% of the height. Block body. **Floating mitten hands, no arms.** Short legs, big shoes.
 - Tall white eyes with pupils, thick eyebrows that do most of the acting, a small nose.
-- Ten everyday expressions: neutral, happy, shocked, scared, angry, smug, sad, confused, relieved, deadpan. Four loud ones for hooks, climaxes and thumbnails: panic, furious, crying, greedy. One clear emotion at a time, changed on the word that causes it.
+- Eleven everyday expressions: neutral (a small smile), plain (no smile, for a real person saying something serious), happy, shocked, scared, angry, smug, sad, confused, relieved, deadpan. Four loud ones for hooks, climaxes and thumbnails: panic, furious, crying, greedy. One clear emotion at a time, changed on the word that causes it.
 - Hand poses: rest, hips, shrug, cheer, point, think, facepalm, hold, phone, wave, present, raise, carry, panic, grab, offer.
 - Things to wear and hold: a `hat` (party, crown, hardhat), a `badge` with a number (an age, a rank, a count), and hand props (phone, bill, tablet, mug, stamp, cash, wallet, price tag, pen, placard, briefcase, magnifier). A prop picks a fitting pose by itself.
 - Mouths move with the words when a figure speaks. Figures blink and breathe when idle.

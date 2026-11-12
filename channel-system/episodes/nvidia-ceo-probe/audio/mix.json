@@ -1,5 +1,5 @@
 {
-  "signature": "c8b8d0422faaaecf",
+  "signature": "e7cd387f1141dd37",
   "total": 789.701,
   "lufs": -14.02,
   "true_peak_db": -1.04,
@@ -58,8 +58,8 @@
     "uncredited": []
   },
   "effects": {
-    "count": 67,
-    "per_minute": 5.1,
+    "count": 66,
+    "per_minute": 5,
     "list": [
       {
         "t": 13.09,
@@ -340,11 +340,6 @@
         "t": 632.236,
         "name": "card",
         "why": "c9t03 card"
-      },
-      {
-        "t": 639.016,
-        "name": "stamp",
-        "why": "c9s49e stamp"
       },
       {
         "t": 651.106,

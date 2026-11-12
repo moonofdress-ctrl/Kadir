@@ -107,6 +107,7 @@
   // brows: [rotL, rotR, dyL, dyR]; sweat / tear are optional marks.
   const FACES = {
     neutral: { eyes: "open", brows: [0, 0, 0, 0], mouth: "smile" },
+    plain: { eyes: "open", brows: [0, 0, 0, 0], mouth: "flat" }, // no smile: for a real person saying something serious
     happy: { eyes: "happy", brows: [-6, 6, -6, -6], mouth: "grin" },
     shocked: { eyes: "wide", brows: [-8, 8, -20, -20], mouth: "o" },
     scared: { eyes: "wide", brows: [18, -18, -12, -12], mouth: "wavy", sweat: 1 },

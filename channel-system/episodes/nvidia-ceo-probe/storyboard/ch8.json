@@ -48,7 +48,7 @@
     "actors": [ { "thing": "dome", "label": "WASHINGTON", "x": 1640, "y": 880, "scale": 0.55, "face": "smug", "prop": "pen", "flip": true, "enter": "none" } ] },
   { "id": "c8s49", "cue": "L125", "set": "kitchen", "opts": { "window": "datacenter" }, "camera": "push_in", "callback": "the kitchen for rent, now locked",
     "actors": [ { "thing": "server", "label": "THE OVEN", "x": 520, "y": 900, "scale": 0.85, "face": "scared", "enter": "none", "acts": [ { "cue": "L125", "word": 12, "face": "sad" } ] },
-                { "thing": "cloud", "label": "RENTERS", "x": 1500, "y": 760, "scale": 0.5, "face": "sad", "prop": "phone", "enter": "none", "acts": [ { "cue": "L125", "word": 12, "to": [1800, 760], "dur": 1.0 } ] } ],
+                { "thing": "cloud", "label": "RENTERS", "x": 1500, "y": 760, "scale": 0.5, "face": "sad", "prop": "phone", "enter": "none", "acts": [ { "cue": "L125", "word": 12, "to": [1640, 760], "dur": 1.0 } ] } ],
     "props": [ { "type": "gate", "x": 1060, "y": 900, "t": "LOCKED?", "closed": true, "cue": "L125", "word": 4 }, { "type": "sign", "x": 1060, "y": 210, "t": "KITCHEN FOR RENT", "size": 60 } ] },
   { "id": "c8k13", "cue": "L126", "set": "kitchen", "camera": "pan_left", "frame": "medium", "callback": "the jar and the kitchen table",
     "actors": [ { "who": "MARTHA", "x": 720, "face": "neutral", "prop": "bill", "speaks": ["L126"], "enter": "none" },
