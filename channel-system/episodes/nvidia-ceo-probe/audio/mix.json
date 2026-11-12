@@ -1,5 +1,5 @@
 {
-  "signature": "3d4ccaf04f536901",
+  "signature": "bbcebf28f1f780f0",
   "total": 789.291,
   "lufs": -14.02,
   "true_peak_db": -1.04,
@@ -58,8 +58,8 @@
     "uncredited": []
   },
   "effects": {
-    "count": 68,
-    "per_minute": 5.2,
+    "count": 67,
+    "per_minute": 5.1,
     "list": [
       {
         "t": 13.09,
@@ -180,11 +180,6 @@
         "t": 246.403,
         "name": "paper",
         "why": "c5s25b doc"
-      },
-      {
-        "t": 265.589,
-        "name": "stamp",
-        "why": "c5p26 stamp"
       },
       {
         "t": 274.977,
