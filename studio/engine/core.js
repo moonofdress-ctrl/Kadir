@@ -31,6 +31,7 @@
       if (x.p.cue) o.at = TM.when(x.p, t0, L) - t0;
       // Parts of a prop (tower blocks, bars) can carry their own cue; turn it into seconds from the shot start.
       for (const k of Object.keys(o)) if (Array.isArray(o[k])) o[k] = o[k].map((it) => (it && it.cue ? Object.assign({}, it, { at: TM.when(it, t0, L) - t0 }) : it));
+        else if (k !== "move" && o[k] && typeof o[k] === "object" && o[k].cue) o[k] = Object.assign({}, o[k], { at: TM.when(o[k], t0, L) - t0 }); // single part (tent "snap")
       x.def.play(tl, e, o, t0);
       // "move": { to: [x, y], cue/word/at, dur }: the prop travels (a parcel along the belt, a pile sliding to its new owner).
       if (x.p.move) { const m = x.p.move, tm = m.cue || m.at != null ? TM.when(m, t0, L) : t0 + 0.3;

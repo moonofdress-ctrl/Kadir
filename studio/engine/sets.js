@@ -170,6 +170,46 @@
       return { back: b, front: o.belt === false ? "" : cut(belt) };
     },
 
+    // Inside a city bus: windows with the street going by, seats, straps, an ad panel. { night, ad }
+    bus(o) {
+      const night = !!o.night, r = rng(91), wall = night ? "#2a3152" : "#b9c7cf", rail = night ? "#3d4a5c" : "#d9dfe3", seat = night ? "#2a4a7a" : "#3d6fb6", seat2 = night ? "#223c66" : "#2f5a98";
+      let b = R(0, 0, 1920, 1080, wall, 0, "");
+      b += `<g class="pass">${R(-100, 100, 5000, 400, night ? "#141a36" : "#bfe0ea", 0, "")}${skyline(-100, 4900, 440, r, night ? ["#232c54", "#2c3766", "#1c2340"] : ["#7f9fc0", "#9db7d1", "#6c88ab"], night)}${R(-100, 430, 5000, 70, "#4a4f60", 0, "")}`;
+      for (let x = 0; x < 4900; x += 160) b += night ? `<circle cx="${x}" cy="${380 + (x / 160 % 3) * 20}" r="9" fill="#ffe14d"/>` : R(x, 462, 70, 8, "#f6f1e4", 4, "");
+      b += `</g>`;
+      const wins = [[70, 450], [580, 450], [1430, 420]], ad = [1090, 280];
+      b += R(0, 0, 1920, 110, rail, 0, "") + R(0, 110, 70, 400, wall, 0, "") + R(520, 110, 60, 400, wall, 0, "") + R(1030, 110, 400, 400, wall, 0, "") + R(1850, 110, 70, 400, wall, 0, "") + R(0, 490, 1920, 90, night ? "#232a47" : "#9fb0ba", 0, "");
+      b += cut(wins.map((w) => R(w[0], 110, w[1], 380, "none", 14)).join("") + wins.map((w) => `<path d="M${w[0] + 60},${490} L${w[0] + 180},110 M${w[0] + 120},490 L${w[0] + 200},110" stroke="rgba(255,255,255,${night ? 0.1 : 0.28})" stroke-width="22"/>`).join(""));
+      b += cut(R(ad[0], 130, ad[1], 340, "#ffe14d", 8) + T(ad[0] + ad[1] / 2, 280, o.ad || "SALE", 110, "#e0262b") + T(ad[0] + ad[1] / 2, 360, "TODAY ONLY", 40) + R(ad[0] + 40, 395, ad[1] - 80, 18, "#e0262b", 6, ""));
+      b += `<path d="M0,64 L1920,64" ${st} stroke-width="12"/>`;
+      for (let i = 0; i < 9; i++) { const x = 130 + i * 215; b += `<g class="sway"><path d="M${x},66 L${x},130" ${st}/><circle cx="${x}" cy="156" r="28" fill="none" stroke="#e8a317" stroke-width="12"/><circle cx="${x}" cy="156" r="28" fill="none" stroke="${INK}" stroke-width="3"/></g>`; }
+      for (let i = 0; i < 4; i++) { const sx = 90 + i * 460; b += cut(R(sx, 590, 400, 230, seat, 40) + R(sx - 10, 790, 420, 70, seat2, 24)); }
+      b += R(0, 850, 1920, 230, night ? "#3b3a44" : "#7a7480", 0) + `<path d="M0,900 L1920,900" stroke="#e8a317" stroke-width="10"/>`;
+      for (const x of [545, 1395]) b += cut(R(x - 11, 64, 22, 790, "#e8a317", 8));
+      if (night) b += R(0, 0, 1920, 1080, "rgba(10,14,40,.28)", 0, "");
+      return { back: b };
+    },
+
+    // A long meeting table under a hanging lamp, wood panels and a wall calendar. { night, doors:[labels], month, tableFront }
+    boardroom(o) {
+      const night = !!o.night, doors = (o.doors || []).slice(0, 3); let b = R(0, 0, 1920, 800, "#9a6a47", 0, "") + R(0, 800, 1920, 280, "#4a3a2e", 0, "");
+      for (let x = 0; x < 1920; x += 160) b += `<path d="M${x},0 L${x},800" stroke="rgba(27,29,54,.22)" stroke-width="6"/>`;
+      b += `<path d="M0,560 L1920,560" stroke="rgba(27,29,54,.35)" stroke-width="10"/>` + `<path d="M0,800 L1920,800" ${st}/>`;
+      b += cut(R(150, 150, 170, 200, "#f6f1e4", 6) + R(150, 150, 170, 52, "#e0262b", 6)) + T(235, 190, o.month || "NOV", 36, "#f6f1e4");
+      for (let i = 0; i < 15; i++) b += R(162 + (i % 5) * 31, 218 + Math.floor(i / 5) * 40, 24, 30, i === 11 ? "#e0262b" : "rgba(27,29,54,.16)", 3, "");
+      const dx = doors.length === 1 ? [960] : doors.length === 2 ? [700, 1220] : [480, 960, 1440], dw = 230;
+      doors.forEach((d, i) => { const x = dx[i]; b += cut(R(x - dw / 2, 380, dw, 420, "#6f452c", 6) + R(x - dw / 2 + 24, 412, dw - 48, 150, "rgba(27,29,54,.18)", 4, "") + R(x - dw / 2 + 24, 600, dw - 48, 150, "rgba(27,29,54,.18)", 4, "") + `<circle cx="${x + dw / 2 - 30}" cy="610" r="12" fill="#f0b429" ${st}/>`) +
+        cut(R(x - dw / 2, 304, dw, 56, "#f6f1e4", 6)) + T(x, 304 + 38, d, Math.min(36, (dw - 24) / (Math.max(4, String(d).length) * 0.6))); });
+      for (const cx of [300, 720, 1200, 1620]) b += cut(R(cx - 70, 700, 140, 150, "#2f4a6f", 28));
+      const table = cut(`<path d="M170,810 L1750,810 L1850,880 L70,880Z" fill="#c99a5b" ${st}/>` + R(70, 880, 1780, 44, "#8a5a3c", 6)) + `<ellipse cx="960" cy="960" rx="900" ry="34" fill="rgba(27,29,54,.18)"/>`;
+      if (!o.tableFront) b += table;
+      b += `<path d="M960,0 L960,180" ${st}/>`;
+      if (night) b += R(0, 0, 1920, 1080, "rgba(10,12,34,.55)", 0, "");
+      b += `<path d="M900,262 L1020,262 L${night ? 1340 : 1260},800 L${night ? 580 : 660},800Z" fill="rgba(255,240,190,${night ? 0.26 : 0.14})"/>` + cut(`<path d="M870,260 L1050,260 L1010,180 L910,180Z" fill="#e8a317" ${st}/>`) + `<ellipse cx="960" cy="266" rx="46" ry="14" fill="#fff6c8"/>`;
+      if (night) doors.forEach((d, i) => { b += R(dx[i] - dw / 2 + 6, 786, dw - 12, 10, "#ffe14d", 0, ""); });
+      return { back: b, front: o.tableFront ? table : "" };
+    },
+
     night_city(o) {
       const r = rng(57); let b = R(0, 0, 1920, 1080, "#141a36", 0, "") + `<circle cx="1560" cy="190" r="70" fill="#f6f1e4" ${st}/><circle cx="1590" cy="170" r="60" fill="#141a36"/>`;
       for (let i = 0; i < 40; i++) b += `<circle cx="${(r() * 1920).toFixed(0)}" cy="${(r() * 420).toFixed(0)}" r="${(2 + r() * 3).toFixed(1)}" fill="#f6f1e4"/>`;
@@ -271,6 +311,156 @@
       play(tl, el, o, t0) { if (o.at == null) return; el.style.opacity = 0; gsap.set(el, { svgOrigin: o.x + " " + o.y, smoothOrigin: false });
         tl.fromTo(el, { opacity: 0, scale: 1.5 }, { opacity: 1, scale: 1, duration: 0.18, ease: "power4.in", immediateRender: false }, t0 + o.at); },
     },
+
+    /* { type:"tent", x, y, w, flag, ropes, frayed, tilt, crowd, night, inside, small, flap, ghost, sag, jacket, spare, poleOnly, grow:[{cue,word,k}], snap:{cue,word} }
+       The anchor motif: a striped circus tent with ONE centre pole (x, y = bottom middle). */
+    tent: {
+      draw(o) {
+        const w = o.w || 1000, x = o.x, y = o.y, night = !!o.night, small = !!o.small, c1 = night ? "#2c3766" : "#e0262b", c2 = night ? "#44538f" : "#f6f1e4", pw = Math.max(14, w * 0.016), pc = "#d9c9a3";
+        const stripe = (i) => (i % 2 ? c2 : c1), bulbs = (pts, rr) => `<g class="bulbs">${pts.map((p, i) => `<circle class="bulb" cx="${p[0].toFixed(0)}" cy="${p[1].toFixed(0)}" r="${rr}" fill="${i % 2 ? "#ffe14d" : "#ffb347"}" stroke="${INK}" stroke-width="3"/>`).join("")}</g>`;
+        const fit = (t, mw, size) => Math.min(size, mw / (Math.max(3, String(t).length) * 0.58));
+        const flag = (fx, fy, size, text) => { const fw = String(text).length * size * 0.58 + 36, fh = size * 1.5;
+          return `<g class="flag"><path d="M${fx},${fy} L${fx + fw},${fy} L${fx + fw - 16},${fy + fh / 2} L${fx + fw},${fy + fh} L${fx},${fy + fh}Z" fill="#ffe14d" ${st}/>${T(fx + 12 + (fw - 36) / 2 + 6, fy + fh / 2 + size * 0.34, text, size, INK)}</g>`; };
+        let s = "", crowd = "", spare = "";
+        if (o.inside) {
+          const apex = -60, ey = 330, wall = night ? "#1a2146" : "#8f1b22", n = 16; let can = R(x - 3000, -600, 6000, y + 1500, night ? "#232c54" : "#b81f26", 0, ""), pts = [];
+          for (let i = 0; i < n; i++) { const x0 = x - 2400 + i * 300, x1 = x0 + 300, mx = (x0 + x1) / 2;
+            can += R(x0, ey, 300, y + 1400 - ey, i % 2 ? (night ? "#303b70" : "#d9d2c0") : wall, 0, `stroke="${INK}" stroke-width="5"`);
+            can += `<path d="M${x},${apex} L${x0},${ey} Q${mx},${ey + 34} ${x1},${ey}Z" fill="${stripe(i)}" ${st}/>`; if (x1 > -100 && x0 < 2000) pts.push([mx, ey + 22]); }
+          s += `<g class="tc">${can}${night ? bulbs(pts, 9) : ""}</g>` + `<g class="fl">${R(x - 3000, y, 6000, 1100, night ? "#4a3a2e" : "#a58a62", 0, "")}<path d="M-1000,${y} L3000,${y}" ${st}/></g>`;
+          const pr = o.ghost ? `<rect x="${x - pw}" y="${apex}" width="${pw * 2}" height="${y - apex}" fill="none" stroke="${INK}" stroke-width="6" stroke-dasharray="4 16" stroke-linecap="round"/>` : cut(R(x - pw, apex, pw * 2, y - apex, pc, 6) + R(x - pw * 2, y - 26, pw * 4, 26, "#8a5a3c", 8));
+          s += `<g class="tt">${pr}${o.jacket ? cut(`<path d="M${x - pw * 3.4},${y - 560} Q${x},${y - 640} ${x + pw * 3.4},${y - 560} L${x + pw * 3},${y - 330} L${x - pw * 3},${y - 330}Z" fill="#1f2a44" ${st}/><path d="M${x - pw * 1.1},${y - 612} L${x},${y - 470} L${x + pw * 1.1},${y - 612}Z" fill="#f6f1e4" ${st}/><path d="M${x},${y - 590} L${x - 10},${y - 540} L${x},${y - 450} L${x + 10},${y - 540}Z" fill="#e0262b" ${st}/>`) : ""}</g>`;
+          return s;
+        }
+        const h = w * (small ? 0.5 : 0.34), eaveY = y - h * 0.4, peakY = o.sag ? y - h * 0.84 : y - h, sag = o.sag ? h * 0.2 : 0, sc = Math.min(26, w * 0.03), n = Math.max(6, 2 * Math.round(w / 220)), ex = h * (o.jacket ? 0.42 : 0.3), top = o.poleOnly ? y - w * 0.8 : y - h - ex;
+        const sw = w / n, pts = [];
+        if (!o.poleOnly) {
+          let walls = "", roof = "";
+          for (let i = 0; i < n; i++) { const x0 = x - w / 2 + i * sw, x1 = x0 + sw, mx = (x0 + x1) / 2, cA = [(x + x0) / 2, (peakY + eaveY) / 2 + sag], cB = [(x + x1) / 2, (peakY + eaveY) / 2 + sag];
+            walls += R(x0, eaveY, sw, y - eaveY, stripe(i), 0, `stroke="${INK}" stroke-width="5"`);
+            roof += `<path d="M${x},${peakY} Q${cA[0]},${cA[1]} ${x0},${eaveY} Q${mx},${eaveY + sc * 2} ${x1},${eaveY} Q${cB[0]},${cB[1]} ${x},${peakY}Z" fill="${stripe(i)}" ${st}/>`; pts.push([mx, eaveY + sc * 1.2]); }
+          const dw = w * 0.09, dh = (y - eaveY) * 0.9;
+          const door = o.flap ? `<path d="M${x - dw},${y} L${x - dw * 0.55},${y - dh} L${x + dw * 0.55},${y - dh} L${x + dw},${y}Z" fill="#2a2142" ${st}/><path d="M${x - dw * 0.55},${y - dh} L${x - dw * 1.7},${y - dh * 0.25} L${x - dw},${y}Z" fill="${c2}" ${st}/><path d="M${x + dw * 0.55},${y - dh} L${x + dw * 1.7},${y - dh * 0.25} L${x + dw},${y}Z" fill="${c2}" ${st}/>` : `<path d="M${x},${eaveY + sc} L${x},${y}" ${st}/>`;
+          const nr = o.ropes == null ? (small ? 2 : 4) : o.ropes, total = Math.max(nr, o.snap ? 2 : 0), fr = Math.min(o.frayed || 0, nr); let ropes = "";
+          for (let i = 0; i < total; i++) { const side = i % 2 ? 1 : -1, j = Math.floor(i / 2), u = j * 0.28, ax = x + side * (w / 2) * (1 - u), ay = eaveY + (peakY - eaveY) * u, sx = x + side * (w / 2 + w * (0.1 + 0.07 * j)), L = (y - ay) * 0.28;
+            if (o.snap && i === 1) { ropes += `<g class="taut"><path d="M${ax},${ay} L${sx},${y}" stroke="${INK}" stroke-width="5" stroke-linecap="round"/>${R(sx - 7, y - 14, 14, 18, "#c9ced6", 3, `stroke="${INK}" stroke-width="4"`)}</g><g transform="translate(${ax},${ay})"><g class="whip" style="opacity:0"><path d="M0,0 Q14,${L * 0.5} 6,${L} l10,10 l-14,8" fill="none" stroke="${INK}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g></g>`; }
+            else if (i >= total - fr) ropes += `<path d="M${ax},${ay} Q${ax + side * 14},${ay + L * 0.6} ${ax + side * 6},${ay + L * 1.3} l${side * 10},12 l${-side * 14},10" fill="none" stroke="${INK}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>`;
+            else ropes += `<path d="M${ax},${ay} L${sx},${y}" stroke="${INK}" stroke-width="5" stroke-linecap="round"/>` + R(sx - 7, y - 14, 14, 18, "#c9ced6", 3, `stroke="${INK}" stroke-width="4"`); }
+          s += cut(walls) + cut(door) + cut(roof) + ropes + (night ? bulbs(pts, Math.max(5, w * 0.007)) : "");
+        }
+        // the pole: the whole tent hangs on it
+        let pole;
+        if (o.ghost) pole = `<rect x="${x - pw / 2}" y="${top}" width="${pw}" height="${y - top}" fill="none" stroke="${INK}" stroke-width="5" stroke-dasharray="3 14" stroke-linecap="round"/>`;
+        else if (o.poleOnly) pole = cut(R(x - pw / 2, top, pw, y - top, pc, 5) + R(x - pw * 2.2, y - 22, pw * 4.4, 22, "#8a5a3c", 8));
+        else pole = cut(R(x - pw / 2, top, pw, peakY + 10 - top, pc, 5));
+        if (o.jacket) { const jw = Math.max(pw * 5, w * 0.07), jy = top + 4, jh = (o.poleOnly ? y : peakY) - top - 6; const jh2 = Math.min(jh, jw * 1.5);
+          pole += cut(`<path d="M${x - jw / 2},${jy + 14} Q${x},${jy - 12} ${x + jw / 2},${jy + 14} L${x + jw * 0.44},${jy + jh2} L${x - jw * 0.44},${jy + jh2}Z" fill="#1f2a44" ${st}/><path d="M${x - jw * 0.14},${jy + 4} L${x},${jy + jh2 * 0.6} L${x + jw * 0.14},${jy + 4}Z" fill="#f6f1e4" ${st}/><path d="M${x},${jy + 10} L${x - 6},${jy + jh2 * 0.3} L${x},${jy + jh2 * 0.75} L${x + 6},${jy + jh2 * 0.3}Z" fill="#e0262b" ${st}/>`); }
+        s += pole;
+        if (o.flag) { const size = Math.max(24, Math.min(w * 0.05, 52, (w * 0.5) / (String(o.flag).length * 0.58 + 1))); s += flag(x + pw / 2, top + 2, size, o.flag); }
+        s = `<g class="tt">${s}</g>`;
+        if (o.spare) { const sx = Math.min(x + w * 0.58, 1790), sh = h * 0.9, size = Math.max(28, Math.min(40, w * 0.03)), bw = String(o.spare).length * size * 0.58 + 40, bx = Math.max(20 + bw / 2, Math.min(sx, 1900 - bw / 2));
+          spare = cut(R(sx - pw / 2, y - sh, pw, sh, pc, 5) + R(sx - pw * 2, y - 20, pw * 4, 20, "#8a5a3c", 8)) + cut(R(bx - bw / 2, y - sh * 0.62, bw, size * 1.7, "#f6f1e4", 6) + T(bx, y - sh * 0.62 + size * 1.2, o.spare, size)); }
+        if (o.crowd) { const r = rng(5 + o.crowd), cs = Math.max(12, Math.min(36, w * 0.02)), cap = Math.max(4, Math.floor((w * 0.9) / (cs * 0.8))), rows = Math.ceil(o.crowd / cap); let k = 0;
+          for (let row = rows - 1; row >= 0; row--) for (let c = 0; c < cap && k < o.crowd; c++, k++) { const px = x - w * 0.45 + ((c + 0.5 + (r() - 0.5) * 0.6) / cap) * w * 0.9, py = y + 6 + (rows - 1 - row) * cs * 0.34 - (rows - 1) * cs * 0.1, e = Rig.extra(k * 7 + 3);
+            crowd += `<g><rect x="${(px - cs * 0.27).toFixed(1)}" y="${(py - cs * 0.6).toFixed(1)}" width="${(cs * 0.54).toFixed(1)}" height="${(cs * 0.6).toFixed(1)}" rx="${(cs * 0.12).toFixed(1)}" fill="${e.top}" stroke="${INK}" stroke-width="2.5"/><circle cx="${px.toFixed(1)}" cy="${(py - cs * 0.82).toFixed(1)}" r="${(cs * 0.28).toFixed(1)}" fill="${e.skin}" stroke="${INK}" stroke-width="2.5"/></g>`; }
+          crowd = `<g class="crowd">${crowd}</g>`; }
+        return s + spare + crowd;
+      },
+      play(tl, el, o, t0) {
+        const tt = el.querySelector(".tt"), tilt = o.tilt || 0, grow = o.grow;
+        if (o.at != null && !grow) pop(tl, el, o, t0);
+        if (o.inside) { const tc = el.querySelector(".tc"); gsap.set([tc, tt], { svgOrigin: o.x + " " + o.y, smoothOrigin: false, rotation: tilt });
+          [tc, tt].forEach((e) => tl.fromTo(e, { rotation: tilt - 0.6 }, { rotation: tilt + 0.6, duration: 1.6, yoyo: true, repeat: 9, ease: "sine.inOut", immediateRender: false }, t0)); }
+        else if (!grow) { gsap.set(tt, { svgOrigin: o.x + " " + o.y, smoothOrigin: false, rotation: tilt });
+          tl.fromTo(tt, { rotation: tilt - 0.5 }, { rotation: tilt + 0.5, duration: 1.4, yoyo: true, repeat: 9, ease: "sine.inOut", immediateRender: false }, t0); }
+        else gsap.set(tt, { rotation: tilt, svgOrigin: o.x + " " + o.y, smoothOrigin: false });
+        el.querySelectorAll(".flag").forEach((f) => { gsap.set(f, { transformOrigin: "0% 50%", smoothOrigin: false }); tl.fromTo(f, { skewY: -4 }, { skewY: 4, duration: 0.7, yoyo: true, repeat: 17, ease: "sine.inOut", immediateRender: false }, t0); });
+        el.querySelectorAll(".bulb").forEach((b, i) => tl.fromTo(b, { opacity: 1 }, { opacity: 0.35, duration: 0.5 + (i % 3) * 0.12, yoyo: true, repeat: 13, ease: "sine.inOut", immediateRender: false }, t0 + (i % 5) * 0.1));
+        if (grow && grow.length) { gsap.set(el, { svgOrigin: o.x + " " + o.y, smoothOrigin: false, scale: grow[0].k * 0.55 });
+          grow.forEach((g, i) => tl.fromTo(el, { scale: i ? grow[i - 1].k : grow[0].k * 0.55 }, { scale: g.k, duration: 0.3, ease: "back.out(1.7)", immediateRender: false }, t0 + (g.at || 0))); }
+        if (o.snap) { const t = t0 + (o.snap.at || 0.5), taut = el.querySelector(".taut"), whip = el.querySelector(".whip");
+          if (taut && whip) { gsap.set(whip, { transformOrigin: "0% 0%", smoothOrigin: false }); tl.set(taut, { opacity: 0 }, t); tl.set(whip, { opacity: 1 }, t); tl.fromTo(whip, { rotation: -85 }, { rotation: 0, duration: 0.7, ease: "elastic.out(1,0.35)", immediateRender: false }, t); } }
+      },
+    },
+
+    // { type:"chair", x, y, t, dust, web }: an empty office chair with a nameplate (x, y = floor under it)
+    chair: {
+      draw(o) {
+        const x = o.x, y = o.y, fit = Math.min(36, 150 / (Math.max(3, String(o.t || "").length) * 0.58)); let s = "", f = "";
+        const tips = [[-125, -22], [-62, -12], [0, -8], [62, -12], [125, -22]];
+        s += tips.map((p) => `<path d="M${x},${y - 66} L${x + p[0]},${y + p[1]}" stroke="${INK}" stroke-width="22" stroke-linecap="round"/><path d="M${x},${y - 66} L${x + p[0]},${y + p[1]}" stroke="#56606f" stroke-width="9" stroke-linecap="round"/>`).join("") + tips.map((p) => `<circle cx="${x + p[0]}" cy="${y + p[1] + 12}" r="14" fill="${INK}"/>`).join("");
+        if (o.web) f += `<path d="M${x - 125},${y - 22} L${x},${y - 66} L${x + 125},${y - 22} M${x - 62},${y - 12} L${x},${y - 66} L${x + 62},${y - 12}" stroke="#9aa0b4" stroke-width="3" fill="none"/><path d="M${x - 94},${y - 44} Q${x - 62},${y - 30} ${x - 31},${y - 40} Q${x},${y - 28} ${x + 31},${y - 40} Q${x + 62},${y - 30} ${x + 94},${y - 44}M${x - 56},${y - 62} Q${x},${y - 48} ${x + 56},${y - 62}" stroke="#9aa0b4" stroke-width="3" fill="none"/><path d="M${x - 100},${y - 238} Q${x - 70},${y - 200} ${x - 20},${y - 186} M${x - 100},${y - 236} Q${x - 60},${y - 226} ${x - 30},${y - 190}" stroke="#9aa0b4" stroke-width="3" fill="none"/>`;
+        const body = R(x - 13, y - 200, 26, 140, "#56606f", 4) + R(x - 112, y - 246, 224, 52, "#2f6fb0", 24) + R(x - 20, y - 268, 40, 30, "#56606f", 4) + R(x - 96, y - 470, 192, 214, "#2f6fb0", 36) +
+          R(x - 82, y - 392, 164, 58, "#f6f1e4", 6) + T(x, y - 392 + 40, o.t || "", fit);
+        let dust = ""; if (o.dust) for (let i = 0; i < 9; i++) dust += `<circle class="dust" cx="${x - 100 + i * 25 + (i % 3) * 7}" cy="${y - 285 - (i % 4) * 22}" r="${4 + (i % 3) * 2}" fill="#c9bfa8" stroke="${INK}" stroke-width="2"/>`;
+        return cut(s + body) + f + dust;
+      },
+      play(tl, el, o, t0) { pop(tl, el, o, t0); el.querySelectorAll(".dust").forEach((d, i) => tl.fromTo(d, { y: 0, opacity: 1 }, { y: -26 - (i % 3) * 8, opacity: 0.25, duration: 1.1 + (i % 4) * 0.25, yoyo: true, repeat: 9, ease: "sine.inOut", immediateRender: false }, t0 + i * 0.08)); },
+    },
+
+    // { type:"jar", x, y, t, amount, level }: a glass savings jar of notes, level 0-1 is how full (x, y = bottom middle)
+    jar: {
+      draw(o) {
+        const x = o.x, y = o.y, jh = 400, lv = Math.max(0, Math.min(1, o.level == null ? 0.9 : o.level)), full = jh - 100, rows = Math.round((lv * full) / 24); let n = "";
+        for (let k = 0; k < rows; k++) n += `<g transform="rotate(${k % 2 ? 2.5 : -2.5} ${x} ${y - 24 - k * 24})">${R(x - 128 + (k % 3) * 3, y - 36 - k * 24, 252, 24, k % 2 ? "#7cc58f" : "#5fb078", 4, `stroke="${INK}" stroke-width="4"`)}<circle cx="${x + (k % 3 - 1) * 60}" cy="${y - 24 - k * 24}" r="6" fill="rgba(27,29,54,.25)"/></g>`;
+        const fit = (t, mw, size) => Math.min(size, mw / (Math.max(3, String(t).length) * 0.58));
+        const glass = `<path d="M${x - 92},${y - jh + 8} Q${x - 92},${y - jh + 40} ${x - 150},${y - jh + 90} L${x - 150},${y - 34} Q${x - 150},${y} ${x - 114},${y} L${x + 114},${y} Q${x + 150},${y} ${x + 150},${y - 34} L${x + 150},${y - jh + 90} Q${x + 92},${y - jh + 40} ${x + 92},${y - jh + 8}Z`;
+        return cut(`<g>${n}</g>` + glass + `" fill="rgba(190,230,240,.42)" ${st}/>` + `<path d="M${x - 124},${y - jh + 120} L${x - 124},${y - 70}" stroke="rgba(255,255,255,.8)" stroke-width="12" stroke-linecap="round"/>` + R(x - 104, y - jh - 26, 208, 40, "#c9705a", 10) +
+          `<g transform="rotate(-2 ${x} ${y - 190})">${R(x - 112, y - 262, 224, 130, "#f6f1e4", 4)}${T(x, y - 214, o.t || "", fit(o.t || "", 200, 36))}${o.amount ? T(x, y - 160, o.amount, fit(o.amount, 200, 52), "#1b7a45") : ""}</g>`);
+      },
+      play: pop,
+    },
+
+    // { type:"seesaw", x, y, w, tilt, left, right }: a playground see-saw (x, y = pivot on the floor); negative tilt = left end down
+    seesaw: {
+      draw(o) {
+        const w = o.w || 1200, tilt = o.tilt || 0, ph = Math.max(90, (w / 2) * Math.sin(Math.abs(tilt) * Math.PI / 180) + 40), x = o.x, y = o.y, py = y - ph, fit = (t) => Math.min(48, (w * 0.4) / (Math.max(3, String(t).length) * 0.58));
+        return cut(`<path d="M${x - 90},${y} L${x},${py} L${x + 90},${y}Z" fill="#8f9bb0" ${st}/>`) +
+          `<g class="plank">${cut(R(x - w / 2, py - 30, w, 38, "#e8a317", 10) + R(x - w / 2 + 20, py - 78, 18, 50, INK, 6, "") + R(x + w / 2 - 38, py - 78, 18, 50, INK, 6, "") + R(x - w / 2 + 12, py - 96, 34, 22, INK, 8, "") + R(x + w / 2 - 46, py - 96, 34, 22, INK, 8, ""))}${o.left ? T(x - w / 2 + 70, py - 0, o.left, fit(o.left), INK, "start") : ""}${o.right ? T(x + w / 2 - 70, py - 0, o.right, fit(o.right), INK, "end") : ""}</g>` + `<circle cx="${x}" cy="${py - 11}" r="12" fill="#c9ced6" ${st}/>`;
+      },
+      play(tl, el, o, t0) { const pl = el.querySelector(".plank"), tilt = o.tilt || 0, ph = Math.max(90, ((o.w || 1200) / 2) * Math.sin(Math.abs(tilt) * Math.PI / 180) + 40); gsap.set(pl, { svgOrigin: o.x + " " + (o.y - ph - 11), smoothOrigin: false, rotation: 0 });
+        tl.fromTo(pl, { rotation: 0 }, { rotation: tilt, duration: 0.9, ease: "bounce.out", immediateRender: false }, t0 + (o.at != null ? o.at : 0.3)); },
+    },
+
+    // { type:"scale", x, y, t, tilt, at }: a grocer's scale with a big dial; its pan is at y - 280, put a figure there (x, y = bottom middle)
+    scale: {
+      draw(o) {
+        const x = o.x, y = o.y, fit = Math.min(50, 150 / (Math.max(3, String(o.t || "").length) * 0.58)); let ticks = "";
+        for (let i = 0; i <= 10; i++) { const a = (-120 + i * 24) * Math.PI / 180; ticks += `<path d="M${(x + Math.sin(a) * 100).toFixed(1)},${(y - 140 - Math.cos(a) * 100).toFixed(1)} L${(x + Math.sin(a) * 120).toFixed(1)},${(y - 140 - Math.cos(a) * 120).toFixed(1)}" stroke="${INK}" stroke-width="5" stroke-linecap="round"/>`; }
+        return cut(R(x - 22, y - 300, 44, 60, "#56606f", 6) + R(x - 180, y - 300, 360, 26, "#c9ced6", 12) + `<path d="M${x - 230},${y} L${x - 200},${y - 262} L${x + 200},${y - 262} L${x + 230},${y}Z" fill="#e0262b" ${st}/>`) +
+          cut(`<circle cx="${x}" cy="${y - 140}" r="136" fill="#f6f1e4" ${st}/>`) + ticks + T(x, y - 106, o.t || "", fit, INK) +
+          `<g class="needle"><path d="M${x - 8},${y - 140} L${x},${y - 250} L${x + 8},${y - 140}Z" fill="#e0262b" ${st}/><circle cx="${x}" cy="${y - 140}" r="14" fill="${INK}"/></g>`;
+      },
+      play(tl, el, o, t0) { pop(tl, el, o, t0); const nd = el.querySelector(".needle"), end = o.tilt != null ? Math.max(-100, Math.min(100, o.tilt * 6)) : 40; gsap.set(nd, { svgOrigin: o.x + " " + (o.y - 140), smoothOrigin: false, rotation: end });
+        tl.fromTo(nd, { rotation: -100 }, { rotation: end, duration: 1.0, ease: "elastic.out(1,0.4)", immediateRender: false }, t0 + (o.at != null ? o.at : 0.3));
+        tl.fromTo(nd, { rotation: end - 2 }, { rotation: end + 2, duration: 0.35, yoyo: true, repeat: 15, ease: "sine.inOut", immediateRender: false }, t0 + (o.at != null ? o.at : 0.3) + 1.1); },
+    },
+
+    // { type:"gate", x, y, t, closed, cue/word }: a customs boom barrier; the arm drops on the cue (x, y = floor, centre of the barrier)
+    gate: {
+      draw(o) {
+        const x = o.x, y = o.y, px = x - 300, ay = y - 250, size = Math.min(44, 440 / (Math.max(3, String(o.t || "").length) * 0.58)), bw = String(o.t || "").length * size * 0.58 + 44; let arm = "";
+        for (let i = 0; i < 6; i++) arm += R(px + 30 + i * 80, ay - 24, 80, 48, i % 2 ? "#f6f1e4" : "#e0262b", 0, `stroke="${INK}" stroke-width="5"`);
+        const bx = Math.min(x + 300 - bw / 2 + 20, 1890 - bw / 2);
+        return cut(R(x + 262, y - 150, 40, 150, "#56606f", 4) + R(x + 240, y - 160, 84, 18, "#56606f", 6) + R(px - 70, y - 330, 140, 330, "#3d6fb6", 8)) +
+          `<g class="arm">${cut(arm + R(px - 10, ay - 40, 60, 80, "#c9ced6", 20))}</g>` + `<circle cx="${px + 20}" cy="${ay}" r="12" fill="${INK}"/>` +
+          (o.t ? cut(R(x + 300 - 8, y - 520, 16, 370, "#56606f", 4) + R(bx - bw / 2, y - 620, bw, size * 1.9, "#ffe14d", 8) + T(bx, y - 620 + size * 1.32, o.t, size)) : "");
+      },
+      play(tl, el, o, t0) { pop(tl, el, o, t0); const arm = el.querySelector(".arm"); gsap.set(arm, { svgOrigin: (o.x - 280) + " " + (o.y - 250), smoothOrigin: false, rotation: o.closed === false ? -72 : 0 });
+        if (o.cue && o.closed !== false) tl.fromTo(arm, { rotation: -72 }, { rotation: 0, duration: 0.45, ease: "bounce.out", immediateRender: false }, t0 + (o.at || 0)); },
+    },
+
+    // { type:"highjump", x, y, w, t, mark }: a high-jump bar on two stands over a running track (x, y = floor, centre)
+    highjump: {
+      draw(o) {
+        const x = o.x, y = o.y, w = o.w || 700, size = Math.min(40, (w * 0.8) / (Math.max(3, String(o.t || "").length) * 0.58)), msz = Math.min(46, (w * 1.2) / (Math.max(3, String(o.mark || "").length) * 0.58));
+        let tr = R(-50, y - 30, 2020, 240, "#c9604a", 0) + `<path d="M-50,${y + 60} L2000,${y + 60} M-50,${y + 130} L2000,${y + 130}" stroke="#f6f1e4" stroke-width="6"/>`;
+        const stand = (sx) => R(sx - 14, y - 560, 28, 560, "#c9ced6", 6) + R(sx - 60, y - 14, 120, 24, "#56606f", 8) + R(sx - 32, y - 412, 64, 12, INK, 4, "");
+        return cut(tr) + cut(stand(x - w / 2) + stand(x + w / 2)) + `<g class="bar">${cut(R(x - w / 2 + 8, y - 454, w - 16, 56, "#f6f1e4", 10))}${T(x, y - 454 + 40, o.t || "", size)}</g>` +
+          (o.mark ? `<path d="M${x - w / 2 - 20},${y - 520} L${x + w / 2 + 20},${y - 520}" stroke="${INK}" stroke-width="12" stroke-dasharray="26 16" stroke-linecap="round"/><path d="M${x - w / 2 - 20},${y - 520} L${x + w / 2 + 20},${y - 520}" stroke="#f6f1e4" stroke-width="6" stroke-dasharray="26 16" stroke-linecap="round"/>` + T(x, y - 548, o.mark, msz, "#f6f1e4", "middle", `stroke="${INK}" stroke-width="8" paint-order="stroke" stroke-linejoin="round"`) : "");
+      },
+      play(tl, el, o, t0) { pop(tl, el, o, t0); const bar = el.querySelector(".bar"); tl.fromTo(bar, { y: 0 }, { y: 7, duration: 0.18, yoyo: true, repeat: 23, ease: "sine.inOut", immediateRender: false }, t0 + 0.2); },
+    },
   };
 
   // Ambient motion that keeps a held shot alive.
@@ -279,6 +469,8 @@
     const d = t1 - t0;
     svg.querySelectorAll(".cloud").forEach((c, i) => tl.fromTo(c, { x: 0 }, { x: 60 + i * 30, duration: d, ease: "none", immediateRender: false }, t0));
     svg.querySelectorAll(".bit").forEach((b, i) => tl.fromTo(b, { y: -160 - (i % 7) * 60 }, { y: 760 + (i % 5) * 90, rotation: (i % 2 ? 1 : -1) * (90 + i * 7), duration: Math.max(d, 2.5) * (0.8 + (i % 4) * 0.22), ease: "none", immediateRender: false }, t0));
+    svg.querySelectorAll(".pass").forEach((p) => tl.fromTo(p, { x: 0 }, { x: -Math.min(110 * d, 2800), duration: d, ease: "none", immediateRender: false }, t0));
+    svg.querySelectorAll(".sway").forEach((p, i) => { gsap.set(p, { transformOrigin: "50% 0%", smoothOrigin: false }); tl.fromTo(p, { rotation: -4 }, { rotation: 4, duration: 1.1 + (i % 3) * 0.2, yoyo: true, repeat: Math.ceil(d / 1.1) + 1, ease: "sine.inOut", immediateRender: false }, t0); });
     svg.querySelectorAll(".tick").forEach((k, i) => { for (let t = t0 + 0.4 + (i % 6) * 0.31; t < t1; t += 1.7 + (i % 4) * 0.4) { tl.set(k, { opacity: 0.35 }, t); tl.set(k, { opacity: 1 }, t + 0.12); } });
   }
 
