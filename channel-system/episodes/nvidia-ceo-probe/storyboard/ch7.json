@@ -50,7 +50,7 @@
     "actors": [ { "who": "REGGIE", "x": 1340, "face": "angry", "badge": "SEC", "prop": "bill", "flip": true, "enter": "none", "acts": [ { "cue": "L106", "word": 13, "pose": "offer", "to": [1180, 900], "dur": 0.8 } ] } ],
     "overlays": [ { "type": "tag", "t": "TWEETS, AUG 2018", "tone": "", "at": 0.4 }, { "type": "label", "t": "ASKED: BAR HIM FROM RUNNING A PUBLIC COMPANY", "cue": "L106", "word": 13 } ] },
   { "id": "c7n06c", "type": "split", "cue": "L107", "panels": [
-      { "set": "street", "label": "THE COMPANY: NOT THE DEFENDANT", "actors": [ { "thing": "box", "label": "TESLA", "x": 960, "y": 900, "scale": 0.6, "face": "relieved", "enter": "none" } ] },
+      { "set": "street", "label": "THE COMPANY: NOT THE DEFENDANT", "actors": [ { "thing": "box", "label": "TESLA", "x": 960, "y": 650, "scale": 0.6, "face": "relieved", "enter": "none" } ] },
       { "set": "studio", "cue": "L107", "word": 4, "label": "HE WAS", "stamp": "DEFENDANT", "props": [ { "type": "tent", "x": 960, "y": 930, "w": 700, "poleOnly": true } ],
         "actors": [ { "who": "REGGIE", "x": 960, "face": "deadpan", "badge": "SEC", "prop": "bill", "enter": "none" } ] } ] },
   { "id": "c7t04", "type": "card", "cue": "L108", "text": "The next day, Tesla's shares fell nearly 14%.", "emph": ["14%."] },

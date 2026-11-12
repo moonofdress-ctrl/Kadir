@@ -34,7 +34,7 @@
     "actors": [ { "who": "BENNY", "x": 780, "face": "shocked", "prop": "phone", "screen": "red", "enter": "none" },
                 { "who": "HAL", "x": 1060, "face": "smug", "prop": "tag", "tag": "YOU OWN THIS", "flip": true, "speaks": ["L007"], "enter": "none" } ] },
   { "id": "c1s05", "type": "split", "cue": "L008", "word": 6, "panels": [
-      { "set": "stage", "label": "ONE MAN", "props": [ { "type": "podium", "x": 960, "y": 960, "t": "THE BOSS", "layer": "front" }, { "type": "sign", "x": 960, "y": 260, "t": "1", "size": 120 } ] },
+      { "set": "stage", "label": "ONE MAN", "props": [ { "type": "podium", "x": 960, "y": 890, "t": "THE BOSS", "layer": "front" }, { "type": "sign", "x": 960, "y": 260, "t": "1", "size": 120 } ] },
       { "set": "studio", "cue": "L008", "word": 8, "label": "ONE EMPTY CHAIR", "props": [ { "type": "chair", "x": 960, "y": 900, "t": "NEXT" }, { "type": "sign", "x": 960, "y": 260, "t": "EMPTY", "size": 90 } ] },
       { "set": "lawn", "cue": "L008", "word": 11, "label": "ONE ARGUMENT", "actors": [ { "thing": "dome", "label": "WASHINGTON", "x": 960, "y": 880, "scale": 0.8, "face": "angry", "pose": "hips", "enter": "none" } ] } ] },
   { "id": "c1s06", "cue": "L009", "set": "boardroom", "opts": { "night": true }, "camera": "tilt_down", "grade": "night",
