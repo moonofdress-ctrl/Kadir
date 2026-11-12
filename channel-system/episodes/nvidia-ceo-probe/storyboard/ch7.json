@@ -43,7 +43,7 @@
   { "id": "c7n06", "cue": "L105", "set": "lawn", "opts": { "time": "dusk" }, "camera": "tilt_down", "grade": "sepia",
     "light": { "x": 900, "y": 500, "r": 900, "color": "#ff7a5a", "dark": 0.55 },
     "props": [ { "type": "tent", "x": 900, "y": 930, "w": 1200, "ropes": 6, "flag": "TESLA 2018" } ],
-    "actors": [ { "who": "REGGIE", "x": 1760, "face": "deadpan", "badge": "SEC", "prop": "bill", "flip": true, "enter": "none", "acts": [ { "cue": "L105", "word": 5, "to": [1440, 900], "dur": 1.2 } ] } ],
+    "actors": [ { "who": "REGGIE", "x": 1600, "face": "deadpan", "badge": "SEC", "prop": "bill", "flip": true, "enter": "none", "acts": [ { "cue": "L105", "word": 5, "to": [1440, 900], "dur": 1.2 } ] } ],
     "overlays": [ { "type": "calendar", "month": "SEP", "day": 27, "dow": "THU 2018", "x": 210, "y": 150, "at": 0.2 } ] },
   { "id": "c7n06b", "cue": "L106", "set": "lawn", "opts": { "time": "dusk" }, "camera": "pan_right", "grade": "red",
     "props": [ { "type": "tent", "x": 760, "y": 930, "w": 1000, "ropes": 6, "flag": "TESLA", "tilt": 4 }, { "type": "pricetag", "x": 1380, "y": 150, "t": "ALLEGED: FRAUD", "rot": 4 } ],

@@ -237,7 +237,7 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c6s36 | 5:45 | set board (title) | IF HE IS REMOVED (ANALYST VIEW) | |
 | c6s36 | 5:45 | bars part | NOW / TODAY / 100 | |
 | c6s36 | 5:45 | bars part | IF REMOVED / -25% TO -30% / 72 | |
-| c6s36 | 5:45 | lower_third | DAN IVES / Analyst, Yorkville Ives (a forecast) | |
+| c6s36 | 5:45 | lower_third | DAN IVES / Analyst (a forecast) | |
 | c6s36b | 5:53 | set office (poster) | GUESS | |
 | c6s36b | 5:53 | set office (poster2) | WORK | |
 | c6s36b | 5:53 | pricetag | FORECAST | |

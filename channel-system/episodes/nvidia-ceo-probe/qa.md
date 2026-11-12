@@ -135,4 +135,8 @@ Layout check: 44 rows, exit 1 (was 55). New rows since the review: c2s09 499 OTH
 
 New blocking findings: none.
 
+## After the re-check
+
+Three non-blocking notes were worked on after the verdict (main session, not re-reviewed by QA; checked on frames at 2:15, 2:23, 5:47, 5:52, 8:03, 8:08): c3s16 Ives stands left of the card and the strip sits under the card, off his legs; c3s17 the strip is beside Ives and the NEXT chair is on the left; c6s36 the strip (role now "Analyst (a forecast)") is beside Ives and the bars are narrower; c7n06 the SEC figure starts inside the frame. Lint `0 failed, 3 warnings, 38 passed`; layout check 44 rows, none new.
+
 Verdict: pass
