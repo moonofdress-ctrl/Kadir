@@ -1,0 +1,18 @@
+# TITLE:
+## PROMISE
+ROUTE:
+QUESTION:
+ANSWER:
+CHAIN:  ->  ->  ->
+## DEVICES
+MOTIF:
+PLANT:  -> PAYOFF:
+PLANT:  -> PAYOFF:
+VIEWER:
+## CH1
+[SCENE s01 | set:  | text: ]
+N:
+[CARD]
+N:
+[SKIT k01 | set: ]
+BENNY:
