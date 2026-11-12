@@ -2,6 +2,14 @@
 
 A cartoon finance channel made by the agents in `.claude/agents/`. The pipeline and the gates are in `channel-system/README.md`; the engine is in `studio/`.
 
+## Where we are (read first; rewrite these lines at the end of every session)
+
+- **State on 12 Nov 2026.** Episode 1, `channel-system/episodes/nvidia-ceo-probe/`, is rendered and packaged (`youtube-upload.txt`, three thumbnails in `images/`, captions). The user was uploading it that evening: ask once whether it is live. The MP4 is on the user's computer, not in git.
+- **What changed that night.** The first video looked weak beside the reference channel. From episode 2 the picture is painted pictures under the engine's text, with a Look gate on the first 30 seconds and the voice chosen before the script is approved. The rules, the agents and the engine already say so; the reasons are in `channel-system/LESSONS.md`.
+- **Next steps, in this order.** (1) The painted style sheet and cast sheets (`illustrator`, step 1), approved by the user. (2) The voice product: a voice test on one hook (`voice-producer`). (3) A few days after the upload: the user's YouTube numbers to the `analyst`. (4) `trend-scout` for episode 2.
+- **Open with the user.** The image budget (100-150 pictures an episode), the voice product, the numbers of episode 1.
+- **Working with the user.** The user writes short messages in Turkish and is not a developer. Answer in Turkish and plainly; do the work instead of listing options; ask one question at most, with a recommendation. Anything the user must do on their own computer (Windows) is given as numbered steps, one action each. Deliver files through the chat; nothing over 400 MB in one file.
+
 ## Token rules (for the main session and every agent)
 
 1. **Read sections, not files.** When a task names sections of `FORMAT_BOOK.md`, `cast.md`, `STYLE_GUIDE.md` or `studio/README.md`, find the headings with Grep (`^## `) and Read only those line ranges. Read a whole file only when the task says "all".
@@ -12,3 +20,11 @@ A cartoon finance channel made by the agents in `.claude/agents/`. The pipeline 
 6. **Tools before reading.** Use the lint, `screen-text.mjs` and the frame sheet to find a problem, then open only the lines it names. Look at one frame sheet per check; ask for `--t <times>` instead of a second full sheet.
 7. **Edit, do not rewrite.** Fix a line with Edit; do not write a whole script or storyboard again to change part of it.
 8. **A new session per gate.** After Gate 1, Gate 2 and Gate 3, start a new session: everything the next step needs is in the episode folder, and a long conversation is paid for again on every turn.
+9. **QA before render.** The full MP4 render takes about an hour. Build, look at frames, run the QA reviewer and make its fixes first; render once, on `Verdict: pass` in `qa.md`. Never start a full render to "see how it looks": use the frame sheet, or render a few seconds with `--start`/`--end`.
+10. **Pictures cost tokens too.** Do not Read painted pictures one by one: make one contact sheet (`stills.mjs frames`) and look once. Generate in batches and keep every prompt in the episode's `prompts.md`, so a redo does not need the conversation.
+
+## Where the work is (read at the start of every session)
+
+11. **One branch per episode.** A new session starts on a new, empty branch, and the episode is not on it. Before anything else run `git fetch origin` and `git branch -r --sort=-committerdate`, find the newest branch that has `channel-system/episodes/<slug>/`, and merge it into the session's branch together with `origin/main`. Do not start an episode's work on a branch that lacks its folder, and do not leave rule or engine changes on `main` that the episode branch has not merged. At the end of a session, commit and push; say in the last message which branch holds the work.
+12. **Lessons go into the rules.** When QA, the fact-checker or the user finds a fault, fix the episode and then write the rule that would have prevented it into the file the responsible agent reads (its definition in `.claude/agents/`, or the format book), in one or two lines. The list of what each episode taught is in `channel-system/LESSONS.md`; add to it, and do not repeat a lesson that is already a rule.
+13. **Do not hand decisions back that the files already answer.** The voice decision, the editorial limits and the gates are recorded in `channel-system/README.md` and the episode's `brief.md`. Ask the user only for what is recorded as open there, once, with a recommendation.

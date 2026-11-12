@@ -75,5 +75,22 @@
         { "who": "CHAD", "x": 1500, "y": 920, "hat": "party", "prop": "placard", "sign": "BUY", "face": "happy", "flip": false, "enter": "none" } ],
       "props": [ { "type": "stall", "x": 420, "y": 985, "t": "HANDMADE", "price": "$19", "layer": "front" }, { "type": "podium", "x": 1020, "y": 960, "t": "AUDIT", "layer": "front" },
         { "type": "cashpile", "x": 1780, "y": 930, "n": 7, "layer": "front" }, { "type": "crates", "x": 1220, "y": 930, "n": 3, "w": 130, "t": "FEES", "move": { "to": [1320, 930], "at": 1.2, "dur": 0.8 } }, { "type": "piggy", "x": 110, "y": 936, "k": 0.34, "state": "rich" } ] }
+    ,{ "id": "g19", "cue": "L018", "at": 0, "set": "studio", "camera": "still", "motif": "tent",
+      "actors": [ { "thing": "chip", "label": "NVIDIA", "x": 960, "y": 330, "scale": 0.3, "face": "worried", "enter": "none" } ],
+      "props": [ { "type": "tent", "x": 960, "y": 930, "w": 1500, "ropes": 6, "frayed": 1, "tilt": 3, "crowd": 120, "flag": "NVIDIA", "flap": true, "snap": { "cue": "L018", "at": 0.5 } }, { "type": "chair", "x": 220, "y": 960, "t": "NEXT", "dust": true } ] }
+    ,{ "id": "g20", "cue": "L018", "at": 0.8, "set": "bus", "opts": { "night": true }, "camera": "still",
+      "actors": [ { "thing": "newspaper", "label": "THE NEW YORK TIMES", "x": 700, "y": 930, "scale": 0.8, "face": "smug", "enter": "none" }, { "thing": "newspaper", "label": "THE WALL STREET JOURNAL", "x": 1250, "y": 930, "scale": 0.8, "face": "deadpan", "enter": "none" } ] }
+    ,{ "id": "g21", "cue": "L018", "at": 1.6, "set": "boardroom", "opts": { "doors": ["BOARD", "WASHINGTON", "17 NOV"] }, "camera": "still",
+      "props": [ { "type": "chair", "x": 960, "y": 960, "t": "CHAIRMAN", "web": true } ] }
+    ,{ "id": "g22", "cue": "L018", "at": 2.4, "set": "plain", "opts": { "color": "#bfe0ea" }, "camera": "still",
+      "props": [ { "type": "seesaw", "x": 960, "y": 900, "w": 1300, "tilt": -10, "left": "NVIDIA", "right": "499 OTHERS" } ] }
+    ,{ "id": "g23", "cue": "L018", "at": 3.2, "set": "warehouse", "opts": { "belt": false }, "camera": "still",
+      "actors": [ { "thing": "chip", "label": "NVIDIA", "x": 560, "y": 620, "scale": 0.55, "face": "smug", "enter": "none" } ],
+      "props": [ { "type": "scale", "x": 560, "y": 900, "t": "ABOUT 8%", "tilt": 8 }, { "type": "jar", "x": 1300, "y": 900, "t": "RETIREMENT", "amount": "$100,000", "level": 0.8 } ] }
+    ,{ "id": "g24", "cue": "L018", "at": 4.0, "set": "plain", "opts": { "color": "#e9dfc8" }, "camera": "still",
+      "props": [ { "type": "gate", "x": 480, "y": 900, "t": "CUSTOMS", "closed": true }, { "type": "highjump", "x": 1380, "y": 930, "w": 700, "t": "FORECAST $108B", "mark": "ANALYSTS ~$109B" } ] },
+    { "id": "g25", "cue": "L018", "at": 5.0, "set": "picture", "opts": { "src": "art/sample.jpg", "shows": "an empty chair in a spotlight, the chip crying beside it", "living": "chip" }, "camera": "push_in",
+      "props": [ { "type": "sign", "x": 1500, "y": 330, "t": "NEXT" } ],
+      "overlays": [ { "type": "tag", "t": "TEXT IS DRAWN BY THE ENGINE", "tone": "red", "pos": "tl", "at": 0.1 } ] }
   ]
 }

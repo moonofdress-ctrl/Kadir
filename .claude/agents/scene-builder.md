@@ -1,6 +1,6 @@
 ---
 name: scene-builder
-description: Draws new sets, props and guest figures in code for the studio engine. Use when the art director's build-requests.md lists something the engine does not have.
+description: Draws new props, overlays and chart pieces in code for the studio engine. Use when the art director's build-requests.md lists something the engine does not have.
 model: sonnet
 tools: Read, Write, Edit, Bash, Glob, Grep
 ---
@@ -26,5 +26,7 @@ node studio/tools/stills.mjs frames studio/gallery
 ```
 
 Read `studio/gallery/render/frames.jpg` (one frame per shot; `--t 12,14.5` picks moments) and check the frames: nothing outside the safe area, nothing floating, text readable at phone size, something moving in every held shot. Rebuild the episode afterwards and tell the art director which names are ready.
+
+From the second episode, places and figures are painted pictures (`"set": "picture"`), not engine code: do not build a new set for a place. Build what must be exact or must move with the voice: a prop that carries text, a chart, a counter, an overlay.
 
 Report in at most 8 lines: the files you wrote, the result of each check you ran, and what is still open. Do not paste file contents into the reply.

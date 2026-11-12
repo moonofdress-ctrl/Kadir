@@ -1,23 +1,32 @@
 # Channel system
 
-A newsroom of agents that turns a market event into a 12–15 minute cartoon explainer, with three human approval gates. The pictures are **drawn in code** by the engine in `../studio/`, so there is no image generation step in the video.
+A newsroom of agents that turns a market event into a 12–15 minute cartoon explainer, with three human approval gates. From the second episode the picture is a **hybrid** (the user's decision of 12 Nov 2026, after the first upload; see `LESSONS.md`): every place is a painted picture, generated in the house style and checked by a person, and the engine in `../studio/` draws everything that is read (cards, counters, signs, name strips, subtitles) over it and times it to the voice.
 
 ## Pipeline
 
 ```
-1  trend-scout    → topics/<date>.md: 3 scored topics            ─┐
+1  trend-scout    → topics/<date>.md: 3 scored topics, each with   ─┐
+                    what the big channels already published        │
                                                                   ├─ GATE 1: you pick a topic
 2  researcher     → episodes/<slug>/research.md (sourced)        ─┘
 3  scriptwriter   → script.md (FORMAT_BOOK, with the loop ledger)
-4  fact-checker   → factcheck.md, fixes in the script            ─── GATE 2: you approve the script
-5  art-director   → storyboard.json (or one file per chapter in storyboard/), thumbnails.md, build-requests.md
+4  fact-checker   → factcheck.md, fixes in the script
+4b voice-producer → the hook in each candidate voice (once per    ─── GATE 2: you approve the script
+                    voice product), then audio/<id>.wav                and the voice
+5  art-director   → storyboard.json (or one file per chapter in storyboard/), art-requests.md (one row per
+                    painted picture), thumbnails.md, build-requests.md; the first 30 seconds first
+5a illustrator    → art/<id>.jpg: the painted pictures, from the  ─── LOOK GATE: you put six frames of the first
+                    style sheet and the cast sheets                    30 seconds beside the reference, before the rest
 5b fact-checker   → second pass on screen-text.md: every word and number on screen
-6  scene-builder  → new sets, props and guest figures in studio/engine/
-7  voice-producer → audio/<id>.wav (narrator + character lines), dead air cut
-8  editor         → sound mix, build, lint, frame check, render → render/
-9  qa-reviewer    → qa.md, sends fixes back
-10 illustrator    → thumbnail art that matches the first frame
-11 packager       → package.md: three title+thumbnail pairs,     ─── GATE 3: you approve and upload
+6  scene-builder  → props and overlays the engine lacks (places are painted, not coded)
+7  voice-producer → audio/<id>.wav in the chosen voice (narrator + character lines), dead air cut
+8  editor         → sound mix, build, lint, frame check (no render yet)
+9  qa-reviewer    → qa.md from the frames, sends fixes back; repeat 5–9 until it passes
+9a fact-checker   → currency check on the render day, for a story that is still moving (FORMAT_BOOK 1)
+9b editor         → render to MP4 once, after QA passes → render/
+10 illustrator    → three painted close-up thumbnails, judged beside the competing ones
+11 packager       → package.md and youtube-upload.txt: three       ─── GATE 3: you approve and upload
+                    title+thumbnail pairs,
                     captions, the Shorts plan
 12 analyst        → learnings.md, a few days after the upload
 ```
@@ -42,6 +51,7 @@ node studio/tools/retention-lint.mjs channel-system/episodes/<slug>
 | `episodes/demo/` | A 19-second demo with scratch voices, staged by the picture rules. |
 | `research/` | How the rules were measured: the reference video's analysis and retention review. |
 | `learnings.md` | Written by the analyst after each upload (created with the first one). |
+| `LESSONS.md` | What went wrong while making each episode and which rule now prevents it. |
 | `../studio/` | The engine, the build and lint tools and a gallery of every component. |
 
 ## Tools and who does what today
@@ -49,12 +59,12 @@ node studio/tools/retention-lint.mjs channel-system/episodes/<slug>
 | Step | Tool | Status |
 |---|---|---|
 | Research, script, fact-check | Claude (web search, primary documents) | Ready |
-| Pictures | `studio/` engine, drawn in code | Ready; each new story adds sets and props |
+| Pictures | Painted pictures (`"set": "picture"`, files in the episode's `art/`) under the `studio/` engine's text, numbers and timing. Generated with the image tool the session has (FLUX), or by the user from `prompts.md` (Gemini's Nano Banana Pro, Higgsfield) | Engine ready and tested in the gallery; the style sheet and painted cast sheets are still to be made; needs a paid image budget (100-150 pictures an episode) |
 | Frame check | `node studio/tools/stills.mjs frames <episode>` saves a contact sheet; `preview.mjs` for a browser | Ready (the contact sheet needs Playwright) |
 | Voice | Decided by the user on 2026-11-12: a synthetic voice, disclosed in the video and the description, with YouTube's altered-content label set. Re-check the policy text before the first upload. Which voice product makes the final track is still open; `studio/tools/voice.mjs` makes a Kokoro scratch track. | Scratch ready, final voice product pending |
 | Music and effects | `studio/tools/mix.mjs`: effects and a house music bed made in code, so nothing to license. Drop licensed tracks in `audio/music/` to use those instead (the YouTube Audio Library is the safe source). | Ready; the choice of music is yours |
 | Render to MP4 | HyperFrames (Apache 2.0) + FFmpeg | Tested in a cloud session; a local machine needs FFmpeg on its PATH |
-| Thumbnail | `studio/tools/stills.mjs thumb`: the first shot with the text band. Richer art from Higgsfield is optional. | Ready; painted art is a manual step |
+| Thumbnail | Three painted close-ups, banded with `studio/tools/stills.mjs thumb --image` | Ready |
 | Upload | The user, in YouTube Studio | Manual step |
 
 ## Keeping a full episode affordable
@@ -65,12 +75,12 @@ A 13-minute episode is about 250 lines and 200 shots: too much for one agent in 
 - **Tools before agents.** Voice (`voice.mjs`), sound (`mix.mjs`), frames (`stills.mjs`) and the checks are plain commands; an agent is needed only to judge the result.
 - **Agents read sections, not files.** The token rules are in `CLAUDE.md` at the repository root: each agent reads only the parts of the format book, cast and style guide its step needs, reports in a few lines, and code search skips `vendor/`, the old `amazon-hidden-tax/` engines and `research/` (see `.ignore`).
 - **A new session per gate.** The episode folder carries everything forward, so a new session after each gate starts with an empty conversation instead of paying for the old one on every turn.
-- Rendering already uses every processor core (`--workers auto`); a 2-minute piece took 15 minutes in a cloud session, so plan about an hour and a half for 13 minutes and run it in the background.
+- Render once, after QA passes. A 13-minute episode took 1 h 4 min on the user's laptop (2 workers); a fix found after the render costs the whole hour again. To look at a fix, render only that part (`--start <s> --end <s>`). Run the full render in the background.
 
 ## Running an episode
 
 In a Claude Code session in this repo:
 1. "Run trend-scout" → pick one of the three topics.
 2. "Make the episode for <topic>" → the agents run steps 2–4 and stop at Gate 2.
-3. Approve the script → steps 5–11 run. You generate the thumbnail image when the illustrator hands you `prompts.md`.
+3. Approve the script and the voice → the first 30 seconds are painted and built, and you compare them with the reference (Look gate). Then steps 5–11 run. When the session has no image tool, the illustrator hands you `prompts.md` and you generate the pictures.
 4. A few days after the upload, share the YouTube Studio numbers → the analyst updates `learnings.md`.

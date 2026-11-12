@@ -2,7 +2,7 @@
 
 Five recurring characters plus a template for guest caricatures. Designs are deliberately different from other finance cartoon channels: no glasses-and-green-suit host, no bow ties.
 
-## In the video: drawn in code
+## In engine-drawn shots: the rig
 The cast is built into the engine (`studio/engine/rig.js`, the `CAST` table). Use the names below in `storyboard.json`:
 
 | Name | Role in a story | Signature colour | Props that suit them |
@@ -21,9 +21,9 @@ Any other name gives a background figure with a palette picked from the name. A 
 
 The viewer stand-in for an episode (usually `BENNY`, sometimes `MARTHA`) is named in the storyboard's `"viewer"` field and must own the final shot.
 
-The descriptions below are the character bible. The image prompts under each character are for **thumbnail art only**; the video never uses generated images.
+The descriptions below are the character bible. The image prompts under each character make the **painted model sheets**. From the second episode the painted pictures of the video and the thumbnails are generated with these sheets attached, so a character looks the same in every picture.
 
-## Thumbnail art: model sheets (one-time, in Higgsfield)
+## Painted model sheets (one-time; Nano Banana Pro in Gemini or Higgsfield, or FLUX in a session that has it)
 1. Model: **Nano Banana Pro**, 2k, aspect 16:9 (expression sheets 1:1).
 2. Attach the rig's sheet from `sheets/<name>_model.png` as the image reference, so the painted character matches the one in the video. Save a painted sheet you like next to it as `sheets/<name>_painted.png`.
 3. Generate the expression and pose sheets with the chosen model sheet attached as an image reference.

@@ -1,0 +1,79 @@
+YOUTUBE UPLOAD - nvidia-ceo-probe (prepared 12 Nov 2026)
+
+=== FILE ===
+nvidia-ceo-probe.mp4 (1920x1080, 13:10)
+
+=== TITLE (use the first; the other two are for YouTube's title test, if Studio offers it) ===
+1. Nvidia's CEO Resigned. How Much Nvidia Do You Own?
+2. Why Did Nvidia Fall So Hard Over One Man?
+3. Why Did Nvidia Fall Before Its CEO Resigned?   (the most cautious wording)
+
+=== THUMBNAIL (upload all three to "Test and compare"; if there is no test, use the first) ===
+1. images/thumb_1_one_man.png      band: ONE MAN -$430B
+2. images/thumb_2_your_fund.png    band: ON $100K -$600
+3. images/thumb_3_empty_chair.png  band: ONE EMPTY CHAIR
+Do not use thumbnail_a/b/c.png (weak wide shots; c is out of date).
+
+=== DESCRIPTION (paste all of it; 4676 characters, limit 5000) ===
+Update, 12 Nov 2026: After this video was made, Nvidia announced that Jensen Huang has resigned as CEO and from its board, effective immediately, with CFO Colette Kress serving as interim CEO; the company gave no reason, and the allegations discussed in the video remain allegations. Nvidia says it will still report results on Tuesday, 17 Nov, as previously scheduled.
+
+Nvidia lost about $430 billion in market value over two days (Friday 6 Nov close to Tuesday 10 Nov close). Its shares fell 4.27% on Monday 9 Nov and 5.47% on Tuesday 10 Nov, about 9.5% in all, after its board announced on Sunday 8 Nov an independent investigation prompted by reporting that its chief executive had been "the target of a foreign intelligence effort." News reports say US officials believe a former executive of Megaspeed, one of its customers, worked for Chinese intelligence; China denies it, Megaspeed denies illegal chip transfers, the reports rest on unnamed sources, and nothing has been proven in public. The board said it has no reason to believe national security or company secrets were compromised. This video explains why a company's dependence on one person moves the price, and why it reaches ordinary savers: in one popular S&P 500 index fund, Nvidia was about 7% of the holdings (7.3% on 4 Nov, per Trefis), so on $100,000 in that fund Nvidia's two-day fall alone took roughly $600 off, our own arithmetic.
+
+We set the fall against Apple in 2011, Berkshire Hathaway in 2025 and Tesla in 2018, look at Nvidia's own forecast of about $108 billion in sales for the quarter (which assumes no data center chip sales to China), and cover the rebound at Wednesday's close and the fall of more than 8% in after-hours trading that followed newspaper reports from unnamed sources that the board met to discuss the chief executive's future. As of Thursday morning, 12 Nov, no decision had been announced, Nvidia had made no new public statement and nobody had been appointed to fill the post. Results are due Tuesday 17 November after the close. This video reflects what was public as of Thursday morning, 12 Nov 2026; later events are not covered.
+
+Chapters
+0:00 The two-day drop
+0:31 Seven Dollars
+1:35 One Pole
+2:42 The Customer
+3:59 The Statement
+5:40 Two Fears
+7:14 Other Tents
+8:56 The Bounce
+10:04 After the Bell
+
+Sources
+- Nvidia board statement: https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors
+- Message to Nvidia's company: https://nvidianews.nvidia.com/news/a-message-to-our-company
+- Nvidia results call date: https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/
+- Nvidia annual report FY2007 (key-person warning): https://www.sec.gov/Archives/edgar/data/0001045810/000104581007000008/fy2007annualreportonform10-k.htm
+- Nvidia second-quarter results release: https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000073/q2fy27pr.htm
+- Two-day fall, IBTimes: https://www.ibtimes.com.au/nvidia-shares-rebound-ai-rally-jensen-huang-pressure-1878438
+- Index fund weight, Trefis: https://www.trefis.com/articles/623122/how-much-nvidia-do-you-really-own/2026-11-06
+- Analyst forecast, Newsweek: https://www.newsweek.com/who-could-replace-jensen-huang-as-nvidia-ceo-nobody-12695728
+- Washington and China chips, Yahoo Finance: https://finance.yahoo.com/markets/article/jensen-huangs-spy-scandal-may-cost-nvidia-the-china-chip-fight-it-was-winning-121310306.html
+- Senator Bennet's letter: https://www.bennet.senate.gov/2026/11/11/bennet-presses-trump-administration-on-failure-to-stop-megaspeeds-apparent-ai-tech-diversion-to-china/
+- Singapore's reply on export controls: https://www.meti.gov.sg/newsroom/oral-reply-to-pqs-on-singapore-s-approach-to-export-controls/
+- Chief executive's Bloomberg remarks, via The Standard: https://www.thestandard.com.hk/innovation/article/346990/Nvidias-Huang-says-dealings-with-firm-in-US-spy-probe-were-normal-Bloomberg-News-reports
+- CoreWeave results, CNBC: https://www.cnbc.com/2026/11/10/coreweave-crwv-q3-earnings-report-2026.html
+- Baird downgrade, CNBC: https://www.cnbc.com/2026/11/11/nvidia-baird-downgrade-ceo-ai-capex.html
+- After-hours fall, CBS News: https://www.cbsnews.com/news/nvidia-board-ceo-jensen-huang-china/
+- Tesla 2018, Fortune: https://fortune.com/2018/09/27/elon-musk-sec-lawsuit-response-twitter/
+- Berkshire 2025, Reuters via Yahoo: https://finance.yahoo.com/news/berkshire-hathaway-shares-fall-buffett-082154502.html
+- More sources: see the pinned comment.
+
+Narration: a synthetic voice. Pictures are cartoons drawn for this video.
+
+This video is not financial advice. Allegations described are unproven.
+
+=== TAGS ===
+nvidia, nvidia stock, nvidia ceo, nvidia ceo resigns, jensen huang resigns, how much nvidia do i own, jensen huang, nvidia investigation, nvidia board, why is nvidia down, nvidia shares, nvda, megaspeed, china chip export controls, index fund, s&p 500 index fund, how much nvidia do you own, stock market explained, finance explained, cartoon explainer, nvidia earnings 17 november, key person risk
+
+=== PINNED COMMENT (post after publishing, then pin) ===
+Update 12 Nov 2026: Nvidia says Jensen Huang has resigned as CEO, effective immediately, with CFO Colette Kress as interim CEO and no reason given; this video was made that morning, before the announcement.
+
+What did you know about how much of your index fund sits in one company? Tell us in the comments.
+
+More sources
+- Defense bill, Korea Times: https://www.koreatimes.co.kr/world/20261111/us-lawmakers-push-for-tougher-china-export-controls-in-defense-bill-amid-nvidia-scrutiny
+- Analysts' estimate, The Motley Fool: https://www.fool.com/investing/2026/11/10/prediction-nov-17-will-be-a-huge-day-for-the-stock-market/
+- How internal investigations work, Harvard Law School Forum: https://corpgov.law.harvard.edu/2017/07/06/internal-investigations-special-committees-resource/
+- Inflation data, US Bureau of Labor Statistics: https://www.bls.gov/news.release/cpi.nr0.htm
+- Index weights, The Motley Fool: https://www.fool.com/investing/2026/11/05/these-6-stocks-make-up-a-big-share-of-the-sp-500/
+- Analyst note, AOL: https://www.aol.com/articles/jensen-huang-departure-shave-30-152600000.html
+
+=== SETTINGS IN YOUTUBE STUDIO ===
+- Altered or synthetic content: Yes (synthetic narration)
+- Audience: not made for kids
+- Subtitles: upload nvidia-ceo-probe.srt (English, with timing)
+- Category: Education; Language: English

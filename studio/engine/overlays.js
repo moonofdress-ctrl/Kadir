@@ -52,15 +52,18 @@
       play(tl, e, o, t) { if (o.pulse === false) return; tl.fromTo(e, { scale: 1 }, { scale: 1.08, duration: 0.1, yoyo: true, repeat: 1, transformOrigin: "0 0", immediateRender: false }, t + 0.05); },
     },
 
-    // { type:"doc", source, date, by, quote, hl:["exact words to highlight"] } and { type:"post", name, handle, text, date }
+    // { type:"doc", source, date, by, quote, hl:["exact words to highlight"], x, y, w } and { type:"post", name, handle, text, date }
     doc: {
       build(o) { const post = o.type === "post", text = post ? o.text : o.quote, hl = (o.hl || []).map((h) => h.toLowerCase().split(/\s+/));
         const ws = text.split(/\s+/), mark = ws.map(() => false), norm = (w) => w.toLowerCase().replace(/[^a-z0-9$%'-]/g, "");
         hl.forEach((ph) => { for (let i = 0; i + ph.length <= ws.length; i++) if (ph.every((p, j) => norm(ws[i + j]) === norm(p))) for (let j = 0; j < ph.length; j++) mark[i + j] = true; });
         const body = ws.map((w, i) => `<span class="w${mark[i] ? " hl" : ""}">${mark[i] ? '<i class="bar"></i>' : ""}${esc(w)}</span>`).join(" ");
         const head = `<div class="hd"><span>${esc(o.source || (post ? "POST" : "DOCUMENT"))}</span><span>${esc(o.date || "")}</span></div>`;
-        return el("doc" + (post ? " post" : ""), head + (post ? `<div class="who"><div class="av"></div><div><div class="nm">${esc(o.name)}</div><div class="hn">${esc(o.handle || "")}</div></div></div>` : (o.by ? `<div class="by">${esc(o.by)}</div>` : "")) +
-          `<div class="q">${post ? "" : "“"}${body}${post ? "" : "”"}</div><div class="rule"></div><div class="rule s"></div>`); },
+        const e = el("doc" + (post ? " post" : ""), head + (post ? `<div class="who"><div class="av"></div><div><div class="nm">${esc(o.name)}</div><div class="hn">${esc(o.handle || "")}</div></div></div>` : (o.by ? `<div class="by">${esc(o.by)}</div>` : "")) +
+          `<div class="q">${post ? "" : "“"}${body}${post ? "" : "”"}</div><div class="rule"></div><div class="rule s"></div>`);
+        // x: centre of the card, y: its top, w: its width; so a figure can stand beside the card, not under it
+        if (o.x != null) e.style.left = o.x + "px"; if (o.y != null) e.style.top = o.y + "px"; if (o.w) { e.style.width = o.w + "px"; e.style.marginLeft = -o.w / 2 + "px"; }
+        return e; },
       play(tl, e, o, t, ctx) { e.style.opacity = 0;
         tl.fromTo(e, { opacity: 0, y: 260, rotation: 3 }, { opacity: 1, y: 0, rotation: -1.2, duration: 0.34, ease: "back.out(1.3)", immediateRender: false }, t);
         const bars = e.querySelectorAll(".bar"), t1 = t + (o.hlAt != null ? o.hlAt : 0.9);

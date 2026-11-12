@@ -97,6 +97,12 @@ function main() {
 
   const out = path.join(STUDIO, "assets", "ep", slug, "audio");
   fs.rmSync(path.join(STUDIO, "assets", "ep", slug), { recursive: true, force: true });
+  // Painted pictures (set "picture"): copied beside the audio, and the page is given their address.
+  for (const p of story.shots.flatMap((s) => (s.type === "split" ? s.panels || [] : [s])).filter((p) => p.set === "picture" && p.opts && p.opts.src)) {
+    const from = path.join(ep, p.opts.src), to = path.join(STUDIO, "assets", "ep", slug, p.opts.src);
+    if (p.opts.src.includes("..") || !fs.existsSync(from)) { console.warn(`warning: picture ${p.opts.src} (${p.id || "a split panel"}) is not in the episode folder`); continue; }
+    fs.mkdirSync(path.dirname(to), { recursive: true }); fs.copyFileSync(from, to); p.opts.href = `assets/ep/${slug}/${p.opts.src}`;
+  }
   fs.mkdirSync(out, { recursive: true });
   const tags = [], mix = silent ? null : mixState(ep, { story, lines, total, res });
   if (mix && mix.current) {
