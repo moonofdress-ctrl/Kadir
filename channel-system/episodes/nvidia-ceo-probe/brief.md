@@ -1,7 +1,7 @@
 # Brief
 
 Topic: Nvidia's two-day fall after its board opened an investigation into its CEO, and why one company's leadership moves every index fund
-Working title: Why Did Nvidia Fall Before Its CEO Resigned? (changed 2026-11-12 evening, after the resignation; before that: Why Is Nvidia Down Over Its CEO? (changed 2026-11-11: "Why Nvidia Stock Keeps Falling" is already in use)
+Working title: Nvidia's CEO Resigned. How Much Nvidia Do You Own? (changed 2026-11-12 evening at upload, see package.md "Final pairs"; earlier that evening: Why Did Nvidia Fall Before Its CEO Resigned?; before that: Why Is Nvidia Down Over Its CEO? (changed 2026-11-11: "Why Nvidia Stock Keeps Falling" is already in use)
 Why now (event and date): shares fell 4.27% on Mon 9 Nov and 5.47% on Tue 10 Nov 2026; third-quarter earnings are due Tue 17 Nov 2026
 Thumbnail money figure: -$430B (two-day loss in market value; one outlet's estimate, must be confirmed before use)
 Approved by the user on: 2026-11-11 (topic, Gate 1); 2026-11-11 (script, Gate 2: approved in advance on condition of the session's review; lengthened to 2,181 words, retitled, and updated after that approval for the after-hours fall of Wed 11 Nov, so the user re-reads CH8 and CH9 before upload)

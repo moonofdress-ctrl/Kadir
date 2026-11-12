@@ -16,6 +16,18 @@ Prepared 2026-11-12 for Gate 3, refreshed 2026-11-12 after the currency check. N
 8. **Shorts are planned, not built.** Build, mix, lint and look at the frames after the full render is final; see the Shorts plan.
 9. **Captions:** regenerated 12 Nov from `audio/lines.json` and `timing.json` (251 cues) and saved as `nvidia-ceo-probe.srt` in the episode folder. Regenerate after item 1 (a new voice) or any line change.
 
+## Final pairs (12 Nov 2026, evening, at upload)
+
+Why they changed. (1) The band NVIDIA -$430B was nearly the band of another channel's video on the same story (NVIDIA -$400B, over a million views), so ours would read as a copy. (2) Thumbnails A-C were the engine's wide frames with small figures. (3) On the day of the resignation YouTube filled with news clips titled "... resigns"; none asks what it means for the viewer's own fund, which is what this video answers in its first 20 seconds ("You own an index fund. You own a lot of Nvidia.").
+
+| Pair | Reason to click | Title (characters) | Picture | Band | Where the video pays it |
+|---|---|---|---|---|---|
+| 1 (default) | The news, turned on the viewer | Nvidia's CEO Resigned. How Much Nvidia Do You Own? (50) | `images/thumb_1_one_man.png`: the chief executive as the tent's one pole, holding the roof over three savers (phone, piggy bank, coin jar), the chip clinging to his jacket | ONE MAN -$430B | 0:00 the $430B fall; 0:15 "You own a lot of Nvidia"; 0:25 "One man."; CH2 seven dollars in every hundred; CH3 one pole |
+| 2 | Consequence for the viewer | Why Did Nvidia Fall So Hard Over One Man? (41) | `images/thumb_2_your_fund.png`: Benny and the red phone, the chip on the snapping pole | ON $100K -$600 | 0:10 Benny's phone NVIDIA -$600; CH2 the sum on $100,000 |
+| 3 | Open question | Why Did Nvidia Fall Before Its CEO Resigned? (44) | `images/thumb_3_empty_chair.png`: the empty chair with his jacket and glasses, the chip crying | ONE EMPTY CHAIR | 0:25 "One empty chair."; CH9 the chair marked NEXT |
+
+Title 1 fits all three pictures, so with a thumbnail-only test use title 1 and upload the three pictures. Every claim in the titles and bands is in factcheck.md: the resignation (8-K, evening check), the two-day $430B, about $600 on $100,000 (own arithmetic, said so in the video). The video does not cover the resignation; the note at the top of the description says so. The pictures are generated illustrations (FLUX), banded with `stills.mjs thumb --image`; the chief executive is a caricature by hair, glasses and jacket, as the video's guest figure; sources in `images/art_*.png`.
+
 ## Three pairs (FORMAT_BOOK 15)
 
 Files: `images/thumbnail_a.png`, `images/thumbnail_b.png`, `images/thumbnail_c.png` (1280x720) with `_small.png` (160x90) beside each. Made by `node studio/tools/stills.mjs thumb channel-system/episodes/nvidia-ceo-probe ... --out <file>`.

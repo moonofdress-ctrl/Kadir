@@ -3,11 +3,16 @@ YOUTUBE UPLOAD - nvidia-ceo-probe (prepared 12 Nov 2026)
 === FILE ===
 nvidia-ceo-probe.mp4 (1920x1080, 13:10)
 
-=== TITLE ===
-Why Did Nvidia Fall Before Its CEO Resigned?
+=== TITLE (use the first; the other two are for YouTube's title test, if Studio offers it) ===
+1. Nvidia's CEO Resigned. How Much Nvidia Do You Own?
+2. Why Did Nvidia Fall So Hard Over One Man?
+3. Why Did Nvidia Fall Before Its CEO Resigned?   (the most cautious wording)
 
-=== THUMBNAIL ===
-thumbnail_a.png  (do not use thumbnail_c.png: its card is out of date)
+=== THUMBNAIL (upload all three to "Test and compare"; if there is no test, use the first) ===
+1. images/thumb_1_one_man.png      band: ONE MAN -$430B
+2. images/thumb_2_your_fund.png    band: ON $100K -$600
+3. images/thumb_3_empty_chair.png  band: ONE EMPTY CHAIR
+Do not use thumbnail_a/b/c.png (weak wide shots; c is out of date).
 
 === DESCRIPTION (paste all of it; 4676 characters, limit 5000) ===
 Update, 12 Nov 2026: After this video was made, Nvidia announced that Jensen Huang has resigned as CEO and from its board, effective immediately, with CFO Colette Kress serving as interim CEO; the company gave no reason, and the allegations discussed in the video remain allegations. Nvidia says it will still report results on Tuesday, 17 Nov, as previously scheduled.
@@ -52,7 +57,7 @@ Narration: a synthetic voice. Pictures are cartoons drawn for this video.
 This video is not financial advice. Allegations described are unproven.
 
 === TAGS ===
-nvidia, nvidia stock, nvidia ceo, jensen huang, nvidia investigation, nvidia board, why is nvidia down, nvidia shares, nvda, megaspeed, china chip export controls, index fund, s&p 500 index fund, how much nvidia do you own, stock market explained, finance explained, cartoon explainer, nvidia earnings 17 november, key person risk
+nvidia, nvidia stock, nvidia ceo, nvidia ceo resigns, jensen huang resigns, how much nvidia do i own, jensen huang, nvidia investigation, nvidia board, why is nvidia down, nvidia shares, nvda, megaspeed, china chip export controls, index fund, s&p 500 index fund, how much nvidia do you own, stock market explained, finance explained, cartoon explainer, nvidia earnings 17 november, key person risk
 
 === PINNED COMMENT (post after publishing, then pin) ===
 Update 12 Nov 2026: Nvidia says Jensen Huang has resigned as CEO, effective immediately, with CFO Colette Kress as interim CEO and no reason given; this video was made that morning, before the announcement.
