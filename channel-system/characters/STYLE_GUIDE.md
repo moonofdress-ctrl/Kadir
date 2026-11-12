@@ -68,7 +68,7 @@ Allowed, with these limits:
 - A name strip (lower third) the first time they appear.
 - No invented quotes presented as real, and no imitation of their voice. Real quotes go on a document or post card, verbatim, with source and date. Skit lines are obviously jokes.
 - No sexual, degrading or hateful depictions; never shown endorsing a product.
-- Lesser-known people (analysts, officials) get a name strip over a neutral figure, not a caricature.
+- Lesser-known people in the story (analysts, officials) are drawn the same way: a caricature with two or three of their own traits and a name strip, only about what they said or did in public. The figure must not contradict the name (a man's name over a woman figure), and two named people in one episode must not share one look.
 
 ## Thumbnail (house formula)
 The thumbnail is the one place a richer illustration is allowed; it may be painted or generated, then checked by a person. `node studio/tools/stills.mjs thumb` makes one from the video's own first shot, or from an illustration, with the text band added.

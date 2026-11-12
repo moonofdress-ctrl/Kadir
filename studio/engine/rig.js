@@ -70,6 +70,7 @@
       if (e === "glasses_small") s += `<rect x="-98" y="${y(-432)}" width="72" height="34" rx="8" fill="rgba(255,255,255,.25)" ${st}/><rect x="26" y="${y(-432)}" width="72" height="34" rx="8" fill="rgba(255,255,255,.25)" ${st}/><path d="M-26,${y(-418)} L26,${y(-418)}" ${st}/>`;
       if (e === "moustache") s += `<path d="M-46,${y(-372)} Q-22,${y(-392)} 0,${y(-378)} Q22,${y(-392)} 46,${y(-372)} Q22,${y(-366)} 0,${y(-370)} Q-22,${y(-366)} -46,${y(-372)}Z" fill="${c.hair}" ${st}/>`;
       if (e === "shades_up") s += `<path d="M-104,${y(-520)} L104,${y(-520)} L92,${y(-488)} Q62,${y(-478)} 30,${y(-492)} L0,${y(-506)} L-30,${y(-492)} Q-62,${y(-478)} -92,${y(-488)}Z" fill="${INK}" ${st}/>`;
+      if (e === "loud_pattern") s += [[-52, -250, "#ffd23f"], [30, -226, "#1fb5b5"], [-18, -176, "#ffffff"], [52, -168, "#ffd23f"], [-56, -140, "#1fb5b5"], [8, -272, "#ffffff"]].map((d) => `<circle cx="${d[0]}" cy="${d[1]}" r="13" fill="${d[2]}" stroke="${INK}" stroke-width="4"/>`).join("");
       if (e === "lanyard") s += `<path d="M-30,-300 L0,-196 L30,-300" fill="none" stroke="#e0262b" stroke-width="7"/><rect x="-22" y="-200" width="44" height="56" rx="6" fill="#f6f1e4" ${st}/>`;
     }
     return s;

@@ -132,7 +132,7 @@ Measured on the reference video; the lint checks them.
 - **Text cards** carry the turn lines and the big numbers. The words appear with the voice, one at a time.
 - **Every number is drawn**: counters that roll, bars that grow, lines that draw themselves. Every date is a calendar page. A by-the-clock chapter keeps a clock in the corner of every shot.
 - **Subtitles are on** in every video; they rest while a text card is showing its own words.
-- **Every quote is evidence**: a document card, a post card or a lower third with the name and role, with the key words highlighted. Lesser-known people get a name strip, not a caricature.
+- **Every quote is evidence**: a document card, a post card or a lower third with the name and role, with the key words highlighted. Lesser-known people get a name strip and a caricature within the style guide's limits.
 - **Lists build on screen**: one short sentence, one new panel of a split screen.
 - **Every analogy is a place**, drawn literally.
 - Background ticker boards use made-up names. Real figures appear only as overlays, with a source.

@@ -12,3 +12,4 @@ A cartoon finance channel made by the agents in `.claude/agents/`. The pipeline 
 6. **Tools before reading.** Use the lint, `screen-text.mjs` and the frame sheet to find a problem, then open only the lines it names. Look at one frame sheet per check; ask for `--t <times>` instead of a second full sheet.
 7. **Edit, do not rewrite.** Fix a line with Edit; do not write a whole script or storyboard again to change part of it.
 8. **A new session per gate.** After Gate 1, Gate 2 and Gate 3, start a new session: everything the next step needs is in the episode folder, and a long conversation is paid for again on every turn.
+9. **QA before render.** The full MP4 render takes about an hour. Build, look at frames, run the QA reviewer and make its fixes first; render once, on `Verdict: pass` in `qa.md`. Never start a full render to "see how it looks": use the frame sheet, or render a few seconds with `--start`/`--end`.
