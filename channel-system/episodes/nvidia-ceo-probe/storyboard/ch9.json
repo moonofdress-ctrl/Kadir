@@ -22,7 +22,7 @@
   { "id": "c9s49d2", "cue": "L136", "set": "boardroom", "opts": { "night": true }, "camera": "tilt_up", "grade": "night",
     "light": { "x": 960, "y": 420, "r": 700, "color": "#bfe0ea", "dark": 0.7 },
     "props": [ { "type": "podium", "x": 960, "y": 960, "layer": "front" }, { "type": "sign", "x": 720, "y": 540, "t": "NO NEW STATEMENT", "size": 60 } ],
-    "actors": [ { "thing": "newspaper", "who": "NEWSPAPER", "label": "THE WALL STREET JOURNAL", "x": 1560, "y": 920, "scale": 0.6, "face": "confused", "prop": "pen", "flip": true, "enter": "none", "acts": [ { "at": 0.3, "to": [1230, 920], "dur": 1.0 } ] } ],
+    "actors": [ { "thing": "newspaper", "who": "NEWSPAPER", "label": "NEWSPAPER", "x": 1560, "y": 920, "scale": 0.6, "face": "confused", "prop": "pen", "flip": true, "enter": "none", "acts": [ { "at": 0.3, "to": [1230, 920], "dur": 1.0 } ] } ],
     "overlays": [ { "type": "tag", "t": "AS OF WEDNESDAY NIGHT", "tone": "", "at": 0.3 } ] },
   { "id": "c9t03", "type": "card", "cue": "L137", "text": "After hours, before Thursday's open: down more than 8%.", "emph": ["8%."] },
   { "id": "c9s49e", "cue": "L138", "set": "bus", "opts": { "night": true }, "camera": "shake", "grade": "night", "callback": "Benny's phone, red again (0:11)",
