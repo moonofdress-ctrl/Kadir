@@ -73,6 +73,47 @@ Dinlenmedi. Metinden görülen: rakipte en az 8-10 ayrı karakter sesi konuşuyo
 - Rakibin başlığı bir kişi ve bir sır vaat ediyor, rakam yok. Bizimki haber ve soru.
 - Rakibin açıklaması: iki paragraf hikâye, tek soru, bölüm damgaları, kaynak satırı. Bizimkiyle aynı kalıp; burada fark yok.
 
+## 9. İkinci tur: ölçümler ve yeni bulgular (12 Kasım, gece)
+
+Yöntem: iki video da tarayıcıda yarım saniyede bir kare alınarak ölçüldü (parlaklık, kareler arası fark, çizgi yoğunluğu); kesmeler iki videoda aynı sayaçla sayıldı. Rakibin ölçümü reklam yüzünden 17:26'da kaldı (son 2,5 dakika ölçülmedi). Bizim senaryo ve storyboard dosyalardan sayıldı; rakibin skeçleri altyazıdan elle sayıldı.
+
+| Ölçü | Rakip | Biz |
+|---|---|---|
+| Ortalama çekim süresi | 3,4 sn | 4,7 sn |
+| Ortanca çekim süresi | 2,5 sn | 4 sn |
+| İlk 30 saniyede kesme | 12 | 9 |
+| İlk 60 saniyede kesme | 20 | 15 |
+| 10 saniyeden uzun çekim | 4 (17 dakikada) | 12 (13 dakikada) |
+| Karanlık kare payı | %60 | %25 |
+| Aydınlık kare payı | %13 | %60 |
+| Çizgi yoğunluğu (ekran kalabalığı) | 7,2 | 13,3 |
+| Siyah yazı kartı | 53 (sürenin %13'ü) | 47 kart (39 kart + 8 bölüm kartı; 203 çekimin %23'ü) |
+| Farklı mekân (storyboard) | yaklaşık 70 | 11 (çim 41 kez) |
+| Ekran yazısı | çok az | 203 çekimin 162'sinde yazı var; toplam 323 yazı öğesi |
+| Karakter sesi | yaklaşık 43 an (30 skeç + 13 seslendirilmiş alıntı), 28 saniyede bir | 17 skeç, 47 replik |
+| Diyaloğun kelime payı | kabaca üçte bir (tahmin) | %9 (2.189 kelimenin 199'u) |
+
+**İlk 48 saniye, saniye saniye (rakip):** 22 çekim. Geniş plan yemek, dünya haritası, siyah kart, iki yakın plan (isim şeridiyle), pencereden bakış, yağmurda bina, fotoğraf çeken ajanlar, pano, siyah kart, kadeh, hızlı kaydırma ile masanın altı ve sayaç, siyah kart, tepeden masa, vizör, telefonlu masa ve videonun adı (0:41), bölüm kartı (0:43). Bizim ilk 48 saniyede 13 çekim var.
+
+**Kapaklar:** rakibin üç kapağı da **boyalı** (videonun kendisi boyalı değil). Kalıp: bir ya da iki figür, parlayan tek bir nesne, karanlık zemin, üstte 2-4 kelime ve tek rakam (kırmızı ve beyaz). Kapaktaki sahne videonun ilk karesi. Bizim kapakta dört yüz var, yarı gerçekçi çizilmiş ve bir hikâye anlatmıyor.
+
+**Kanal:** 3 video, 9.870 abone, toplam 2,4 milyon izlenme. Videolar: casus (1,5 milyon), borsa çöküşü (1,1 milyon), halka arz (101 bin). En çok izlenen ikisi bir kişi ya da bir tehlike anı üzerine; en az izlenen bir rakam üzerine.
+
+**Nasıl üretiyor:** açıklamadaki madeovernight.com, kanalın arkasındaki stüdyo. Sitede yazdığına göre videolar kullanıcının kendi Claude planıyla çalışan bir Windows uygulamasıyla yapılıyor: Claude araştırıyor, yazıyor, seslendiriyor ve her çekimi kuruyor. Ses için ElevenLabs ya da Fish Audio anahtarı, yoksa yerel bir ses. Uygulama ve topluluk aylık 37-57 dolara satılıyor; "Paper Billions stories" bir biçim olarak listeleniyor. Yani rakip bizimle **aynı yöntemi** kullanıyor; fark araçta değil, kurallarda.
+
+**Yorumlar:** 845 yorum; en çok beğenilenler olayın insan tarafı üzerine espriler. Yalnızca ilk dört yorum okunabildi.
+
+**Yapılamayanlar:** ses yine dinlenmedi; bizim ilk 48 saniyenin saniye saniye izlenmesi ve rakibin son 2,5 dakikasının ölçümü kaldı.
+
+## 2. bölüm için ölçülü hedefler (lint'e yazılacak adaylar)
+
+- Ortalama çekim 3,5 saniye ya da altı; ilk 30 saniyede en az 12 çekim; 10 saniyeden uzun çekim bölüm başına en fazla 1.
+- Karelerin en az yarısı karanlık sahne (tek ışık kaynağı).
+- Aynı mekân bir bölümde en fazla 3 kez; bölüm başına en az 6 yeni mekân.
+- Yazı taşıyan çekim en fazla üçte bir; bir çekimde en fazla bir yazı öğesi.
+- Diyalog kelimelerin en az dörtte biri; 30 saniyede bir karakter sesi.
+- Kapak boyalı: en fazla iki figür, tek parlayan nesne, videonun ilk sahnesi.
+
 ## 2. bölüm için öneriler (kullanıcı onayı bekliyor)
 
 1. Konu seçimi: olayın içindeki **insan hikâyesi** aranır; "bu senin paranı nasıl etkiler" sona gider.
