@@ -45,7 +45,7 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c2t02 | 0:44 | text card | About $7 of every $100 in that fund was one company. | |
 | c2s08 | 0:48 | thing chip label | NVIDIA | |
 | c2s08 | 0:48 | note | $100 / NVIDIA $7 | |
-| c2s08b | 0:50 | CLERK badge | TREFIS | |
+| c2s08b | 0:50 | thing tower label | TREFIS | |
 | c2s08b | 0:50 | thing chip label | NVIDIA | |
 | c2s08b | 0:50 | scale | 7.3% | |
 | c2s08b | 0:50 | sign | ONE BIG S&P 500 FUND | |
@@ -97,9 +97,8 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c3s14b | 1:56 | set office (poster2) | PEOPLE | |
 | c3s14b | 1:56 | doc | Nvidia annual report (10-K), fiscal 2007 / 2007 / The company / ...particularly Jen-Hsun Huang, our President and Chief Executive Officer, would harm our business. | |
 | c3t02 | 2:00 | text card | And it said it carried no insurance on him. | |
-| c3k04 | 2:03 | set office (poster) | INSURE | |
-| c3k04 | 2:03 | set office (poster2) | ANYTHING | |
 | c3k04 | 2:03 | HAL placard | 1 POLE | |
+| c3k04 | 2:03 | sign | INSURE ANYTHING | |
 | c3k04b | 2:07 | set office (poster) | HOPE IS | |
 | c3k04b | 2:07 | set office (poster2) | A PLAN? | |
 | c3k04b | 2:07 | HAL placard | 1 POLE | |
@@ -209,6 +208,7 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c5s30 | 5:02 | calendar | NOV 9 MONDAY | |
 | c5s30 | 5:02 | counter | -4.27% / NVIDIA AT MONDAY'S CLOSE | |
 | c5s31 | 5:08 | set street (signs) | COURTHOUSE, LAW, CAFE, INN | |
+| c5s31 | 5:08 | thing coin label | SHAREHOLDERS | |
 | c5s31 | 5:08 | thing tower label | COURT | |
 | c5s31 | 5:08 | pricetag | LAWSUIT | |
 | c5s31b | 5:16 | set street (signs) | COURTHOUSE, LAW, CAFE, INN | |
@@ -300,9 +300,11 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c7t01 | 7:16 | text card | Other tents have shaken before. | |
 | c7n01 | 7:17 | set lawn (time) | dusk | |
 | c7n01 | 7:17 | sign | HALL OF WOBBLES | |
+| c7n02 | 7:21 | thing box label | PLAN B | |
 | c7n02 | 7:21 | thing box label | APPLE | |
 | c7n02 | 7:21 | podium | TEA | |
 | c7n02 | 7:21 | calendar | AUG 24 WED 2011 | |
+| c7n02b | 7:25 | thing box label | PLAN B | |
 | c7n02b | 7:25 | tag | SUCCESSOR ALREADY RUNNING THINGS DAY TO DAY | |
 | c7t02 | 7:30 | text card | The next day, Apple closed down less than 1%. | |
 | c7n03 | 7:34 | set board (title) | THU 25 AUG 2011, CLOSE | |
@@ -338,7 +340,6 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c7n07 | 8:23 | set office (poster) | ASK | |
 | c7n07 | 8:23 | set office (poster2) | LATER | |
 | c7n07 | 8:23 | doc | Statement, reported by Fortune and TechCrunch / 27 SEP 2018 / Elon Musk, Tesla chief executive / This unjustified action by the SEC leaves me deeply saddened and disappointed. | |
-| c7n07 | 8:23 | lower_third | ELON MUSK / Tesla chief executive, 2018 | |
 | c7n07b | 8:26 | set office (poster) | ASK | |
 | c7n07b | 8:26 | set office (poster2) | LATER | |
 | c7n07b | 8:26 | REGGIE badge | SEC | |
