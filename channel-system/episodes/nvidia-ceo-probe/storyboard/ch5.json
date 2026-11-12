@@ -69,7 +69,7 @@
   { "id": "c5t02", "type": "card", "cue": "L073", "text": "Two days. About 9.5%.", "emph": ["9.5%."] },
   { "id": "c5s34", "cue": "L074", "set": "lawn", "opts": { "time": "dusk" }, "camera": "pull_out", "grade": "red", "motif": "tent",
     "props": [ { "type": "tent", "x": 960, "y": 930, "w": 1600, "ropes": 6, "frayed": 1, "tilt": 3, "crowd": 200, "snap": { "cue": "L074", "word": 0, "at": 0.3 } },
-               { "type": "sign", "x": 360, "y": 300, "t": "CHIPS SOLD: SAME", "size": 54 } ],
+               { "type": "sign", "x": 360, "y": 300, "t": "CHIP SALES: NO DROP REPORTED", "size": 50 } ],
     "actors": [ { "thing": "chip", "label": "NVIDIA", "x": 960, "y": 380, "scale": 0.45, "face": "scared", "enter": "none", "acts": [ { "cue": "L074", "word": 1, "to": [990, 390], "dur": 0.4 } ] },
                 { "who": "BENNY", "x": 1460, "y": 970, "scale": 0.55, "face": "scared", "look": "up", "enter": "none", "acts": [ { "cue": "L074", "word": 10, "face": "confused" } ] } ] }
 ] }

@@ -16,7 +16,7 @@ PLANT: the spare pole (CH7 Apple tent, "NAMED") -> PAYOFF: CH7 Berkshire skit, C
 VIEWER: BENNY on his phone (CH1), at the kitchen table with MARTHA (CH2), under the tent (CH3, CH6), with the tape measure at the four tents (CH7), on the bus with a green arrow (CH8), on the night bus with the arrow red again (CH9), final shot
 ## CH1 The two-day drop
 [SCENE s01 | set: a huge striped tent at dusk, one centre pole, a chip with a worried face sitting on top of the pole | text: counter -$430B]
-N: In two days, Nvidia lost about four hundred and thirty billion dollars in value... and it hadn't sold one chip less.
+N: In two days, Nvidia lost about four hundred and thirty billion dollars in value... and no one had reported it selling one chip less.
 [SCENE s02 | set: a chip factory at night, lights on, belts running, a sign BUSINESS AS USUAL]
 N: No factory closed.
 [SCENE s03 | set: a queue of clouds with faces holding money outside a shop marked CHIPS]
@@ -321,7 +321,7 @@ HAL: It's not unusual.
 [CARD]
 N: So why is Nvidia down over its CEO?
 [SCENE s56 | set: the tent at night, one pole, a light at the top, the chip with a face still sitting up there, a small flag on the pole AS OF WED 11 NOV, NIGHT]
-N: Not because it sold one chip less. Because one man's trouble made everyone look up at the same time...
+N: Not because anyone reported it selling one chip less. Because one man's trouble made everyone look up at the same time...
 [SCENE s57 | set: Benny alone under the tent, jar in his arms, looking up at the pole]
 N: ...and count the poles.
 

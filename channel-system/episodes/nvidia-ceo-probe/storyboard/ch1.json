@@ -10,7 +10,7 @@
   { "id": "c1s01b", "cue": "L001", "word": 14, "set": "warehouse", "camera": "pull_out",
     "actors": [ { "thing": "chip", "label": "NVIDIA", "x": 700, "y": 900, "face": "confused", "pose": "shrug", "prop": "tag", "tag": "SAME", "enter": "none",
                   "acts": [ { "cue": "L001", "word": 17, "to": [820, 900], "dur": 0.8 } ] } ],
-    "props": [ { "type": "sign", "x": 1240, "y": 250, "t": "CHIPS SOLD: NOT ONE LESS", "size": 62 },
+    "props": [ { "type": "sign", "x": 1240, "y": 250, "t": "CHIP SALES: NO DROP REPORTED", "size": 56 },
                { "type": "crates", "x": 1350, "y": 900, "n": 4, "w": 150, "t": "CHIPS", "move": { "to": [1450, 900], "cue": "L001", "word": 15, "dur": 1.2 } } ] },
   { "id": "c1s02", "cue": "L002", "set": "warehouse", "camera": "pan_right", "grade": "night",
     "light": { "x": 960, "y": 380, "r": 980, "color": "#ffe14d", "dark": 0.55 },

@@ -180,3 +180,34 @@ Latest state (checked once, early Thu 12 Nov): no Nvidia, board or Huang stateme
 Word count: 2,181 spoken words (CH1 to Self-check, `SPEAKER: ` lines, tag stripped, `wc -w`; same command gives 1,996 on commit b17f9af). Self-check Count row and Evidence row updated.
 
 Open: WSJ/NYT texts unread; 12 Nov trading not yet known (script is framed "as of Wednesday night" and must be re-checked before upload); the writer's evening claims table still quotes the two old wordings (E1, E9).
+
+## Screen text check 2026-11-12
+
+Scope: all 470 rows of `screen-text.md` (190 shots, ch1-ch9), against script.md and the rows above. Verdict per row is in the Checked column of `screen-text.md` (filled after regeneration; rerunning the tool clears it). Web pages opened in this pass: Bennet release (https://www.bennet.senate.gov/2026/11/11/bennet-presses-trump-administration-on-failure-to-stop-megaspeeds-apparent-ai-tech-diversion-to-china/, opened this time), Fortune 27 Sep 2018 (https://fortune.com/2018/09/27/elon-musk-sec-lawsuit-response-twitter/), TechCrunch 27 Sep 2018 (https://techcrunch.com/2018/09/27/tesla-ceo-elon-musk-responds-to-sec-securities-fraud-charges), Newsweek (Ives quote, re-opened). PBS URL returned 404. Weekdays checked with `date`: 8-11, 17, 18 Nov 2026; 24-25 Aug 2011; 3, 5 May 2025; 27, 29 Sep 2018 all match the calendars.
+
+**Totals:** 14 corrected (13 shots), 0 removed, 283 rows verified against existing rows, 173 rows with no fact (set dressing, made-up labels, cartoon names, jokes).
+
+| # | Shot | On screen (old) | Source | Status | Note |
+|---|---|---|---|---|---|
+| S1 | c1s01b | CHIPS SOLD: NOT ONE LESS | Row 49; no sales figure for the quarter exists before 17 Nov | corrected | -> CHIP SALES: NO DROP REPORTED. A negative stated as a count cannot be shown. |
+| S2 | c5s34 | CHIPS SOLD: SAME | As S1 | corrected | -> CHIP SALES: NO DROP REPORTED. |
+| S3 | c3s13 | EARTH'S BIGGEST | Script CH3 s13: "one of the most valuable businesses on earth" | corrected | -> ONE OF EARTH'S BIGGEST. |
+| S4 | c4s23 | US RULES: NOT OURS | Row 19 (Singapore MTI reply: no legal duty to enforce; expects firms to take them into account) | corrected | -> US RULES: NOT OURS TO ENFORCE. |
+| S5 | c6s36 | title IF HE LEAVES (ANALYST VIEW), bar IF HE LEAVES | Row 34: Ives, "if Huang were removed" | corrected | -> IF HE IS REMOVED (ANALYST VIEW), bar IF REMOVED. c6s35 FEAR 1: THE POLE LEAVES is the script's framing, kept. |
+| S6 | c6s36d | counter -$2000 | X3: $1,584-1,900 | corrected | -> -$1900 (caption UP TO ABOUT kept). Card c6t02 "Up to about $2,000" matches the spoken line and is kept. |
+| S7 | c7n07 | Musk card, source "reported by PBS and Fortune" | Opened Fortune and TechCrunch, 27 Sep 2018: "This unjustified action by the SEC leaves me deeply saddened and disappointed." | corrected | Quote verbatim, attribution and date right; PBS not opened (404), so source line -> "reported by Fortune and TechCrunch". X8b's Musk half is now opened, no longer search-only. |
+| S8 | c7n07b | SEC 2018-226, 29 SEP 2018, "...without admitting or denying the SEC's allegations." | X8b (PRIMARY) | verified | Verbatim; 29 Sep 2018 was a Saturday. |
+| S9 | c8s43 | STRONG RESULTS under calendar NOV 11 | Row 41b: CoreWeave reported Tue 10 Nov after the close | corrected | -> STRONG RESULTS (TUE NIGHT). |
+| S10 | c8s46 | note $100 / $7, tag AT WEDNESDAY'S CLOSE | E3: $173.73 < $186.64, "a little back. Not all"; own sum $6.52-6.80 | corrected | Slice label -> UNDER $7 (slice 0.065). c9s49f and c9s55 keep $7 as the "remember the seven dollars" callback. |
+| S11 | c8s47 | CHINA DATA CENTER: $0 | Row 43 ("Data Center compute revenue") | corrected | -> CHINA DATA CENTER CHIPS: $0, as row 43 already required. |
+| S12 | c8s48 | crate CHINA: $0 | Row 43; Nvidia still has other China revenue | corrected | -> CHINA (empty crate, as in the script scene). |
+| S13 | c9s50e | PUBLISHED? NOT REQUIRED | X14: "The guide doesn't say they must be published" | corrected | -> PUBLISHED? GUIDE DOESN'T SAY. |
+| S14 | c9s52a | CLOSED DOOR with calendar NOV 18 | X16: a request, not a confirmed meeting | corrected | -> ASKED FOR: CLOSED-DOOR BRIEFING. |
+| S15 | c6s41 | WHY NOT STOPPED? / MICHAEL BENNET, U.S. senator | Opened the release (11 Nov 2026): letter to Lutnick, Blanche, Rubio, Clayton asking for an update on the Megaspeed investigation and what Commerce is doing to stop Megaspeed buying Nvidia chips; title "failure to stop Megaspeed's apparent AI tech diversion" | verified | Row 40 now verified (was unverifiable); the script's softened line fits. The release names the woman; nothing from it beyond the title is on screen. |
+| S16 | c1s01 | -$430B / VALUE LOST IN TWO DAYS (ABOUT), closes Fri 6 Nov to Tue 10 Nov | X21 | verified | The only -$430B on screen. |
+| S17 | CH9 (c9s49b-c9s54) | MORE THAN -8%, AS OF WED NIGHT, SNAPSHOT, IF IT HOLDS | E5-E15 | verified | No successor, board decision or Thu 12 Nov event on screen; "before Thursday's open" (c9t03) is a time label only. |
+| S18 | c3s16 | Newsweek, NOV 2026 | Newsweek page: no printed date; refers to Nvidia's Tuesday statement (10 Nov) and November 2026 image paths | verified | NOV 2026 fair; quote verbatim. |
+
+Editorial limits: Grep on ch1-ch9 finds no woman's name; no CEO caricature speaks; every real quote is on an evidence card; allegations carry REPORTED / ALLEGED / UNNAMED SOURCES tags with China's and Megaspeed's denials on screen.
+
+Open: the spoken lines "hadn't sold one chip less" (CH1) and "Not because it sold one chip less" (end) are the same unprovable negative as S1; the writer may want "no drop in sales has been reported". Rerunning `screen-text.mjs` clears the Checked column. 12 Nov trading still to re-check before upload.

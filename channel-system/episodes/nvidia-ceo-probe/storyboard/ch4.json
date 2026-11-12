@@ -37,7 +37,7 @@
     "props": [ { "type": "banner", "x": 1380, "y": 160, "w": 620, "t": "RULE: ?" }, { "type": "pricetag", "x": 1380, "y": 560, "t": "RENTING = EXPORT?", "rot": 5, "cue": "L050", "word": 18 } ] },
   { "id": "c4s23", "cue": "L051", "set": "street", "opts": { "signs": ["SINGAPORE", "HARBOUR", "OFFICES"] }, "camera": "pan_right",
     "actors": [ { "thing": "tower", "label": "SINGAPORE", "x": 820, "y": 900, "scale": 0.85, "face": "deadpan", "pose": "shrug", "prop": "bill", "enter": "none" } ],
-    "props": [ { "type": "sign", "x": 1420, "y": 300, "t": "US RULES: NOT OURS", "size": 62 } ] },
+    "props": [ { "type": "sign", "x": 1420, "y": 300, "t": "US RULES: NOT OURS TO ENFORCE", "size": 52 } ] },
   { "id": "c4s24", "cue": "L052", "set": "lawn", "camera": "tilt_up", "motif": "tent",
     "props": [ { "type": "tent", "x": 1300, "y": 930, "w": 1100, "ropes": 6, "flap": true, "flag": "NVIDIA" } ],
     "actors": [ { "who": "REPORTER", "x": 360, "face": "confused", "prop": "pen", "enter": "none", "acts": [ { "at": 0.2, "to": [480, 900], "dur": 0.8 } ] },

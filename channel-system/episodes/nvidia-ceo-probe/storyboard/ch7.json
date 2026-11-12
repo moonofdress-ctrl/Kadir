@@ -49,7 +49,7 @@
         "actors": [ { "who": "REGGIE", "x": 960, "face": "deadpan", "badge": "SEC", "prop": "bill", "enter": "none" } ] } ] },
   { "id": "c7t04", "type": "card", "cue": "L108", "text": "The next day, Tesla's shares fell nearly 14%.", "emph": ["14%."] },
   { "id": "c7n07", "cue": "L109", "set": "office", "opts": { "desk": false }, "camera": "push_in", "grade": "sepia",
-    "overlays": [ { "type": "doc", "source": "Statement, reported by PBS and Fortune", "date": "27 SEP 2018", "by": "Elon Musk, Tesla chief executive", "quote": "This unjustified action by the SEC leaves me deeply saddened and disappointed.", "hl": ["unjustified"], "at": 0.2, "hlAt": 1.0 },
+    "overlays": [ { "type": "doc", "source": "Statement, reported by Fortune and TechCrunch", "date": "27 SEP 2018", "by": "Elon Musk, Tesla chief executive", "quote": "This unjustified action by the SEC leaves me deeply saddened and disappointed.", "hl": ["unjustified"], "at": 0.2, "hlAt": 1.0 },
                   { "type": "lower_third", "name": "ELON MUSK", "role": "Tesla chief executive, 2018", "at": 0.5 } ] },
   { "id": "c7n07b", "cue": "L109", "word": 7, "set": "office", "opts": { "desk": false }, "camera": "tilt_up", "grade": "sepia",
     "overlays": [ { "type": "doc", "source": "SEC press release 2018-226", "date": "29 SEP 2018", "by": "U.S. Securities and Exchange Commission", "quote": "...without admitting or denying the SEC's allegations.", "hl": ["without admitting or denying"], "at": 0.2, "hlAt": 1.2 },
