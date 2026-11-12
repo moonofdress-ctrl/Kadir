@@ -4,6 +4,8 @@ Prepared 2026-11-12 for Gate 3, refreshed 2026-11-12 after the currency check. N
 
 ## Open before upload
 
+0. **Evening of 12 Nov: the CEO resigned** (PRIMARY, Nvidia 8-K; factcheck.md `## Evening check 2026-11-12`). The user decided to upload the render of 12 Nov as it is. The title of pair A, the note at the top of the description and the first line of the pinned comment carry the update; the video itself says "as of Thursday morning". Thumbnail C's card (NOBODY APPOINTED) is now overtaken: do not use pair C's thumbnail.
+
 1. **Narrator, still open.** The render uses a scratch synthetic voice (Kokoro). The final voice product (human narrator, or a synthetic voice with disclosure, FORMAT_BOOK 14) is the user's decision. Captions are timed to the scratch voice and must be regenerated after any voice or line change.
 2. **Settled 12 Nov:** the QA fixes are in and the CH9 currency changes (L136, L139, L140, L152, L162; shots c9s49d2, c9s49g, c9s49h, c9s50g, c9s54, c9s56) are made; mix and build redone (13:10), lint 0 failed, qa.md verdict pass. Still to do: the one full render on the user's machine, then pull frames.
 3. **Partly settled:** the CH8 and CH9 lines were re-checked by the fact-checker on 12 Nov (factcheck.md `## Currency check 2026-11-12`: no line wrong, five re-dated). The user's own re-read of CH8 and CH9 (brief.md, Gate 2 condition) is still open.
@@ -20,7 +22,7 @@ Files: `images/thumbnail_a.png`, `images/thumbnail_b.png`, `images/thumbnail_c.p
 
 | Pair | Reason to click | Title (characters) | Thumbnail scene and time | Band text | What it promises, and where the video pays it |
 |---|---|---|---|---|---|
-| A (first frame) | Consequence: a huge loss happened to a giant | Why Is Nvidia Down Over Its CEO? (32) | Shot c1s01, 0:00-0:05: the tent at dusk, the NVIDIA chip clinging to the pole in `panic`, Benny with a red phone, Martha with a bill. Thumbnail taken at t=1.5 s. | white `NVIDIA` + red `-$430B` | Promises the reason behind a two-day fall of about $430B; paid from 0:13 (the question on a card) and answered at 12:59 ("one man's trouble made everyone look up at the same time"), with the chain in CH3 to CH9. |
+| A (first frame) | Consequence: a huge loss happened to a giant | Why Did Nvidia Fall Before Its CEO Resigned? (44) (changed 12 Nov evening after the resignation; was "Why Is Nvidia Down Over Its CEO?") | Shot c1s01, 0:00-0:05: the tent at dusk, the NVIDIA chip clinging to the pole in `panic`, Benny with a red phone, Martha with a bill. Thumbnail taken at t=1.5 s. | white `NVIDIA` + red `-$430B` | Promises the reason behind a two-day fall of about $430B; paid from 0:13 (the question on a card) and answered at 12:59 ("one man's trouble made everyone look up at the same time"), with the chain in CH3 to CH9. |
 | B | Contrast: two things that should not be true together | Why Did Nvidia Fall With No Forecast Cut? (41) | Shot c1s01b, 0:05-0:08: chip warehouse, crates marked CHIPS, the sign CHIP SALES: NO DROP REPORTED, the chip shrugging at the camera. **To be re-made** (see below). | white `2 DAYS` + red `-9.5%` (new; the old band `SAME SALES` is rejected) | Promises the explanation of a fall while nothing in the business was reported to change; the setup is at 0:00-0:13 ("No forecast was cut."), paid in CH6 ("two fears", 5:40) and CH8 (forecast about $108B unchanged, assumed no China chip sales, 9:20-9:50). |
 | C | Open question: who sits here? | Why Does One Man Matter So Much to Nvidia? (42) | Shot c9s54, 12:39-12:45: one office chair, spotlit, nameplate NEXT, nobody in it, the chip looking up; card AS OF THU 12 NOV, MORNING: NOBODY APPOINTED. **Outside the first 30 seconds** (see below). | white `ONE` + red `EMPTY CHAIR` | Promises why one person carries so much weight; the empty chair is planted at 0:21-0:27 ("One man. One empty chair.") and 0:38, paid in CH3 (One pole, 1:35) and the last minute (12:39). |
 
@@ -43,6 +45,8 @@ node studio/tools/stills.mjs thumb channel-system/episodes/nvidia-ceo-probe --wh
 **A/B test note.** YouTube's Test and compare takes up to three thumbnails, titles or pairs and picks by watch time, not clicks. Run A, B and C as three pairs. The result (winner, watch time per pair, and why we think so) is for the analyst; this file does not predict it.
 
 ## Description
+
+Update, 12 Nov 2026: After this video was made, Nvidia announced that Jensen Huang has resigned as CEO and from its board, effective immediately, with CFO Colette Kress serving as interim CEO; the company gave no reason, and the allegations discussed in the video remain allegations. Nvidia says it will still report results on Tuesday, 17 Nov, as previously scheduled.
 
 Nvidia lost about $430 billion in market value over two days (the Friday 6 Nov close to the Tuesday 10 Nov close; about $428-429 billion by our own arithmetic, one outlet gives about $430 billion). Its shares fell 4.27% on Monday 9 Nov and 5.47% on Tuesday 10 Nov, about 9.5% in all, after its board announced on Sunday 8 Nov an independent investigation prompted by reporting that its chief executive had been "the target of a foreign intelligence effort." News reports say US officials believe a former executive of Megaspeed, one of its customers, worked for Chinese intelligence; China denies it, Megaspeed denies illegal chip transfers, the reports rest on unnamed sources, and nothing has been proven in public. The board said it has no reason to believe national security or company secrets were compromised. This video explains why a company's dependence on one person moves the price, and why it reaches ordinary savers: in one popular S&P 500 index fund, Nvidia was about 7% of the holdings (7.3% on 4 Nov, per Trefis), so on $100,000 in that fund Nvidia's two-day fall alone took roughly $600 off, our own arithmetic.
 
@@ -99,6 +103,8 @@ nvidia, nvidia stock, nvidia ceo, jensen huang, nvidia investigation, nvidia boa
 (No tags with removal, scandal, replacement or successor wording.)
 
 ## Pinned comment
+
+Update 12 Nov 2026: Nvidia says Jensen Huang has resigned as CEO, effective immediately, with CFO Colette Kress as interim CEO and no reason given; this video was made that morning, before the announcement.
 
 What did you know about how much of your index fund sits in one company? Tell us in the comments.
 

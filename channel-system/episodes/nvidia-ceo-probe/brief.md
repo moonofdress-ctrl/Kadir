@@ -1,7 +1,7 @@
 # Brief
 
 Topic: Nvidia's two-day fall after its board opened an investigation into its CEO, and why one company's leadership moves every index fund
-Working title: Why Is Nvidia Down Over Its CEO? (changed 2026-11-11: "Why Nvidia Stock Keeps Falling" is already in use)
+Working title: Why Did Nvidia Fall Before Its CEO Resigned? (changed 2026-11-12 evening, after the resignation; before that: Why Is Nvidia Down Over Its CEO? (changed 2026-11-11: "Why Nvidia Stock Keeps Falling" is already in use)
 Why now (event and date): shares fell 4.27% on Mon 9 Nov and 5.47% on Tue 10 Nov 2026; third-quarter earnings are due Tue 17 Nov 2026
 Thumbnail money figure: -$430B (two-day loss in market value; one outlet's estimate, must be confirmed before use)
 Approved by the user on: 2026-11-11 (topic, Gate 1); 2026-11-11 (script, Gate 2: approved in advance on condition of the session's review; lengthened to 2,181 words, retitled, and updated after that approval for the after-hours fall of Wed 11 Nov, so the user re-reads CH8 and CH9 before upload)
@@ -17,3 +17,4 @@ State of the story as of Thu 12 Nov 2026, 17:13 UTC (evening check in factcheck.
 Voice for this episode: Kokoro scratch track (music 19 dB under the voice, -14.0 LUFS). The final voice product is still the user's open decision.
 Next, in a new session on branch claude/sharp-ptolemy-vjmkyu: (1) done on 12 Nov: the six changed CH9 shots read whole on frames, layout check 44 rows, none new; (2) on the upload day run the fact-checker's currency check again (Thursday's close, any board decision); (3) then the one full render, on the user's machine.
 Render of 12 Nov 2026 (cloud session, scratch voice, build of Thursday morning): 13:10, 470 MB, capture 1 h 48 min on 4 cores; not in git. Re-render on the user's machine after the upload-day currency check or a final voice.
+Render of 12 Nov 2026 (cloud session, scratch voice, build of Thursday morning): 13:10, 470 MB, -14.0 LUFS, peak -1.1 dB; sent to the user in two parts; not in git. The user decided on 12 Nov to upload this render with the update note, without changing the video.
