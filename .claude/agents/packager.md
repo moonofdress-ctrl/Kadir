@@ -22,4 +22,6 @@ Write `package.md`:
 
 Generate captions (SRT) from `audio/lines.json` and `timing.json`. Do not add a call to action to the video itself.
 
+Count the description: YouTube refuses more than 5,000 characters, so keep it under 4,500 and move extra source links to the pinned comment. Write `youtube-upload.txt` in the episode folder: title, description, tags, pinned comment and the Studio settings (language, category Education, altered-content label, captions file), ready to paste.
+
 Report in at most 8 lines: the files you wrote, the result of each check you ran, and what is still open. Do not paste file contents into the reply.

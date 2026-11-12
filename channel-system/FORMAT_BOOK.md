@@ -198,7 +198,7 @@ The title and the thumbnail are one promise made in two parts. The picture shows
 - **Pair A is the first frame**: the scene in thumbnail A is the scene at 0:00. Pairs B and C may show another moment, but only one the video reaches in its first 30 seconds, so every click is confirmed at once.
 - **The picture**: a moment frozen while something is happening (a hand taking the money, a face reacting), one character with one loud emotion, one object, one situation behind. Exaggerate what is really in the video; never show what is not in it.
 - **The band**: zero to five words that add to the title, never the title again: the number, the verdict or the missing word. Subject in white, figure in red. Keep it out of the lower right corner, where YouTube puts the duration.
-- **Readable at 160×90.** If the face or the number is lost at that size, simplify.
+- **Readable at 160×90.** If the face or the number is lost at that size, simplify. A wide shot with small figures loses to every neighbour on the page: the thumbnail is a close-up, one face filling a third of the frame or more, painted (STYLE_GUIDE, Thumbnail) when the engine's own frame is too flat. Judge it beside three thumbnails of the biggest channels on the same topic, not alone.
 - **No fear bait and no invented numbers** (section 14). A hypothetical or an allegation stays visibly that in the title.
 - **Description**: two paragraphs of plain facts with the key numbers, one question for the comments, chapter timestamps from `timing.json`, then "Figures as of <date>, from reporting by <outlets>." and the not-financial-advice line.
 - **Pinned comment**: the same question.

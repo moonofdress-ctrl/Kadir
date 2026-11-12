@@ -17,3 +17,7 @@ node studio/tools/stills.mjs thumb channel-system/episodes/nvidia-ceo-probe --wh
 ```
 
 Pair titles to test against each picture (the analyst picks the final wording): A "Why Is Nvidia Down Over Its CEO?"; B and C may reuse it, since each band adds a different missing word.
+
+## Painted thumbnails (12 Nov 2026, evening)
+
+The user found thumbnail A too weak beside other channels: a wide shot with small figures. Two painted versions of the same first-shot scene, one large face each, generated with FLUX and banded with `stills.mjs thumb --image`: `images/thumbnail_chip.png` (the chip in panic on the cracking pole; art in `art_chip.png`) and `images/thumbnail_benny.png` (Benny with the red phone, the chip on the snapping pole behind; art in `art_benny.png`). Band unchanged: NVIDIA -$430B. Both show only what the video's first shot shows; no real person. Checked by the user before upload.
