@@ -46,7 +46,7 @@
   { "id": "c6s38b", "cue": "L087", "word": 10, "set": "warehouse", "camera": "push_in", "grade": "night",
     "light": { "x": 1000, "y": 500, "r": 900, "color": "#ffe14d", "dark": 0.6 },
     "props": [ { "type": "gate", "x": 1420, "y": 900, "t": "CUSTOMS", "closed": false },
-               { "type": "crates", "x": 300, "y": 920, "n": 3, "w": 160, "t": "CHIPS", "move": { "to": [1620, 920], "cue": "L087", "word": 12, "dur": 2.4 } } ],
+               { "type": "crates", "x": 300, "y": 920, "n": 3, "w": 160, "t": "CHIPS", "move": { "to": [1500, 920], "cue": "L087", "word": 12, "dur": 2.4 } } ],
     "overlays": [
                   { "type": "counter", "from": 0, "to": 7.5, "decimals": 1, "prefix": "$", "suffix": "B", "tone": "", "pos": "tl", "cap": "SALES THE EX-EXECUTIVE HELPED ARRANGE (REPORTED)", "cue": "L087", "word": 14, "dur": 1.0, "plate": true } ] },
   { "id": "c6s39", "cue": "L088", "set": "street", "opts": { "signs": ["SINGAPORE", "OFFICES", "CAFE", "INN"] }, "camera": "pull_out",
