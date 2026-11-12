@@ -317,3 +317,45 @@ Script scene brackets updated to match: s54 card -> AS OF THU 12 NOV, MORNING: N
 - **Bennet release: PRIMARY, opened this time** (https://www.bennet.senate.gov/2026/11/11/bennet-presses-trump-administration-on-failure-to-stop-megaspeeds-apparent-ai-tech-diversion-to-china/): dated 11 Nov 2026, letter to Lutnick, Blanche, Rubio and Clayton, asks for an update on the Megaspeed investigation and on Commerce steps to stop Megaspeed buying Nvidia chips, answers by 24 Nov. Row 40 / S15 / Q1 stand. The release names the woman; nothing from it beyond the title is used.
 
 **Open:** Thursday's close and any board decision or Nvidia statement after this morning are unknown. If the board announces anything before upload, CH9 L134-L136, L145, L151-L152, L154 and L162 need another pass, not these wordings. WSJ/NYT texts still unread. The writer's claims table and self-check rows (script.md, after "## Self-check") still quote the Wednesday-night wordings.
+
+## Evening check 2026-11-12
+
+Scope: what happened on Thu 12 Nov, for the description, pinned comment and title only; the rendered video is not changed. Checked at 17:13 UTC (12:13 p.m. ET), during the US regular session, so there is no close and no after-hours print yet.
+
+### Findings
+
+| # | Finding | Kind | Source |
+|---|---|---|---|
+| D1 | Huang "has resigned as President, Chief Executive Officer, and a member of the Board, effective immediately" (resigned, not removed or on leave, in the company's wording) | PRIMARY (8-K exhibit 99.1, dated 12 Nov 2026, opened) | https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm ; also CBS News (opened) |
+| D2 | EVP and CFO Colette Kress "has agreed to serve as Interim Chief Executive Officer" and stays CFO; the board is searching for a permanent CEO (internal and external candidates, per CBS) | PRIMARY (same 8-K) + CBS News, CNBC (video headline) | as D1; https://www.cnbc.com/video/2026/11/12/nvidia-ceo-jensen-huang-resigns-colette-kress-appointed-interim-ceo.html |
+| D3 | Harvey C. Jones appointed "first-ever Chair of the Board"; says he expects operations, customer commitments and product roadmap "to continue without interruption"; "The Board has full confidence in Colette and the leadership team" | PRIMARY (8-K) + CBS News | as D1 |
+| D4 | No reason given by Nvidia. The press links the exit to the reported affairs and to a woman US intelligence reportedly suspects of spying for China; these remain allegations (CBS: "alleged spy"; affair reports are NYT/WSJ, not confirmed by CBS) | PRIMARY (absence, 8-K) / reported (CBS) | as D1 |
+| D5 | Statement by Huang himself: a headline quote "There Is No Excuse for What I Did" appears as a related-story link on Yahoo/CBS with no source shown | Not confirmed | Not used |
+| D6 | Results date stands: Nvidia "will report its third-quarter fiscal 2027 financial results on Tuesday, November 17", "as previously scheduled" | PRIMARY (8-K) | as D1 |
+| D7 | Shares 12 Nov: fell as much as about 13-14% early, then about 5% lower at midday (about $165.25, CBS; "trimmed losses back to 5%", Yahoo Finance live blog). Close and after-hours: not yet available at this check. Wed close $173.73 (see C5) | Reported by two outlets (intraday only) | CBS News (opened); https://sg.finance.yahoo.com/news/live/stock-market-today-thursday-november-12-sp-500-nasdaq-dow-nvidia-slides-jensen-huang-resigns-invest-165632931.html (opened) |
+| D8 | A senator said the resignation does not absolve Huang or the company (search summary only, not opened, no name) | Not confirmed | Not used |
+
+### Video lines
+
+The video says "as of Thursday morning: no decision, nobody appointed". That was true at the morning check (C1-C4) and is dated, so it is not wrong, but it is now overtaken: a decision exists and an interim CEO is appointed (D1, D2). L154 (results 17 Nov) still true (D6). Shots c9s49d2, c9s50g, c9s54, c9s56 carry the overtaken dated text; they are not changed (video is final) and are covered by the description note below.
+
+### (a) Description note (top of description)
+
+Update, 12 Nov 2026: After this video was made, Nvidia announced that Jensen Huang has resigned as CEO and from its board, effective immediately, with CFO Colette Kress serving as interim CEO; the company gave no reason, and the allegations discussed in the video remain allegations. Nvidia says it will still report results on Tuesday, 17 Nov, as previously scheduled.
+
+### (b) Pinned-comment opener
+
+Update 12 Nov 2026: Nvidia says Jensen Huang has resigned as CEO, effective immediately, with CFO Colette Kress as interim CEO and no reason given; this video was made that morning, before the announcement.
+
+### (c) Title
+
+Verdict on "Why Is Nvidia Down Over Its CEO?": still literally true (the stock fell again on 12 Nov, and the video explains the drop tied to the CEO probe), but it now reads as if the video covers the resignation, which it does not. Keep only with the description note; better to change.
+
+Alternatives (all under 60 characters, plain question, true to the video and to today's news, no promise of resignation coverage):
+1. Why Did Nvidia Fall Before Its CEO Resigned? (44)
+2. What Led Up to Nvidia's CEO Resigning? (38)
+3. Why Was Nvidia Sliding Before Huang Quit? (41)
+
+Recommendation: 1. Note for 2: the video ends before the board's decision, so "led up to" is accurate only for the probe and the board meeting it covers.
+
+**Open:** Thursday's close and after-hours move (not available at 12:13 p.m. ET); a statement by Huang himself (none confirmed). If the note should carry a price, add it only after the close from a market-data page plus one outlet.
