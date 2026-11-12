@@ -267,13 +267,13 @@ N: The New York Times reported a second relationship, which the company has not 
 [CARD]
 N: And The Wall Street Journal reported that Nvidia's board is preparing to remove its chief executive.
 N: Nvidia did not immediately respond to requests for comment on that report.
-N: As of Wednesday night, the board had made no new public statement.
+N: As of Thursday morning, the board had made no new public statement.
 [SCENE s49e | set: Benny on the night bus, phone screen MY INDEX FUND, the small green arrow from the afternoon flipping back into a long red line, a rubber stamp thumping across the screen AFTER HOURS: SNAPSHOT, NOT A CLOSE | text: NVIDIA down more than 8% after the close (snapshot, as of Wed night)]
 [CARD]
 N: In after-hours trading, before Thursday's open, the shares fell more than eight percent.
 N: That wiped out Wednesday's gain, and more.
-N: Remember the seven dollars? On a hundred thousand dollars in that fund, that's roughly another five or six hundred dollars from Nvidia's slice... if it holds.
-N: It's a snapshot, not a close. And that's our arithmetic, not a forecast.
+N: Remember the seven dollars? On a hundred thousand dollars in that fund, that's roughly another five or six hundred dollars from Nvidia's slice... at that price.
+N: That was a snapshot, before Thursday's trading. And it's our arithmetic, not a forecast.
 [SKIT k15a | set: the night bus, Benny and Hal squeezed into one seat as in the opening, Benny's red phone lighting both faces, a stop sign outside the window WED 11 NOV]
 BENNY: You said, "We're Wednesday."
 HAL: It's still Wednesday.
@@ -291,7 +291,7 @@ N: At the end, the committee reports its findings to the board. The guide doesn'
 [CARD]
 N: Nvidia's board gave no deadline.
 N: But The Wall Street Journal reported that the board met on Wednesday night to discuss his future.
-N: No decision had been reported by Wednesday night.
+N: No decision had been announced by Thursday morning.
 [SCENE s51 | set: the domed building holding three folders marked BILL, none of them stamped]
 N: Door two, Washington, where none of those bills is law so far.
 [SCENE s52 | set: a calendar page TUE 17 NOV, an envelope with a face marked RESULTS]
@@ -310,7 +310,7 @@ N: That's more than a billion dollars of sales a day.
 N: Listen for three things that day. Does the forecast move? Does the board say anything new? And does anyone say the word China?
 [SCENE s53b | set: a fortune-teller's booth with a sign OPINION, a crystal ball with a face marked NEXT QUARTER, inside it a small cloud with a face marked AI SPENDING drooping; on the table a press card as a name strip: ADAM SPATACCO, THE MOTLEY FOOL]
 N: On the first one, a writer at The Motley Fool points to the forecast for the next quarter. A weak one, he argues, could be a sign that AI spending is slowing. That's an opinion, not a fact.
-[SCENE s54 | set: the empty chair with the nameplate NEXT, a duster passing over it, the seat still empty, a card propped on it AS OF WED 11 NOV, NIGHT: NOBODY NAMED]
+[SCENE s54 | set: the empty chair with the nameplate NEXT, a duster passing over it, the seat still empty, a card propped on it AS OF THU 12 NOV, MORNING: NOBODY APPOINTED]
 [CARD]
 N: Whatever the board decides, one thing has already changed. Investors have now seen the empty chair. As of Wednesday night, neither report names anyone to fill it. A company this big does not get to leave it empty forever.
 [SCENE s55 | set: the hundred-dollar note with its seven-dollar strip, taped back on a little crooked]
@@ -320,7 +320,7 @@ BENNY: Is one pole normal?
 HAL: It's not unusual.
 [CARD]
 N: So why is Nvidia down over its CEO?
-[SCENE s56 | set: the tent at night, one pole, a light at the top, the chip with a face still sitting up there, a small flag on the pole AS OF WED 11 NOV, NIGHT]
+[SCENE s56 | set: the tent at night, one pole, a light at the top, the chip with a face still sitting up there, a small flag on the pole AS OF THU 12 NOV, MORNING]
 N: Not because anyone reported it selling one chip less. Because one man's trouble made everyone look up at the same time...
 [SCENE s57 | set: Benny alone under the tent, jar in his arms, looking up at the pole]
 N: ...and count the poles.
