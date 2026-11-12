@@ -126,7 +126,7 @@
     "light": { "x": 960, "y": 640, "r": 760, "color": "#ffd9a0", "dark": 0.5 },
     "props": [ { "type": "chair", "x": 960, "y": 900, "t": "NEXT" }, { "type": "sign", "x": 960, "y": 220, "t": "AS OF WED 11 NOV, NIGHT: NOBODY NAMED", "size": 50, "cue": "L162", "word": 16, "at": 0 } ],
     "actors": [ { "thing": "chip", "label": "NVIDIA", "x": 1560, "y": 900, "scale": 0.55, "face": "confused", "look": "up", "flip": true, "enter": "none", "acts": [ { "at": 0.3, "to": [1480, 900], "dur": 0.8 }, { "cue": "L162", "word": 20, "face": "scared" } ] } ] },
-  { "id": "c9s54b", "cue": "L162", "word": 27, "set": "street", "opts": { "signs": ["NVIDIA", "OFFICES", "CAFE", "INN"] }, "camera": "tilt_up",
+  { "id": "c9s54b", "cue": "L162", "word": 27, "set": "street", "opts": { "signs": ["NVIDIA", "OFFICES", "", "INN"] }, "camera": "tilt_up",
     "actors": [ { "thing": "tower", "label": "NVIDIA", "x": 1260, "y": 900, "scale": 1.3, "face": "scared", "enter": "none" } ],
     "props": [ { "type": "chair", "x": 560, "y": 930, "t": "NEXT" }, { "type": "sign", "x": 560, "y": 300, "t": "NOT FOREVER", "size": 70 } ] },
   { "id": "c9s55", "cue": "L163", "set": "kitchen", "camera": "pan_left", "callback": "the seven-dollar strip, taped back crooked",

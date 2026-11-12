@@ -107,12 +107,8 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c3s15 | 2:09 | chair | NEXT | |
 | c3s15 | 2:09 | sign | SUCCESSOR: ? | |
 | c3s15 | 2:09 | tag | PUBLICLY NAMED: NOBODY | |
-| c3s16 | 2:13 | set office (poster) | BUY | |
-| c3s16 | 2:13 | set office (poster2) | SELL | |
 | c3s16 | 2:13 | doc | Newsweek / NOV 2026 / Dan Ives, analyst / There is no succession plan and it would be a stretch to find a candidate internally to replace Jensen. | |
 | c3s16 | 2:13 | lower_third | DAN IVES / Analyst, Yorkville Ives | |
-| c3s17 | 2:20 | set office (poster) | PLAN B: | |
-| c3s17 | 2:20 | set office (poster2) | PLAN A | |
 | c3s17 | 2:20 | sign | NOTE TO CLIENTS | |
 | c3s17 | 2:20 | chair | NEXT | |
 | c3s17 | 2:20 | doc | Dan Ives, note to clients (as reported by AOL) / NOV 2026 / Dan Ives, Yorkville Ives / Jensen is not replaceable | |
@@ -517,7 +513,7 @@ Every word and number the storyboard shows. The fact-checker marks each row agai
 | c9s54 | 12:39 | thing chip label | NVIDIA | |
 | c9s54 | 12:39 | chair | NEXT | |
 | c9s54 | 12:39 | sign | AS OF WED 11 NOV, NIGHT: NOBODY NAMED | |
-| c9s54b | 12:46 | set street (signs) | NVIDIA, OFFICES, CAFE, INN | |
+| c9s54b | 12:46 | set street (signs) | NVIDIA, OFFICES, , INN | |
 | c9s54b | 12:46 | thing tower label | NVIDIA | |
 | c9s54b | 12:46 | chair | NEXT | |
 | c9s54b | 12:46 | sign | NOT FOREVER | |

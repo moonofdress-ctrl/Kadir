@@ -53,7 +53,8 @@
       const r = rng(7); let b = R(0, 0, 1920, 830, o.wall || "#e6ddc6", 0, "") + R(0, 830, 1920, 250, "#b99f7c", 0, "") + `<path d="M0,830 L1920,830" ${st}/>`;
       b += cut(R(1140, 130, 600, 430, "#bfe0ea", 8) + `<g clip-path="inset(0)">${skyline(1150, 1730, 556, r, ["#7f9fc0", "#9db7d1", "#6c88ab"])}</g>` + cloud(1230, 190, 0.7) +
         `<path d="M1440,130 L1440,560 M1140,345 L1740,345" ${st}/>` + R(1120, 556, 640, 26, "#f6f1e4", 6));
-      b += cut(`<g transform="rotate(-3 330 300)">${R(210, 190, 250, 300, "#f6f1e4", 0)}${T(335, 300, o.poster || "DO WHAT", 54)}${T(335, 366, o.poster2 || "YOU LOVE", 54)}<path d="M250,410 L420,410" stroke="#e0262b" stroke-width="12"/></g>`);
+      if (o.poster !== false) b += cut(  // poster:false when a document card would cover it
+        `<g transform="rotate(-3 330 300)">${R(210, 190, 250, 300, "#f6f1e4", 0)}${T(335, 300, o.poster || "DO WHAT", 54)}${T(335, 366, o.poster2 || "YOU LOVE", 54)}<path d="M250,410 L420,410" stroke="#e0262b" stroke-width="12"/></g>`);
       b += `<path d="M700,0 L700,120" ${st}/>` + cut(`<path d="M620,190 Q700,90 780,190Z" fill="#e8a317" ${st}/>`) + plant(150, 830);
       const f = cut(R(880, 720, 960, 44, "#8a5a3c", 8) + R(910, 764, 900, 316, "#a5714d", 0) + `<path d="M1360,764 L1360,1080" ${st}/>`) + monitor(980, 508, 330, o.screen) +
         cut(R(1420, 664, 60, 58, "#f6f1e4", 8) + `<path d="M1480,676 Q1510,680 1506,700 Q1502,716 1480,712" fill="none" ${st}/>`) + cut(R(1560, 696, 200, 24, INK, 8, ""));
