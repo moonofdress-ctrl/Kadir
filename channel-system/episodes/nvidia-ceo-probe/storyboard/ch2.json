@@ -40,7 +40,7 @@
   { "id": "c2s10", "cue": "L018", "set": "kitchen", "camera": "push_in", "grade": "gold",
     "actors": [ { "who": "BENNY", "x": 1380, "face": "neutral", "prop": "pen", "enter": "none", "acts": [ { "cue": "L018", "word": 4, "pose": "point", "to": [1240, 900], "dur": 0.7 }, { "cue": "L018", "word": 18, "face": "shocked", "pose": "panic" } ] } ],
     "props": [ { "type": "jar", "x": 760, "y": 720, "t": "RETIREMENT", "amount": "$100,000", "level": 0.9 } ],
-    "overlays": [ { "type": "counter", "from": 0, "to": 600, "prefix": "-$", "suffix": "+", "tone": "red", "pos": "tr", "cap": "NVIDIA'S TWO-DAY FALL, ON $100K (OUR SUM)", "cue": "L018", "word": 19, "dur": 1.0, "plate": true } ] },
+    "overlays": [ { "type": "counter", "from": 0, "to": 600, "prefix": "-$", "suffix": "+", "tone": "red", "pos": "tr", "cap": "NVIDIA'S TWO-DAY FALL, ON $100K (OUR SUM)", "cue": "L018", "word": 19, "dur": 1.0 } ] },
   { "id": "c2s10b", "cue": "L018", "word": 26, "set": "trading_floor", "opts": { "mood": "green" }, "camera": "tilt_down", "grade": "green",
     "actors": [ { "thing": "box", "label": "THE REST", "x": 760, "y": 900, "scale": 0.8, "face": "happy", "pose": "cheer", "enter": "none", "acts": [ { "cue": "L018", "word": 34, "to": [960, 900], "dur": 0.7 } ] },
                 { "who": "BENNY", "x": 1500, "scale": 0.8, "face": "confused", "pose": "think", "enter": "none" } ],
