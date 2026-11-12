@@ -15,7 +15,8 @@ import { linesFromScript } from "./build.mjs";
 
 const STUDIO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 // speaker -> [Kokoro voice, speed]. A speaker not listed here gets the narrator's voice and a warning.
-export const VOICES = { N: ["am_michael", 1.05], BENNY: ["am_adam", 1.0], CHAD: ["am_adam", 1.2], HAL: ["bm_george", 0.9], MARTHA: ["af_heart", 1.0], REGGIE: ["bm_george", 0.8] };
+export const VOICES = { N: ["am_michael", 1.05], BENNY: ["am_adam", 1.0], CHAD: ["am_adam", 1.2], HAL: ["bm_george", 0.9], MARTHA: ["af_heart", 1.0], REGGIE: ["bm_george", 0.8],
+  SODA: ["af_bella", 1.15], GIANT: ["bm_lewis", 0.85] }; // SODA and GIANT: the speaking objects of the Poppi episode (a can, a cola giant)
 
 const args = process.argv.slice(2), ep = path.resolve(args.find((a) => !a.startsWith("--")) || "");
 if (!fs.existsSync(path.join(ep, "script.md")) && !fs.existsSync(path.join(ep, "audio", "lines.json"))) { console.error("usage: node studio/tools/voice.mjs <episode_dir> [--force] [--only L012,L013]"); process.exit(2); }
