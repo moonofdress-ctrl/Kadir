@@ -143,6 +143,14 @@ Three world props that carry their own camera. Each belongs on its dark ground (
     "edges": [ { "from": "r", "to": "c", "label": "backed by" } ] } ] }
 ```
 
+**Timeline tunnel** (`"set": "timeline_road"`, prop `timeline`): a company's history in one shot. Years stand as roadside billboards down a night road, nearer is earlier. On each year's `cue`/`word`/`at` the camera glides one step: the year it leaves slides off to the left, dim and blurred, and the next lights up with its caption (`caption`) and a small face (`who`) or glyph (`icon`, `color`). Three to five years fit; the first is lit from the start of the shot.
+```json
+{ "id": "t1", "cue": "L004", "set": "timeline_road", "opts": { "night": true }, "place": "the road of years", "light": { "x": 960, "y": 520, "r": 1200, "dark": 0.5 },
+  "props": [ { "type": "timeline", "years": [
+    { "year": "2015", "caption": "A kitchen and a soda", "who": "ALLISON_ELLSWORTH", "cue": "L004", "word": 3 },
+    { "year": "2018", "caption": "A few thousand stores", "icon": "can", "color": "#8a3fb6", "cue": "L005", "word": 2 } ] } ] }
+```
+
 ## Rules for engine code
 - One paused GSAP timeline drives everything. No timers, no `Math.random`, no dates, no network.
 - **No callbacks** (`onUpdate`, `call`): a seek does not fire them. Tween properties instead; `counter` shows how to do text.

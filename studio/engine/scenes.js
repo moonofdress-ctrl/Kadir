@@ -138,4 +138,36 @@
         ed.forEach((e, k) => { if (eo[k] < 1) tl.fromTo(e, { opacity: eo[k] }, { opacity: 1, duration: 0.5, immediateRender: false }, to); }); }
     },
   };
+
+  /* ------------------------------------------------------------------------------------------------
+     2. Timeline tunnel
+     { type:"timeline", years:[ {year:"2015", caption:"A kitchen, a prebiotic soda", who:"ALLISON_ELLSWORTH" | icon:"can", color, cue, word, at} ] }
+     Use on "set": "timeline_road". Years stand on the road as gantries, nearer is earlier. On each year's cue the camera glides one step:
+     the year it leaves slides off to the left, dim and blurred; the next lights up with its caption and its small face or glyph. */
+  // Roadside billboards, alternating sides of the road; later years stand further down the road, smaller and higher.
+  const side = (i) => (i % 2 ? -1 : 1);
+  const yState = (i, j) => { const r = i - j;
+    if (r >= 0) { const k = 1 / (1 + 1.1 * r); return { x: 960 + side(i) * 500 * k, y: 300 + 460 * k, scale: k, opacity: r === 0 ? 1 : Math.max(0.45, 0.92 - 0.16 * r), filter: "blur(0px)" }; }
+    const a = -r; return { x: 960 + side(i) * 500 - 1000 * a, y: 760 + 120 * a, scale: 1 + 0.25 * a, opacity: Math.max(0.2, 0.42 - 0.08 * (a - 1)), filter: `blur(${(4 * a).toFixed(1)}px)` }; };
+  const yearSVG = (y, i) => {
+    const cap = y.caption ? String(y.caption) : "", fs = Math.max(30, Math.min(50, Math.floor(700 / (cap.length * 0.52)))), cw = Math.min(760, cap.length * fs * 0.52 + 70), inner = Math.round(-side(i) * 240),
+      extra = y.who ? `<g transform="translate(${inner},-430)"><circle r="84" fill="${PAPER}" ${st}/><g class="face-slot" data-who="${y.who}" data-w="150"></g></g>` :
+      y.icon ? `<g transform="translate(${inner},-430)"><circle r="84" fill="${PAPER}" ${st}/><g transform="scale(.75)">${glyph(y.icon, y.color || "#3d6fb6")}</g></g>` : "";
+    return `<g class="yr" data-i="${i}"><ellipse class="hl pulse" cx="0" cy="-260" rx="470" ry="260" fill="#ffd98a" opacity="0"/>` +
+      cut(R(-168, -220, 36, 220, "#3b4678", 4) + R(132, -220, 36, 220, "#3b4678", 4) + R(-240, -410, 480, 212, "#4a5896", 14) + R(-224, -396, 448, 184, PAPER, 8, "") + T(0, -248, y.year, 150, INK)) +
+      (cap ? cut(R(-cw / 2, -176, cw, 80, GOLD, 10) + T(0, -118, cap, fs, INK)) : "") + extra + `</g>`; };
+  S.PROPS.timeline = {
+    draw(o) { const ys = o.years || []; return ys.map((y, i) => yearSVG(y, i)).reverse().join(""); },
+    play(tl, el, o, t0) {
+      const ys = o.years || [], n = ys.length; if (!n) return; faces(el);
+      const m = [...el.querySelectorAll(".yr")].sort((a, b) => a.getAttribute("data-i") - b.getAttribute("data-i")), ty = ys.map((y, i) => (y.at != null ? y.at : i * 1.6));
+      m.forEach((e, i) => gsap.set(e, Object.assign({ svgOrigin: "0 0", smoothOrigin: false }, yState(i, 0))));
+      m.forEach((e, i) => { const hl = e.querySelector(".hl"), t = t0 + ty[i];
+        // the halo comes up when the year is reached, and goes when the camera leaves
+        tl.fromTo(hl, { opacity: 0 }, { opacity: 0.15, duration: 0.5, immediateRender: false }, t + (i ? 0.5 : 0));
+        if (i + 1 < n) tl.fromTo(hl, { opacity: 0.15 }, { opacity: 0, duration: 0.3, immediateRender: false }, t0 + ty[i + 1]); });
+      for (let j = 1; j < n; j++) { const gap = ty[j] - ty[j - 1], d = Math.max(0.4, Math.min(1.1, gap * 0.8));
+        m.forEach((e, i) => tl.fromTo(e, yState(i, j - 1), Object.assign({ duration: d, ease: "power2.inOut", immediateRender: false }, yState(i, j)), t0 + ty[j])); }
+    },
+  };
 })();
