@@ -110,10 +110,10 @@
     { "id": "c3s20a", "explains": "How big sales had become: $20 million of revenue a year.", "cue": "L083", "word": 5, "set": "kitchen", "opts": { "night": true }, "place": "family kitchen", "camera": "tilt_down", "frame": "medium", "grade": "night",
       "light": { "x": 960, "y": 360, "r": 760, "color": "#ffd9a0", "dark": 0.5 },
       "actors": [ { "who": "ALLISON_ELLSWORTH", "x": 960, "y": 960, "face": "confused", "pose": "think", "enter": "none", "acts": [ { "cue": "L083", "word": 10, "face": "scared" } ] } ],
-      "props": [ { "type": "cashpile", "x": 1400, "y": 960 } ] },
+      "props": [ { "type": "cashpile", "x": 1400, "y": 690 } ] },
     { "id": "c3s20b", "explains": "How little cash there was: only $75,000 in the bank.", "cue": "L083", "word": 15, "set": "bank", "opts": { "dress": "vault", "night": true }, "place": "bank vault", "camera": "push_in", "grade": "red",
       "light": { "x": 960, "y": 280, "r": 780, "color": "#fff1c4", "dark": 0.5 },
-      "overlays": [ { "type": "counter", "from": 20000000, "to": 75000, "prefix": "$", "tone": "red", "pos": "tc", "plate": true, "at": 0.3, "dur": 1.6 } ] },
+      "overlays": [ { "type": "counter", "from": 20000000, "to": 75000, "prefix": "$", "tone": "red", "pos": "tc", "plate": true, "at": 0.2, "dur": 1.4 } ] },
     { "id": "c3s20c", "explains": "What that meant: they were not sure they could pay their staff.", "cue": "L083", "word": 23, "set": "bank", "opts": { "dress": "vault", "night": true }, "place": "bank vault", "camera": "pull_out", "frame": "medium", "grade": "night",
       "light": { "x": 960, "y": 300, "r": 780, "color": "#fff1c4", "dark": 0.5 },
       "actors": [

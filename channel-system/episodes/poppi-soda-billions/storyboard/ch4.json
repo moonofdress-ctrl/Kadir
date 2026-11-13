@@ -20,8 +20,8 @@
     {
       "id": "c4b01", "cue": "L090", "explains": "Who put money into Poppi in 2021: Oza's firm led the thirteen-million round, and famous names joined it.",
       "set": "evidence_wall", "opts": { "night": true }, "place": "evidence wall", "light": { "x": 960, "y": 470, "r": 1100, "dark": 0.55 },
-      "props": [ { "type": "board_web", "overview": 0.3, "nodes": [
-        { "id": "p", "kind": "badge", "icon": "can", "color": "#e8589a", "name": "POPPI", "sub": "August 2021", "cue": "L090", "word": 3 },
+      "props": [ { "type": "board_web", "overview": 0.3, "zoom": 1.3, "nodes": [
+        { "id": "p", "kind": "badge", "icon": "can", "color": "#e8589a", "name": "POPPI", "sub": "August 2021", "cue": "L090", "word": 0 },
         { "id": "c", "kind": "badge", "icon": "building", "name": "CAVU", "sub": "Oza's firm", "cue": "L090", "word": 8 },
         { "id": "o", "kind": "face", "who": "ROHAN_OZA", "name": "ROHAN OZA", "cue": "L090", "word": 10 },
         { "id": "h", "kind": "badge", "icon": "person", "name": "HALSEY", "cue": "L090", "word": 15 },
@@ -689,29 +689,31 @@
       "camera": "push_in",
       "grade": "night",
       "light": {
-        "x": 960,
-        "y": 400,
-        "r": 900,
+        "x": 460,
+        "y": 480,
+        "r": 820,
         "color": "#b5f0b8",
-        "dark": 0.5
+        "dark": 0.45
       },
       "props": [
         {
           "type": "bars",
-          "x": 560,
-          "y": 220,
-          "w": 800,
-          "h": 600,
+          "x": 100,
+          "y": 460,
+          "w": 680,
+          "h": 440,
           "items": [
             {
               "label": "2020",
               "val": 4,
-              "show": "$4M"
+              "show": "$4M",
+              "color": "#6fd38a"
             },
             {
               "label": "2024",
               "val": 500,
-              "show": "$500M"
+              "show": "$500M",
+              "color": "#6fd38a"
             }
           ]
         }

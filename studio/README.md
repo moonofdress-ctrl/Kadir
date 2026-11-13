@@ -40,7 +40,7 @@ To save frames as a picture instead (this is how agents and reviewers look at an
 ```bash
 node studio/tools/stills.mjs frames channel-system/episodes/<slug>
 ```
-It writes `render/frames.jpg` in the episode folder: the first frame, the middle of every shot and the last second. `--t 0,3,9.5` picks moments, `--every 10` samples the whole episode. It needs a browser driver, once, in `studio/`: `npm install --no-save playwright-core` uses the Chrome or Edge already installed (set `CHROME_PATH` if it is somewhere unusual); or `npm install --no-save playwright` and `npx playwright install chromium` for Playwright's own.
+It writes `render/frames.jpg` in the episode folder: the first frame, the middle of every shot and the last second. `--t 0,3,9.5` picks moments, `--every 10` samples the whole episode. It needs a browser driver, once, in `studio/`: `npm install --no-save playwright-core` uses the Chrome or Edge already installed (set `CHROME_PATH` if it is somewhere unusual); or `npm install --no-save playwright` and `npx playwright install chromium` for Playwright's own. The sheet draws each frame in a small iframe and can drop an overlay or a colour grade that the video has (13 Nov 2026: the counter of Poppi `c3s20b` and its red grade were missing on the sheet, present in the render). Before calling a missing overlay a fault, render those few seconds: `cd studio && npx --yes hyperframes@0.9.26 render --start <s> --end <s> --quality draft -o <scratch>.mp4`.
 
 What covers what, read from the real picture (about half a minute for a 13-minute episode):
 ```bash

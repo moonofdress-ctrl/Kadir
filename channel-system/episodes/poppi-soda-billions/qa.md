@@ -1,31 +1,34 @@
 # QA
 
-Reviewed 13 Nov 2026 by the QA reviewer, from frames of the build (scratch voice and sound mix, 13:03, 317 shots). No render exists. The user waived Gate 2 and the Look gate for this episode, so this review is the only one before the full render; the user sees the result at Gate 3.
+Reviewed 13 Nov 2026 by the QA reviewer, from frames of the current build: Lawrence (ElevenLabs) voice, mix made with `--tighten`, 12:04, 316 shots. No full render exists. The user waived Gate 2 and the Look gate for this episode, so this review is the last one before the full render; the user sees the result at Gate 3. This replaces the review of the older 13:03 scratch-voice build.
 
-Sheets looked at (all in `render/`): `qa_open_01`-`05` (0-50 s, one frame a second), `qa_all_01`-`20` (one frame per shot to 9:46; the tool timed out after sheet 20), `qa_rest_01`-`04` and `qa_end_01` (9:48-12:18), `qa_tail_1`-`5` (12:19 to the end, last 30 s every 3 s), `qa_check_1`-`4` (the art directors' flagged names), `qa_fixed.jpg` and `qa_sharks.jpg` (the fixes below, after the rebuild).
+Sheets looked at (all in `render/`, not in git): `qa_open_01`-`05` (0-50 s, one frame a second), `qa_all_01`-`06`, `qa_b00_*`, `qa_b01_*`, `qa_b02_01`, `qa_c1_*`, `qa_b03_01`, `qa_c2_*`, `qa_rest_00`-`03`, `qa_b05` (one frame in the middle of every shot, 0:00 to the end; the sheet tool timed out several times, so the run is split over these files), `qa_tail` (the last 30 s, every 3 s), `qa_fixed_1`-`5` (the fixes below, after the rebuild).
+
+The contact sheet drops some overlays and grades on some frames (cards, lower thirds, counters and the night grades come out grey or flat on `qa_open_*` and `qa_all_*`). Checked with draft renders of a few seconds (scratch folder, not in the repo): 0-24 s (name strips, the "We know what they don't" card, the $1.95B counter and the dark grade all show), 4:02.9-4:06.6, 4:24.9-4:32.7, 5:05.3-5:08.9, 6:05.1-6:06.7, 10:29-10:33.
 
 ## Retention lint (after the fixes)
 
 ```
-Retention lint: poppi-soda-billions  (13:03, 317 shots, 2052 words)
+Retention lint: poppi-soda-billions  (12:04, 316 shots, 2035 words)
 
   ok    H1  Opens on a scene, not a card or logo         scene
   ok    H2  The big number on screen in the first 30s    yes
-  ok    H3  New picture every ~3s in the first 50s       22 setups, one per 2.3s
-  ok    H4  Title question on a card by 0:45             0:37
-  ok    H5  First character line by 0:25                 0:15
-  ok    H6  Anchor motif planted in the first minute     word on the can at 0:15
+  ok    H3  New picture every ~3s in the first 50s       24 setups, one per 2.1s
+  ok    H4  Title question on a card by 0:45             0:35
+  ok    H5  First character line by 0:25                 0:14
+  ok    H6  Anchor motif planted in the first minute     word on the can at 0:14
   ok    H7  The story's person, close and named, by 0:12 0:03
   ok    H8  No chapter card, chart or lesson before 0:45 ok
-  ok    P1  Average shot length                          2.5s
-  ok    P2  Longest stretch with nothing new on screen   6.0s at 7:00
-  ok    P3  Camera varies between shots                  0 repeats, 0/272 still
-  ok    P4  12 or more shots in the first 30s            15 shots
+  ok    J1  Every shot says what it explains             0 of 316 shots without "explains"
+  ok    P1  Average shot length                          2.3s
+  ok    P2  Longest stretch with nothing new on screen   5.3s at 1:05
+  ok    P3  Camera varies between shots                  0 repeats, 2/271 still
+  ok    P4  12 or more shots in the first 30s            16 shots
   ok    P5  Few shots longer than 10s                    none
-  ok    C1  A text card about every 20s                  45 cards, one per 17s
-  ok    C2  Cards take 8-16% of the runtime              12.1%
+  ok    C1  A text card about every 20s                  45 cards, one per 16s
+  ok    C2  Cards take 8-16% of the runtime              12.8%
   ok    C3  No card longer than 5.5s                     ok
-  ok    S1  A character speaks every 30s                 118 skits, longest gap 32s at 6:09
+  ok    S1  A character speaks every 30s                 118 skits, longest gap 30s at 5:42
   ok    S2  Dialogue is a quarter of the words           27%
   ok    S3  Two skits or more in every chapter           ok
   ok    M1  Anchor motif keeps returning                 word on the can: 28 times
@@ -37,120 +40,95 @@ Retention lint: poppi-soda-billions  (13:03, 317 shots, 2052 words)
   ok    X1  Last shot is a callback                      Benny alone in the front row, the opening's stage
   ok    T1  No intro phrases or calls to action          none
   ok    T2  No financial advice wording                  none
-  ok    T3  Short spoken sentences                       average 9.8 words, 1 over 25
+  ok    T3  Short spoken sentences                       average 9.8 words, 2 over 25
   ok    T4  Viewer addressed directly                    4 lines
-  ok    T5  Title question spoken by 0:45                0:37
+  ok    T5  Title question spoken by 0:45                0:35
   ok    T6  The promise and the chain are written        question yes, answer yes, 6 links in the chain
-  ok    V1  Speaking pace                                157 wpm
-  ok    V2  Length 12-15 minutes                         13:03
-  ok    G1  Pictures show something happening            255 of 272 (94%)
-  ok    G2  Companies and institutions are living things 161 pictures
+  WARN  V1  Speaking pace                                169 wpm   -> want 150-165 wpm (reference: 157)
+  ok    V2  Length 12-15 minutes                         12:04
+  ok    G1  Pictures show something happening            254 of 271 (94%)
+  ok    G2  Companies and institutions are living things 159 pictures
   ok    G3  Faces fill the frame in skits                116 of 118 skits
   ok    G4  Facts are written inside the scene           28 signs, tags, labels and badges
   ok    G5  The hidden piggy bank                        6 pictures
   ok    D1  Half of the picture time is dark and lit     100%
   ok    D2  Dark, but the figures can be seen            ok
-  ok    K1  Six or more places in every chapter          70 places in all
+  ok    K1  Six or more places in every chapter          72 places in all
   ok    K2  No place more than three times a chapter     ok
-  ok    W1  Two pictures in three have nothing to read   69 of 272 carry text (25%)
+  ok    W1  Two pictures in three have nothing to read   68 of 271 carry text (25%)
   ok    W2  One thing to read at a time                  ok
   ok    L1  Written props are readable                   ok
   ok    A1  Sound mix is made and up to date             ok
-  ok    A2  Loudness -14 LUFS                            -14.01 LUFS
-  ok    A3  Peaks under -1 dBTP                          -1.1 dBTP
+  ok    A2  Loudness -14 LUFS                            -14.02 LUFS
+  ok    A3  Peaks under -1 dBTP                          -1.03 dBTP
   ok    A4  Quiet music bed under the voice              19 dB under (house bed (made in code))
   ok    A5  Music is credited                            ok
-  WARN  A6  No dead air in the voice                     30 pauses over 0.25s, longest 0.3s at 0:55   -> want 10 or fewer (mix.mjs --tighten cuts them)
-  ok    A7  Effects are rare                             57 (4.4 a minute)
+  WARN  A6  No dead air in the voice                     33 pauses over 0.25s, longest 0.39s at 2:27   -> want 10 or fewer (mix.mjs --tighten cuts them)
+  ok    A7  Effects are rare                             57 (4.7 a minute)
+  ok    A8  Effects on at most one cut in five           18% of 316 shots
 
-  0 failed, 1 warnings, 52 passed
+  0 failed, 2 warnings, 53 passed
 ```
 
-Before the fixes: 0 failed, 2 warnings (P3: c5s32 to c6s01, push_in on both sides of the chapter card; A6). P3 is fixed. A6 (30 pauses over 0.25 s, the longest 0.3 s) is a warning only: `mix.mjs --tighten` would cut them but retimes every shot, so it is left to the editor's judgement before the render (fix 15).
+The two warnings are known and accepted: V1 (Lawrence reads at 169 wpm; the voice was chosen by the user) and A6 (33 pauses over 0.25 s after `--tighten`, the longest 0.39 s: short breaths, not dead air).
 
 ## Layout check
 
-Before: `3:51 c3s17 "WELCOME" is covered by text "CANCELLED"` — a fault (both are words the viewer reads; text on text). Fixed: the CANCELLED banner now hangs across the hall's doors under the WELCOME sign (checked at 3:51.4).
-After: `0 fault(s)`.
+Before and after the fixes: `0 fault(s)` (271 moments looked at).
 
 ## Review
 
 | Check | Result | Timestamp / shots |
 |---|---|---|
-| First frame is the thumbnail's scene (A: c1s01) | pass | 0:00, Allison at the lit table, bottle with tag face-down. (The grey frame at 0 s on the one-a-second sheet is the sheet's own first capture; a frame at 0.05 s shows the scene.) |
-| Opening is a scene; named person close by 0:12; no chart, list or lesson before 0:45 | pass | Allison close and named at 0:04, Oza at 0:11; title card 0:37; first chapter-like card only after 0:45 |
-| Understandable with the sound off | pass | pitch, kitchen, tank, rebrand, TikTok, court, buyer: each is acted by figures and living things |
-| Film, not slide: dark with one light, sizes change, no two neighbouring same-size frames facing camera | pass, with the open items 11-13 | D1 100%; the kitchen in CH1 (0:42-0:50) and CH3 (4:07, 4:20) is lit flat, which the format book allows for "the viewer's own world" |
-| Places tagged `place` look different from the set's other uses | pass, one weak | "school gym" (c5k22a-d, 7:15-7:22) reads as a dim room with bokeh, not a gym (open 13); "empty hall" c4s16 is the same WELCOME hall as CH3's convention hall, a deliberate callback |
+| First frame is the thumbnail's scene | pass | 0:00 c1s01, Allison on the lit pitch stage, MOTHER bottle on the table (the grey first cell of the one-a-second sheet is the sheet's own capture; the render shows the scene) |
+| Opening is a scene; named person close by 0:12; no chart, list or lesson before 0:45 | pass | Allison close with her name strip at 0:04-0:05, Oza named at 0:10; the only number is the $1.95B counter at 0:19; title card 0:35 |
+| Understandable with the sound off | pass | pitch, kitchen, tank, rebrand, TikTok, court, buyer are acted by figures and living things |
+| Film, not slide | pass | the render frames are dark with one light (D1 100%); sizes change from cut to cut; no two neighbouring same-size frames facing camera found |
+| Places tagged `place` look different | pass, one weak | "school gym" (c5k22a-d, 6:43-6:48) still reads as a dim room with coloured dots (open 12) |
 | Each chapter is a scene | pass | none is narration over props with one joke at the end |
-| Every shot a small joke; figures that only stand and talk | pass, minor | 5:02 c4s04 a can alone on a dark shelf while "$2.49" is only spoken; 11:05 c8s02, 12:07-12:15 c8s14/c8s15, 12:43 c8s23: the can is tiny at the bottom edge, half under the subtitle or behind the desk (open 12) |
-| Story holds; question answered in the opening's words | pass | 12:54 card repeats "So how did Poppi make $1.95 billion?"; every chapter change works with because/so/but (CH4→5 "Because PepsiCo had tried", CH5→6 "But on Poppi's can", CH6→7 "The buyer could finally say its number", CH7→8 "But one piece of that price was never cash") |
-| Allegations, models, forecasts named | pass | lawsuit claims are cards titled "the plaintiff's allegation"; Fortune's payout "reported", "no filing shows it"; Bloomberg's earnout attributed |
-| Chapters open on a turn and end on a hook; no click-away stretch | pass | no stretch found; longest still stretch 6.0 s at 7:00 (P2 ok) |
-| DEVICES paid off; motif changes each time | pass | MOTHER bottle → poppi can → GUT HEALTH gone (8:23) → a can that "just says soda" (12:15) → $1.95B tag torn to $1.65B (10:08) → coin → plain can with no word on the opening table (12:57); Oza's briefcase → tower (9:41-9:54) → lit empty chair (12:59) |
-| Stops on the last line with a callback picture | pass | Benny alone in the front row of the opening stage, 13:00 |
-| Another channel's look, logos, real brand designs | pass, one note | no logos. The COCA-COLA giant (6:55, c5s30a) is a red can with the engine's straight white band and the name in block letters: not Coca-Cola's script or wave, acceptable. OLIPOP and PEPSICO are names written on living things, as the format book asks |
-| Real people | pass | Allison, Stephen, Oza, Laguarta are drawn as guest figures with name strips; the Sharks are shadow figures; no real person speaks (skit lines belong to the cast) |
-| Guest figures the same in every chapter | pass | Allison (blonde, coral dress) 0:03 / 0:42 / 4:07 / 4:22 / 10:32 / 12:28; Stephen (beard, green check jacket) 0:53 / 1:22 / 4:29 / 10:32 / 12:33; Oza (grey sides, black suit) 0:11 / 2:07 / 2:52 / 3:19 / 4:46; Laguarta (white hair, grey suit, name strip) 7:25 / 9:35. No drift found |
-| Something moves in every shot over 3 s | pass | P3 0 still; moves seen on the sheets |
-| Cropped text, overlaps, empty background, figure off the floor | fixed 8 of 8 found that are storyboard edits; see fixes 1-9 | the art directors' flagged names are judged in the next table |
-| Too dark to read on a phone | fixed | 1:53-1:58 c2s10b/c2s10c: the five Sharks' shadow figures were invisible, so the shots read as empty chairs (fix 9) |
-| Sound | not judged by ear | A1-A7 ok except the A6 warning; mix -14.01 LUFS, -1.1 dBTP. The user should listen for music that fights the voice at Gate 3 |
-| `factcheck.md` complete; on-screen figures match | pass | 74 claims, 0 removed; checked on screen: $1.95B, $400K/$4M, $1.6M, $500,000, $4M, $75K / $20M, $13M, $25M, +148%, $25,000, $1.85B, $8.9M, 2 g / 3 g / 5 g, $300M, $85/$15, $1.65B, $278M/$117M/$12M, $2.49, 26 Sep, 17 Mar, 19 May, 9 Dec, 5 Mar |
-
-### The names the art directors flagged
-
-| Name | Shot, time | What renders |
-|---|---|---|
-| blank label `"label": ""` | c2s15b, 3:05 | a bottle with an empty label: reads as "the word is gone", as meant. ok |
-| long counter $20,000,000 → $75,000 | c3s20b, 4:24 | fits inside the frame at its widest ($10,181,259 at 4:25); not cut. ok |
-| cheque and briefcase | c4s01, 4:46 | both draw; the can stood on the cheque's "$13M" at the end of its move. Fixed (fix 4) |
-| doc card over `desk_top` | c4s14, 6:10 | the TODAY card appears with the quote at 6:12 and is readable. ok |
-| giant's `offer` pose, gym skit | c5k22a-d, 7:15 | the pose draws (hands out, low); c5k22c put the giant's mouth under the subtitle. Fixed (fix 5) |
-| `car` as a courier van | c5s32, 7:40 | draws a white sedan, with no envelope; the script asks for a courier van carrying one envelope. Open (fix 11) |
-| `sweat` on a can | c6k24a/c, 8:04-8:09 | sweat drops show on the can. ok |
-| `mug` / `espresso` hand props | c6k25b 8:28, c6k26a 8:41 | Martha holds a mug, Hal an espresso cup. ok |
-| 0.6 s shot | c6k24c, 8:09 | 0.8 s on the build, carries the one-word line "Allegedly!" and reads. ok |
-| cheque, train and car moves | c7s43a 10:18, c7s43d 10:25, c7k33a 10:51 | the cheque, the train with the can and the racing car all move and read. ok |
-| FORTUNE newspaper | c7s44b, 10:33 | a newspaper with a face and FORTUNE in plain block letters, no masthead copy. ok |
-| open `wallet` | c8s10, 11:47 | the giant holds a small brown open wallet; readable but small. ok |
-| the can's `magnifier` | c8s01, 11:02 | the magnifier sat over the can's face and the can stood behind the cheque. Fixed (fix 8: magnifier removed, can beside the cheque) |
-| `empty: true` seats | c8s26/c8s29, 12:51-13:03 | empty seats, Benny alone in the front row. ok |
-| Jetty bottle colour | c8s19/s20/k37a/k37b, 12:26-12:43 | the same magenta bottle in all four shots, labelled JETTY once. ok |
-
-### Seams between chapters
-
-- CH5 → CH6 (7:40-7:48): c5s32 and c6s01 were the same night highway with push_in on both sides of the chapter card. c6s01 now pans left (fix 2); the same road on both sides stays, as the road to the court, and is acceptable.
-- Other seams: no same place with the same move across a card; no figure changes look between chapters.
+| Every shot a small joke | pass, minor | 1:41 c2s09c Allison half off the left edge; cans small at the bottom edge in c8s02, c8s23, c7s43d (open 13) |
+| Story holds; question answered in the opening's words | pass | 11:54 card repeats "So how did Poppi make $1.95 billion?", answered "It changed the word on the can, not the soda... and the number was never quite that big"; chapter turns work as because/so/but |
+| Allegations, models, forecasts named | pass | "The plaintiff's allegation" doc card, Fortune's figure "reported... No filing shows it", Bloomberg and Ken Shea attributed |
+| Chapters open on a turn, end on a hook; no click-away stretch | pass | longest still stretch 5.3 s (P2) |
+| DEVICES paid off; motif changes | pass | MOTHER → poppi → GUT HEALTH → NO FAULT (8:12, now readable) → $1.95B tag → $1.65B (10:04) → $12M → plain can on the opening table (11:59) |
+| Stops on the last line with a callback | pass | Benny alone in the front row at 12:01-12:04 |
+| End screen room (FORMAT_BOOK 8) | fixed, one open | the last 20 s had faces in the right half (c8k37b bottle, c8s23 coin, c8s24 giant, c8s25/c8s27 can, c8s26/c8s29 Benny); moved left. The c8t06 text card (11:54.7-11:58.8) is centred by the engine (open 10) |
+| Another channel's look, logos | pass | no logos; COCA-COLA, OLIPOP, PEPSICO are block-letter names on living things |
+| Real people | pass | Allison, Stephen, Oza, Laguarta are guest caricatures with name strips; the Sharks are shadow figures; no real person speaks an invented line |
+| Something moves in every shot over 3 s | pass | P3 2/271 still, both short |
+| Cropped text, overlaps, figure off the floor | fixed 7 found; see fixes 1-7 | |
+| Rolling counters land on their number | pass, minor | c3s20b lands on $75,000; c8s06 lands on "$ 12M" with an empty digit slot after the "$" (open 11) |
+| Sound | not judged by ear | A1-A8 ok except the two warnings; -14.02 LUFS, -1.03 dBTP. The user is listening to `render/poppi-mix-lawrence.mp3` for music that fights the voice |
+| `factcheck.md` complete; on-screen figures match | pass | 88 lines, every row verified or corrected; checked on screen: $1.95B, $400K, $4M, $1.6M, $500,000, $13M, $75,000, $25M, +148%, $4M/$500M, $25,000, $1.85B, $8.9M, 2 g / 3 g / 5 g, $300M, $85/$15, $1.65B, $278M/$117M/$12M, $4 of $100, $2.49, DEC 9 SUNDAY, MAR 14 FRIDAY, MAR 17 MONDAY, MAY 19 MONDAY, SEP 26 FRIDAY (weekdays checked against 2018 and 2025 calendars) |
 
 ## Fixes
 
-Made by QA in the storyboard, rebuilt and checked on frames (`render/qa_check_1.jpg`, `qa_fixed.jpg`, `qa_sharks.jpg`):
+Made by QA in the storyboard, rebuilt, lint and layout check rerun (0 failed, 0 faults), checked on `qa_fixed_1`-`5`:
 
-1. 3:51 c3s17 (ch3): CANCELLED banner covered WELCOME (layout fault). Banner moved to the doors, x 760, y 430, w 520. Done.
-2. 7:48 c6s01 (ch6): camera repeat across the chapter card (P3). push_in → pan_left. Done.
-3. 7:48 c6s01 (ch6): the class-action note's label "CLASS ACTION" is written twice on the note and both copies were cut ("SS ACTION / CLASS ACT"). Label "SUIT". Done.
-4. 4:46-4:51 c4s01 (ch4): the can stood on the cheque's "$13M" when the cheque arrived. Cheque ends at x 1060, can at x 1560. Done.
-5. 7:17 c5k22c (ch5): close shot left the giant's mouth under the subtitle on "You're popular vinegar." Focus y 560 → 780. Done.
-6. 10:03 c7s42a (ch7): the $85/$15 bars stood behind the office desk under the red grade; the $15 bar and TAX BENEFIT were unreadable. Grade night, light moved left, bars at x 160, w 580. Done.
-7. 10:08 c7s42b (ch7): the torn-tag close cut the can's face at the bottom edge. Focus y 520 → 680. Done.
-8. 11:02 c8s01 (ch8): the magnifier covered the can's face and the can stood behind the cheque. Magnifier removed, can moved to x 1180. Done.
-9. 1:53-1:58 c2s10b/c2s10c (ch2): the Sharks' shadow figures were invisible (two dark frames of empty chairs while "the investors pushed hard"). Light lowered onto them, `dark` 0.5 → 0.35. Done.
+1. 8:31-8:36 c6s19, c6s20 (ch6, art-director): the flipping calendar showed "MAR 5 / FRIDAY" for about a second (5 March 2025 was a Wednesday; the old page had no weekday, so the new page's FRIDAY showed under it) and "MAR 14 / MONDAY" the same way. `from` pages now carry `"dow": "WEDNESDAY"` and `"dow": "FRIDAY"`. Done.
+2. 4:24.9 c4b01 (ch4, art-director): the evidence board opened on 2 s of empty cork, and at zoom 1.7 the string label "led the $13M round" was cut to "und". First node on word 0, `"zoom": 1.3`. Done.
+3. 4:02.9 c3s20a (ch3, art-director): the cash pile for "$20 million of revenue" stood below the frame, only a strip of green under the subtitle. Pile on the counter, y 960 → 690. Done.
+4. 5:05.3 c4s08 (ch4, art-director): the $4M/$500M bars stood behind the desk, their labels in dark ink on a dark wall, the $500M on a wall picture. Bars at x 100, y 460, h 440, values in green (#6fd38a), light moved onto them. Done.
+5. 6:05 c5s28b (ch5, art-director): the SOULBOOST label sat under the subtitles. Focus y 640 → 780. Done.
+6. 8:12 c6s15 (ch6, art-director): the NO FAULT label (a motif payoff) sat under the subtitles. Focus y 640 → 760. Also 7:21 c6s05: GUT HEALTH can scale 0.55 → 0.75 (the label is still small; acceptable).
+7. 11:45-12:04 c8k37b, c8s23, c8s24, c8s25, c8s26, c8s27, c8s29 (ch8, art-director): faces in the right half during the last 20 s, where the end screen goes. Figures and lights moved to x 520-760; c8s29 got `"focus": [960, 760]` so the camera no longer centres Benny. Done.
 
-Open (not storyboard fixes I could verify, or too small to hold the render):
+The rules that would have prevented 1, 2 and 7 are in `.claude/agents/art-director.md` 1f; the lesson is in `channel-system/LESSONS.md`.
 
-10. art-director (rule written, `art-director.md` 1f): the same faults by name are now a framing rule for the next episode.
-11. 7:40 c5s32: the script's courier van with one envelope is drawn as a white sedan with nothing in it. Scene builder: a `van` prop (or the car with an envelope on the roof); minor, does not block the render.
-12. 11:05 c8s02, 12:07 c8s14, 12:11 c8s15, 12:43 c8s23: the can is small at the bottom edge, half under the subtitle or behind the desk front. Art director: raise the can (y about 900) or scale 0.55; minor.
-13. 7:15-7:22 c5k22a-d: the "school gym" reads as a dim room with coloured dots; a hoop or court lines would make it a gym. Scene builder; minor.
-14. 9:50 c7k30b and 12:22 c8s18: the $1.95B tag overlaps the can's edge, so "$" is partly hidden at mid-shot. Art director: tag on the free side; minor.
-15. Editor: A6, 30 pauses over 0.25 s (longest 0.3 s). Decide on `mix.mjs --tighten` before the render; if used, rebuild, rerun the lint and the layout check, and look at one sheet with `--t`.
-16. User at Gate 3: listen to the mix for music that fights the voice; QA cannot hear it.
+Open (minor, do not block the render):
+
+8. Packager: start the end screen at 11:59 (after the c8t06 card), which leaves 5.5 s with the right half clear.
+9. 9:06 c7k30b and 11:28 c8s18: the $1.95B tag overlaps the can's edge, the "$" partly hidden (from the last review). Scene builder: draw the tag on the free side.
+10. Scene builder: a text card cannot be set to the left half; c8t06 sits across the end-screen area for 4 s.
+11. Scene builder: the rolling counter (`roll: true`) keeps an empty digit slot when the number gets shorter ("$ 12M" at 10:29).
+12. 6:43-6:48 c5k22a-d: the "school gym" still needs a hoop or court lines (scene builder).
+13. Art director: cans drawn small at the bottom edge (c8s02 10:14, c8s23 11:46, c7s43d 9:38); the `facepalm` pose puts a round hand over one eye and reads like a monocle (c1s15 0:43, c3s20c 4:06).
+14. User at Gate 3: listen to the mix (`render/poppi-mix-lawrence.mp3`); QA cannot hear it.
 
 ## What I could not judge
 
-- The sound: loudness and peaks pass the lint, but the balance of music and voice, the effects and the scratch voice's delivery need ears.
-- Motion between frames: the sheets show still frames; easing, timing of moves inside a shot and the subtitles' timing were judged only from the lint (P2, P3) and a few frames per shot.
-- Frames from 9:46 to 9:48 and any shot whose middle frame fell on a card were seen only at their mid-point.
+- The sound by ear: balance of music and voice, effects, Lawrence's delivery.
+- Motion between frames: judged from one frame per shot, the opening at one a second and the six short renders.
+- The full MP4: no render exists; loudness of the final file must be measured after the render (`ffmpeg -i <file> -af ebur128=peak=true -f null -`).
 
 Verdict: pass
