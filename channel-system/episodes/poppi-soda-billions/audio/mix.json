@@ -1,0 +1,383 @@
+{
+  "signature": "9cd9801823218138",
+  "total": 783.229,
+  "lufs": -14.01,
+  "true_peak_db": -1.1,
+  "limiter": {
+    "max_cut_db": 7.3,
+    "pct_cut_over_1db": 1.33
+  },
+  "voice": {
+    "speakers": {
+      "N": {
+        "clips": 80,
+        "gain_db": 0
+      },
+      "SODA": {
+        "clips": 43,
+        "gain_db": -2.5
+      },
+      "BENNY": {
+        "clips": 23,
+        "gain_db": -6.9
+      },
+      "MARTHA": {
+        "clips": 21,
+        "gain_db": -2.3
+      },
+      "HAL": {
+        "clips": 19,
+        "gain_db": -3.3
+      },
+      "CHAD": {
+        "clips": 18,
+        "gain_db": -6.5
+      },
+      "REGGIE": {
+        "clips": 6,
+        "gain_db": -3.1
+      },
+      "GIANT": {
+        "clips": 14,
+        "gain_db": -1.9
+      }
+    },
+    "clips_with_silent_edges": 0
+  },
+  "music": {
+    "source": "house bed (made in code)",
+    "files": [],
+    "beds": [
+      "steady",
+      "calm",
+      "uneasy",
+      "steady",
+      "calm",
+      "uneasy",
+      "steady",
+      "calm"
+    ],
+    "climax_chapters": [
+      6,
+      7
+    ],
+    "db_under_voice": 19,
+    "uncredited": []
+  },
+  "effects": {
+    "count": 57,
+    "per_minute": 4.4,
+    "list": [
+      {
+        "t": 17.49,
+        "name": "card",
+        "why": "c1t01 card"
+      },
+      {
+        "t": 37.559,
+        "name": "card",
+        "why": "c1t02 card"
+      },
+      {
+        "t": 64.309,
+        "name": "card",
+        "why": "c1t03 card"
+      },
+      {
+        "t": 74.348,
+        "name": "card",
+        "why": "c1t04 card"
+      },
+      {
+        "t": 99.909,
+        "name": "chapter",
+        "why": "c2c00 chapter"
+      },
+      {
+        "t": 102.185,
+        "name": "card",
+        "why": "c2t01 card"
+      },
+      {
+        "t": 125.529,
+        "name": "card",
+        "why": "c2t02 card"
+      },
+      {
+        "t": 147.406,
+        "name": "card",
+        "why": "c2t03 card"
+      },
+      {
+        "t": 175.576,
+        "name": "card",
+        "why": "c2t04 card"
+      },
+      {
+        "t": 177.409,
+        "name": "paper",
+        "why": "c2s14c doc"
+      },
+      {
+        "t": 187.116,
+        "name": "chapter",
+        "why": "c3ch chapter"
+      },
+      {
+        "t": 188.516,
+        "name": "card",
+        "why": "c3t01 card"
+      },
+      {
+        "t": 200.088,
+        "name": "paper",
+        "why": "c3s15c doc"
+      },
+      {
+        "t": 205.586,
+        "name": "card",
+        "why": "c3t02 card"
+      },
+      {
+        "t": 226.746,
+        "name": "card",
+        "why": "c3t03 card"
+      },
+      {
+        "t": 245.736,
+        "name": "card",
+        "why": "c3t04 card"
+      },
+      {
+        "t": 258.751,
+        "name": "card",
+        "why": "c3t05 card"
+      },
+      {
+        "t": 282.161,
+        "name": "chapter",
+        "why": "c4c00 chapter"
+      },
+      {
+        "t": 284.198,
+        "name": "card",
+        "why": "c4t01 card"
+      },
+      {
+        "t": 316.481,
+        "name": "card",
+        "why": "c4t02 card"
+      },
+      {
+        "t": 340.821,
+        "name": "card",
+        "why": "c4t03 card"
+      },
+      {
+        "t": 372.333,
+        "name": "paper",
+        "why": "c4s14 doc"
+      },
+      {
+        "t": 381.529,
+        "name": "card",
+        "why": "c4t04 card"
+      },
+      {
+        "t": 388.859,
+        "name": "chapter",
+        "why": "c5ch chapter"
+      },
+      {
+        "t": 390.259,
+        "name": "card",
+        "why": "c5t01 card"
+      },
+      {
+        "t": 412.849,
+        "name": "card",
+        "why": "c5t02 card"
+      },
+      {
+        "t": 442.599,
+        "name": "card",
+        "why": "c5t03 card"
+      },
+      {
+        "t": 447.692,
+        "name": "paper",
+        "why": "c5s31b doc"
+      },
+      {
+        "t": 458.103,
+        "name": "card",
+        "why": "c5t04 card"
+      },
+      {
+        "t": 463.533,
+        "name": "chapter",
+        "why": "c6c00 chapter"
+      },
+      {
+        "t": 465.607,
+        "name": "card",
+        "why": "c6t01 card"
+      },
+      {
+        "t": 474.223,
+        "name": "paper",
+        "why": "c6s04 doc"
+      },
+      {
+        "t": 489.923,
+        "name": "card",
+        "why": "c6t02 card"
+      },
+      {
+        "t": 491.644,
+        "name": "paper",
+        "why": "c6s08 doc"
+      },
+      {
+        "t": 494.109,
+        "name": "paper",
+        "why": "c6s09 doc"
+      },
+      {
+        "t": 498.603,
+        "name": "paper",
+        "why": "c6s10 doc"
+      },
+      {
+        "t": 512.09,
+        "name": "card",
+        "why": "c6t03 card"
+      },
+      {
+        "t": 531.83,
+        "name": "card",
+        "why": "c6t04 card"
+      },
+      {
+        "t": 549.382,
+        "name": "card",
+        "why": "c6t05 card"
+      },
+      {
+        "t": 564.454,
+        "name": "card",
+        "why": "c6t06 card"
+      },
+      {
+        "t": 568.784,
+        "name": "chapter",
+        "why": "c7c00 chapter"
+      },
+      {
+        "t": 571.694,
+        "name": "card",
+        "why": "c7t01 card"
+      },
+      {
+        "t": 580.244,
+        "name": "card",
+        "why": "c7t02 card"
+      },
+      {
+        "t": 596.095,
+        "name": "card",
+        "why": "c7t03 card"
+      },
+      {
+        "t": 598.043,
+        "name": "paper",
+        "why": "c7s41 doc"
+      },
+      {
+        "t": 629.679,
+        "name": "card",
+        "why": "c7t04 card"
+      },
+      {
+        "t": 646.78,
+        "name": "paper",
+        "why": "c7s44f doc"
+      },
+      {
+        "t": 655.029,
+        "name": "card",
+        "why": "c7t05 card"
+      },
+      {
+        "t": 658.829,
+        "name": "chapter",
+        "why": "c8c00 chapter"
+      },
+      {
+        "t": 660.498,
+        "name": "card",
+        "why": "c8t01 card"
+      },
+      {
+        "t": 670.499,
+        "name": "card",
+        "why": "c8t02 card"
+      },
+      {
+        "t": 691.687,
+        "name": "card",
+        "why": "c8t03 card"
+      },
+      {
+        "t": 702.825,
+        "name": "paper",
+        "why": "c8s09 doc"
+      },
+      {
+        "t": 722.765,
+        "name": "card",
+        "why": "c8t04 card"
+      },
+      {
+        "t": 745.005,
+        "name": "card",
+        "why": "c8t05 card"
+      },
+      {
+        "t": 756.915,
+        "name": "paper",
+        "why": "c8s22 doc"
+      },
+      {
+        "t": 772.229,
+        "name": "card",
+        "why": "c8t06 card"
+      }
+    ]
+  },
+  "dead_air": {
+    "pauses_over_250ms": 30,
+    "longest": [
+      {
+        "t": 55.38,
+        "d": 0.3
+      },
+      {
+        "t": 127.53,
+        "d": 0.3
+      },
+      {
+        "t": 283.91,
+        "d": 0.3
+      },
+      {
+        "t": 372.32,
+        "d": 0.3
+      },
+      {
+        "t": 592.48,
+        "d": 0.3
+      }
+    ]
+  }
+}
