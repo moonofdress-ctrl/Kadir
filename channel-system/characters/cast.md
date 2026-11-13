@@ -17,7 +17,14 @@ Model sheets drawn by the rig are in `sheets/` (one per character and `cast_line
 
 Companies, markets and institutions are not cast members: they are **living things** (`"thing": "box"`, `"chip"`, `"dome"`...), listed in `STYLE_GUIDE.md`.
 
-Any other name gives a background figure with a palette picked from the name. A guest caricature is a figure with a `style` override (hair, glasses, clothes); see `STYLE_GUIDE.md` for the limits.
+**An episode's own people** (rig v2, 13 Nov 2026): the storyboard header gets a `"cast"` table, and each name in it is drawn from the same skeleton, with no engine change:
+```json
+"cast": { "JENSEN_HUANG": { "build": "normal", "jaw": "square", "nose": "straight", "age": "old", "hair": "#d9dce2", "hairStyle": "swept", "skin": "#e8c5a9",
+  "top": "#1b1b1f", "topStyle": "jacket", "legs": "#2b2b33", "shoes": "#2b2b2b", "shoeStyle": "dress", "extras": ["glasses"] } }
+```
+Keys: `build` (normal, tall, broad, slight, round), `jaw` (oval, square, round, long, heart, soft), `nose` (button, straight, long, hook, wide, pointed, round), `ears` (big, small), `age` (young, adult, middle, old), `hair` and `hairStyle` (cowlick, slick, bun, side_part, bob, long, short, cap with `cap`, bald, curly, swept, buzz, ponytail, wavy), `skin`, `top` and `topStyle` (hoodie, suit, suit3, cardigan, tee, dress, checked, opensuit, turtleneck, jacket, polo, apron, coat, scrubs, blouse), `inner`, `tie`, `apron`, `legs` and `legStyle` (pants, jeans, shorts, bare), `shoes` and `shoeStyle` (sneaker, dress, hightop, flat), `extras` (freckles, glasses, glasses_small, shades_up, moustache, beard, stubble, goatee, grey_temples, heavy_brows, lanyard, loud_pattern, bolt_pattern, watch, pearls, earrings, pocket_square, chain, wrinkles). The rules for a good figure are in `STYLE_GUIDE.md`, Figures. Check them on the frame sheet of the first build; a person who will return goes into the engine's `CAST` and gets a model sheet (`node studio/tools/stills.mjs sheets`).
+
+Any other name gives a background person whose look is picked from the name (the same name always gives the same person). A one-shot guest can also be a figure with a `style` override (the same keys); see `STYLE_GUIDE.md` for the limits.
 
 The viewer stand-in for an episode (usually `BENNY`, sometimes `MARTHA`) is named in the storyboard's `"viewer"` field and must own the final shot.
 

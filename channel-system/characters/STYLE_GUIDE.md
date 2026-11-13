@@ -12,23 +12,25 @@ The look is ours. Do not imitate another channel's figures, lettering, palette o
 - **Colour follows the mood** through a grade over the whole shot: `green` euphoria, `red` panic, `sepia` history, `night` aftermath, `gold` money and vaults. Use three or more per episode.
 
 ## Figures
-**The target (13 Nov 2026, after Poppi; the user found the figures childish and too simple).** The rig is being redrawn to this, through `channel-system/engine-requests/2026-11-13-cast-and-places.md`; the user approves the new cast line-up sheet before an episode uses it:
-- Adult proportions: the head about a third of the height, a neck, shoulders, a torso that differs by person (tall, broad, slight).
-- Arms with elbows and hands with four fingers and a thumb, which grip what they hold. No floating mittens.
-- A face with a jaw and cheek shape of its own, ears, a nose that differs by person, hair with volume, eyebrows and mouth that still do the acting.
-- Two tones on skin and clothes (a shadow side), line weight that varies, clothes with collars, seams, pockets, buttons.
-- A body that acts: a walk with legs and swinging arms, sitting, turning, reaching, handing over, idle weight shifts.
+**Rig v2: the adult cast** (13 Nov 2026; the user approved the line-up `sheets/cast_lineup.png` on 13 Nov; the old one is beside it in `sheets/cast_lineup_v1_v2.png`). One skeleton for everybody (`studio/engine/rig.js`):
+- Adult proportions: the head about a third of the height, a neck, shoulders, a torso that differs by person (`build`: normal, tall, broad, slight, round).
+- Arms with elbows and hands with four fingers and a thumb. A held prop sits in a gripping fist and stays upright while the arm moves. No floating mittens (living things keep their white gloves).
+- A face of its own: `jaw` (oval, square, round, long, heart, soft), `nose` (button, straight, long, hook, wide, pointed, round), ears, hair with volume (15 styles), age lines (`age`), facial hair and glasses as `extras`. Eyebrows and mouth still do the acting.
+- Two tones on skin and clothes (a shadow side), a thick outer line and thin inner lines, clothes with collars, seams, pockets and buttons (15 `topStyle`s; trousers, jeans, shorts, bare legs; four kinds of shoe).
+- Fifteen expressions: neutral (a small smile), plain (no smile, for a real person saying something serious), happy, shocked, scared, angry, smug, sad, confused, relieved, deadpan; loud ones for hooks, climaxes and thumbnails: panic, furious, crying, greedy. One clear emotion at a time, changed on the word that causes it.
+- Arm poses: rest, hips, shrug, cheer, point, think, facepalm, hold, phone, wave, present, raise, fold, carry, panic, grab, offer. A pose change has anticipation, overshoot and settle by itself. Mouths move with the words; figures blink, breathe and shift their weight when idle.
+- Things to wear and hold: a `hat` (party, crown, hardhat), a `badge` with a number, and hand props (phone, bill, tablet, mug, stamp, cash, wallet, price tag, pen, placard, briefcase, magnifier, popcorn, calculator, espresso, mop, tape, clipboard). A prop picks a fitting pose by itself.
+- A body that acts (engine-v2, next): a walk with legs and swinging arms, sitting, turning, reaching, handing over.
 - **Movement with weight** (the animation principles, engine-v2): anticipation before a move (a crouch, a wind-up, a breath before a line that turns), overshoot and settle at the end of a move, follow-through on hair, coat tails, ties and loose arms, ease in and ease out, movement on arcs, and a secondary action while talking (a hand that taps, a foot that shifts). Nothing slides at a constant speed. The QA reviewer judges these on the Look gate's draft render.
 
-**Now** (until the redraw lands), one skeleton for everybody (`studio/engine/rig.js`):
-- Squircle head, about 45% of the height. Block body. **Floating mitten hands, no arms.** Short legs, big shoes.
-- Tall white eyes with pupils, thick eyebrows that do most of the acting, a small nose.
-- Eleven everyday expressions: neutral (a small smile), plain (no smile, for a real person saying something serious), happy, shocked, scared, angry, smug, sad, confused, relieved, deadpan. Four loud ones for hooks, climaxes and thumbnails: panic, furious, crying, greedy. One clear emotion at a time, changed on the word that causes it.
-- Hand poses: rest, hips, shrug, cheer, point, think, facepalm, hold, phone, wave, present, raise, carry, panic, grab, offer.
-- Things to wear and hold: a `hat` (party, crown, hardhat), a `badge` with a number (an age, a rank, a count), and hand props (phone, bill, tablet, mug, stamp, cash, wallet, price tag, pen, placard, briefcase, magnifier). A prop picks a fitting pose by itself.
-- Mouths move with the words when a figure speaks. Figures blink and breathe when idle.
-- Each cast member has one signature colour and one signature prop (`cast.md`).
-- Crowds are the same skeleton with palettes picked by number, so they vary but never change between renders.
+**Making a figure good** (13 Nov 2026; the user: "if it can be better, make it a rule"):
+- **The story's people are the cast.** Each episode defines its real people in the storyboard header, `"cast": { "NAME": { traits } }` (keys in `cast.md`), from two or three public traits each. BENNY stays as the viewer; CHAD, HAL, MARTHA and REGGIE come in only when the story has their role.
+- **Tell people apart by silhouette first.** Two figures in one shot differ in at least two of `build`, `hairStyle` and `topStyle`; two named people in one episode never share the same jaw, hair and top. Squint at the frame sheet: if two figures read as one shape, change one.
+- **A figure stands out from its place.** Its top is not in the colour family of the place's `palette` (no teal cardigan on a teal wall); a figure in the place's colour is lost.
+- **Hands hold the subject.** When a line is about an object (a bill, a phone, a contract, a can), the speaker holds it (`prop`), not a floating icon beside them.
+- **Faces read at the size they are drawn.** A figure whose face carries the line is at `scale` 0.5 or more, or in a `medium` or `close` frame; smaller figures are for crowds and wide shots. Poses that cross the face (think, facepalm) go in medium or close shots.
+- **Age and dress are facts.** A 60-year-old gets `age: "old"` and grey or white hair; a CEO's clothes follow their public look (a suit, a turtleneck), never a costume.
+- **A better figure becomes the default.** When a look works on screen (the user or QA says so), its traits go into `cast.md` or the engine's `CAST`, so the next episode starts from it.
 
 ## Living things
 Anything abstract in a story is drawn as a **living thing**: a plain object with the same eyes and mouth as the cast, white gloves, and its name written on it. It can talk, react and hold props like a person.
