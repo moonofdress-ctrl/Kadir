@@ -25,3 +25,18 @@ ElevenLabs' own list (blog, 2026) recommends Dan for documentaries and Robert fo
 
 ## Next step (after the quota resets on 17 Nov)
 Read the same Poppi opening (about 300 characters) with Jon and Michael only, with the same BENNY and SODA, and let the user choose by ear. Listening file now: `all_previews.mp3` (each voice's own free sample, levelled; order and times: Jon 0:00, Michael 0:10, Peter 0:18, Andrew 0:25, David 0:30, George 0:35, Brian 0:40, Daniel 0:47).
+
+## Final round, 13 Nov 2026: two options (still no credits spent)
+Wider pull: 646 English library voices (narrative, educational, documentary, explainer, finance, and the names ElevenLabs' blog recommends). Measured on each voice's free preview: median pitch, pitch movement (expressiveness, semitones), pauses over 0.25 s. Character voices for contrast: BENNY (Liam) 145 Hz, SODA (Charlie) 105 Hz.
+
+| | Michael C. Vincent (uju3wxzG5OhpWcoi3SMy) | Jon (MFZUKuGQUsGJPQjTS4wC) |
+|---|---|---|
+| Library tag | "confident", expressive narrator for explainers and storytelling | "calm", warm and grounded storyteller |
+| Usage | 4.6 B chars a year, 47.5 M in the last 7 days, 1.6 M accounts | 7.3 B a year, 132 M in the last 7 days, 847 k accounts; #8 of 8,875 English voices on json2video; copied many times on Fish Audio |
+| Pitch | 95 Hz | 83 Hz (deepest; clearest gap from both characters) |
+| Expressiveness | 3.5 st | 3.2 st |
+| Pauses in sample | 0 (flows without stopping, like the rival's track) | 3 (measured, unhurried) |
+| Risk | close to SODA's pitch (105 Hz); fix by giving SODA a lighter voice | the most used storyteller of the moment: the voice viewers may already know; "calm" may sag over 13 minutes |
+| Both | rate 1.0 (normal credit cost), 730-day removal notice (the voice cannot vanish mid-series), commercial use allowed on paid plans |
+
+Recommendation: **Michael** for the energy and the gap-free flow a 13-minute cartoon needs; **Jon** if the user prefers a warmer, deeper, calmer narrator. Listening file: `two_finalists.mp3` (Michael first, then Jon). Final check by ear on 17 Nov: the Poppi opening with each, about 300 characters each.
