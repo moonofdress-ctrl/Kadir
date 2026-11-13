@@ -66,3 +66,12 @@ Method: both clips band-passed 250-3800 Hz (the phone loses everything under ~20
 What the match does show: every close voice is bright and energetic (radio DJ, announcer, YouTube narrator, chatty guy); **Jon ranks 642nd**, Michael 306th. Jon's deep calm storyteller is the opposite of the rival.
 Filtered (notice >= 1 year, a narration use, >= 50 M characters a year): **Tyler Cruz - Cool Energetic DJ** (SA7eD52NRr8WAehitVt1) is 2nd of 700 overall and close in both clips (0.72 and 0.75), notice 730, rate 1.0, 0.11 B a year. Others passing: Marcus, Guy, Arthur, Seth, Nathan, James (8sZxD42zKDvoEXNxBTdX), Titan.
 **New decision: narrator Tyler Cruz; reserve Michael C. Vincent.** Jon dropped. Risk: a DJ voice can tire over 13 minutes and is less proven (0.11 B vs Jon's 7.3 B); the 17 Nov ear check reads the Poppi opening with Tyler and Michael (about 600 characters) and the user confirms. Listening file: `rival_match/rakip_tyler_jon.mp3` (rival 0:00, Tyler 0:16, Jon 0:28).
+
+## Voices the user found (13 Nov 2026), same method
+| Voice | Similarity to rival | Rank of 700 | Pace in sample | Notes |
+|---|---|---|---|---|
+| Tyler Cruz (SA7eD52NRr8WAehitVt1) | 0.766 | 2 | 187 wpm | current pick |
+| Larry - High-Energy Social Media (fIGaHjfrR8KmMy0vGEVJ) | 0.710 | 33 | 201 wpm | built for Reels and Shorts; too hurried for 13 minutes |
+| Mike - 2D & 3D POV/Storytime (zfc8CJQpe8Kqyl0vvCzo) | 0.661 | 195 | 171 wpm | made for stick-figure storytime animation (our genre); pace equals the rival's 172; notice 730; 0.12 B a year; the user added it to the account |
+| Bill - Social Media (AGhk9wKpcIV2UvBus4CY) | 0.560 | 626 | 171 wpm | older voice, far from the rival |
+Change: **reserve is now Mike** (genre and pace match) instead of Michael C. Vincent (0.634, slower). The 17 Nov ear check reads the Poppi opening with Tyler and Mike. Listening file: `rival_match/rakip_tyler_mike_larry_bill.mp3`.
