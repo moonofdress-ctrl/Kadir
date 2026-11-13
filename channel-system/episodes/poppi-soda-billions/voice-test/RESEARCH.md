@@ -78,3 +78,6 @@ Change: **reserve is now Mike** (genre and pace match) instead of Michael C. Vin
 
 ## Final, 13 Nov 2026
 The user chose **Mike - 2D & 3D POV/Storytime** as narrator. Reserve: Tyler Cruz.
+
+## Final, changed by the user (13 Nov 2026)
+Narrator: **Lawrence - Bright and Informative** (ktkP7Nsj67dw2zcplQYt), added to the account by the user. Measured: similarity 0.726 to the rival, 19th of 700 (Mike 195th, Tyler 2nd); sample 234 wpm (a promo read: slow it to 160-175 wpm); notice period 4015 days; little public usage yet. Reserves: Tyler Cruz, Mike.
