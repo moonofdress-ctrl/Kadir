@@ -24,6 +24,6 @@ Report the total duration and the speaking pace from:
 node studio/tools/retention-lint.mjs channel-system/episodes/<slug>
 ```
 
-If the pace is outside 150–165 words a minute, or the total is outside 12–15 minutes, tell the scriptwriter.
+If the pace is outside 135–165 words a minute, or the total is outside 12–15 minutes, tell the scriptwriter. The rival's narrator, measured on 13 Nov 2026 from a 14 s clip, speaks at about 138 words a minute in short sentences with 0.3–1.0 s pauses that the music fills; a slower, storytelling pace is not a fault (one clip only: re-measure on a longer one).
 
 Report in at most 8 lines: the files you wrote, the result of each check you ran, and what is still open. Do not paste file contents into the reply.
