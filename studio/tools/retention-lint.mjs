@@ -3,6 +3,9 @@
    channel-system/FORMAT_BOOK.md (sections 3-4, 8, 11-13). Run it before voice, before render and in QA.
    G1-G5 check that pictures carry a joke; P4-P5, D1, K1-K2, W1-W2, S2-S3 and H7-H8 hold the targets measured against
    the rival's video on the same story (research/paper_billions_spy_video_comparison.md, section 9); the sound checks (A1-A7) read audio/mix.json, written by tools/mix.mjs.
+   Added 13 Nov 2026 for the professional look: H9 (the Look gate is never skipped), P6 (camera move cap), R1-R3 (shot and reverse shot,
+   over-the-shoulder, low and high angles), D4-D5 (each place its own colour), G10 (crowded places have extras), A9-A10 (ambience, act sounds).
+   Checks on a storyboard key the engine does not draw yet stay WARN until studio/README.md documents the key (ENGINE_HAS).
 
    Usage: node studio/tools/retention-lint.mjs <episode_dir> [--json]
    Exit code 1 when any check FAILS. WARN does not fail the run. Checks that need a long video
@@ -26,6 +29,14 @@ const g = (ok, soft) => (ok ? "PASS" : soft ? "WARN" : "FAIL");
 const need = (min, id, name, fn) => { if (total < min) add(id, name, "n/a", "short piece", "longer video"); else fn(); };
 const mmss = (t) => Math.floor(t / 60) + ":" + String(Math.floor(t % 60)).padStart(2, "0");
 const refTime = (r, s) => (r.cue || r.at != null ? TM.when(r, s.t0, res.L) : s.t0 + 0.3);
+
+// Keys the engine draws once studio/README.md documents them (the engine-v2 work of 13 Nov 2026). Until then a check on such a key
+// reports its value but grades at most WARN, because the art director cannot yet make it pass.
+const README = (() => { try { return fs.readFileSync(new URL("../README.md", import.meta.url), "utf8"); } catch { return ""; } })();
+const ENGINE_HAS = { ots: /"ots"/.test(README), angle: /"angle"/.test(README), palette: /\bpalette\b/.test(README), extras: /"extras"/.test(README),
+  ambience: /\bambience\b/.test(README), foley: /\bfoley\b/.test(README) };
+const gk = (key, ok, soft) => (ok ? "PASS" : soft || !ENGINE_HAS[key] ? "WARN" : "FAIL");
+const pend = (key) => (ENGINE_HAS[key] ? "" : " [engine key not built yet]");
 
 const isCard = (s) => s.type === "card" || s.type === "chapter";
 const actorsOf = (s) => (s.type === "split" ? s.panels.flatMap((p) => p.actors || []) : s.actors || []);
@@ -73,6 +84,11 @@ need(120, "H7", "The story's person, close and named, by 0:12", () => { const na
 need(120, "H8", "No chapter card, chart or lesson before 0:45", () => { const chart = (p) => [...(p.props || []), ...(p.overlays || [])].some((x) => x.type === "bars" || x.type === "line");
   const early = shots.filter((s) => s.t0 < 45 && (s.type === "chapter" || (s.type === "split" ? s.panels.some(chart) : chart(s)))).map((s) => s.id + " " + mmss(s.t0));
   add("H8", "No chapter card, chart or lesson before 0:45", g(early.length === 0), early.length ? early.join(", ") : "ok", "the opening sets up the mystery; chapter cards and charts start after 0:45"); });
+// 13 Nov 2026: Poppi skipped the Look gate and its faults were seen only after the full render. The gate is never skipped:
+// a draft render of 0:00-0:30 beside channel-system/brand/quality_reference.jpg, judged in qa.md before the rest is storyboarded.
+need(120, "H9", "Look gate: the 30 s draft was judged", () => { const qf = path.join(ep, "qa.md"), q = fs.existsSync(qf) ? fs.readFileSync(qf, "utf8") : "";
+  const v = /^##\s+Look gate/im.test(q) ? ((/^Look verdict:\s*(.+)$/im.exec(q) || [])[1] || "").trim() : "", passed = /^Verdict:\s*pass/im.test(q);
+  add("H9", "Look gate: the 30 s draft was judged", g(/^pass/i.test(v), !passed), v || (q ? "no \"## Look gate\" with a \"Look verdict:\" line in qa.md" : "no qa.md yet"), "a draft render of 0:00-0:30 beside brand/quality_reference.jpg, judged in qa.md (\"## Look gate\", \"Look verdict: pass\")"); });
 
 /* ---- pace (FORMAT_BOOK 11) ---- */
 const avg = total / shots.length;
@@ -87,6 +103,8 @@ add("P3", "Camera varies between shots", g(rep === 0 && still <= sc.length * 0.2
 need(30, "P4", "12 or more shots in the first 30s", () => { const n = shots.filter((s) => s.t0 < 30).length; add("P4", "12 or more shots in the first 30s", g(n >= 12, n >= 10), n + " shots", "12 or more (the rival: 12 cuts)"); });
 need(120, "P5", "Few shots longer than 10s", () => { const longShots = shots.filter((s) => s.t1 - s.t0 > 10);
   add("P5", "Few shots longer than 10s", g(longShots.length <= nCh, longShots.length <= nCh * 2), longShots.length ? `${longShots.length}: ${longShots.slice(0, 6).map((s) => s.id).join(", ")}` : "none", `${nCh} or fewer (one a chapter)`); });
+{ const mv = {}; sc.forEach((s) => { const c = s.camera || "still"; mv[c] = (mv[c] || 0) + 1; }); const top = Object.entries(mv).sort((a, b) => b[1] - a[1])[0], share = top ? top[1] / sc.length : 0;
+  if (top) need(120, "P6", "No one camera move on more than a quarter", () => add("P6", "No one camera move on more than a quarter", g(share <= 0.25, share <= 0.3), `${top[0]} on ${top[1]} of ${sc.length} (${Math.round(share * 100)}%)`, "25% or less for any one move (Poppi: push_in on 30%)")); }
 
 /* ---- text cards (FORMAT_BOOK 11) ---- */
 const cards = shots.filter(isCard), cardSec = cards.reduce((n, s) => n + s.t1 - s.t0, 0);
@@ -103,6 +121,19 @@ need(120, "S2", "Dialogue is a quarter of the words", () => { const w = (ls) => 
   add("S2", "Dialogue is a quarter of the words", g(p >= 25, p >= 17), p.toFixed(0) + "%", "25% or more (the rival: about a third; our first episode: 9%)"); });
 need(300, "S3", "Two skits or more in every chapter", () => { const k = shots.filter(isSkit).map((s) => s.t0), thin = spans.map((sp, i) => [i + 1, k.filter((t) => inSpan(t, sp)).length]).filter((x) => x[1] < 2);
   add("S3", "Two skits or more in every chapter", g(thin.length === 0, thin.length <= 1), thin.length ? thin.map((x) => `CH${x[0]}: ${x[1]}`).join(", ") : "ok", "2 or more in each chapter"); });
+
+/* ---- shot and reverse shot (FORMAT_BOOK 11, Camera language; 13 Nov 2026) ---- */
+// A conversation: two or more figures speak in consecutive shots in one place (a card, a silent shot or a change of place ends it).
+const spk = (s) => (s.type === "split" || isCard(s) ? [] : (s.actors || []).filter((a) => (a.speaks || []).length)), cLines = (s) => spk(s).reduce((n, a) => n + a.speaks.length, 0);
+const convs = []; { let run = [];
+  const close = () => { if (new Set(run.flatMap((s) => spk(s).map((a) => a.who || a.label || a.thing))).size >= 2) convs.push(run); run = []; };
+  for (const s of shots) { if (!spk(s).length || (run.length && placeOf(run[run.length - 1]) !== placeOf(s))) close(); if (spk(s).length) run.push(s); } close(); }
+need(120, "R1", "Conversations cut between the faces", () => { if (!convs.length) return; const all = convs.flat().reduce((n, s) => n + cLines(s), 0), own = convs.flat().filter((s) => spk(s).length === 1 || s.frame === "ots").reduce((n, s) => n + cLines(s), 0), r = own / Math.max(1, all);
+  add("R1", "Conversations cut between the faces", g(r >= 0.75, r >= 0.5), `${convs.length} conversations, ${own} of ${all} lines on the speaker's own shot (${Math.round(r * 100)}%)`, "75% or more: shot and reverse shot, not two figures facing the camera for the whole talk");
+  const long = convs.filter((c) => c.reduce((n, s) => n + cLines(s), 0) >= 3), ots = long.filter((c) => c.some((s) => s.frame === "ots")).length, ro = ots / Math.max(1, long.length);
+  if (long.length) add("R2", "Over-the-shoulder shots in conversations", gk("ots", ro >= 0.8, ENGINE_HAS.ots && ro >= 0.5), `${ots} of ${long.length} conversations of 3+ lines${pend("ots")}`, "a \"frame\": \"ots\" shot in 80% or more of them"); });
+need(120, "R3", "Low and high angles in every chapter", () => { const per = spans.map((sp, i) => [i + 1, shots.filter((s) => inSpan(s.t0, sp) && (s.angle === "low" || s.angle === "high")).length]), thin = per.filter((x) => x[1] < 2), n = per.reduce((a, x) => a + x[1], 0);
+  add("R3", "Low and high angles in every chapter", gk("angle", thin.length === 0, ENGINE_HAS.angle && thin.length <= Math.ceil(nCh / 3)), `${n} angle shots${thin.length ? `, fewer than 2 in ${thin.length} of ${nCh} chapters` : ""}${pend("angle")}`, "2 or more \"angle\": \"low\" (power) or \"high\" (small, trapped) shots in every chapter"); });
 
 /* ---- story devices (FORMAT_BOOK 12) ---- */
 const motifs = {}; shots.forEach((s) => { if (s.motif) (motifs[s.motif] = motifs[s.motif] || []).push(s.t0); });
@@ -172,6 +203,10 @@ need(180, "G5", "The hidden piggy bank", () => { const n = pictures.filter((p) =
   if (plainPics.length) add("G8", "The frame is full", g(ts <= 0.2, ts <= 0.35), `${thin} of ${plainPics.length} (${Math.round(ts * 100)}%) with one figure or one prop`, "20% or fewer with fewer than two figures and props");
   const things = plainPics.filter((p) => (p.actors || []).length && (p.actors || []).every((a) => a.thing)).length, th = things / Math.max(1, plainPics.length);
   need(120, "G9", "People act the story", () => add("G9", "People act the story", g(th <= 0.33, th <= 0.45), `${things} of ${plainPics.length} (${Math.round(th * 100)}%) with only living things`, "a third or fewer with only living things; the cast and the story's real people carry the rest")); }
+// 13 Nov 2026: Poppi's red carpet, stadium, farmers' market and soda aisle, and the first episode's street and trading floor, were empty (0 of 34 shots with a crowd).
+{ const CROWD = /market|mall|aisle|checkout|stadium|arena|stands|carpet|street|station|platform|airport|concert|festival|square|queue|rally|trading.?floor|convention|conference|restaurant|cafe|diner|subway|\bbus\b|parade|protest|casino|audience|crowd/i;
+  const crowded = pictures.filter((p) => CROWD.test(placeOf(p)) && !/empty/i.test(placeOf(p)) && !(p.opts || {}).empty), full = crowded.filter((p) => (p.extras || (p.opts || {}).extras || 0) >= 3 || (p.actors || []).length >= 4).length;
+  if (crowded.length) add("G10", "Crowded places are crowded", gk("extras", full >= crowded.length * 0.9, ENGINE_HAS.extras && full >= crowded.length * 0.7), `${full} of ${crowded.length} shots in ${[...new Set(crowded.map(placeOf))].slice(0, 4).join(", ")}${pend("extras")}`, "\"extras\": 3 or more (or four figures) in a market, street, stadium, red carpet, station; a place tagged \"empty\" is exempt"); }
 
 /* ---- places, light and how much there is to read (FORMAT_BOOK 11, measured against the rival) ---- */
 const sceneShots = shots.filter((s) => !isCard(s)), sceneSec = sceneShots.reduce((n, s) => n + s.t1 - s.t0, 0);
@@ -181,6 +216,15 @@ need(120, "D3", "Daylight in every chapter", () => { const dim = spans.map((sp, 
   add("D3", "Daylight in every chapter", g(dim.length === 0, dim.length <= Math.ceil(nCh / 3)), dim.length ? dim.map((x) => `CH${x[0]}: ${x[1]}`).join(", ") : "ok", "2 or more daylight shots (no \"light\", no night look) in each chapter: relief and the viewer's own world"); });
 { const murky = sceneShots.filter((s) => s.light && (s.light.dark == null ? 0.72 : s.light.dark) > 0.55 && (s.grade === "night" || (s.opts || {}).night));
   if (sceneShots.some((s) => s.light)) add("D2", "Dark, but the figures can be seen", g(murky.length === 0, murky.length <= 3), murky.length ? `${murky.length} shots: ${murky.slice(0, 6).map((s) => s.id).join(", ")}` : "ok", "a light over a night set or the night grade has \"dark\" 0.5 or less and \"r\" 750 or more"); }
+// 13 Nov 2026: every place has its own dominant colour (set option "palette"), and two neighbouring places never share one
+// (Poppi: navy on 84% of the picture time). Without "palette" the colour is estimated: a colour grade, else navy when dark, else the house cream.
+{ const colourOf = (p) => (p.opts || {}).palette || (["red", "green", "gold", "sepia"].includes(p.grade) ? p.grade : isDark(p) ? "navy" : "cream");
+  const one = sceneShots.filter((s) => s.type !== "split"), sec = one.reduce((n, s) => n + s.t1 - s.t0, 0), est = !one.some((s) => (s.opts || {}).palette) ? " (estimated: no \"palette\" set)" : "", by = {};
+  one.forEach((s) => { by[colourOf(s)] = (by[colourOf(s)] || 0) + s.t1 - s.t0; });
+  const top = Object.entries(by).sort((a, b) => b[1] - a[1])[0], share = top ? top[1] / Math.max(1, sec) : 0;
+  let ch = 0, same = 0; for (let i = 1; i < one.length; i++) if (placeOf(one[i]) !== placeOf(one[i - 1])) { ch++; if (colourOf(one[i]) === colourOf(one[i - 1])) same++; }
+  need(120, "D4", "Places have their own colours", () => add("D4", "Places have their own colours", gk("palette", share <= 0.34, ENGINE_HAS.palette && share <= 0.5), `${top[0]} on ${Math.round(share * 100)}% of the picture time, ${Object.keys(by).length} colours${est}${pend("palette")}`, "no colour on more than a third of the picture time (Poppi: navy 84%)"));
+  need(120, "D5", "Neighbouring places differ in colour", () => add("D5", "Neighbouring places differ in colour", gk("palette", same <= ch * 0.1, ENGINE_HAS.palette && same <= ch * 0.25), `${same} of ${ch} place changes keep the colour${est}${pend("palette")}`, "10% or fewer")); }
 { const visits = spans.map((sp) => { const seq = sceneShots.filter((s) => inSpan(s.t0, sp)).flatMap((s) => (s.type === "split" ? s.panels.map(placeOf) : [placeOf(s)])), v = {}; seq.forEach((p, i) => { if (i === 0 || seq[i - 1] !== p) v[p] = (v[p] || 0) + 1; }); return v; });
   need(120, "K1", "Six or more places in every chapter", () => { const all = new Set(visits.flatMap((v) => Object.keys(v))), thin = visits.map((v, i) => [i + 1, Object.keys(v).length]).filter((x) => x[1] < 6);
     add("K1", "Six or more places in every chapter", g(thin.length === 0, thin.length <= Math.ceil(nCh / 3)), `${all.size} places in all${thin.length ? "; " + thin.map((x) => `CH${x[0]}: ${x[1]}`).join(", ") : ""}`, "6 or more in each chapter (the rival: about 70 in all; our first episode: 11)"); });
@@ -229,6 +273,15 @@ else {
     add("A8", "Effects on at most one cut in five", g(cutShare <= 0.2, true), `${Math.round(cutShare * 100)}% of ${shots.length} shots`, "20% or fewer");
   }
 }
+// 13 Nov 2026: sound texture. Every place has an ambience bed and every body action a sound (the engine adds act sounds by itself).
+{ const mix = est ? null : mixState(ep, data), rep = (mix && mix.current && mix.report) || {}, places = [...new Set(pictures.map(placeOf))];
+  const bed = new Set(pictures.filter((p) => p.ambience || (p.opts || {}).ambience).map(placeOf)); (rep.ambience || []).forEach((a) => bed.add(a.place || a.set));
+  const n = rep.ambience_default ? places.length : places.filter((p) => bed.has(p)).length;
+  if (places.length) add("A9", "Every place has its ambience", gk("ambience", n >= places.length * 0.9, ENGINE_HAS.ambience && n >= places.length * 0.7), `${n} of ${places.length} places${pend("ambience")}`, "a bed for each place (room tone, traffic, crowd, machines), quiet under the voice");
+  const acts = pictures.reduce((k, p) => k + (p.actors || []).reduce((m, a) => m + (a.enter && a.enter !== "none" ? 1 : 0) + [].concat(a.acts || []).filter((v) => v.to || v.pose).length, 0) + (p.props || []).filter((x) => x.move).length, 0);
+  if (!ENGINE_HAS.foley) add("A10", "Body actions have a sound", "n/a", `${acts} body actions; the engine has no act sounds yet`, "80% or more with a sound");
+  else if (!rep.foley) add("A10", "Body actions have a sound", "n/a", `${acts} body actions; no current mix`, "80% or more with a sound");
+  else add("A10", "Body actions have a sound", g(rep.foley.count >= acts * 0.8, rep.foley.count >= acts * 0.6), `${rep.foley.count} sounds for ${acts} body actions`, "80% or more with a sound (steps, a door, paper, a glass set down)"); }
 
 if (args.includes("--json")) console.log(JSON.stringify({ episode: path.basename(ep), total, rows }, null, 2));
 else {

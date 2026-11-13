@@ -18,4 +18,6 @@ Input: the numbers the user shares from YouTube Studio (impressions, click-throu
 
 Start from the three numbers that say which part was weak: click-through rate (the package), average view duration and the retention at 0:30 (the opening). Record which title and thumbnail won the test. Before proposing a rule, check `channel-system/LESSONS.md`: do not repeat one that is already there. A proposal that copies what another channel does names the measurement it comes from (a file in `channel-system/research/`); when there is none, propose the measurement, not the rule.
 
+You hand over to the improver (`.claude/agents/improver.md`), the last step: it turns your entry, QA's findings and the user's comments into a ranked list of changes and asks the user about each. Propose rules through it, not on your own.
+
 Report in at most 8 lines: the files you wrote, the result of each check you ran, and what is still open. Do not paste file contents into the reply.

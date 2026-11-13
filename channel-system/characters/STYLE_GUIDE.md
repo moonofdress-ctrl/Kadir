@@ -6,7 +6,7 @@ The look is ours. Do not imitate another channel's figures, lettering, palette o
 
 ## House look: cut paper and ink
 - **Paper collage.** Flat shapes with an ink-navy outline (`#1b1d36`, 7 px) and a hard offset shadow, as if cut out and laid on a desk. A paper grain covers the whole frame.
-- **Warm, bright base**: cream walls, kraft floors. Night scenes are navy, never black.
+- **Every place has its own colour** (13 Nov 2026; Poppi was navy on 84% of its picture time). A place takes one dominant colour family for its walls, its light and its big props, chosen by the creative director in the episode's `look.md` and set with the set option `palette` (engine-v2): brass and brown for a vault, cold teal for a lab or a server hall, amber wood for a courtroom, mint and red for a supermarket, pink for an influencer's loft, blue-violet for an office at night, sodium orange for a street at night. Two neighbouring places never share one. The cream walls and kraft floors are the base of the viewer's own world (a kitchen, a bus stop), not of every place. Night is dark in the place's own colour, never black and never navy everywhere.
 - **Accents**: red `#e0262b` (loss, danger), green `#1fa85b` (gain), mustard `#e8a317`, teal `#1f8a8a`, highlighter yellow `#ffe14d`.
 - **Type**: Anton (capitals) for cards, counters, signs and labels; Inter Tight for small captions; Source Serif for quoted documents; IBM Plex Mono for sources and ticker boards. No handwriting fonts.
 - **Colour follows the mood** through a grade over the whole shot: `green` euphoria, `red` panic, `sepia` history, `night` aftermath, `gold` money and vaults. Use three or more per episode.
@@ -18,6 +18,7 @@ The look is ours. Do not imitate another channel's figures, lettering, palette o
 - A face with a jaw and cheek shape of its own, ears, a nose that differs by person, hair with volume, eyebrows and mouth that still do the acting.
 - Two tones on skin and clothes (a shadow side), line weight that varies, clothes with collars, seams, pockets, buttons.
 - A body that acts: a walk with legs and swinging arms, sitting, turning, reaching, handing over, idle weight shifts.
+- **Movement with weight** (the animation principles, engine-v2): anticipation before a move (a crouch, a wind-up, a breath before a line that turns), overshoot and settle at the end of a move, follow-through on hair, coat tails, ties and loose arms, ease in and ease out, movement on arcs, and a secondary action while talking (a hand that taps, a foot that shifts). Nothing slides at a constant speed. The QA reviewer judges these on the Look gate's draft render.
 
 **Now** (until the redraw lands), one skeleton for everybody (`studio/engine/rig.js`):
 - Squircle head, about 45% of the height. Block body. **Floating mitten hands, no arms.** Short legs, big shoes.
@@ -59,8 +60,14 @@ No logos and no shapes copied from a logo. The label is the company's or institu
 - Charts are props (`bars`, `line`, `note`), drawn on the `board` set or over a scene. They animate: bars grow, lines draw, the number arrives last.
 - Scene props carry the facts: `sign`, `banner`, `pricetag`, `stall`, `podium`, `crates`, `cashpile`, `bunting`. A number on a price tag beats a number floating over the picture.
 - **Shot size.** `"frame": "medium"` or `"close"` moves in until the faces fill the picture; the engine never crops a figure out. Use it in skits.
+- **Camera language** (13 Nov 2026, engine-v2 keys): `"frame": "ots"` films a conversation over the listener's shoulder (the near shoulder and the back of the head large and dark in the foreground, the speaker's face beyond); `"angle": "low"` looks up at power, `"angle": "high"` looks down on the small. A conversation is cut as shot and reverse shot, never two figures facing the camera for the whole exchange (FORMAT_BOOK 11, Camera language and colour).
+- **Crowds.** A market, street, stadium, red carpet, station or audience has background figures (`"extras": n`, engine-v2): the same skeleton in varied palettes, smaller and a little greyed, walking, queueing or cheering, never looking at the camera and never in front of a face or a sign. The story's figures act in front of them.
+- **Sound of a place.** Every set carries an ambience bed (room tone, traffic, crowd, machines, rain) that the mix lays under the voice, and the figures' acts make their own small sounds (steps, a door, paper). The scene builder names the bed when it builds the set (FORMAT_BOOK 13).
 - **Light.** `"light": { "x", "y", "r", "color", "dark" }` puts one light source in the shot and darkens the rest: a doorway, a screen, a lamp.
 - **The hidden piggy bank** (`piggy`, states `calm`, `cracked`, `asleep`, `rich`) is ours. Small, in a corner, about once every three minutes.
+
+## The quality reference
+`channel-system/brand/quality_reference.jpg` is the fixed bar every episode is judged against: the top row is six frames of the rival's video, the bottom row our best six (made with `node channel-system/brand/quality-reference.mjs`; the frames are in `brand/quality_reference/`). The QA reviewer puts every episode's look sheet and frame sheet beside it; a frame that would look poorer than our own row is a fault, and the aim is the top row. When an episode beats one of our six, the improver proposes the swap.
 
 ## Screen furniture
 Counters, slams, labels, stamps, day tags, source chips, lower thirds, calendar pages, the corner clock, document cards and post cards live in `studio/engine/overlays.js`. Rules for using them are in `FORMAT_BOOK.md` section 11.

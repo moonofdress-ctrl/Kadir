@@ -28,6 +28,12 @@ export const VOICES = { N: ["am_michael", 1.05], BENNY: ["am_adam", 1.0], CHAD: 
 export const EL_VOICES = { N: ["ktkP7Nsj67dw2zcplQYt", 0.9], BENNY: ["TX3LPaxmHKxFdv7VOQHJ", 1.0], SODA: ["IKne3meq5aSn9XLyUdCD", 1.05],
   GIANT: ["N2lVS1w4EtoT3dr4eOWO", 0.95], CHAD: ["bIHbv24MWmeRgasZH58o", 1.1], HAL: ["pqHfZKP75CvOlQylNhV4", 0.95], MARTHA: ["EXAVITQu4vr4xnSDxMaL", 1.0], REGGIE: ["nPczCjzI2devNBz1zQrb", 0.9] };
 export const EL_MODEL = "eleven_multilingual_v2";
+// Delivery per line (FORMAT_BOOK 13, 13 Nov 2026): "dir" on a line in audio/lines.json, taken from audio/direction.md.
+// Lower stability reads livelier, higher style more expressive; speed is added to the speaker's own. A line without "dir" reads as before.
+export const EL_DIR = { hook: { stability: 0.35, style: 0.35 }, reveal: { stability: 0.35, style: 0.4 }, turn: { stability: 0.4, style: 0.3, speed: -0.03 },
+  joke: { stability: 0.35, style: 0.4 }, number: { stability: 0.5, style: 0.2, speed: -0.06 }, limit: { stability: 0.6, style: 0.05 }, recap: { stability: 0.5, style: 0.15 }, plain: {} };
+const elSettings = (ln, speed) => { const d = EL_DIR[ln.dir] || {}, s = Math.min(1.2, Math.max(0.7, speed + (d.speed || 0)));
+  return { stability: d.stability ?? 0.45, similarity_boost: 0.8, style: d.style ?? 0.2, speed: +s.toFixed(2) }; };
 
 const args = process.argv.slice(2), ep = path.resolve(args.find((a) => !a.startsWith("--")) || "");
 if (!fs.existsSync(path.join(ep, "script.md")) && !fs.existsSync(path.join(ep, "audio", "lines.json"))) { console.error("usage: node studio/tools/voice.mjs <episode_dir> [--force] [--only L012,L013]"); process.exit(2); }
@@ -47,6 +53,8 @@ if (unknown.length) console.warn(`warning: no ${engine} voice set for ${unknown.
 if (args.includes("--dry-run")) {
   const chars = todo.reduce((n, l) => n + l.text.length, 0);
   console.log(`${path.basename(ep)}: ${todo.length} of ${lines.length} lines to voice with ${engine}, ${chars} characters${engine === "elevenlabs" ? " (= credits)" : ""}`);
+  if (engine === "elevenlabs") { const by = {}; todo.forEach((l) => { const k = EL_DIR[l.dir] ? l.dir : l.dir ? `unknown "${l.dir}"` : "no dir"; by[k] = (by[k] || 0) + 1; });
+    console.log("  delivery: " + Object.entries(by).map(([k, n]) => `${k} ${n}`).join(", ")); }
   process.exit(0);
 }
 if (engine === "elevenlabs") { await eleven(); process.exit(0); }
@@ -70,7 +78,7 @@ async function eleven() {
     const [voice, speed] = MAP[ln.speaker] || MAP.N, wav = path.join(adir, ln.id + ".wav"), mp3 = path.join(adir, ln.id + ".el.mp3");
     const res = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voice}/with-timestamps?output_format=mp3_44100_128`, {
       method: "POST", headers: { "xi-api-key": key, "Content-Type": "application/json" },
-      body: JSON.stringify({ text: ln.text, model_id: EL_MODEL, voice_settings: { stability: 0.45, similarity_boost: 0.8, style: 0.2, speed } }) });
+      body: JSON.stringify({ text: ln.text, model_id: EL_MODEL, voice_settings: elSettings(ln, speed) }) });
     if (!res.ok) { console.error(`ElevenLabs failed on ${ln.id}: ${res.status} ${(await res.text()).slice(0, 300)}`); process.exit(1); }
     const j = await res.json();
     fs.writeFileSync(mp3, Buffer.from(j.audio_base64, "base64"));
