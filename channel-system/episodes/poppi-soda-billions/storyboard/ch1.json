@@ -735,7 +735,6 @@
           "y": 940,
           "scale": 1.2,
           "face": "smug",
-          "prop": "tag",
           "tag": "$1.95B",
           "enter": "none"
         }
