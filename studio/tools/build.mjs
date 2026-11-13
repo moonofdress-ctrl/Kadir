@@ -63,6 +63,9 @@ export function load(ep) {
   else throw new Error("need audio/lines.json or script.md in " + ep);
   const durations = {};
   for (const ln of lines) { const wav = path.join(ep, "audio", ln.id + ".wav"); if (fs.existsSync(wav)) durations[ln.id] = wavSeconds(wav); }
+  // Measured word timings (voice.mjs --engine elevenlabs writes audio/<id>.words.json) place subtitles and word cues exactly.
+  for (const ln of lines) { const wj = path.join(ep, "audio", ln.id + ".words.json");
+    if (durations[ln.id] != null && fs.existsSync(wj)) { const w = JSON.parse(fs.readFileSync(wj, "utf8")); if (w.length === TM.words(ln.text).length) ln.wt = w.map((x) => [x.a, x.b]); } }
   const total = TM.schedule(lines, story, durations);
   const ids = new Set(lines.map((l) => l.id));
   for (const s of story.shots) if (s.cue && !ids.has(s.cue)) throw new Error(`shot ${s.id} cues unknown line ${s.cue}`);

@@ -51,6 +51,13 @@ Sound, once every line has a clip (`voice.mjs` makes a scratch track when there 
 ```bash
 node studio/tools/voice.mjs channel-system/episodes/<slug>
 ```
+The published voice is ElevenLabs (narrator Lawrence; voices in `EL_VOICES` in `tools/voice.mjs`). Check the cost first, then voice; each line also gets `audio/<id>.words.json`, the measured time of every word, which the build uses for subtitles and word cues (`mix.mjs --tighten` keeps it in step). It needs FFmpeg and the ElevenLabs key in the cloud environment:
+```bash
+node studio/tools/voice.mjs channel-system/episodes/<slug> --engine elevenlabs --force --dry-run
+```
+```bash
+node studio/tools/voice.mjs channel-system/episodes/<slug> --engine elevenlabs --force
+```
 ```bash
 node studio/tools/mix.mjs channel-system/episodes/<slug> --tighten
 ```

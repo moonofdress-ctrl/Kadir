@@ -194,6 +194,7 @@ Measured on the reference: the voice never stops, and everything else stays out 
 - **No dead air.** Cut every pause between sentences to under a quarter of a second. In 15 minutes the reference has only ten gaps longer than that.
 - **Breathe only at chapter cards**: about one second of near-silence under each card, and before a punchline.
 - **Music changes with the chapter.** The house music has three beds (`steady`, `calm`, `uneasy`) that take turns under the chapter cards; `"audio": { "beds": [...] }` sets the order.
+- **Effects follow the picture, rarely** (13 Nov 2026): the engine places them on the events themselves (stamp, slam, card, chapter, document; `tools/cues.mjs`), and they land on at most one cut in five (the rival: 16%; lint A8).
 - **Music is a quiet bed**, about 18–20 dB under the voice, a little louder in the climax chapters and rising under the last 15 seconds.
 - **Sound effects are rare and soft.** Use them on stamps, slams and card hits, not on every cut.
 - Loudness of the final mix: −14 LUFS, peaks under −1 dBTP.

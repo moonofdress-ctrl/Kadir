@@ -209,6 +209,8 @@ else {
     const allow = Math.max(2, Math.round(total / 75)), dp = m.dead_air.pauses_over_250ms, worst = m.dead_air.longest[0];
     add("A6", "No dead air in the voice", g(dp <= allow, true), `${dp} pauses over 0.25s${worst ? `, longest ${worst.d}s at ${mmss(worst.t)}` : ""}`, `${allow} or fewer (mix.mjs --tighten cuts them)`);
     add("A7", "Effects are rare", g(m.effects.per_minute <= 8 || m.effects.count <= 4, true), `${m.effects.count} (${m.effects.per_minute} a minute)`, "8 a minute or fewer");
+    const cutShare = shots.length ? m.effects.count / shots.length : 0; // the rival puts an effect on 16% of its cuts (13 Nov 2026)
+    add("A8", "Effects on at most one cut in five", g(cutShare <= 0.2, true), `${Math.round(cutShare * 100)}% of ${shots.length} shots`, "20% or fewer");
   }
 }
 

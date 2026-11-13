@@ -56,6 +56,13 @@ function tighten(ep, lines, maxPause = 0.3, keep = 0.22) {
     const raw = path.join(ep, "audio", "raw"); fs.mkdirSync(raw, { recursive: true });
     if (!fs.existsSync(path.join(raw, ln.id + ".wav"))) fs.copyFileSync(file, path.join(raw, ln.id + ".wav"));
     writeWav(file, { rate, ch }); cut += (n - ch[0].length) / rate; changed++;
+    // Keep measured word timings in step with the cut clip.
+    const wj = path.join(ep, "audio", ln.id + ".words.json");
+    if (fs.existsSync(wj)) {
+      const shift = (t) => { let d = 0; for (const [s, e] of cuts) { if (t >= e) d += e - s; else if (t > s) d += t - s; } return +Math.max(0, t - d).toFixed(3); };
+      const raww = path.join(raw, ln.id + ".words.json"); if (!fs.existsSync(raww)) fs.copyFileSync(wj, raww);
+      fs.writeFileSync(wj, JSON.stringify(JSON.parse(fs.readFileSync(wj, "utf8")).map((w) => ({ ...w, a: shift(w.a), b: shift(w.b) }))) + "\n");
+    }
   }
   console.log(changed ? `tightened ${changed} clip(s), removed ${cut.toFixed(1)}s of silence (originals in audio/raw/)` : "tighten: nothing to cut");
 }

@@ -23,9 +23,12 @@
     return +(t - K.GAP + K.TAIL).toFixed(3);
   }
 
-  // Word timings inside a line, spread by word length.
+  // Word timings inside a line: measured ones (`ln.wt`, [start, end] in seconds from the clip start, from audio/<id>.words.json) when they fit, else spread by word length.
   function lineWords(ln) {
-    const ws = words(ln.text), tot = ws.reduce((s, w) => s + w.length + 2, 0); let t = ln.a;
+    const ws = words(ln.text);
+    if (Array.isArray(ln.wt) && ln.wt.length === ws.length)
+      return ws.map((w, i) => ({ w, a: +(ln.a + Math.min(ln.wt[i][0], ln.d)).toFixed(3), b: +(ln.a + Math.min(ln.wt[i][1], ln.d)).toFixed(3) }));
+    const tot = ws.reduce((s, w) => s + w.length + 2, 0); let t = ln.a;
     return ws.map((w) => { const d = ln.d * (w.length + 2) / tot, o = { w, a: +t.toFixed(3), b: +(t + d).toFixed(3) }; t += d; return o; });
   }
 
