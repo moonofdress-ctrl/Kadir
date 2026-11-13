@@ -57,7 +57,7 @@ node studio/tools/retention-lint.mjs channel-system/episodes/<slug>
 | `characters/STYLE_GUIDE.md` | The house look, limits for real people and logos, the thumbnail formula. |
 | `characters/cast.md` | Recurring characters: who they are and how to use them. |
 | `checklists/storyboard.md` | The storyboard targets, camera language and keys on one page, for the art directors and the creative director. |
-| `brand/quality_reference.jpg` | The fixed quality bar: six of the rival's frames above our best six (`brand/quality-reference.mjs` builds it). Every episode is judged beside it. |
+| `brand/quality_reference.jpg` | The fixed quality bar: six of the rival's frames above our best six. Built on the machine by `brand/quality-reference.mjs`; neither it nor the rival's frames are in git (the repository is public), the rival's frames are in `%USERPROFILE%\.kadir\quality_reference\` on the user's PC. Every episode is judged beside it. |
 | `improvements/` | The improver's ranked proposals after each upload, with what the user approved, declined and what was installed. |
 | `episodes/_template/` | Empty episode folder to copy. |
 | `episodes/demo/` | A 19-second demo with scratch voices, staged by the picture rules. |

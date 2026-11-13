@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 /* The quality reference (STYLE_GUIDE, The quality reference; FORMAT_BOOK 11, Look gate).
    Builds channel-system/brand/quality_reference.jpg: the rival's six frames on top (3 x 2), our best six below (3 x 2).
-   Frames live in channel-system/brand/quality_reference/ as rival_1..6 and ours_1..6 (.jpg or .png). A missing frame is a grey box.
+   Our frames (ours_1..6) are in channel-system/brand/quality_reference/ and in git. The rival's (rival_1..6) are NOT in git, because
+   the repository is public and they are another channel's pictures: they live in %USERPROFILE%\.kadir\quality_reference\ on the
+   user's PC (the user's screenshots of 13 Nov 2026), and the sheet is built on each machine (it is ignored by git). A missing frame is a grey box.
 
    node channel-system/brand/quality-reference.mjs                                   build the sheet from the frames there
    node channel-system/brand/quality-reference.mjs --ours <video.mp4> --t 6,42,...   first take our six frames from a render (seconds)
@@ -10,9 +12,11 @@
 import fs from "node:fs";
 import path from "node:path";
 import { spawnSync } from "node:child_process";
+import os from "node:os";
 import { fileURLToPath } from "node:url";
 
 const here = path.dirname(fileURLToPath(import.meta.url)), dir = path.join(here, "quality_reference"), out = path.join(here, "quality_reference.jpg");
+const shared = path.join(os.homedir(), ".kadir", "quality_reference"); // the rival's frames, outside the public repository
 const args = process.argv.slice(2), opt = (k) => { const i = args.indexOf(k); return i >= 0 ? args[i + 1] : null; };
 const ff = (a) => { const r = spawnSync("ffmpeg", ["-y", "-v", "error", ...a], { encoding: "utf8" }); if (r.status !== 0) { console.error((r.stderr || r.error || "ffmpeg failed").toString().slice(-400)); process.exit(1); } };
 fs.mkdirSync(dir, { recursive: true });
@@ -21,11 +25,12 @@ for (const who of ["ours", "rival"]) {
   const video = opt("--" + who); if (!video) continue;
   const ts = String(opt("--t") || "").split(",").filter(Boolean).map(Number);
   if (ts.length !== 6) { console.error("--t needs six times in seconds, e.g. --t 6,42,234,282,330,510"); process.exit(2); }
-  ts.forEach((t, i) => ff(["-ss", String(t), "-i", video, "-frames:v", "1", "-vf", "scale=960:540", "-q:v", "3", path.join(dir, `${who}_${i + 1}.jpg`)]));
-  console.log(`${who}: six frames saved in ${path.relative(process.cwd(), dir)}`);
+  const to = who === "rival" ? shared : dir; fs.mkdirSync(to, { recursive: true });
+  ts.forEach((t, i) => ff(["-ss", String(t), "-i", video, "-frames:v", "1", "-vf", "scale=960:540", "-q:v", "3", path.join(to, `${who}_${i + 1}.jpg`)]));
+  console.log(`${who}: six frames saved in ${to}`);
 }
 
-const find = (name) => [".jpg", ".png", ".jpeg", ".webp"].map((e) => path.join(dir, name + e)).find((f) => fs.existsSync(f));
+const find = (name) => [dir, shared].flatMap((d) => [".jpg", ".png", ".jpeg", ".webp"].map((e) => path.join(d, name + e))).find((f) => fs.existsSync(f));
 const W = 640, H = 360, GAP = 24, inputs = [], missing = [];
 for (const name of [1, 2, 3, 4, 5, 6].map((n) => "rival_" + n).concat([1, 2, 3, 4, 5, 6].map((n) => "ours_" + n))) {
   const f = find(name);
