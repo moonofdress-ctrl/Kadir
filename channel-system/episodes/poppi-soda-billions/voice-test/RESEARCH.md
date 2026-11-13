@@ -75,3 +75,6 @@ Filtered (notice >= 1 year, a narration use, >= 50 M characters a year): **Tyler
 | Mike - 2D & 3D POV/Storytime (zfc8CJQpe8Kqyl0vvCzo) | 0.661 | 195 | 171 wpm | made for stick-figure storytime animation (our genre); pace equals the rival's 172; notice 730; 0.12 B a year; the user added it to the account |
 | Bill - Social Media (AGhk9wKpcIV2UvBus4CY) | 0.560 | 626 | 171 wpm | older voice, far from the rival |
 Change: **reserve is now Mike** (genre and pace match) instead of Michael C. Vincent (0.634, slower). The 17 Nov ear check reads the Poppi opening with Tyler and Mike. Listening file: `rival_match/rakip_tyler_mike_larry_bill.mp3`.
+
+## Final, 13 Nov 2026
+The user chose **Mike - 2D & 3D POV/Storytime** as narrator. Reserve: Tyler Cruz.
