@@ -139,6 +139,48 @@
      ]
     }
    ]
+  },
+  {
+   "id": "d03",
+   "cue": "L006",
+   "set": "studio",
+   "place": "the studio",
+   "camera": "push_in",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 960,
+     "face": "shocked"
+    }
+   ],
+   "overlays": [
+    {
+     "type": "counter",
+     "roll": true,
+     "tick": true,
+     "from": 0,
+     "to": 1950,
+     "prefix": "$",
+     "suffix": "M",
+     "cap": "SOLD FOR",
+     "pos": "tr",
+     "at": 0.4,
+     "dur": 1.6
+    },
+    {
+     "type": "counter",
+     "roll": true,
+     "from": 1950,
+     "to": 1420,
+     "prefix": "$",
+     "suffix": "M",
+     "cap": "A WEEK LATER",
+     "pos": "tl",
+     "cue": "L007",
+     "at": 0.2,
+     "dur": 1.6
+    }
+   ]
   }
  ]
 }

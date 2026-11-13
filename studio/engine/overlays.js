@@ -9,15 +9,32 @@
   const slam = (tl, e, t, big) => { e.style.opacity = 0; tl.fromTo(e, { opacity: 0, scale: big ? 1.7 : 1.3 }, { opacity: 1, scale: 1, duration: big ? 0.16 : 0.22, ease: big ? "power4.in" : "back.out(1.8)", immediateRender: false }, t); };
   const shake = (tl, world, t) => { if (world) tl.fromTo(world, { x: 0 }, { x: 12, duration: 0.04, yoyo: true, repeat: 5, ease: "none", immediateRender: false }, t); };
 
+  const TM = window.StudioTiming;
+  // The cells of one rolling digit: from d0 to d1 through whole turns, in the direction the number moves.
+  const rollCells = (c) => { let h = ""; for (let m = 0; m <= c.steps; m++) h += `<span class="cell">${c.rising ? (c.d0 + m) % 10 : (c.d1 + m) % 10}</span>`; return h; };
   const HEART = '<svg viewBox="0 0 24 22" width="0.8em" height="0.74em" style="margin-right:.16em;vertical-align:-.04em"><path d="M12,21 C2,13 2,4 7,3 C10,2.5 12,5 12,6 C12,5 14,2.5 17,3 C22,4 22,13 12,21Z" fill="#e0262b" stroke="#1b1d36" stroke-width="1.8"/></svg>';
   const O = {
     // { type:"counter", from, to, prefix, suffix, decimals, dur, tone, cap, pos, plate }  plate:true puts a dark halo behind it, for busy backgrounds
     // (the same option works on a slam)
+    // Rolling: add "roll": true and the digits roll vertically like a slot machine, the most significant one settling first. The colour turns green when the
+    // number rises fast and red when it falls ("tone": "auto" is the default for a roll; an explicit tone stays as written). "tick": true (or 1-3) puts the
+    // engine's tick effect on the first digits to settle (opt-in; each tick counts toward lint A8).
     counter: {
-      build(o) { return place(el("counter " + (o.tone || "") + (o.plate ? " plate" : ""), `${o.icon === "heart" ? HEART : ""}${esc(o.prefix || "")}<span class="num">${fmt(o.from || 0, o.decimals)}</span>${esc(o.suffix || "")}${o.cap ? `<span class="cap">${esc(o.cap)}</span>` : ""}`), o, "tr"); },
+      build(o) { const plan = o.roll ? TM.rollPlan(o) : null,
+          num = plan ? `<span class="num roll">${plan.cols.map((c) => c.kind === "sep" ? `<span class="rs" style="opacity:${c.from ? 1 : 0}">${esc(c.ch)}</span>` : `<span class="rc" style="opacity:${c.from ? 1 : 0}"><span class="strip">${rollCells(c)}</span></span>`).join("")}</span>`
+            : `<span class="num">${fmt(o.from || 0, o.decimals)}</span>`;
+        return place(el("counter " + (plan ? (plan.auto ? "" : o.tone || "") : o.tone || "") + (o.plate ? " plate" : ""), `${o.icon === "heart" ? HEART : ""}${esc(o.prefix || "")}${num}${esc(o.suffix || "")}${o.cap ? `<span class="cap">${esc(o.cap)}</span>` : ""}`), o, "tr"); },
       // No callbacks here: a seek does not fire onUpdate, so the number is tweened as a property and formatted by a modifier.
       play(tl, e, o, t) { const num = e.querySelector(".num"); slam(tl, e, t);
-        tl.fromTo(num, { textContent: o.from || 0 }, { textContent: o.to, duration: o.dur || 1.2, ease: "power2.out", immediateRender: false, modifiers: { textContent: (v) => fmt(parseFloat(v), o.decimals) } }, t + 0.1);
+        if (o.roll) { const plan = TM.rollPlan(o), rcs = [...e.querySelectorAll(".rc")], rss = [...e.querySelectorAll(".rs")]; let di = 0, si = 0;
+          plan.cols.forEach((c) => { if (c.kind === "sep") { const x = rss[si++]; if (c.from !== c.to) tl.fromTo(x, { opacity: c.from ? 1 : 0 }, { opacity: c.to ? 1 : 0, duration: 0.15, immediateRender: false }, t + 0.1); return; }
+            const col = rcs[di++], strip = col.querySelector(".strip"), end = -100 * c.steps / (c.steps + 1);
+            if (c.from !== c.to) tl.fromTo(col, { opacity: c.from ? 1 : 0 }, { opacity: c.to ? 1 : 0, duration: 0.15, immediateRender: false }, t + c.start);
+            // rising: the strip moves up (new digits arrive from below); falling: it moves down
+            tl.fromTo(strip, { yPercent: c.rising ? 0 : end }, { yPercent: c.rising ? end : 0, duration: c.dur, ease: "power3.out", immediateRender: false }, t + c.start); });
+          if (plan.tone && plan.auto) { const hex = { green: "#46e08a", red: "#ff5a4f", gold: "#e8a317" }[plan.tone] || "#f6f1e4";
+            tl.fromTo(num, { color: "#f6f1e4" }, { color: hex, duration: 0.35, immediateRender: false }, t + 0.1); }
+        } else tl.fromTo(num, { textContent: o.from || 0 }, { textContent: o.to, duration: o.dur || 1.2, ease: "power2.out", immediateRender: false, modifiers: { textContent: (v) => fmt(parseFloat(v), o.decimals) } }, t + 0.1);
         tl.fromTo(e, { scale: 1 }, { scale: 1.12, duration: 0.1, yoyo: true, repeat: 1, immediateRender: false }, t + 0.1 + (o.dur || 1.2)); },
     },
     slam: { build(o) { return place(el("slam " + (o.tone || "") + (o.plate ? " plate" : ""), esc(o.t)), o, "tc"); }, play(tl, e, o, t, ctx) { slam(tl, e, t, true); shake(tl, ctx.world, t + 0.16); } },

@@ -40,6 +40,34 @@
     return base + (ref.at || 0);
   }
 
+
+  // Rolling counter (overlay { type:"counter", roll:true }): one entry per character of the final number, shared by the engine and the sound cues.
+  // Digits roll like a slot machine, the most significant one settles first. Times are seconds from the moment the counter appears.
+  const fmtNum = (v, dec) => v.toLocaleString("en-US", { minimumFractionDigits: dec || 0, maximumFractionDigits: dec || 0 });
+  function rollPlan(o) {
+    const from = o.from || 0, to = o.to, dec = o.decimals || 0, dur = o.dur || 1.2, start = 0.1, rising = to >= from;
+    const a = fmtNum(from, dec), b = fmtNum(to, dec), n = Math.max(a.length, b.length), fa = a.padStart(n, " "), fb = b.padStart(n, " ");
+    const isD = (c) => c >= "0" && c <= "9", nd = fb.split("").filter((c, i) => isD(c) || isD(fa[i])).length;
+    let k = 0; const cols = [];
+    for (let i = 0; i < n; i++) {
+      if (!isD(fb[i]) && !isD(fa[i])) { cols.push({ kind: "sep", ch: fb[i] === " " ? fa[i] : fb[i], from: fa[i] !== " ", to: fb[i] !== " " }); continue; }
+      const d0 = isD(fa[i]) ? +fa[i] : 0, d1 = isD(fb[i]) ? +fb[i] : 0, cyc = Math.min(3, 1 + (nd - 1 - k)), cd = dur * (0.5 + 0.5 * (k + 1) / nd);
+      const steps = (rising ? (d1 - d0 + 10) % 10 : (d0 - d1 + 10) % 10) + 10 * cyc;
+      cols.push({ kind: "digit", k, d0, d1, steps, rising, from: isD(fa[i]), to: isD(fb[i]), start, dur: +cd.toFixed(3), land: +(start + cd).toFixed(3) }); k++;
+    }
+    // "auto" colour: green when it rises fast (a fifth or more of where it started, or from zero), red when it falls (a tenth or more); an explicit tone wins
+    const base = Math.abs(from), rel = base ? Math.abs(to - from) / base : Infinity;
+    const tone = o.tone && o.tone !== "auto" ? o.tone : rising ? (rel >= 0.2 && to !== from ? "green" : "") : rel >= 0.1 ? "red" : "";
+    return { cols, tone, auto: !o.tone || o.tone === "auto", dur: start + dur, rising };
+  }
+  // Seconds (from the overlay's start) of the `tick` effects of a rolling counter: opt-in (`"tick": true` or a number), at most 3, never closer than `gap`.
+  function rollTicks(o, gap) {
+    if (!o.roll || !o.tick) return [];
+    const max = Math.min(3, o.tick === true ? 3 : +o.tick || 0), out = [];
+    rollPlan(o).cols.filter((c) => c.kind === "digit").map((c) => c.land).sort((x, y) => x - y).forEach((t) => { if (out.length < max && (!out.length || t - out[out.length - 1] >= gap + 0.01)) out.push(t); });
+    return out;
+  }
+
   function resolve(story, lines, total) {
     const L = {}; lines.forEach((l) => { L[l.id] = l; });
     const shots = story.shots.map((s, i) => { let t = when(s, 0, L); if (s.type === "chapter") t -= K.CH_LEAD; return Object.assign({}, s, { t0: i === 0 ? 0 : Math.max(0, t), _i: i }); });
@@ -51,6 +79,6 @@
     return { shots, chapters, L };
   }
 
-  const api = { K, words, estimate, schedule, lineWords, when, resolve };
+  const api = { K, words, estimate, schedule, lineWords, when, resolve, rollPlan, rollTicks };
   if (typeof module !== "undefined" && module.exports) module.exports = api; else root.StudioTiming = api;
 })(typeof window !== "undefined" ? window : globalThis);

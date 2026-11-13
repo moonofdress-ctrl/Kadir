@@ -22,6 +22,8 @@ export function soundCues(res) {
   const overlays = (s) => (s.overlays || []).forEach((o, i) => {
     const t = o.cue || o.at != null ? TM.when(o, s.t0, L) : s.t0 + TM.K.OV_LEAD + i * TM.K.OV_STEP;
     push(t + (HIT[o.type] || 0), pick(o, AUTO[o.type]), `${s.id} ${o.type}`);
+    // a rolling counter with "tick": the first digits to settle each tick (opt-in, at most three, never closer than MIN_SPACING)
+    if (o.type === "counter" && o.roll && o.sound !== false) TM.rollTicks(o, MIN_SPACING).forEach((dt, k) => push(t + dt, "tick", `${s.id} counter digit ${k + 1}`));
   });
   for (const s of res.shots) {
     if (s.type === "chapter") push(s.t0 + 0.05, pick(s, "chapter"), `${s.id} chapter`);

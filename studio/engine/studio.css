@@ -47,6 +47,8 @@ svg text { font-family: var(--kin); }
 /* HUD components */
 .counter { position: absolute; font-family: var(--kin); font-size: 170px; line-height: 1; color: var(--paper); -webkit-text-stroke: 12px var(--ink); paint-order: stroke fill; white-space: nowrap; }
 .counter .cap { display: block; font-family: var(--ui); font-weight: 800; font-size: 40px; letter-spacing: .12em; -webkit-text-stroke: 8px var(--ink); margin-top: 6px; color: var(--paper); }
+.counter .num.roll { display: inline-flex; align-items: flex-start; }
+.counter .rc { display: block; height: 1.12em; overflow: hidden; } .counter .rc .strip { display: block; } .counter .rc .cell, .counter .rs { display: block; height: 1.12em; line-height: 1.12em; }
 .counter.red { color: #ff5a4f; } .counter.green { color: #46e08a; } .counter.gold { color: var(--gold); }
 .pos-tl { left: 90px; top: 70px; } .pos-tr { right: 90px; top: 70px; text-align: right; } .pos-tc { left: 0; width: 100%; top: 70px; text-align: center; }
 .pos-bl { left: 90px; bottom: 90px; } .pos-br { right: 90px; bottom: 90px; text-align: right; } .pos-bc { left: 0; width: 100%; bottom: 90px; text-align: center; }

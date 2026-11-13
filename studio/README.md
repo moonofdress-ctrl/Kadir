@@ -151,6 +151,11 @@ Three world props that carry their own camera. Each belongs on its dark ground (
     { "year": "2018", "caption": "A few thousand stores", "icon": "can", "color": "#8a3fb6", "cue": "L005", "word": 2 } ] } ] }
 ```
 
+**Rolling counter** (overlay `counter` with `"roll": true`; every old counter works as before): the digits roll vertically like a slot machine to the target, the most significant one settling first, upward when the number rises and downward when it falls. The colour turns green when it rises fast (a fifth or more, or from zero) and red when it falls (a tenth or more); an explicit `"tone"` stays as written, `"tone": "auto"` is the default of a roll. `"tick": true` (or 1-3) puts the engine's `tick` effect on the first digits to settle, never closer than the mix's minimum spacing; it is opt-in because every tick counts toward lint A8, so use it on one counter in a few shots, not on all.
+```json
+{ "type": "counter", "roll": true, "tick": true, "from": 0, "to": 1950, "prefix": "$", "suffix": "M", "cap": "SOLD FOR", "pos": "tr", "at": 0.4, "dur": 1.6 }
+```
+
 ## Rules for engine code
 - One paused GSAP timeline drives everything. No timers, no `Math.random`, no dates, no network.
 - **No callbacks** (`onUpdate`, `call`): a seek does not fire them. Tween properties instead; `counter` shows how to do text.
