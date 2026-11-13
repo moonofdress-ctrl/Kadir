@@ -1,4 +1,4 @@
-# TITLE: She Pitched This Soda 9 Months Pregnant. Then Pepsi Paid Up.
+# TITLE: How Poppi Made $1.95 Billion From Soda
 ## PROMISE
 ROUTE: 1 Follow one object (one drink, followed through every word printed on it)
 QUESTION: How did Poppi make one point nine five billion dollars from soda?
