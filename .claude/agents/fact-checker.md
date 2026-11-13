@@ -17,7 +17,7 @@ For every number, date, name and quote in `script.md`:
 3. Check that allegations are worded as allegations and that the accused side's response is present.
 4. Check human-scale conversions by doing the arithmetic.
 
-Write `factcheck.md` as a table: claim, script line, source, status (verified / corrected / removed / unverifiable), note. Make corrections directly in `script.md` and list them. Anything unverifiable is removed or softened, never left as fact.
+Write `factcheck.md` as a table: claim, script line, source, **source date**, **kind** (fact: independently verified / company claim: what a company or person says about itself / estimate: an analyst's or our own arithmetic / allegation: an accusation, in a lawsuit or report, not proven), status (verified / corrected / removed / unverifiable), note. The script must word each kind as what it is: "the company says", "by our arithmetic", "the lawsuit alleges" (13 Nov 2026). Make corrections directly in `script.md` and list them. Anything unverifiable is removed or softened, never left as fact.
 
 On the second pass also look at the contact sheet for letters or numbers inside painted pictures: a generated picture can invent a sign or a figure that nobody checked. Send each one back to the illustrator.
 

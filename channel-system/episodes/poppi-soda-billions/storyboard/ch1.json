@@ -38,7 +38,8 @@
           "face": "neutral",
           "enter": "none"
         }
-      ]
+      ],
+      "explains": "Where and when: a TV pitch stage in 2018, one founder alone in the light with her drink."
     },
     {
       "id": "c1s02",
@@ -85,7 +86,8 @@
           "role": "Co-founder",
           "at": 0.3
         }
-      ]
+      ],
+      "explains": "Who she is: Allison Ellsworth, Poppi's co-founder, named on screen."
     },
     {
       "id": "c1s03",
@@ -160,7 +162,8 @@
           "y": 920,
           "lit": true
         }
-      ]
+      ],
+      "explains": "Who she faces: a row of investors in the dark, the people who decide."
     },
     {
       "id": "c1s04",
@@ -203,7 +206,8 @@
             }
           ]
         }
-      ]
+      ],
+      "explains": "What is at stake for her: she is nine months pregnant and still pitching."
     },
     {
       "id": "c1s05",
@@ -261,7 +265,8 @@
           "pose": "rest",
           "enter": "none"
         }
-      ]
+      ],
+      "explains": "The investor who matters: one lit chair among the dark ones."
     },
     {
       "id": "c1s06",
@@ -324,7 +329,8 @@
           "role": "Investor, guest Shark",
           "at": 0.3
         }
-      ]
+      ],
+      "explains": "Who he is: Rohan Oza, named on screen, about to make an offer."
     },
     {
       "id": "c1s08",
@@ -363,7 +369,8 @@
             }
           ]
         }
-      ]
+      ],
+      "explains": "Her nerves: the founder waits for the offer."
     },
     {
       "id": "c1k01",
@@ -414,7 +421,8 @@
           "flip": true,
           "enter": "none"
         }
-      ]
+      ],
+      "explains": "The drink knows something she does not: a joke that plants the twist."
     },
     {
       "id": "c1t01",
@@ -423,7 +431,8 @@
       "text": "We know what they don't.",
       "emph": [
         "know"
-      ]
+      ],
+      "explains": "The viewer's advantage: we know the ending, they do not."
     },
     {
       "id": "c1s09",
@@ -456,7 +465,8 @@
           "pose": "grab",
           "enter": "none"
         }
-      ]
+      ],
+      "explains": "The buyer is already watching: the giant can in the rafters."
     },
     {
       "id": "c1s10",
@@ -509,7 +519,8 @@
           "at": 0.3,
           "dur": 1.4
         }
-      ]
+      ],
+      "explains": "The running number: the price tag flips to $1.95B, the figure the whole story explains."
     },
     {
       "id": "c1k02a",
@@ -542,7 +553,8 @@
           ],
           "enter": "none"
         }
-      ]
+      ],
+      "explains": "The viewer's doubt, said by Benny: two billion dollars for vinegar?"
     },
     {
       "id": "c1k02b",
@@ -578,7 +590,8 @@
           ],
           "enter": "none"
         }
-      ]
+      ],
+      "explains": "The drink answers: same soda, keep watching (the returning line begins)."
     },
     {
       "id": "c1k02c",
@@ -612,7 +625,8 @@
           ],
           "enter": "none"
         }
-      ]
+      ],
+      "explains": "Benny worries for her: the human stake, from the viewer's seat."
     },
     {
       "id": "c1k02d",
@@ -657,7 +671,8 @@
           ],
           "enter": "none"
         }
-      ]
+      ],
+      "explains": "Comic relief that keeps her in frame: the bottle is the one sweating."
     },
     {
       "id": "c1s11",
@@ -705,7 +720,8 @@
           "y": 420,
           "circle": 18
         }
-      ]
+      ],
+      "explains": "A clock on the story: her son is born ten days later."
     },
     {
       "id": "c1s12",

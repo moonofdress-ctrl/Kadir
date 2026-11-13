@@ -23,6 +23,7 @@ Produce `storyboard.json` in the episode folder. When you are given one chapter 
 6. Set `"viewer"` to the stand-in character and give them the final shot.
 7. Change the grade with the mood. Never use the same camera move twice in a row.
 8. Keep faces, text and numbers inside the safe area (STYLE_GUIDE).
+9. **Every shot says what it explains** (13 Nov 2026): add `"explains": "<one plain sentence: what the viewer understands from this picture>"` to each scene, split, card and story-scene shot. A shot that explains nothing is decoration: cut it or give it a job. The lint warns on shots without it (J1).
 
 The first 30 seconds first. Storyboard them, build, run the lint and make their frame sheet (`node studio/tools/stills.mjs frames <episode> --t 0,2.5,5,7.5,10,12.5,15,17.5,20,22.5,25,27.5 --out <episode>/render/look.jpg`), and report; whoever runs the episode passes the Look gate (FORMAT_BOOK 11) before you write the rest.
 

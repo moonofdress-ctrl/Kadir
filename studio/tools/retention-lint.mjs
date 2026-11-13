@@ -74,6 +74,8 @@ need(120, "H8", "No chapter card, chart or lesson before 0:45", () => { const ch
 
 /* ---- pace (FORMAT_BOOK 11) ---- */
 const avg = total / shots.length;
+{ const noEx = shots.filter((s) => s.type !== "chapter" && !s.explains).length; // 13 Nov 2026: every shot says what it explains
+  add("J1", "Every shot says what it explains", g(noEx === 0, true), `${noEx} of ${shots.length} shots without "explains"`, "0"); }
 add("P1", "Average shot length", g(avg <= 3.5, avg <= 4.2), avg.toFixed(1) + "s", "3.5s or less (the rival: 3.4s; our first episode: 4.7s)");
 add("P2", "Longest stretch with nothing new on screen", g(maxGap <= 6, maxGap <= 8), `${maxGap.toFixed(1)}s at ${mmss(gapAt)}`, "6s or less");
 const sc = shots.filter((s) => !isCard(s) && s.type !== "split"); let rep = 0; for (let i = 1; i < sc.length; i++) if ((sc[i].camera || "still") === (sc[i - 1].camera || "still")) rep++;

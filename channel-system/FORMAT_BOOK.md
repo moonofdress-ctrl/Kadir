@@ -30,7 +30,7 @@ No logo, no greeting, no "in this video". The opening is a **scene**, not a summ
 |---|---|
 | 0:00–0:12 | One place, in the dark, with one light. The story's person in close-up with a name strip, then the second person. The first sentence is what they are doing and what is wrong with it. **The first frame shows the thumbnail's scene.** |
 | 0:12–0:25 | What the viewer knows and the person does not: who is watching, what is already lost. One new picture per short sentence. The first character line is spoken here. |
-| by 0:30 | The one big number, once, as a counter or a slam. No other figure on screen in the opening. |
+| by 0:30 | The one big number, once, as a counter or a slam. No other figure on screen in the opening. In the same stretch, one sentence promises the answer and says what the viewer gets from it (Poppi: "And that big number has a part almost nobody noticed."). |
 | by 0:45 | Ask the title question out loud, word for word, on a text card. |
 | 0:45–0:50 | Open the long story with a date and a place: "It starts on a Tuesday in March, in a town of nine hundred people." |
 
@@ -88,6 +88,7 @@ Then pick one route from `STORY_ROUTES.md` as the backbone. Three tests, which t
 - One twist "almost nobody noticed".
 - The next date to watch (earnings day, a vote, a court date): a reason to come back.
 - The last line calls back to the opening, and the last picture is the opening's place again, changed by what happened.
+- **Leave room for the end screen** (13 Nov 2026): in the last 20 seconds keep the right half of the frame free of text and faces, where YouTube places the end-screen video; the packager points it at the episode whose story connects best, so the viewer goes straight to the next one.
 - **Stop on the last line.** No outro, no "like and subscribe", no channel plug anywhere in the video. The only ask is one question in the description and pinned comment.
 
 ## 9. Writing for the voice engine

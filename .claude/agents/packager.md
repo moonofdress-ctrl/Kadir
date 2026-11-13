@@ -14,7 +14,8 @@ Write `package.md`:
 - **Thumbnails**: `thumbnail_a.png`, `thumbnail_b.png`, `thumbnail_c.png` from the illustrator (made by `studio/tools/stills.mjs thumb --t <seconds> --out <file>`), 1280×720. Look at each `_small.png` (160×90): the face and the number must still read, and nothing important sits in the lower right corner. Say explicitly that A matches the first frame.
 - **Shorts** (FORMAT_BOOK 16): build each one with `node studio/tools/build.mjs <episode> --short <first>-<last> --title "<question>" --name short<N>`, then mix, lint and look at its frames like an episode. Plan: three moments that each hold one question, one cause and one answer in 20–45 seconds, with their line ids, a new first line where the moment leans on earlier context, and the question to show on screen.
 - **Description**: two paragraphs of plain facts with the key numbers; one question for the comments; chapter timestamps copied from `timing.json` (`chapters[].stamp`, with `0:00` for the first chapter); "Figures as of <date>, from reporting by <outlets>."; the source links; "This video is not financial advice. Allegations described are unproven."
-- **Pinned comment**: the same question.
+- **Pinned comment**: the same question, worded so viewers can take one of two sides and both are reasonable ("Was $1.95 billion a fair price, or did PepsiCo overpay?"), never bait or insults (13 Nov 2026).
+- **End screen**: the episode whose story connects best to this one, and the subscribe element; the video keeps the right half of the last 20 seconds clear for them (FORMAT_BOOK 8).
 - Tags, and the end-screen suggestion.
 - **Disclosure**: note whether the narration is a synthetic voice, so the user can set YouTube's altered-content label correctly.
 
