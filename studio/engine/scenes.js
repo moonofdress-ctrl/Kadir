@@ -148,7 +148,8 @@
   const side = (i) => (i % 2 ? -1 : 1);
   const yState = (i, j) => { const r = i - j;
     if (r >= 0) { const k = 1 / (1 + 1.1 * r); return { x: 960 + side(i) * 500 * k, y: 300 + 460 * k, scale: k, opacity: r === 0 ? 1 : Math.max(0.45, 0.92 - 0.16 * r), filter: "blur(0px)" }; }
-    const a = -r; return { x: 960 + side(i) * 500 - 1000 * a, y: 760 + 120 * a, scale: 1 + 0.25 * a, opacity: Math.max(0.2, 0.42 - 0.08 * (a - 1)), filter: `blur(${(4 * a).toFixed(1)}px)` }; };
+    const a = -r; return { x: 960 + side(i) * (500 + 800 * a), // past signs leave on their own side of the road, never across the active one
+       y: 760 + 120 * a, scale: 1 + 0.25 * a, opacity: Math.max(0.2, 0.42 - 0.08 * (a - 1)), filter: `blur(${(4 * a).toFixed(1)}px)` }; };
   const yearSVG = (y, i) => {
     const cap = y.caption ? String(y.caption) : "", fs = Math.max(30, Math.min(50, Math.floor(700 / (cap.length * 0.52)))), cw = Math.min(760, cap.length * fs * 0.52 + 70), inner = Math.round(-side(i) * 240),
       extra = y.who ? `<g transform="translate(${inner},-430)"><circle r="84" fill="${PAPER}" ${st}/><g class="face-slot" data-who="${y.who}" data-w="150"></g></g>` :
@@ -237,13 +238,15 @@
   S.PROPS.map_flight = {
     draw(o) {
       const { A, B, F, P, a, b } = framed(o), R0 = route(P); let land = "", grid = "";
-      for (let off = -360; off <= 360; off += 360) { land += LAND.map((p) => `<path d="${poly(p, F, off)}" fill="#38457c" stroke="${INK}" stroke-width="5" stroke-linejoin="round"/>`).join(""); if (o.map === "us" || off === 0) land += `<path d="${poly(US, F, off)}" fill="#4a5ca0" stroke="${INK}" stroke-width="5" stroke-linejoin="round"/>`; }
+      for (let off = -360; off <= 360; off += 360) { land += LAND.map((p) => `<path d="${poly(p, F, off)}" fill="#38457c" stroke="${INK}" stroke-width="5" stroke-linejoin="round"/>`).join(""); land += `<path d="${poly(US, F, off)}" fill="#4a5ca0" stroke="${INK}" stroke-width="5" stroke-linejoin="round"/>`; }
       for (let lon = -540; lon <= 540; lon += 30) { const p = F.proj(lon, 80), q = F.proj(lon, -60); grid += `M${p[0].toFixed(1)},${p[1].toFixed(1)}L${q[0].toFixed(1)},${q[1].toFixed(1)}`; }
       for (let lat = -60; lat <= 80; lat += 15) { const p = F.proj(-540, lat), q = F.proj(540, lat); grid += `M${p[0].toFixed(1)},${p[1].toFixed(1)}L${q[0].toFixed(1)},${q[1].toFixed(1)}`; }
       let dashes = ""; const nd = Math.max(8, Math.round(R0.L / 46)); for (let i = 0; i < nd; i++) { const p = R0.at(i / nd), q = R0.at((i + 0.6) / nd); dashes += `<path class="dash" data-f="${(i / nd).toFixed(4)}" d="M${p.x.toFixed(1)},${p.y.toFixed(1)}L${q.x.toFixed(1)},${q.y.toFixed(1)}" fill="none" stroke="#ffd23f" stroke-width="9" stroke-linecap="round" opacity="0"/>`; }
-      const city = (c, p, cls) => `<g class="${cls}"><circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="14" fill="#ffd23f" ${st}/><g transform="translate(${p[0].toFixed(1)},${(p[1] + 74).toFixed(1)})"><g class="cut">${R(-(String(c.name).length * 15 + 34), -38, String(c.name).length * 30 + 68, 62, PAPER, 10)}</g>${T(0, 12, c.name.toUpperCase(), 44, INK)}</g></g>`;
+      // the name plate stands beside its dot, away from the route: the end city on its own side, the start city on the other
+      const w = (c) => String(c.name).length * 30 + 68, dirB = b[0] >= a[0] ? 1 : -1;
+      const city = (c, p, cls, dir) => `<g class="${cls}"><circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="18" fill="#ffd23f" ${st}/><g transform="translate(${(p[0] + dir * (w(c) / 2 + 34)).toFixed(1)},${(p[1] + 12).toFixed(1)})"><g class="cut">${R(-w(c) / 2, -50, w(c), 62, PAPER, 10)}</g>${T(0, 0, c.name.toUpperCase(), 44, INK)}</g></g>`;
       const ring = `<g class="ring"><circle cx="${b[0].toFixed(1)}" cy="${b[1].toFixed(1)}" r="30" fill="none" stroke="#ffd23f" stroke-width="8"/></g>`;
-      return `<g class="cam"><rect x="-3000" y="-2000" width="8000" height="5200" fill="#0c1330"/>${land}<path d="${grid}" stroke="#8fa3ff" stroke-width="2" opacity=".12" fill="none"/>${dashes}${ring}${city(A, a, "cA")}${city(B, b, "cB")}${plane()}</g>`;
+      return `<g class="cam"><rect x="-3000" y="-2000" width="8000" height="5200" fill="#0c1330"/>${land}<path d="${grid}" stroke="#8fa3ff" stroke-width="2" opacity=".12" fill="none"/>${dashes}${ring}${city(A, a, "cA", -dirB)}${city(B, b, "cB", dirB)}${plane()}</g>`;
     },
     play(tl, el, o, t0) {
       const { P } = framed(o), R0 = route(P), cam = el.querySelector(".cam"), pl = el.querySelector(".pl"), ring = el.querySelector(".ring"), cA = el.querySelector(".cA"), cB = el.querySelector(".cB");
