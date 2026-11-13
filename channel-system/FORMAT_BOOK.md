@@ -147,6 +147,7 @@ Measured on the reference channel; the lint checks them (its check ids are in br
 - **Shot sizes change.** Wide for a place, close for a face, a detail (a glass, a hand, a phone), a view through a window or from above. Two shots in a row at the same size with the figures facing the camera is a fault.
 - **Text cards** carry the turn lines and the big numbers. The words appear with the voice, one at a time.
 - **The numbers the story turns on are drawn**, one at a time: a counter that rolls, bars that grow, a line that draws itself. A number that only supports the sentence is spoken and not drawn. A date that matters is a calendar page. A by-the-clock chapter keeps a clock in the corner of every shot.
+- **One running number** (13 Nov 2026, from a study of two What If channels with 6 M views each in a month): every episode keeps one number on screen that returns at least once a chapter, changed each time (Poppi: the price tag $1.95B -> $1.65B -> $12M). Viewers stay to see its next value. The thumbnail shows its first value.
 - **Subtitles are on** in every video; they rest while a text card is showing its own words.
 - **Every quote is evidence**: a document card, a post card or a lower third with the name and role, with the key words highlighted. Lesser-known people get a name strip and a caricature within the style guide's limits.
 - **Lists build on screen**: one short sentence, one new panel of a split screen.
