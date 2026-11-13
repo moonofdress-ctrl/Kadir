@@ -111,6 +111,8 @@ function main() {
     const src = (f) => fs.readFileSync(path.join(STUDIO, "engine", f), "utf8");
     const names = (text, from, to) => { const a = text.indexOf(from), b = text.indexOf(to, a); return new Set([...text.slice(a, b).matchAll(/^    ([a-z_0-9]+)(?:\(o\)|: *\{)/gm)].map((m) => m[1])); };
     const setsJs = src("sets.js"), sets = names(setsJs, "const SETS = {", "const PROPS = {"), props = names(setsJs, "const PROPS = {", "// Ambient motion"), things = names(src("rig.js"), "const THINGS = {", "// { hat:");
+    // engine/scenes.js adds sets with Object.assign(S.SETS, {...}) and props as S.PROPS.<name> = ...
+    const scn = src("scenes.js"); for (const m of scn.matchAll(/^    ([a-z_0-9]+): \(/gm)) sets.add(m[1]); for (const m of scn.matchAll(/^  S\.PROPS\.([a-z_0-9]+) = /gm)) props.add(m[1]);
     const bad = { set: new Map(), thing: new Map(), prop: new Map() };
     const note = (k, n, id) => { if (!bad[k].has(n)) bad[k].set(n, []); if (bad[k].get(n).length < 4) bad[k].get(n).push(id); };
     for (const p of story.shots.flatMap((s) => (s.type === "split" ? s.panels || [] : [s]))) {
@@ -142,6 +144,7 @@ function main() {
     <script src="engine/timing.js"></script>
     <script src="engine/rig.js"></script>
     <script src="engine/sets.js"></script>
+    <script src="engine/scenes.js"></script>
     <script src="engine/overlays.js"></script>
     <script src="engine/core.js"></script>
   </head>

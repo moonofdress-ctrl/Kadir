@@ -8,6 +8,7 @@ Turns a storyboard and a set of voice clips into a HyperFrames composition. Text
 |---|---|
 | `engine/rig.js` | The character skeleton, the cast, expressions, poses, hats, badges, hand props, lip sync, and the living things (`THINGS`). |
 | `engine/sets.js` | Sets (places) and world props (charts, the banknote, the tower, signs, banners, price tags, stalls, crates, the hidden piggy bank). |
+| `engine/scenes.js` | Story scenes: evidence board, timeline tunnel, map flight (props), and their dark grounds (`evidence_wall`, `timeline_road`, `map_table`). |
 | `engine/overlays.js` | Counters, slams, labels, stamps, tags, lower thirds, calendar, clock, document and post cards. |
 | `engine/core.js` | Shot types (scene, card, chapter, split), camera, shot size, light, grades. |
 | `engine/timing.js` | Line and shot timing, shared by the browser and the tools. |
@@ -128,6 +129,19 @@ cd studio && npm run check && npm run render
 - **Painted backgrounds**: `"set": "picture", "opts": { "src": "art/harbour.jpg", "shows": "a container harbour at night", "dim": 0.2 }`. The file is in the episode folder (1920x1080 JPEG); the build copies it. Cameras, grades, lights, props and overlays work over it; `dim` darkens it under text. The lint reads `shows` and `living` (G1, G2) and fails when a file is missing (G6). `gallery/` has an example (g25).
 - **Faces, poses, props, sets, overlays**: the lists at the top of `rig.js`, `sets.js` and `overlays.js`, each with a one-line comment showing its fields. `gallery/storyboard.json` has a working example of every one.
 - `motif` and `callback` do not change the picture. They tell the lint which shots carry the anchor motif and which ones pay off an earlier image.
+
+## Story scenes (`engine/scenes.js`, demo: `channel-system/episodes/demo-story-scenes/`)
+
+Three world props that carry their own camera. Each belongs on its dark ground (add `"light"` and `"place"` as for any shot); timed only from the timeline, so a seek gives the same frame.
+
+**Evidence board** (`"set": "evidence_wall"`, prop `board_web`): who backed whom, who owns what. Nodes are cast or guest faces (`"kind": "face"`, `"who"`), logo-free badges (`"kind": "badge"`, `"icon"`: `building`, `can`, `coin`, `bank`, `person`, `plane`, `"color"`) and document cards (`"kind": "doc"`, `"title"`), each with a name strip (`name`) and an optional line under the picture (`sub`). A node lights up on its `cue`/`word`/`at`: the camera eases to it and the others dim and soften. Red strings (`edges`, with an optional `label`) draw themselves one at a time, on their own cue or just after the later of their two nodes. Nodes without `x`/`y` zigzag across the board; at the end the camera pulls back and lights everything (`"overview": seconds after the last node`, or `false`). `"zoom"` sets how close the camera goes (1.7).
+```json
+{ "id": "b1", "cue": "L001", "set": "evidence_wall", "opts": { "night": true }, "place": "evidence wall", "light": { "x": 960, "y": 470, "r": 1100, "dark": 0.55 },
+  "props": [ { "type": "board_web", "nodes": [
+    { "id": "r", "kind": "face", "who": "ROHAN_OZA", "name": "ROHAN OZA", "sub": "the connector", "cue": "L001", "word": 11 },
+    { "id": "c", "kind": "badge", "icon": "can", "name": "CAVU", "cue": "L002", "word": 5 } ],
+    "edges": [ { "from": "r", "to": "c", "label": "backed by" } ] } ] }
+```
 
 ## Rules for engine code
 - One paused GSAP timeline drives everything. No timers, no `Math.random`, no dates, no network.

@@ -1,0 +1,17 @@
+{
+  "episode": "demo-story-scenes",
+  "demo": true,
+  "title": "Demo: four story scenes",
+  "viewer": "BENNY",
+  "notes": "Evidence board, timeline tunnel, rolling counter, map flight. Names are made-up demo content.",
+  "shots": [
+    { "id": "d01", "cue": "L001", "set": "evidence_wall", "opts": { "night": true }, "place": "evidence wall", "light": { "x": 960, "y": 470, "r": 1100, "dark": 0.55 },
+      "props": [ { "type": "board_web", "nodes": [
+        { "id": "f", "kind": "face", "who": "ALLISON_ELLSWORTH", "name": "THE FOUNDERS", "sub": "soda makers", "cue": "L001", "word": 0 },
+        { "id": "r", "kind": "face", "who": "ROHAN_OZA", "name": "ROHAN OZA", "sub": "the connector", "cue": "L001", "word": 11 },
+        { "id": "c", "kind": "badge", "icon": "can", "color": "#8a3fb6", "name": "CAVU", "sub": "snack investor", "cue": "L002", "word": 5 },
+        { "id": "d", "kind": "doc", "title": "DEAL", "name": "THE SALE", "sub": "$1.95B", "cue": "L003", "word": 1 },
+        { "id": "p", "kind": "badge", "icon": "building", "color": "#1f6fb6", "name": "PEPSICO", "sub": "the buyer", "cue": "L003", "word": 3 } ],
+        "edges": [ { "from": "f", "to": "r", "label": "hired" }, { "from": "r", "to": "c", "label": "backed by" }, { "from": "c", "to": "d" }, { "from": "d", "to": "p", "label": "paid" } ] } ] }
+  ]
+}
