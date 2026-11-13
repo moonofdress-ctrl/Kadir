@@ -1,0 +1,1623 @@
+{
+  "shots": [
+    {
+      "id": "c4c00",
+      "type": "chapter",
+      "cue": "L089",
+      "number": 4,
+      "title": "Seen Holding It"
+    },
+    {
+      "id": "c4t01",
+      "type": "card",
+      "cue": "L089",
+      "word": 3,
+      "text": "With famous faces attached.",
+      "emph": [
+        "famous"
+      ]
+    },
+    {
+      "id": "c4s01",
+      "cue": "L090",
+      "set": "boardroom",
+      "opts": {
+        "night": true,
+        "glass": true
+      },
+      "place": "boardroom",
+      "camera": "push_in",
+      "grade": "night",
+      "callback": "Oza's briefcase",
+      "light": {
+        "x": 960,
+        "y": 300,
+        "r": 800,
+        "color": "#fff1c4",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "who": "ROHAN_OZA",
+          "y": 980,
+          "enter": "none",
+          "x": 560,
+          "scale": 0.85,
+          "face": "smug",
+          "pose": "point",
+          "acts": [
+            {
+              "cue": "L090",
+              "word": 8,
+              "face": "deadpan",
+              "pose": "fold"
+            }
+          ]
+        },
+        {
+          "thing": "soda",
+          "shape": "can",
+          "scale": 0.45,
+          "y": 860,
+          "enter": "none",
+          "x": 1400,
+          "face": "shocked",
+          "acts": [
+            {
+              "cue": "L090",
+              "word": 6,
+              "face": "happy",
+              "pose": "cheer"
+            }
+          ]
+        }
+      ],
+      "props": [
+        {
+          "type": "cheque",
+          "x": 700,
+          "y": 850,
+          "t": "$13M",
+          "move": {
+            "to": [
+              1120,
+              850
+            ],
+            "cue": "L090",
+            "word": 3,
+            "dur": 1.2
+          }
+        },
+        {
+          "type": "briefcase",
+          "x": 360,
+          "y": 980
+        }
+      ]
+    },
+    {
+      "id": "c4s02",
+      "cue": "L090",
+      "word": 12,
+      "set": "red_carpet",
+      "opts": {
+        "night": true,
+        "flash": [
+          0.2,
+          0.6,
+          1.1,
+          1.5,
+          2,
+          2.4
+        ]
+      },
+      "place": "red carpet",
+      "camera": "pan_right",
+      "grade": "night",
+      "light": {
+        "x": 1600,
+        "y": 520,
+        "r": 800,
+        "color": "#ffffff",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "soda",
+          "shape": "can",
+          "scale": 0.4,
+          "y": 960,
+          "enter": "none",
+          "x": 760,
+          "face": "smug",
+          "pose": "wave"
+        },
+        {
+          "thing": "soda",
+          "shape": "can",
+          "scale": 0.36,
+          "y": 900,
+          "enter": "none",
+          "x": 960,
+          "face": "happy",
+          "pose": "cheer"
+        },
+        {
+          "thing": "soda",
+          "shape": "can",
+          "scale": 0.4,
+          "y": 960,
+          "enter": "none",
+          "x": 1150,
+          "face": "smug",
+          "pose": "present",
+          "flip": true
+        }
+      ]
+    },
+    {
+      "id": "c4s03",
+      "cue": "L090",
+      "word": 19,
+      "set": "red_carpet",
+      "opts": {
+        "night": true,
+        "flash": [
+          0.1,
+          0.5,
+          0.9,
+          1.4,
+          1.8
+        ]
+      },
+      "place": "red carpet",
+      "camera": "push_in",
+      "frame": "close",
+      "focus": [
+        960,
+        720
+      ],
+      "grade": "gold",
+      "motif": "word on the can",
+      "light": {
+        "x": 1500,
+        "y": 500,
+        "r": 820,
+        "color": "#ffffff",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "soda",
+          "shape": "can",
+          "scale": 0.7,
+          "y": 980,
+          "enter": "none",
+          "x": 960,
+          "label": "poppi",
+          "face": "smug",
+          "pose": "wave",
+          "acts": [
+            {
+              "cue": "L090",
+              "word": 21,
+              "pose": "cheer",
+              "face": "happy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4k15a",
+      "cue": "L091",
+      "set": "red_carpet",
+      "opts": {
+        "night": true,
+        "flash": [
+          0.9
+        ]
+      },
+      "place": "red carpet",
+      "camera": "pull_out",
+      "frame": "medium",
+      "grade": "night",
+      "light": {
+        "x": 1300,
+        "y": 480,
+        "r": 780,
+        "color": "#ffffff",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "who": "CHAD",
+          "y": 960,
+          "enter": "none",
+          "x": 820,
+          "face": "smug",
+          "prop": "phone",
+          "pose": "phone",
+          "speaks": [
+            "L091"
+          ]
+        },
+        {
+          "thing": "soda",
+          "shape": "can",
+          "scale": 0.45,
+          "y": 880,
+          "enter": "none",
+          "x": 1120,
+          "face": "confused",
+          "pose": "hold"
+        }
+      ]
+    },
+    {
+      "id": "c4k15b",
+      "cue": "L092",
+      "set": "red_carpet",
+      "opts": {
+        "night": true,
+        "flash": [
+          1.2
+        ]
+      },
+      "place": "red carpet",
+      "camera": "tilt_up",
+      "frame": "close",
+      "grade": "night",
+      "light": {
+        "x": 1100,
+        "y": 500,
+        "r": 760,
+        "color": "#ffffff",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "soda",
+          "shape": "can",
+          "scale": 0.6,
+          "y": 940,
+          "enter": "none",
+          "x": 1100,
+          "face": "confused",
+          "pose": "shrug",
+          "speaks": [
+            "L092"
+          ]
+        },
+        {
+          "who": "CHAD",
+          "y": 960,
+          "enter": "none",
+          "x": 700,
+          "face": "smug",
+          "prop": "phone",
+          "pose": "phone"
+        }
+      ]
+    },
+    {
+      "id": "c4k15c",
+      "cue": "L093",
+      "set": "red_carpet",
+      "opts": {
+        "night": true,
+        "flash": [
+          0.3,
+          1.4
+        ]
+      },
+      "place": "red carpet",
+      "camera": "push_in",
+      "frame": "close",
+      "grade": "night",
+      "light": {
+        "x": 860,
+        "y": 460,
+        "r": 760,
+        "color": "#ffffff",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "who": "CHAD",
+          "y": 960,
+          "enter": "none",
+          "x": 860,
+          "face": "deadpan",
+          "prop": "phone",
+          "pose": "phone",
+          "speaks": [
+            "L093"
+          ],
+          "acts": [
+            {
+              "cue": "L093",
+              "word": 3,
+              "face": "smug"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4s04",
+      "cue": "L094",
+      "set": "supermarket",
+      "opts": {
+        "night": true,
+        "dress": "aisle"
+      },
+      "place": "soda aisle",
+      "camera": "pan_left",
+      "frame": "close",
+      "focus": [
+        960,
+        700
+      ],
+      "grade": "night",
+      "light": {
+        "x": 960,
+        "y": 450,
+        "r": 800,
+        "color": "#cfeaff",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "soda",
+          "shape": "can",
+          "scale": 0.5,
+          "y": 860,
+          "enter": "none",
+          "x": 820,
+          "face": "smug",
+          "pose": "present",
+          "acts": [
+            {
+              "cue": "L094",
+              "word": 3,
+              "to": [
+                1060,
+                860
+              ],
+              "dur": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4s05",
+      "cue": "L094",
+      "word": 8,
+      "set": "night_city",
+      "place": "night city",
+      "camera": "pull_out",
+      "grade": "night",
+      "light": {
+        "x": 960,
+        "y": 600,
+        "r": 900,
+        "color": "#ffe0a0",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "soda",
+          "shape": "can",
+          "scale": 0.28,
+          "y": 980,
+          "enter": "none",
+          "x": 300,
+          "face": "happy"
+        },
+        {
+          "thing": "soda",
+          "shape": "can",
+          "scale": 0.28,
+          "y": 960,
+          "enter": "pop",
+          "x": 560,
+          "face": "smug",
+          "at": 0.3
+        },
+        {
+          "thing": "soda",
+          "shape": "can",
+          "scale": 0.28,
+          "y": 980,
+          "enter": "pop",
+          "x": 820,
+          "face": "happy",
+          "at": 0.6
+        },
+        {
+          "thing": "soda",
+          "shape": "can",
+          "scale": 0.28,
+          "y": 960,
+          "enter": "pop",
+          "x": 1080,
+          "face": "smug",
+          "at": 0.9
+        },
+        {
+          "thing": "soda",
+          "shape": "can",
+          "scale": 0.28,
+          "y": 980,
+          "enter": "pop",
+          "x": 1340,
+          "face": "happy",
+          "at": 1.2
+        },
+        {
+          "thing": "soda",
+          "shape": "can",
+          "scale": 0.28,
+          "y": 960,
+          "enter": "pop",
+          "x": 1600,
+          "face": "smug",
+          "at": 1.5
+        }
+      ]
+    },
+    {
+      "id": "c4k16a",
+      "cue": "L095",
+      "set": "supermarket",
+      "opts": {
+        "night": true,
+        "dress": "aisle"
+      },
+      "place": "soda aisle",
+      "camera": "push_in",
+      "frame": "medium",
+      "grade": "night",
+      "motif": "word on the can",
+      "light": {
+        "x": 900,
+        "y": 420,
+        "r": 800,
+        "color": "#cfeaff",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "who": "BENNY",
+          "y": 960,
+          "enter": "none",
+          "x": 820,
+          "face": "shocked",
+          "pose": "hold",
+          "speaks": [
+            "L095"
+          ]
+        },
+        {
+          "thing": "soda",
+          "shape": "can",
+          "scale": 0.3,
+          "y": 760,
+          "enter": "none",
+          "x": 900,
+          "face": "smug"
+        },
+        {
+          "who": "MARTHA",
+          "y": 960,
+          "enter": "none",
+          "x": 1320,
+          "scale": 0.85,
+          "face": "deadpan",
+          "prop": "calculator"
+        }
+      ]
+    },
+    {
+      "id": "c4k16b",
+      "cue": "L096",
+      "set": "supermarket",
+      "opts": {
+        "night": true,
+        "dress": "aisle"
+      },
+      "place": "soda aisle",
+      "camera": "pan_right",
+      "frame": "close",
+      "grade": "night",
+      "light": {
+        "x": 1200,
+        "y": 420,
+        "r": 760,
+        "color": "#cfeaff",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "who": "MARTHA",
+          "y": 960,
+          "enter": "none",
+          "x": 1200,
+          "face": "deadpan",
+          "prop": "calculator",
+          "speaks": [
+            "L096"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4k16c",
+      "cue": "L097",
+      "set": "supermarket",
+      "opts": {
+        "night": true,
+        "dress": "aisle"
+      },
+      "place": "soda aisle",
+      "camera": "tilt_down",
+      "frame": "close",
+      "grade": "night",
+      "light": {
+        "x": 800,
+        "y": 420,
+        "r": 760,
+        "color": "#cfeaff",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "who": "BENNY",
+          "y": 960,
+          "enter": "none",
+          "x": 800,
+          "face": "confused",
+          "pose": "shrug",
+          "speaks": [
+            "L097"
+          ]
+        },
+        {
+          "thing": "soda",
+          "shape": "can",
+          "scale": 0.35,
+          "y": 860,
+          "enter": "none",
+          "x": 1020,
+          "face": "confused"
+        }
+      ]
+    },
+    {
+      "id": "c4k16d",
+      "cue": "L098",
+      "set": "supermarket",
+      "opts": {
+        "night": true,
+        "dress": "aisle"
+      },
+      "place": "soda aisle",
+      "camera": "pull_out",
+      "frame": "medium",
+      "grade": "night",
+      "light": {
+        "x": 1000,
+        "y": 420,
+        "r": 800,
+        "color": "#cfeaff",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "who": "MARTHA",
+          "y": 960,
+          "enter": "none",
+          "x": 1300,
+          "face": "smug",
+          "pose": "point",
+          "speaks": [
+            "L098"
+          ]
+        },
+        {
+          "who": "BENNY",
+          "y": 960,
+          "enter": "none",
+          "x": 760,
+          "face": "confused",
+          "prop": "phone",
+          "pose": "phone",
+          "acts": [
+            {
+              "cue": "L098",
+              "word": 3,
+              "face": "happy"
+            }
+          ]
+        },
+        {
+          "thing": "soda",
+          "shape": "can",
+          "scale": 0.3,
+          "y": 760,
+          "enter": "none",
+          "x": 940,
+          "face": "smug",
+          "acts": [
+            {
+              "cue": "L098",
+              "word": 4,
+              "pose": "wave"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4k16e",
+      "cue": "L099",
+      "set": "supermarket",
+      "opts": {
+        "night": true,
+        "dress": "aisle"
+      },
+      "place": "soda aisle",
+      "camera": "push_in",
+      "frame": "close",
+      "grade": "gold",
+      "light": {
+        "x": 860,
+        "y": 400,
+        "r": 760,
+        "color": "#ffe0a0",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "who": "BENNY",
+          "y": 960,
+          "enter": "none",
+          "x": 860,
+          "face": "relieved",
+          "prop": "phone",
+          "pose": "phone",
+          "speaks": [
+            "L099"
+          ]
+        },
+        {
+          "thing": "soda",
+          "shape": "can",
+          "scale": 0.35,
+          "y": 820,
+          "enter": "none",
+          "x": 1080,
+          "face": "happy",
+          "pose": "cheer"
+        }
+      ]
+    },
+    {
+      "id": "c4t02",
+      "type": "card",
+      "cue": "L100",
+      "text": "Another $25 million.",
+      "emph": [
+        "$25"
+      ]
+    },
+    {
+      "id": "c4s06",
+      "cue": "L100",
+      "word": 7,
+      "set": "bottling_plant",
+      "opts": {
+        "night": true
+      },
+      "place": "bottling plant",
+      "camera": "pan_left",
+      "grade": "night",
+      "callback": "bottling plant",
+      "light": {
+        "x": 960,
+        "y": 200,
+        "r": 820,
+        "color": "#ffe0a8",
+        "dark": 0.5
+      },
+      "props": [
+        {
+          "type": "bottles",
+          "x": 960,
+          "y": 700,
+          "n": 9,
+          "move": {
+            "to": [
+              1400,
+              700
+            ],
+            "at": 0.2,
+            "dur": 4
+          }
+        }
+      ],
+      "overlays": [
+        {
+          "type": "counter",
+          "from": 0,
+          "to": 148,
+          "prefix": "+",
+          "suffix": "%",
+          "tone": "green",
+          "pos": "tc",
+          "plate": true,
+          "at": 0.3,
+          "dur": 1.6
+        }
+      ]
+    },
+    {
+      "id": "c4s07",
+      "cue": "L101",
+      "set": "mall",
+      "opts": {
+        "night": true
+      },
+      "place": "empty mall",
+      "camera": "tilt_up",
+      "grade": "night",
+      "light": {
+        "x": 960,
+        "y": 510,
+        "r": 850,
+        "color": "#7fd0f0",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "soda",
+          "shape": "can",
+          "scale": 0.4,
+          "y": 830,
+          "enter": "none",
+          "x": 640,
+          "face": "happy",
+          "pose": "cheer",
+          "acts": [
+            {
+              "at": 0.3,
+              "to": [
+                1340,
+                380
+              ],
+              "dur": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4s08",
+      "cue": "L101",
+      "word": 12,
+      "set": "night_office",
+      "opts": {
+        "night": true,
+        "dress": "hal"
+      },
+      "place": "hal's office",
+      "camera": "push_in",
+      "grade": "night",
+      "light": {
+        "x": 960,
+        "y": 400,
+        "r": 900,
+        "color": "#b5f0b8",
+        "dark": 0.5
+      },
+      "props": [
+        {
+          "type": "bars",
+          "x": 560,
+          "y": 220,
+          "w": 800,
+          "h": 600,
+          "items": [
+            {
+              "label": "2020",
+              "val": 4,
+              "show": "$4M"
+            },
+            {
+              "label": "2024",
+              "val": 500,
+              "show": "$500M"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4k17a",
+      "cue": "L102",
+      "set": "mall",
+      "opts": {
+        "night": true
+      },
+      "place": "empty mall",
+      "camera": "pan_right",
+      "frame": "medium",
+      "grade": "night",
+      "light": {
+        "x": 1100,
+        "y": 420,
+        "r": 800,
+        "color": "#7fd0f0",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "who": "CHAD",
+          "y": 960,
+          "enter": "none",
+          "x": 900,
+          "face": "happy",
+          "pose": "cheer",
+          "speaks": [
+            "L102"
+          ],
+          "acts": [
+            {
+              "cue": "L102",
+              "word": 1,
+              "to": [
+                1060,
+                960
+              ],
+              "dur": 0.6
+            }
+          ]
+        },
+        {
+          "who": "HAL",
+          "y": 960,
+          "enter": "none",
+          "x": 1450,
+          "face": "deadpan",
+          "prop": "espresso"
+        }
+      ]
+    },
+    {
+      "id": "c4k17b",
+      "cue": "L103",
+      "set": "mall",
+      "opts": {
+        "night": true
+      },
+      "place": "empty mall",
+      "camera": "push_in",
+      "frame": "close",
+      "grade": "night",
+      "light": {
+        "x": 1200,
+        "y": 440,
+        "r": 760,
+        "color": "#7fd0f0",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "who": "HAL",
+          "y": 960,
+          "enter": "none",
+          "x": 1200,
+          "face": "deadpan",
+          "prop": "espresso",
+          "speaks": [
+            "L103"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4k17c",
+      "cue": "L104",
+      "set": "mall",
+      "opts": {
+        "night": true
+      },
+      "place": "empty mall",
+      "camera": "shake",
+      "frame": "close",
+      "grade": "gold",
+      "light": {
+        "x": 800,
+        "y": 440,
+        "r": 760,
+        "color": "#ffe0a0",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "who": "CHAD",
+          "y": 960,
+          "enter": "none",
+          "x": 800,
+          "face": "happy",
+          "pose": "shrug",
+          "speaks": [
+            "L104"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4k17d",
+      "cue": "L105",
+      "set": "mall",
+      "opts": {
+        "night": true
+      },
+      "place": "empty mall",
+      "camera": "pull_out",
+      "frame": "medium",
+      "grade": "night",
+      "light": {
+        "x": 1100,
+        "y": 420,
+        "r": 800,
+        "color": "#7fd0f0",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "who": "HAL",
+          "y": 960,
+          "enter": "none",
+          "x": 1300,
+          "face": "deadpan",
+          "prop": "espresso",
+          "speaks": [
+            "L105"
+          ]
+        },
+        {
+          "who": "CHAD",
+          "y": 960,
+          "enter": "none",
+          "x": 760,
+          "face": "happy",
+          "acts": [
+            {
+              "cue": "L105",
+              "word": 2,
+              "face": "sad",
+              "pose": "rest"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4t03",
+      "type": "card",
+      "cue": "L106",
+      "text": "The biggest stage of all.",
+      "emph": [
+        "biggest"
+      ]
+    },
+    {
+      "id": "c4s09",
+      "cue": "L106",
+      "word": 6,
+      "set": "stadium",
+      "opts": {
+        "night": true,
+        "view": "field"
+      },
+      "place": "stadium",
+      "camera": "pan_left",
+      "grade": "night",
+      "light": {
+        "x": 960,
+        "y": 300,
+        "r": 950,
+        "color": "#eaf4ff",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "soda",
+          "shape": "can",
+          "scale": 0.42,
+          "y": 390,
+          "enter": "none",
+          "x": 960,
+          "face": "smug",
+          "pose": "wave"
+        }
+      ]
+    },
+    {
+      "id": "c4s10",
+      "cue": "L106",
+      "word": 15,
+      "set": "stadium",
+      "opts": {
+        "night": true,
+        "view": "field"
+      },
+      "place": "stadium",
+      "camera": "push_in",
+      "frame": "close",
+      "focus": [
+        960,
+        700
+      ],
+      "grade": "night",
+      "light": {
+        "x": 960,
+        "y": 680,
+        "r": 800,
+        "color": "#eaf4ff",
+        "dark": 0.5
+      }
+    },
+    {
+      "id": "c4k18a",
+      "cue": "L107",
+      "set": "stadium",
+      "opts": {
+        "night": true,
+        "view": "stands"
+      },
+      "place": "stadium stands",
+      "camera": "pan_left",
+      "frame": "medium",
+      "grade": "night",
+      "light": {
+        "x": 860,
+        "y": 560,
+        "r": 800,
+        "color": "#eaf4ff",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "who": "BENNY",
+          "y": 960,
+          "enter": "none",
+          "x": 640,
+          "face": "confused",
+          "pose": "think",
+          "speaks": [
+            "L107"
+          ]
+        },
+        {
+          "who": "CHAD",
+          "y": 960,
+          "enter": "none",
+          "x": 1180,
+          "face": "happy",
+          "prop": "phone",
+          "pose": "phone"
+        }
+      ]
+    },
+    {
+      "id": "c4k18b",
+      "cue": "L108",
+      "set": "stadium",
+      "opts": {
+        "night": true,
+        "view": "stands"
+      },
+      "place": "stadium stands",
+      "camera": "push_in",
+      "frame": "close",
+      "grade": "night",
+      "light": {
+        "x": 1180,
+        "y": 560,
+        "r": 760,
+        "color": "#eaf4ff",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "who": "CHAD",
+          "y": 960,
+          "enter": "none",
+          "x": 1180,
+          "face": "smug",
+          "prop": "phone",
+          "pose": "phone",
+          "speaks": [
+            "L108"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4k18c",
+      "cue": "L109",
+      "set": "stadium",
+      "opts": {
+        "night": true,
+        "view": "stands"
+      },
+      "place": "stadium stands",
+      "camera": "tilt_down",
+      "frame": "close",
+      "grade": "gold",
+      "callback": "Benny's popcorn",
+      "light": {
+        "x": 700,
+        "y": 560,
+        "r": 760,
+        "color": "#ffe0a0",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "who": "BENNY",
+          "y": 960,
+          "enter": "none",
+          "x": 700,
+          "face": "happy",
+          "prop": "popcorn",
+          "speaks": [
+            "L109"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4s11",
+      "cue": "L110",
+      "set": "bedroom",
+      "opts": {
+        "night": true,
+        "dress": "loft"
+      },
+      "place": "influencer loft",
+      "camera": "pan_right",
+      "grade": "night",
+      "light": {
+        "x": 1010,
+        "y": 380,
+        "r": 850,
+        "color": "#fff6d8",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "vending",
+          "x": 300,
+          "y": 960,
+          "scale": 0.8,
+          "face": "happy",
+          "enter": "none",
+          "acts": [
+            {
+              "at": 0.3,
+              "to": [
+                700,
+                960
+              ],
+              "dur": 1.6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4s12",
+      "cue": "L111",
+      "set": "night_office",
+      "opts": {
+        "night": true,
+        "dress": "newsroom"
+      },
+      "place": "rival's office",
+      "camera": "push_in",
+      "frame": "medium",
+      "grade": "red",
+      "light": {
+        "x": 1000,
+        "y": 420,
+        "r": 800,
+        "color": "#ffd9a0",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "giant",
+          "color": "teal",
+          "label": "OLIPOP",
+          "x": 1000,
+          "y": 980,
+          "scale": 1,
+          "face": "smug",
+          "prop": "phone",
+          "pose": "phone",
+          "enter": "none"
+        }
+      ]
+    },
+    {
+      "id": "c4s13",
+      "cue": "L111",
+      "word": 8,
+      "set": "bedroom",
+      "opts": {
+        "night": true,
+        "dress": "loft"
+      },
+      "place": "influencer loft",
+      "camera": "tilt_up",
+      "frame": "close",
+      "focus": [
+        800,
+        640
+      ],
+      "grade": "night",
+      "light": {
+        "x": 900,
+        "y": 380,
+        "r": 800,
+        "color": "#fff6d8",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "vending",
+          "x": 800,
+          "y": 980,
+          "scale": 0.9,
+          "face": "scared",
+          "enter": "none"
+        }
+      ],
+      "overlays": [
+        {
+          "type": "counter",
+          "from": 0,
+          "to": 25000,
+          "prefix": "$",
+          "tone": "red",
+          "pos": "tc",
+          "plate": true,
+          "at": 0.3,
+          "dur": 1.4
+        }
+      ]
+    },
+    {
+      "id": "c4k19a",
+      "cue": "L112",
+      "set": "bedroom",
+      "opts": {
+        "night": true,
+        "dress": "loft"
+      },
+      "place": "influencer loft",
+      "camera": "pull_out",
+      "frame": "medium",
+      "grade": "night",
+      "light": {
+        "x": 1010,
+        "y": 380,
+        "r": 820,
+        "color": "#fff6d8",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "who": "CHAD",
+          "y": 960,
+          "enter": "none",
+          "x": 1400,
+          "face": "shocked",
+          "prop": "phone",
+          "pose": "phone",
+          "speaks": [
+            "L112"
+          ]
+        },
+        {
+          "thing": "vending",
+          "x": 620,
+          "y": 980,
+          "scale": 0.75,
+          "face": "scared",
+          "enter": "none"
+        },
+        {
+          "thing": "soda",
+          "shape": "can",
+          "scale": 0.4,
+          "y": 960,
+          "enter": "none",
+          "x": 960,
+          "face": "scared"
+        }
+      ]
+    },
+    {
+      "id": "c4k19b",
+      "cue": "L113",
+      "set": "bedroom",
+      "opts": {
+        "night": true,
+        "dress": "loft"
+      },
+      "place": "influencer loft",
+      "camera": "shake",
+      "frame": "close",
+      "grade": "night",
+      "light": {
+        "x": 960,
+        "y": 520,
+        "r": 760,
+        "color": "#fff6d8",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "soda",
+          "shape": "can",
+          "scale": 0.6,
+          "y": 980,
+          "enter": "none",
+          "x": 960,
+          "face": "panic",
+          "pose": "panic",
+          "speaks": [
+            "L113"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4k19c",
+      "cue": "L114",
+      "set": "bedroom",
+      "opts": {
+        "night": true,
+        "dress": "loft"
+      },
+      "place": "influencer loft",
+      "camera": "push_in",
+      "frame": "medium",
+      "grade": "night",
+      "light": {
+        "x": 1100,
+        "y": 420,
+        "r": 800,
+        "color": "#fff6d8",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "who": "CHAD",
+          "y": 960,
+          "enter": "none",
+          "x": 1380,
+          "face": "confused",
+          "pose": "think",
+          "speaks": [
+            "L114"
+          ]
+        },
+        {
+          "thing": "soda",
+          "shape": "can",
+          "scale": 0.45,
+          "y": 960,
+          "enter": "none",
+          "x": 860,
+          "face": "scared",
+          "speaks": [
+            "L115"
+          ],
+          "acts": [
+            {
+              "cue": "L115",
+              "face": "deadpan",
+              "pose": "shrug"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c4s14",
+      "cue": "L116",
+      "set": "desk_top",
+      "opts": {
+        "night": true
+      },
+      "place": "desk top",
+      "camera": "tilt_down",
+      "grade": "night",
+      "callback": "twenty-five thousand",
+      "light": {
+        "x": 960,
+        "y": 540,
+        "r": 900,
+        "color": "#ffe0a0",
+        "dark": 0.5
+      },
+      "overlays": [
+        {
+          "type": "doc",
+          "source": "TODAY",
+          "date": "12 FEB 2025",
+          "by": "Poppi spokesperson",
+          "quote": "not only fabricated but inflated by sixty percent",
+          "hl": [
+            "inflated"
+          ],
+          "cue": "L116",
+          "word": 5
+        }
+      ]
+    },
+    {
+      "id": "c4s15",
+      "cue": "L116",
+      "word": 14,
+      "set": "kitchen",
+      "opts": {
+        "night": true
+      },
+      "place": "family kitchen",
+      "camera": "pan_left",
+      "frame": "close",
+      "grade": "night",
+      "callback": "family kitchen",
+      "light": {
+        "x": 1000,
+        "y": 520,
+        "r": 780,
+        "color": "#cfe0ff",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "who": "ALLISON_ELLSWORTH",
+          "y": 960,
+          "enter": "none",
+          "x": 1000,
+          "face": "angry",
+          "prop": "phone",
+          "pose": "phone",
+          "acts": [
+            {
+              "cue": "L116",
+              "word": 19,
+              "pose": "point"
+            }
+          ]
+        }
+      ],
+      "overlays": [
+        {
+          "type": "lower_third",
+          "name": "ALLISON ELLSWORTH",
+          "role": "Co-founder, on TikTok",
+          "at": 0.3
+        }
+      ]
+    },
+    {
+      "id": "c4t04",
+      "type": "card",
+      "cue": "L117",
+      "text": "A fight about a fridge.",
+      "emph": [
+        "fridge"
+      ]
+    },
+    {
+      "id": "c4s16",
+      "cue": "L117",
+      "word": 5,
+      "set": "empty_hall",
+      "opts": {
+        "night": true,
+        "dress": "convention"
+      },
+      "place": "empty hall",
+      "camera": "pull_out",
+      "grade": "night",
+      "light": {
+        "x": 960,
+        "y": 260,
+        "r": 820,
+        "color": "#ff9a7a",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "vending",
+          "x": 960,
+          "y": 960,
+          "scale": 0.75,
+          "face": "sad",
+          "enter": "none"
+        }
+      ]
+    },
+    {
+      "id": "c4s17",
+      "cue": "L117",
+      "word": 12,
+      "set": "night_office",
+      "opts": {
+        "night": true,
+        "dress": "executive"
+      },
+      "place": "giant's office",
+      "camera": "tilt_down",
+      "frame": "medium",
+      "grade": "red",
+      "light": {
+        "x": 960,
+        "y": 420,
+        "r": 820,
+        "color": "#ffd9a0",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "giant",
+          "color": "navy",
+          "label": "PEPSICO",
+          "x": 1080,
+          "y": 980,
+          "scale": 1.1,
+          "face": "sad",
+          "pose": "hold",
+          "enter": "none",
+          "acts": [
+            {
+              "cue": "L117",
+              "word": 19,
+              "face": "crying"
+            }
+          ]
+        },
+        {
+          "thing": "soda",
+          "shape": "can",
+          "scale": 0.35,
+          "y": 960,
+          "enter": "none",
+          "x": 700,
+          "color": "#3d6fb6",
+          "face": "sad",
+          "acts": [
+            {
+              "cue": "L117",
+              "word": 20,
+              "pose": "rest",
+              "face": "crying"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

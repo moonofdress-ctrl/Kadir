@@ -1,0 +1,142 @@
+{
+  "shots": [
+    { "id": "c3ch", "type": "chapter", "cue": "L058", "number": 3, "title": "A new word" },
+    { "id": "c3t01", "type": "card", "cue": "L058", "text": "The first thing to go was the name.", "emph": ["name"] },
+
+    { "id": "c3s15", "cue": "L059", "set": "night_office", "opts": { "dress": "clerk", "night": true }, "place": "trademark office", "camera": "tilt_up", "grade": "night", "motif": "word on the can",
+      "light": { "x": 1100, "y": 300, "r": 800, "color": "#c8f0b0", "dark": 0.5 },
+      "actors": [
+        { "who": "REGGIE", "x": 1180, "y": 900, "scale": 1.1, "face": "deadpan", "pose": "think", "prop": "stamp", "enter": "none" },
+        { "thing": "soda", "shape": "bottle", "label": "MOTHER", "x": 640, "y": 960, "scale": 0.4, "face": "happy", "pose": "wave", "enter": "none", "acts": [ { "at": 0.4, "to": [780, 960], "dur": 1.2 } ] } ] },
+    { "id": "c3k10a", "cue": "L060", "set": "night_office", "opts": { "dress": "clerk", "night": true }, "place": "trademark office", "camera": "push_in", "frame": "close", "focus": [860, 700], "grade": "night", "motif": "word on the can",
+      "light": { "x": 900, "y": 360, "r": 760, "color": "#c8f0b0", "dark": 0.5 },
+      "actors": [
+        { "thing": "soda", "shape": "bottle", "x": 860, "y": 900, "scale": 0.6, "face": "happy", "pose": "offer", "speaks": ["L060"], "enter": "none" },
+        { "who": "REGGIE", "x": 1400, "y": 960, "face": "deadpan", "prop": "stamp", "flip": true, "enter": "none" } ] },
+    { "id": "c3k10b", "cue": "L061", "set": "night_office", "opts": { "dress": "clerk", "night": true }, "place": "trademark office", "camera": "pan_left", "frame": "medium", "grade": "night",
+      "light": { "x": 1000, "y": 340, "r": 780, "color": "#c8f0b0", "dark": 0.5 },
+      "actors": [
+        { "who": "REGGIE", "x": 1200, "y": 960, "face": "deadpan", "prop": "stamp", "speaks": ["L061", "L063"], "enter": "none", "acts": [ { "cue": "L063", "pose": "point", "face": "smug" } ] },
+        { "thing": "soda", "shape": "bottle", "x": 720, "y": 940, "scale": 0.5, "face": "sad", "pose": "shrug", "speaks": ["L062"], "enter": "none", "acts": [ { "cue": "L063", "face": "shocked", "to": [420, 940], "dur": 0.6 } ] } ] },
+
+    { "id": "c3s15b", "cue": "L064", "set": "pitch_stage", "opts": { "view": "desk", "night": true, "lit_chair": 2 }, "place": "pitch stage", "camera": "pull_out", "frame": "medium", "grade": "night", "callback": "the lit chair",
+      "light": { "x": 960, "y": 380, "r": 750, "color": "#fff1c4", "dark": 0.5 },
+      "actors": [ { "who": "ROHAN_OZA", "x": 960, "y": 960, "face": "deadpan", "pose": "think", "enter": "none", "acts": [ { "cue": "L064", "word": 3, "face": "smug", "pose": "present" } ] } ],
+      "props": [ { "type": "briefcase", "x": 1160, "y": 960 } ] },
+    { "id": "c3s15c", "cue": "L064", "word": 5, "set": "desk_top", "opts": { "night": true }, "place": "desk from above", "camera": "push_in", "grade": "night",
+      "light": { "x": 960, "y": 540, "r": 900, "color": "#ffe0a8", "dark": 0.45 },
+      "overlays": [ { "type": "doc", "source": "Rohan Oza, in a video", "by": "Investor, CAVU", "quote": "The name and package were not conducive of the big picture that we're trying to solve.", "hl": ["name", "package"], "at": 0.2, "hlAt": 2.4 } ] },
+
+    { "id": "c3t02", "type": "card", "cue": "L065", "text": "2020: the bottle became a can.", "emph": ["can"] },
+    { "id": "c3s16", "cue": "L065", "word": 5, "set": "design_studio", "opts": { "night": true }, "place": "design studio", "camera": "tilt_down", "grade": "night", "motif": "word on the can",
+      "light": { "x": 1170, "y": 520, "r": 800, "color": "#fff6d8", "dark": 0.5 },
+      "actors": [
+        { "thing": "soda", "shape": "bottle", "x": 1080, "y": 600, "scale": 0.45, "face": "scared", "pose": "panic", "enter": "none", "acts": [ { "at": 0.6, "to": [940, 600], "dur": 0.8, "face": "shocked" } ] },
+        { "thing": "soda", "shape": "can", "x": 1500, "y": 960, "scale": 0.55, "face": "smug", "pose": "hips", "enter": "none" } ] },
+    { "id": "c3s16b", "cue": "L065", "word": 12, "set": "design_studio", "opts": { "night": true }, "place": "design studio", "camera": "push_in", "frame": "close", "focus": [960, 640], "grade": "gold", "motif": "word on the can",
+      "light": { "x": 960, "y": 420, "r": 780, "color": "#ffe14d", "dark": 0.5 },
+      "actors": [ { "thing": "soda", "shape": "can", "label": "poppi", "x": 960, "y": 880, "scale": 0.75, "face": "happy", "pose": "present", "enter": "none" } ] },
+    { "id": "c3k11a", "cue": "L066", "set": "design_studio", "opts": { "night": true }, "place": "design studio", "camera": "pan_right", "frame": "medium", "grade": "night", "motif": "word on the can",
+      "light": { "x": 1500, "y": 380, "r": 800, "color": "#fff6d8", "dark": 0.5 },
+      "actors": [
+        { "thing": "soda", "shape": "can", "x": 1500, "y": 900, "scale": 0.6, "face": "smug", "pose": "hips", "speaks": ["L066"], "enter": "none" },
+        { "who": "BENNY", "x": 780, "y": 980, "face": "shocked", "pose": "think", "speaks": ["L067"], "enter": "none" } ] },
+    { "id": "c3k11b", "cue": "L068", "set": "design_studio", "opts": { "night": true }, "place": "studio window", "camera": "tilt_up", "frame": "close", "focus": [1560, 520], "grade": "gold",
+      "light": { "x": 1560, "y": 420, "r": 760, "color": "#ffe14d", "dark": 0.5 },
+      "actors": [
+        { "thing": "soda", "shape": "can", "x": 1540, "y": 820, "scale": 0.7, "face": "smug", "pose": "present", "speaks": ["L068", "L070"], "enter": "none", "acts": [ { "cue": "L070", "face": "scared", "pose": "panic" } ] },
+        { "who": "BENNY", "x": 960, "y": 1000, "face": "deadpan", "speaks": ["L069"], "enter": "none" } ] },
+
+    { "id": "c3s16c", "cue": "L071", "set": "boardroom", "opts": { "night": true, "glass": true }, "place": "CAVU boardroom", "camera": "push_in", "frame": "medium", "grade": "night",
+      "light": { "x": 960, "y": 300, "r": 800, "color": "#ffd9a0", "dark": 0.5 },
+      "actors": [
+        { "who": "ROHAN_OZA", "x": 680, "y": 960, "face": "smug", "pose": "offer", "enter": "none" },
+        { "thing": "box", "label": "CAVU", "x": 1280, "y": 940, "scale": 0.8, "face": "happy", "pose": "cheer", "enter": "none", "acts": [ { "at": 0.6, "to": [1120, 940], "dur": 0.8 } ] } ],
+      "props": [ { "type": "briefcase", "x": 860, "y": 960, "move": { "to": [1000, 960], "at": 0.3, "dur": 0.6 } } ] },
+    { "id": "c3s16d", "cue": "L071", "word": 7, "set": "night_city", "opts": { "towers": true }, "place": "night city", "camera": "tilt_up", "grade": "night",
+      "light": { "x": 1200, "y": 520, "r": 800, "color": "#e8f0ff", "dark": 0.5 },
+      "actors": [
+        { "thing": "giant", "color": "navy", "x": 1200, "y": 900, "scale": 1.6, "face": "greedy", "look": "down", "pose": "think", "enter": "none" },
+        { "thing": "soda", "shape": "can", "x": 620, "y": 980, "scale": 0.4, "face": "happy", "enter": "none" } ] },
+
+    { "id": "c3t03", "type": "card", "cue": "L072", "text": "The launch: March 2020.", "emph": ["March", "2020"] },
+    { "id": "c3s17", "cue": "L072", "word": 7, "set": "empty_hall", "opts": { "dress": "convention", "night": true }, "place": "empty convention hall", "camera": "pull_out", "grade": "night",
+      "light": { "x": 960, "y": 220, "r": 820, "color": "#ff8a7a", "dark": 0.5 },
+      "props": [ { "type": "banner", "x": 680, "y": 260, "w": 560, "t": "CANCELLED", "cue": "L072", "word": 13 } ] },
+    { "id": "c3k12a", "cue": "L073", "set": "empty_hall", "opts": { "dress": "convention", "night": true }, "place": "empty convention hall", "camera": "pan_left", "frame": "medium", "grade": "night",
+      "light": { "x": 1100, "y": 300, "r": 780, "color": "#ff8a7a", "dark": 0.5 },
+      "actors": [
+        { "thing": "soda", "shape": "can", "x": 1260, "y": 900, "scale": 0.55, "face": "confused", "pose": "shrug", "speaks": ["L073"], "enter": "none" },
+        { "who": "BENNY", "x": 700, "y": 980, "prop": "mop", "face": "deadpan", "speaks": ["L074"], "enter": "none" } ] },
+    { "id": "c3k12b", "cue": "L075", "set": "empty_hall", "opts": { "dress": "convention", "night": true }, "place": "empty convention hall", "camera": "push_in", "frame": "close", "grade": "night",
+      "light": { "x": 960, "y": 360, "r": 760, "color": "#ff8a7a", "dark": 0.5 },
+      "actors": [ { "thing": "soda", "shape": "can", "x": 960, "y": 880, "scale": 0.7, "face": "angry", "pose": "point", "speaks": ["L075"], "enter": "none", "acts": [ { "cue": "L075", "word": 3, "face": "happy", "pose": "cheer" } ] } ] },
+
+    { "id": "c3s18a", "cue": "L076", "set": "warehouse", "opts": { "night": true, "belt": false }, "place": "warehouse at night", "camera": "pan_right", "grade": "night",
+      "light": { "x": 560, "y": 600, "r": 820, "color": "#fff1c4", "dark": 0.5 },
+      "actors": [
+        { "thing": "box", "x": 700, "y": 960, "scale": 0.6, "face": "happy", "pose": "carry", "enter": "none", "acts": [ { "at": 0.3, "to": [1100, 960], "dur": 1.6 } ] },
+        { "thing": "box", "x": 1400, "y": 960, "scale": 0.6, "face": "smug", "pose": "cheer", "enter": "none" } ] },
+    { "id": "c3s18b", "cue": "L076", "word": 9, "set": "suburb", "opts": { "night": true }, "place": "doorstep", "camera": "tilt_down", "frame": "medium", "grade": "night",
+      "light": { "x": 960, "y": 520, "r": 760, "color": "#ffe14d", "dark": 0.5 },
+      "actors": [ { "thing": "box", "x": 1500, "y": 980, "scale": 0.55, "face": "happy", "pose": "wave", "enter": "none", "acts": [ { "at": 0.2, "to": [1000, 980], "dur": 1 } ] } ] },
+    { "id": "c3s18c", "cue": "L076", "word": 14, "set": "warehouse", "opts": { "night": true, "belt": false }, "place": "warehouse at night", "camera": "push_in", "frame": "close", "focus": [960, 760], "grade": "green",
+      "light": { "x": 960, "y": 440, "r": 800, "color": "#fff1c4", "dark": 0.5 },
+      "actors": [ { "thing": "box", "x": 960, "y": 960, "scale": 0.7, "face": "shocked", "pose": "cheer", "enter": "none" } ],
+      "overlays": [ { "type": "counter", "from": 0, "to": 4, "prefix": "$", "suffix": "M", "tone": "green", "pos": "tc", "plate": true, "at": 0.3, "dur": 1.4 } ] },
+
+    { "id": "c3t04", "type": "card", "cue": "L077", "text": "Then came one video.", "emph": ["one", "video"] },
+    { "id": "c3s19a", "cue": "L077", "word": 4, "set": "kitchen", "opts": { "night": true }, "place": "family kitchen", "camera": "pull_out", "frame": "medium", "grade": "sepia", "callback": "the kitchen",
+      "light": { "x": 760, "y": 420, "r": 780, "color": "#ffd9a0", "dark": 0.5 },
+      "actors": [
+        { "who": "ALLISON_ELLSWORTH", "x": 760, "y": 960, "face": "happy", "pose": "present", "prop": "phone", "enter": "none" },
+        { "thing": "soda", "shape": "can", "x": 1260, "y": 900, "scale": 0.5, "face": "happy", "pose": "wave", "enter": "none" } ] },
+    { "id": "c3s19b", "cue": "L077", "word": 11, "set": "bedroom", "opts": { "dress": "teen", "night": true }, "place": "teen bedroom", "camera": "push_in", "grade": "night",
+      "light": { "x": 960, "y": 560, "r": 760, "color": "#bfe4ff", "dark": 0.5 },
+      "actors": [ { "who": "CHAD", "x": 960, "y": 960, "face": "shocked", "prop": "phone", "enter": "none", "acts": [ { "at": 1.6, "face": "happy" } ] } ],
+      "overlays": [ { "type": "hearts", "from": 0, "to": 100, "prefix": "+$", "suffix": "K", "pos": "tr", "at": 0.3, "dur": 1.8 } ] },
+    { "id": "c3k13a", "cue": "L078", "set": "bedroom", "opts": { "dress": "teen", "night": true }, "place": "teen bedroom", "camera": "tilt_up", "frame": "close", "focus": [800, 600], "grade": "night",
+      "light": { "x": 800, "y": 520, "r": 760, "color": "#bfe4ff", "dark": 0.5 },
+      "actors": [
+        { "who": "CHAD", "x": 800, "y": 960, "face": "shocked", "prop": "phone", "speaks": ["L078"], "enter": "none" },
+        { "thing": "soda", "shape": "can", "x": 1260, "y": 900, "scale": 0.45, "face": "confused", "speaks": ["L079"], "enter": "none" } ] },
+    { "id": "c3k13b", "cue": "L080", "set": "bedroom", "opts": { "dress": "teen", "night": true }, "place": "teen bedroom", "camera": "pan_left", "frame": "medium", "grade": "night",
+      "light": { "x": 1100, "y": 480, "r": 780, "color": "#bfe4ff", "dark": 0.5 },
+      "actors": [
+        { "thing": "soda", "shape": "can", "x": 1300, "y": 900, "scale": 0.5, "face": "confused", "pose": "shrug", "speaks": ["L081"], "enter": "none", "acts": [ { "cue": "L082", "face": "smug", "pose": "hips" } ] },
+        { "who": "CHAD", "x": 720, "y": 960, "face": "smug", "pose": "point", "prop": "phone", "speaks": ["L080", "L082"], "enter": "none" } ] },
+
+    { "id": "c3t05", "type": "card", "cue": "L083", "text": "But sales are not cash.", "emph": ["not", "cash"] },
+    { "id": "c3s20a", "cue": "L083", "word": 5, "set": "kitchen", "opts": { "night": true }, "place": "family kitchen", "camera": "tilt_down", "frame": "medium", "grade": "night",
+      "light": { "x": 960, "y": 360, "r": 760, "color": "#ffd9a0", "dark": 0.5 },
+      "actors": [ { "who": "ALLISON_ELLSWORTH", "x": 960, "y": 960, "face": "confused", "pose": "think", "enter": "none", "acts": [ { "cue": "L083", "word": 10, "face": "scared" } ] } ],
+      "props": [ { "type": "cashpile", "x": 1400, "y": 960 } ] },
+    { "id": "c3s20b", "cue": "L083", "word": 15, "set": "bank", "opts": { "dress": "vault", "night": true }, "place": "bank vault", "camera": "push_in", "grade": "red",
+      "light": { "x": 960, "y": 280, "r": 780, "color": "#fff1c4", "dark": 0.5 },
+      "overlays": [ { "type": "counter", "from": 20000000, "to": 75000, "prefix": "$", "tone": "red", "pos": "tc", "plate": true, "at": 0.3, "dur": 1.6 } ] },
+    { "id": "c3s20c", "cue": "L083", "word": 24, "set": "bank", "opts": { "dress": "vault", "night": true }, "place": "bank vault", "camera": "pull_out", "frame": "medium", "grade": "night",
+      "light": { "x": 960, "y": 300, "r": 780, "color": "#fff1c4", "dark": 0.5 },
+      "actors": [
+        { "who": "ALLISON_ELLSWORTH", "x": 760, "y": 960, "face": "scared", "pose": "panic", "enter": "none" },
+        { "who": "STEPHEN_ELLSWORTH", "x": 1160, "y": 960, "face": "scared", "pose": "facepalm", "enter": "none" } ] },
+
+    { "id": "c3s21", "cue": "L084", "set": "night_office", "opts": { "dress": "supplier", "night": true }, "place": "supplier office", "camera": "tilt_up", "frame": "medium", "grade": "night",
+      "light": { "x": 960, "y": 420, "r": 780, "color": "#ffd9a0", "dark": 0.5 },
+      "actors": [ { "who": "STEPHEN_ELLSWORTH", "x": 900, "y": 960, "face": "sad", "pose": "offer", "enter": "none", "acts": [ { "at": 0.4, "to": [1060, 960], "dur": 1 }, { "cue": "L084", "word": 4, "face": "scared" } ] } ] },
+    { "id": "c3k14a", "cue": "L085", "set": "night_office", "opts": { "dress": "supplier", "night": true }, "place": "supplier office", "camera": "push_in", "frame": "medium", "grade": "night",
+      "light": { "x": 760, "y": 400, "r": 780, "color": "#ffd9a0", "dark": 0.5 },
+      "actors": [
+        { "who": "HAL", "x": 760, "y": 960, "face": "deadpan", "pose": "point", "speaks": ["L085"], "enter": "none" },
+        { "thing": "soda", "shape": "can", "sweat": true, "x": 1260, "y": 900, "scale": 0.5, "face": "scared", "pose": "shrug", "speaks": ["L086"], "enter": "none" } ],
+      "props": [ { "type": "wall_calendar", "x": 420, "y": 420, "circle": 5 } ] },
+    { "id": "c3k14b", "cue": "L087", "set": "night_office", "opts": { "dress": "supplier", "night": true }, "place": "supplier office", "camera": "pan_right", "frame": "close", "grade": "night",
+      "light": { "x": 960, "y": 380, "r": 760, "color": "#ffd9a0", "dark": 0.5 },
+      "actors": [ { "who": "HAL", "x": 960, "y": 960, "face": "angry", "pose": "think", "speaks": ["L087"], "enter": "none" } ] },
+
+    { "id": "c3s22", "cue": "L088", "set": "car_lot", "opts": { "night": true }, "place": "used-car lot", "camera": "tilt_down", "grade": "night", "callback": "the credit cards",
+      "light": { "x": 960, "y": 200, "r": 900, "color": "#e8f0ff", "dark": 0.5 },
+      "props": [
+        { "type": "cards_fan", "x": 960, "y": 760, "n": 5, "move": { "to": [960, 1200], "cue": "L088", "word": 4, "dur": 1 } },
+        { "type": "piggy", "x": 1700, "y": 950, "k": 0.3, "state": "cracked" } ] }
+  ]
+}
