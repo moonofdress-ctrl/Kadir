@@ -724,7 +724,7 @@
       "explains": "A clock on the story: her son is born ten days later."
     },
     {
-      "id": "c1s12",
+      "id": "c1s12", "explains": "The twist is hidden in the deal: the giant's big number has a part nobody looked at.",
       "cue": "L010",
       "set": "pitch_stage",
       "opts": {
@@ -757,7 +757,7 @@
       ]
     },
     {
-      "id": "c1s13",
+      "id": "c1s13", "explains": "The camera stops on that detail, so the viewer knows there is a catch to come.",
       "cue": "L010",
       "word": 5,
       "set": "pitch_stage",
@@ -801,7 +801,7 @@
       ]
     },
     {
-      "id": "c1t02",
+      "id": "c1t02", "explains": "The question the whole video answers: how a soda brand became worth $1.95 billion.",
       "type": "card",
       "cue": "L011",
       "text": "So how did Poppi make $1.95 billion from soda?",
@@ -811,7 +811,7 @@
       ]
     },
     {
-      "id": "c1s14",
+      "id": "c1s14", "explains": "Where it began: around 2015, in a family kitchen, as a home remedy.",
       "cue": "L012",
       "set": "kitchen",
       "opts": {
@@ -857,7 +857,7 @@
       ]
     },
     {
-      "id": "c1s15",
+      "id": "c1s15", "explains": "Why she made it: Allison had stomach troubles and wanted something gentler to drink.",
       "cue": "L012",
       "word": 8,
       "set": "kitchen",
@@ -895,7 +895,7 @@
       ]
     },
     {
-      "id": "c1s16",
+      "id": "c1s16", "explains": "What the drink is: apple cider vinegar, fruit and soda water mixed in a jar.",
       "cue": "L012",
       "word": 12,
       "set": "kitchen",
@@ -947,7 +947,7 @@
       ]
     },
     {
-      "id": "c1s17",
+      "id": "c1s17", "explains": "Who sold it with her: her husband Stephen, the co-founder, at Dallas farmers' markets.",
       "cue": "L013",
       "set": "farmers_market",
       "opts": {
@@ -992,7 +992,7 @@
       ]
     },
     {
-      "id": "c1s18",
+      "id": "c1s18", "explains": "It sells: bottles move off the stall, so there is real demand from strangers.",
       "cue": "L013",
       "word": 6,
       "set": "farmers_market",
@@ -1057,7 +1057,7 @@
       ]
     },
     {
-      "id": "c1s19",
+      "id": "c1s19", "explains": "The first big break: a Whole Foods buyer agrees to stock it.",
       "cue": "L013",
       "word": 11,
       "set": "farmers_market",
@@ -1119,7 +1119,7 @@
       ]
     },
     {
-      "id": "c1k03a",
+      "id": "c1k03a", "explains": "Why the buyer hesitates: vinegar in a soda sounds strange.",
       "cue": "L014",
       "set": "night_office",
       "opts": {
@@ -1165,7 +1165,7 @@
       ]
     },
     {
-      "id": "c1k03b",
+      "id": "c1k03b", "explains": "The doubt in one line: nobody drinks vinegar on purpose.",
       "cue": "L016",
       "set": "night_office",
       "opts": {
@@ -1211,7 +1211,7 @@
       ]
     },
     {
-      "id": "c1k03c",
+      "id": "c1k03c", "explains": "The buyer says yes anyway: the drink gets onto a real store shelf.",
       "cue": "L018",
       "set": "night_office",
       "opts": {
@@ -1269,7 +1269,7 @@
       ]
     },
     {
-      "id": "c1t03",
+      "id": "c1t03", "explains": "The first result in numbers: about $500,000 of sales in 18 months.",
       "type": "card",
       "cue": "L019",
       "text": "About $500,000 of sales in 18 months.",
@@ -1278,7 +1278,7 @@
       ]
     },
     {
-      "id": "c1s20",
+      "id": "c1s20", "explains": "The catch of growing: it costs more cash than the sales bring in.",
       "cue": "L019",
       "word": 13,
       "set": "car_lot",
@@ -1326,7 +1326,7 @@
       ]
     },
     {
-      "id": "c1t04",
+      "id": "c1t04", "explains": "How they paid for growth: in her words, they maxed out their credit cards.",
       "type": "card",
       "cue": "L020",
       "word": 10,
@@ -1337,7 +1337,7 @@
       ]
     },
     {
-      "id": "c1s21",
+      "id": "c1s21", "explains": "How far they went: they sold one of their cars to buy bottles.",
       "cue": "L020",
       "word": 17,
       "set": "car_lot",
@@ -1378,7 +1378,7 @@
       ]
     },
     {
-      "id": "c1s22",
+      "id": "c1s22", "explains": "The biggest bet: they opened their own bottling factory.",
       "cue": "L021",
       "set": "bottling_plant",
       "opts": {
@@ -1412,7 +1412,7 @@
       ]
     },
     {
-      "id": "c1s23",
+      "id": "c1s23", "explains": "How risky it looked at home: her husband called the plan \"absolutely crazy\".",
       "cue": "L021",
       "word": 5,
       "set": "bottling_plant",
@@ -1451,7 +1451,7 @@
       ]
     },
     {
-      "id": "c1k04a",
+      "id": "c1k04a", "explains": "The whole bet in one list: credit cards, a car, a factory.",
       "cue": "L022",
       "set": "bottling_plant",
       "opts": {
@@ -1498,7 +1498,7 @@
       ]
     },
     {
-      "id": "c1k04b",
+      "id": "c1k04b", "explains": "What that means for a family: everything they own is on the line.",
       "cue": "L024",
       "set": "bottling_plant",
       "opts": {
@@ -1539,7 +1539,7 @@
       ]
     },
     {
-      "id": "c1k04c",
+      "id": "c1k04c", "explains": "The open question: what happens if the soda does not sell.",
       "cue": "L025",
       "set": "bottling_plant",
       "opts": {
@@ -1574,7 +1574,7 @@
       ]
     },
     {
-      "id": "c1k04d",
+      "id": "c1k04d", "explains": "The downside, as a joke: unsold vinegar soda is just expensive salad dressing.",
       "cue": "L026",
       "set": "bottling_plant",
       "opts": {
@@ -1624,7 +1624,7 @@
       ]
     },
     {
-      "id": "c1s24",
+      "id": "c1s24", "explains": "How they prepared: six months of practising one pitch.",
       "cue": "L027",
       "set": "bottling_plant",
       "opts": {
@@ -1667,7 +1667,7 @@
       ]
     },
     {
-      "id": "c1s25",
+      "id": "c1s25", "explains": "Where the pitch is headed: a TV stage with five investors in five chairs.",
       "cue": "L027",
       "word": 10,
       "set": "pitch_stage",

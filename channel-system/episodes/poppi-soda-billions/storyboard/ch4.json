@@ -8,7 +8,7 @@
       "title": "Seen Holding It"
     },
     {
-      "id": "c4t01",
+      "id": "c4t01", "explains": "The money that came next brought famous names with it.",
       "type": "card",
       "cue": "L089",
       "word": 3,
@@ -29,7 +29,7 @@
         "edges": [ { "from": "c", "to": "p", "label": "led the $13M round" }, { "from": "o", "to": "c", "label": "his firm" }, { "from": "h", "to": "p", "label": "joined" }, { "from": "w", "to": "p", "label": "joined" } ] } ]
     },
     {
-      "id": "c4s03",
+      "id": "c4s03", "explains": "Famous people joined in as investors and were seen with the can.",
       "cue": "L090",
       "word": 19,
       "set": "red_carpet",
@@ -82,7 +82,7 @@
       ]
     },
     {
-      "id": "c4k15a",
+      "id": "c4k15a", "explains": "What celebrities did for the brand: they posed with the can.",
       "cue": "L091",
       "set": "red_carpet",
       "opts": {
@@ -128,7 +128,7 @@
       ]
     },
     {
-      "id": "c4k15b",
+      "id": "c4k15b", "explains": "The doubt: are people drinking it, or only showing it?",
       "cue": "L092",
       "set": "red_carpet",
       "opts": {
@@ -174,7 +174,7 @@
       ]
     },
     {
-      "id": "c4k15c",
+      "id": "c4k15c", "explains": "The answer: the can is something to post, not to sip.",
       "cue": "L093",
       "set": "red_carpet",
       "opts": {
@@ -218,7 +218,7 @@
       ]
     },
     {
-      "id": "c4s04",
+      "id": "c4s04", "explains": "The price: $2.49 for a single can.",
       "cue": "L094",
       "set": "supermarket",
       "opts": {
@@ -265,7 +265,7 @@
       ]
     },
     {
-      "id": "c4s05",
+      "id": "c4s05", "explains": "How widely it sold: in more than 7,500 stores.",
       "cue": "L094",
       "word": 8,
       "set": "night_city",
@@ -342,7 +342,7 @@
       ]
     },
     {
-      "id": "c4k16a",
+      "id": "c4k16a", "explains": "The shopper's reaction: $2.49 is a lot for one can.",
       "cue": "L095",
       "set": "supermarket",
       "opts": {
@@ -394,7 +394,7 @@
       ]
     },
     {
-      "id": "c4k16b",
+      "id": "c4k16b", "explains": "The price is not for the soda itself.",
       "cue": "L096",
       "set": "supermarket",
       "opts": {
@@ -427,7 +427,7 @@
       ]
     },
     {
-      "id": "c4k16c",
+      "id": "c4k16c", "explains": "So what is the buyer paying for?",
       "cue": "L097",
       "set": "supermarket",
       "opts": {
@@ -469,7 +469,7 @@
       ]
     },
     {
-      "id": "c4k16d",
+      "id": "c4k16d", "explains": "The answer: the image of being someone who drinks it.",
       "cue": "L098",
       "set": "supermarket",
       "opts": {
@@ -534,7 +534,7 @@
       ]
     },
     {
-      "id": "c4k16e",
+      "id": "c4k16e", "explains": "And the image works: buyers like it.",
       "cue": "L099",
       "set": "supermarket",
       "opts": {
@@ -578,7 +578,7 @@
       ]
     },
     {
-      "id": "c4t02",
+      "id": "c4t02", "explains": "More money came in December 2022: another $25 million.",
       "type": "card",
       "cue": "L100",
       "text": "Another $25 million.",
@@ -587,7 +587,7 @@
       ]
     },
     {
-      "id": "c4s06",
+      "id": "c4s06", "explains": "Why investors paid: sales had grown 148 percent in a year.",
       "cue": "L100",
       "word": 7,
       "set": "bottling_plant",
@@ -637,7 +637,7 @@
       ]
     },
     {
-      "id": "c4s07",
+      "id": "c4s07", "explains": "How big it got: about $500 million of revenue by 2024.",
       "cue": "L101",
       "set": "mall",
       "opts": {
@@ -677,7 +677,7 @@
       ]
     },
     {
-      "id": "c4s08",
+      "id": "c4s08", "explains": "The growth side by side: $4 million in 2020 against $500 million in 2024.",
       "cue": "L101",
       "word": 12,
       "set": "night_office",
@@ -718,7 +718,7 @@
       ]
     },
     {
-      "id": "c4k17a",
+      "id": "c4k17a", "explains": "The excitement: from four million to five hundred million.",
       "cue": "L102",
       "set": "mall",
       "opts": {
@@ -769,7 +769,7 @@
       ]
     },
     {
-      "id": "c4k17b",
+      "id": "c4k17b", "explains": "The warning: those are sales, not profit.",
       "cue": "L103",
       "set": "mall",
       "opts": {
@@ -801,7 +801,7 @@
       ]
     },
     {
-      "id": "c4k17c",
+      "id": "c4k17c", "explains": "The common mistake: thinking sales and profit are the same.",
       "cue": "L104",
       "set": "mall",
       "opts": {
@@ -833,7 +833,7 @@
       ]
     },
     {
-      "id": "c4k17d",
+      "id": "c4k17d", "explains": "They are not the same thing.",
       "cue": "L105",
       "set": "mall",
       "opts": {
@@ -880,7 +880,7 @@
       ]
     },
     {
-      "id": "c4t03",
+      "id": "c4t03", "explains": "The peak of the marketing: the biggest stage of all.",
       "type": "card",
       "cue": "L106",
       "text": "The biggest stage of all.",
@@ -889,7 +889,7 @@
       ]
     },
     {
-      "id": "c4s09",
+      "id": "c4s09", "explains": "The stage: the Super Bowl, on 9 February 2025.",
       "cue": "L106",
       "word": 6,
       "set": "stadium",
@@ -921,7 +921,7 @@
       ]
     },
     {
-      "id": "c4s10",
+      "id": "c4s10", "explains": "Poppi had an ad there that millions saw.",
       "cue": "L106",
       "word": 15,
       "set": "stadium",
@@ -946,7 +946,7 @@
       }
     },
     {
-      "id": "c4k18a",
+      "id": "c4k18a", "explains": "The question: what does a Super Bowl ad cost?",
       "cue": "L107",
       "set": "stadium",
       "opts": {
@@ -988,7 +988,7 @@
       ]
     },
     {
-      "id": "c4k18b",
+      "id": "c4k18b", "explains": "The brand's view: the cost matters less than everyone seeing the can.",
       "cue": "L108",
       "set": "stadium",
       "opts": {
@@ -1022,7 +1022,7 @@
       ]
     },
     {
-      "id": "c4k18c",
+      "id": "c4k18c", "explains": "The other side: not everyone watching paid attention to the ad.",
       "cue": "L109",
       "set": "stadium",
       "opts": {
@@ -1056,7 +1056,7 @@
       ]
     },
     {
-      "id": "c4s11",
+      "id": "c4s11", "explains": "Before the ad: Poppi sent branded vending machines to 32 influencers.",
       "cue": "L110",
       "set": "bedroom",
       "opts": {
@@ -1095,7 +1095,7 @@
       ]
     },
     {
-      "id": "c4s12",
+      "id": "c4s12", "explains": "A rival, Olipop, claimed each machine cost $25,000.",
       "cue": "L111",
       "set": "night_office",
       "opts": {
@@ -1129,7 +1129,7 @@
       ]
     },
     {
-      "id": "c4s13",
+      "id": "c4s13", "explains": "The number to remember: $25,000 per machine.",
       "cue": "L111",
       "word": 8,
       "set": "bedroom",
@@ -1177,7 +1177,7 @@
       ]
     },
     {
-      "id": "c4k19a",
+      "id": "c4k19a", "explains": "The reaction: $25,000 for a fridge sounds absurd.",
       "cue": "L112",
       "set": "bedroom",
       "opts": {
@@ -1228,7 +1228,7 @@
       ]
     },
     {
-      "id": "c4k19b",
+      "id": "c4k19b", "explains": "Poppi's answer: the machines cost much less.",
       "cue": "L113",
       "set": "bedroom",
       "opts": {
@@ -1263,7 +1263,7 @@
       ]
     },
     {
-      "id": "c4k19c",
+      "id": "c4k19c", "explains": "The question nobody answered: how much less?",
       "cue": "L114",
       "set": "bedroom",
       "opts": {
@@ -1315,7 +1315,7 @@
       ]
     },
     {
-      "id": "c4s14",
+      "id": "c4s14", "explains": "Poppi's side, from the record: the figure was \"fabricated\" and inflated by 60 percent.",
       "cue": "L116",
       "set": "desk_top",
       "opts": {
@@ -1348,7 +1348,7 @@
       ]
     },
     {
-      "id": "c4s15",
+      "id": "c4s15", "explains": "Allison blamed the story on \"misinformation\" from a competitor.",
       "cue": "L116",
       "word": 14,
       "set": "kitchen",
@@ -1395,7 +1395,7 @@
       ]
     },
     {
-      "id": "c4t04",
+      "id": "c4t04", "explains": "What the fight was about on the surface: a fridge.",
       "type": "card",
       "cue": "L117",
       "text": "A fight about a fridge.",
@@ -1404,7 +1404,7 @@
       ]
     },
     {
-      "id": "c4s16",
+      "id": "c4s16", "explains": "The fridge was not the real story.",
       "cue": "L117",
       "word": 5,
       "set": "empty_hall",
@@ -1434,7 +1434,7 @@
       ]
     },
     {
-      "id": "c4s17",
+      "id": "c4s17", "explains": "The real story: PepsiCo's own try at this kind of soda was about to fail.",
       "cue": "L117",
       "word": 12,
       "set": "night_office",
