@@ -50,3 +50,12 @@ Transcript (faster-whisper small.en): "American agents are taking pictures. They
 
 ## Wider match, 13 Nov 2026: 700 male American library voices
 Free previews of 700 male American voices (all use cases), compared with the rival's narrator (raw and denoised). Best 0.71 (Tyler Cruz DJ, Valf anime, Matt chatty, Tagg promo, Marcus, Guy announcer): a mixed list with no clear winner, so the phone clip does not identify the voice. **By timbre Jon ranks 575th and Michael 616th of 700**: they are not close; the earlier "Jon is closer" holds only for delivery (pace and pauses). Pitch from the clip (180-200 Hz) is not trusted: a phone speaker drops the low frequencies and the tracker may read an octave high. YouTube refused a direct download from the cloud ("sign in to confirm you're not a bot"). Next: a clean 60 s screen recording with system audio (Windows Game Bar, Win+Alt+R) of a stretch with little music.
+
+## Decision, 13 Nov 2026 (the user asked the session to decide)
+**Narrator: Jon** (MFZUKuGQUsGJPQjTS4wC). Reserve: Michael C. Vincent.
+1. Delivery like the rival's: a measured storyteller with pauses between short sentences (the rival: 138 wpm, 0.3-1.0 s pauses). Jon's sample is the measured one; Michael's runs on without a break.
+2. The most used male American storyteller in the library (7.3 B characters a year): the safest proof that people listen to it for long stretches.
+3. The deepest voice (83 Hz) against BENNY 145 Hz and SODA 105 Hz: viewers always know who is speaking.
+4. Notice period 730 days, normal credit rate.
+Not chosen: Matt (closest timbre in the phone-clip match, but notice period only 90 days and a conversational, not narrative, voice); the phone-clip matches in general (no voice above 0.71, so none is the rival's); Brian (generic AI-channel voice); British voices (American stories and cast).
+Risk accepted: Jon is popular, so some viewers may have heard it elsewhere. If the 17 Nov ear check sounds flat over a full chapter, switch to Michael.
