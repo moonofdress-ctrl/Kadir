@@ -1,6 +1,6 @@
 # Style guide
 
-From the second episode a video has two layers. **Places and figures are painted pictures**, generated in one fixed look and checked by a person. **Everything that is read is drawn in code** by the engine in `studio/`: cards, counters, charts, signs, tags, name strips and subtitles, in the house type and colours. The first episode was drawn in code alone and looked flat beside the reference channel (`LESSONS.md`).
+**Figures, places and everything that is read are drawn in code** by the engine in `studio/` (decision of 13 Nov 2026: the rival is drawn in code too; FORMAT_BOOK 11, Painted pictures). Only thumbnails, and a background now and then, are painted. The plan of 12 Nov to paint places and figures is withdrawn.
 
 The look is ours. Do not imitate another channel's figures, lettering, palette or signature objects.
 
@@ -12,7 +12,14 @@ The look is ours. Do not imitate another channel's figures, lettering, palette o
 - **Colour follows the mood** through a grade over the whole shot: `green` euphoria, `red` panic, `sepia` history, `night` aftermath, `gold` money and vaults. Use three or more per episode.
 
 ## Figures
-One skeleton for everybody (`studio/engine/rig.js`):
+**The target (13 Nov 2026, after Poppi; the user found the figures childish and too simple).** The rig is being redrawn to this, through `channel-system/engine-requests/2026-11-13-cast-and-places.md`; the user approves the new cast line-up sheet before an episode uses it:
+- Adult proportions: the head about a third of the height, a neck, shoulders, a torso that differs by person (tall, broad, slight).
+- Arms with elbows and hands with four fingers and a thumb, which grip what they hold. No floating mittens.
+- A face with a jaw and cheek shape of its own, ears, a nose that differs by person, hair with volume, eyebrows and mouth that still do the acting.
+- Two tones on skin and clothes (a shadow side), line weight that varies, clothes with collars, seams, pockets, buttons.
+- A body that acts: a walk with legs and swinging arms, sitting, turning, reaching, handing over, idle weight shifts.
+
+**Now** (until the redraw lands), one skeleton for everybody (`studio/engine/rig.js`):
 - Squircle head, about 45% of the height. Block body. **Floating mitten hands, no arms.** Short legs, big shoes.
 - Tall white eyes with pupils, thick eyebrows that do most of the acting, a small nose.
 - Eleven everyday expressions: neutral (a small smile), plain (no smile, for a real person saying something serious), happy, shocked, scared, angry, smug, sad, confused, relieved, deadpan. Four loud ones for hooks, climaxes and thumbnails: panic, furious, crying, greedy. One clear emotion at a time, changed on the word that causes it.
@@ -46,6 +53,7 @@ No logos and no shapes copied from a logo. The label is the company's or institu
 ## Sets and props
 - A set is a function in `studio/engine/sets.js` that returns a back layer and a front layer; figures stand between them. Current sets: `studio`, `office`, `trading_floor`, `kitchen`, `street`, `suburb`, `server_room`, `lawn`, `stage`, `warehouse`, `board`, `night_city`, `plain`.
 - New stories need new places. The scene builder adds them in the same construction: flat shapes, ink outline, cut shadow, no gradients except skies and spotlights.
+- **A place has depth and detail** (13 Nov 2026: Poppi's vault, office and stage were a few flat shapes). Three layers: something in the foreground that the camera passes (a desk edge, a plant, a railing), the middle where figures act, and a back wall with eight or more objects that say where we are (shelves with things on them, framed pictures, cables, a clock, a window with a view). Something lives in the back: a passer-by, steam, a flickering screen, traffic. Every set has a day and a night version.
 - **Safe area.** The camera crops up to 7% from each edge. Keep faces, text and numbers inside x 170–1750, y 110–970.
 - Every held shot has something moving: the camera, drifting clouds, blinking boards, falling paper.
 - Charts are props (`bars`, `line`, `note`), drawn on the `board` set or over a scene. They animate: bars grow, lines draw, the number arrives last.

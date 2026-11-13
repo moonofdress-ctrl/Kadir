@@ -162,11 +162,23 @@ need(180, "G5", "The hidden piggy bank", () => { const n = pictures.filter((p) =
   add("G5", "The hidden piggy bank", g(n >= lo && n <= hi, true), `${n} pictures`, `${lo} to ${hi}: there to be found, not to be noticed`); });
 { const pp = pictures.filter(painted), missing = pp.filter((p) => !(p.opts && p.opts.src && fs.existsSync(path.join(ep, p.opts.src)))), blind = pp.filter((p) => !(p.opts || {}).shows);
   if (pp.length) add("G6", "Painted pictures are in the folder and described", g(!missing.length && !blind.length, !missing.length), `${pp.length} pictures, ${missing.length} missing, ${blind.length} without "shows"`, "every file in the episode folder, each with a one-line \"shows\""); }
+// 13 Nov 2026, after Poppi: G1 counts what is in a picture; G7-G9 count what happens in it (Poppi: 156 of 271 scenes had only the camera moving,
+// 139 had one figure or one prop in the frame, 109 had only living things). Story scenes bring their own animation and are left out.
+{ const STORY_SETS = ["evidence_wall", "timeline_road", "map_table", "dark_stage"], plainPics = pictures.filter((p) => !STORY_SETS.includes(p.set) && !painted(p));
+  const moves = (p) => (p.actors || []).some((a) => (a.enter && a.enter !== "none") || [].concat(a.acts || []).some((v) => v.to || v.pose)) || (p.props || []).some((x) => x.move);
+  const withCast = plainPics.filter((p) => (p.actors || []).length), mv = withCast.filter(moves).length, ms = mv / Math.max(1, withCast.length);
+  if (withCast.length) add("G7", "Bodies move inside the shot, not only the camera", g(ms >= 0.6, ms >= 0.45), `${mv} of ${withCast.length} (${Math.round(ms * 100)}%)`, "60% or more with a figure walking in, walking (\"to\") or changing pose, or a prop travelling (\"move\")");
+  const thin = plainPics.filter((p) => (p.actors || []).length + (p.props || []).length < 2).length, ts = thin / Math.max(1, plainPics.length);
+  if (plainPics.length) add("G8", "The frame is full", g(ts <= 0.2, ts <= 0.35), `${thin} of ${plainPics.length} (${Math.round(ts * 100)}%) with one figure or one prop`, "20% or fewer with fewer than two figures and props");
+  const things = plainPics.filter((p) => (p.actors || []).length && (p.actors || []).every((a) => a.thing)).length, th = things / Math.max(1, plainPics.length);
+  need(120, "G9", "People act the story", () => add("G9", "People act the story", g(th <= 0.33, th <= 0.45), `${things} of ${plainPics.length} (${Math.round(th * 100)}%) with only living things`, "a third or fewer with only living things; the cast and the story's real people carry the rest")); }
 
 /* ---- places, light and how much there is to read (FORMAT_BOOK 11, measured against the rival) ---- */
 const sceneShots = shots.filter((s) => !isCard(s)), sceneSec = sceneShots.reduce((n, s) => n + s.t1 - s.t0, 0);
 need(120, "D1", "Half of the picture time is dark and lit", () => { const d = sceneShots.filter((s) => (s.type === "split" ? s.panels.some(isDark) : isDark(s))).reduce((n, s) => n + s.t1 - s.t0, 0), p = 100 * d / Math.max(1, sceneSec);
-  add("D1", "Half of the picture time is dark and lit", g(p >= 50, p >= 35), p.toFixed(0) + "%", "50% or more with a \"light\" or a night look (the rival: 60%; our first episode: 25%)"); });
+  add("D1", "Half of the picture time is dark and lit", g(p >= 50 && p <= 75, p >= 35 && p <= 85), p.toFixed(0) + "%", "50-75% with a \"light\" or a night look, the rest daylight (the rival: 60%; our first episode: 25%; Poppi: 100%, all one mood)"); });
+need(120, "D3", "Daylight in every chapter", () => { const dim = spans.map((sp, i) => [i + 1, sceneShots.filter((s) => inSpan(s.t0, sp) && !(s.type === "split" ? s.panels.some(isDark) : isDark(s))).length]).filter((x) => x[1] < 2);
+  add("D3", "Daylight in every chapter", g(dim.length === 0, dim.length <= Math.ceil(nCh / 3)), dim.length ? dim.map((x) => `CH${x[0]}: ${x[1]}`).join(", ") : "ok", "2 or more daylight shots (no \"light\", no night look) in each chapter: relief and the viewer's own world"); });
 { const murky = sceneShots.filter((s) => s.light && (s.light.dark == null ? 0.72 : s.light.dark) > 0.55 && (s.grade === "night" || (s.opts || {}).night));
   if (sceneShots.some((s) => s.light)) add("D2", "Dark, but the figures can be seen", g(murky.length === 0, murky.length <= 3), murky.length ? `${murky.length} shots: ${murky.slice(0, 6).map((s) => s.id).join(", ")}` : "ok", "a light over a night set or the night grade has \"dark\" 0.5 or less and \"r\" 750 or more"); }
 { const visits = spans.map((sp) => { const seq = sceneShots.filter((s) => inSpan(s.t0, sp)).flatMap((s) => (s.type === "split" ? s.panels.map(placeOf) : [placeOf(s)])), v = {}; seq.forEach((p, i) => { if (i === 0 || seq[i - 1] !== p) v[p] = (v[p] || 0) + 1; }); return v; });

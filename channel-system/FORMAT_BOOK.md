@@ -134,7 +134,10 @@ Measured on the reference channel; the lint checks them (its check ids are in br
 | Shots in the first 30 s [P4] | 12 or more | 12 | 9 |
 | Shots longer than 10 s [P5] | one a chapter at most | 4 in 17 minutes | 12 in 13 minutes |
 | Longest stretch with nothing new on screen [P2] | 6 s | | |
-| Dark, lit pictures [D1] | half of the picture time or more | 60% of frames | 25% |
+| Dark, lit pictures [D1, D3] | 50–75% of the picture time; 2 or more daylight shots in every chapter | 60% of frames | 25% (Poppi: 100%, one mood for 12 minutes) |
+| Bodies move inside the shot [G7] | 60% or more of the shots with figures: a figure walks in, walks or changes pose, or a prop travels | | 59% (Poppi: 34%) |
+| A full frame [G8] | 20% or fewer with fewer than two figures and props | | 17% (Poppi: 51%) |
+| People act the story [G9] | a third or fewer of the pictures with only living things | | 46% (Poppi: 41%) |
 | Places [K1, K2] | 6 or more in every chapter; a place returns at most 3 times in a chapter | about 70 | 11 (the lawn 41 times) |
 | Pictures with something to read [W1] | a third or fewer | very few | 162 of 203 shots |
 | Things to read in one shot [W2] | one | | 323 items in 203 shots |
@@ -142,7 +145,11 @@ Measured on the reference channel; the lint checks them (its check ids are in br
 | Camera [P3] | every shot moves; no move twice in a row | | |
 | Colour grade [M4] | follows the mood, 3 or more grades per episode | | |
 
-- **Dark is the default.** A room at night, a deal, a phone call, a server hall, a courtroom corridor: one `"light"` (a lamp, a screen, a doorway) and darkness around it. Daylight is for relief and for the viewer's own world (a kitchen, a bus stop), not for the story's rooms.
+- **Dark is the default, not the only look.** A room at night, a deal, a phone call, a server hall, a courtroom corridor: one `"light"` (a lamp, a screen, a doorway) and darkness around it. Daylight is for relief and for the viewer's own world (a kitchen, a bus stop, a shop at noon), and every chapter has some: Poppi was dark for all 12 minutes and looked like one long scene (user, 13 Nov 2026). Change the light from place to place too: a lamp, a screen, a window, a neon sign, a fire, not the same spotlight every time.
+- **Figures act with their bodies** (13 Nov 2026). A figure that stands while the camera pushes in is a still picture with a zoom. In most shots a figure walks in, crosses, reaches, hands something over, sits down or turns away; a face change alone does not count (G7).
+- **The frame is full.** A scene has two or more figures and props in it, a place with things in its foreground and background, and life behind the action (a passer-by, steam, a screen that flickers). One can on a dark stage is an empty frame (G8).
+- **People act the story.** Living things play the companies, but the cast and the story's real people carry most pictures (G9): Poppi had only living things in 41% of its scenes, and a row of cans with faces reads as a children's cartoon.
+- **The cast looks like adults** (13 Nov 2026, the user: "the characters are too simple"). The figure design in STYLE_GUIDE, Figures, is being redrawn (arms, hands with fingers, smaller heads, shading, clothes with detail): until it is, keep figures `"medium"` or `"close"` and acting, not small and standing.
 - **Many places, each used briefly.** A chapter moves through six or more places. A place is a set, a set dressed so that it reads as somewhere else (tagged `"place": "<name>"`; the QA reviewer checks on the frame sheet that it really looks different), or a painted background. New sets are built for each episode by the scene builder. Returning to one place more than three times in a chapter is the lawn fault.
 - **Little to read.** Subtitles carry the words. In a picture there is at most **one** label or **one** number at a time, and two pictures in three have none. No band, strip or caption that repeats the narrator. A living thing carries its name the first time it appears in a chapter; after that its shape is enough.
 - **Shot sizes change.** Wide for a place, close for a face, a detail (a glass, a hand, a phone), a view through a window or from above. Two shots in a row at the same size with the figures facing the camera is a fault.
@@ -165,7 +172,7 @@ What holds a viewer is the middle of the video, not its first frame. A shot of s
 
 - **Something moves between the cuts.** A figure walks, lunges or backs away (`"to"`); a prop travels (`"move"`). A shot where only a face changes is a still picture.
 - **Faces fill the frame in skits**: `"frame": "medium"` or `"close"`. Wide shots are for places and crowds.
-- **One light per mood**: night, a server room, a deal behind closed doors or a phone at 2 a.m. get a `"light"`: one source, darkness around it.
+- **One light per mood**: night, a server room, a deal behind closed doors or a phone at 2 a.m. get a `"light"`: one source, darkness around it. Good news, the viewer's own life and a fresh start get daylight (D1, D3).
 - **Scale is a joke**: a giant building over a tiny person, a pile of cash taller than the buyer.
 - **The loud faces** (`panic`, `furious`, `crying`, `greedy`) are for hooks, climaxes and the thumbnail. Everyday reactions use the quiet ones.
 - **The hidden piggy bank**: a small `piggy` tucked into a corner of a scene about every three minutes, never mentioned by the narrator. Its state follows the story: cracked on bad news, asleep at night, sunglasses on a good day. The pinned comment may ask who found it.
