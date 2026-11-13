@@ -1,52 +1,7 @@
 {
-  "episode": "slug",
-  "title": "",
+  "episode": "poppi-soda-billions",
+  "title": "How Poppi Made $1.95 Billion From Soda",
   "viewer": "BENNY",
-  "notes": "See studio/README.md for the format and studio/gallery/storyboard.json for a working example of every component. Every shot is a small joke: a place, somebody doing something, a fact written in the scene, a living thing for each company or institution (FORMAT_BOOK 11).",
-  "shots": [
-    {
-      "id": "s01",
-      "cue": "L001",
-      "set": "studio",
-      "camera": "push_in",
-      "motif": "",
-      "actors": [
-        {
-          "who": "BENNY",
-          "x": 600,
-          "face": "shocked"
-        }
-      ],
-      "overlays": [
-        {
-          "type": "counter",
-          "from": 0,
-          "to": 0,
-          "prefix": "$",
-          "at": 0.5
-        }
-      ]
-    },
-    {
-      "id": "t01",
-      "type": "card",
-      "cue": "L002",
-      "text": ""
-    },
-    {
-      "id": "k01",
-      "cue": "L003",
-      "set": "office",
-      "camera": "pan_left",
-      "actors": [
-        {
-          "who": "BENNY",
-          "x": 600,
-          "speaks": [
-            "L003"
-          ]
-        }
-      ]
-    }
-  ]
+  "audio": { "music": "house", "music_db": -19, "climax": [6, 7], "sfx": true },
+  "shots": []
 }

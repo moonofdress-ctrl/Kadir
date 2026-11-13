@@ -1,9 +1,17 @@
 # Thumbnail concepts
 
-Three pairs, three reasons to click (FORMAT_BOOK 15). A is the scene of the first shot; B and C are moments from the first 30 seconds. Each is a moment frozen while something happens.
+Three pairs, three reasons to click (FORMAT_BOOK 15). A is the scene of the first shot; B and C are moments from the first 30 seconds. Each is a moment frozen while something happens: one figure or two, one object that glows, a dark ground, a band of two to four words. Painted (STYLE_GUIDE, Thumbnail); the band is drawn by the engine afterwards (`stills.mjs thumb`), never painted. Still open: the shelf search of the biggest Poppi videos (FORMAT_BOOK 15) before the bands are final.
 
-| Pair | Reason to click | Shot id and time | Band (white subject + red figure, 0-5 words, not the title) | Character and emotion | What is happening |
+| Pair | Reason to click | Shot id and time | Band (white subject + red figure, not the title) | Character and emotion | What is happening |
 |---|---|---|---|---|---|
-| A (first frame) | | | | | |
-| B | | | | | |
-| C | | | | | |
+| A (first frame) | Consequence: what she risked | `c1s01`, 0:00 | white `9 MONTHS PREGNANT` | Allison Ellsworth caricature (long blonde hair, coral dress, pregnant), scared but holding on, face a third of the frame | She grips the edge of the small pitch table in one hard spotlight; the swing-top bottle with a face glows amber beside her hands, its price tag hanging face-down. Everything else is navy dark. |
+| B | Contrast: a fortune for vinegar | `c1s10`, 0:23 | white `VINEGAR?` red `$1.95B` | The bottle with a face, shocked, eyes wide; one figure only | Close on the bottle's neck as the face-down price tag flips over and blazes gold; the bottle's own glow lights the dark stage. The giant's shadow falls across the top edge. |
+| C | Open question: who was watching | `c1s09`, 0:21 | white `HE WAS WAITING` | The navy cola giant can with a face (no logo, no brand design), greedy grin, gloved hand reaching down; the small bottle far below | From the dark rafters, the giant can leans over the lighting rig toward the one lit disc of the stage, where the tiny bottle glows. Two objects, one light. |
+
+One title for all three: **How Poppi Made $1.95 Billion From Soda** (the script's title).
+
+## Painted prompts (one each; style lock first)
+
+- **A**: Bold editorial cartoon illustration: thick dark ink outlines, clean simple shapes, exaggerated proportions with big heads, vivid saturated colours, soft painted shading, one warm light source, deep teal-blue shadows, detailed textured background. No text, no letters, no numbers, no logos anywhere. A cartoon caricature of a young woman founder with long straight blonde hair and a coral dress, heavily pregnant, gripping the edge of a small high table on a dark TV stage, nervous but determined, her face filling a third of the frame on the left; on the table a round-shouldered glass swing-top bottle with cartoon eyes and a small mouth glows amber, a blank price tag hanging face-down from its neck; one hard white spotlight from above, everything else deep navy. Keep the upper right third plain and dark for a band.
+- **B**: (style lock) Extreme close-up of a glass swing-top bottle with big shocked cartoon eyes and white gloves on a dark stage; a paper price tag on a string at its neck flipping over and glowing gold as if lit from inside; the light from the tag lights the bottle's face; the shadow of a giant can falls across the top of the frame. Keep the left third plain and dark for a band.
+- **C**: (style lock) Seen from high in dark theatre rafters: a giant plain navy cola can with a cartoon face, a greedy grin and white gloves leans over the lighting rig, reaching down; far below, one lit disc of stage with a tiny glowing bottle on a small table. No brand shapes, no globe, no wave. Keep the top left plain and dark for a band.

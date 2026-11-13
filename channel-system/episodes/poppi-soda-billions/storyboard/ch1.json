@@ -1,0 +1,204 @@
+{
+  "shots": [
+    { "id": "c1s01", "cue": "L001", "set": "pitch_stage", "opts": { "view": "table", "night": true }, "place": "pitch stage", "camera": "push_in", "grade": "night",
+      "light": { "x": 960, "y": 380, "r": 720, "color": "#fff1c4", "dark": 0.72 },
+      "actors": [
+        { "who": "ALLISON_ELLSWORTH", "pregnant": true, "x": 720, "y": 960, "face": "scared", "pose": "hold", "enter": "none" },
+        { "thing": "soda", "shape": "bottle", "tagDown": true,"x": 1120, "y": 700, "scale": 0.42, "face": "neutral", "enter": "none" } ] },
+
+    { "id": "c1s02", "cue": "L001", "word": 7, "set": "pitch_stage", "opts": { "view": "table", "night": true }, "place": "pitch stage", "camera": "pan_right", "frame": "close", "grade": "night",
+      "light": { "x": 900, "y": 360, "r": 640, "color": "#fff1c4", "dark": 0.74 },
+      "actors": [ { "who": "ALLISON_ELLSWORTH", "pregnant": true, "x": 900, "y": 960, "face": "scared", "pose": "hold", "enter": "none", "acts": [ { "cue": "L001", "word": 10, "face": "happy" } ] } ],
+      "overlays": [ { "type": "lower_third", "name": "ALLISON ELLSWORTH", "role": "Co-founder", "at": 0.3 } ] },
+
+    { "id": "c1s03", "cue": "L001", "word": 14, "set": "pitch_stage", "opts": { "view": "chairs", "night": true }, "place": "pitch stage", "camera": "pull_out", "grade": "night",
+      "light": { "x": 1340, "y": 360, "r": 420, "color": "#fff1c4", "dark": 0.8 },
+      "actors": [
+        { "who": "SHARK", "shadow": true, "x": 380, "y": 900, "scale": 0.7, "pose": "rest", "enter": "none" },
+        { "who": "SHARK", "shadow": true, "x": 670, "y": 880, "scale": 0.7, "pose": "think", "enter": "none" },
+        { "who": "SHARK", "shadow": true, "x": 960, "y": 870, "scale": 0.7, "pose": "rest", "enter": "none" },
+        { "who": "ROHAN_OZA", "x": 1250, "y": 880, "scale": 0.7, "face": "deadpan", "pose": "hips", "enter": "none" },
+        { "who": "SHARK", "shadow": true, "x": 1540, "y": 900, "scale": 0.7, "pose": "rest", "enter": "none" } ],
+      "props": [ { "type": "investor_chair", "x": 1250, "y": 920, "lit": true } ] },
+
+    { "id": "c1s04", "cue": "L001", "word": 17, "set": "pitch_stage", "opts": { "view": "table", "night": true }, "place": "pitch stage", "camera": "push_in", "frame": "close", "focus": [860, 720], "grade": "night",
+      "light": { "x": 860, "y": 420, "r": 600, "color": "#fff1c4", "dark": 0.74 },
+      "actors": [ { "who": "ALLISON_ELLSWORTH", "pregnant": true, "x": 860, "y": 980, "face": "deadpan", "pose": "hold", "enter": "none", "acts": [ { "cue": "L001", "word": 20, "face": "relieved" } ] } ] },
+
+    { "id": "c1s05", "cue": "L002", "set": "pitch_stage", "opts": { "view": "desk", "night": true, "lit_chair": 3 }, "place": "pitch stage", "camera": "tilt_up", "grade": "night",
+      "light": { "x": 1300, "y": 420, "r": 460, "color": "#fff1c4", "dark": 0.82 },
+      "actors": [
+        { "who": "SHARK", "shadow": true, "x": 420, "y": 940, "scale": 0.8, "pose": "rest", "enter": "none" },
+        { "who": "SHARK", "shadow": true, "x": 760, "y": 930, "scale": 0.8, "pose": "think", "enter": "none" },
+        { "who": "ROHAN_OZA", "x": 1300, "y": 930, "scale": 0.8, "face": "deadpan", "pose": "rest", "enter": "none" },
+        { "who": "SHARK", "shadow": true, "x": 1640, "y": 940, "scale": 0.8, "pose": "rest", "enter": "none" } ] },
+
+    { "id": "c1s06", "cue": "L002", "word": 5, "set": "pitch_stage", "opts": { "view": "desk", "night": true, "lit_chair": 3 }, "place": "pitch stage", "camera": "push_in", "frame": "medium", "grade": "night",
+      "light": { "x": 1000, "y": 380, "r": 620, "color": "#fff1c4", "dark": 0.76 },
+      "actors": [ { "who": "ROHAN_OZA", "x": 1000, "y": 960, "face": "deadpan", "pose": "hips", "enter": "none", "acts": [ { "cue": "L002", "word": 7, "face": "smug" } ] } ],
+      "props": [ { "type": "briefcase", "x": 1180, "y": 960, "move": { "to": [1280, 960], "cue": "L002", "word": 11, "dur": 0.6 } } ],
+      "overlays": [ { "type": "lower_third", "name": "ROHAN OZA", "role": "Investor, guest Shark", "at": 0.3 } ] },
+
+    { "id": "c1s08", "cue": "L002", "word": 13, "set": "pitch_stage", "opts": { "view": "table", "night": true }, "place": "pitch stage", "camera": "tilt_down", "frame": "close", "grade": "night",
+      "light": { "x": 960, "y": 360, "r": 620, "color": "#fff1c4", "dark": 0.74 },
+      "actors": [ { "who": "ALLISON_ELLSWORTH", "pregnant": true, "x": 960, "y": 960, "face": "shocked", "pose": "hold", "enter": "none", "acts": [ { "cue": "L002", "word": 15, "face": "happy" } ] } ] },
+
+    { "id": "c1k01", "cue": "L003", "set": "pitch_stage", "opts": { "view": "table", "night": true }, "place": "pitch stage", "camera": "push_in", "frame": "close", "focus": [900, 640], "grade": "night", "motif": "word on the can",
+      "light": { "x": 900, "y": 380, "r": 560, "color": "#fff1c4", "dark": 0.76 },
+      "actors": [
+        { "thing": "soda", "shape": "bottle", "label": "MOTHER", "x": 900, "y": 760, "scale": 0.6, "face": "smug", "pose": "wave", "speaks": ["L003"], "enter": "none" },
+        { "who": "ALLISON_ELLSWORTH", "pregnant": true, "x": 1460, "y": 980, "face": "scared", "pose": "hold", "flip": true, "enter": "none" } ] },
+
+    { "id": "c1t01", "type": "card", "cue": "L004", "text": "We know what they don't.", "emph": ["know"] },
+
+    { "id": "c1s09", "cue": "L004", "word": 5, "set": "pitch_stage", "opts": { "view": "rafters", "night": true }, "place": "the rafters", "camera": "tilt_up", "grade": "night",
+      "light": { "x": 620, "y": 820, "r": 420, "color": "#fff1c4", "dark": 0.8 },
+      "actors": [ { "thing": "giant", "color": "navy", "x": 1380, "y": 760, "scale": 1.6, "face": "greedy", "look": "down", "pose": "grab", "enter": "none" } ] },
+
+    { "id": "c1s10", "cue": "L004", "word": 11, "set": "pitch_stage", "opts": { "view": "table", "night": true }, "place": "pitch stage", "camera": "push_in", "frame": "close", "focus": [960, 560], "grade": "gold", "motif": "word on the can",
+      "light": { "x": 960, "y": 360, "r": 600, "color": "#ffe14d", "dark": 0.76 },
+      "actors": [ { "thing": "soda", "shape": "bottle", "tagFlip": 0.2, "x": 960, "y": 860, "scale": 0.7, "face": "shocked", "enter": "none" } ],
+      "overlays": [ { "type": "counter", "from": 0, "to": 1.95, "decimals": 2, "prefix": "$", "suffix": "B", "tone": "green", "pos": "tc", "plate": true, "at": 0.3, "dur": 1.4 } ] },
+
+    { "id": "c1k02a", "cue": "L005", "set": "pitch_stage", "opts": { "view": "seats", "night": true }, "place": "audience seats", "camera": "pan_right", "grade": "night",
+      "light": { "x": 960, "y": 360, "r": 360, "color": "#fff1c4", "dark": 0.8 },
+      "actors": [ { "who": "BENNY", "x": 960, "y": 1000, "scale": 0.75, "face": "shocked", "prop": "popcorn", "speaks": ["L005"], "enter": "none" } ] },
+
+    { "id": "c1k02b", "cue": "L006", "set": "pitch_stage", "opts": { "view": "table", "night": true }, "place": "pitch stage", "camera": "pull_out", "frame": "close", "grade": "night", "motif": "word on the can",
+      "light": { "x": 960, "y": 380, "r": 560, "color": "#fff1c4", "dark": 0.76 },
+      "actors": [ { "thing": "soda", "shape": "bottle", "x": 960, "y": 820, "scale": 0.65, "face": "smug", "pose": "point", "speaks": ["L006"], "enter": "none" } ] },
+
+    { "id": "c1k02c", "cue": "L007", "set": "pitch_stage", "opts": { "view": "seats", "night": true }, "place": "audience seats", "camera": "tilt_up", "frame": "close", "grade": "night",
+      "light": { "x": 1100, "y": 300, "r": 700, "color": "#fff1c4", "dark": 0.7 },
+      "actors": [ { "who": "BENNY", "x": 960, "y": 980, "face": "scared", "prop": "popcorn", "look": "down", "speaks": ["L007"], "enter": "none" } ] },
+
+    { "id": "c1k02d", "cue": "L008", "set": "pitch_stage", "opts": { "view": "rafters", "night": true }, "place": "the rafters", "camera": "push_in", "frame": "medium", "grade": "night",
+      "light": { "x": 960, "y": 560, "r": 520, "color": "#fff1c4", "dark": 0.78 },
+      "actors": [
+        { "who": "ALLISON_ELLSWORTH", "pregnant": true, "x": 760, "y": 900, "face": "happy", "pose": "present", "enter": "none" },
+        { "thing": "soda", "shape": "bottle", "sweat": true, "x": 1160, "y": 860, "scale": 0.55, "face": "scared", "pose": "panic", "speaks": ["L008"], "enter": "none" } ] },
+
+    { "id": "c1s11", "cue": "L009", "set": "pitch_stage", "opts": { "view": "wings", "night": true }, "place": "stage wings", "camera": "pan_left", "grade": "night",
+      "light": { "x": 1500, "y": 300, "r": 640, "color": "#ff8a7a", "dark": 0.78 },
+      "actors": [ { "who": "ALLISON_ELLSWORTH", "pregnant": true, "x": 560, "y": 960, "face": "relieved", "pose": "rest", "enter": "none", "acts": [ { "at": 0.4, "to": [1180, 960], "dur": 2.6 } ] } ],
+      "props": [ { "type": "wall_calendar", "x": 760, "y": 420, "circle": 18 } ] },
+
+    { "id": "c1s12", "cue": "L010", "set": "pitch_stage", "opts": { "view": "rafters", "night": true }, "place": "the rafters", "camera": "tilt_down", "frame": "medium", "grade": "night", "motif": "word on the can",
+      "light": { "x": 760, "y": 820, "r": 460, "color": "#fff1c4", "dark": 0.8 },
+      "actors": [ { "thing": "giant", "color": "navy", "x": 1120, "y": 940, "scale": 1.2, "face": "smug", "prop": "tag", "tag": "$1.95B", "enter": "none" } ] },
+
+    { "id": "c1s13", "cue": "L010", "word": 5, "set": "pitch_stage", "opts": { "view": "rafters", "night": true }, "place": "the rafters", "camera": "pull_out", "frame": "close", "focus": [1200, 600], "grade": "night",
+      "light": { "x": 1200, "y": 560, "r": 420, "color": "#fff1c4", "dark": 0.82 },
+      "actors": [ { "thing": "giant", "color": "navy", "x": 1120, "y": 940, "scale": 1.2, "face": "smug", "pose": "think", "enter": "none", "acts": [ { "cue": "L010", "word": 7, "face": "deadpan" } ] } ] },
+
+    { "id": "c1t02", "type": "card", "cue": "L011", "text": "So how did Poppi make $1.95 billion from soda?", "emph": ["$1.95", "billion"] },
+
+    { "id": "c1s14", "cue": "L012", "set": "kitchen", "opts": { "night": true }, "place": "family kitchen", "camera": "pan_right", "grade": "sepia",
+      "light": { "x": 1300, "y": 320, "r": 700, "color": "#ffd9a0", "dark": 0.66 },
+      "actors": [ { "who": "ALLISON_ELLSWORTH", "x": 1260, "y": 960, "scale": 0.85, "face": "sad", "pose": "rest", "enter": "none", "acts": [ { "at": 0.4, "to": [1120, 960], "dur": 1.4 } ] } ],
+      "overlays": [ { "type": "tag", "t": "AROUND 2015", "at": 0.3 } ] },
+
+    { "id": "c1s15", "cue": "L012", "word": 8, "set": "kitchen", "opts": { "night": true }, "place": "family kitchen", "camera": "push_in", "frame": "medium", "grade": "sepia",
+      "light": { "x": 1100, "y": 300, "r": 620, "color": "#ffd9a0", "dark": 0.7 },
+      "actors": [ { "who": "ALLISON_ELLSWORTH", "x": 960, "y": 960, "face": "sad", "pose": "facepalm", "enter": "none", "acts": [ { "cue": "L012", "word": 12, "face": "confused", "pose": "think" } ] } ] },
+
+    { "id": "c1s16", "cue": "L012", "word": 12, "set": "kitchen", "opts": { "night": true }, "place": "family kitchen", "camera": "tilt_down", "frame": "close", "focus": [860, 720], "grade": "sepia",
+      "light": { "x": 860, "y": 380, "r": 560, "color": "#ffd9a0", "dark": 0.72 },
+      "actors": [ { "who": "ALLISON_ELLSWORTH", "x": 1240, "y": 980, "face": "happy", "pose": "carry", "enter": "none" } ],
+      "props": [ { "type": "vinegar_jar", "x": 760, "y": 820, "fruit": true, "siphon": true, "move": { "to": [880, 820], "cue": "L012", "word": 17, "dur": 0.6 } } ] },
+
+    { "id": "c1s17", "cue": "L013", "set": "farmers_market", "opts": { "night": true, "dawn": true }, "place": "farmers' market", "camera": "pull_out", "frame": "medium",
+      "light": { "x": 960, "y": 220, "r": 1000, "color": "#ffd28a", "dark": 0.5 },
+      "actors": [
+        { "who": "ALLISON_ELLSWORTH", "x": 700, "y": 960, "face": "happy", "pose": "offer", "enter": "none" },
+        { "who": "STEPHEN_ELLSWORTH", "x": 1220, "y": 960, "face": "happy", "pose": "carry", "enter": "none" } ],
+      "overlays": [ { "type": "lower_third", "name": "STEPHEN ELLSWORTH", "role": "Co-founder", "at": 0.3 } ] },
+
+    { "id": "c1s18", "cue": "L013", "word": 6, "set": "farmers_market", "opts": { "night": true, "dawn": true }, "place": "farmers' market", "camera": "pan_right",
+      "light": { "x": 960, "y": 220, "r": 1000, "color": "#ffd28a", "dark": 0.5 },
+      "actors": [
+        { "who": "STEPHEN_ELLSWORTH", "x": 520, "y": 940, "scale": 0.7, "face": "happy", "pose": "carry", "enter": "none", "acts": [ { "at": 0.3, "to": [820, 940], "dur": 1.2 } ] },
+        { "who": "ALLISON_ELLSWORTH", "x": 1320, "y": 940, "scale": 0.7, "face": "happy", "pose": "offer", "enter": "none" } ],
+      "props": [ { "type": "bottles", "x": 960, "y": 820, "n": 7, "move": { "to": [1180, 820], "at": 0.3, "dur": 1.6 } } ] },
+
+    { "id": "c1s19", "cue": "L013", "word": 11, "set": "farmers_market", "opts": { "night": true, "dawn": true }, "place": "farmers' market", "camera": "push_in",
+      "light": { "x": 960, "y": 220, "r": 1000, "color": "#ffd28a", "dark": 0.48 },
+      "actors": [
+        { "who": "ALLISON_ELLSWORTH", "x": 620, "y": 960, "scale": 0.8, "face": "shocked", "pose": "cheer", "enter": "none", "acts": [ { "cue": "L013", "word": 17, "face": "happy" } ] },
+        { "thing": "box", "label": "WHOLE FOODS", "x": 1800, "y": 960, "scale": 0.8, "face": "deadpan", "enter": "none", "acts": [ { "at": 0.2, "to": [1300, 960], "dur": 1.4 }, { "cue": "L013", "word": 17, "face": "happy", "pose": "offer" } ] } ] },
+
+    { "id": "c1k03a", "cue": "L014", "set": "night_office", "opts": { "dress": "buyer", "night": true }, "place": "buyer's office", "camera": "tilt_up", "frame": "medium", "grade": "night",
+      "light": { "x": 760, "y": 420, "r": 640, "color": "#ffd9a0", "dark": 0.7 },
+      "actors": [
+        { "who": "MARTHA", "x": 1180, "y": 960, "face": "deadpan", "pose": "think", "speaks": ["L014"], "enter": "none" },
+        { "thing": "soda", "shape": "bottle", "x": 700, "y": 900, "scale": 0.45, "face": "happy", "pose": "cheer", "speaks": ["L015"], "enter": "none" } ] },
+
+    { "id": "c1k03b", "cue": "L016", "set": "night_office", "opts": { "dress": "buyer", "night": true }, "place": "buyer's office", "camera": "pan_left", "frame": "close", "grade": "night",
+      "light": { "x": 900, "y": 400, "r": 600, "color": "#ffd9a0", "dark": 0.72 },
+      "actors": [
+        { "who": "MARTHA", "x": 1160, "y": 960, "face": "confused", "pose": "shrug", "speaks": ["L016"], "enter": "none" },
+        { "thing": "soda", "shape": "bottle", "x": 720, "y": 900, "scale": 0.45, "face": "confused", "pose": "present", "speaks": ["L017"], "enter": "none" } ] },
+
+    { "id": "c1k03c", "cue": "L018", "set": "night_office", "opts": { "dress": "buyer", "night": true }, "place": "buyer's office", "camera": "push_in", "frame": "medium", "grade": "night",
+      "light": { "x": 960, "y": 420, "r": 640, "color": "#ffd9a0", "dark": 0.7 },
+      "actors": [
+        { "who": "MARTHA", "x": 1180, "y": 960, "face": "deadpan", "pose": "rest", "speaks": ["L018"], "enter": "none", "acts": [ { "cue": "L018", "word": 1, "face": "neutral", "pose": "offer" } ] },
+        { "thing": "soda", "shape": "bottle", "x": 720, "y": 900, "scale": 0.45, "face": "scared", "enter": "none", "acts": [ { "cue": "L018", "word": 2, "face": "happy", "pose": "cheer" } ] } ] },
+
+    { "id": "c1t03", "type": "card", "cue": "L019", "text": "About $500,000 of sales in 18 months.", "emph": ["$500,000"] },
+
+    { "id": "c1s20", "cue": "L019", "word": 13, "set": "car_lot", "opts": { "night": true }, "place": "used-car lot", "camera": "pull_out", "grade": "night",
+      "light": { "x": 520, "y": 160, "r": 900, "color": "#e8f0ff", "dark": 0.72 },
+      "props": [
+        { "type": "car", "x": 1060, "y": 930 },
+        { "type": "cards_fan", "x": 1000, "y": 700, "n": 5, "move": { "to": [1080, 700], "cue": "L020", "word": 2, "dur": 0.8 } },
+        { "type": "piggy", "x": 1700, "y": 950, "k": 0.3, "state": "cracked" } ] },
+
+    { "id": "c1t04", "type": "card", "cue": "L020", "word": 10, "text": "\"So we maxed out our credit cards...\"", "emph": ["maxed", "out"] },
+
+    { "id": "c1s21", "cue": "L020", "word": 17, "set": "car_lot", "opts": { "night": true }, "place": "used-car lot", "camera": "push_in", "frame": "close", "focus": [1060, 760], "grade": "night",
+      "light": { "x": 700, "y": 200, "r": 900, "color": "#e8f0ff", "dark": 0.72 },
+      "props": [ { "type": "car", "x": 1060, "y": 930, "sign": "SOLD", "move": { "to": [1900, 930], "cue": "L020", "word": 22, "dur": 1.0 } } ] },
+
+    { "id": "c1s22", "cue": "L021", "set": "bottling_plant", "opts": { "night": true }, "place": "bottling plant", "camera": "pan_left", "grade": "night",
+      "light": { "x": 960, "y": 200, "r": 820, "color": "#ffe0a8", "dark": 0.7 },
+      "props": [ { "type": "bottles", "x": 960, "y": 700, "n": 9, "move": { "to": [1260, 700], "at": 0.2, "dur": 2.0 } } ] },
+
+    { "id": "c1s23", "cue": "L021", "word": 5, "set": "bottling_plant", "opts": { "night": true }, "place": "bottling plant", "camera": "tilt_up", "frame": "medium", "grade": "night",
+      "light": { "x": 960, "y": 220, "r": 760, "color": "#ffe0a8", "dark": 0.72 },
+      "actors": [
+        { "who": "ALLISON_ELLSWORTH", "x": 720, "y": 960, "face": "happy", "pose": "present", "enter": "none" },
+        { "who": "STEPHEN_ELLSWORTH", "x": 1220, "y": 960, "face": "shocked", "pose": "facepalm", "flip": true, "enter": "none" } ] },
+
+    { "id": "c1k04a", "cue": "L022", "set": "bottling_plant", "opts": { "night": true }, "place": "bottling plant", "camera": "push_in", "frame": "medium", "grade": "night",
+      "light": { "x": 960, "y": 220, "r": 760, "color": "#ffe0a8", "dark": 0.72 },
+      "actors": [
+        { "who": "HAL", "x": 760, "y": 960, "hat": "hardhat", "prop": "wallet", "open": true, "face": "deadpan", "speaks": ["L022"], "enter": "none" },
+        { "thing": "soda", "shape": "bottle", "x": 1240, "y": 900, "scale": 0.45, "face": "confused", "pose": "shrug", "speaks": ["L023"], "enter": "none" } ] },
+
+    { "id": "c1k04b", "cue": "L024", "set": "bottling_plant", "opts": { "night": true }, "place": "bottling plant", "camera": "pan_right", "frame": "close", "grade": "night",
+      "light": { "x": 860, "y": 260, "r": 620, "color": "#ffe0a8", "dark": 0.74 },
+      "actors": [ { "who": "HAL", "x": 860, "y": 960, "hat": "hardhat", "prop": "wallet", "open": true, "face": "deadpan", "speaks": ["L024"], "enter": "none", "acts": [ { "cue": "L024", "word": 3, "face": "sad" } ] } ] },
+
+    { "id": "c1k04c", "cue": "L025", "set": "bottling_plant", "opts": { "night": true }, "place": "bottling plant", "camera": "tilt_down", "frame": "close", "grade": "night",
+      "light": { "x": 1100, "y": 300, "r": 560, "color": "#ffe0a8", "dark": 0.76 },
+      "actors": [ { "thing": "soda", "shape": "bottle", "sweat": true, "x": 1100, "y": 880, "scale": 0.6, "face": "scared", "pose": "panic", "speaks": ["L025"], "enter": "none" } ] },
+
+    { "id": "c1k04d", "cue": "L026", "set": "bottling_plant", "opts": { "night": true }, "place": "bottling plant", "camera": "pull_out", "frame": "medium", "grade": "night",
+      "light": { "x": 960, "y": 220, "r": 760, "color": "#ffe0a8", "dark": 0.72 },
+      "actors": [
+        { "who": "HAL", "x": 760, "y": 960, "hat": "hardhat", "prop": "wallet", "open": true, "face": "smug", "speaks": ["L026"], "enter": "none" },
+        { "thing": "soda", "shape": "bottle", "x": 1240, "y": 900, "scale": 0.45, "face": "shocked", "enter": "none", "acts": [ { "cue": "L026", "word": 4, "face": "crying" } ] } ] },
+
+    { "id": "c1s24", "cue": "L027", "set": "bottling_plant", "opts": { "night": true }, "place": "bottling plant", "camera": "tilt_up", "grade": "night",
+      "light": { "x": 760, "y": 220, "r": 700, "color": "#ffe0a8", "dark": 0.74 },
+      "actors": [ { "who": "ALLISON_ELLSWORTH", "x": 620, "y": 960, "face": "happy", "pose": "present", "enter": "none", "acts": [ { "cue": "L027", "word": 5, "pose": "point" } ] } ],
+      "props": [ { "type": "bottles", "x": 1260, "y": 940, "n": 5 } ] },
+
+    { "id": "c1s25", "cue": "L027", "word": 10, "set": "pitch_stage", "opts": { "view": "seats", "night": true, "empty": true }, "place": "audience seats", "camera": "push_in", "grade": "night", "callback": "the pitch stage",
+      "light": { "x": 960, "y": 380, "r": 420, "color": "#fff1c4", "dark": 0.8 },
+      "props": [
+        { "type": "investor_chair", "x": 560, "y": 700 }, { "type": "investor_chair", "x": 760, "y": 680 }, { "type": "investor_chair", "x": 960, "y": 670 },
+        { "type": "investor_chair", "x": 1160, "y": 680 }, { "type": "investor_chair", "x": 1360, "y": 700 } ] }
+  ]
+}
