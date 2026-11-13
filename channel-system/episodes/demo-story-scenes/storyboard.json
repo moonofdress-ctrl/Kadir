@@ -161,7 +161,8 @@
      "from": 0,
      "to": 1.95,
      "prefix": "$",
-     "suffix": "B", "decimals": 2,
+     "suffix": "B",
+     "decimals": 2,
      "cap": "SOLD FOR",
      "pos": "tr",
      "at": 0.4,
@@ -173,7 +174,8 @@
      "from": 1.95,
      "to": 1.42,
      "prefix": "$",
-     "suffix": "B", "decimals": 2,
+     "suffix": "B",
+     "decimals": 2,
      "cap": "A WEEK LATER",
      "pos": "tl",
      "cue": "L007",
@@ -228,6 +230,205 @@
      "from": "taiwan",
      "to": "santa clara",
      "dur": 2.6,
+     "at": 0.4
+    }
+   ]
+  },
+  {
+   "id": "e01",
+   "cue": "L010",
+   "explains": "who paid whom when PepsiCo bought the soda",
+   "set": "dark_stage",
+   "opts": {
+    "night": true
+   },
+   "place": "the money table",
+   "light": {
+    "x": 960,
+    "y": 560,
+    "r": 1300,
+    "dark": 0.45
+   },
+   "props": [
+    {
+     "type": "money_flow",
+     "parties": [
+      {
+       "id": "p",
+       "kind": "badge",
+       "icon": "building",
+       "color": "#1f6fb6",
+       "name": "PEPSICO"
+      },
+      {
+       "id": "f",
+       "kind": "face",
+       "who": "ALLISON_ELLSWORTH",
+       "name": "FOUNDERS"
+      },
+      {
+       "id": "i",
+       "kind": "badge",
+       "icon": "can",
+       "color": "#8a3fb6",
+       "name": "INVESTORS"
+      }
+     ],
+     "flows": [
+      {
+       "from": "p",
+       "to": "f",
+       "amount": "$1.95B",
+       "at": 0.6
+      },
+      {
+       "from": "f",
+       "to": "i",
+       "amount": "$300M",
+       "coins": true,
+       "at": 2.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e02",
+   "cue": "L011",
+   "explains": "where the $1.95B went",
+   "set": "dark_stage",
+   "opts": {
+    "night": true
+   },
+   "place": "the split",
+   "light": {
+    "x": 960,
+    "y": 560,
+    "r": 1300,
+    "dark": 0.45
+   },
+   "props": [
+    {
+     "type": "split_bar",
+     "total": "$1.95B",
+     "note": "what PepsiCo paid",
+     "parts": [
+      {
+       "label": "TAXES",
+       "amount": "$490M",
+       "share": 0.25,
+       "at": 0.8
+      },
+      {
+       "label": "EARNOUT",
+       "amount": "$680M",
+       "share": 0.35,
+       "at": 2.0
+      },
+      {
+       "label": "CASH",
+       "amount": "$780M",
+       "share": 0.4,
+       "at": 3.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e03",
+   "cue": "L013",
+   "explains": "why rich on paper is not rich in the bank",
+   "set": "dark_stage",
+   "opts": {
+    "night": true
+   },
+   "place": "the chain",
+   "light": {
+    "x": 960,
+    "y": 560,
+    "r": 1300,
+    "dark": 0.45
+   },
+   "props": [
+    {
+     "type": "chain",
+     "nodes": [
+      {
+       "text": "The sale happened",
+       "icon": "coin",
+       "color": "#e8a317",
+       "at": 0.3
+      },
+      {
+       "text": "Founders were rich",
+       "who": "ALLISON_ELLSWORTH",
+       "at": 1.8
+      },
+      {
+       "text": "Only on paper",
+       "icon": "bank",
+       "color": "#8a3fb6",
+       "at": 3.3
+      },
+      {
+       "text": "The earnout had strings",
+       "icon": "can",
+       "color": "#e0262b",
+       "at": 4.8
+      }
+     ],
+     "links": [
+      "so",
+      "but",
+      "because"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e04",
+   "cue": "L014",
+   "explains": "the text message that is on the record",
+   "set": "dark_stage",
+   "opts": {
+    "night": true
+   },
+   "place": "the phone",
+   "light": {
+    "x": 960,
+    "y": 520,
+    "r": 1300,
+    "dark": 0.45
+   },
+   "props": [
+    {
+     "type": "chat",
+     "name": "Court filing",
+     "source": "Exhibit 12, 2025",
+     "messages": [
+      {
+       "from": "them",
+       "text": "Did you see the offer?",
+       "at": 0.8
+      },
+      {
+       "from": "me",
+       "text": "I did. It is bigger than I hoped.",
+       "at": 3.0
+      },
+      {
+       "from": "them",
+       "text": "Sign before Friday.",
+       "at": 5.2
+      }
+     ]
+    }
+   ],
+   "overlays": [
+    {
+     "type": "source",
+     "t": "Court filing, exhibit 12",
      "at": 0.4
     }
    ]

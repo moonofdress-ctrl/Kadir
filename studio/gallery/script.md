@@ -48,3 +48,12 @@ N: Story scenes, part 6.
 N: Story scenes, part 7.
 N: Story scenes, part 8.
 N: Story scenes, part 9.
+N: Explainer scenes, part 1.
+N: Explainer scenes, part 2.
+N: Explainer scenes, part 3.
+N: Explainer scenes, part 4.
+N: Explainer scenes, part 5.
+N: Explainer scenes, part 6.
+N: Explainer scenes, part 7.
+N: Explainer scenes, part 8.
+N: Explainer scenes, part 9.

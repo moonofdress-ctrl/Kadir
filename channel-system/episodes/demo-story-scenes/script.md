@@ -11,3 +11,10 @@ N: Then the price tag showed up, and the number climbed fast.
 N: A week later the other number fell.
 N: A pallet left Dallas for New York.
 N: And a chip went from Taiwan to Santa Clara.
+N: PepsiCo paid the founders and the investors, and the investors paid their backers.
+N: Of the one point nine five billion, the taxes took a quarter.
+N: A big slice was an earnout, and the rest was cash.
+N: The sale happened, so the founders were rich, but only on paper, because the earnout had strings.
+N: Then the founders got the text message, which is on the record.
+N: Here is what it said.
+N: And here is what came back.

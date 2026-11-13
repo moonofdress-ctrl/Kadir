@@ -2,7 +2,8 @@
    board_web   (prop)  evidence board: nodes with name strips, red strings that draw themselves, a camera that visits each node.
    timeline    (prop)  years on a road receding into depth; the camera glides from year to year.
    map_flight  (prop)  dark map, a route that draws from one city to another, a plane, a pulse at the end.
-   Sets for them: evidence_wall, timeline_road, map_table (plain dark grounds; the props bring their own camera).
+   money_flow, split_bar, chain, chat (props): the explainer scenes (second batch), on the plain dark ground `dark_stage`.
+   Sets for them: evidence_wall, timeline_road, map_table, dark_stage (plain dark grounds; the props bring their own camera).
    Everything is timed from the timeline only: no timers, no randomness except the seeded rng(), no callbacks. */
 (function () {
   "use strict";
@@ -41,6 +42,7 @@
   // Plain dark grounds. `night` is accepted so the lint reads them as dark pictures.
   Object.assign(S.SETS, {
     evidence_wall: () => ({ back: R(0, 0, 1920, 1080, "#16121a", 0, ""), front: "" }),
+    dark_stage: () => ({ back: R(0, 0, 1920, 1080, "#12152c", 0, "") + `<g class="pulse"><ellipse cx="960" cy="560" rx="900" ry="420" fill="#2a3166" opacity=".22"/><ellipse cx="960" cy="560" rx="560" ry="260" fill="#3a4488" opacity=".18"/></g>`, front: "" }),
     map_table: () => ({ back: R(0, 0, 1920, 1080, "#0c1330", 0, ""), front: "" }),
     timeline_road: (o) => { const r = rng(21); let s = R(0, 0, 1920, 1080, "#0d1230", 0, "");
       for (let i = 0; i < 46; i++) s += `<circle class="${i % 5 === 0 ? "pulse" : ""}" cx="${Math.round(r() * 1920)}" cy="${Math.round(r() * 250)}" r="${1.5 + r() * 2.5}" fill="#fff" opacity="${(0.35 + r() * 0.5).toFixed(2)}"/>`;
@@ -270,6 +272,134 @@
       tl.fromTo(cB, { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.25, ease: "back.out(1.7)", immediateRender: false, transformOrigin: "50% 50%" }, arrive);
       // the pulse repeats a few times, then rests (a finite repeat, so a seek is exact)
       tl.fromTo(ring, { opacity: 0.9, scale: 0.5 }, { opacity: 0, scale: 3.2, duration: 0.9, ease: "power1.out", repeat: 5, immediateRender: false }, arrive);
+    },
+  };
+
+  /* ================================================================================================
+     Second batch: explainer scenes. Each shot that uses one should carry "explains": "what it makes clear" (a note for the lint and the reviewer).
+     ================================================================================================ */
+  const wrapText = (t, max) => { const out = []; let cur = ""; String(t).split(/\s+/).forEach((w) => { if (cur && (cur + " " + w).length > max) { out.push(cur); cur = w; } else cur = cur ? cur + " " + w : w; }); if (cur) out.push(cur); return out; };
+  const pop = (tl, e, t, d) => tl.fromTo(e, { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: d || 0.25, ease: "back.out(1.7)", immediateRender: false, transformOrigin: "50% 50%" }, t);
+  const hide = (e) => gsap.set(e, { opacity: 0, transformOrigin: "50% 50%", smoothOrigin: false });
+  const GREEN = "#2fbf71";
+
+  /* ------------------------------------------------------------------------------------------------
+     5. Money flow
+     { type:"money_flow", parties:[ {id, kind:"face"|"badge", who, name, sub, icon, color} ], flows:[ {from, to, amount, coins:true, cue, word, at} ] }
+     Two to five parties in a row. Each flow is an arrow that draws itself on its cue, then bills (or coins) stream along it and its amount lands on it.
+     The receiving party pops when the money arrives. Who paid whom, a fee chain. */
+  function mfLayout(o) { const n = (o.parties || []).length, k = n <= 3 ? 1 : n === 4 ? 0.86 : 0.74, x0 = n <= 3 ? 480 : 230, x1 = n <= 3 ? 1440 : 1690;
+    return { k, pos: o.parties.map((p, i) => ({ x: p.x != null ? p.x : Math.round(n === 1 ? 960 : n === 2 ? (i ? 1440 : 480) : n === 3 ? 400 + i * 560 : x0 + (x1 - x0) * i / (n - 1)), y: p.y != null ? p.y : 600 })) }; }
+  function mfPath(o, f, L) { const ix = {}; o.parties.forEach((p, i) => { ix[p.id || p.name] = i; });
+    const i = ix[f.from], j = ix[f.to], a = L.pos[i], b = L.pos[j], k = L.k, dir = b.x > a.x ? 1 : -1, near = Math.abs(i - j) === 1;
+    if (near) { const y = a.y - 30 * k; return { P: [[a.x + dir * (150 * k), y], [(a.x + b.x) / 2, y], [b.x - dir * (150 * k), y]], mid: [(a.x + b.x) / 2, y - 62], i, j }; }
+    const y = a.y - 190 * k, top = y - 110 - 80 * Math.abs(i - j); return { P: [[a.x, y], [(a.x + b.x) / 2, top], [b.x, y]], mid: [(a.x + b.x) / 2, (y + top) / 2 - 36], i, j }; }
+  S.PROPS.money_flow = {
+    draw(o) { const parties = o.parties || [], L = mfLayout(o);
+      const cards = parties.map((p, i) => `<g class="pt" data-layout-allow-overlap><g transform="translate(${L.pos[i].x},${L.pos[i].y}) scale(${L.k})">${nodeSVG(Object.assign({ kind: "badge" }, p), { x: 0, y: 0 }, i)}</g></g>`).join("");
+      const flows = (o.flows || []).map((f, n) => { const m = mfPath(o, f, L), P = m.P, d = `M${P[0][0]},${P[0][1]} Q${P[1][0]},${P[1][1]} ${P[2][0]},${P[2][1]}`, tx = P[2][0] - P[1][0], ty = P[2][1] - P[1][1], ang = Math.atan2(ty, tx) * 180 / Math.PI, amt = String(f.amount || "");
+        const items = [0, 1, 2, 3].map(() => f.coins ? `<g class="bill"><circle r="26" fill="#f2c94c" ${st}/>${T(0, 11, "$", 32, INK)}</g>` : `<g class="bill">${R(-34, -20, 68, 40, "#7ed99b", 6)}${T(0, 11, "$", 30, INK)}</g>`).join("");
+        return `<g class="fl" data-n="${n}"><path class="ln" d="${d}" pathLength="1" fill="none" stroke="rgba(0,0,0,.35)" stroke-width="22" stroke-dasharray="1 1" transform="translate(4,6)"/><path class="ln" d="${d}" pathLength="1" fill="none" stroke="${GREEN}" stroke-width="18" stroke-linecap="round" stroke-dasharray="1 1"/>` +
+          `<g class="ah" transform="translate(${P[2][0]},${P[2][1]}) rotate(${ang.toFixed(1)})"><path d="M-6,-34 L40,0 L-6,34Z" fill="${GREEN}" ${st}/></g>${items}` +
+          (amt ? `<g class="am" transform="translate(${m.mid[0].toFixed(1)},${m.mid[1].toFixed(1)})"><g class="cut">${R(-(amt.length * 17 + 36), -44, amt.length * 34 + 72, 80, PAPER, 14)}</g>${T(0, 18, amt, 62, "#1a7a44")}</g>` : "") + `</g>`; }).join("");
+      return cards + flows; },
+    play(tl, el, o, t0) { const parties = o.parties || [], L = mfLayout(o), pts = [...el.querySelectorAll(".pt")]; faces(el);
+      pts.forEach((e, i) => { hide(e); pop(tl, e, t0 + 0.15 + i * 0.18, 0.3); });
+      [...el.querySelectorAll(".fl")].forEach((fe, n) => { const f = o.flows[n], t = t0 + (f.at != null ? f.at : 0.8 + n * 1.6), m = mfPath(o, f, L), R0 = route(m.P), paths = fe.querySelectorAll(".ln"), ah = fe.querySelector(".ah"), am = fe.querySelector(".am"), bills = [...fe.querySelectorAll(".bill")];
+        gsap.set(paths, { strokeDashoffset: 1 }); hide(ah); if (am) hide(am); bills.forEach((b) => gsap.set(b, { opacity: 0 }));
+        tl.fromTo(paths, { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.55, ease: "power1.inOut", immediateRender: false }, t);
+        pop(tl, ah, t + 0.5, 0.15); if (am) pop(tl, am, t + 0.5, 0.25);
+        // the bills: one after another along the arrow, 14 short steps each (no callbacks; the same frame on every seek)
+        const N = 14, dur = 1.0, gap = 0.26;
+        bills.forEach((b, q) => { const T0 = t + 0.6 + q * gap; tl.set(b, { opacity: 1 }, T0);
+          for (let s2 = 0; s2 < N; s2++) { const p0 = R0.at(s2 / N), p1 = R0.at((s2 + 1) / N); tl.fromTo(b, { x: p0.x, y: p0.y, rotation: (q % 2 ? -8 : 8) }, { x: p1.x, y: p1.y, duration: dur / N, ease: "none", immediateRender: false }, T0 + s2 * dur / N); }
+          tl.set(b, { opacity: 0 }, T0 + dur); gsap.set(b, { x: R0.at(0).x, y: R0.at(0).y }); });
+        const arrive = t + 0.6 + dur; tl.fromTo(pts[m.j], { scale: 1 }, { scale: 1.07, duration: 0.12, yoyo: true, repeat: 1, immediateRender: false, transformOrigin: "50% 60%" }, arrive); });
+    },
+  };
+
+  /* ------------------------------------------------------------------------------------------------
+     6. Fund split
+     { type:"split_bar", total:"$1.95B", note:"what PepsiCo paid", parts:[ {label:"Taxes", amount:"$490M", share:0.25, color, cue, word, at} ] }
+     One bar for the whole amount. On each part's cue it takes its colour, slides out of the bar (down and a little sideways) and its label and amount stand under it.
+     `share` is the fraction of the bar (they should add to 1). "Of every $100": total "$100", amounts "$40". */
+  const PALETTE = ["#e0262b", "#2f8fd8", "#2fbf71", "#e8a317", "#8a3fb6", "#d96aa0"];
+  const sbLayout = (o) => { const parts = o.parts || [], tot = parts.reduce((a, p) => a + (p.share || 0), 0) || 1; let x = 260; const W = 1400;
+    return parts.map((p, i) => { const w = W * (p.share || 1 / parts.length) / tot, r = { x, w, c: x + w / 2 }; x += w; return r; }); };
+  S.PROPS.split_bar = {
+    draw(o) { const parts = o.parts || [], L = sbLayout(o), n = parts.length, slot = 1500 / Math.max(1, n); let s2 = "";
+      s2 += T(960, 290, o.total || "", 150, PAPER) + (o.note ? T(960, 352, o.note, 46, "#aab3e8") : "");
+      parts.forEach((p, i) => { const col = p.color || PALETTE[i % PALETTE.length], lx = 960 - 750 + slot * (i + 0.5), sw = String(p.label).length;
+        s2 += `<g class="sp" data-i="${i}" data-layout-allow-overlap><g class="seg">${cut(R(L[i].x, 420, L[i].w, 190, col, i === 0 || i === n - 1 ? 24 : 6))}</g>` +
+          `<path class="lead" d="M${L[i].c},640 L${lx},760" stroke="${col}" stroke-width="7" fill="none" stroke-linecap="round"/>` +
+          `<g class="lab">${T(lx, 830, p.label, Math.min(66, Math.floor(slot / (sw * 0.5)) - 4), PAPER)}${p.amount ? T(lx, 908, p.amount, 72, PAPER) : ""}</g></g>`; });
+      return s2; },
+    play(tl, el, o, t0) { const parts = o.parts || [], n = parts.length, sp = [...el.querySelectorAll(".sp")];
+      sp.forEach((e, i) => { const t = t0 + (parts[i].at != null ? parts[i].at : 1 + i * 1.3), seg = e.querySelector(".seg"), lead = e.querySelector(".lead"), lab = e.querySelector(".lab"), col = parts[i].color || PALETTE[i % PALETTE.length], dx = (i - (n - 1) / 2) * 34;
+        gsap.set(seg, { fill: GOLD }); gsap.set(seg.querySelectorAll("rect"), { fill: GOLD }); hide(lab); gsap.set(lead, { opacity: 0 });
+        tl.fromTo(seg.querySelectorAll("rect"), { fill: GOLD }, { fill: col, duration: 0.25, immediateRender: false }, t);
+        tl.fromTo(seg, { x: 0, y: 0 }, { x: dx, y: 40, duration: 0.5, ease: "back.out(1.6)", immediateRender: false }, t + 0.1);
+        tl.fromTo(lead, { opacity: 0 }, { opacity: 1, duration: 0.2, immediateRender: false }, t + 0.35); pop(tl, lab, t + 0.4, 0.3); });
+    },
+  };
+
+  /* ------------------------------------------------------------------------------------------------
+     7. Cause and effect chain
+     { type:"chain", nodes:[ {text, icon, color, who, cue, word, at} ], links:["so","but","because"] }
+     Three to five boxes with a picture (a glyph or a face) and a short text; links[i] is the word on the arrow between box i and box i+1
+     ("so" green, "but" red, anything else gold). Boxes light one at a time on their cue; the arrow into the active box glows, the rest dim. */
+  const chLayout = (n) => { const w = n <= 3 ? 400 : n === 4 ? 330 : 250, gap = Math.max(90, (1800 - n * w) / Math.max(1, n - 1)), x0 = 960 - (n * w + (n - 1) * gap) / 2; return { w, gap, x: (i) => x0 + i * (w + gap) }; };
+  const linkCol = (w) => (/^(but|however|yet)$/i.test(w) ? "#e0262b" : /^(so|then|therefore)$/i.test(w) ? GREEN : GOLD);
+  S.PROPS.chain = {
+    draw(o) { const nodes = o.nodes || [], n = nodes.length, L = chLayout(n), fs = n <= 3 ? 48 : n === 4 ? 42 : 36, mx = Math.floor((L.w - 30) / (fs * 0.5)); let s2 = "";
+      nodes.forEach((nd, i) => { const x = L.x(i), lines = wrapText(nd.text, mx).slice(0, 3), art = nd.who ? `<g class="face-slot" data-who="${nd.who}" data-w="170" transform="translate(${x + L.w / 2},500)"></g>` : `<g transform="translate(${x + L.w / 2},500) scale(${L.w / 330 + 0.35})">${glyph(nd.icon, nd.color || "#3d6fb6")}</g>`;
+        s2 += `<g class="cn" data-i="${i}" data-layout-allow-overlap><rect class="gl" x="${x - 18}" y="378" width="${L.w + 36}" height="${470}" rx="34" fill="#ffd98a" opacity="0"/>` +
+          cut(R(x, 396, L.w, 434, PAPER, 22) + R(x + 18, 414, L.w - 36, 190, "#dfe3f5", 12, `stroke="${INK}" stroke-width="4"`) + art + lines.map((ln, q) => T(x + L.w / 2, 672 + q * (fs + 8), ln, fs, INK)).join("")) + `</g>`;
+        if (i < n - 1) { const w = String((o.links || [])[i] || "so"), c = linkCol(w), x1 = x + L.w, x2 = L.x(i + 1), y = 610, cw = Math.min(L.gap - 8, w.length * 22 + 36);
+          s2 += `<g class="lk" data-i="${i}"><g class="ar"><path d="M${x1 + 6},${y} L${x2 - 40},${y}" stroke="${c}" stroke-width="16" stroke-linecap="round" fill="none"/><path d="M${x2 - 52},${y - 34} L${x2 - 6},${y} L${x2 - 52},${y + 34}Z" fill="${c}" ${st}/></g>` +
+            `<g class="cut">${R((x1 + x2) / 2 - cw / 2, y - 100, cw, 56, c, 12)}</g>${T((x1 + x2) / 2, y - 58, w.toUpperCase(), Math.min(40, Math.floor((cw - 10) / (w.length * 0.62))), "#fff")}</g>`; } });
+      return s2; },
+    play(tl, el, o, t0) { const nodes = o.nodes || [], n = nodes.length; faces(el);
+      const cn = [...el.querySelectorAll(".cn")], lk = [...el.querySelectorAll(".lk")], tn = nodes.map((x, i) => (x.at != null ? x.at : 0.4 + i * 1.4));
+      cn.forEach((e) => { hide(e); }); lk.forEach((e) => hide(e));
+      const opN = nodes.map(() => 0), opL = lk.map(() => 0);
+      nodes.forEach((x, i) => { const t = t0 + tn[i];
+        // everything already on the table dims; the new box and the arrow into it light up
+        cn.forEach((e, k) => { if (k !== i && opN[k] === 1) { tl.fromTo(e, { opacity: 1 }, { opacity: 0.45, duration: 0.3, immediateRender: false }, t); opN[k] = 0.45; } });
+        lk.forEach((e, k) => { if (k !== i - 1 && opL[k] === 1) { tl.fromTo(e, { opacity: 1 }, { opacity: 0.4, duration: 0.3, immediateRender: false }, t); opL[k] = 0.4; } });
+        if (i > 0) { tl.fromTo(lk[i - 1], { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.3, ease: "power2.out", immediateRender: false }, t); opL[i - 1] = 1; }
+        pop(tl, cn[i], t + (i > 0 ? 0.25 : 0), 0.3); opN[i] = 1;
+        const gl = cn[i].querySelector(".gl"); tl.fromTo(gl, { opacity: 0 }, { opacity: 0.55, duration: 0.3, immediateRender: false }, t + 0.2);
+        if (i + 1 < n) tl.fromTo(gl, { opacity: 0.55 }, { opacity: 0, duration: 0.3, immediateRender: false }, t0 + tn[i + 1]); });
+    },
+  };
+
+  /* ------------------------------------------------------------------------------------------------
+     8. Phone messages
+     { type:"chat", name:"Contact", source:"Court filing, exhibit 12" | reconstruction:true, messages:[ {from:"them"|"me", text, cue, word, at} ], x, y, sound:false }
+     ONLY for messages that are on the record (a court filing, a post, an interview): give `source` (shown on the phone) and also show it with a `source` overlay.
+     A reconstruction is allowed when it says so: `"reconstruction": true` puts a RECONSTRUCTION band on the phone for the whole shot. With neither, the band is
+     drawn anyway. Each message appears after a typing dot; incoming ones get a soft `pop` (max 3 per phone, set in tools/cues.mjs, `"sound": false` to silence). */
+  const chatLayout = (o) => { let y = 20; const W = 400; return (o.messages || []).map((m) => { const lines = wrapText(m.text, 21), w = Math.min(W, Math.max(...lines.map((l) => l.length)) * 17 + 46), h = lines.length * 40 + 30, r = { lines, w, h, y, me: m.from === "me" }; y += h + 22; return r; }); };
+  S.PROPS.chat = {
+    draw(o) { const px = (o.x != null ? o.x : 960) - 260, py = o.y != null ? o.y : 90, recon = o.reconstruction || !o.source, L = chatLayout(o), top = recon ? 190 : 160, H = 900 - top - 20;
+      let s2 = cut(R(px, py, 520, 900, "#0e1024", 70)) + R(px + 14, py + 14, 492, 872, "#eef0f8", 58, `stroke="none"`);
+      s2 += R(px + 14, py + 14, 492, 100, "#2468a8", 58, `stroke="none"`) + R(px + 14, py + 70, 492, 44, "#2468a8", 0, `stroke="none"`) + T(px + 260, py + 82, String(o.name || "Messages").toUpperCase(), 44, "#fff");
+      if (recon) s2 += R(px + 14, py + 114, 492, 56, RED, 0, `stroke="none"`) + T(px + 260, py + 154, "RECONSTRUCTION", 38, "#fff");
+      else s2 += R(px + 14, py + 114, 492, 44, "#d9def2", 0, `stroke="none"`) + T(px + 260, py + 146, "SOURCE: " + String(o.source).toUpperCase().slice(0, 34), 26, "#33385e");
+      s2 += `<svg x="${px + 14}" y="${py + top}" width="492" height="${H}" viewBox="0 0 492 ${H}" overflow="hidden"><g class="msgs">`;
+      (o.messages || []).forEach((m, i) => { const b = L[i], x = b.me ? 492 - 24 - b.w : 24;
+        s2 += `<g class="ty" data-i="${i}"><g transform="translate(${b.me ? 492 - 24 - 110 : 24},${b.y})">${R(0, 0, 110, 62, b.me ? "#bfe9cd" : "#fff", 28, `stroke="${INK}" stroke-width="4"`)}${[0, 1, 2].map((d) => `<circle class="dt" cx="${32 + d * 24}" cy="31" r="8" fill="#6b708f"/>`).join("")}</g></g>` +
+          `<g class="mg" data-i="${i}"><g transform="translate(${x},${b.y})">${R(0, 0, b.w, b.h, b.me ? "#bfe9cd" : "#fff", 28, `stroke="${INK}" stroke-width="4"`)}${b.lines.map((ln, q) => `<text x="22" y="${42 + q * 40}" font-size="30" fill="${INK}" text-anchor="start" style="font-family:var(--ui);font-weight:700">${ln.replace(/&/g, "&amp;").replace(/</g, "&lt;")}</text>`).join("")}</g></g>`; });
+      return s2 + `</g></svg>`; },
+    play(tl, el, o, t0) { const msgs = o.messages || [], L = chatLayout(o), recon = o.reconstruction || !o.source, H = 900 - (recon ? 190 : 160) - 20, box = el.querySelector(".msgs");
+      if (!o.reconstruction && !o.source) console.warn("studio: chat without a source is drawn as a RECONSTRUCTION (give \"source\", or \"reconstruction\": true)");
+      const tys = [...el.querySelectorAll(".ty")], mgs = [...el.querySelectorAll(".mg")], tm = msgs.map((m, i) => (m.at != null ? m.at : 0.8 + i * 1.8)); let scroll = 0; gsap.set(box, { y: 0 });
+      msgs.forEach((m, i) => { const t = t0 + tm[i], ty = tys[i], mg = mgs[i], dots = ty.querySelectorAll(".dt"), b = L[i], from = Math.max(t0 + (i ? tm[i - 1] + 0.1 : 0), t - 0.75);
+        hide(ty); hide(mg); gsap.set(mg, { transformOrigin: b.me ? "100% 100%" : "0% 100%" }); gsap.set(ty, { transformOrigin: b.me ? "100% 100%" : "0% 100%" });
+        if (t - from > 0.2) { tl.set(ty, { opacity: 1 }, from); dots.forEach((d, q) => tl.fromTo(d, { opacity: 0.25 }, { opacity: 1, duration: 0.2, yoyo: true, repeat: Math.max(1, Math.floor((t - from) / 0.4)), ease: "none", immediateRender: false }, from + q * 0.12)); tl.set(ty, { opacity: 0 }, t); }
+        tl.fromTo(mg, { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.2, ease: "back.out(1.7)", immediateRender: false }, t);
+        const need = b.y + b.h + 24 - H; if (need > scroll) { tl.fromTo(box, { y: -scroll }, { y: -need, duration: 0.3, ease: "power2.out", immediateRender: false }, t); scroll = need; } });
     },
   };
 })();

@@ -35,7 +35,10 @@ export function soundCues(res) {
         if (p.stamp && p.sound !== false) push(tp + (p.stampAt != null ? p.stampAt : 0.5) + HIT.stamp, "stamp", `${s.id} panel ${i + 1} stamp`);
       });
       overlays(s);
-    } else { if (typeof s.sound === "string") push(s.t0, s.sound, `${s.id} shot`); overlays(s); }
+    } else { if (typeof s.sound === "string") push(s.t0, s.sound, `${s.id} shot`); overlays(s);
+      // phone messages: a soft pop for the first incoming ones (at most 3 per phone, never closer than MIN_SPACING); "sound": false on the chat silences it
+      for (const p of s.props || []) if (p.type === "chat" && p.sound !== false) { let n = 0, last = -9;
+        for (const m of p.messages || []) { if (m.from === "me" || m.sound === false || n >= (p.sounds || 3)) continue; const t = TM.when(m, s.t0, L); if (t - last < MIN_SPACING + 0.01) continue; push(t, "pop", `${s.id} chat message`); last = t; n++; } } }
   }
   // Effects are rare: when two land almost together, keep the more important one.
   out.sort((a, b) => a.t - b.t);

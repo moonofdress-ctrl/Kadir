@@ -8,7 +8,7 @@ Turns a storyboard and a set of voice clips into a HyperFrames composition. Text
 |---|---|
 | `engine/rig.js` | The character skeleton, the cast, expressions, poses, hats, badges, hand props, lip sync, and the living things (`THINGS`). |
 | `engine/sets.js` | Sets (places) and world props (charts, the banknote, the tower, signs, banners, price tags, stalls, crates, the hidden piggy bank). |
-| `engine/scenes.js` | Story scenes: evidence board, timeline tunnel, map flight (props), and their dark grounds (`evidence_wall`, `timeline_road`, `map_table`). |
+| `engine/scenes.js` | Story and explainer scenes: evidence board, timeline tunnel, map flight, money flow, fund split, chain, phone messages (props), and their dark grounds (`evidence_wall`, `timeline_road`, `map_table`, `dark_stage`). |
 | `engine/overlays.js` | Counters, slams, labels, stamps, tags, lower thirds, calendar, clock, document and post cards. |
 | `engine/core.js` | Shot types (scene, card, chapter, split), camera, shot size, light, grades. |
 | `engine/timing.js` | Line and shot timing, shared by the browser and the tools. |
@@ -160,6 +160,36 @@ Three world props that carry their own camera. Each belongs on its dark ground (
 ```json
 { "id": "m1", "cue": "L008", "set": "map_table", "opts": { "night": true }, "place": "the US map", "light": { "x": 960, "y": 540, "r": 1300, "dark": 0.3 },
   "props": [ { "type": "map_flight", "map": "us", "from": "dallas", "to": "new york", "dur": 2.4, "at": 0.4 } ] }
+```
+
+### Explainer scenes (second batch, `engine/scenes.js`)
+
+Same rules as above, on the plain dark ground `"set": "dark_stage"`. **Every shot that uses one carries `"explains": "what it makes clear"`**, a note for the reviewer (the engine ignores it).
+
+**Money flow** (prop `money_flow`): who paid whom. `parties` (2-5, in a row; same fields as board nodes: `id`, `kind` `face`|`badge`, `who`, `name`, `icon`, `color`) and `flows` (`from`, `to`, `amount` written as the narration says it, `coins: true` for coins instead of bills, `cue`/`word`/`at`). Each arrow draws itself on its cue, bills stream along it, the amount lands on it, the receiver pops.
+```json
+{ "id": "e01", "cue": "L010", "explains": "who paid whom when PepsiCo bought the soda", "set": "dark_stage", "opts": { "night": true }, "place": "the money table", "light": { "x": 960, "y": 560, "r": 1300, "dark": 0.45 },
+  "props": [ { "type": "money_flow", "parties": [ { "id": "p", "kind": "badge", "icon": "building", "name": "PEPSICO" }, { "id": "f", "kind": "face", "who": "ALLISON_ELLSWORTH", "name": "FOUNDERS" } ],
+    "flows": [ { "from": "p", "to": "f", "amount": "$1.95B", "at": 0.6 } ] } ] }
+```
+
+**Fund split** (prop `split_bar`): one amount, one bar. `total`, `note`, and `parts` (`label`, `amount`, `share` as a fraction of the bar, `color`, `cue`/`word`/`at`). On each part's cue it takes its colour, slides out of the bar and its label and amount stand under it. "Of every $100": `total` `"$100"` and amounts `"$40"`.
+```json
+{ "id": "e02", "cue": "L011", "explains": "where the $1.95B went", "set": "dark_stage", "opts": { "night": true }, "place": "the split", "light": { "x": 960, "y": 560, "r": 1300, "dark": 0.45 },
+  "props": [ { "type": "split_bar", "total": "$1.95B", "note": "what PepsiCo paid", "parts": [ { "label": "TAXES", "amount": "$490M", "share": 0.25, "at": 0.8 }, { "label": "CASH", "amount": "$1.46B", "share": 0.75, "at": 2.0 } ] } ] }
+```
+
+**Cause and effect chain** (prop `chain`): the script's CHAIN line in one picture. `nodes` (3-5; `text`, a face `who` or a glyph `icon`/`color`, `cue`/`word`/`at`) and `links`: the word on the arrow after each box (`so` green, `but` red, anything else gold). Boxes light one at a time, the arrow into the active box glows, the rest dim.
+```json
+{ "id": "e03", "cue": "L013", "explains": "why rich on paper is not rich in the bank", "set": "dark_stage", "opts": { "night": true }, "place": "the chain", "light": { "x": 960, "y": 560, "r": 1300, "dark": 0.45 },
+  "props": [ { "type": "chain", "nodes": [ { "text": "The sale happened", "icon": "coin", "at": 0.3 }, { "text": "Founders were rich", "who": "ALLISON_ELLSWORTH", "at": 1.8 }, { "text": "Only on paper", "icon": "bank", "at": 3.3 } ], "links": [ "so", "but" ] } ] }
+```
+
+**Phone messages** (prop `chat`): a phone with bubbles that appear one by one after a typing dot. **Only messages that are on the record** (court filing, post, interview): give `source` (printed on the phone) and show it with a `source` overlay too. A reconstruction must say so: `"reconstruction": true` puts a RECONSTRUCTION band on the phone for the whole shot (a chat with neither `source` nor `reconstruction` gets the band anyway and a console warning). `messages`: `from` `"them"` (default) or `"me"`, `text`, `cue`/`word`/`at`. Incoming messages get a soft `pop` through `tools/cues.mjs`: at most 3 per phone, never closer than the minimum spacing; `"sound": false` on the chat (or a message) silences them, so lint A8 stays in reach.
+```json
+{ "id": "e04", "cue": "L014", "explains": "the text message that is on the record", "set": "dark_stage", "opts": { "night": true }, "place": "the phone", "light": { "x": 960, "y": 520, "r": 1300, "dark": 0.45 },
+  "props": [ { "type": "chat", "name": "Court filing", "source": "Exhibit 12, 2025", "messages": [ { "from": "them", "text": "Did you see the offer?", "at": 0.8 }, { "from": "me", "text": "I did.", "at": 3.0 } ] } ],
+  "overlays": [ { "type": "source", "t": "Court filing, exhibit 12", "at": 0.4 } ] }
 ```
 
 ## Rules for engine code
