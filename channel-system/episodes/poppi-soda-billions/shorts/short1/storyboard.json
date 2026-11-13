@@ -1,0 +1,283 @@
+{
+  "episode": "short1",
+  "demo": true,
+  "vertical": true,
+  "vtitle": "WAS IT REALLY $1.95 BILLION?",
+  "title": "How Poppi Made $1.95 Billion From Soda",
+  "viewer": "BENNY",
+  "audio": {
+    "music": "house",
+    "music_db": -19,
+    "climax": [
+      6,
+      7
+    ],
+    "sfx": true
+  },
+  "shots": [
+    {
+      "id": "c7s41",
+      "explains": "What the release says: $300 million of the price is expected tax savings, not cash.",
+      "cue": "L181",
+      "set": "desk_top",
+      "opts": {
+        "night": true
+      },
+      "place": "desk from above",
+      "camera": "push_in",
+      "grade": "sepia",
+      "light": {
+        "x": 960,
+        "y": 540,
+        "r": 900,
+        "color": "#ffd9a0",
+        "dark": 0.5
+      },
+      "overlays": [
+        {
+          "type": "doc",
+          "source": "PepsiCo · press release",
+          "date": "17 MAR 2025",
+          "by": "PepsiCo",
+          "quote": "...including $300 million of anticipated cash tax benefits.",
+          "hl": [
+            "anticipated cash tax benefits"
+          ],
+          "at": 0.2,
+          "hlAt": 2.6
+        }
+      ]
+    },
+    {
+      "id": "c7s42a",
+      "cue": "L182",
+      "explains": "Of every hundred dollars in the headline price, fifteen is a tax benefit and eighty-five is the price itself.",
+      "set": "dark_stage",
+      "opts": {
+        "night": true
+      },
+      "place": "the split",
+      "light": {
+        "x": 960,
+        "y": 560,
+        "r": 1300,
+        "dark": 0.45
+      },
+      "props": [
+        {
+          "type": "split_bar",
+          "total": "$100",
+          "note": "of the headline price",
+          "parts": [
+            {
+              "label": "TAX BENEFIT",
+              "amount": "$15",
+              "share": 0.15,
+              "color": "#e0262b",
+              "cue": "L182",
+              "word": 8
+            },
+            {
+              "label": "NET PRICE",
+              "amount": "$85",
+              "share": 0.85,
+              "color": "#1fa85b",
+              "cue": "L182",
+              "word": 13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c7s42b",
+      "explains": "What PepsiCo really paid after that: $1.65 billion, the net price.",
+      "cue": "L182",
+      "word": 17,
+      "set": "plain",
+      "opts": {
+        "color": "#1b1d2e"
+      },
+      "place": "the dark",
+      "camera": "push_in",
+      "frame": "close",
+      "focus": [
+        960,
+        680
+      ],
+      "grade": "night",
+      "motif": "word on the can",
+      "callback": "the price tag",
+      "light": {
+        "x": 960,
+        "y": 420,
+        "r": 800,
+        "color": "#fff1c4",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "soda",
+          "shape": "can",
+          "tag": "$1.95B",
+          "tagTear": 1.4,
+          "tagAfter": "$1.65B",
+          "x": 960,
+          "y": 900,
+          "scale": 0.75,
+          "face": "neutral",
+          "enter": "none",
+          "acts": [
+            {
+              "at": 1.5,
+              "face": "shocked"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c7k31a",
+      "explains": "So it was not really a two billion dollar sale.",
+      "cue": "L183",
+      "set": "night_office",
+      "opts": {
+        "dress": "hal",
+        "night": true
+      },
+      "place": "Hal's office",
+      "camera": "tilt_up",
+      "frame": "medium",
+      "grade": "green",
+      "light": {
+        "x": 960,
+        "y": 360,
+        "r": 800,
+        "color": "#c8f0b0",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "who": "CHAD",
+          "x": 700,
+          "y": 960,
+          "face": "confused",
+          "pose": "think",
+          "speaks": [
+            "L183"
+          ],
+          "enter": "none"
+        },
+        {
+          "who": "HAL",
+          "x": 1220,
+          "y": 960,
+          "face": "deadpan",
+          "prop": "espresso",
+          "enter": "none"
+        }
+      ]
+    },
+    {
+      "id": "c7k31b",
+      "explains": "Only the headline number is that big.",
+      "cue": "L184",
+      "set": "night_office",
+      "opts": {
+        "dress": "hal",
+        "night": true
+      },
+      "place": "Hal's office",
+      "camera": "push_in",
+      "frame": "close",
+      "focus": [
+        1100,
+        620
+      ],
+      "grade": "green",
+      "light": {
+        "x": 1100,
+        "y": 360,
+        "r": 750,
+        "color": "#c8f0b0",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "who": "HAL",
+          "x": 1100,
+          "y": 960,
+          "face": "smug",
+          "prop": "espresso",
+          "speaks": [
+            "L184"
+          ],
+          "enter": "none"
+        }
+      ]
+    },
+    {
+      "id": "c7k31c",
+      "explains": "The next question: what about the rest of the money?",
+      "cue": "L185",
+      "set": "night_office",
+      "opts": {
+        "dress": "hal",
+        "night": true
+      },
+      "place": "Hal's office",
+      "camera": "pull_out",
+      "frame": "medium",
+      "grade": "green",
+      "light": {
+        "x": 1000,
+        "y": 340,
+        "r": 800,
+        "color": "#c8f0b0",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "who": "CHAD",
+          "x": 680,
+          "y": 960,
+          "face": "confused",
+          "pose": "shrug",
+          "speaks": [
+            "L185"
+          ],
+          "enter": "none",
+          "acts": [
+            {
+              "cue": "L186",
+              "word": 3,
+              "face": "shocked"
+            }
+          ]
+        },
+        {
+          "who": "HAL",
+          "x": 1240,
+          "y": 960,
+          "face": "deadpan",
+          "prop": "espresso",
+          "speaks": [
+            "L186"
+          ],
+          "enter": "none",
+          "acts": [
+            {
+              "cue": "L186",
+              "pose": "point",
+              "to": [
+                1120,
+                960
+              ],
+              "dur": 0.6
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # YouTube package
 
-Status 13 Nov 2026: written while the full render runs. Thumbnails are NOT painted yet (image credits not approved); Shorts are NOT built yet.
+Status 13 Nov 2026: refreshed for the final timing (ElevenLabs Lawrence voice, mixed with --tighten, 12:04 = 724.5 s). The three painted thumbnails are done (`images/thumbnail_a.png`, `thumbnail_b.png`, `thumbnail_c.png`); the full MP4 is rendered (`render/poppi-soda-billions.mp4`, -14.1 LUFS, -1.2 dBTP) and the three Shorts are built and rendered.
 
 ## Shelf check (FORMAT_BOOK 15)
 
@@ -14,43 +14,38 @@ What it shows: the shelf is news clips, interviews and "how it got to $2B" stori
 
 | Pair | Reason to click | Title | Thumbnail scene and time | Band (white + red) | What it promises, and where the video pays it |
 |---|---|---|---|---|---|
-| A (first frame) | Consequence | She Pitched This Soda 9 Months Pregnant. Then Pepsi Paid Up. | `c1s01`, 0:00: Allison Ellsworth, pregnant, coral dress, face a third of the frame; the swing-top bottle with a face glows amber on the pitch table, price tag face-down; one spotlight, navy dark | `9 MONTHS PREGNANT` | What she risked. Paid at 0:00, at the birth ten days later (2:32) and in the end. |
-| B | Contrast | Poppi's Price Tag Was Not What It Looked Like | `c1s10`, 0:23: close on the bottle, shocked, as the price tag flips and blazes gold; one figure | white `VINEGAR?` red `$1.95B` | A fortune for vinegar, and a number that shrinks. Hook at 0:24 (Benny: "For vinegar?"); tax benefit at 9:56; earnout at 11:02. |
-| C | Open question | Who Was Watching Poppi's Pitch? | `c1s09`, 0:21: the navy giant can (no brand shapes) leans from the rafters toward the tiny glowing bottle | white `HE WAS WAITING` | Who the buyer was. Planted at 0:17 ("a cola giant will pay"); answered at 6:28 (PepsiCo's own try was scrapped) and 9:32 (the purchase). |
+| A (first frame) | Consequence | She Pitched This Soda 9 Months Pregnant. Then Pepsi Paid Up. | `c1s01`, 0:00 (painted, `images/thumbnail_a.png`): Allison Ellsworth, pregnant, coral dress, face a third of the frame; the swing-top bottle with a face glows amber on the pitch table, price tag face-down; one spotlight, navy dark | `9 MONTHS PREGNANT` | What she risked. Paid at 0:00, at 0:29 ("born ten days after this pitch"), at the birth itself (2:20) and in the end. |
+| B | Contrast | Poppi's Price Tag Was Not What It Looked Like | `c1s10`, 0:20 (painted, `images/thumbnail_b.png`): close on the bottle, shocked, as the price tag flips and blazes gold; one figure | white `VINEGAR?` red `$1.95B` | A fortune for vinegar, and a number that shrinks. Hook at 0:22 (Benny: "Two billion dollars? For vinegar?"); tax benefit at 9:10; earnout at 9:31 and its cut at 10:11. |
+| C | Open question | Who Was Watching Poppi's Pitch? | `c1s09`, 0:18 (painted, `images/thumbnail_c.png`): the navy giant can (no brand shapes) leans from the rafters toward the tiny glowing bottle | white `HE WAS WAITING` | Who the buyer was. Planted at 0:17 ("a cola giant will pay"); answered at 6:03 (PepsiCo's own try, Soulboost, was about to be reported dead) and 8:45 (the purchase announced). |
 
 One title for all three pictures: **She Pitched This Soda 9 Months Pregnant. Then Pepsi Paid Up.** (chosen by the user on 13 Nov 2026; the thumbnail band carries $1.95B). If the test compares only pictures, use this one.
 
-Start with: A with its own title. A judgment, not a measurement: it is the first frame, the face is largest, and a person in trouble is what the niche clicks on (FORMAT_BOOK 1). The prompts for the three painted pictures are in `prompts.md`; bands are as in `thumbnails.md`. After painting: band with `stills.mjs thumb`, check each `_small.png` at 160x90, keep the lower right empty, and confirm A matches the first frame of the video.
+Start with: A with its own title. A judgment, not a measurement: it is the first frame, the face is largest, and a person in trouble is what the niche clicks on (FORMAT_BOOK 1). The three painted pictures are done (`images/thumbnail_a/b/c.png`; prompts in `prompts.md`, bands in `thumbnails.md`). Before upload the user checks each at 160x90 (face and number must read, lower right empty) and that A matches the first frame of the video. The scene times above follow the final timing (`c1s09` now 0:18, `c1s10` 0:20).
 
 ## Description, tags, pinned comment, Studio settings
 
-In `youtube-upload.txt` (description 2,806 characters; limit 5,000, ours under 4,500). Every fact in it is verified in `factcheck.md`; allegations are worded as allegations; the founders' payout is "Fortune reported". Chapter stamps are from `timing.json`; chapter 1 is 0:00. Captions: `poppi-soda-billions.srt` (290 cues from `audio/lines.json` and `timing.json`).
+In `youtube-upload.txt` (description 2,806 characters; limit 5,000, ours under 4,500). Every fact in it is verified in `factcheck.md`; allegations are worded as allegations; the founders' payout is "Fortune reported". Chapter stamps are from `timing.json` (final 12:04 build); chapter 1 is 0:00. Captions: `poppi-soda-billions.srt` (295 cues, rebuilt on 13 Nov from the word timings in `audio/*.words.json` and `timing.json`; last cue ends 12:03.6).
 
 ## End screen
 
-No earlier episode to link yet. Suggest a Subscribe element only; add the newest episode once episode 2 exists.
+The end screen starts at 11:59 (after text card `c8t06`, which ends 11:58.8), leaving 5.5 s of the 12:04 video with the right half clear. The cast's faces were moved to the left half (`qa.md`). Episode 1 (nvidia-ceo-probe, https://www.youtube.com/watch?v=_cfb_NZ1haE) is the only earlier video and its story is unrelated; add it as the video element only if the user wants, otherwise a Subscribe element alone.
 
 ## Disclosure
 
-Narration: synthetic voice (the free Kokoro scratch voice; no paid final voice chosen). The description says so. README.md records the user's decision of 12 Nov 2026 to disclose and set YouTube's altered-content label; the user re-reads YouTube's current text before upload. Characters are cartoons; no real person's voice or realistic face.
+Narration: synthetic voice (ElevenLabs, narrator Lawrence - Bright and Informative; characters are synthetic voices too). The description says so. README.md records the user's decision of 12 Nov 2026 to disclose and set YouTube's altered-content label; the user re-reads YouTube's current text before upload. Characters are cartoons; no real person's voice or realistic face.
 
 ## A/B test note
 
 YouTube compares up to three thumbnails (and titles) and picks by watch time. Nobody knows the winner in advance. Leave the result for the analyst.
 
-## Shorts plan (FORMAT_BOOK 16): NOT BUILT YET
+## Shorts (FORMAT_BOOK 16): built and rendered 13 Nov 2026
 
-Run nothing until the full render has finished (build writes in `studio/`). Times from `timing.json`.
+No new first lines: each Short starts on a line that stands alone with its on-screen question, so every clip is Lawrence's. Files: `shorts/short<N>/` (storyboard and timing in git); the MP4 is `shorts/short<N>/render/short<N>.mp4` (not in git).
 
-| # | Lesson | Lines (time) | New first line | Question on screen |
-|---|---|---|---|---|
-| 1 | Belief corrected: the headline price | L181-L186 (9:56-10:20, about 25 s) | "PepsiCo announced it would buy Poppi for one point nine five billion dollars. Read the press release." | `WAS IT REALLY $1.95 BILLION?` |
-| 2 | Consequence: the bonus that shrank | L199-L205 (11:02-11:42, about 40 s) | "PepsiCo's Poppi deal came with a bonus, called an earnout." (L199 says "that earnout") | `WHERE DID THE BONUS GO?` |
-| 3 | Comparison: two offers | L029-L035 (1:44-2:19, about 35 s) | "2018. Allison Ellsworth pitches her vinegar soda on a television stage." (L029 says "the ask") | `WHICH OFFER WAS LOWER?` |
+| # | Lesson | Lines | Length | Question on screen | Lint |
+|---|---|---|---|---|---|
+| 1 | Belief corrected: the headline price | L181-L186 | 0:22 | `WAS IT REALLY $1.95 BILLION?` | 0 failed, 5 warnings (H2, H3, P1, P2, G1: a 22 s Short, accepted) |
+| 2 | Consequence: the bonus that shrank | L199-L205 | 0:37 | `WHERE DID THE BONUS GO?` | 0 failed, 0 warnings |
+| 3 | Comparison: two offers | L028-L035 | 0:36 | `WHICH OFFER WAS LOWER?` | 0 failed, 1 warning (T3) |
 
-Commands (from the repository root):
-1. `node studio/tools/build.mjs channel-system/episodes/poppi-soda-billions --short L181-L186 --title "WAS IT REALLY $1.95 BILLION?" --name short1`
-2. `node studio/tools/build.mjs channel-system/episodes/poppi-soda-billions --short L199-L205 --title "WHERE DID THE BONUS GO?" --name short2`
-3. `node studio/tools/build.mjs channel-system/episodes/poppi-soda-billions --short L029-L035 --title "WHICH OFFER WAS LOWER?" --name short3`
-
-Notes: each new first line needs a scratch-voice clip and a line before the range (the command alone does not add it). Short 3 contains L030-L033 (the objections and a skit); trim if the lint flags length. Mix, lint and look at each Short's frames before rendering.
+Commands (from the repository root): `node studio/tools/build.mjs channel-system/episodes/poppi-soda-billions --short L181-L186 --title "WAS IT REALLY $1.95 BILLION?" --name short1` (likewise L199-L205 short2, L028-L035 short3), then `mix.mjs` and `build.mjs` on `shorts/short<N>`.

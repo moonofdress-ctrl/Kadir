@@ -1,0 +1,60 @@
+{
+  "signature": "7f65d4decff37680",
+  "total": 36.78,
+  "lufs": -14.01,
+  "true_peak_db": -1.15,
+  "limiter": {
+    "max_cut_db": 4.5,
+    "pct_cut_over_1db": 1.09
+  },
+  "voice": {
+    "speakers": {
+      "N": {
+        "clips": 3,
+        "gain_db": 0
+      },
+      "SODA": {
+        "clips": 2,
+        "gain_db": -2.7
+      },
+      "HAL": {
+        "clips": 2,
+        "gain_db": -2.6
+      }
+    },
+    "clips_with_silent_edges": 0
+  },
+  "music": {
+    "source": "house bed (made in code)",
+    "files": [],
+    "beds": [
+      "steady"
+    ],
+    "climax_chapters": [
+      6,
+      7
+    ],
+    "db_under_voice": 19,
+    "uncredited": []
+  },
+  "effects": {
+    "count": 2,
+    "per_minute": 3.3,
+    "list": [
+      {
+        "t": 7.36,
+        "name": "card",
+        "why": "c8t02 card"
+      },
+      {
+        "t": 26.16,
+        "name": "card",
+        "why": "c8t03 card"
+      }
+    ]
+  },
+  "dead_air": {
+    "pauses_over_250ms": 0,
+    "longest": []
+  }
+}

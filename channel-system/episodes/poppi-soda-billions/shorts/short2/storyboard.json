@@ -1,0 +1,662 @@
+{
+  "episode": "short2",
+  "demo": true,
+  "vertical": true,
+  "vtitle": "WHERE DID THE BONUS GO?",
+  "title": "How Poppi Made $1.95 Billion From Soda",
+  "viewer": "BENNY",
+  "audio": {
+    "music": "house",
+    "music_db": -19,
+    "climax": [
+      6,
+      7
+    ],
+    "sfx": true
+  },
+  "shots": [
+    {
+      "id": "c8s01",
+      "explains": "The earnout, per Bloomberg: up to $300 million more.",
+      "cue": "L199",
+      "set": "night_office",
+      "opts": {
+        "dress": "filing",
+        "night": true
+      },
+      "place": "filing room",
+      "camera": "push_in",
+      "frame": "medium",
+      "grade": "night",
+      "light": {
+        "x": 760,
+        "y": 360,
+        "r": 800,
+        "color": "#bff0c4",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "soda",
+          "shape": "can",
+          "x": 1180,
+          "y": 960,
+          "scale": 0.5,
+          "face": "confused",
+          "pose": "think",
+          "enter": "none",
+          "acts": [
+            {
+              "cue": "L199",
+              "word": 4,
+              "face": "shocked"
+            }
+          ]
+        }
+      ],
+      "props": [
+        {
+          "type": "cheque",
+          "x": 760,
+          "y": 900,
+          "move": {
+            "to": [
+              700,
+              860
+            ],
+            "cue": "L199",
+            "word": 2,
+            "dur": 0.6
+          }
+        }
+      ]
+    },
+    {
+      "id": "c8s02",
+      "explains": "The size of the promise: $300 million.",
+      "cue": "L199",
+      "word": 6,
+      "set": "bank",
+      "opts": {
+        "dress": "vault",
+        "night": true
+      },
+      "place": "bank vault",
+      "camera": "tilt_up",
+      "grade": "gold",
+      "light": {
+        "x": 960,
+        "y": 300,
+        "r": 850,
+        "color": "#ffe14d",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "soda",
+          "shape": "can",
+          "x": 960,
+          "y": 980,
+          "scale": 0.45,
+          "face": "greedy",
+          "pose": "cheer",
+          "look": "up",
+          "enter": "none"
+        }
+      ],
+      "overlays": [
+        {
+          "type": "counter",
+          "from": 0,
+          "to": 300,
+          "prefix": "$",
+          "suffix": "M",
+          "tone": "green",
+          "pos": "tc",
+          "plate": true,
+          "at": 0.4,
+          "dur": 1.2
+        }
+      ]
+    },
+    {
+      "id": "c8s03",
+      "explains": "The deadline: targets due by the third quarter of 2027.",
+      "cue": "L199",
+      "word": 16,
+      "set": "boardroom",
+      "opts": {
+        "night": true,
+        "glass": true
+      },
+      "place": "boardroom",
+      "camera": "pan_left",
+      "grade": "night",
+      "light": {
+        "x": 1200,
+        "y": 300,
+        "r": 800,
+        "color": "#fff1c4",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "giant",
+          "color": "navy",
+          "label": "PEPSICO",
+          "x": 1200,
+          "y": 980,
+          "scale": 1.1,
+          "face": "smug",
+          "pose": "point",
+          "enter": "none"
+        }
+      ],
+      "props": [
+        {
+          "type": "wall_calendar",
+          "x": 560,
+          "y": 420
+        }
+      ]
+    },
+    {
+      "id": "c8t02",
+      "explains": "Then the promised bonus started shrinking.",
+      "type": "card",
+      "cue": "L200",
+      "text": "Then the bonus started shrinking.",
+      "emph": [
+        "shrinking"
+      ]
+    },
+    {
+      "id": "c8s04",
+      "explains": "December 2025: PepsiCo valued the bonus at $278 million.",
+      "cue": "L200",
+      "word": 4,
+      "set": "boardroom",
+      "opts": {
+        "night": true,
+        "glass": true
+      },
+      "place": "boardroom",
+      "camera": "push_in",
+      "frame": "medium",
+      "grade": "night",
+      "light": {
+        "x": 960,
+        "y": 300,
+        "r": 800,
+        "color": "#fff1c4",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "giant",
+          "color": "navy",
+          "x": 1300,
+          "y": 980,
+          "scale": 1,
+          "face": "deadpan",
+          "pose": "fold",
+          "enter": "none"
+        },
+        {
+          "thing": "soda",
+          "shape": "can",
+          "x": 620,
+          "y": 960,
+          "scale": 0.42,
+          "face": "worried",
+          "enter": "none",
+          "acts": [
+            {
+              "cue": "L200",
+              "word": 11,
+              "face": "shocked"
+            }
+          ]
+        }
+      ],
+      "overlays": [
+        {
+          "type": "counter",
+          "roll": true,
+          "from": 300,
+          "to": 278,
+          "prefix": "$",
+          "suffix": "M",
+          "tone": "red",
+          "pos": "tc",
+          "plate": true,
+          "at": 1,
+          "dur": 1.4
+        }
+      ]
+    },
+    {
+      "id": "c8s05",
+      "explains": "By June 2026, it was down to $117 million.",
+      "cue": "L200",
+      "word": 14,
+      "set": "train_platform",
+      "opts": {
+        "night": true
+      },
+      "place": "train platform",
+      "camera": "pan_right",
+      "grade": "night",
+      "light": {
+        "x": 700,
+        "y": 280,
+        "r": 800,
+        "color": "#ffe0a8",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "soda",
+          "shape": "can",
+          "x": 700,
+          "y": 980,
+          "scale": 0.45,
+          "face": "scared",
+          "pose": "wave",
+          "enter": "none",
+          "acts": [
+            {
+              "cue": "L200",
+              "word": 18,
+              "face": "sad",
+              "pose": "rest"
+            }
+          ]
+        }
+      ],
+      "overlays": [
+        {
+          "type": "counter",
+          "roll": true,
+          "from": 278,
+          "to": 117,
+          "prefix": "$",
+          "suffix": "M",
+          "tone": "red",
+          "pos": "tc",
+          "plate": true,
+          "at": 0.4,
+          "dur": 1.4
+        }
+      ]
+    },
+    {
+      "id": "c8s06",
+      "explains": "By 5 September 2026, a filing put it at about $12 million.",
+      "cue": "L200",
+      "word": 23,
+      "set": "bank",
+      "opts": {
+        "dress": "vault",
+        "night": true
+      },
+      "place": "bank vault",
+      "camera": "tilt_down",
+      "grade": "night",
+      "light": {
+        "x": 960,
+        "y": 320,
+        "r": 800,
+        "color": "#fff1c4",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "soda",
+          "shape": "can",
+          "x": 760,
+          "y": 980,
+          "scale": 0.45,
+          "face": "worried",
+          "enter": "none",
+          "acts": [
+            {
+              "cue": "L200",
+              "word": 30,
+              "face": "shocked",
+              "pose": "panic"
+            }
+          ]
+        }
+      ],
+      "overlays": [
+        {
+          "type": "counter",
+          "roll": true,
+          "from": 117,
+          "to": 12,
+          "prefix": "$",
+          "suffix": "M",
+          "tone": "red",
+          "pos": "tc",
+          "plate": true,
+          "at": 1.6,
+          "dur": 1.1
+        }
+      ]
+    },
+    {
+      "id": "c8k34a",
+      "explains": "The bonus has nearly disappeared.",
+      "cue": "L201",
+      "word": 2,
+      "set": "bank",
+      "opts": {
+        "dress": "vault",
+        "night": true
+      },
+      "place": "bank vault",
+      "camera": "push_in",
+      "frame": "close",
+      "focus": [
+        900,
+        720
+      ],
+      "grade": "night",
+      "motif": "word on the can",
+      "light": {
+        "x": 900,
+        "y": 360,
+        "r": 780,
+        "color": "#fff1c4",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "soda",
+          "shape": "can",
+          "x": 860,
+          "y": 980,
+          "scale": 0.6,
+          "face": "shocked",
+          "pose": "present",
+          "speaks": [
+            "L201"
+          ],
+          "enter": "none"
+        },
+        {
+          "thing": "coin",
+          "x": 1120,
+          "y": 960,
+          "scale": 0.25,
+          "face": "scared",
+          "enter": "none"
+        }
+      ]
+    },
+    {
+      "id": "c8k34b",
+      "explains": "Only a little of it is left.",
+      "cue": "L202",
+      "set": "bank",
+      "opts": {
+        "dress": "vault",
+        "night": true
+      },
+      "place": "bank vault",
+      "camera": "pull_out",
+      "frame": "medium",
+      "grade": "night",
+      "light": {
+        "x": 1100,
+        "y": 340,
+        "r": 780,
+        "color": "#fff1c4",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "who": "HAL",
+          "x": 1100,
+          "y": 960,
+          "face": "deadpan",
+          "prop": "espresso",
+          "speaks": [
+            "L202"
+          ],
+          "enter": "none"
+        },
+        {
+          "thing": "soda",
+          "shape": "can",
+          "x": 620,
+          "y": 980,
+          "scale": 0.42,
+          "face": "sad",
+          "enter": "none"
+        }
+      ]
+    },
+    {
+      "id": "c8k34c",
+      "explains": "What it could have been: $300 million.",
+      "cue": "L203",
+      "set": "bank",
+      "opts": {
+        "dress": "vault",
+        "night": true
+      },
+      "place": "bank vault",
+      "camera": "tilt_up",
+      "frame": "close",
+      "grade": "night",
+      "light": {
+        "x": 900,
+        "y": 380,
+        "r": 780,
+        "color": "#fff1c4",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "soda",
+          "shape": "can",
+          "x": 900,
+          "y": 980,
+          "scale": 0.6,
+          "face": "furious",
+          "pose": "panic",
+          "speaks": [
+            "L203"
+          ],
+          "enter": "none",
+          "acts": [
+            {
+              "cue": "L203",
+              "word": 5,
+              "face": "crying"
+            }
+          ]
+        },
+        {
+          "thing": "coin",
+          "x": 1180,
+          "y": 960,
+          "scale": 0.22,
+          "face": "sad",
+          "enter": "none"
+        }
+      ]
+    },
+    {
+      "id": "c8k34d",
+      "explains": "\"Could have\" is not money in the bank.",
+      "cue": "L204",
+      "set": "bank",
+      "opts": {
+        "dress": "vault",
+        "night": true
+      },
+      "place": "bank vault",
+      "camera": "push_in",
+      "frame": "medium",
+      "grade": "night",
+      "light": {
+        "x": 960,
+        "y": 340,
+        "r": 800,
+        "color": "#fff1c4",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "who": "HAL",
+          "x": 1160,
+          "y": 960,
+          "face": "smug",
+          "prop": "espresso",
+          "speaks": [
+            "L204"
+          ],
+          "enter": "none"
+        },
+        {
+          "thing": "soda",
+          "shape": "can",
+          "x": 700,
+          "y": 980,
+          "scale": 0.42,
+          "face": "sad",
+          "enter": "none"
+        }
+      ],
+      "props": [
+        {
+          "type": "piggy",
+          "x": 1640,
+          "y": 960,
+          "k": 0.3,
+          "state": "cracked"
+        }
+      ]
+    },
+    {
+      "id": "c8t03",
+      "explains": "The shrink in simple terms: out of every $100 expected...",
+      "type": "card",
+      "cue": "L205",
+      "text": "Of every $100 expected...",
+      "emph": [
+        "$100"
+      ]
+    },
+    {
+      "id": "c8s07",
+      "explains": "...PepsiCo now expects to pay about $4.",
+      "cue": "L205",
+      "word": 4,
+      "set": "bank",
+      "opts": {
+        "dress": "counter",
+        "night": true
+      },
+      "place": "bank counter",
+      "camera": "pull_out",
+      "grade": "night",
+      "light": {
+        "x": 960,
+        "y": 320,
+        "r": 820,
+        "color": "#ffe0a8",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "soda",
+          "shape": "can",
+          "x": 1240,
+          "y": 980,
+          "scale": 0.45,
+          "face": "worried",
+          "enter": "none",
+          "acts": [
+            {
+              "cue": "L205",
+              "word": 15,
+              "face": "shocked"
+            }
+          ]
+        }
+      ],
+      "props": [
+        {
+          "type": "cheque",
+          "x": 760,
+          "y": 880,
+          "move": {
+            "to": [
+              1100,
+              880
+            ],
+            "cue": "L205",
+            "word": 8,
+            "dur": 1.2
+          }
+        }
+      ],
+      "overlays": [
+        {
+          "type": "counter",
+          "from": 100,
+          "to": 4,
+          "prefix": "$",
+          "tone": "red",
+          "pos": "tc",
+          "plate": true,
+          "at": 2.6,
+          "dur": 1.6
+        }
+      ]
+    },
+    {
+      "id": "c8s08",
+      "explains": "Bloomberg reported the cut in October 2026.",
+      "cue": "L205",
+      "word": 19,
+      "set": "night_office",
+      "opts": {
+        "dress": "newsroom",
+        "night": true
+      },
+      "place": "newsroom",
+      "camera": "pan_left",
+      "grade": "night",
+      "light": {
+        "x": 1100,
+        "y": 380,
+        "r": 800,
+        "color": "#cfe0ff",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "newspaper",
+          "x": 1000,
+          "y": 960,
+          "scale": 0.8,
+          "face": "shocked",
+          "pose": "present",
+          "enter": "none",
+          "acts": [
+            {
+              "cue": "L205",
+              "word": 20,
+              "face": "smug"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

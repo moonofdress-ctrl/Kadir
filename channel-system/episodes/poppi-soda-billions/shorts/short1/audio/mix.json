@@ -1,0 +1,55 @@
+{
+  "signature": "2ac7d62bdebcb36f",
+  "total": 21.85,
+  "lufs": -14.03,
+  "true_peak_db": -1.03,
+  "limiter": {
+    "max_cut_db": 4,
+    "pct_cut_over_1db": 1.51
+  },
+  "voice": {
+    "speakers": {
+      "N": {
+        "clips": 2,
+        "gain_db": 0
+      },
+      "CHAD": {
+        "clips": 2,
+        "gain_db": -4.1
+      },
+      "HAL": {
+        "clips": 2,
+        "gain_db": -2.3
+      }
+    },
+    "clips_with_silent_edges": 0
+  },
+  "music": {
+    "source": "house bed (made in code)",
+    "files": [],
+    "beds": [
+      "steady"
+    ],
+    "climax_chapters": [
+      6,
+      7
+    ],
+    "db_under_voice": 19,
+    "uncredited": []
+  },
+  "effects": {
+    "count": 1,
+    "per_minute": 2.7,
+    "list": [
+      {
+        "t": 0.2,
+        "name": "paper",
+        "why": "c7s41 doc"
+      }
+    ]
+  },
+  "dead_air": {
+    "pauses_over_250ms": 0,
+    "longest": []
+  }
+}

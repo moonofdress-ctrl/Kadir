@@ -13,13 +13,13 @@ What word on a can has made you buy something? Tell us in the comments.
 
 Chapters
 0:00 Nine months pregnant
-1:39 The tank
-3:07 A new word
-4:42 Seen holding it
-6:28 The giant's empty shelf
-7:43 The word on trial
-9:28 The headline
-10:58 Same soda
+1:33 The tank
+2:54 A new word
+4:21 Seen holding it
+6:00 The giant's empty shelf
+7:09 The word on trial
+8:44 The headline
+10:08 Same soda
 
 Figures as of 13 November 2026, from reporting by Fortune, Bloomberg, CNBC, NBC/TODAY, Food Dive, Dallas Innovates, Modern Retail and Business Insider, and from PepsiCo's press releases and the court settlement agreement.
 
@@ -50,10 +50,10 @@ NBC / TODAY.com, 12 Feb 2025: https://www.nbcnewyork.com/entertainment/the-scene
 Food Dive, 13 Dec 2022: https://www.fooddive.com/news/poppi-raises-25m-prebiotic-soda/638559/
 
 STUDIO SETTINGS
-- Video file: render/ MP4 after the full render finishes (not in git)
-- Thumbnail: thumbnail_a.png (not made yet; see prompts.md)
+- Video file: render/poppi-soda-billions.mp4 (12:04; not in git)
+- Thumbnail: images/thumbnail_a.png (painted; matches the first frame)
 - Language: English. Category: Education.
-- Altered content label: the narration is a synthetic voice (Kokoro scratch voice). Set the label as README.md records (yes); re-read YouTube's current text first.
+- Altered content label: the narration is a synthetic voice (ElevenLabs, Lawrence). Set the label as README.md records (yes); re-read YouTube's current text first.
 - Not made for kids. Captions: upload poppi-soda-billions.srt, language English.
-- A/B test: add thumbnails B and C when they exist, and the titles in package.md.
-- End screen: last 20 seconds is the closing line; no end screen until a second episode exists, then link the newest.
+- A/B test: add images/thumbnail_b.png and images/thumbnail_c.png (painted), and the titles in package.md.
+- End screen: start at 11:59 (after the c8t06 text card; 5.5 s with the right half clear). Add a Subscribe element; a video element only if the user wants to link episode 1.

@@ -1,0 +1,703 @@
+{
+  "episode": "short3",
+  "demo": true,
+  "vertical": true,
+  "vtitle": "WHICH OFFER WAS LOWER?",
+  "title": "How Poppi Made $1.95 Billion From Soda",
+  "viewer": "BENNY",
+  "audio": {
+    "music": "house",
+    "music_db": -19,
+    "climax": [
+      6,
+      7
+    ],
+    "sfx": true
+  },
+  "shots": [
+    {
+      "id": "c1s25",
+      "explains": "Where the pitch is headed: a TV stage with five investors in five chairs.",
+      "cue": "L028",
+      "set": "pitch_stage",
+      "opts": {
+        "view": "seats",
+        "night": true,
+        "empty": true
+      },
+      "place": "audience seats",
+      "camera": "push_in",
+      "grade": "night",
+      "callback": "the pitch stage",
+      "light": {
+        "x": 960,
+        "y": 380,
+        "r": 750,
+        "color": "#fff1c4",
+        "dark": 0.5
+      },
+      "props": [
+        {
+          "type": "investor_chair",
+          "x": 560,
+          "y": 700
+        },
+        {
+          "type": "investor_chair",
+          "x": 760,
+          "y": 680
+        },
+        {
+          "type": "investor_chair",
+          "x": 960,
+          "y": 670
+        },
+        {
+          "type": "investor_chair",
+          "x": 1160,
+          "y": 680
+        },
+        {
+          "type": "investor_chair",
+          "x": 1360,
+          "y": 700
+        }
+      ]
+    },
+    {
+      "id": "c2t01",
+      "explains": "The pitch day has arrived.",
+      "type": "card",
+      "cue": "L028",
+      "word": 4,
+      "text": "Then the lights came on.",
+      "emph": [
+        "lights"
+      ]
+    },
+    {
+      "id": "c2s09a",
+      "explains": "What she asked for: $400,000 for ten percent of the company.",
+      "cue": "L029",
+      "set": "living_room",
+      "opts": {
+        "dress": "rehearsal",
+        "night": true,
+        "light": "phone"
+      },
+      "place": "rehearsal living room",
+      "camera": "pan_right",
+      "grade": "night",
+      "light": {
+        "x": 560,
+        "y": 620,
+        "r": 800,
+        "color": "#e8f0ff",
+        "dark": 0.45
+      },
+      "actors": [
+        {
+          "who": "ALLISON_ELLSWORTH",
+          "pregnant": true,
+          "x": 520,
+          "y": 970,
+          "face": "happy",
+          "pose": "present",
+          "enter": "none",
+          "acts": [
+            {
+              "cue": "L029",
+              "word": 5,
+              "face": "scared",
+              "pose": "hold"
+            }
+          ]
+        }
+      ],
+      "props": [
+        {
+          "type": "toys",
+          "x": 1260,
+          "y": 760
+        }
+      ]
+    },
+    {
+      "id": "c2s09b",
+      "explains": "What that ask implies: the whole company would be worth four million.",
+      "cue": "L029",
+      "word": 7,
+      "set": "living_room",
+      "opts": {
+        "dress": "rehearsal",
+        "night": true,
+        "light": "phone"
+      },
+      "place": "rehearsal living room",
+      "camera": "push_in",
+      "frame": "close",
+      "focus": [
+        1180,
+        700
+      ],
+      "grade": "night",
+      "light": {
+        "x": 1180,
+        "y": 640,
+        "r": 780,
+        "color": "#e8f0ff",
+        "dark": 0.45
+      },
+      "props": [
+        {
+          "type": "toys",
+          "x": 1180,
+          "y": 780
+        }
+      ],
+      "actors": [
+        {
+          "who": "ALLISON_ELLSWORTH",
+          "pregnant": true,
+          "x": 700,
+          "y": 980,
+          "face": "relieved",
+          "pose": "phone",
+          "prop": "phone",
+          "enter": "none"
+        }
+      ]
+    },
+    {
+      "id": "c2s09c",
+      "explains": "The valuation as one number: $4 million.",
+      "cue": "L029",
+      "word": 11,
+      "set": "living_room",
+      "opts": {
+        "dress": "rehearsal",
+        "night": true
+      },
+      "place": "rehearsal living room",
+      "camera": "tilt_up",
+      "frame": "medium",
+      "grade": "gold",
+      "light": {
+        "x": 960,
+        "y": 560,
+        "r": 800,
+        "color": "#ffe14d",
+        "dark": 0.45
+      },
+      "actors": [
+        {
+          "thing": "soda",
+          "shape": "bottle",
+          "x": 960,
+          "y": 960,
+          "scale": 0.6,
+          "face": "greedy",
+          "pose": "cheer",
+          "enter": "none"
+        }
+      ],
+      "overlays": [
+        {
+          "type": "counter",
+          "from": 0,
+          "to": 4,
+          "prefix": "$",
+          "suffix": "M",
+          "tone": "green",
+          "pos": "tc",
+          "plate": true,
+          "cue": "L029",
+          "word": 13,
+          "dur": 1.2
+        }
+      ]
+    },
+    {
+      "id": "c2s10a",
+      "explains": "The mood turns: the investors start pushing back hard.",
+      "cue": "L030",
+      "set": "pitch_stage",
+      "opts": {
+        "view": "rafters",
+        "night": true
+      },
+      "place": "the rafters",
+      "camera": "tilt_down",
+      "grade": "night",
+      "motif": "word on the can",
+      "light": {
+        "x": 960,
+        "y": 640,
+        "r": 760,
+        "color": "#fff1c4",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "soda",
+          "shape": "bottle",
+          "label": "MOTHER",
+          "x": 960,
+          "y": 700,
+          "scale": 0.4,
+          "face": "happy",
+          "pose": "wave",
+          "enter": "none"
+        }
+      ]
+    },
+    {
+      "id": "c2s10b",
+      "explains": "What they questioned: how much more money the company would need, and its value.",
+      "cue": "L030",
+      "word": 9,
+      "set": "pitch_stage",
+      "opts": {
+        "view": "chairs",
+        "night": true
+      },
+      "place": "pitch stage",
+      "camera": "pan_left",
+      "grade": "night",
+      "light": {
+        "x": 670,
+        "y": 620,
+        "r": 950,
+        "color": "#fff1c4",
+        "dark": 0.35
+      },
+      "actors": [
+        {
+          "who": "SHARK",
+          "shadow": true,
+          "x": 380,
+          "y": 900,
+          "scale": 0.7,
+          "pose": "think",
+          "enter": "none",
+          "acts": [
+            {
+              "cue": "L030",
+              "word": 11,
+              "to": [
+                330,
+                860
+              ],
+              "dur": 0.8
+            }
+          ]
+        },
+        {
+          "who": "SHARK",
+          "shadow": true,
+          "x": 670,
+          "y": 880,
+          "scale": 0.7,
+          "pose": "fold",
+          "enter": "none"
+        },
+        {
+          "who": "SHARK",
+          "shadow": true,
+          "x": 960,
+          "y": 870,
+          "scale": 0.7,
+          "pose": "rest",
+          "enter": "none"
+        }
+      ],
+      "props": [
+        {
+          "type": "investor_chair",
+          "x": 380,
+          "y": 920,
+          "lit": false
+        }
+      ]
+    },
+    {
+      "id": "c2s10c",
+      "explains": "Another doubt: whether the price she asked was too high.",
+      "cue": "L030",
+      "word": 17,
+      "set": "pitch_stage",
+      "opts": {
+        "view": "chairs",
+        "night": true
+      },
+      "place": "pitch stage",
+      "camera": "push_in",
+      "frame": "medium",
+      "focus": [
+        1250,
+        760
+      ],
+      "grade": "night",
+      "light": {
+        "x": 1250,
+        "y": 620,
+        "r": 850,
+        "color": "#fff1c4",
+        "dark": 0.35
+      },
+      "actors": [
+        {
+          "who": "SHARK",
+          "shadow": true,
+          "x": 1250,
+          "y": 880,
+          "scale": 0.8,
+          "pose": "shrug",
+          "enter": "none",
+          "acts": [
+            {
+              "cue": "L030",
+              "word": 18,
+              "pose": "fold",
+              "to": [
+                1300,
+                850
+              ],
+              "dur": 0.6
+            }
+          ]
+        }
+      ],
+      "props": [
+        {
+          "type": "investor_chair",
+          "x": 1250,
+          "y": 920,
+          "lit": false
+        }
+      ]
+    },
+    {
+      "id": "c2s10d",
+      "explains": "The last doubt: the plan to run their own factory.",
+      "cue": "L030",
+      "word": 20,
+      "set": "bottling_plant",
+      "opts": {
+        "night": true
+      },
+      "place": "bottling plant",
+      "camera": "pull_out",
+      "grade": "night",
+      "callback": "the bottling plant from CH1",
+      "light": {
+        "x": 1100,
+        "y": 300,
+        "r": 800,
+        "color": "#ffd9a0",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "who": "STEPHEN_ELLSWORTH",
+          "x": 1300,
+          "y": 960,
+          "face": "happy",
+          "pose": "grab",
+          "enter": "none",
+          "acts": [
+            {
+              "cue": "L030",
+              "word": 23,
+              "face": "shocked",
+              "pose": "shrug"
+            }
+          ]
+        }
+      ],
+      "props": [
+        {
+          "type": "bottles",
+          "x": 960,
+          "y": 700,
+          "n": 6,
+          "speed": 1
+        }
+      ]
+    },
+    {
+      "id": "c2k05a",
+      "explains": "One investor after another says no.",
+      "cue": "L031",
+      "set": "pitch_stage",
+      "opts": {
+        "view": "table",
+        "night": true
+      },
+      "place": "pitch stage",
+      "camera": "push_in",
+      "frame": "close",
+      "focus": [
+        960,
+        640
+      ],
+      "grade": "night",
+      "light": {
+        "x": 960,
+        "y": 380,
+        "r": 760,
+        "color": "#fff1c4",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "soda",
+          "shape": "bottle",
+          "x": 960,
+          "y": 860,
+          "scale": 0.7,
+          "face": "scared",
+          "pose": "point",
+          "speaks": [
+            "L031"
+          ],
+          "enter": "none"
+        }
+      ]
+    },
+    {
+      "id": "c2k05b",
+      "explains": "Four of the five investors are out.",
+      "cue": "L032",
+      "set": "pitch_stage",
+      "opts": {
+        "view": "seats",
+        "night": true,
+        "empty": true
+      },
+      "place": "audience seats",
+      "camera": "pan_right",
+      "frame": "medium",
+      "grade": "night",
+      "light": {
+        "x": 960,
+        "y": 420,
+        "r": 780,
+        "color": "#fff1c4",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "who": "BENNY",
+          "x": 960,
+          "y": 1000,
+          "scale": 0.8,
+          "face": "deadpan",
+          "pose": "hold",
+          "prop": "popcorn",
+          "speaks": [
+            "L032"
+          ],
+          "enter": "none"
+        }
+      ]
+    },
+    {
+      "id": "c2k05c",
+      "explains": "Only one chance is left.",
+      "cue": "L033",
+      "set": "pitch_stage",
+      "opts": {
+        "view": "table",
+        "night": true
+      },
+      "place": "pitch stage",
+      "camera": "pull_out",
+      "frame": "medium",
+      "grade": "night",
+      "light": {
+        "x": 960,
+        "y": 380,
+        "r": 760,
+        "color": "#fff1c4",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "soda",
+          "shape": "bottle",
+          "x": 960,
+          "y": 880,
+          "scale": 0.6,
+          "face": "panic",
+          "pose": "panic",
+          "speaks": [
+            "L033"
+          ],
+          "enter": "none"
+        }
+      ]
+    },
+    {
+      "id": "c2t02",
+      "explains": "The last chance: the fifth chair belonged to Rohan Oza.",
+      "type": "card",
+      "cue": "L034",
+      "text": "The fifth chair was Rohan Oza's.",
+      "emph": [
+        "fifth"
+      ]
+    },
+    {
+      "id": "c2s11a",
+      "explains": "Oza's offer: the full $400,000, but for 25 percent of the company.",
+      "cue": "L034",
+      "word": 6,
+      "set": "pitch_stage",
+      "opts": {
+        "view": "desk",
+        "night": true,
+        "lit_chair": 3
+      },
+      "place": "investors' desk",
+      "camera": "tilt_up",
+      "frame": "medium",
+      "grade": "night",
+      "light": {
+        "x": 1000,
+        "y": 380,
+        "r": 800,
+        "color": "#fff1c4",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "who": "ROHAN_OZA",
+          "x": 1000,
+          "y": 960,
+          "face": "deadpan",
+          "pose": "fold",
+          "enter": "none",
+          "acts": [
+            {
+              "cue": "L034",
+              "word": 13,
+              "face": "smug",
+              "pose": "point"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c2s11b",
+      "explains": "What changed: the same money now buys two and a half times the share.",
+      "cue": "L035",
+      "set": "pitch_stage",
+      "opts": {
+        "view": "desk",
+        "night": true,
+        "lit_chair": 3
+      },
+      "place": "investors' desk",
+      "camera": "pan_left",
+      "frame": "close",
+      "focus": [
+        900,
+        900
+      ],
+      "grade": "night",
+      "callback": "Oza's briefcase from 0:12",
+      "light": {
+        "x": 900,
+        "y": 640,
+        "r": 760,
+        "color": "#fff1c4",
+        "dark": 0.5
+      },
+      "props": [
+        {
+          "type": "briefcase",
+          "x": 1400,
+          "y": 960,
+          "move": {
+            "to": [
+              700,
+              960
+            ],
+            "cue": "L035",
+            "word": 1,
+            "dur": 1.2
+          }
+        }
+      ],
+      "actors": [
+        {
+          "who": "ROHAN_OZA",
+          "x": 1560,
+          "y": 980,
+          "face": "smug",
+          "pose": "offer",
+          "enter": "none"
+        }
+      ]
+    },
+    {
+      "id": "c2s11c",
+      "explains": "What his offer really valued the company at: $1.6 million, not $4 million.",
+      "cue": "L035",
+      "word": 12,
+      "set": "pitch_stage",
+      "opts": {
+        "view": "desk",
+        "night": true,
+        "lit_chair": 3
+      },
+      "place": "investors' desk",
+      "camera": "push_in",
+      "frame": "medium",
+      "grade": "red",
+      "light": {
+        "x": 960,
+        "y": 420,
+        "r": 800,
+        "color": "#ffd0c0",
+        "dark": 0.5
+      },
+      "actors": [
+        {
+          "thing": "soda",
+          "shape": "bottle",
+          "x": 960,
+          "y": 960,
+          "scale": 0.6,
+          "face": "shocked",
+          "enter": "none",
+          "acts": [
+            {
+              "cue": "L035",
+              "word": 20,
+              "face": "sad"
+            }
+          ]
+        }
+      ],
+      "overlays": [
+        {
+          "type": "counter",
+          "from": 4,
+          "to": 1.6,
+          "decimals": 1,
+          "prefix": "$",
+          "suffix": "M",
+          "tone": "red",
+          "pos": "tc",
+          "plate": true,
+          "cue": "L035",
+          "word": 16,
+          "dur": 1.6
+        }
+      ]
+    }
+  ]
+}

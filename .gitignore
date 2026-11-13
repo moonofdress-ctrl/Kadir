@@ -32,3 +32,6 @@ channel-system/episodes/*/shorts/*/audio/mix.wav
 channel-system/episodes/*/shorts/*/audio/raw/
 channel-system/episodes/*/render/
 studio/gallery/render/
+# Shorts: clips are copies of the episode's, mix and render are rebuilt
+channel-system/episodes/*/shorts/*/render/
+channel-system/episodes/*/shorts/*/audio/*.wav

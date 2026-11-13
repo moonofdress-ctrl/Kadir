@@ -80,6 +80,8 @@ function makeShort(ep, range, title, name) {
   if (i0 < 0 || i1 < i0) throw new Error(`--short needs a line range such as L012-L020 (got ${range})`);
   const keep = lines.slice(i0, i1 + 1), ids = new Set(keep.map((l) => l.id)), dir = path.join(ep, "shorts", name);
   let shots = story.shots.filter((s) => s.type !== "chapter" && ids.has(s.cue));
+  // A Short opens on a scene (lint H1): a title card at the start is dropped, the next scene starts with the first line.
+  while (shots.length > 1 && shots[0].type === "card") { shots.shift(); if (shots[0].cue === keep[0].id) { shots[0] = Object.assign({}, shots[0]); delete shots[0].word; delete shots[0].at; } }
   // The picture that was on screen when the range starts comes along, so the Short never opens on nothing.
   if (!shots.length || shots[0].cue !== keep[0].id || shots[0].word || shots[0].at) { const before = story.shots.filter((s) => s.type !== "chapter" && lines.findIndex((l) => l.id === s.cue) <= i0 && !ids.has(s.cue)).pop() || story.shots.filter((s) => s.cue === keep[0].id)[0];
     if (before && !shots.includes(before)) { const first = Object.assign({}, before, { cue: keep[0].id }); delete first.word; delete first.at; shots = [first, ...shots]; } }
