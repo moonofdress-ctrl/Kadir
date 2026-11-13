@@ -8,7 +8,7 @@ Three pairs, three reasons to click (FORMAT_BOOK 15). A is the scene of the firs
 | B | Contrast: a fortune for vinegar | `c1s10`, 0:23 | white `VINEGAR?` red `$1.95B` | The bottle with a face, shocked, eyes wide; one figure only | Close on the bottle's neck as the face-down price tag flips over and blazes gold; the bottle's own glow lights the dark stage. The giant's shadow falls across the top edge. |
 | C | Open question: who was watching | `c1s09`, 0:21 | white `HE WAS WAITING` | The navy cola giant can with a face (no logo, no brand design), greedy grin, gloved hand reaching down; the small bottle far below | From the dark rafters, the giant can leans over the lighting rig toward the one lit disc of the stage, where the tiny bottle glows. Two objects, one light. |
 
-One title for all three: **How Poppi Made $1.95 Billion From Soda** (the script's title).
+One title for all three: **She Pitched This Soda 9 Months Pregnant. Then Pepsi Paid Up.** (chosen by the user on 13 Nov 2026).
 
 ## Painted prompts (one each; style lock first)
 

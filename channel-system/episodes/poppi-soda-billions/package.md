@@ -14,11 +14,11 @@ What it shows: the shelf is news clips, interviews and "how it got to $2B" stori
 
 | Pair | Reason to click | Title | Thumbnail scene and time | Band (white + red) | What it promises, and where the video pays it |
 |---|---|---|---|---|---|
-| A (first frame) | Consequence | How Poppi Made $1.95 Billion From Soda | `c1s01`, 0:00: Allison Ellsworth, pregnant, coral dress, face a third of the frame; the swing-top bottle with a face glows amber on the pitch table, price tag face-down; one spotlight, navy dark | `9 MONTHS PREGNANT` | What she risked. Paid at 0:00, at the birth ten days later (2:32) and in the end. |
+| A (first frame) | Consequence | She Pitched This Soda 9 Months Pregnant. Then Pepsi Paid Up. | `c1s01`, 0:00: Allison Ellsworth, pregnant, coral dress, face a third of the frame; the swing-top bottle with a face glows amber on the pitch table, price tag face-down; one spotlight, navy dark | `9 MONTHS PREGNANT` | What she risked. Paid at 0:00, at the birth ten days later (2:32) and in the end. |
 | B | Contrast | Poppi's Price Tag Was Not What It Looked Like | `c1s10`, 0:23: close on the bottle, shocked, as the price tag flips and blazes gold; one figure | white `VINEGAR?` red `$1.95B` | A fortune for vinegar, and a number that shrinks. Hook at 0:24 (Benny: "For vinegar?"); tax benefit at 9:56; earnout at 11:02. |
 | C | Open question | Who Was Watching Poppi's Pitch? | `c1s09`, 0:21: the navy giant can (no brand shapes) leans from the rafters toward the tiny glowing bottle | white `HE WAS WAITING` | Who the buyer was. Planted at 0:17 ("a cola giant will pay"); answered at 6:28 (PepsiCo's own try was scrapped) and 9:32 (the purchase). |
 
-One title for all three pictures: **How Poppi Made $1.95 Billion From Soda** (the script's title, A's title). If the test compares only pictures, use this one.
+One title for all three pictures: **She Pitched This Soda 9 Months Pregnant. Then Pepsi Paid Up.** (chosen by the user on 13 Nov 2026; the thumbnail band carries $1.95B). If the test compares only pictures, use this one.
 
 Start with: A with its own title. A judgment, not a measurement: it is the first frame, the face is largest, and a person in trouble is what the niche clicks on (FORMAT_BOOK 1). The prompts for the three painted pictures are in `prompts.md`; bands are as in `thumbnails.md`. After painting: band with `stills.mjs thumb`, check each `_small.png` at 160x90, keep the lower right empty, and confirm A matches the first frame of the video.
 
