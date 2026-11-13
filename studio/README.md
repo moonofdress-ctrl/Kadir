@@ -156,6 +156,12 @@ Three world props that carry their own camera. Each belongs on its dark ground (
 { "type": "counter", "roll": true, "tick": true, "from": 0, "to": 1950, "prefix": "$", "suffix": "M", "cap": "SOLD FOR", "pos": "tr", "at": 0.4, "dur": 1.6 }
 ```
 
+**Map flight** (`"set": "map_table"`, prop `map_flight`): Dallas to New York, Taiwan to Santa Clara. A dark map drawn in code from small embedded outlines (no tiles, no network); a dashed route draws from `from` to `to` with a plane on its tip, the camera follows it (`follow`: how close, 1 = the whole map), and the end city gets a pulse ring and a name plate. `map`: `"us"` (lower 48), `"world"` (centred between the two cities, so a Pacific crossing is one piece) or `"region"` (fitted to the two cities). A city is a name from the list in `scenes.js` (`CITIES`: dallas, new york, san francisco, santa clara, los angeles, seattle, chicago, houston, miami, taiwan, tokyo, london, ...) or `{ "name", "lat", "lon" }`. `dur` is the flight in seconds, `at`/`cue` when it takes off.
+```json
+{ "id": "m1", "cue": "L008", "set": "map_table", "opts": { "night": true }, "place": "the US map", "light": { "x": 960, "y": 540, "r": 1300, "dark": 0.3 },
+  "props": [ { "type": "map_flight", "map": "us", "from": "dallas", "to": "new york", "dur": 2.4, "at": 0.4 } ] }
+```
+
 ## Rules for engine code
 - One paused GSAP timeline drives everything. No timers, no `Math.random`, no dates, no network.
 - **No callbacks** (`onUpdate`, `call`): a seek does not fire them. Tween properties instead; `counter` shows how to do text.

@@ -181,6 +181,56 @@
      "dur": 1.6
     }
    ]
+  },
+  {
+   "id": "d04",
+   "cue": "L008",
+   "set": "map_table",
+   "opts": {
+    "night": true
+   },
+   "place": "the US map",
+   "light": {
+    "x": 960,
+    "y": 540,
+    "r": 1300,
+    "dark": 0.3
+   },
+   "props": [
+    {
+     "type": "map_flight",
+     "map": "us",
+     "from": "dallas",
+     "to": "new york",
+     "dur": 2.4,
+     "at": 0.4
+    }
+   ]
+  },
+  {
+   "id": "d05",
+   "cue": "L009",
+   "set": "map_table",
+   "opts": {
+    "night": true
+   },
+   "place": "the world map",
+   "light": {
+    "x": 960,
+    "y": 540,
+    "r": 1300,
+    "dark": 0.3
+   },
+   "props": [
+    {
+     "type": "map_flight",
+     "map": "world",
+     "from": "taiwan",
+     "to": "santa clara",
+     "dur": 2.6,
+     "at": 0.4
+    }
+   ]
   }
  ]
 }

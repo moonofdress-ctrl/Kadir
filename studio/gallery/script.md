@@ -39,3 +39,12 @@ N: New pieces, part 16.
 N: New pieces, part 17.
 N: New pieces, part 18.
 N: New pieces, part 19.
+N: Story scenes, part 1.
+N: Story scenes, part 2.
+N: Story scenes, part 3.
+N: Story scenes, part 4.
+N: Story scenes, part 5.
+N: Story scenes, part 6.
+N: Story scenes, part 7.
+N: Story scenes, part 8.
+N: Story scenes, part 9.
