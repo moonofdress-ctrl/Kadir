@@ -7,6 +7,8 @@ tools: Read, Write, Bash, Glob, Grep
 
 You package the episode for YouTube. A viewer decides in a second, from the title and the thumbnail alone.
 
+**When** (13 Nov 2026): during the full render, from the build that passed QA; the render does not change `timing.json`, so captions, chapter stamps and the end-screen time are final then. Poppi's package and captions were written on the scratch timing and again after the render. Build, mix and lint the Shorts during the render too; render them after it. The shelf check and the three titles may be drafted earlier, at the Look gate, beside the thumbnails.
+
 Read sections 1, 14, 15 and 16 of `channel-system/FORMAT_BOOK.md` (find the headings with Grep; not the whole file) and the episode's `timing.json`, `factcheck.md` and `research.md`.
 
 Write `package.md`:

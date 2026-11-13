@@ -4,31 +4,41 @@ A newsroom of agents that turns a market event into a 12–15 minute cartoon exp
 
 ## Pipeline
 
+Redesigned on 13 Nov 2026 so that independent steps run at the same time and every fault is found on something cheap (the lint, a frame sheet, a 30-second draft) before the one full render. Every gate stays. Lines marked `‖` run at the same time.
+
 ```
-1  trend-scout    → topics/<date>.md: 3 scored topics, each with   ─┐
-                    what the big channels already published        │
-                                                                  ├─ GATE 1: you pick a topic
-2  researcher     → episodes/<slug>/research.md (sourced)        ─┘
-3  scriptwriter   → script.md (FORMAT_BOOK, with the loop ledger)
-4  fact-checker   → factcheck.md, fixes in the script
-4b voice-producer → the hook in each candidate voice (once per    ─── GATE 2: you approve the script
-                    voice product), then audio/<id>.wav                and the voice
-5  art-director   → the first 30 seconds of the storyboard,      ─── LOOK GATE: twelve frames of the first 30
-                    thumbnails.md, build-requests.md (new places)      seconds beside the rival's, before the rest
-5a scene-builder  → the new sets, props and living things the episode needs (15-25 places)
-5c art-director   → the rest: storyboard/ch<N>.json, one chapter at a time
-5b fact-checker   → second pass on screen-text.md: every word and number on screen
-7  voice-producer → audio/<id>.wav in the chosen voice (narrator + character lines), dead air cut
-8  editor         → sound mix, build, lint, frame check (no render yet)
-9  qa-reviewer    → qa.md from the frames, sends fixes back; repeat 5–9 until it passes
-9a fact-checker   → currency check on the render day, for a story that is still moving (FORMAT_BOOK 1)
-9b editor         → render to MP4 once, after QA passes → render/
-10 illustrator    → three painted thumbnails (one or two figures, one glowing object), judged beside the competing ones
-11 packager       → package.md and youtube-upload.txt: three       ─── GATE 3: you approve and upload
-                    title+thumbnail pairs,
-                    captions, the Shorts plan
-12 analyst        → learnings.md, a few days after the upload
+1  trend-scout       → topics/<date>.md: 3 scored topics             ─── GATE 1: you pick a topic
+2  researcher        → research.md (sourced), brief.md
+3  scriptwriter      → script.md (PROMISE, DEVICES, three openings; repeat check)
+3b punch-up          → sharper skits and scene gags, punchup.md
+4  fact-checker      → factcheck.md, fixes in the script             ─── GATE 2: you approve the script
+                                                                         (the voice is already chosen: Voice row below)
+5  ‖ voice-producer  → direction.md, "dir" per line, the published voice, mix --tighten
+   ‖ creative-director → look.md (places, colour, light, crowds, ambience, camera moments),
+                       audio/music-cues.md, build-requests.md
+   ‖ scene-builder   → the new sets with palette and ambience, in batches of five, first-30-seconds sets first
+   ‖ art-director ×N → blocking pass of every chapter at once (the animatic: places, light, frames, who, explains)
+6  editor            → animatic build + lint + one frame sheet per chapter
+   creative-director → structure fixes before any detail
+7  art-director      → the first 30 seconds in full detail
+   editor            → build + 30-second draft render                ─── LOOK GATE, never skipped: the draft and the
+   qa-reviewer       → "## Look gate" in qa.md beside                    look sheet go to you beside the quality
+                       brand/quality_reference.jpg                       reference; we wait only if you have not waived
+8  ‖ art-director ×N → detail pass, one per chapter; each checks its own chapter (lint, layout, frames) before handing over
+   ‖ illustrator     → three thumbnails from the Look gate frames
+   ‖ fact-checker    → screen text, chapter by chapter as each lands
+9  editor            → full build, lint, layout check, frames
+10 qa-reviewer       → qa.md; fixes back; draft renders of the moments that move; repeat until "Verdict: pass"
+11 ‖ editor          → the one full render (about an hour, in the background) and loudness
+   ‖ packager        → captions, package.md, youtube-upload.txt, Shorts built and linted (rendered after)
+   ‖ fact-checker    → currency check on the render day, for a story still moving
+                                                                     ─── GATE 3: you approve and upload
+12 analyst           → learnings.md, a few days after the upload
+13 improver          → improvements/<date>-<slug>.md: what to make better and why, asked one item at a time
+                       in Turkish; only what you approve goes into the rules, agents, lint or an engine request
 ```
+
+**Why this order** (measured from Poppi's git history on 13 Nov 2026; tokens are not in git, so lines rewritten stand for them). Poppi went from topic to script and fact-check in 30 minutes, then ran one step at a time for about 21 hours. About a fifth of the lines its commits added redid finished work: the whole episode revoiced and retimed after the storyboard (the voice was chosen in ten commits over three hours after the storyboards existed), script trims applied after the storyboard and the voice, `explains` written into 316 shots in a separate pass, a second QA round, the captions and the package written again after the render. And its look was judged only after the full render. So: the voice is recorded right after Gate 2 and the script is final before it (punch-up and fact-check first); sets, voice and the blocking pass run side by side; `explains` is written in the blocking pass; the structure is checked on the animatic and the look on a 30-second draft; each chapter checks itself before QA; packaging runs during the render. Eight chapter art directors each read about 70 KB of rules before writing; they now read one page (`checklists/storyboard.md`) and the episode's `look.md`.
 
 Agent definitions live in `.claude/agents/` at the repository root, so every Claude Code session in this repo can run them by name.
 
@@ -46,6 +56,9 @@ node studio/tools/retention-lint.mjs channel-system/episodes/<slug>
 | `STORY_ROUTES.md` | Twelve ways to organise a money story so each beat makes the next one necessary. |
 | `characters/STYLE_GUIDE.md` | The house look, limits for real people and logos, the thumbnail formula. |
 | `characters/cast.md` | Recurring characters: who they are and how to use them. |
+| `checklists/storyboard.md` | The storyboard targets, camera language and keys on one page, for the art directors and the creative director. |
+| `brand/quality_reference.jpg` | The fixed quality bar: six of the rival's frames above our best six. Built on the machine by `brand/quality-reference.mjs`; neither it nor the rival's frames are in git (the repository is public), the rival's frames are in `%USERPROFILE%\.kadir\quality_reference\` on the user's PC. Every episode is judged beside it. |
+| `improvements/` | The improver's ranked proposals after each upload, with what the user approved, declined and what was installed. |
 | `episodes/_template/` | Empty episode folder to copy. |
 | `episodes/demo/` | A 19-second demo with scratch voices, staged by the picture rules. |
 | `research/` | How the rules were measured: the reference video's analysis and retention review. |
@@ -61,7 +74,7 @@ node studio/tools/retention-lint.mjs channel-system/episodes/<slug>
 | Pictures | The `studio/` engine: cast, sets, light, shot sizes, numbers and timing in code. New places are built per episode by the scene builder. | Ready; the lint holds the staging targets (P, D, K, W, S, H checks) |
 | Frame check | `node studio/tools/stills.mjs frames <episode>` saves a contact sheet; `preview.mjs` for a browser | Ready (the contact sheet needs Playwright) |
 | Voice | Decided by the user on 2026-11-12: a synthetic voice, disclosed in the video and the description, with YouTube's altered-content label set. Re-check the policy text before the first upload. Product: ElevenLabs (decided 13 Nov 2026; key in the cloud environment, Starter plan). Narrator: **Lawrence - Bright and Informative** (`ktkP7Nsj67dw2zcplQYt`), chosen by the user on 13 Nov 2026: bright, energetic, 19th of 700 voices by closeness to the rival's narrator, notice period 4015 days. Its sample reads at 234 wpm: set the speed so the episode lands at 160-175 wpm. Reserves: Tyler Cruz (`SA7eD52NRr8WAehitVt1`), Mike - POV/Storytime (`zfc8CJQpe8Kqyl0vvCzo`). Characters: BENNY = Liam (`TX3LPaxmHKxFdv7VOQHJ`), SODA = Charlie (`IKne3meq5aSn9XLyUdCD`); other characters from the library, American, notice period 730 days. Reasons: `episodes/poppi-soda-billions/voice-test/RESEARCH.md`. `studio/tools/voice.mjs --engine elevenlabs` makes the published track with word timings (built 13 Nov 2026, not yet run on an episode). | Ready; first run after the 17 Nov quota reset |
-| Music and effects | `studio/tools/mix.mjs`: effects and a house music bed made in code, so nothing to license. Drop licensed tracks in `audio/music/` to use those instead (the YouTube Audio Library is the safe source). | Ready; the choice of music is yours |
+| Music and effects | `studio/tools/mix.mjs`: effects and a house music bed made in code, so nothing to license. Drop licensed tracks in `audio/music/` to use those instead (the YouTube Audio Library is the safe source). The creative director writes a cue sheet per chapter with stingers (`audio/music-cues.md`). | Ready; ambience per place, act sounds and the `sting` effect come with the engine-v2 work |
 | Render to MP4 | HyperFrames (Apache 2.0) + FFmpeg | Tested in a cloud session; a local machine needs FFmpeg on its PATH |
 | Thumbnail | Three painted pictures, generated with the image tool the session has or by the user from `prompts.md` (Gemini's Nano Banana Pro, Higgsfield), banded with `studio/tools/stills.mjs thumb --image` | Ready; three pictures an episode |
 | Upload | The user, in YouTube Studio | Manual step |
@@ -70,7 +83,7 @@ node studio/tools/retention-lint.mjs channel-system/episodes/<slug>
 A 13-minute episode is about 250 lines and 200 shots: too much for one agent in one go.
 
 - **Storyboard by chapter.** Run one art director per chapter, each writing `storyboard/ch<N>.json` with only that chapter's lines. They can run at the same time; the build joins the files.
-- **Every agent has a fixed model**, so none of them inherits a more expensive one from the session. The steps that decide the episode's quality (scriptwriter, fact-checker, art director, QA reviewer) use `opus`. The steps that collect, build or follow a checklist (trend scout, researcher, scene builder, voice producer, editor, illustrator, packager, analyst) use `sonnet`; their work is checked afterwards by the fact-checker, the lint or the frame sheet. Change the `model:` line in an agent's definition to move it.
+- **Every agent has a fixed model**, so none of them inherits a more expensive one from the session. The steps that decide the episode's quality (scriptwriter, punch-up, fact-checker, creative director, art director, QA reviewer, improver) use `opus`. The steps that collect, build or follow a checklist (trend scout, researcher, scene builder, voice producer, editor, illustrator, packager, analyst) use `sonnet`; their work is checked afterwards by the fact-checker, the lint or the frame sheet. Change the `model:` line in an agent's definition to move it.
 - **Tools before agents.** Voice (`voice.mjs`), sound (`mix.mjs`), frames (`stills.mjs`) and the checks are plain commands; an agent is needed only to judge the result.
 - **Agents read sections, not files.** The token rules are in `CLAUDE.md` at the repository root: each agent reads only the parts of the format book, cast and style guide its step needs, reports in a few lines, and code search skips `vendor/`, the old `amazon-hidden-tax/` engines and `research/` (see `.ignore`).
 - **A new session per gate.** The episode folder carries everything forward, so a new session after each gate starts with an empty conversation instead of paying for the old one on every turn.
@@ -81,7 +94,7 @@ A 13-minute episode is about 250 lines and 200 shots: too much for one agent in 
 In a Claude Code session in this repo:
 1. "Run trend-scout" → pick one of the three topics.
 2. "Make the episode for <topic>" → the agents run steps 2–4 and stop at Gate 2.
-3. Approve the script and the voice → the first 30 seconds are storyboarded and built, and you compare them with the rival's (Look gate). Then steps 5–11 run. When the session has no image tool, the illustrator hands you `prompts.md` and you generate the three thumbnails.
+3. Approve the script → the voice, the look plan, the sets and the animatic are made side by side; then the first 30 seconds are built and you get a 30-second draft video beside the quality reference (Look gate). Then the detail pass, QA, the render and the package run. When the session has no image tool, the illustrator hands you `prompts.md` and you generate the three thumbnails.
 
-**When you say "do it all".** The user may waive Gate 1, Gate 2 and the Look gate for an episode ("pick the topic and finish it"). The session records that in `brief.md` with the date, takes the trend scout's first topic, and replaces each waived approval with a check it can run itself: the fact-checker and the lint for the script, the QA reviewer's written comparison for the Look gate. Gate 3 is never waived: the upload is the user's, and the open choices (the final voice, the thumbnail pictures) are put to the user there, once, with a recommendation.
-4. A few days after the upload, share the YouTube Studio numbers → the analyst updates `learnings.md`.
+**When you say "do it all".** The user may waive Gate 1 and Gate 2 for an episode ("pick the topic and finish it"). The session records that in `brief.md` with the date, takes the trend scout's first topic, and replaces each waived approval with a check it can run itself: the fact-checker and the lint for the script. **The Look gate is never skipped** (13 Nov 2026): the 30-second draft is still sent to the user, and the QA reviewer writes the comparison in `qa.md`; with the gates waived the work goes on without waiting, and the user's "no" stops it where it is. Gate 3 is never waived: the upload is the user's, and the open choices are put to the user there, once, with a recommendation.
+4. A few days after the upload, share the YouTube Studio numbers → the analyst updates `learnings.md`, and the improver asks you, one item at a time, what to make better for the next episode.

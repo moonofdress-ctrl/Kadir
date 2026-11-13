@@ -35,3 +35,8 @@ studio/gallery/render/
 # Shorts: clips are copies of the episode's, mix and render are rebuilt
 channel-system/episodes/*/shorts/*/render/
 channel-system/episodes/*/shorts/*/audio/*.wav
+
+# The quality reference: the rival's frames are another channel's pictures and the repository is public (13 Nov 2026).
+# They live in %USERPROFILE%/.kadir/quality_reference/; the sheet is built on each machine (channel-system/brand/quality-reference.mjs).
+channel-system/brand/quality_reference/rival_*
+channel-system/brand/quality_reference.jpg

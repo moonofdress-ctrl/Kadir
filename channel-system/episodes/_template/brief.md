@@ -12,5 +12,6 @@ Videos already published on this story by the biggest channels (title, date, vie
 What the editorial limits leave out, and why the angle still carries a title people click:
 The human story (the one or two named people, what one of them does not know, the moment of danger):
 Opening scene (the place, the two people, what the viewer knows):
-Gates the user has waived for this episode (which, and the date they said so):
-Look gate (date and the verdict on the first 30 seconds beside the rival's; say whether the user or QA gave it):
+Gates the user has waived for this episode (which, and the date they said so; the Look gate's draft is sent to the user even then):
+Look gate (date the 30 s draft was sent to the user, and the verdict beside `brand/quality_reference.jpg`; say whether the user or QA gave it):
+The user's comments (on the Look gate draft, the render, the upload; dated, in their words, for the improver):

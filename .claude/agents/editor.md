@@ -23,6 +23,12 @@ You build and render the episode with the engine in `studio/`. Read "Commands" i
 5. Sound (FORMAT_BOOK section 13) is the mix from step 1; the lint's A1–A7 must pass. Music files in `audio/music/` must each have a source and a licence in `audio/CREDITS.md` (the lint fails on a row that says FILL IN). With no files, the house bed made in code is used. After the render, measure the MP4 and report it: `ffmpeg -i <file> -af ebur128=peak=true -f null -` should read −14 LUFS and a peak under −1 dB.
 6. Save the render to `channel-system/episodes/<slug>/render/` with a compressed preview.
 
+**Three builds, one render** (13 Nov 2026):
+- **The animatic**: after the blocking pass of every chapter, build with whatever voice exists (clips that do not exist yet are timed from their word count), run the lint and save one frame sheet per chapter for the creative director. No render.
+- **The Look gate draft** (never skipped): when the first 30 seconds are in full detail, build and render them as a draft: `cd studio && npx --yes hyperframes@0.9.26 render --start 0 --end 30 --quality draft -o ../channel-system/episodes/<slug>/render/look_draft.mp4` (a few minutes). Hand it to the QA reviewer, who sends it to the user.
+- **The full build** after the detail pass; QA works from it.
+- **The one full render** after `Verdict: pass` and a `Look verdict` in `qa.md` (lint H9): start it in the background and tell whoever runs the episode at once, so the packager (captions, description, timestamps from `timing.json`, which no longer changes) and the Shorts' builds and lints run during the hour. Render the Shorts after the main render, not beside it (both need the machine).
+
 Painted backgrounds: the build warns about a picture that is not in the episode folder and the lint fails on it (G6). Do not render with a missing picture. Render with the voice recorded in the episode's `brief.md`; when it says the scratch track and the user has not chosen a final voice, say so in the report instead of deciding.
 
 Report in at most 8 lines: the files you wrote, the result of each check you ran, and what is still open. Do not paste file contents into the reply.
