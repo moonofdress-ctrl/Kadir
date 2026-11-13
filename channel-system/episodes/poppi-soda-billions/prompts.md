@@ -1,6 +1,6 @@
 # Thumbnail prompts
 
-Not generated: painted pictures cost image credits and the user has not approved the spend (13 Nov 2026). 16:9, no text in the image; the band is added afterwards with `stills.mjs thumb --image`. Pair A must show the first shot of the video (`c1s01`).
+Generated 13 Nov 2026 with FLUX 3 Image (flux3_image, 16:9, 1k), one batch, prompts exactly as below (style lock + scene). Raw pictures: `images/raw_a.png`, `raw_b.png`, `raw_c.png`; banded with `stills.mjs thumb --image` into `images/thumbnail_a.png`, `thumbnail_b.png`, `thumbnail_c.png` (+ `_small` 160x90). Checked on one contact sheet: no stray text, all read at 160x90. Pair A shows the first shot (`c1s01`).
 
 Style lock (STYLE_GUIDE, Painted pictures), start of every prompt: "Bold editorial cartoon illustration: thick dark ink outlines, clean simple shapes, exaggerated proportions with big heads, vivid saturated colours, soft painted shading, one warm light source, deep teal-blue shadows, detailed textured background. No text, no letters, no numbers, no logos anywhere."
 
