@@ -62,7 +62,7 @@
     { "id": "c3t03", "type": "card", "cue": "L072", "text": "The launch: March 2020.", "emph": ["March", "2020"] },
     { "id": "c3s17", "cue": "L072", "word": 7, "set": "empty_hall", "opts": { "dress": "convention", "night": true }, "place": "empty convention hall", "camera": "pull_out", "grade": "night",
       "light": { "x": 960, "y": 220, "r": 820, "color": "#ff8a7a", "dark": 0.5 },
-      "props": [ { "type": "banner", "x": 680, "y": 260, "w": 560, "t": "CANCELLED", "cue": "L072", "word": 13 } ] },
+      "props": [ { "type": "banner", "x": 760, "y": 430, "w": 520, "t": "CANCELLED", "cue": "L072", "word": 13 } ] },
     { "id": "c3k12a", "cue": "L073", "set": "empty_hall", "opts": { "dress": "convention", "night": true }, "place": "empty convention hall", "camera": "pan_left", "frame": "medium", "grade": "night",
       "light": { "x": 1100, "y": 300, "r": 780, "color": "#ff8a7a", "dark": 0.5 },
       "actors": [

@@ -24,6 +24,12 @@ What went wrong while making each episode, and the rule that now prevents it. Th
 | The lint passed 38 of 41 on an episode that lost: it had minimums that pushed the wrong way (a fact written in the scene every 20 s; every number drawn). | A passing lint read as a good episode. | Old minimums that fight a measured target are lowered or removed when the target is added (G4 now one every 45 s, inside W1's limit). | `retention-lint.mjs` |
 | A direction was written into the rules and agents (painted hybrid, 12 Nov) before it was measured against the video it copied; one night later the measurement reversed it. | Rules, agents and the README rewritten twice. | Measure the reference first, then change the rules: a rule that copies another channel names the measurement it comes from. | `FORMAT_BOOK.md` intro; `analyst.md` |
 
+## poppi-soda-billions (November 2026)
+
+| What went wrong | What it cost | Rule now | Where |
+|---|---|---|---|
+| Eight art directors storyboarded one chapter each without frames: a close shot left the giant's mouth under the subtitles, a moving cheque ended under the can, `bars` sat behind the office desk, a `note` label was cut in half, a magnifier hid the can's face, the same highway and camera move sat on both sides of a chapter card. | Seven storyboard fixes at QA, with a rebuild and a frame check each. | Framing rule: focus on the face, 300 px between a prop's end point and a figure, bars clear of furniture, short note labels, change set or camera across a chapter card. | `art-director.md` 1f |
+
 ## Direction set by the user on 12 Nov 2026 (superseded on 13 Nov: see the last rows of the table above)
 
 Beside the channel the format book was measured on (Paper Billions: three videos, over a million views each), our episode is weaker in picture and in story, not only in the thumbnail. The user's decision: from the next episode the system follows that channel's logic more closely. To do in a new session, before the next topic:
