@@ -20,10 +20,10 @@
     const who = slot.getAttribute("data-who"), w = +slot.getAttribute("data-w"), r = window.Rig.make(who, {});
     window.Rig.init(r, "neutral", "rest");
     r.el.querySelectorAll(".hand").forEach((h) => { h.style.display = "none"; });
-    const box = r.head.querySelector('rect[width="300"]'), y = parseFloat(box.getAttribute("y"));
+    const vb = r.portrait || [-195, -650, 390, 390]; // the rig gives the square window of a person's head
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svg.setAttribute("x", -w / 2); svg.setAttribute("y", -w / 2); svg.setAttribute("width", w); svg.setAttribute("height", w);
-    svg.setAttribute("viewBox", `-195 ${y - 88} 390 390`); svg.setAttribute("overflow", "hidden");
+    svg.setAttribute("viewBox", vb.join(" ")); svg.setAttribute("overflow", "hidden");
     svg.appendChild(r.el); slot.appendChild(svg);
   }
   const faces = (el) => el.querySelectorAll(".face-slot").forEach(portrait);

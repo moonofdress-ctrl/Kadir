@@ -28,22 +28,30 @@
           const bg = document.createElementNS(NS, "rect"); [["x", clip[0]], ["y", clip[1]], ["width", clip[2]], ["height", clip[3]], ["rx", 18], ["fill", "#e9e1cf"]].forEach(([a, v]) => bg.setAttribute(a, v)); svg.appendChild(bg);
           parent = document.createElementNS(NS, "g"); parent.setAttribute("clip-path", `url(#${id})`); svg.appendChild(parent); }
         const wrap = document.createElementNS(NS, "g"); wrap.setAttribute("transform", `translate(${x},${y}) scale(${k})`); parent.appendChild(wrap);
-        const r = Rig.make(name, o || {}); wrap.appendChild(r.el); Rig.init(r, (o && o.face) || "neutral", (o && o.pose) || (o && o.prop ? "phone" : "rest"), o && o.look);
+        const r = Rig.make(name, o || {}); wrap.appendChild(r.el); Rig.init(r, (o && o.face) || "neutral", (o && o.pose) || (o && o.prop ? Rig.PROP_POSE[o.prop] || "phone" : "rest"), o && o.look);
       }
       const names = Object.keys(Rig.CAST);
       if (who === "ALL") {
-        text(90, 130, "THE CAST", 96, "h");
-        names.forEach((n, i) => { const x = 250 + i * 355; figure(n, x, 930, 0.8, { face: ["happy", "happy", "smug", "deadpan", "deadpan"][i] || "neutral", flip: false }); text(x, 1030, n, 44, "h", "middle"); });
+        // The line-up: the five regulars, then the real people of an episode (made per story from the same skeleton).
+        text(90, 120, "THE CAST", 92, "h"); text(94, 166, "RIG V2 · ADULT FIGURES DRAWN IN CODE · studio/engine/rig.js", 24, "c");
+        const row = [
+          ["BENNY", { face: "happy", prop: "phone", screen: "green", pose: "phone" }], ["CHAD", { face: "greedy", pose: "cheer" }], ["HAL", { face: "smug", prop: "espresso", pose: "hold" }],
+          ["MARTHA", { face: "deadpan", prop: "bill", pose: "phone" }], ["REGGIE", { face: "plain", prop: "stamp", pose: "hold" }],
+          ["ALLISON_ELLSWORTH", { face: "happy", pose: "wave" }], ["STEPHEN_ELLSWORTH", { face: "neutral", pose: "fold" }], ["ROHAN_OZA", { face: "smug", pose: "hips" }], ["RAMON_LAGUARTA", { face: "plain", pose: "think" }]];
+        const xs = [118, 318, 530, 732, 935, 1170, 1392, 1598, 1800];
+        row.forEach(([n, o], i) => { figure(n, xs[i], 900, 0.78, Object.assign({ flip: false }, o)); text(xs[i], 968, n.split("_")[0], n.length > 8 ? 30 : 38, "h", "middle"); });
+        text(118, 1030, "REGULARS", 24, "c"); text(1120, 1030, "STORY PEOPLE · MADE PER EPISODE", 22, "c");
+        const ln = document.createElementNS(NS, "path"); ln.setAttribute("d", "M1060,300 L1060,1030"); ln.setAttribute("stroke", "#c9bfa6"); ln.setAttribute("stroke-width", "4"); ln.setAttribute("stroke-dasharray", "10 12"); svg.appendChild(ln);
       } else {
-        const faces = Object.keys(Rig.FACES), poses = Object.keys(Rig.POSES), props = Object.keys(Rig.PROPS);
+        const faces = Object.keys(Rig.FACES), poses = Object.keys(Rig.POSES), props = Object.keys(Rig.PROPS), G = Rig.geo(Rig.CAST[who] || {});
         text(90, 130, who, 110, "h"); text(92, 176, "MODEL SHEET · DRAWN BY studio/engine/rig.js", 24, "c");
         figure(who, 330, 980, 1.18, { face: "neutral" });
-        text(640, 212, "EXPRESSIONS", 26, "c");
-        faces.forEach((f, i) => { const cx = 640 + (i % 5) * 250, cy = 232 + Math.floor(i / 5) * 248, w = 226, h = 204;
-          figure(who, cx + w / 2, cy + 344, 0.55, { face: f }, [cx, cy, w, h]); text(cx + w / 2, cy + h + 30, f.toUpperCase(), 22, "c", "middle"); });
-        text(640, 768, "POSES AND PROPS", 26, "c");
-        const row = poses.slice(1, 6).map((p) => ({ pose: p, label: p })).concat(props.slice(0, 2).map((p) => ({ prop: p, label: p })));
-        row.forEach((o, i) => { const x = 720 + i * 172; figure(who, x, 1026, 0.34, Object.assign({ face: "neutral" }, o)); text(x, 1062, o.label.toUpperCase(), 18, "c", "middle"); });
+        text(640, 206, "EXPRESSIONS", 26, "c");
+        faces.forEach((f, i) => { const cx = 640 + (i % 5) * 248, cy = 222 + Math.floor(i / 5) * 186, w = 220, h = 156, k = 0.7;
+          figure(who, cx + w / 2, cy + 22 - G.yT * k, k, { face: f }, [cx, cy, w, h]); text(cx + w / 2, cy + h + 22, f.toUpperCase(), 19, "c", "middle"); });
+        text(640, 800, "POSES AND PROPS", 26, "c");
+        const row = ["point", "shrug", "cheer", "think", "wave", "fold"].map((p) => ({ pose: p, label: p })).concat(props.slice(0, 1).map((p) => ({ prop: p, label: p })));
+        row.forEach((o, i) => { const x = 720 + i * 172; figure(who, x, 1030, 0.32, Object.assign({ face: "neutral" }, o)); text(x, 1062, o.label.toUpperCase(), 18, "c", "middle"); });
       }
     </script>
   </body>

@@ -133,6 +133,7 @@
     build(timeline, story, lines, total) {
       tl = timeline; V = !!story.vertical; W = V ? 1080 : 1920;
       const root = document.getElementById("root"), res = TM.resolve(story, lines, total); L = res.L;
+      if (story.cast) Rig.register(story.cast); // the episode's own people (same keys as Rig.CAST)
       let stage = root;
       if (V) { // a Short: the question on top, a square window of the stage, big subtitles below
         root.classList.add("vertical"); document.documentElement.style.cssText = document.body.style.cssText = "width:1080px;height:1920px";
