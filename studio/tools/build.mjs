@@ -103,6 +103,20 @@ function main() {
     if (p.opts.src.includes("..") || !fs.existsSync(from)) { console.warn(`warning: picture ${p.opts.src} (${p.id || "a split panel"}) is not in the episode folder`); continue; }
     fs.mkdirSync(path.dirname(to), { recursive: true }); fs.copyFileSync(from, to); p.opts.href = `assets/ep/${slug}/${p.opts.src}`;
   }
+  // Names the engine does not know: an unknown set quietly draws as "studio" and an unknown thing as a box, which hides the fault, so say so here.
+  {
+    const src = (f) => fs.readFileSync(path.join(STUDIO, "engine", f), "utf8");
+    const names = (text, from, to) => { const a = text.indexOf(from), b = text.indexOf(to, a); return new Set([...text.slice(a, b).matchAll(/^    ([a-z_0-9]+)(?:\(o\)|: *\{)/gm)].map((m) => m[1])); };
+    const setsJs = src("sets.js"), sets = names(setsJs, "const SETS = {", "const PROPS = {"), props = names(setsJs, "const PROPS = {", "// Ambient motion"), things = names(src("rig.js"), "const THINGS = {", "// { hat:");
+    const bad = { set: new Map(), thing: new Map(), prop: new Map() };
+    const note = (k, n, id) => { if (!bad[k].has(n)) bad[k].set(n, []); if (bad[k].get(n).length < 4) bad[k].get(n).push(id); };
+    for (const p of story.shots.flatMap((s) => (s.type === "split" ? s.panels || [] : [s]))) {
+      if (p.set && !sets.has(p.set)) note("set", p.set, p.id || "a panel");
+      for (const a of p.actors || []) if (a.thing && !things.has(a.thing)) note("thing", a.thing, p.id || "a panel");
+      for (const q of p.props || []) if (q.type && !props.has(q.type)) note("prop", q.type, p.id || "a panel");
+    }
+    for (const k of Object.keys(bad)) if (bad[k].size) console.warn(`warning: unknown ${k} name(s), drawn as a fallback: ` + [...bad[k]].map(([n, ids]) => `${n} (${ids.join(", ")})`).join("; "));
+  }
   fs.mkdirSync(out, { recursive: true });
   const tags = [], mix = silent ? null : mixState(ep, { story, lines, total, res });
   if (mix && mix.current) {

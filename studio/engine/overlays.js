@@ -9,11 +9,12 @@
   const slam = (tl, e, t, big) => { e.style.opacity = 0; tl.fromTo(e, { opacity: 0, scale: big ? 1.7 : 1.3 }, { opacity: 1, scale: 1, duration: big ? 0.16 : 0.22, ease: big ? "power4.in" : "back.out(1.8)", immediateRender: false }, t); };
   const shake = (tl, world, t) => { if (world) tl.fromTo(world, { x: 0 }, { x: 12, duration: 0.04, yoyo: true, repeat: 5, ease: "none", immediateRender: false }, t); };
 
+  const HEART = '<svg viewBox="0 0 24 22" width="0.8em" height="0.74em" style="margin-right:.16em;vertical-align:-.04em"><path d="M12,21 C2,13 2,4 7,3 C10,2.5 12,5 12,6 C12,5 14,2.5 17,3 C22,4 22,13 12,21Z" fill="#e0262b" stroke="#1b1d36" stroke-width="1.8"/></svg>';
   const O = {
     // { type:"counter", from, to, prefix, suffix, decimals, dur, tone, cap, pos, plate }  plate:true puts a dark halo behind it, for busy backgrounds
     // (the same option works on a slam)
     counter: {
-      build(o) { return place(el("counter " + (o.tone || "") + (o.plate ? " plate" : ""), `${esc(o.prefix || "")}<span class="num">${fmt(o.from || 0, o.decimals)}</span>${esc(o.suffix || "")}${o.cap ? `<span class="cap">${esc(o.cap)}</span>` : ""}`), o, "tr"); },
+      build(o) { return place(el("counter " + (o.tone || "") + (o.plate ? " plate" : ""), `${o.icon === "heart" ? HEART : ""}${esc(o.prefix || "")}<span class="num">${fmt(o.from || 0, o.decimals)}</span>${esc(o.suffix || "")}${o.cap ? `<span class="cap">${esc(o.cap)}</span>` : ""}`), o, "tr"); },
       // No callbacks here: a seek does not fire onUpdate, so the number is tweened as a property and formatted by a modifier.
       play(tl, e, o, t) { const num = e.querySelector(".num"); slam(tl, e, t);
         tl.fromTo(num, { textContent: o.from || 0 }, { textContent: o.to, duration: o.dur || 1.2, ease: "power2.out", immediateRender: false, modifiers: { textContent: (v) => fmt(parseFloat(v), o.decimals) } }, t + 0.1);
@@ -73,6 +74,8 @@
     },
   };
   O.post = O.doc;
+  // { type:"hearts", from, to, suffix, pos }: a heart counter climbing in a corner of a phone screen (a counter with a heart in front)
+  O.hearts = { build: (o) => O.counter.build(Object.assign({ icon: "heart", tone: "red", pos: "tr" }, o)), play: (...a) => O.counter.play(...a) };
 
   window.Overlays = O;
 })();

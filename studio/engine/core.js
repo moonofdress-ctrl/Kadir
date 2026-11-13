@@ -24,6 +24,7 @@
   function world(parent, s, t0, t1, vb) {
     const svg = document.createElementNS(NS, "svg");
     svg.setAttribute("viewBox", vb || "0 0 1920 1080"); svg.setAttribute("preserveAspectRatio", "xMidYMid slice"); parent.appendChild(svg);
+    if (s.set && !Sets.SETS[s.set]) console.warn("studio: unknown set \"" + s.set + "\", drawn as the studio");
     const set = (Sets.SETS[s.set] || Sets.SETS.studio)(s.opts || {});
     g(svg, set.back);
     const props = (s.props || []).map((p) => ({ p, def: Sets.PROPS[p.type] })).filter((x) => x.def);
@@ -72,7 +73,7 @@
     const sh = div("shot", root); show(sh, t0, last ? null : t1);
     const w = div("world", sh), inner = div("inner", w); world(inner, s, t0, t1);
     // Shot size: "frame": "medium" or "close" moves in on the figures (or on "focus": [x, y]) so faces fill the picture.
-    const box = (s.actors || []).map((a) => { const T = a.thing && Rig.THINGS[a.thing] ? Rig.THINGS[a.thing]({}) : null, sc = a.scale || 1, x = a.x != null ? a.x : 960, y = a.y || 900, half = (T ? T.w + 200 : 250) * sc, h = (T ? T.h + (T.hover ? 70 : 0) : 600) * sc;
+    const box = (s.actors || []).map((a) => { const T = a.thing ? (Rig.THINGS[a.thing] || Rig.THINGS.box)({}) : null, sc = a.scale || 1, x = a.x != null ? a.x : 960, y = a.y || 900, half = (T ? T.w + 200 : 250) * sc, h = (T ? T.h + (T.hover ? 70 : 0) : 600) * sc;
       return { l: x - half, r: x + half, top: y - h, mid: y - h * (T ? 0.55 : s.frame === "close" ? 0.72 : 0.62) }; });
     const L0 = Math.min(...box.map((b) => b.l)), R0 = Math.max(...box.map((b) => b.r));
     const k = s.focus ? FRAME[s.frame] || 1 : box.length ? Math.max(1, Math.min(FRAME[s.frame] || 1, W / (R0 - L0))) : 1; // never so close that a figure is cut off
