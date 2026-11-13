@@ -40,3 +40,10 @@ Wider pull: 646 English library voices (narrative, educational, documentary, exp
 | Both | rate 1.0 (normal credit cost), 730-day removal notice (the voice cannot vanish mid-series), commercial use allowed on paid plans |
 
 Recommendation: **Michael** for the energy and the gap-free flow a 13-minute cartoon needs; **Jon** if the user prefers a warmer, deeper, calmer narrator. Listening file: `two_finalists.mp3` (Michael first, then Jon). Final check by ear on 17 Nov: the Poppi opening with each, about 300 characters each.
+
+## The rival's voice, from a 14 s phone recording the user sent (13 Nov 2026)
+Transcript (faster-whisper small.en): "American agents are taking pictures. They know exactly who she is. Jensen has no idea." / character toast: "To our customers. To friends." / "Under that table, her company is buying billions of dollars."
+- Narrator: male, American. 30 words in 13 s = **138 words a minute** (a measured storytelling pace, not fast).
+- **Short sentences with pauses between them**: six speech gaps of 0.3-1.0 s in 13 s. The earlier finding "the track never goes silent" holds because music fills these gaps, not because the narrator never stops.
+- Speaker match (Resemblyzer, against 85 library and account voices): best 0.66 (Josh, Hey Its Brad, Titan: male American storytellers). Same-speaker scores are usually above 0.75, and the clip has room noise and music, so **the exact voice is not identified**. Male voices score clearly above female ones (0.64 vs 0.55). Jon 0.58, Michael 0.54, Brian 0.62.
+- Consequence: the rival's delivery (measured pace, dramatic pauses, warm storyteller) is closer to **Jon** than to Michael; the earlier point for Michael ("no pauses, like the rival") was wrong. Recommendation changed to Jon first, Michael second. A clean 30-60 s clip without music would allow a real identification.
