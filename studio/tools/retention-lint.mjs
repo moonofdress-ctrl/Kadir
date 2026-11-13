@@ -50,6 +50,8 @@ for (const s of shots) {
   for (const o of s.overlays || []) beats.add(refTime(o, s));
   for (const p of s.panels || []) beats.add(refTime(p, s));
   for (const p of [...(s.props || []), ...(s.panels || []).flatMap((x) => x.props || [])]) if (p.at != null || p.cue) beats.add(refTime(p, s));
+  // story scenes change the picture on each part's cue (a board node, a bar part, a flow, a year, a message)
+  for (const p of s.props || []) for (const k of ["nodes", "edges", "parts", "flows", "years", "messages"]) for (const x of p[k] || []) if (x.cue || x.at != null) beats.add(refTime(x, s));
   for (const a of actorsOf(s)) { if (a.cue || a.at != null) beats.add(refTime(a, s)); for (const x of a.acts || []) beats.add(refTime(x, s)); for (const id of a.speaks || []) if (res.L[id]) beats.add(res.L[id].a); }
 }
 const bt = [...beats].filter((t) => t <= total).sort((a, b) => a - b); bt.push(total);

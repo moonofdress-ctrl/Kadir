@@ -65,13 +65,13 @@ N: Six months of practice. Then the lights came on.
 [SCENE s09 | set: a dark living room, a phone torch as the only spotlight, Allison rehearsing to five stuffed toys lined up on a sofa]
 N: The ask: four hundred thousand dollars for ten percent of the company. That puts the whole thing at four million.
 [SCENE s10 | set: the TV pitch stage, wide from the rafters, the MOTHER bottle on its table, five chairs in a curve, the figures in four of them leaning back into shadow one by one]
-N: Accounts of the episode say the investors pushed hard. One worried how much more money it would need. One disliked the valuation. Others objected to the plan to run their own factory.
+N: Accounts of the episode say the investors pushed hard: on how much more money it would need, on the valuation, on the plan to run their own factory.
 [SKIT k05 | set: close on the bottle on its table, sweating, counting on its fingers as each chair goes dark]
 SODA: No. No. No. No...
 BENNY: That's four.
 SODA: ...Anyone? Anyone at all?
 [CARD]
-N: The fifth chair was Rohan Oza's. Four hundred thousand dollars... for twenty-five percent.
+N: The fifth chair was Rohan Oza's. He would pay the full ask... for twenty-five percent.
 [SCENE s11 | set: under the lit chair, Oza's hand sliding the briefcase across the dark stage floor; a counter rolls from $4M down to $1.6M | text: $1.6M]
 N: Same money, two and a half times the share. By our arithmetic, his offer valued the company at one point six million dollars, not four.
 [SKIT k06 | set: a pawn shop at night, one hanging bulb, Hal behind the glass counter, Chad slapping the bottle down on it]
@@ -146,7 +146,7 @@ CHAD: Not anymore. Now you're content.
 SODA: Is that better?
 CHAD: It's louder.
 [CARD]
-N: But sales are not cash. Allison told Entrepreneur that at twenty million dollars of revenue, the company had seventy-five thousand dollars in the bank... and wasn't sure it could make payroll.
+N: But sales are not cash. Allison told Entrepreneur that at twenty million dollars of revenue, the company had seventy-five thousand in the bank... and wasn't sure it could make payroll.
 [SCENE s20 | set: a bank vault at night, a single bulb, a nearly empty steel shelf with one small stack of cash | text: $75,000]
 [SCENE s21 | set: a supplier's office at night, one desk lamp, Stephen leaning over the desk with his hands clasped]
 N: Stephen remembers "begging and pleading" with suppliers for more time to pay.
@@ -176,7 +176,7 @@ BENNY: ...It is a nice picture.
 [CARD]
 N: In December 2022, another twenty-five million dollars. Sales had grown a hundred and forty-eight percent in a year.
 [SCENE s24 | set: an empty mall at night, one escalator running, the can riding it up into the dark]
-N: By 2024, the company says, revenue was about five hundred million dollars. By our arithmetic, that's more than a hundred times 2020.
+N: By 2024, the company says, revenue was about five hundred million dollars. More than a hundred times 2020, by our arithmetic.
 [SKIT k17 | set: the top of the escalator, Chad leaping off it, Hal waiting with a tiny espresso]
 CHAD: Four million to five hundred million!
 HAL: Sales. Not profit.
@@ -219,7 +219,7 @@ GIANT: Borrow one?
 MARTHA: Nobody lends you a can.
 GIANT: Then... buy one.
 [CARD]
-N: Coca-Cola had launched its own, called Simply Pop. And Olipop, the brand behind the fridge post, was valued at one point eight five billion dollars in February 2025, according to CNBC.
+N: Coca-Cola had launched its own, Simply Pop. And Olipop, the brand behind the fridge post, was valued at one point eight five billion dollars in February 2025, according to CNBC.
 [SCENE s30 | set: a city street at night, two towers lit from below: a red giant can with a face, COCA-COLA written on it, and a tall slim can-shaped tower, OLIPOP written on it | text: $1.85B]
 N: Olipop's chief executive, Ben Goodwin, had said in 2023 that both PepsiCo and Coca-Cola had approached it about a sale.
 [SKIT k22 | set: a school gym at night, one mirror ball, the giant can holding a bouquet, the Poppi can alone by the wall]
@@ -244,12 +244,12 @@ N: Health was the word everyone wanted. But on Poppi's can, that word was alread
 [CARD]
 N: In May 2024, a shopper filed a class action in federal court in California. Three more suits followed, all before the same judge.
 [SCENE s33 | set: a federal courthouse corridor at night, one wall sconce, a shopper carrying a stack of papers and a can, seen from behind]
-N: According to the lawsuit, a can held about two grams of prebiotic fiber... so you'd need more than four cans a day for any effect, with the sugar that comes with them.
+N: The lawsuit said a can held about two grams of prebiotic fiber... so you'd need more than four cans a day for any effect, sugar included.
 [SCENE s34 | set: a courtroom at night, one lamp on the bench, the can in the witness box, a huge magnifying glass over its label]
 [SKIT k24 | set: the witness box, close, Reggie as the clerk with his clipboard, the can sweating]
 REGGIE: Two grams of fiber?
 SODA: Allegedly.
-REGGIE: Four cans a day?
+REGGIE: Four a day?
 SODA: Allegedly!
 [CARD]
 N: Poppi denied all of it. It says its label claims were true. It told Fortune a can has three grams of fiber and five grams of sugar.
@@ -341,14 +341,14 @@ N: Here is the part almost nobody noticed.
 N: According to Bloomberg, that earnout could reach three hundred million dollars, for targets due by the third quarter of 2027.
 [SCENE s46 | set: a staircase going down into the dark, one bulb per landing, a counter rolling down as the can walks down the steps | text: counter $278M to $12M]
 [CARD]
-N: In December 2025, PepsiCo valued it at two hundred and seventy-eight million. By June 2026, a hundred and seventeen million. As of the fifth of September 2026, a filing said about twelve million.
+N: In December 2025, PepsiCo valued it at two hundred and seventy-eight million. By June 2026, a hundred and seventeen. As of the fifth of September 2026, a filing said about twelve million.
 [SKIT k34 | set: the bottom of the staircase, the can holding one tiny coin, Hal beside it with a tiny espresso]
 SODA: Is that... my bonus?
 HAL: What's left of it.
 SODA: It could have been three hundred million!
 HAL: Could have.
 [CARD]
-N: By our arithmetic, of every hundred dollars PepsiCo once expected to pay, it now expects about four. Bloomberg reported the cut in October 2026.
+N: By our arithmetic, for each hundred dollars PepsiCo once expected to pay, it now expects about four. Bloomberg reported the cut in October 2026.
 [SCENE s47 | set: a newsroom at night, one desk lamp, a document card with Ken Shea's words "seems plausible" highlighted, BLOOMBERG, OCT 2026]
 N: Ken Shea of Bloomberg Intelligence said that at this rate, it "seems plausible" PepsiCo may not pay any of it. PepsiCo said Poppi grew its sales volume by double digits in the third quarter and gained share.
 [SKIT k35 | set: Martha's kitchen at night, Martha with her calculator, the giant can squeezed onto a tiny chair]
@@ -364,9 +364,9 @@ N: So where does this touch you? In your fridge. The class action covered cans b
 BENNY: This one just says soda.
 SODA: Read the small print.
 BENNY: It says... soda.
-N: And next time you stand in the soda aisle, read the word on the can. Somebody paid a lot of money for it.
+N: And next time you stand in the soda aisle, read the can. Somebody paid a lot of money for that word.
 [CARD]
-N: The founders started again. On the ninth of November 2026, they launched a new drink, Jetty, at two forty-nine a bottle, paid for with two and a half million dollars of their own.
+N: The founders started again. On the ninth of November 2026, they launched Jetty, a new drink at two forty-nine a bottle, with two and a half million dollars of their own.
 [SCENE s49 | set: a grocery shelf before opening, one stock-room light, Allison's hand placing a new bottle with a face, JETTY written on it | text: JETTY]
 N: Allison told Modern Retail: "No one is excited to see me win again."
 [SKIT k37 | set: the same shelf, Benny with a basket, the old can and the new bottle side by side]

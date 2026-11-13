@@ -64,12 +64,12 @@
     "light": { "x": 960, "y": 540, "r": 900, "color": "#ffd9a0", "dark": 0.5 },
     "overlays": [ { "type": "doc", "source": "PepsiCo · press release", "date": "17 MAR 2025", "by": "PepsiCo",
       "quote": "...including $300 million of anticipated cash tax benefits.", "hl": ["anticipated cash tax benefits"], "at": 0.2, "hlAt": 2.6 } ] },
-  { "id": "c7s42a", "cue": "L182", "set": "night_office", "opts": { "dress": "executive", "night": true }, "place": "PepsiCo office", "camera": "pan_left", "grade": "night",
-    "light": { "x": 700, "y": 300, "r": 1000, "color": "#ffd9a0", "dark": 0.45 },
-    "props": [ { "type": "bars", "x": 160, "y": 200, "w": 580, "h": 600, "items": [
-      { "label": "THE PRICE", "val": 85, "show": "$85", "color": "#1fa85b" },
-      { "label": "TAX BENEFIT", "val": 15, "show": "$15", "color": "#e0262b" } ] } ] },
-  { "id": "c7s42b", "cue": "L182", "word": 13, "set": "plain", "opts": { "color": "#1b1d2e" }, "place": "the dark", "camera": "push_in", "frame": "close", "focus": [960, 680], "grade": "night",
+  { "id": "c7s42a", "cue": "L182", "explains": "Of every hundred dollars in the headline price, fifteen is a tax benefit and eighty-five is the price itself.",
+    "set": "dark_stage", "opts": { "night": true }, "place": "the split", "light": { "x": 960, "y": 560, "r": 1300, "dark": 0.45 },
+    "props": [ { "type": "split_bar", "total": "$100", "note": "of the headline price", "parts": [
+      { "label": "TAX BENEFIT", "amount": "$15", "share": 0.15, "color": "#e0262b", "cue": "L182", "word": 8 },
+      { "label": "NET PRICE", "amount": "$85", "share": 0.85, "color": "#1fa85b", "cue": "L182", "word": 13 } ] } ] },
+  { "id": "c7s42b", "cue": "L182", "word": 17, "set": "plain", "opts": { "color": "#1b1d2e" }, "place": "the dark", "camera": "push_in", "frame": "close", "focus": [960, 680], "grade": "night",
     "motif": "word on the can", "callback": "the price tag",
     "light": { "x": 960, "y": 420, "r": 800, "color": "#fff1c4", "dark": 0.5 },
     "actors": [ { "thing": "soda", "shape": "can", "tag": "$1.95B", "tagTear": 1.4, "tagAfter": "$1.65B", "x": 960, "y": 900, "scale": 0.75, "face": "neutral", "enter": "none",

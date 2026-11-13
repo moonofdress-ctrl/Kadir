@@ -18,142 +18,15 @@
       ]
     },
     {
-      "id": "c4s01",
-      "cue": "L090",
-      "set": "boardroom",
-      "opts": {
-        "night": true,
-        "glass": true
-      },
-      "place": "boardroom",
-      "camera": "push_in",
-      "grade": "night",
-      "callback": "Oza's briefcase",
-      "light": {
-        "x": 960,
-        "y": 300,
-        "r": 800,
-        "color": "#fff1c4",
-        "dark": 0.5
-      },
-      "actors": [
-        {
-          "who": "ROHAN_OZA",
-          "y": 980,
-          "enter": "none",
-          "x": 560,
-          "scale": 0.85,
-          "face": "smug",
-          "pose": "point",
-          "acts": [
-            {
-              "cue": "L090",
-              "word": 8,
-              "face": "deadpan",
-              "pose": "fold"
-            }
-          ]
-        },
-        {
-          "thing": "soda",
-          "shape": "can",
-          "scale": 0.45,
-          "y": 860,
-          "enter": "none",
-          "x": 1560,
-          "face": "shocked",
-          "acts": [
-            {
-              "cue": "L090",
-              "word": 6,
-              "face": "happy",
-              "pose": "cheer"
-            }
-          ]
-        }
-      ],
-      "props": [
-        {
-          "type": "cheque",
-          "x": 700,
-          "y": 850,
-          "t": "$13M",
-          "move": {
-            "to": [
-              1060,
-              850
-            ],
-            "cue": "L090",
-            "word": 3,
-            "dur": 1.2
-          }
-        },
-        {
-          "type": "briefcase",
-          "x": 360,
-          "y": 980
-        }
-      ]
-    },
-    {
-      "id": "c4s02",
-      "cue": "L090",
-      "word": 12,
-      "set": "red_carpet",
-      "opts": {
-        "night": true,
-        "flash": [
-          0.2,
-          0.6,
-          1.1,
-          1.5,
-          2,
-          2.4
-        ]
-      },
-      "place": "red carpet",
-      "camera": "pan_right",
-      "grade": "night",
-      "light": {
-        "x": 1600,
-        "y": 520,
-        "r": 800,
-        "color": "#ffffff",
-        "dark": 0.5
-      },
-      "actors": [
-        {
-          "thing": "soda",
-          "shape": "can",
-          "scale": 0.4,
-          "y": 960,
-          "enter": "none",
-          "x": 760,
-          "face": "smug",
-          "pose": "wave"
-        },
-        {
-          "thing": "soda",
-          "shape": "can",
-          "scale": 0.36,
-          "y": 900,
-          "enter": "none",
-          "x": 960,
-          "face": "happy",
-          "pose": "cheer"
-        },
-        {
-          "thing": "soda",
-          "shape": "can",
-          "scale": 0.4,
-          "y": 960,
-          "enter": "none",
-          "x": 1150,
-          "face": "smug",
-          "pose": "present",
-          "flip": true
-        }
-      ]
+      "id": "c4b01", "cue": "L090", "explains": "Who put money into Poppi in 2021: Oza's firm led the thirteen-million round, and famous names joined it.",
+      "set": "evidence_wall", "opts": { "night": true }, "place": "evidence wall", "light": { "x": 960, "y": 470, "r": 1100, "dark": 0.55 },
+      "props": [ { "type": "board_web", "overview": 0.3, "nodes": [
+        { "id": "p", "kind": "badge", "icon": "can", "color": "#e8589a", "name": "POPPI", "sub": "August 2021", "cue": "L090", "word": 3 },
+        { "id": "c", "kind": "badge", "icon": "building", "name": "CAVU", "sub": "Oza's firm", "cue": "L090", "word": 8 },
+        { "id": "o", "kind": "face", "who": "ROHAN_OZA", "name": "ROHAN OZA", "cue": "L090", "word": 10 },
+        { "id": "h", "kind": "badge", "icon": "person", "name": "HALSEY", "cue": "L090", "word": 15 },
+        { "id": "w", "kind": "badge", "icon": "person", "name": "RUSSELL WESTBROOK", "cue": "L090", "word": 17 } ],
+        "edges": [ { "from": "c", "to": "p", "label": "led the $13M round" }, { "from": "o", "to": "c", "label": "his firm" }, { "from": "h", "to": "p", "label": "joined" }, { "from": "w", "to": "p", "label": "joined" } ] } ]
     },
     {
       "id": "c4s03",

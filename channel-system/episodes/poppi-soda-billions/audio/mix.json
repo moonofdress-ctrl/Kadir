@@ -1,8 +1,8 @@
 {
-  "signature": "9cd9801823218138",
-  "total": 783.229,
+  "signature": "f1b4aacf38cf3e0c",
+  "total": 783.184,
   "lufs": -14.01,
-  "true_peak_db": -1.1,
+  "true_peak_db": -1.04,
   "limiter": {
     "max_cut_db": 7.3,
     "pct_cut_over_1db": 1.33
@@ -164,192 +164,192 @@
         "why": "c4t01 card"
       },
       {
-        "t": 316.481,
+        "t": 316.458,
         "name": "card",
         "why": "c4t02 card"
       },
       {
-        "t": 340.821,
+        "t": 340.798,
         "name": "card",
         "why": "c4t03 card"
       },
       {
-        "t": 372.333,
+        "t": 372.31,
         "name": "paper",
         "why": "c4s14 doc"
       },
       {
-        "t": 381.529,
+        "t": 381.506,
         "name": "card",
         "why": "c4t04 card"
       },
       {
-        "t": 388.859,
+        "t": 388.836,
         "name": "chapter",
         "why": "c5ch chapter"
       },
       {
-        "t": 390.259,
+        "t": 390.236,
         "name": "card",
         "why": "c5t01 card"
       },
       {
-        "t": 412.849,
+        "t": 412.826,
         "name": "card",
         "why": "c5t02 card"
       },
       {
-        "t": 442.599,
+        "t": 442.576,
         "name": "card",
         "why": "c5t03 card"
       },
       {
-        "t": 447.692,
+        "t": 447.669,
         "name": "paper",
         "why": "c5s31b doc"
       },
       {
-        "t": 458.103,
+        "t": 458.08,
         "name": "card",
         "why": "c5t04 card"
       },
       {
-        "t": 463.533,
+        "t": 463.51,
         "name": "chapter",
         "why": "c6c00 chapter"
       },
       {
-        "t": 465.607,
+        "t": 465.584,
         "name": "card",
         "why": "c6t01 card"
       },
       {
-        "t": 474.223,
+        "t": 474.2,
         "name": "paper",
         "why": "c6s04 doc"
       },
       {
-        "t": 489.923,
+        "t": 489.9,
         "name": "card",
         "why": "c6t02 card"
       },
       {
-        "t": 491.644,
+        "t": 491.621,
         "name": "paper",
         "why": "c6s08 doc"
       },
       {
-        "t": 494.109,
+        "t": 494.086,
         "name": "paper",
         "why": "c6s09 doc"
       },
       {
-        "t": 498.603,
+        "t": 498.58,
         "name": "paper",
         "why": "c6s10 doc"
       },
       {
-        "t": 512.09,
+        "t": 512.045,
         "name": "card",
         "why": "c6t03 card"
       },
       {
-        "t": 531.83,
+        "t": 531.785,
         "name": "card",
         "why": "c6t04 card"
       },
       {
-        "t": 549.382,
+        "t": 549.337,
         "name": "card",
         "why": "c6t05 card"
       },
       {
-        "t": 564.454,
+        "t": 564.409,
         "name": "card",
         "why": "c6t06 card"
       },
       {
-        "t": 568.784,
+        "t": 568.739,
         "name": "chapter",
         "why": "c7c00 chapter"
       },
       {
-        "t": 571.694,
+        "t": 571.649,
         "name": "card",
         "why": "c7t01 card"
       },
       {
-        "t": 580.244,
+        "t": 580.199,
         "name": "card",
         "why": "c7t02 card"
       },
       {
-        "t": 596.095,
+        "t": 596.05,
         "name": "card",
         "why": "c7t03 card"
       },
       {
-        "t": 598.043,
+        "t": 597.998,
         "name": "paper",
         "why": "c7s41 doc"
       },
       {
-        "t": 629.679,
+        "t": 629.634,
         "name": "card",
         "why": "c7t04 card"
       },
       {
-        "t": 646.78,
+        "t": 646.735,
         "name": "paper",
         "why": "c7s44f doc"
       },
       {
-        "t": 655.029,
+        "t": 654.984,
         "name": "card",
         "why": "c7t05 card"
       },
       {
-        "t": 658.829,
+        "t": 658.784,
         "name": "chapter",
         "why": "c8c00 chapter"
       },
       {
-        "t": 660.498,
+        "t": 660.453,
         "name": "card",
         "why": "c8t01 card"
       },
       {
-        "t": 670.499,
+        "t": 670.454,
         "name": "card",
         "why": "c8t02 card"
       },
       {
-        "t": 691.687,
+        "t": 691.642,
         "name": "card",
         "why": "c8t03 card"
       },
       {
-        "t": 702.825,
+        "t": 702.78,
         "name": "paper",
         "why": "c8s09 doc"
       },
       {
-        "t": 722.765,
+        "t": 722.72,
         "name": "card",
         "why": "c8t04 card"
       },
       {
-        "t": 745.005,
+        "t": 744.96,
         "name": "card",
         "why": "c8t05 card"
       },
       {
-        "t": 756.915,
+        "t": 756.87,
         "name": "paper",
         "why": "c8s22 doc"
       },
       {
-        "t": 772.229,
+        "t": 772.184,
         "name": "card",
         "why": "c8t06 card"
       }
@@ -358,6 +358,10 @@
   "dead_air": {
     "pauses_over_250ms": 30,
     "longest": [
+      {
+        "t": 372.29,
+        "d": 0.31
+      },
       {
         "t": 55.38,
         "d": 0.3
@@ -371,12 +375,8 @@
         "d": 0.3
       },
       {
-        "t": 372.32,
-        "d": 0.3
-      },
-      {
-        "t": 592.48,
-        "d": 0.3
+        "t": 191.03,
+        "d": 0.29
       }
     ]
   }
