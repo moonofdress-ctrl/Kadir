@@ -9,6 +9,7 @@
     "angle": ["low", "high"],
     "light.kind": ["spot", "window", "screen", "neon", "day", "fire"],
     "opts.palette": ["teal", "green", "blue", "navy", "red", "amber", "violet", "wood", "cream", "pink", "mint", "slate", "ochre", "olive", "plum"],
+    "set.mid": "a set's own middle layer ({ back, mid, front } in sets.js): figures, living things and extras stand in front of it at any y, e.g. the wire desk",
     "opts.bare": "leave out a set's dressing",
     "extras": "shot or panel: number of background people (up to 14)",
     "sound": ["sting"],

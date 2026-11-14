@@ -91,7 +91,7 @@
    "camera": "still",
    "actors": [
     {
-     "who": "HUANG",
+     "who": "JENSEN_HUANG",
      "x": 1000,
      "y": 930,
      "scale": 0.8,
@@ -336,7 +336,7 @@
    "camera": "pull_out",
    "actors": [
     {
-     "who": "KRESS",
+     "who": "COLETTE_KRESS",
      "x": 1250,
      "y": 960,
      "face": "neutral",
@@ -1195,7 +1195,7 @@
    "callback": "Kress's calculator",
    "actors": [
     {
-     "who": "KRESS",
+     "who": "COLETTE_KRESS",
      "x": 1250,
      "y": 960,
      "face": "neutral",

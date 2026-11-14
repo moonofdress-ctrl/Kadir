@@ -1,11 +1,11 @@
 {
-  "signature": "b56f868fb884730b",
-  "total": 740.714,
+  "signature": "d6dbe27904a72684",
+  "total": 747.714,
   "lufs": -14.02,
   "true_peak_db": -1.1,
   "limiter": {
     "max_cut_db": 6,
-    "pct_cut_over_1db": 1.04
+    "pct_cut_over_1db": 1.03
   },
   "voice": {
     "speakers": {
@@ -52,62 +52,596 @@
     "source": "house bed (made in code)",
     "files": [],
     "beds": [
-      "steady"
+      "steady",
+      "calm",
+      "uneasy",
+      "steady",
+      "calm",
+      "uneasy",
+      "steady",
+      "calm"
     ],
-    "climax_chapters": [],
+    "climax_chapters": [
+      7
+    ],
     "db_under_voice": 19,
     "uncredited": []
   },
   "effects": {
-    "count": 1,
-    "per_minute": 0.1,
+    "count": 55,
+    "per_minute": 4.4,
     "list": [
       {
-        "t": 8.58,
+        "t": 19.69,
         "name": "card",
-        "why": "t01 card"
+        "why": "c1t01 card"
+      },
+      {
+        "t": 21.018,
+        "name": "riser",
+        "why": "c1s09 shot"
+      },
+      {
+        "t": 47.16,
+        "name": "card",
+        "why": "c1t02 card"
+      },
+      {
+        "t": 50.96,
+        "name": "card",
+        "why": "c1t03 card"
+      },
+      {
+        "t": 67.669,
+        "name": "stamp",
+        "why": "c1s20 stamp"
+      },
+      {
+        "t": 72.007,
+        "name": "card",
+        "why": "c1t04 card"
+      },
+      {
+        "t": 88.93,
+        "name": "chapter",
+        "why": "c2c00 chapter"
+      },
+      {
+        "t": 92.12,
+        "name": "card",
+        "why": "c2t01 card"
+      },
+      {
+        "t": 120.497,
+        "name": "card",
+        "why": "c2t02 card"
+      },
+      {
+        "t": 151.012,
+        "name": "card",
+        "why": "c2t03 card"
+      },
+      {
+        "t": 162.062,
+        "name": "chapter",
+        "why": "c3ch chapter"
+      },
+      {
+        "t": 163.462,
+        "name": "card",
+        "why": "c3t01 card"
+      },
+      {
+        "t": 178.109,
+        "name": "card",
+        "why": "c3t02 card"
+      },
+      {
+        "t": 179.304,
+        "name": "riser",
+        "why": "c3s21 shot"
+      },
+      {
+        "t": 183.729,
+        "name": "card",
+        "why": "c3t03 card"
+      },
+      {
+        "t": 196.869,
+        "name": "card",
+        "why": "c3t04 card"
+      },
+      {
+        "t": 212.079,
+        "name": "card",
+        "why": "c3t05 card"
+      },
+      {
+        "t": 228.069,
+        "name": "card",
+        "why": "c3t06 card"
+      },
+      {
+        "t": 237.579,
+        "name": "chapter",
+        "why": "c4c00 chapter"
+      },
+      {
+        "t": 238.979,
+        "name": "card",
+        "why": "c4t01 card"
+      },
+      {
+        "t": 266.309,
+        "name": "card",
+        "why": "c4t02 card"
+      },
+      {
+        "t": 285.738,
+        "name": "card",
+        "why": "c4t03 card"
+      },
+      {
+        "t": 293.959,
+        "name": "paper",
+        "why": "c4s12 doc"
+      },
+      {
+        "t": 299.185,
+        "name": "paper",
+        "why": "c4s13 doc"
+      },
+      {
+        "t": 303.999,
+        "name": "paper",
+        "why": "c4s14 doc"
+      },
+      {
+        "t": 306.99,
+        "name": "paper",
+        "why": "c4s15 doc"
+      },
+      {
+        "t": 314.669,
+        "name": "riser",
+        "why": "c4k13a4 shot"
+      },
+      {
+        "t": 316.029,
+        "name": "card",
+        "why": "c4t04 card"
+      },
+      {
+        "t": 336.039,
+        "name": "chapter",
+        "why": "c5s00 chapter"
+      },
+      {
+        "t": 339.921,
+        "name": "card",
+        "why": "c5s02 card"
+      },
+      {
+        "t": 369.527,
+        "name": "card",
+        "why": "c5s12 card"
+      },
+      {
+        "t": 383.558,
+        "name": "card",
+        "why": "c5s17 card"
+      },
+      {
+        "t": 422.652,
+        "name": "chapter",
+        "why": "c6ch chapter"
+      },
+      {
+        "t": 424.052,
+        "name": "card",
+        "why": "c6t01 card"
+      },
+      {
+        "t": 432.542,
+        "name": "card",
+        "why": "c6t02 card"
+      },
+      {
+        "t": 438.955,
+        "name": "riser",
+        "why": "c6s37d shot"
+      },
+      {
+        "t": 447.782,
+        "name": "card",
+        "why": "c6t03 card"
+      },
+      {
+        "t": 455.422,
+        "name": "card",
+        "why": "c6t04 card"
+      },
+      {
+        "t": 468.872,
+        "name": "card",
+        "why": "c6t05 card"
+      },
+      {
+        "t": 500.632,
+        "name": "card",
+        "why": "c6t06 card"
+      },
+      {
+        "t": 514.742,
+        "name": "chapter",
+        "why": "c7s01 chapter"
+      },
+      {
+        "t": 516.142,
+        "name": "card",
+        "why": "c7s02 card"
+      },
+      {
+        "t": 519.252,
+        "name": "card",
+        "why": "c7s04 card"
+      },
+      {
+        "t": 550.562,
+        "name": "card",
+        "why": "c7s18 card"
+      },
+      {
+        "t": 581.962,
+        "name": "card",
+        "why": "c7s31 card"
+      },
+      {
+        "t": 592.692,
+        "name": "card",
+        "why": "c7s37 card"
+      },
+      {
+        "t": 617.713,
+        "name": "chapter",
+        "why": "c8ch chapter"
+      },
+      {
+        "t": 619.113,
+        "name": "card",
+        "why": "c8t01 card"
+      },
+      {
+        "t": 638.183,
+        "name": "card",
+        "why": "c8t02 card"
+      },
+      {
+        "t": 659.462,
+        "name": "card",
+        "why": "c8t03 card"
+      },
+      {
+        "t": 670.122,
+        "name": "card",
+        "why": "c8t04 card"
+      },
+      {
+        "t": 678.512,
+        "name": "card",
+        "why": "c8t05 card"
+      },
+      {
+        "t": 721.794,
+        "name": "card",
+        "why": "c8t06 card"
+      },
+      {
+        "t": 723.186,
+        "name": "riser",
+        "why": "c8s56 shot"
+      },
+      {
+        "t": 734.794,
+        "name": "card",
+        "why": "c8t07 card"
       }
     ]
   },
   "ambience": [
     {
-      "place": "studio",
-      "set": "studio",
+      "place": "corner office",
+      "set": "corner_office",
+      "bed": "office"
+    },
+    {
+      "place": "boardroom",
+      "set": "boardroom",
+      "bed": "office"
+    },
+    {
+      "place": "Martha's kitchen",
+      "set": "kitchen",
+      "bed": "room"
+    },
+    {
+      "place": "conference room",
+      "set": "pitch_stage",
       "bed": "studio"
     },
     {
-      "place": "office",
+      "place": "bus stop",
+      "set": "bus_stop",
+      "bed": "street"
+    },
+    {
+      "place": "newsroom",
+      "set": "newsroom",
+      "bed": "machine"
+    },
+    {
+      "place": "bank trading floor",
+      "set": "trading_floor",
+      "bed": "office"
+    },
+    {
+      "place": "diner",
+      "set": "diner",
+      "bed": "shop"
+    },
+    {
+      "place": "executive corridor",
+      "set": "corridor",
+      "bed": "room"
+    },
+    {
+      "place": "empty cinema",
+      "set": "cinema",
+      "bed": "room"
+    },
+    {
+      "place": "playground",
+      "set": "lawn",
+      "bed": "outdoors"
+    },
+    {
+      "place": "records office",
+      "set": "records_office",
+      "bed": "room"
+    },
+    {
+      "place": "executive corridor, before",
+      "set": "corridor",
+      "bed": "room"
+    },
+    {
+      "place": "TV studio",
+      "set": "tv_studio",
+      "bed": "studio"
+    },
+    {
+      "place": "theatre coat check",
+      "set": "theatre",
+      "bed": "room"
+    },
+    {
+      "place": "gym",
+      "set": "gym",
+      "bed": "room"
+    },
+    {
+      "place": "rooftop terrace",
+      "set": "rooftop",
+      "bed": "outdoors"
+    },
+    {
+      "place": "stock exchange floor",
+      "set": "trading_floor",
+      "bed": "crowd"
+    },
+    {
+      "place": "Chad's bedroom",
+      "set": "bedroom",
+      "bed": "night"
+    },
+    {
+      "place": "printing press",
+      "set": "printing_press",
+      "bed": "machine"
+    },
+    {
+      "place": "empty dark corridor",
+      "set": "corridor",
+      "bed": "room"
+    },
+    {
+      "place": "courthouse corridor",
+      "set": "corridor",
+      "bed": "room"
+    },
+    {
+      "place": "Benny's living room",
+      "set": "living_room",
+      "bed": "room"
+    },
+    {
+      "place": "empty after-hours office",
+      "set": "office",
+      "bed": "night"
+    },
+    {
+      "place": "laundromat",
+      "set": "laundromat",
+      "bed": "machine"
+    },
+    {
+      "place": "records room",
+      "set": "records_office",
+      "bed": "room"
+    },
+    {
+      "place": "glass lobby",
+      "set": "lobby",
+      "bed": "room"
+    },
+    {
+      "place": "engraver's shop",
+      "set": "back_shop",
+      "bed": "room"
+    },
+    {
+      "place": "document desk",
+      "set": "desk_top",
+      "bed": "office"
+    },
+    {
+      "place": "print shop",
+      "set": "back_shop",
+      "bed": "machine"
+    },
+    {
+      "place": "recruiter's office",
+      "set": "night_office",
+      "bed": "office"
+    },
+    {
+      "place": "Kress's desk",
+      "set": "corner_office",
+      "bed": "office"
+    },
+    {
+      "place": "car repair garage",
+      "set": "garage",
+      "bed": "machine"
+    },
+    {
+      "place": "empty conference room",
+      "set": "pitch_stage",
+      "bed": "office"
+    },
+    {
+      "place": "food truck",
+      "set": "food_truck",
+      "bed": "street"
+    },
+    {
+      "place": "Benny's cubicle",
       "set": "office",
       "bed": "office"
+    },
+    {
+      "place": "library reading room",
+      "set": "library",
+      "bed": "room"
+    },
+    {
+      "place": "empty hilltop weather station",
+      "set": "weather_station",
+      "bed": "outdoors"
+    },
+    {
+      "place": "auction house",
+      "set": "auction_house",
+      "bed": "crowd"
+    },
+    {
+      "place": "night market stalls",
+      "set": "farmers_market",
+      "bed": "market"
+    },
+    {
+      "place": "hospital waiting room",
+      "set": "hospital",
+      "bed": "room"
+    },
+    {
+      "place": "bank front office",
+      "set": "bank",
+      "bed": "room"
+    },
+    {
+      "place": "empty shuttered street at dusk",
+      "set": "street",
+      "bed": "street"
+    },
+    {
+      "place": "radio studio",
+      "set": "radio_studio",
+      "bed": "studio"
+    },
+    {
+      "place": "train platform",
+      "set": "train_platform",
+      "bed": "street"
+    },
+    {
+      "place": "sports bar",
+      "set": "sports_bar",
+      "bed": "crowd"
+    },
+    {
+      "place": "theatre box office",
+      "set": "theatre",
+      "bed": "street"
+    },
+    {
+      "place": "dressing room",
+      "set": "theatre",
+      "bed": "room"
+    },
+    {
+      "place": "park bench",
+      "set": "lawn",
+      "bed": "night"
+    },
+    {
+      "place": "empty stadium",
+      "set": "stadium",
+      "bed": "outdoors"
+    },
+    {
+      "place": "lighthouse",
+      "set": "lighthouse",
+      "bed": "outdoors"
+    },
+    {
+      "place": "phone booth on a rainy street",
+      "set": "phone_booth",
+      "bed": "street"
+    },
+    {
+      "place": "empty bus stop",
+      "set": "bus_stop",
+      "bed": "rain"
     }
   ],
   "ambience_default": true,
   "foley": {
-    "count": 2,
-    "sounds": 10
+    "count": 200,
+    "sounds": 517
   },
   "dead_air": {
-    "pauses_over_250ms": 17,
+    "pauses_over_250ms": 18,
     "longest": [
       {
-        "t": 354.59,
+        "t": 161.77,
+        "d": 1.22
+      },
+      {
+        "t": 358.59,
         "d": 0.41
       },
       {
-        "t": 414.28,
+        "t": 418.28,
         "d": 0.38
       },
       {
-        "t": 530.44,
+        "t": 536.44,
         "d": 0.35
       },
       {
-        "t": 729.68,
+        "t": 736.68,
         "d": 0.33
-      },
-      {
-        "t": 218.27,
-        "d": 0.29
       }
     ]
   }

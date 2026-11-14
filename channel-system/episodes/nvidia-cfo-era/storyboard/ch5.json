@@ -74,7 +74,7 @@
    "callback": "the calculator (s01)",
    "actors": [
     {
-     "who": "KRESS",
+     "who": "COLETTE_KRESS",
      "x": 1240,
      "y": 1000,
      "scale": 0.9
@@ -108,7 +108,7 @@
    "camera": "still",
    "actors": [
     {
-     "who": "KRESS",
+     "who": "COLETTE_KRESS",
      "x": 1180,
      "y": 990,
      "scale": 0.9
@@ -376,7 +376,7 @@
      },
      "actors": [
       {
-       "who": "KRESS",
+       "who": "COLETTE_KRESS",
        "x": 960,
        "y": 990,
        "scale": 0.8
@@ -403,7 +403,7 @@
      },
      "actors": [
       {
-       "who": "KRESS",
+       "who": "COLETTE_KRESS",
        "x": 960,
        "y": 990,
        "scale": 0.8
@@ -429,7 +429,7 @@
      },
      "actors": [
       {
-       "who": "KRESS",
+       "who": "COLETTE_KRESS",
        "x": 1320,
        "y": 990,
        "scale": 0.8
@@ -610,7 +610,7 @@
      },
      "actors": [
       {
-       "who": "STREETER",
+       "who": "SUSANNAH_STREETER",
        "x": 960,
        "y": 980,
        "scale": 0.8
@@ -636,7 +636,7 @@
      },
      "actors": [
       {
-       "who": "IVES",
+       "who": "DAN_IVES",
        "x": 960,
        "y": 980,
        "scale": 0.8
@@ -662,7 +662,7 @@
      },
      "actors": [
       {
-       "who": "KENWELL",
+       "who": "BRET_KENWELL",
        "x": 960,
        "y": 980,
        "scale": 0.8
@@ -688,7 +688,7 @@
      },
      "actors": [
       {
-       "who": "LURIA",
+       "who": "GIL_LURIA",
        "x": 960,
        "y": 980,
        "scale": 0.8
@@ -744,7 +744,7 @@
      },
      "actors": [
       {
-       "who": "STREETER",
+       "who": "SUSANNAH_STREETER",
        "x": 960,
        "y": 980,
        "scale": 0.8
@@ -770,7 +770,7 @@
      },
      "actors": [
       {
-       "who": "IVES",
+       "who": "DAN_IVES",
        "x": 960,
        "y": 980,
        "scale": 0.8
@@ -796,7 +796,7 @@
      },
      "actors": [
       {
-       "who": "KENWELL",
+       "who": "BRET_KENWELL",
        "x": 960,
        "y": 980,
        "scale": 0.8
@@ -822,7 +822,7 @@
      },
      "actors": [
       {
-       "who": "LURIA",
+       "who": "GIL_LURIA",
        "x": 960,
        "y": 980,
        "scale": 0.8
@@ -910,7 +910,7 @@
      },
      "actors": [
       {
-       "who": "STREETER",
+       "who": "SUSANNAH_STREETER",
        "x": 960,
        "y": 980,
        "scale": 0.8
@@ -936,7 +936,7 @@
      },
      "actors": [
       {
-       "who": "IVES",
+       "who": "DAN_IVES",
        "x": 960,
        "y": 980,
        "scale": 0.8
@@ -962,7 +962,7 @@
      },
      "actors": [
       {
-       "who": "KENWELL",
+       "who": "BRET_KENWELL",
        "x": 960,
        "y": 980,
        "scale": 0.8
@@ -988,7 +988,7 @@
      },
      "actors": [
       {
-       "who": "LURIA",
+       "who": "GIL_LURIA",
        "x": 960,
        "y": 980,
        "scale": 0.8
