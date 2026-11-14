@@ -1,0 +1,21 @@
+# Brief
+
+Topic: Nvidia after Jensen Huang: why the CFO, Colette Kress, is running a $4 trillion company on an interim title, and the first earnings call without him (follow-up to episode 1, nvidia-ceo-probe)
+Working title: Why Nvidia Is Led by Its CFO Now (from the topics file; the packager decides)
+Why now (event and date): Huang resigned as CEO, president and director on Thu 12 Nov 2026 (Nvidia release, effective immediately); results Tue 17 Nov 2026 at about 4:20 p.m. ET and the call at 5:00 p.m. ET (= 00:20 and 01:00 Turkey time, Wed 18 Nov), the first without him
+Thumbnail money figure: not chosen. Candidates with sources: about -$493B market value, Fri 6 Nov to Thu 12 Nov ($4.498T to $4.005T; Yahoo live blog, own subtraction, must be checked); or the expected quarter, about $109B revenue (StoneX). Check before use
+Approved by the user on: 2026-11-14 (topic, Gate 1: topic #2 chosen); script and look gates not yet
+Still moving (yes/no): yes
+State of the story as of Sat 14 Nov 2026 (research.md): Huang resigned (Nvidia release 12 Nov; board accepted it 11 Nov per TechCrunch citing the filing), no reason given; Kress is Interim CEO and keeps the CFO job; Harvey C. Jones is the first board chair; search for a permanent CEO is open (FT via Yahoo: Arm's Rene Haas approached, single source); shares about $162-166; HSBC cut to Hold 13 Nov; results Tue 17 Nov. Fri 13 Nov close not found
+Voice for this episode (scratch track / final track from <product>):
+Videos already published on this story by the biggest channels (title, date, views, angle): titles only, no views measured (research.md section 11); all take the scandal or 'who replaces him' angle. The analyst must measure
+What the editorial limits leave out, and why the angle still carries a title people click: same limits as episode 1: the women (and the named executive) are not named or drawn; allegations are stated as reported, once; no caricature of Huang speaking; the money is the story. The angle is the finance chief and the clock to her first call, which the scandal videos do not cover (hypothesis, unmeasured)
+The human story (the one or two named people, what one of them does not know, the moment of danger):
+Opening scene (the place, the two people, what the viewer knows):
+Schedule (compressed; the normal D-4 plan does not fit because the topic was chosen on Sat 14 Nov, D-3; the user set the upload day, Tue 17 Nov): upload Tue 17 Nov 22:00 TR (= 14:00 ET, BEFORE the 16:20 ET results); Gate 1 Sat 14 Nov (done: topic approved, research the same day); Gate 2 Sun 15 Nov morning (script, fact-check and Gate 2 the same morning; start only after engine-v2 is merged: if it is not merged by Sun 15 midday, build on the old engine and say so); Look gate Sun 15 Nov evening (build and 30 s draft the same day); QA pass and its fixes Mon 16 Nov; render Mon 16 Nov night; Tue 17 Nov morning TR the currency check (Monday's close, any board decision, any successor), then upload at 22:00 TR. Same-day steps: Gate 1 + research (Sat); script + fact-check + Gate 2 (Sun morning); build + Look gate (Sun); QA (Mon day). Needs: engine-v2 merged and ElevenLabs upgraded (or scratch voice) by Sun 15 Nov.
+Late result: build the episode so the call's result can be added late. The video goes out 2h20 before the results, so the ending is held open: the last chapter is a countdown to 4:20 p.m. ET with 'what to look for' (revenue against about $109B, the guidance, any word on the CEO search) and no claim about the outcome. After the call (00:20-01:00 TR Wed 18 Nov) the result goes into a pinned comment and the description, and a Short on Wed 18 Nov carries it; the video is not re-rendered. Alternative if the user prefers the result in the video: move the upload to Wed 18 Nov (the one open question for the user).
+Backup: <folder of the copy after the render, SETUP.md>
+
+Gates the user has waived for this episode (which, and the date they said so; the Look gate's draft is sent to the user even then):
+Look gate (date the 30 s draft was sent to the user, and the verdict beside `brand/quality_reference.jpg`; say whether the user or QA gave it):
+The user's comments (on the Look gate draft, the render, the upload; dated, in their words, for the improver):
