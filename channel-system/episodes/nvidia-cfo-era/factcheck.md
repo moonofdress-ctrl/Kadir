@@ -91,3 +91,11 @@ Checked against primary documents where they exist: Nvidia's 12 Nov release (Exh
 - **Storyboard:** screen text `UP TO -12%` must read `OVER 12% DOWN` (s36), and the s54 card source line NVIDIA RELEASE, 12 NOV 2026; second pass checks every screen row.
 - **brief.md "State of the story"**: add the board's 13 Nov statement (selecting a search firm, no candidate formally engaged) at the currency check; Fri 13 Nov close is now known ($162.85, market value below $4T).
 - Kress's age rests on Yahoo plus the 2013 filing (59 or 60): keep "according to Yahoo Finance".
+
+## Opening rewrite (14 Nov 2026, main session; for the second pass to re-confirm)
+| Claim | Line | Source | Status | Note |
+|---|---|---|---|---|
+| "A slice of it sits in every S&P 500 index fund." | CH1 after s03 | Nvidia is an S&P 500 constituent (S&P Dow Jones Indices); an index fund holds every member | Verified | No weight given here; CH7 carries the "about seven dollars in every hundred" figure |
+| "Tuesday: Nvidia's first results call since it went public... without Jensen Huang as chief executive." | CH1 s03a | Nvidia IPO 22 Jan 1999; Huang co-founder and CEO from 1993 until his resignation effective 12 Nov 2026 (8-K, Item 5.02); call 17 Nov (28 Oct notice) | Verified | Says nothing about who speaks on the call |
+| "what to listen for at four twenty" | CH1 after k02 | Results about 4:20 p.m. ET Tue 17 Nov (research.md timeline) | Verified | Promise kept by CH8 |
+| Sticky note TUE 5:00 PM / TODAY on Kress's desk phone | s01, s03a, s56 | Cartoon prop; call time 5:00 p.m. ET (notice) | Safeguard 4/5 pass | A prop, not a claim about what she did; drawing stays neutral |

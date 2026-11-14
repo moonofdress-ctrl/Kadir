@@ -11,6 +11,7 @@ RUNNING NUMBER: the price tag hanging from CHIP's corner (market value): $4.0T (
 PLANT: the black leather jacket on the empty chief executive's chair (0:03) -> PAYOFF: CH2 s11 the same jacket draped over three seats at once; CH4 s24 the chair is bare, the jacket gone; last shot s58, the bare chair with a call agenda on it (CALL 5:00 PM ET).
 PLANT: the wall clock above Kress's desk, its hands hidden in shadow (0:08) -> PAYOFF: CH7 s46 the light reaches it and a calendar page TUE 17 NOV hangs beside it; CH8 s53 its hands race; last shot s58 it reads 4:20.
 PLANT: Kress's desk calculator beside her CFO plate (0:10) -> PAYOFF: CH5 s32 the calculator and two plates on one desk; CH8 s56 the calculator beside the call phone and a printed script.
+PLANT: the desk phone with the sticky note TUE 5:00 PM (0:03, close-up s03a at about 0:30) -> PAYOFF: CH8 s56 the same phone, cord tangled round the calculator, the note now reads TODAY.
 PLANT (short loop): "Keep that number in mind" on four trillion dollars (CH1, s03) -> PAYOFF: CH6 s37, "Remember that four trillion dollars?"
 PLANT (long loop): HAL "The one on the door." (CH1, k04) -> PAYOFF: CH8 k30, BENNY reads the door: "Interim. And a question mark."
 RETURNING LINE: CHIP "Who's in the chair?" (CH1, k01) -> REGGIE "Which chair? There are two now." (CH4, k13) -> BENNY "So who's in the chair?" / CHIP "The one with the calculator." (CH5, k16) -> CHIP "And who's in the chair after her?" (CH6, k21) -> CHIP "Who's in the chair on Tuesday?" (CH8, k29) -> BENNY "For now? The one with the calculator." (CH8, k31, the last character line; it pays off the calculator plant)
@@ -23,22 +24,25 @@ VIEWER: BENNY on his phone at a bus stop (CH1 k02), on his couch after midnight 
 - C (a shocking figure and its contradiction): a ticker sign slamming down in the dark. N: "On Thursday, Nvidia's shares fell more than twelve percent at one point. The person now running it... is the person who counts its money."
 
 ## CH1 The empty chair
-[SCENE s01 | set: a corner office at night, one desk lamp; a black leather jacket hangs on the back of an empty chief executive's chair; through the glass door, a gloved hand presses a strip of masking tape over the plate CHIEF EXECUTIVE, and the tape roll runs out on the last letter; close on the next desk, where a woman works under the lamp beside a calculator and a CFO plate (Colette Kress caricature, neutral, working) | text: COLETTE KRESS]
-N: Thursday, the twelfth of November. The chief executive's chair at Nvidia is empty... and the person now in charge is still sitting at her old desk.
+[SCENE s01 | set: a corner office at night, one desk lamp; a black leather jacket hangs on the back of an empty chief executive's chair; through the glass door, a gloved hand presses a strip of masking tape over the plate CHIEF EXECUTIVE, and the tape roll runs out on the last letter; close on the next desk, where a woman works under the lamp beside a calculator, a CFO plate and a desk phone with a yellow sticky note on its receiver (Colette Kress caricature, neutral, working) | text: COLETTE KRESS]
+N: Thursday, the twelfth of November. Nvidia's chief executive chair is empty... and the person now in charge is still at her old desk.
 [SCENE s02 | set: a long boardroom table at night, one green banker's lamp; an older man in a grey suit stands at its head with a printed statement (Harvey C. Jones caricature, neutral); the chair at the head of the table still wears its plastic wrap and a shop tag, never sat in; above the far desk a wall clock, its hands lost in shadow | text: HARVEY C. JONES]
 N: Colette Kress, the finance chief, has just been named interim chief executive. Harvey Jones becomes the board's first-ever chair.
 [SKIT k01 | set: the office desk, close on a computer chip with a face and white gloves, NVIDIA written on it, peeking over the calculator at the empty chair; Hal leaning in the doorway with a tiny espresso cup]
 CHIP: Who's in the chair?
 HAL: Nobody. That's the news.
 [CARD]
-N: By Thursday's closing bell, the market valued this company at about four trillion dollars. Keep that number in mind.
+N: By Thursday's close, the market valued Nvidia at about four trillion dollars. Keep that number in mind.
 [SCENE s03 | set: the chip on the desk, a price tag hanging from its corner flips over to read $4.0T; the chip gulps | text: $4.0T]
-N: The board gave no reason. And on Tuesday, Nvidia reports its numbers... with her in both seats.
+N: A slice of it sits in every S&P 500 index fund.
+[SCENE s03a | set: close on the desk phone under the lamp, the yellow sticky note on its receiver reads TUE 5:00 PM; the lamp's heat curls the note's corner up like a raised eyebrow | text: TUE 5:00 PM ET]
+N: And on her desk... a date. Tuesday: Nvidia's first results call since it went public... without Jensen Huang as chief executive.
 [SKIT k02 | set: a bus stop on a grey morning, daylight, a queue of commuters (extras), Benny staring at his phone, Chad beside him with an energy drink]
 BENNY: Wait. Who's running Nvidia?
 CHAD: The money person.
 BENNY: Is that good?
 CHAD: Ask me Tuesday.
+N: By the end, you'll know exactly what to listen for at four twenty.
 [CARD]
 N: So who is running Nvidia now... and why does Tuesday matter?
 [SCENE s04 | set: the boardroom at night under the green lamp, the table itself has a face and gloves (THE BOARD written on its edge) and opens a folder marked REVIEW, so thick the lamp tips over]
@@ -365,7 +369,7 @@ CHIP: Who's in the chair on Tuesday?
 BENNY: She is.
 CHIP: And the stock?
 BENNY: Nobody knows that yet. Including us.
-[SCENE s56 | set: Kress's desk at night, close: the calculator beside a desk phone and a printed script under the lamp, the phone cord tangled round the calculator; nobody in the chair yet]
+[SCENE s56 | set: Kress's desk at night, close: the calculator beside a desk phone and a printed script under the lamp, the phone cord tangled round the calculator, the yellow sticky note on its receiver now reads TODAY; nobody in the chair yet]
 [CARD]
 N: And here's the twist. On Tuesday, the person reporting the quarter... is also the person the market is judging by it.
 [SKIT k30 | set: the corridor outside the corner office at night, Benny reading the door: the INTERIM tape, the CFO plate, the frame with the question mark]
@@ -388,7 +392,7 @@ N: And why does Tuesday matter? Because at four twenty, the numbers and the new 
 | Dialogue words and share | 25% or more | 502 of 1,900 = 26.4% |
 | Skits per chapter | 2 or more | CH1 4, CH2 5, CH3 4, CH4 4, CH5 4, CH6 4, CH7 5, CH8 7 (37 in all) |
 | Longest gap between two character lines | 30 s, never over 45 | 89 words = 34 s (CH7, from k23 to k24a, three short lines and two cards); next 75 words = 29 s (CH6), 73 (CH8), 72 (CH1) |
-| First character line / big number / title question | 0:12-0:25 / by 0:30 / by 0:45 | about 0:12 (k01) / about 0:26 / about 0:42 |
+| First character line / big number / title question | 0:12-0:25 / by 0:30 / by 0:45 | about 0:12 (k01) / about 0:24 / about 0:46 (opening rewritten 14 Nov: the countdown is now in the scene, as the phone's note) |
 | Places per chapter | 6 or more, none more than 3 visits | CH1 7 (corner office, boardroom, bus stop, wire desk, trading floor, diner, office corridor); CH2 8 (cinema, records office, playground, glass corridor, TV studio, gym, coat check, rooftop); CH3 9 (exchange floor, Chad's bedroom, printing press, dark corridor, Benny's living room, courthouse corridor, after-hours office, laundromat, records room); CH4 9 (corner office at dawn, glass lobby, door plate, engraver's shop, Kress's desk, boardroom, document desk, print shop, recruiter's office); CH5 9 (office door, Kress's desk, garage, food truck, conference room, Benny's cubicle, four TV studios, library, hilltop weather station); CH6 7 (exchange floor, auction house, market stalls, hospital waiting room, bank office, office door, shuttered street); CH7 8 (Martha's kitchen, corner office, radio studio, sports bar, train platform, box office, park bench, dressing room); CH8 8 (stadium, lighthouse, office door, phone booth, document desk, bus stop, corner office, corridor). Most are at night or indoors with one light; every chapter has daylight somewhere (bus stop and diner; playground and rooftop; the closing bell; the lobby and engraver; garage and food truck; trading floor, hospital and bank; Martha's morning kitchen; the phone booth in grey afternoon). |
 | [CARD] lines | about one every 20 s | 40 = one every 18 s |
 | Lines addressing the viewer | 3 or more | 7: "Keep that number in mind" (CH1), "Remember that four trillion dollars?" (CH6), "So where does this touch you? In a fund you may never open." (CH7), "a company inside your 401(k)" (CH7), "Whether you're thirty or sixty, if you own the index..." (CH7), "Notice the dates." (CH7), "This isn't advice to buy or sell. It's a date on the calendar." (CH7) |
