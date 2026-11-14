@@ -8,7 +8,8 @@
     "night": true,
     "palette": "violet",
     "view": "wide",
-    "clock_lit": false
+    "clock_lit": false,
+    "chair": false
    },
    "place": "corner office",
    "camera": "pan_right",
@@ -38,7 +39,16 @@
      ]
     }
    ],
-   "explains": "It is night in Nvidia's corner office: the boss's chair is empty, and one woman is still working at the next desk."
+   "explains": "It is night in Nvidia's corner office: the boss's chair is empty, and one woman is still working at the next desk.",
+   "props": [
+    {
+     "type": "exec_chair",
+     "x": 700,
+     "y": 900,
+     "k": 0.95,
+     "state": "jacket"
+    }
+   ]
   },
   {
    "id": "c1s02",
@@ -87,7 +97,8 @@
    "opts": {
     "night": true,
     "palette": "violet",
-    "view": "wide"
+    "view": "wide",
+    "chair": false
    },
    "place": "corner office",
    "frame": "close",
@@ -121,7 +132,16 @@
      ]
     }
    ],
-   "explains": "The founder's black jacket still hangs on the chair, but nobody sits in it."
+   "explains": "The founder's black jacket still hangs on the chair, but nobody sits in it.",
+   "props": [
+    {
+     "type": "exec_chair",
+     "x": 700,
+     "y": 900,
+     "k": 0.95,
+     "state": "jacket"
+    }
+   ]
   },
   {
    "id": "c1s04",
@@ -131,12 +151,13 @@
    "opts": {
     "night": true,
     "palette": "violet",
-    "view": "desk"
+    "view": "desk",
+    "bare_desk": true
    },
    "place": "corner office",
    "frame": "medium",
    "focus": [
-    1150,
+    1000,
     560
    ],
    "camera": "still",
@@ -150,7 +171,7 @@
    "actors": [
     {
      "who": "COLETTE_KRESS",
-     "x": 1060,
+     "x": 760,
      "y": 980,
      "scale": 0.9,
      "face": "neutral",
@@ -174,7 +195,31 @@
      "at": 0.3
     }
    ],
-   "explains": "The person now in charge is Colette Kress, Nvidia's finance chief, still at her own desk with her calculator."
+   "explains": "The person now in charge is Colette Kress, Nvidia's finance chief, still at her own desk with her calculator.",
+   "props": [
+    {
+     "type": "name_plate",
+     "x": 923,
+     "y": 722,
+     "k": 1.1,
+     "t": "CFO",
+     "tape": true
+    },
+    {
+     "type": "calculator",
+     "x": 1220,
+     "y": 722,
+     "k": 1.045,
+     "t": "4.0"
+    },
+    {
+     "type": "desk_phone",
+     "x": 1528,
+     "y": 722,
+     "k": 1.045,
+     "note": "TUE 5:00 PM"
+    }
+   ]
   },
   {
    "id": "c1s05",
@@ -184,7 +229,8 @@
     "night": true,
     "palette": "violet",
     "view": "wide",
-    "clock_lit": false
+    "clock_lit": false,
+    "chair": false
    },
    "place": "corner office",
    "frame": "medium",
@@ -218,7 +264,16 @@
      ]
     }
    ],
-   "explains": "Above her, the office clock is in shadow: nobody can yet see what time it is for her."
+   "explains": "Above her, the office clock is in shadow: nobody can yet see what time it is for her.",
+   "props": [
+    {
+     "type": "exec_chair",
+     "x": 700,
+     "y": 900,
+     "k": 0.95,
+     "state": "jacket"
+    }
+   ]
   },
   {
    "id": "c1s06",
@@ -228,7 +283,8 @@
    "opts": {
     "night": true,
     "palette": "violet",
-    "view": "desk"
+    "view": "desk",
+    "bare_desk": true
    },
    "place": "corner office",
    "frame": "close",
@@ -262,7 +318,31 @@
      ]
     }
    ],
-   "explains": "She has the new title, interim chief executive, but the plate on her desk still says CFO."
+   "explains": "She has the new title, interim chief executive, but the plate on her desk still says CFO.",
+   "props": [
+    {
+     "type": "name_plate",
+     "x": 923,
+     "y": 722,
+     "k": 1.1,
+     "t": "CFO",
+     "tape": true
+    },
+    {
+     "type": "calculator",
+     "x": 1220,
+     "y": 722,
+     "k": 1.045,
+     "t": "4.0"
+    },
+    {
+     "type": "desk_phone",
+     "x": 1528,
+     "y": 722,
+     "k": 1.045,
+     "note": "TUE 5:00 PM"
+    }
+   ]
   },
   {
    "id": "c1s07",
@@ -313,7 +393,16 @@
      "at": 0.3
     }
    ],
-   "explains": "Harvey Jones now leads Nvidia's board, a post the company never had before."
+   "explains": "Harvey Jones now leads Nvidia's board, a post the company never had before.",
+   "props": [
+    {
+     "type": "piggy",
+     "x": 1720,
+     "y": 980,
+     "k": 0.3,
+     "state": "asleep"
+    }
+   ]
   },
   {
    "id": "c1s08",
@@ -342,7 +431,7 @@
    "actors": [
     {
      "who": "HARVEY_JONES",
-     "x": 560,
+     "x": 700,
      "y": 980,
      "scale": 1.0,
      "face": "neutral",
@@ -367,13 +456,14 @@
    "opts": {
     "night": true,
     "palette": "violet",
-    "view": "desk"
+    "view": "desk",
+    "bare_desk": true
    },
    "place": "corner office",
    "frame": "medium",
    "focus": [
-    1100,
-    560
+    1450,
+    520
    ],
    "camera": "still",
    "light": {
@@ -387,7 +477,7 @@
     {
      "thing": "chip",
      "label": "NVIDIA",
-     "x": 1220,
+     "x": 1720,
      "y": 730,
      "scale": 0.5,
      "face": "confused",
@@ -401,10 +491,35 @@
        "word": 2,
        "pose": "point"
       }
-     ]
+     ],
+     "flip": true
     }
    ],
-   "explains": "Nvidia itself, the chip, peeks over the calculator at the empty chair and asks who is in it."
+   "explains": "Nvidia itself, the chip, peeks over the calculator at the empty chair and asks who is in it.",
+   "props": [
+    {
+     "type": "name_plate",
+     "x": 923,
+     "y": 722,
+     "k": 1.1,
+     "t": "CFO",
+     "tape": true
+    },
+    {
+     "type": "calculator",
+     "x": 1220,
+     "y": 722,
+     "k": 1.045,
+     "t": "4.0"
+    },
+    {
+     "type": "desk_phone",
+     "x": 1528,
+     "y": 722,
+     "k": 1.045,
+     "note": "TUE 5:00 PM"
+    }
+   ]
   },
   {
    "id": "c1k01b",
@@ -484,7 +599,7 @@
    "place": "corner office",
    "frame": "close",
    "focus": [
-    1100,
+    1450,
     520
    ],
    "camera": "still",
@@ -499,9 +614,9 @@
    "actors": [
     {
      "thing": "chip",
-     "x": 1220,
-     "y": 820,
-     "scale": 0.7,
+     "x": 1720,
+     "y": 740,
+     "scale": 0.6,
      "face": "neutral",
      "enter": "none",
      "acts": [
@@ -511,7 +626,8 @@
        "face": "shocked",
        "pose": "panic"
       }
-     ]
+     ],
+     "flip": true
     },
     {
      "who": "COLETTE_KRESS",
@@ -536,7 +652,7 @@
      "dur": 1.4,
      "cue": "L005",
      "word": 4,
-     "pos": "top"
+     "pos": "tc"
     }
    ],
    "explains": "The market values Nvidia at about four trillion dollars, and even the chip gulps at the size of it."
@@ -563,9 +679,9 @@
    "actors": [
     {
      "thing": "chip",
-     "x": 1340,
+     "x": 1430,
      "y": 664,
-     "scale": 0.4,
+     "scale": 0.6,
      "face": "scared",
      "tag": "$4.0T",
      "enter": "none",
@@ -579,7 +695,7 @@
     },
     {
      "who": "COLETTE_KRESS",
-     "x": 1560,
+     "x": 1700,
      "y": 860,
      "scale": 0.65,
      "face": "neutral",
@@ -654,7 +770,8 @@
    "opts": {
     "night": true,
     "palette": "violet",
-    "view": "desk"
+    "view": "desk",
+    "bare_desk": true
    },
    "place": "corner office",
    "frame": "close",
@@ -688,7 +805,34 @@
      ]
     }
    ],
-   "explains": "On her desk waits a date: a note on the phone for Tuesday's call."
+   "explains": "On her desk waits a date: a note on the phone for Tuesday's call.",
+   "props": [
+    {
+     "type": "name_plate",
+     "x": 923,
+     "y": 722,
+     "k": 1.1,
+     "t": "CFO",
+     "tape": true
+    },
+    {
+     "type": "calculator",
+     "x": 1220,
+     "y": 722,
+     "k": 1.045,
+     "t": "4.0"
+    },
+    {
+     "type": "desk_phone",
+     "x": 1528,
+     "y": 722,
+     "k": 1.045,
+     "note": "TUE 5:00 PM",
+     "act": "curl",
+     "cue": "L007",
+     "word": 4
+    }
+   ]
   },
   {
    "id": "c1s13",
@@ -766,8 +910,8 @@
    "place": "conference room",
    "frame": "close",
    "focus": [
-    900,
-    560
+    1000,
+    700
    ],
    "camera": "pan_right",
    "light": {
@@ -780,7 +924,7 @@
    "actors": [
     {
      "thing": "chip",
-     "x": 1360,
+     "x": 1150,
      "y": 960,
      "scale": 0.6,
      "face": "sad",
@@ -1176,7 +1320,6 @@
    "place": "newsroom",
    "camera": "pan_right",
    "light": {
-    "kind": "screen",
     "x": 1300,
     "y": 600,
     "r": 800,
@@ -1187,8 +1330,8 @@
     {
      "thing": "teleprinter",
      "label": "NEWS WIRE",
-     "x": 900,
-     "y": 880,
+     "x": 1450,
+     "y": 700,
      "scale": 0.9,
      "face": "shocked",
      "enter": "none",
@@ -1215,12 +1358,11 @@
    "place": "newsroom",
    "frame": "close",
    "focus": [
-    900,
-    620
+    1450,
+    560
    ],
    "camera": "tilt_down",
    "light": {
-    "kind": "screen",
     "x": 1200,
     "y": 560,
     "r": 800,
@@ -1230,8 +1372,8 @@
    "actors": [
     {
      "thing": "teleprinter",
-     "x": 900,
-     "y": 1000,
+     "x": 1450,
+     "y": 700,
      "scale": 1.1,
      "face": "panic",
      "enter": "none",
@@ -1258,12 +1400,11 @@
    "place": "newsroom",
    "frame": "medium",
    "focus": [
-    900,
-    600
+    1300,
+    560
    ],
    "camera": "pan_left",
    "light": {
-    "kind": "screen",
     "x": 1300,
     "y": 600,
     "r": 800,
@@ -1273,8 +1414,8 @@
    "actors": [
     {
      "thing": "teleprinter",
-     "x": 760,
-     "y": 960,
+     "x": 1400,
+     "y": 700,
      "scale": 0.9,
      "face": "scared",
      "enter": "none",
@@ -1562,15 +1703,24 @@
    "actors": [
     {
      "who": "MARTHA",
-     "x": 760,
+     "x": 660,
      "y": 960,
      "scale": 0.85,
      "face": "confused",
      "speaks": [
       "L021"
      ],
-     "enter": "walk",
+     "enter": "none",
      "acts": [
+      {
+       "cue": "L021",
+       "word": 0,
+       "to": [
+        760,
+        960
+       ],
+       "dur": 0.7
+      },
       {
        "cue": "L021",
        "word": 2,
@@ -1580,12 +1730,23 @@
     },
     {
      "who": "HAL",
-     "x": 1100,
+     "x": 1180,
      "y": 960,
      "scale": 0.85,
      "face": "deadpan",
      "prop": "mug",
-     "enter": "walk"
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L021",
+       "word": 1,
+       "to": [
+        1100,
+        960
+       ],
+       "dur": 0.7
+      }
+     ]
     }
    ],
    "explains": "Martha and Hal walk up to the corner office door to ask what the real question is."
