@@ -3,7 +3,7 @@
 
    Automatic: stamp -> "stamp", slam -> "slam", text card -> "card", chapter card -> "chapter", document or post card -> "paper".
    By hand: add "sound": "<name>" to a shot, a panel or an overlay; "sound": false silences an automatic one.
-   Names are the effects in tools/sounds.mjs: stamp, slam, card, chapter, paper, whoosh, ding, pop, tick, riser. */
+   Names are the effects in tools/sounds.mjs: stamp, slam, card, chapter, paper, whoosh, ding, pop, tick, riser, sting. */
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
@@ -15,7 +15,7 @@ const ENGINE = (() => { const w = {}; try { for (const f of ["rig.js", "sets.js"
 export const SET_AMBIENCE = (ENGINE.Sets && ENGINE.Sets.SET_AMBIENCE) || {};
 // Seconds from the start of an overlay to the frame where it lands (see overlays.js).
 const HIT = { slam: 0.16, stamp: 0.14 }, AUTO = { stamp: "stamp", slam: "slam", doc: "paper", post: "paper" };
-const RANK = ["chapter", "slam", "stamp", "riser", "ding", "whoosh", "paper", "pop", "card", "tick"];
+const RANK = ["chapter", "slam", "stamp", "sting", "riser", "ding", "whoosh", "paper", "pop", "card", "tick"];
 const MIN_SPACING = 0.25;
 
 export function soundCues(res) {

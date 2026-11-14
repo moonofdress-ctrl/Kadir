@@ -841,13 +841,6 @@
    "camera": "still",
    "actors": [
     {
-     "thing": "bank",
-     "x": 560,
-     "y": 940,
-     "scale": 0.5,
-     "enter": "none"
-    },
-    {
      "who": "FRANK_LEE",
      "x": 1600,
      "y": 960,

@@ -157,6 +157,12 @@
       for (let t = t0 + 0.7; t < t1 - 0.1; t += 2.3) { tl.set(g1, { opacity: 0.15 }, t); tl.set(g1, { opacity: 0.6 }, t + 0.06); } // the tube buzzes now and then
       return;
     }
+    if (kind === "fire") { // a fireplace: warm, low, flickering (steps made from the time, so a seek is exact)
+      const x = l.x == null ? 1380 : l.x, y = l.y == null ? 760 : l.y, c = l.color || "#ffb060", dk = l.dark == null ? 0.55 : l.dark, rr = l.r || 800;
+      div("light", sh).style.background = `radial-gradient(circle at ${px(x)} ${px(y)}, rgba(8,10,28,0) 0, rgba(8,10,28,${(dk * 0.3).toFixed(2)}) ${Math.round(rr * 0.45)}px, rgba(8,10,28,${dk}) ${rr}px)`;
+      const glow = div("light glow", sh); glow.style.background = `radial-gradient(circle at ${px(x)} ${px(y)}, ${c} 0, rgba(0,0,0,0) ${Math.round(rr * 0.8)}px)`;
+      for (let i = 0, t = t0 + 0.05; t < t1; i++, t += 0.17 + (i % 3) * 0.05) tl.set(glow, { opacity: 0.5 + ((i * 7) % 5) * 0.1 }, t); return;
+    }
     const r = l.r || 700, d = l.dark == null ? 0.72 : l.dark, at = `${l.x == null ? 960 : l.x}px ${l.y == null ? 480 : l.y}px`;
     div("light", sh).style.background = `radial-gradient(circle at ${at}, rgba(8,10,28,0) 0, rgba(8,10,28,${(d * 0.25).toFixed(2)}) ${Math.round(r * 0.45)}px, rgba(8,10,28,${d}) ${r}px)`;
     const glow = div("light glow", sh); glow.style.background = `radial-gradient(circle at ${at}, ${l.color || "#ffd9a0"} 0, rgba(0,0,0,0) ${Math.round(r * 0.75)}px)`;

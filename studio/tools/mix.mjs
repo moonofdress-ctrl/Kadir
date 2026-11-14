@@ -27,7 +27,7 @@ import { RATE, db, lin, readWav, writeWav, loadAudio, mono, loudness, peakLoudne
 
 const TARGET = -14, CEILING_TP = -1, MUSIC_DB = -19, CARD_DIP = -10, CLIMAX_DB = 3, END_RISE_DB = 5;
 // How loud each effect sits, in dB relative to the voice. Rare and soft.
-const SFX_DB = { stamp: -8, slam: -6, card: -15, chapter: -9, paper: -14, whoosh: -12, ding: -12, pop: -12, tick: -14, riser: -10 };
+const SFX_DB = { stamp: -8, slam: -6, card: -15, chapter: -9, paper: -14, whoosh: -12, ding: -12, pop: -12, tick: -14, riser: -10, sting: -9 };
 // Act sounds sit lower than effects (dB relative to the voice); ambience beds lower still (busy places a little higher).
 const FOLEY_DB = { step: -22, sit: -17, rustle: -24, table: -11, slide: -20 }, AMB_DB = { room: -27, office: -25, studio: -28, shop: -24, market: -21, street: -21, outdoors: -23, night: -24, crowd: -20, machine: -22 };
 

@@ -61,6 +61,8 @@ export const EFFECTS = {
   table() { const x = buf(0.5), r = rng(24); tone(x, 0, 0.4, 160, 95, 0.07, 1, 0.3); tone(x, 0, 0.3, 310, 300, 0.05, 0.3); hiss(x, 0, 0.06, r, decay(0.01), 0.7, 600, 4000); return { x: norm(x), anchor: 0 }; },
   // something sliding along a surface
   slide() { const x = buf(0.45), r = rng(25); hiss(x, 0, 0.42, r, swell, 1, 0, 0, (k) => [500 + 400 * k, 1800 + 900 * k]); return { x: norm(x), anchor: 0.15 }; },
+  // a short musical hit for the episode's stingers: a low thump and a minor chord that dies away (1.5 s)
+  sting() { const x = buf(1.5), r = rng(33); tone(x, 0, 0.5, 90, 45, 0.12, 0.9, 0.3); hiss(x, 0, 0.08, r, decay(0.02), 0.5, 300, 3000); for (const f of [196, 233, 293.7, 392]) { tone(x, 0.02, 1.4, f, f, 0.35, 0.22); tone(x, 0.02, 1.4, f * 2, f * 2, 0.2, 0.05); } return { x: norm(x), anchor: 0.02 }; },
   riser() { const x = buf(1.6), r = rng(18); hiss(x, 0, 1.6, r, (t, k) => k * k, 1, 0, 0, (k) => [300 + 1500 * k * k, 900 + 5000 * k * k]); tone(x, 0, 1.6, 180, 880, 9, 0.18);
     for (let i = 0; i < x.length; i++) x[i] *= (i / x.length) ** 1.5 * Math.min(1, (x.length - i) / 480); return { x: norm(x), anchor: 1.6 }; },
 };
@@ -84,6 +86,8 @@ export const AMBIENCES = {
   market(x, r) { hiss(x, 0, AMB_LEN, r, (t) => 0.75 + 0.25 * Math.sin(t * 0.9), 0.6, 250, 2200); chatter(x, r, 70, 0.1); for (let k = 0; k < 5; k++) tone(x, ((r() + 1) / 2) * 15, 0.3, 2600, 2600, 0.06, 0.05); },
   street(x, r, side) { hiss(x, 0, AMB_LEN, r, () => 1, 0.6, 20, 180); for (const c of [1.5, 6.8, 11.9]) hiss(x, c + side * 0.5, 3.2, r, swell, 0.7, 150, 1100); if (side === 1) { tone(x, 9.2, 0.25, 410, 410, 0.2, 0.05); tone(x, 9.2, 0.25, 515, 515, 0.2, 0.04); } },
   outdoors(x, r) { hiss(x, 0, AMB_LEN, r, (t) => 0.6 + 0.4 * Math.sin(t * 0.4) ** 2, 0.4, 60, 700); for (let k = 0; k < 9; k++) { const at = ((r() + 1) / 2) * 15, f = 2800 + ((r() + 1) / 2) * 1500; tone(x, at, 0.09, f, f * 1.25, 0.05, 0.05); tone(x, at + 0.13, 0.08, f * 1.1, f * 0.9, 0.04, 0.04); } },
+  // rain on a street: a steady hiss, higher than traffic, with a softer patter below it
+  rain(x, r) { hiss(x, 0, AMB_LEN, r, (t) => 0.85 + 0.15 * Math.sin(t * 1.3), 0.55, 2500, 9000); hiss(x, 0, AMB_LEN, r, () => 1, 0.3, 300, 1400); },
   night(x, r, side) { hiss(x, 0, AMB_LEN, r, (t) => 0.5 + 0.5 * Math.sin(t * 0.3) ** 2, 0.35, 40, 380); for (let t = 0.2 + side * 0.33; t < AMB_LEN - 0.2; t += 0.7 + ((r() + 1) / 2) * 0.6) for (let p = 0; p < 3; p++) tone(x, t + p * 0.045, 0.025, 4600, 4600, 0.008, 0.06); },
   crowd(x, r) { hiss(x, 0, AMB_LEN, r, (t) => 0.7 + 0.3 * Math.sin(t * 0.7 + 1) ** 2, 0.8, 200, 3500); chatter(x, r, 120, 0.07); },
   machine(x, r, side) { hum(x, 120, 0.05); hiss(x, 0, AMB_LEN, r, () => 1, 0.35, 80, 900); for (let t = 0.5 + side * 0.04; t < AMB_LEN - 0.3; t += 1.0) { tone(x, t, 0.25, 140, 80, 0.05, 0.25, 0.3); tone(x, t + 0.02, 0.2, 1900, 1850, 0.04, 0.05); } },
