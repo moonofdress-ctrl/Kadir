@@ -101,3 +101,21 @@ N: A low angle looks up at power.
 N: A high angle looks down on the small.
 
 GALLERY_FOUNDER: I come from the storyboard's own cast table.
+
+N: A walk, with legs, arms and a little bounce.
+
+N: People walk in from the nearer edge by themselves.
+
+N: A crowded street has people in it.
+
+N: So does a market.
+
+MARTHA: Here, take the bill.
+
+BENNY: Thanks, I guess.
+
+N: She sits down. He turns away.
+
+HAL: Enough!
+
+N: Then he leans in, very close.

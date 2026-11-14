@@ -37,20 +37,40 @@
       // "move": { to: [x, y], cue/word/at, dur }: the prop travels (a parcel along the belt, a pile sliding to its new owner).
       if (x.p.move) { const m = x.p.move, tm = m.cue || m.at != null ? TM.when(m, t0, L) : t0 + 0.3;
         tl.to(e, { x: m.to[0] - (x.p.x || 0), y: (m.to[1] != null ? m.to[1] : x.p.y || 0) - (x.p.y || 0), duration: m.dur || 0.8, ease: m.ease || "power1.inOut" }, tm); } };
+    if (s.extras) crowd(svg, s, t0, t1); // background people stand behind the props and signs
     props.filter((x) => x.p.layer !== "front").forEach(drawProp);
-    (s.actors || []).forEach((a, i) => {
+    // First every figure is made (a handover needs the receiver), then their acts go on the timeline.
+    const list = s.actors || [], made = [], recv = {};
+    list.forEach((a) => (a.acts || []).forEach((act) => { if (act.act === "handover" && a.prop) { const j = list.findIndex((b) => b.who === (act.with || act.to_who)); if (j >= 0) recv[j] = a; } }));
+    list.forEach((a, i) => {
       if (i === skip) return;
-      const x = a.x != null ? a.x : 960, k = a.scale || 1, flip = a.flip != null ? a.flip : a.thing ? false : x > 960;
+      const x = a.x != null ? a.x : 960, k = a.scale || 1, flip = a.flip != null ? a.flip : a.thing ? false : x > 960, gv = recv[i];
+      const spec = gv && !a.prop ? Object.assign({}, a, { prop: gv.prop, screen: gv.screen, sign: gv.sign, tag: gv.tag, open: gv.open, signColor: gv.signColor }) : a;
       const wrap = g(svg); wrap.setAttribute("transform", `translate(${x},${a.y || 900}) scale(${flip ? -k : k},${k})`);
-      const r = Rig.make(a.who, a); wrap.appendChild(r.el); if (flip) Rig.unflip(r);
+      const r = Rig.make(a.who, spec); wrap.appendChild(r.el); if (flip) Rig.unflip(r);
       Rig.init(r, a.face || "neutral", a.pose || (a.prop ? Rig.PROP_POSE[a.prop] || "phone" : "rest"), a.look);
+      if (gv && !a.prop) { const p = r.el.querySelector(".prop"); if (p) p.style.opacity = 0; } // the prop arrives with the handover
+      made[i] = { a, r, x, k, flip };
+    });
+    made.forEach((m, i) => { if (!m) return; const { a, r, x, k, flip } = m, person = !a.thing, sgn = flip ? -k : k;
       const tin = a.cue || a.at != null ? TM.when(a, t0, L) : t0 + 0.05 + i * 0.2;
-      if (a.enter !== "none") { r.el.style.opacity = 0; tl.set(r.el, { opacity: 1 }, tin); Rig.enter(tl, r, a.enter, tin); }
+      // Entrance: a person with no "enter" walks in from the nearer edge; "walk" asks for it; living things pop in as before.
+      const how = a.enter === undefined ? (person ? "walk" : "pop") : a.enter;
+      if (how === "walk" && person) { const edge = x < 960 ? -240 : 2160, d = Math.max(0.7, Math.min(1.6, Math.abs(x - edge) / 650)), dx = (edge - x) / sgn;
+        r.el.style.opacity = 0; tl.set(r.el, { opacity: 1 }, tin);
+        tl.fromTo(r.el, { x: dx }, { x: 0, duration: d, ease: "none", immediateRender: false }, tin); Rig.walk(tl, r, tin, d, dx < 0 ? 1 : -1); }
+      else if (how !== "none") { r.el.style.opacity = 0; tl.set(r.el, { opacity: 1 }, tin); Rig.enter(tl, r, how === "walk" ? "pop" : how, tin); }
       (a.acts || []).forEach((act) => { const t = TM.when(act, t0, L); if (act.face) Rig.face(tl, r, act.face, t); if (act.pose) Rig.pose(tl, r, act.pose, t);
-        // "to": [x, y] walks the figure there (stage coordinates), rocking as it goes; "dur" sets how long it takes.
-        if (act.to) { const d = act.dur || 0.7, y0 = a.y || 900, n = Math.max(1, Math.round(d / 0.16));
-          tl.to(r.el, { x: (act.to[0] - x) / (flip ? -k : k), y: ((act.to[1] != null ? act.to[1] : y0) - y0) / k, duration: d, ease: act.ease || "power1.inOut" }, t);
-          tl.fromTo(r.el, { rotation: -3 }, { rotation: 3, duration: d / n, yoyo: true, repeat: n - 1, ease: "sine.inOut", immediateRender: false }, t); tl.set(r.el, { rotation: 0 }, t + d + 0.01); } });
+        if (act.act === "handover") { const j = list.findIndex((b) => b.who === (act.with || act.to_who)), rm = made[j];
+          Rig.pose(tl, r, "give", t); const p = r.el.querySelector(".prop"); if (p) tl.set(p, { opacity: 0 }, t + 0.42); Rig.pose(tl, r, "rest", t + 0.8);
+          if (rm) { Rig.pose(tl, rm.r, "reach", t + 0.12); const q = rm.r.el.querySelector(".prop"); if (q) tl.set(q, { opacity: 1 }, t + 0.42); Rig.pose(tl, rm.r, Rig.PROP_POSE[a.prop] || "phone", t + 0.85); } }
+        else if (act.act) Rig.act(tl, r, act.act, t, act);
+        // "to": [x, y] walks the figure there (stage coordinates); "dur" sets how long it takes. A person walks; a living thing rocks.
+        if (act.to) { const d = act.dur || 0.7, y0 = a.y || 900, dx = (act.to[0] - x) / sgn;
+          tl.to(r.el, { x: dx, y: ((act.to[1] != null ? act.to[1] : y0) - y0) / k, duration: d, ease: act.ease || (person ? "none" : "power1.inOut") }, t);
+          if (!Rig.walk(tl, r, t, d, dx >= (r.walkedTo || 0) ? 1 : -1)) { const n = Math.max(1, Math.round(d / 0.16));
+            tl.fromTo(r.el, { rotation: -3 }, { rotation: 3, duration: d / n, yoyo: true, repeat: n - 1, ease: "sine.inOut", immediateRender: false }, t); tl.set(r.el, { rotation: 0 }, t + d + 0.01); }
+          r.walkedTo = dx; } });
       (a.speaks || []).forEach((id) => { const ln = L[id]; if (ln) Rig.talk(tl, r, ln.text, ln.a, ln.d); });
       Rig.idle(tl, r, t0, t1, i * 3 + String(a.who).length);
     });
@@ -58,6 +78,27 @@
     props.filter((x) => x.p.layer === "front").forEach(drawProp);
     Sets.animate(tl, svg, t0, t1);
     return svg;
+  }
+
+  /* "extras": n background people in a shot or panel: they walk across or stand and look on, smaller and a little greyer than the story's
+     figures, behind them and behind every sign; most face the action, some show their back, none looks at the camera.
+     Picked from the shot's id and their number, so a render never changes. A place that should look empty takes "opts": { "empty": true }. */
+  let XID = 0;
+  function crowd(svg, s, t0, t1) {
+    const n = Math.min(14, Math.max(0, s.extras | 0)); if (!n || (s.opts && s.opts.empty)) return;
+    const id = Rig.hashName(String(s.id || s.set || "x")), fid = "xg" + XID++, d = t1 - t0;
+    const grp = g(svg, `<filter id="${fid}"><feColorMatrix type="saturate" values=".55"/><feComponentTransfer><feFuncR type="linear" slope=".9" intercept=".04"/><feFuncG type="linear" slope=".9" intercept=".04"/><feFuncB type="linear" slope=".9" intercept=".06"/></feComponentTransfer></filter>`, "crowd");
+    grp.setAttribute("filter", `url(#${fid})`);
+    const people = Array.from({ length: n }, (_, i) => { const h = (id + i * 7919) % 10007, row = (i + (h % 2)) % 3; return { i, h, row, y: 830 + row * 26 + (h % 9), k: 0.4 + row * 0.07 }; }).sort((p, q) => p.y - q.y);
+    people.forEach(({ i, h, row, y, k }) => {
+      const x = Math.round(((i + 0.5) * 1920) / n + ((h % 120) - 60)), walker = h % 3 === 0, dir = h % 2 ? 1 : -1, back = !walker && h % 4 === 1;
+      const who = "EXTRA " + ((id + i * 31) % 997), look = x < 960 ? 1 : -1, flip = walker ? dir < 0 : look < 0;
+      const wrap = g(grp); wrap.setAttribute("transform", `translate(${x},${y}) scale(${flip ? -k : k},${k})`);
+      const P = h % 7 === 3 ? "fold" : "rest", r = Rig.make(who, { back, pose: P }); wrap.appendChild(r.el); if (flip) Rig.unflip(r);
+      Rig.init(r, h % 5 === 0 ? "happy" : "neutral", P, look > 0 ? "right" : "left");
+      if (walker) { const dist = Math.min(1100, 120 * d) / k; tl.fromTo(r.el, { x: 0 }, { x: dist, duration: d, ease: "none", immediateRender: false }, t0); Rig.walk(tl, r, t0, d + 0.3, 1); }
+      Rig.idle(tl, r, t0, t1, h);
+    });
   }
 
   function overlays(hud, list, t0, t1, worldEl) {

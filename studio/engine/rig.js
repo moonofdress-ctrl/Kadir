@@ -260,7 +260,7 @@
         <g class="mouth" transform="translate(${tq},${f1(G.yM)})">${mouths}</g>${faceWear(c, G)}
         <path class="sweat" d="M${tq + 62},${G.yE - 40} Q${tq + 52},${G.yE - 22} ${tq + 62},${G.yE - 16} Q${tq + 72},${G.yE - 22} ${tq + 62},${G.yE - 40}Z" fill="#7fd0f0" ${st4}/>
         <path class="tear" d="M${tq - 30},${G.yE + 14} Q${tq - 38},${G.yE + 28} ${tq - 30},${G.yE + 33} Q${tq - 22},${G.yE + 28} ${tq - 30},${G.yE + 14}Z" fill="#7fd0f0" ${st4}/>
-      </g>` + (back ? backHair(c, G) : hr.front + headWear(c, G)) };
+      </g>` + (back ? backHair(c, G) : `<g class="hf">${hr.front}</g>` + headWear(c, G)) };
   }
   // Seen from behind (the listener of an over-the-shoulder shot, a figure that turns away): hair over the whole back of the head.
   function backHair(c, G) {
@@ -485,6 +485,9 @@
     fold: [[-0.56, 0.5, "fist", 90], [-0.56, 0.5, "fist", 90]], carry: [[0.16, 0.97, "relax"], [0.2, 0.96, "fist", 0]],
     panic: [[0.44, -0.72, "open", 165], [0.44, -0.72, "open", 165]], grab: [[0.16, 0.97, "relax"], [0.96, 0.12, "open", -95]],
     offer: [[0.16, 0.97, "relax"], [0.86, 0.4, "flat", -110]],
+    // for the acts: reaching for something, giving it, both hands down on a table, hands in the lap when seated
+    reach: [[0.16, 0.97, "relax"], [0.98, 0.3, "open", -80]], give: [[0.16, 0.97, "relax"], [0.95, 0.22, "flat", -100]],
+    slam: [[-0.2, 0.7, "flat", 20], [-0.2, 0.7, "flat", 20]], lap: [[-0.26, 0.58, "relax", 40], [-0.26, 0.58, "relax", 40]],
   };
   // Two-bone inverse kinematics: the shoulder, elbow and wrist angles that put the wrist on the target. Pure numbers, done at build time.
   const DEG = 180 / Math.PI, nrm = (a) => ((((a + 180) % 360) + 360) % 360) - 180;
@@ -700,7 +703,7 @@
     const armRef = (s) => { const r = q(".a" + s), hs = {}; r.querySelectorAll(".hs").forEach((e) => { hs[e.getAttribute("data-k")] = e; });
       return { root: r, sw: r.querySelector(".sw"), ua: r.querySelector(".ua"), fa: r.querySelector(".fa"), fg: r.querySelector(".fg"), wr: r.querySelector(".wr"), hs }; };
     const legRef = (s) => { const r = q(".g" + s); return { root: r, th: r.querySelector(".th"), sh: r.querySelector(".sh"), ft: r.querySelector(".ft2") || r.querySelector(".ft") }; };
-    const a = { el: g, kind: "person", spec: c, G, opts: o, body: q(".body"), sway: q(".sway"), upper: q(".upper"), head: [q(".head"), q(".hb")], torso: q(".torso"),
+    const a = { el: g, kind: "person", spec: c, G, opts: o, hf: q(".hf"), body: q(".body"), sway: q(".sway"), upper: q(".upper"), head: [q(".head"), q(".hb")], torso: q(".torso"),
       arms: { l: armRef("l"), r: armRef("r") }, legs: { l: legRef("l"), r: legRef("r") }, holds: !!prop, mouth: {}, eyes: {}, blink: qa(".e-blink"),
       brows: qa(".brow"), pupils: qa(".pupil"), sweat: q(".sweat"), tear: q(".tear"), face: "neutral", pose: "rest", neck: G.yS, hk: [1, 1, 0], bk: 0.45, pk: 0.45,
       portrait: [-118, G.yT - 34, 236, 236] }; // portrait: the square window of the head (scenes.js crops faces with it)
@@ -708,6 +711,9 @@
     Object.keys(MOUTHS2).forEach((k) => { a.mouth[k] = q(".m-" + k); });
     ["open", "wide", "half", "happy"].forEach((k) => { a.eyes[k] = qa(".e-" + k); });
     if (o.shadow || c.flat || o.back) q(".face").style.display = "none"; // a silhouette or a figure seen from behind: no face at all
+    // a figure that turns its back carries its back view, hidden until it turns
+    if (!o.back && (o.acts || []).some((x) => x && x.act === "turn")) { a.backView = makePerson(c, Object.assign({}, o, { back: true, acts: null, prop: null, badge: null }));
+      a.backView.el.setAttribute("class", "bkv"); a.backView.el.style.opacity = 0; g.appendChild(a.backView.el); }
     return a;
   }
 
@@ -753,8 +759,9 @@
       return;
     }
     // Pivots (fixed once): the feet for the whole figure, the hips for the upper body, the chin for the head, each joint for its limb.
-    const G = a.G; O([a.el, a.body, a.sway]); O([a.upper, a.torso], G.yH); O(a.head, G.yC + 6);
+    const G = a.G; O([a.el, a.body, a.sway]); O([a.upper, a.torso], G.yH); O(a.head, G.yC + 6); if (a.hf) O(a.hf, G.yT + 40);
     ["l", "r"].forEach((s) => { const A = a.arms[s], L = a.legs[s]; O([A.sw, A.ua, A.fa, A.fg, A.wr, L.th, L.sh, L.ft]); });
+    if (a.backView) init(a.backView, "neutral", "rest");
     const S = armState(a, a.pose); a.armNow = S;
     ["l", "r"].forEach((s) => { const A = a.arms[s], p = S[s], L = a.legs[s];
       gsap.set(A.ua, { rotation: p.u }); gsap.set(A.fa, { rotation: p.f }); gsap.set(A.wr, { rotation: p.w });
@@ -776,7 +783,7 @@
 
   // Arms swing to a pose with the animation principles: a small move the other way first (anticipation), then the swing,
   // which overshoots a little and settles (back.out). All three joints share one ease, so a held prop stays upright all the way.
-  function pose(tl, a, name, t, dur) {
+  function pose(tl, a, name, t, dur, ease) {
     if (a.kind !== "person") {
       const p = GLOVE[name] || (POSES[name] ? GLOVE.rest : null); if (!p) return; const [kx, ky, lift] = a.hk;
       tl.to(a.hl, { x: p[0] * kx, y: p[1] * ky + lift, duration: 0.28, ease: "back.out(1.7)" }, t);
@@ -788,7 +795,7 @@
     ["l", "r"].forEach((s) => { const A = a.arms[s], p = from[s], q = to[s];
       if (p.u !== q.u || p.f !== q.f || p.w !== q.w) ["u", "f", "w"].forEach((j) => { const el = j === "u" ? A.ua : j === "f" ? A.fa : A.wr, ant = p[j] - (q[j] - p[j]) * k;
         tl.fromTo(el, { rotation: p[j] }, { rotation: ant, duration: 0.08, ease: "sine.out", immediateRender: false }, t);
-        tl.fromTo(el, { rotation: ant }, { rotation: q[j], duration: d, ease: "back.out(1.6)", immediateRender: false }, t + 0.08); });
+        tl.fromTo(el, { rotation: ant }, { rotation: q[j], duration: d, ease: ease || "back.out(1.6)", immediateRender: false }, t + 0.08); });
       if (p.hand !== q.hand) { const hn = handName(A, q.hand); Object.keys(A.hs).forEach((n) => tl.set(A.hs[n], { opacity: n === hn ? 1 : 0 }, t + 0.08 + d * 0.3)); } });
     a.armNow = to; a.pose = name;
   }
@@ -826,11 +833,64 @@
     tl.fromTo(a.sway, { rotation: -0.7 * dir }, { rotation: 0.7 * dir, duration: sp, yoyo: true, repeat: m, ease: "sine.inOut", immediateRender: false }, t0);
   }
 
+  /* A walk (the "to" act, an entrance, an extra crossing the frame). The legs scissor along the way and the swinging leg bends its knee,
+     the arms swing against the legs, the body bobs twice a stride and leans a little into the walk, the hair follows through.
+     dir: +1 when the figure walks toward the side it faces, -1 when it walks away. Steps of about 0.3 s on a fixed schedule (seek-safe). */
+  function walk(tl, a, t, d, dir) {
+    if (a.kind !== "person" || d < 0.25) return false;
+    const n = Math.max(2, Math.round(d / 0.3)), st = (d - 0.2) / n, A = 22, KN = 36, SW = 16, L = a.legs, R = a.arms, s0 = t + 0.1;
+    const W = (s, w) => (s === "r" ? w : -w); // world angle into the leg's or arm's own frame (the left side is mirrored)
+    const go = (el, from, to, tt, dur, ease) => tl.fromTo(el, { rotation: from }, { rotation: to, duration: dur, ease: ease || "sine.inOut", immediateRender: false }, tt);
+    // into the first stride (the right leg goes forward), then stride after stride, then settle back to standing
+    go(L.r.th, -2, W("r", -A), t, 0.1); go(L.l.th, -2, W("l", A), t, 0.1); go(R.r.sw, 0, W("r", SW), t, 0.1); go(R.l.sw, 0, W("l", -SW), t, 0.1);
+    for (let i = 0; i < n; i++) {
+      const ts = s0 + i * st, f = i % 2 ? "l" : "r", b = i % 2 ? "r" : "l";
+      go(L[f].th, W(f, -A), W(f, A), ts, st, "none"); // the front foot passes under the body
+      go(L[b].th, W(b, A), W(b, -A), ts, st);          // the back leg swings through, knee bent at the middle
+      go(L[b].sh, 0, W(b, KN), ts, st / 2, "sine.out"); go(L[b].sh, W(b, KN), 0, ts + st / 2, st / 2, "sine.in");
+      go(L[b].ft, 0, W(b, -KN * 0.6), ts, st / 2, "sine.out"); go(L[b].ft, W(b, -KN * 0.6), 0, ts + st / 2, st / 2, "sine.in");
+      go(R[f].sw, W(f, SW), W(f, -SW), ts, st); go(R[b].sw, W(b, -SW), W(b, SW), ts, st);
+    }
+    const te = s0 + n * st;
+    ["l", "r"].forEach((s) => { go(L[s].th, W(s, (n % 2 ? (s === "r" ? A : -A) : s === "r" ? -A : A)), -2, te, 0.22, "back.out(1.6)"); go(L[s].sh, 0, 1, te, 0.22); go(L[s].ft, 0, 1, te, 0.22);
+      go(R[s].sw, W(s, n % 2 ? (s === "r" ? -SW : SW) : s === "r" ? SW : -SW), 0, te, 0.3, "back.out(1.4)"); });
+    tl.fromTo(a.body, { y: 0 }, { y: -7, duration: st / 2, yoyo: true, repeat: n * 2 - 1, ease: "sine.out", immediateRender: false }, s0);
+    tl.fromTo(a.body, { rotation: 0 }, { rotation: 3.5 * (dir || 1), duration: 0.18, ease: "sine.out", immediateRender: false }, t);
+    tl.fromTo(a.body, { rotation: 3.5 * (dir || 1) }, { rotation: 0, duration: 0.3, ease: "back.out(2)", immediateRender: false }, te);
+    if (a.hf) tl.fromTo(a.hf, { y: 0 }, { y: 4, duration: st / 2, yoyo: true, repeat: n * 2 - 1, ease: "sine.inOut", immediateRender: false }, s0 + 0.06); // hair lags the bob
+    return true;
+  }
+
+  /* Acts that use the whole body ("act" in a storyboard act). Each starts with a small move the other way and ends with a settle.
+     sit / stand: the thighs fold toward the camera and the body drops onto a seat (hands go to the lap unless the act names a pose);
+     turn: the back to the camera (and back again); lean / lean_back / upright; slam: both hands down hard on a table. */
+  function act(tl, a, what, t, o) {
+    if (a.kind !== "person") { if (what === "slam" || what === "lean") tl.fromTo(a.el, { rotation: 0 }, { rotation: what === "slam" ? 4 : 6, duration: 0.14, yoyo: true, repeat: 1, ease: "power2.out", immediateRender: false }, t); return; }
+    const G = a.G, L = a.legs, B = a.body;
+    if (what === "sit" || what === "stand") { const down = what === "sit"; if (!!a.seated === down) return; a.seated = down;
+      const k0 = down ? 1 : 0.34, k1 = down ? 0.34 : 1, y0 = down ? 0 : G.T1 * 0.66, y1 = down ? G.T1 * 0.66 : 0;
+      tl.fromTo(B, { y: y0 }, { y: y0 + (down ? -8 : 10), duration: 0.1, ease: "sine.out", immediateRender: false }, t); // a little rise before sitting, a dip before standing
+      tl.fromTo(B, { y: y0 + (down ? -8 : 10) }, { y: y1, duration: 0.32, ease: down ? "back.out(1.3)" : "power2.out", immediateRender: false }, t + 0.1);
+      ["l", "r"].forEach((s) => { tl.fromTo(L[s].th, { scaleY: k0, rotation: down ? -2 : -9 }, { scaleY: k1, rotation: down ? -9 : -2, duration: 0.32, ease: "power2.inOut", immediateRender: false }, t + 0.1);
+        tl.fromTo(L[s].sh, { scaleY: 1 / k0 }, { scaleY: 1 / k1, duration: 0.32, ease: "power2.inOut", immediateRender: false }, t + 0.1); });
+      if (!(o && o.pose)) pose(tl, a, down ? "lap" : "rest", t + 0.1); return; }
+    if (what === "turn") { const BV = a.backView; if (!BV) return; const on = !a.turned; a.turned = on;
+      tl.fromTo([B, BV.body], { scaleX: 1 }, { scaleX: 0.08, duration: 0.1, ease: "power2.in", immediateRender: false }, t);
+      tl.set(B, { opacity: on ? 0 : 1 }, t + 0.1); tl.set(BV.el, { opacity: on ? 1 : 0 }, t + 0.1);
+      tl.fromTo([B, BV.body], { scaleX: 0.08 }, { scaleX: 1, duration: 0.16, ease: "back.out(1.6)", immediateRender: false }, t + 0.1); return; }
+    const lean = { lean: 7, lean_back: -6, upright: 0, slam: 5 }[what]; if (lean == null) return;
+    const from = a.leanNow || 0, ant = from - (lean - from) * 0.15;
+    if (what === "slam") pose(tl, a, "slam", t, 0.12, "power4.in");
+    tl.fromTo(B, { rotation: from }, { rotation: ant, duration: 0.08, ease: "sine.out", immediateRender: false }, t);
+    tl.fromTo(B, { rotation: ant }, { rotation: lean, duration: what === "slam" ? 0.12 : 0.36, ease: what === "slam" ? "power4.in" : "back.out(1.5)", immediateRender: false }, t + 0.08);
+    if (what === "slam") { tl.fromTo(B, { rotation: lean }, { rotation: 1.5, duration: 0.5, ease: "elastic.out(1, 0.5)", immediateRender: false }, t + 0.24); a.leanNow = 1.5; } else a.leanNow = lean;
+  }
+
   const ENTER = { pop: { scale: 0.4, opacity: 0 }, slide_left: { x: -900 }, slide_right: { x: 900 }, rise: { y: 700 }, none: null };
   function enter(tl, a, how, t) {
     const from = ENTER[how === undefined ? "pop" : how]; if (!from) return;
     tl.fromTo(a.el, Object.assign({ x: 0, y: 0, scale: 1, opacity: 1 }, from), { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.36, ease: "back.out(1.5)", immediateRender: false }, t);
   }
 
-  window.Rig = { CAST, FACES, POSES, GLOVE, PROPS, PROP_POSE, THINGS, HATS, BUILDS, JAW, make, init, face, pose, talk, idle, enter, extra, register, shade, tint, unflip, solve, geo, INK };
+  window.Rig = { CAST, FACES, POSES, GLOVE, PROPS, PROP_POSE, THINGS, HATS, BUILDS, JAW, make, init, face, pose, talk, idle, enter, walk, act, extra, register, hashName, shade, tint, unflip, solve, geo, INK };
 })();
