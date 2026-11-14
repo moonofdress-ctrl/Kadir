@@ -17,6 +17,6 @@ Late result: build the episode so the call's result can be added late. The video
 Backup: <folder of the copy after the render, SETUP.md>
 
 Gates the user has waived for this episode (which, and the date they said so; the Look gate's draft is sent to the user even then):
-Look gate (date the 30 s draft was sent to the user, and the verdict beside `brand/quality_reference.jpg`; say whether the user or QA gave it):
+Look gate: 30 s draft (render/look_draft.mp4) and look sheet sent to the user on 14 Nov 2026 beside brand/quality_reference.jpg (its rival half is empty on this machine); waiting for the user's verdict; QA writing "## Look gate" in qa.md.
 The user's comments (on the Look gate draft, the render, the upload; dated, in their words, for the improver):
 Upload time: Tue 17 Nov 18:00 TR (= 10:00 ET, 6h20 before the 16:20 ET results), approved by the user on 14 Nov 2026 ("evet"); replaces 22:00 in the Schedule line. The late-news cut-off (Tuesday-morning currency check) is about 15:00 TR.
