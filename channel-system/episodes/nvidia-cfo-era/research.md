@@ -103,3 +103,10 @@ Titles only, posted within about a day (SEARCH): "Jensen Huang Resigns - Would Y
 - Reports of second and third relationships: allegations from named outlets citing people familiar; not confirmed by Nvidia or by Huang.
 - Past call transcript to confirm Huang's usual role opening the call.
 - Video measurements (views, channels, thumbnails, comments): none taken.
+
+## YouTube demand, measured 14 Nov 2026 (session, YouTube search "this week" and the rival's videos page)
+- "jensen huang resigns": CNN 1.77M (1 day), Sky News 177K, Valuetainment 140K (12 h), Bloomberg 128K and 123K, NBC 114K, DW 95K.
+- Rival @PaperBillionsTV: "How a Chinese Spy Got Inside Nvidia" 2.4M (3 days); "Why Nvidia Would Fail Without Jensen Huang" 994K (1 day); "Why the Stock Market Just Crashed" 1.1M (5 days).
+- Kress / CFO angle: Cramer on CNBC 205K; small channels "Who is Colette Kress?" 17 to 2.8K. The CFO angle alone does not pull; the rival already took "Nvidia without Jensen".
+- Stanley (topic #1 of the scout) for comparison: best this week 37K, most under 300. Nvidia is far ahead.
+- Conclusion: the topic is right; the angle must be the new event (the first call without Huang, 17 Nov) and what it decides for people who own Nvidia (index funds, 401k), not a repeat of "without Jensen".
