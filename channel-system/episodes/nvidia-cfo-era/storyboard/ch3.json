@@ -526,6 +526,24 @@
        "dur": 1.2
       }
      ]
+    },
+    {
+     "thing": "newspaper",
+     "x": 1350,
+     "y": 940,
+     "scale": 0.55,
+     "enter": "none",
+     "face": "plain",
+     "acts": [
+      {
+       "word": 12,
+       "to": [
+        1150,
+        940
+       ],
+       "dur": 1.2
+      }
+     ]
     }
    ]
   },

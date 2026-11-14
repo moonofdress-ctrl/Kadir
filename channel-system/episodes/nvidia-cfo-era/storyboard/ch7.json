@@ -499,14 +499,62 @@
   },
   {
    "id": "c7s18",
-   "type": "card",
    "cue": "L165",
    "word": 0,
-   "text": "Tuesday, 17 November",
-   "emph": [
-    "17 November"
+   "set": "kitchen",
+   "opts": {
+    "palette": "amber",
+    "night": false,
+    "dress": "jar"
+   },
+   "place": "Martha's kitchen",
+   "camera": "pull_out",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 1250,
+     "y": 960,
+     "scale": 0.85,
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L165",
+       "word": 1,
+       "pose": "point"
+      }
+     ]
+    },
+    {
+     "who": "BENNY",
+     "x": 650,
+     "y": 960,
+     "scale": 0.85,
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L165",
+       "word": 3,
+       "pose": "think"
+      }
+     ]
+    }
    ],
-   "explains": "The date that matters: Tuesday, 17 November."
+   "overlays": [
+    {
+     "type": "calendar",
+     "month": "NOV",
+     "day": 17,
+     "dow": "TUESDAY",
+     "from": {
+      "month": "NOV",
+      "day": 14
+     },
+     "pos": "tl",
+     "cue": "L165",
+     "word": 0
+    }
+   ],
+   "explains": "The date that matters: Martha's calendar turns to Tuesday, 17 November."
   },
   {
    "id": "c7s19",
@@ -541,7 +589,8 @@
    "opts": {
     "palette": "violet",
     "night": true,
-    "view": "desk"
+    "view": "desk",
+    "bare_desk": true
    },
    "place": "corner office",
    "light": {
@@ -553,7 +602,35 @@
    },
    "camera": "pan_left",
    "actors": [],
-   "explains": "The numbers cover a quarter that ended on 25 October, weeks earlier."
+   "explains": "The numbers cover a quarter that ended on 25 October, weeks earlier.",
+   "angle": "high",
+   "props": [
+    {
+     "type": "calculator",
+     "x": 1220,
+     "y": 722,
+     "k": 1.045,
+     "t": "Q3"
+    },
+    {
+     "type": "desk_phone",
+     "x": 1528,
+     "y": 722,
+     "k": 1.045,
+     "note": "TUE 5:00 PM"
+    }
+   ],
+   "overlays": [
+    {
+     "type": "calendar",
+     "month": "OCT",
+     "day": 25,
+     "dow": "QUARTER ENDS",
+     "pos": "tl",
+     "cue": "L165",
+     "word": 17
+    }
+   ]
   },
   {
    "id": "c7s21",

@@ -456,14 +456,14 @@
    "opts": {
     "night": true,
     "palette": "violet",
-    "view": "desk",
-    "bare_desk": true
+    "view": "wide",
+    "chair": false
    },
    "place": "corner office",
    "frame": "medium",
    "focus": [
-    1450,
-    520
+    860,
+    640
    ],
    "camera": "still",
    "light": {
@@ -477,9 +477,9 @@
     {
      "thing": "chip",
      "label": "NVIDIA",
-     "x": 1720,
-     "y": 730,
-     "scale": 0.5,
+     "x": 1000,
+     "y": 900,
+     "scale": 0.45,
      "face": "confused",
      "speaks": [
       "L003"
@@ -495,29 +495,14 @@
      "flip": true
     }
    ],
-   "explains": "Nvidia itself, the chip, peeks over the calculator at the empty chair and asks who is in it.",
+   "explains": "Nvidia itself, the chip, climbs onto the desk and points at the empty chair: who is in it?",
    "props": [
     {
-     "type": "name_plate",
-     "x": 923,
-     "y": 722,
-     "k": 1.1,
-     "t": "CFO",
-     "tape": true
-    },
-    {
-     "type": "calculator",
-     "x": 1220,
-     "y": 722,
-     "k": 1.045,
-     "t": "4.0"
-    },
-    {
-     "type": "desk_phone",
-     "x": 1528,
-     "y": 722,
-     "k": 1.045,
-     "note": "TUE 5:00 PM"
+     "type": "exec_chair",
+     "x": 700,
+     "y": 900,
+     "k": 0.95,
+     "state": "jacket"
     }
    ]
   },
@@ -594,13 +579,14 @@
    "opts": {
     "night": true,
     "palette": "violet",
-    "view": "desk"
+    "view": "wide",
+    "chair": false
    },
    "place": "corner office",
    "frame": "close",
    "focus": [
-    1450,
-    520
+    1430,
+    560
    ],
    "camera": "still",
    "sound": "riser",
@@ -614,8 +600,8 @@
    "actors": [
     {
      "thing": "chip",
-     "x": 1720,
-     "y": 740,
+     "x": 1430,
+     "y": 664,
      "scale": 0.6,
      "face": "neutral",
      "enter": "none",
@@ -631,12 +617,11 @@
     },
     {
      "who": "COLETTE_KRESS",
-     "x": 560,
-     "y": 980,
-     "scale": 0.9,
+     "x": 1700,
+     "y": 860,
+     "scale": 0.65,
      "face": "neutral",
-     "pose": "hold",
-     "flip": true,
+     "pose": "think",
      "enter": "none"
     }
    ],
@@ -652,10 +637,20 @@
      "dur": 1.4,
      "cue": "L005",
      "word": 4,
-     "pos": "tc"
+     "pos": "tl"
     }
    ],
-   "explains": "The market values Nvidia at about four trillion dollars, and even the chip gulps at the size of it."
+   "explains": "The market values Nvidia at about four trillion dollars, and even the chip gulps at the size of it.",
+   "angle": "low",
+   "props": [
+    {
+     "type": "exec_chair",
+     "x": 700,
+     "y": 900,
+     "k": 0.95,
+     "state": "jacket"
+    }
+   ]
   },
   {
    "id": "c1s10",
@@ -665,7 +660,8 @@
    "opts": {
     "night": true,
     "palette": "violet",
-    "view": "wide"
+    "view": "wide",
+    "chair": false
    },
    "place": "corner office",
    "camera": "pull_out",
@@ -703,7 +699,16 @@
      "enter": "none"
     }
    ],
-   "explains": "That four-trillion price tag now hangs on a company whose top chair is empty: the number to remember."
+   "explains": "That four-trillion price tag now hangs on a company whose top chair is empty: the number to remember.",
+   "props": [
+    {
+     "type": "exec_chair",
+     "x": 700,
+     "y": 900,
+     "k": 0.95,
+     "state": "jacket"
+    }
+   ]
   },
   {
    "id": "c1s11",
@@ -776,8 +781,8 @@
    "place": "corner office",
    "frame": "close",
    "focus": [
-    1450,
-    640
+    1530,
+    620
    ],
    "camera": "push_in",
    "light": {
@@ -1203,13 +1208,70 @@
   },
   {
    "id": "c1t02",
-   "type": "card",
    "cue": "L013",
-   "text": "And why does Tuesday matter?",
-   "emph": [
-    "Tuesday"
+   "set": "bus_stop",
+   "opts": {
+    "palette": "cream",
+    "night": false
+   },
+   "place": "bus stop",
+   "camera": "pull_out",
+   "extras": 6,
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 760,
+     "y": 960,
+     "scale": 0.85,
+     "face": "confused",
+     "prop": "phone",
+     "pose": "phone",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L013",
+       "word": 5,
+       "pose": "think"
+      }
+     ]
+    },
+    {
+     "who": "CHAD",
+     "x": 1600,
+     "y": 960,
+     "scale": 0.8,
+     "face": "neutral",
+     "prop": "mug",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L013",
+       "word": 3,
+       "to": [
+        1300,
+        960
+       ],
+       "dur": 1.0
+      }
+     ]
+    }
    ],
-   "explains": "The second half of the question: why Tuesday's results are the moment that counts."
+   "overlays": [
+    {
+     "type": "calendar",
+     "month": "NOV",
+     "day": 17,
+     "dow": "TUESDAY",
+     "from": {
+      "month": "NOV",
+      "day": 12
+     },
+     "pos": "tl",
+     "cue": "L013",
+     "word": 7
+    }
+   ],
+   "explains": "The second half of the question: Benny's calendar flips from today to Tuesday, the day the results come."
   },
   {
    "id": "c1s16",
@@ -1474,14 +1536,73 @@
   },
   {
    "id": "c1t04",
-   "type": "card",
    "cue": "L016",
    "word": 7,
-   "text": "-9.5% in two days",
-   "emph": [
-    "-9.5%"
+   "set": "trading_floor",
+   "opts": {
+    "palette": "blue",
+    "dress": "dawn",
+    "night": false
+   },
+   "place": "bank trading floor",
+   "frame": "medium",
+   "focus": [
+    960,
+    560
    ],
-   "explains": "Over Monday and Tuesday the review alone cost the shares about nine and a half percent."
+   "camera": "tilt_down",
+   "extras": 8,
+   "actors": [
+    {
+     "thing": "chip",
+     "label": "NVIDIA",
+     "x": 960,
+     "y": 900,
+     "scale": 0.6,
+     "face": "scared",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L016",
+       "word": 9,
+       "face": "shocked",
+       "pose": "panic"
+      }
+     ]
+    },
+    {
+     "who": "HAL",
+     "x": 1450,
+     "y": 960,
+     "scale": 0.8,
+     "face": "smug",
+     "prop": "phone",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L016",
+       "word": 12,
+       "pose": "shrug"
+      }
+     ]
+    }
+   ],
+   "overlays": [
+    {
+     "type": "counter",
+     "from": 0,
+     "to": -9.5,
+     "decimals": 1,
+     "suffix": "%",
+     "roll": true,
+     "dur": 1.6,
+     "pos": "tc",
+     "plate": true,
+     "cue": "L016",
+     "word": 8
+    }
+   ],
+   "explains": "Over Monday and Tuesday the review alone cost the shares about nine and a half percent, and the chip feels every point."
   },
   {
    "id": "c1k03a",

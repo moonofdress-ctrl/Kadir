@@ -162,7 +162,7 @@ add("T2", "No financial advice wording", g(!advice), advice ? "found" : "none", 
 const sents = narr.flatMap((l) => l.text.split(/(?<=[.!?])\s+/)).filter(Boolean), sl = sents.map((s) => s.split(/\s+/).length), meanLen = sl.reduce((a, b) => a + b, 0) / Math.max(1, sl.length), long = sl.filter((n) => n > 25).length;
 add("T3", "Short spoken sentences", g(meanLen <= 15 && long <= sl.length * 0.05, true), `average ${meanLen.toFixed(1)} words, ${long} over 25`, "average 15 or less");
 need(240, "T4", "Viewer addressed directly", () => { const n = narr.filter((l) => /\byou(r|'re|'ve)?\b/i.test(l.text)).length, want = Math.max(3, Math.round(total / 240)); add("T4", "Viewer addressed directly", g(n >= want, true), `${n} lines`, `${want} or more lines with you/your`); });
-need(story.demo ? Infinity : 45, "T5", "Title question spoken by 0:45", () => { const t = story.title || ""; const key = t.toLowerCase().replace(/[^a-z0-9 ]/g, "").split(" ").filter((w) => w.length > 3 && !/d/.test(w)); // figures are spoken in words, so they are not matched
+need(story.demo ? Infinity : 45, "T5", "Title question spoken by 0:45", () => { const t = story.title || ""; const key = t.toLowerCase().replace(/[^a-z0-9 ]/g, "").split(" ").filter((w) => w.length > 3 && !/\d/.test(w)); // figures are spoken in words, so they are not matched
   const hit = lines.find((l) => l.a <= 45 && key.length && key.every((w) => l.text.toLowerCase().includes(w)));
   add("T5", "Title question spoken by 0:45", g(!!hit, !key.length), hit ? mmss(hit.a) : key.length ? "not found" : "no title set", "the title's words in a line by 0:45"); });
 // The promise and the chain (FORMAT_BOOK 4): the script says what it will answer and how the causes connect.

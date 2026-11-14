@@ -142,8 +142,35 @@
     460
    ],
    "camera": "pull_out",
-   "motif": "door plate: the three brass plates come off",
-   "explains": "The three small plates under his name, CEO, PRESIDENT and BOARD, are unscrewed one by one."
+   "motif": "door plate",
+   "explains": "The three small plates under his name, CEO, PRESIDENT and BOARD, are unscrewed one by one.",
+   "props": [
+    {
+     "type": "crates",
+     "x": 1300,
+     "y": 1000,
+     "n": 1,
+     "t": "MISC"
+    }
+   ],
+   "actors": [
+    {
+     "thing": "chip",
+     "label": "NVIDIA",
+     "x": 560,
+     "y": 960,
+     "scale": 0.45,
+     "face": "sad",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L083",
+       "word": 4,
+       "pose": "shrug"
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "c4s06",
@@ -164,8 +191,35 @@
    ],
    "angle": "high",
    "camera": "tilt_down",
-   "motif": "door plate: the plates drop into the box MISC",
-   "explains": "Unlike founders who stay on as chairman, he keeps no seat at all: every plate ends in the box."
+   "motif": "door plate",
+   "explains": "Unlike founders who stay on as chairman, he keeps no seat at all: every plate ends in the box.",
+   "props": [
+    {
+     "type": "crates",
+     "x": 1300,
+     "y": 1000,
+     "n": 1,
+     "t": "MISC"
+    }
+   ],
+   "actors": [
+    {
+     "thing": "chip",
+     "label": "NVIDIA",
+     "x": 560,
+     "y": 960,
+     "scale": 0.45,
+     "face": "sad",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L083",
+       "word": 12,
+       "pose": "shrug"
+      }
+     ]
+    }
+   ]
   },
   {
    "id": "c4k11a",
@@ -318,7 +372,8 @@
    "opts": {
     "night": true,
     "palette": "violet",
-    "view": "desk"
+    "view": "wide",
+    "chair": "bare"
    },
    "light": {
     "x": 1350,
@@ -329,21 +384,39 @@
    },
    "frame": "medium",
    "focus": [
-    1250,
-    470
+    1450,
+    600
    ],
    "angle": "low",
    "camera": "pull_out",
    "actors": [
     {
      "who": "COLETTE_KRESS",
-     "x": 1250,
-     "y": 960,
+     "x": 1500,
+     "y": 860,
+     "scale": 0.65,
      "face": "neutral",
-     "pose": "hold"
+     "pose": "hold",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L088",
+       "word": 10,
+       "pose": "present"
+      }
+     ]
     }
    ],
-   "explains": "Colette Kress, the finance chief since 2013, is the one at the desk under the lamp."
+   "explains": "Colette Kress, the finance chief since 2013, is the one at the desk under the lamp.",
+   "props": [
+    {
+     "type": "exec_chair",
+     "x": 700,
+     "y": 900,
+     "k": 0.95,
+     "state": "bare"
+    }
+   ]
   },
   {
    "id": "c4s08",
@@ -354,7 +427,8 @@
    "opts": {
     "night": true,
     "palette": "violet",
-    "view": "desk"
+    "view": "desk",
+    "bare_desk": true
    },
    "light": {
     "x": 1350,
@@ -370,18 +444,35 @@
    ],
    "camera": "still",
    "callback": "the INTERIM tape from the door",
-   "explains": "Her new title is a strip of tape, INTERIM CEO, stuck beside her old plate."
+   "explains": "Her new title is a strip of tape, INTERIM CEO, stuck beside her old plate.",
+   "props": [
+    {
+     "type": "name_plate",
+     "x": 923,
+     "y": 690,
+     "k": 1.1,
+     "t": "CFO",
+     "tape": "INTERIM CEO"
+    },
+    {
+     "type": "calculator",
+     "x": 1220,
+     "y": 722,
+     "k": 1.045,
+     "t": "4.0"
+    }
+   ]
   },
   {
    "id": "c4s09",
    "cue": "L088",
    "word": 19,
-   "set": "corner_office",
-   "place": "corner office",
+   "set": "boardroom",
+   "place": "boardroom",
    "opts": {
     "night": true,
-    "palette": "violet",
-    "view": "desk"
+    "palette": "wood",
+    "dress": "two_chairs"
    },
    "light": {
     "x": 1350,
@@ -390,13 +481,45 @@
     "color": "#ffd27a",
     "dark": 0.45
    },
-   "frame": "close",
+   "frame": "medium",
    "focus": [
-    1300,
-    660
+    960,
+    560
    ],
    "camera": "pan_left",
-   "explains": "She keeps the old job too: the CFO plate and the calculator stay where they were."
+   "explains": "She keeps the old job too: two chairs, one person between them.",
+   "actors": [
+    {
+     "who": "COLETTE_KRESS",
+     "x": 960,
+     "y": 980,
+     "scale": 0.85,
+     "face": "neutral",
+     "pose": "think",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L088",
+       "word": 21,
+       "pose": "present"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "chair",
+     "x": 560,
+     "y": 960,
+     "t": "CFO"
+    },
+    {
+     "type": "chair",
+     "x": 1360,
+     "y": 960,
+     "t": "CEO"
+    }
+   ]
   },
   {
    "id": "c4s10",
@@ -935,13 +1058,50 @@
   },
   {
    "id": "c4t04",
-   "type": "card",
    "cue": "L100",
-   "text": "The hunt is on.",
-   "emph": [
-    "hunt"
+   "set": "night_office",
+   "place": "recruiter's office",
+   "opts": {
+    "night": true,
+    "palette": "slate",
+    "dress": "recruiter"
+   },
+   "camera": "tilt_down",
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 1250,
+     "y": 950,
+     "face": "deadpan",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L100",
+       "word": 3,
+       "pose": "point"
+      }
+     ]
+    },
+    {
+     "who": "CHAD",
+     "x": 200,
+     "y": 950,
+     "prop": "bill",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L100",
+       "word": 2,
+       "to": [
+        650,
+        950
+       ],
+       "dur": 1.4
+      }
+     ]
+    }
    ],
-   "explains": "The board starts looking for a permanent chief executive."
+   "explains": "The hunt is on: the first candidate walks into the recruiter's office with a CV."
   },
   {
    "id": "c4s16",

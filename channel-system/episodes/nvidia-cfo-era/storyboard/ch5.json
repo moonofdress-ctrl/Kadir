@@ -32,7 +32,7 @@
     520
    ],
    "camera": "tilt_down",
-   "motif": "door plate: a CFO plate screwed on under the INTERIM tape",
+   "motif": "door plate",
    "actors": [],
    "explains": "The office door now wears two titles at once: the interim chief executive tape and the finance chief plate under it."
   },
@@ -88,9 +88,10 @@
    "set": "corner_office",
    "place": "Kress's desk",
    "opts": {
-    "view": "desk",
+    "view": "wide",
     "night": true,
-    "palette": "violet"
+    "palette": "violet",
+    "chair": "bare"
    },
    "light": {
     "kind": "spot",
@@ -102,25 +103,52 @@
    },
    "frame": "medium",
    "focus": [
-    1100,
-    520
+    1400,
+    600
    ],
    "camera": "still",
    "actors": [
     {
      "who": "COLETTE_KRESS",
-     "x": 1180,
-     "y": 990,
-     "scale": 0.9
+     "x": 1500,
+     "y": 860,
+     "scale": 0.65,
+     "face": "neutral",
+     "pose": "hold",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L109",
+       "word": 6,
+       "pose": "think"
+      }
+     ]
     },
     {
      "thing": "desk_lamp",
-     "x": 620,
-     "y": 760,
-     "scale": 0.7
+     "x": 1220,
+     "y": 680,
+     "scale": 0.4,
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L109",
+       "word": 3,
+       "pose": "point"
+      }
+     ]
     }
    ],
-   "explains": "She is an experienced finance executive at work; even the desk lamp leans in to read her record."
+   "explains": "She is an experienced finance executive at work; even the desk lamp leans in to read her record.",
+   "props": [
+    {
+     "type": "exec_chair",
+     "x": 700,
+     "y": 900,
+     "k": 0.95,
+     "state": "bare"
+    }
+   ]
   },
   {
    "id": "c5s05",
@@ -718,8 +746,48 @@
     "dark": 0.4
    },
    "camera": "pan_left",
-   "actors": [],
-   "explains": "Streeter calls Kress a safe pair of hands, but says she lacks Huang's global status and deep commercial ties."
+   "actors": [
+    {
+     "thing": "desk_lamp",
+     "x": 1650,
+     "y": 780,
+     "scale": 0.5,
+     "face": "plain",
+     "enter": "none",
+     "acts": [
+      {
+       "word": 18,
+       "pose": "point",
+       "cue": "L122"
+      }
+     ]
+    }
+   ],
+   "explains": "Streeter calls Kress a safe pair of hands, but says she lacks Huang's global status and deep commercial ties.",
+   "overlays": [
+    {
+     "type": "doc",
+     "source": "FOX BUSINESS, 12 NOV 2026",
+     "by": "Susannah Streeter, Wealth Club",
+     "quote": "safe pair of hands",
+     "hl": [
+      "safe pair of hands"
+     ],
+     "x": 820,
+     "y": 200,
+     "w": 900,
+     "at": 0.2
+    }
+   ],
+   "props": [
+    {
+     "type": "piggy",
+     "x": 240,
+     "y": 1000,
+     "k": 0.26,
+     "state": "calm"
+    }
+   ]
   },
   {
    "id": "c5s20",
@@ -857,8 +925,48 @@
     520
    ],
    "camera": "pan_right",
-   "actors": [],
-   "explains": "Ives says his firm is a big fan of her."
+   "actors": [
+    {
+     "thing": "desk_lamp",
+     "x": 1650,
+     "y": 780,
+     "scale": 0.5,
+     "face": "plain",
+     "enter": "none",
+     "acts": [
+      {
+       "word": 9,
+       "pose": "point",
+       "cue": "L123"
+      }
+     ]
+    }
+   ],
+   "explains": "Ives says his firm is a big fan of her.",
+   "overlays": [
+    {
+     "type": "doc",
+     "source": "FOX BUSINESS, 12 NOV 2026",
+     "by": "Dan Ives, Yorkville Ives",
+     "quote": "we are big fans",
+     "hl": [
+      "big fans"
+     ],
+     "x": 820,
+     "y": 200,
+     "w": 900,
+     "at": 0.2
+    }
+   ],
+   "props": [
+    {
+     "type": "jar",
+     "x": 1400,
+     "y": 1000,
+     "t": "INDEX FUND",
+     "level": 0.5
+    }
+   ]
   },
   {
    "id": "c5s22",
@@ -884,8 +992,48 @@
     540
    ],
    "camera": "tilt_up",
-   "actors": [],
-   "explains": "Kenwell of eToro expects her to bring stability and reassurance."
+   "actors": [
+    {
+     "thing": "desk_lamp",
+     "x": 1650,
+     "y": 780,
+     "scale": 0.5,
+     "face": "plain",
+     "enter": "none",
+     "acts": [
+      {
+       "word": 15,
+       "pose": "point",
+       "cue": "L123"
+      }
+     ]
+    }
+   ],
+   "explains": "Kenwell of eToro expects her to bring stability and reassurance.",
+   "overlays": [
+    {
+     "type": "doc",
+     "source": "FOX BUSINESS, 12 NOV 2026",
+     "by": "Bret Kenwell, eToro",
+     "quote": "provide stability and reassurance",
+     "hl": [
+      "stability and reassurance"
+     ],
+     "x": 820,
+     "y": 200,
+     "w": 900,
+     "at": 0.2
+    }
+   ],
+   "props": [
+    {
+     "type": "jar",
+     "x": 260,
+     "y": 1000,
+     "t": "INDEX FUND",
+     "level": 0.5
+    }
+   ]
   },
   {
    "id": "c5s23",

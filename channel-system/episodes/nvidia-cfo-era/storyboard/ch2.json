@@ -136,7 +136,23 @@
     1150,
     620
    ],
-   "camera": "pan_left"
+   "camera": "pan_left",
+   "props": [
+    {
+     "type": "chair",
+     "x": 1150,
+     "y": 900,
+     "t": "SUCCESSOR",
+     "web": true
+    },
+    {
+     "type": "piggy",
+     "x": 1700,
+     "y": 980,
+     "k": 0.26,
+     "state": "asleep"
+    }
+   ]
   },
   {
    "set": "cinema",
@@ -528,7 +544,7 @@
    "cue": "L037",
    "word": 3,
    "camera": "pan_left",
-   "motif": "the door plate, before: one name and three brass plates",
+   "motif": "door plate",
    "explains": "In sunny days before, the corner door wore one name and three little plates: CEO, president, board.",
    "props": [
     {
@@ -558,7 +574,7 @@
     960,
     640
    ],
-   "motif": "the door plate, before: the BOARD plate hides behind the doorknob",
+   "motif": "door plate",
    "explains": "The three biggest seats were all one man's, the board's plate tucked so low it hides behind the knob.",
    "props": [
     {
@@ -674,6 +690,22 @@
      "scale": 0.7,
      "face": "neutral",
      "pose": "hold"
+    },
+    {
+     "thing": "chip",
+     "label": "NVIDIA",
+     "x": 1120,
+     "y": 600,
+     "scale": 0.32,
+     "face": "scared",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L039",
+       "word": 8,
+       "pose": "panic"
+      }
+     ]
     }
    ],
    "props": [

@@ -1,5 +1,5 @@
 {
-  "signature": "d6dbe27904a72684",
+  "signature": "9c28952786fd445d",
   "total": 747.714,
   "lufs": -14.02,
   "true_peak_db": -1.1,
@@ -68,8 +68,8 @@
     "uncredited": []
   },
   "effects": {
-    "count": 55,
-    "per_minute": 4.4,
+    "count": 56,
+    "per_minute": 4.5,
     "list": [
       {
         "t": 19.69,
@@ -82,11 +82,6 @@
         "why": "c1s09 shot"
       },
       {
-        "t": 47.16,
-        "name": "card",
-        "why": "c1t02 card"
-      },
-      {
         "t": 50.96,
         "name": "card",
         "why": "c1t03 card"
@@ -95,11 +90,6 @@
         "t": 67.669,
         "name": "stamp",
         "why": "c1s20 stamp"
-      },
-      {
-        "t": 72.007,
-        "name": "card",
-        "why": "c1t04 card"
       },
       {
         "t": 88.93,
@@ -207,11 +197,6 @@
         "why": "c4k13a4 shot"
       },
       {
-        "t": 316.029,
-        "name": "card",
-        "why": "c4t04 card"
-      },
-      {
         "t": 336.039,
         "name": "chapter",
         "why": "c5s00 chapter"
@@ -232,6 +217,21 @@
         "why": "c5s17 card"
       },
       {
+        "t": 389.839,
+        "name": "paper",
+        "why": "c5s19 doc"
+      },
+      {
+        "t": 400.498,
+        "name": "paper",
+        "why": "c5s21 doc"
+      },
+      {
+        "t": 402.809,
+        "name": "paper",
+        "why": "c5s22 doc"
+      },
+      {
         "t": 422.652,
         "name": "chapter",
         "why": "c6ch chapter"
@@ -240,6 +240,11 @@
         "t": 424.052,
         "name": "card",
         "why": "c6t01 card"
+      },
+      {
+        "t": 426.121,
+        "name": "slam",
+        "why": "c6s36 slam"
       },
       {
         "t": 432.542,
@@ -252,19 +257,14 @@
         "why": "c6s37d shot"
       },
       {
-        "t": 447.782,
-        "name": "card",
-        "why": "c6t03 card"
-      },
-      {
-        "t": 455.422,
-        "name": "card",
-        "why": "c6t04 card"
-      },
-      {
         "t": 468.872,
         "name": "card",
         "why": "c6t05 card"
+      },
+      {
+        "t": 485.391,
+        "name": "paper",
+        "why": "c6s39e doc"
       },
       {
         "t": 500.632,
@@ -285,11 +285,6 @@
         "t": 519.252,
         "name": "card",
         "why": "c7s04 card"
-      },
-      {
-        "t": 550.562,
-        "name": "card",
-        "why": "c7s18 card"
       },
       {
         "t": 581.962,
@@ -330,6 +325,16 @@
         "t": 678.512,
         "name": "card",
         "why": "c8t05 card"
+      },
+      {
+        "t": 698.842,
+        "name": "paper",
+        "why": "c8s54 doc"
+      },
+      {
+        "t": 701.428,
+        "name": "paper",
+        "why": "c8s54b doc"
       },
       {
         "t": 721.794,
@@ -617,8 +622,8 @@
   ],
   "ambience_default": true,
   "foley": {
-    "count": 200,
-    "sounds": 517
+    "count": 239,
+    "sounds": 557
   },
   "dead_air": {
     "pauses_over_250ms": 18,
