@@ -74,6 +74,14 @@
     office: "blue", studio: "cream", trading_floor: "green", street: "blue", suburb: "green", server_room: "teal", lawn: "green", stage: "red", warehouse: "ochre", bus: "amber",
     night_city: "navy", farmers_market: "olive", car_lot: "slate", bottling_plant: "teal", living_room: "plum", corridor: "mint", design_studio: "pink", empty_hall: "slate",
     bedroom: "plum", red_carpet: "red", mall: "pink", stadium: "green", lab: "teal", scrapyard: "ochre", night_road: "navy", courtroom: "amber", stairwell: "slate", train_platform: "teal" };
+  // The ambience bed each set declares (studio/tools/sounds.mjs, AMBIENCES); the mix lays it under the voice. A shot can name another with
+  // "ambience": "street" (or "opts": { "ambience": ... }), or none with "ambience": false. Explainer grounds take the quietest bed (studio), so the music carries them.
+  const SET_AMBIENCE = { kitchen: "room", boardroom: "office", pitch_stage: "studio", night_office: "office", bank: "room", supermarket: "shop", back_shop: "room", desk_top: "office",
+    office: "office", studio: "studio", board: "studio", trading_floor: "crowd", street: "street", suburb: "outdoors", server_room: "machine", lawn: "outdoors", stage: "crowd",
+    warehouse: "machine", bus: "street", night_city: "street", farmers_market: "market", car_lot: "street", bottling_plant: "machine", living_room: "room", corridor: "room",
+    design_studio: "office", empty_hall: "room", bedroom: "night", red_carpet: "crowd", mall: "shop", stadium: "crowd", lab: "machine", scrapyard: "machine", night_road: "night",
+    courtroom: "room", stairwell: "room", train_platform: "street", picture: "room", plain: "room",
+    dark_stage: "studio", evidence_wall: "studio", timeline_road: "studio", map_table: "studio" };
   const mixHex = (a, b, k) => { const p = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16)), x = p(a), y = p(b);
     return "#" + x.map((v, i) => Math.round(v + (y[i] - v) * k).toString(16).padStart(2, "0")).join(""); };
   // The palette of a shot: its own, the set's default, then the night look (darker walls, the same lamps).
@@ -1107,5 +1115,5 @@
     svg.querySelectorAll(".tick").forEach((k, i) => { for (let t = t0 + 0.4 + (i % 6) * 0.31; t < t1; t += 1.7 + (i % 4) * 0.4) { tl.set(k, { opacity: 0.35 }, t); tl.set(k, { opacity: 1 }, t + 0.12); } });
   }
 
-  window.Sets = { SETS, PROPS, PALETTES, SET_PALETTE, DRESS, D, pal, draw, animate };
+  window.Sets = { SETS, PROPS, PALETTES, SET_PALETTE, SET_AMBIENCE, DRESS, D, pal, draw, animate };
 })();

@@ -12,20 +12,24 @@
    --tighten  First cut dead air inside the clips: silence at both ends, and pauses over 0.3 s down to 0.22 s.
               Originals are kept in audio/raw/. This changes clip lengths, so do it before the storyboard is timed.
 
-   Storyboard options: "audio": { "music": "house" | "none", "beds": ["steady", "calm", "uneasy"], "music_db": -19, "climax": [5, 6], "sfx": true }
+   Storyboard options: "audio": { "music": "house" | "none", "beds": ["steady", "calm", "uneasy"], "music_db": -19, "climax": [5, 6], "sfx": true,
+                                     "ambience": false (no place beds), "ambience_db": -24 (all beds at one level), "foley": false (no act sounds) }
+   Every place gets its ambience bed (the set's own, or a shot's "ambience") and every body action its act sound, by themselves.
    The house music has three beds (steady, calm, uneasy); they take turns by chapter unless "beds" sets the order.
    WAV files need nothing installed; other formats are decoded with FFmpeg. */
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { load } from "./build.mjs";
-import { soundCues, climaxChapters, mixSignature, musicFiles, clipStats, musicStats } from "./cues.mjs";
-import { EFFECTS, BEDS, music as houseMusic } from "./sounds.mjs";
+import { soundCues, climaxChapters, mixSignature, musicFiles, clipStats, musicStats, ambienceCues, foleyCues } from "./cues.mjs";
+import { EFFECTS, BEDS, music as houseMusic, ambience as ambienceBed } from "./sounds.mjs";
 import { RATE, db, lin, readWav, writeWav, loadAudio, mono, loudness, peakLoudness, truePeakDb, limit, compress, silences, speechFloor, addInto } from "./audio-lib.mjs";
 
 const TARGET = -14, CEILING_TP = -1, MUSIC_DB = -19, CARD_DIP = -10, CLIMAX_DB = 3, END_RISE_DB = 5;
 // How loud each effect sits, in dB relative to the voice. Rare and soft.
 const SFX_DB = { stamp: -8, slam: -6, card: -15, chapter: -9, paper: -14, whoosh: -12, ding: -12, pop: -12, tick: -14, riser: -10 };
+// Act sounds sit lower than effects (dB relative to the voice); ambience beds lower still (busy places a little higher).
+const FOLEY_DB = { step: -22, sit: -17, rustle: -24, table: -11, slide: -20 }, AMB_DB = { room: -27, office: -25, studio: -28, shop: -24, market: -21, street: -21, outdoors: -23, night: -24, crowd: -20, machine: -22 };
 
 /* ---------- dead air inside clips ---------- */
 
@@ -154,7 +158,19 @@ function main() {
     musicReport.climax_chapters = climax;
   }
 
-  // 4. Effects.
+  // 4. Ambience: each place's bed, cut with the picture (short fades at the cuts), under the voice and the music.
+  const amb = args.includes("--no-ambience") ? [] : ambienceCues(res, story), beds = {};
+  for (const seg of amb) {
+    const b = beds[seg.bed] || (beds[seg.bed] = (() => { const ch = ambienceBed(seg.bed); return ch ? { ch, lufs: loudness(ch) } : null; })()); if (!b) continue;
+    const g = lin(voiceLufs + (Number.isFinite(cfg.ambience_db) ? cfg.ambience_db : AMB_DB[seg.bed] ?? -25) - b.lufs), i0 = at(seg.t0), i1 = Math.min(N, at(seg.t1)), n = b.ch[0].length, f = Math.round(0.04 * RATE);
+    for (let i = i0; i < i1; i++) { const e = Math.min(1, (i - i0) / f, (i1 - i) / f) * g, j = i % n; L[i] += b.ch[0][j] * e; R[i] += b.ch[1][j] * e; }
+  }
+  // 5. Act sounds: steps, sitting, rustles, a hand on the table; small and close to the picture.
+  const foley = args.includes("--no-foley") ? [] : foleyCues(res, story), fkit = {};
+  for (const c of foley) { const s = fkit[c.name] || (fkit[c.name] = (() => { const e = EFFECTS[c.name](); return { ...e, lufs: peakLoudness([e.x, e.x]) }; })());
+    const g = lin(voiceLufs + (FOLEY_DB[c.name] ?? -22) - s.lufs), i = at(c.t - s.anchor); addInto(L, s.x, i, g); addInto(R, s.x, i, g); }
+
+  // 6. Effects.
   const cues = cfg.sfx === false || args.includes("--no-sfx") ? [] : soundCues(res), kit = {};
   for (const c of cues) {
     if (!EFFECTS[c.name]) { console.error(`unknown sound "${c.name}" (${c.why}); known: ${Object.keys(EFFECTS).join(", ")}`); process.exit(2); }
@@ -163,7 +179,7 @@ function main() {
     addInto(L, s.x, i, g); addInto(R, s.x, i, g);
   }
 
-  // 5. Loudness: gain to the target, catch the peaks, check, repeat.
+  // 7. Loudness: gain to the target, catch the peaks, check, repeat.
   let lufs = loudness([L, R]), tp = 0, limited = { max_db: 0, over_1db: 0 }, ceiling = lin(CEILING_TP - 0.3);
   for (let pass = 0; pass < 6; pass++) {
     const g = lin(TARGET - lufs); for (let i = 0; i < N; i++) { L[i] *= g; R[i] *= g; }
@@ -173,7 +189,7 @@ function main() {
     else if (Math.abs(lufs - TARGET) < 0.05) break;
   }
 
-  // 6. Write.
+  // 8. Write.
   writeWav(path.join(ep, "audio", "mix.wav"), { rate: RATE, ch: [L, R] });
   const credits = path.join(ep, "audio", "CREDITS.md"), creditText = fs.existsSync(credits) ? fs.readFileSync(credits, "utf8") : null;
   if (creditText == null) fs.writeFileSync(credits, `# Sound credits\n\nEvery music or effect file used in this episode, where it came from and the licence. The lint fails while a row says FILL IN.\n\n| File | Source | Licence |\n|---|---|---|\n| Sound effects | Made in code by \`studio/tools/sounds.mjs\` | Our own work |\n${house ? "| House music bed | Made in code by `studio/tools/sounds.mjs` | Our own work |\n" : ""}${files.map((f) => `| ${path.basename(f)} | FILL IN | FILL IN |\n`).join("")}`);
@@ -185,6 +201,10 @@ function main() {
     voice: { speakers, clips_with_silent_edges: edgy },
     music: { ...musicReport, db_under_voice: underDb, uncredited },
     effects: { count: cues.length, per_minute: +perMin.toFixed(1), list: cues },
+    // the lint reads these: a bed for every place (A9) and a sound for the body actions (A10)
+    ambience: [...new Map(amb.flatMap((a) => a.places.map((p) => [p.place, { place: p.place, set: p.set, bed: a.bed }]))).values()],
+    ambience_default: res.shots.filter((s) => s.type !== "card" && s.type !== "chapter").every((s) => amb.some((a) => s.t0 >= a.t0 - 0.01 && s.t0 < a.t1)),
+    foley: { count: foley.filter((c) => c.act).length, sounds: foley.length },
     dead_air: { pauses_over_250ms: gaps.length, longest: gaps.slice().sort((a, b) => b.d - a.d).slice(0, 5) },
   };
   fs.writeFileSync(path.join(ep, "audio", "mix.json"), JSON.stringify(report, null, 2) + "\n");
@@ -192,6 +212,7 @@ function main() {
   console.log(`  voice: ${Object.entries(speakers).map(([k, v]) => `${k} ${v.gain_db >= 0 ? "+" : ""}${v.gain_db} dB`).join(", ")}${edgy ? `; ${edgy} clip(s) have over 0.1s of silence at an end (--tighten cuts it)` : ""}`);
   console.log(`  music: ${musicReport.source}${files.length ? " (" + files.map((f) => path.basename(f)).join(", ") + ")" : ""}${underDb != null ? `, ${underDb} dB under the voice` : ""}${uncredited.length ? `; NOT CREDITED in audio/CREDITS.md: ${uncredited.join(", ")}` : ""}`);
   console.log(`  effects: ${cues.length} (${perMin.toFixed(1)} a minute); pauses over 0.25s: ${gaps.length}`);
+  console.log(`  ambience: ${report.ambience.length} place(s), beds ${[...new Set(amb.map((a) => a.bed))].join(", ") || "none"}; act sounds: ${report.foley.count} actions (${foley.length} sounds)`);
   console.log(`  next: node studio/tools/build.mjs ${path.relative(process.cwd(), ep)}`);
 }
 

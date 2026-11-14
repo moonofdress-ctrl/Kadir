@@ -1,0 +1,32 @@
+{
+  "_": "Storyboard keys this engine supports, for the lint and the agents (read this instead of searching studio/README.md for words). Update it in the same commit as the engine code that adds a key.",
+  "engine": "v2",
+  "updated": "2026-11-14",
+  "keys": {
+    "cast": "storyboard header: the episode's own people, rig traits (channel-system/characters/cast.md)",
+    "frame": ["wide", "medium", "close", "ots"],
+    "ots": "shot: { speaker, listener } for frame ots",
+    "angle": ["low", "high"],
+    "light.kind": ["spot", "window", "screen", "neon", "day"],
+    "opts.palette": ["teal", "green", "blue", "navy", "red", "amber", "violet", "wood", "cream", "pink", "mint", "slate", "ochre", "olive", "plum"],
+    "opts.bare": "leave out a set's dressing",
+    "extras": "shot or panel: number of background people (up to 14)",
+    "opts.empty": "a place that stays empty (no extras)",
+    "ambience": ["room", "office", "studio", "shop", "market", "street", "outdoors", "night", "crowd", "machine"],
+    "audio.ambience": "false turns the place beds off",
+    "audio.ambience_db": "one level for every bed",
+    "foley": "act sounds, placed by mix.mjs from the acts",
+    "audio.foley": "false turns the act sounds off",
+    "acts.act": ["sit", "stand", "turn", "lean", "lean_back", "upright", "slam", "handover"],
+    "acts.with": "the receiver of a handover",
+    "acts.to": "a walk (a person walks with legs; a living thing rocks)",
+    "enter": ["walk", "pop", "slide_left", "slide_right", "rise", "none"],
+    "enter.default": { "person": "walk", "thing": "pop" },
+    "poses": ["rest", "hips", "shrug", "cheer", "point", "think", "facepalm", "hold", "phone", "wave", "present", "raise", "fold", "carry", "panic", "grab", "offer", "reach", "give", "slam", "lap"]
+  },
+  "defaults": {
+    "palette": "studio/engine/sets.js SET_PALETTE (each set's colour when a shot names none)",
+    "ambience": "studio/engine/sets.js SET_AMBIENCE (each set's bed when a shot names none)"
+  },
+  "mix_json": { "ambience": "[{ place, set, bed }]", "ambience_default": "every picture has a bed", "foley": "{ count: actions with a sound, sounds }" }
+}
