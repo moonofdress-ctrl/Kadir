@@ -410,29 +410,29 @@
    "cue": "L033",
    "frame": "ots",
    "ots": {
-    "speaker": "REGGIE",
-    "listener": "CHIP"
+    "speaker": "CHIP",
+    "listener": "REGGIE"
    },
    "explains": "Nobody chairs the board, and the clerk cannot believe it.",
    "actors": [
     {
-     "who": "REGGIE",
+     "thing": "chip",
      "x": 1260,
+     "y": 760,
+     "scale": 0.45,
+     "speaks": [
+      "L033"
+     ]
+    },
+    {
+     "who": "REGGIE",
+     "x": 600,
      "y": 980,
      "scale": 0.85,
      "speaks": [
       "L034"
      ],
      "prop": "stamp"
-    },
-    {
-     "thing": "chip",
-     "x": 620,
-     "y": 760,
-     "scale": 0.45,
-     "speaks": [
-      "L033"
-     ]
     }
    ],
    "camera": "still"
@@ -767,23 +767,23 @@
    },
    "id": "c2k06a2",
    "cue": "L041",
-   "frame": "close",
+   "frame": "ots",
+   "ots": {
+    "speaker": "CHIP",
+    "listener": "REGGIE"
+   },
    "light": {
-    "x": 640,
+    "x": 1260,
     "y": 220,
     "r": 820,
     "color": "#ffd9a0",
     "dark": 0.45
    },
-   "focus": [
-    640,
-    645
-   ],
-   "explains": "The chip asks if that is even allowed.",
+   "explains": "The chip asks if one man holding three tickets is even allowed.",
    "actors": [
     {
      "thing": "chip",
-     "x": 640,
+     "x": 1260,
      "y": 780,
      "scale": 0.45,
      "speaks": [
@@ -792,7 +792,7 @@
     },
     {
      "who": "REGGIE",
-     "x": 1180,
+     "x": 600,
      "y": 980,
      "scale": 0.85
     }
@@ -809,23 +809,23 @@
    },
    "id": "c2k06a3",
    "cue": "L042",
-   "frame": "ots",
-   "ots": {
-    "speaker": "REGGIE",
-    "listener": "CHIP"
-   },
+   "frame": "close",
    "light": {
-    "x": 1260,
+    "x": 1000,
     "y": 220,
     "r": 820,
     "color": "#ffd9a0",
     "dark": 0.45
    },
-   "explains": "It is allowed; whether it is wise is another matter.",
+   "focus": [
+    1000,
+    560
+   ],
+   "explains": "It is allowed.",
    "actors": [
     {
      "who": "REGGIE",
-     "x": 1260,
+     "x": 1000,
      "y": 980,
      "scale": 0.85,
      "speaks": [
@@ -834,15 +834,54 @@
     },
     {
      "thing": "chip",
-     "x": 600,
+     "x": 560,
+     "y": 780,
+     "scale": 0.45
+    }
+   ],
+   "camera": "tilt_up"
+  },
+  {
+   "set": "theatre",
+   "place": "theatre coat check",
+   "opts": {
+    "palette": "plum",
+    "dress": "coat_check",
+    "night": true
+   },
+   "id": "c2k06a3b",
+   "cue": "L043",
+   "frame": "close",
+   "light": {
+    "x": 900,
+    "y": 220,
+    "r": 820,
+    "color": "#ffd9a0",
+    "dark": 0.45
+   },
+   "focus": [
+    900,
+    645
+   ],
+   "explains": "But is it wise? That is a different question.",
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 900,
      "y": 780,
      "scale": 0.45,
      "speaks": [
       "L043"
      ]
+    },
+    {
+     "who": "REGGIE",
+     "x": 1400,
+     "y": 980,
+     "scale": 0.85
     }
    ],
-   "camera": "tilt_up"
+   "camera": "pull_out"
   },
   {
    "set": "theatre",
