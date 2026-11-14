@@ -1,0 +1,1310 @@
+[
+  {
+    "id": "L001",
+    "speaker": "N",
+    "text": "Thursday, the twelfth of November. Nvidia's chief executive chair is empty... and the person now in charge is still at her old desk.",
+    "dir": "hook"
+  },
+  {
+    "id": "L002",
+    "speaker": "N",
+    "text": "Colette Kress, the finance chief, has just been named interim chief executive. Harvey Jones becomes the board's first-ever chair.",
+    "dir": "hook"
+  },
+  {
+    "id": "L003",
+    "speaker": "CHIP",
+    "text": "Who's in the chair?",
+    "dir": "hook"
+  },
+  {
+    "id": "L004",
+    "speaker": "HAL",
+    "text": "Nobody. That's the news.",
+    "dir": "hook"
+  },
+  {
+    "id": "L005",
+    "speaker": "N",
+    "text": "By Thursday's close, the market put this company at about four trillion dollars. Keep that number in mind.",
+    "dir": "number"
+  },
+  {
+    "id": "L006",
+    "speaker": "N",
+    "text": "A slice of it sits in every S&P 500 index fund.",
+    "dir": "plain"
+  },
+  {
+    "id": "L007",
+    "speaker": "N",
+    "text": "And on her desk... a date. Tuesday: the first results call since Nvidia went public... with Jensen Huang gone from the top job.",
+    "dir": "plain"
+  },
+  {
+    "id": "L008",
+    "speaker": "BENNY",
+    "text": "Wait. Who's running Nvidia?",
+    "dir": "plain"
+  },
+  {
+    "id": "L009",
+    "speaker": "CHAD",
+    "text": "The money person.",
+    "dir": "plain"
+  },
+  {
+    "id": "L010",
+    "speaker": "BENNY",
+    "text": "Is that good?",
+    "dir": "plain"
+  },
+  {
+    "id": "L011",
+    "speaker": "CHAD",
+    "text": "Ask me Tuesday.",
+    "dir": "joke"
+  },
+  {
+    "id": "L012",
+    "speaker": "N",
+    "text": "By the end, you'll know exactly what to listen for at four twenty.",
+    "dir": "hook"
+  },
+  {
+    "id": "L013",
+    "speaker": "N",
+    "text": "So who is running Nvidia now... and why does Tuesday matter?",
+    "dir": "hook"
+  },
+  {
+    "id": "L014",
+    "speaker": "N",
+    "text": "It starts on Sunday, the eighth of November. Nvidia's board opens an independent review... in light of reporting that Jensen Huang had been the target of a foreign intelligence effort.",
+    "dir": "plain"
+  },
+  {
+    "id": "L015",
+    "speaker": "N",
+    "text": "The board's word is target. The claim itself is an allegation, as reported, and China denies it.",
+    "dir": "limit"
+  },
+  {
+    "id": "L016",
+    "speaker": "N",
+    "text": "Monday, the shares fall about four percent. Tuesday, about five and a half more.",
+    "dir": "number"
+  },
+  {
+    "id": "L017",
+    "speaker": "MARTHA",
+    "text": "Nine and a half percent?",
+    "dir": "plain"
+  },
+  {
+    "id": "L018",
+    "speaker": "HAL",
+    "text": "Over a review.",
+    "dir": "plain"
+  },
+  {
+    "id": "L019",
+    "speaker": "MARTHA",
+    "text": "Not a finding?",
+    "dir": "plain"
+  },
+  {
+    "id": "L020",
+    "speaker": "HAL",
+    "text": "I don't wait for findings. I sold Monday.",
+    "dir": "joke"
+  },
+  {
+    "id": "L021",
+    "speaker": "MARTHA",
+    "text": "So what's the question?",
+    "dir": "plain"
+  },
+  {
+    "id": "L022",
+    "speaker": "HAL",
+    "text": "The one on the door.",
+    "dir": "plain"
+  },
+  {
+    "id": "L023",
+    "speaker": "N",
+    "text": "That was Sunday. By Thursday, the question had moved... from what happened, to who's in charge.",
+    "dir": "turn"
+  },
+  {
+    "id": "L024",
+    "speaker": "N",
+    "text": "To see why that hurts, count his seats.",
+    "dir": "recap"
+  },
+  {
+    "id": "L025",
+    "speaker": "N",
+    "text": "Jensen Huang founded Nvidia thirty-three years ago. He was its chief executive. Its president. And a member of its board.",
+    "dir": "number"
+  },
+  {
+    "id": "L026",
+    "speaker": "N",
+    "text": "And no successor had been named in public.",
+    "dir": "plain"
+  },
+  {
+    "id": "L027",
+    "speaker": "N",
+    "text": "For investors, that was simple: one face, one voice. It also meant that if he ever left, three seats would empty at once.",
+    "dir": "plain"
+  },
+  {
+    "id": "L028",
+    "speaker": "BENNY",
+    "text": "So who was next in line?",
+    "dir": "plain"
+  },
+  {
+    "id": "L029",
+    "speaker": "MARTHA",
+    "text": "Nobody said.",
+    "dir": "plain"
+  },
+  {
+    "id": "L030",
+    "speaker": "BENNY",
+    "text": "Did anybody ask?",
+    "dir": "plain"
+  },
+  {
+    "id": "L031",
+    "speaker": "MARTHA",
+    "text": "Everybody. Now.",
+    "dir": "joke"
+  },
+  {
+    "id": "L032",
+    "speaker": "REGGIE",
+    "text": "Who chairs your board?",
+    "dir": "plain"
+  },
+  {
+    "id": "L033",
+    "speaker": "CHIP",
+    "text": "Nobody.",
+    "dir": "plain"
+  },
+  {
+    "id": "L034",
+    "speaker": "REGGIE",
+    "text": "Nobody?",
+    "dir": "plain"
+  },
+  {
+    "id": "L035",
+    "speaker": "CHIP",
+    "text": "It never came up.",
+    "dir": "plain"
+  },
+  {
+    "id": "L036",
+    "speaker": "REGGIE",
+    "text": "It will.",
+    "dir": "joke"
+  },
+  {
+    "id": "L037",
+    "speaker": "N",
+    "text": "Until this week, Nvidia's board had no chair at all. The man at the top held the company's three biggest seats himself.",
+    "dir": "plain"
+  },
+  {
+    "id": "L038",
+    "speaker": "N",
+    "text": "Gil Luria of DA Davidson told Fox Business that much of the decision-making was concentrated in Huang.",
+    "dir": "plain"
+  },
+  {
+    "id": "L039",
+    "speaker": "N",
+    "text": "So the risk was never only the reports. It was the empty seats they could leave behind.",
+    "dir": "recap"
+  },
+  {
+    "id": "L040",
+    "speaker": "REGGIE",
+    "text": "Three tickets. One coat.",
+    "dir": "plain"
+  },
+  {
+    "id": "L041",
+    "speaker": "CHIP",
+    "text": "Is that allowed?",
+    "dir": "plain"
+  },
+  {
+    "id": "L042",
+    "speaker": "REGGIE",
+    "text": "Allowed.",
+    "dir": "plain"
+  },
+  {
+    "id": "L043",
+    "speaker": "CHIP",
+    "text": "Wise?",
+    "dir": "plain"
+  },
+  {
+    "id": "L044",
+    "speaker": "REGGIE",
+    "text": "Different counter.",
+    "dir": "joke"
+  },
+  {
+    "id": "L045",
+    "speaker": "CHAD",
+    "text": "One guy, three jobs? Efficient.",
+    "dir": "plain"
+  },
+  {
+    "id": "L046",
+    "speaker": "HAL",
+    "text": "Until he leaves all three.",
+    "dir": "joke"
+  },
+  {
+    "id": "L047",
+    "speaker": "CHAD",
+    "text": "Who leaves all three?",
+    "dir": "plain"
+  },
+  {
+    "id": "L048",
+    "speaker": "HAL",
+    "text": "Keep lifting.",
+    "dir": "joke"
+  },
+  {
+    "id": "L049",
+    "speaker": "N",
+    "text": "On Friday, the sixth, the market valued Nvidia at about four and a half trillion dollars.",
+    "dir": "number"
+  },
+  {
+    "id": "L050",
+    "speaker": "BENNY",
+    "text": "Big week?",
+    "dir": "plain"
+  },
+  {
+    "id": "L051",
+    "speaker": "CHIP",
+    "text": "Huge. Nothing can go wrong.",
+    "dir": "joke"
+  },
+  {
+    "id": "L052",
+    "speaker": "BENNY",
+    "text": "It's only Friday.",
+    "dir": "plain"
+  },
+  {
+    "id": "L053",
+    "speaker": "N",
+    "text": "And then came Wednesday.",
+    "dir": "turn"
+  },
+  {
+    "id": "L054",
+    "speaker": "N",
+    "text": "Wednesday, the eleventh. The shares close up almost three percent, at about one hundred and seventy-four dollars.",
+    "dir": "number"
+  },
+  {
+    "id": "L055",
+    "speaker": "N",
+    "text": "For a few hours, it looked as if the worst was over.",
+    "dir": "plain"
+  },
+  {
+    "id": "L056",
+    "speaker": "CHAD",
+    "text": "Green! We're back!",
+    "dir": "plain"
+  },
+  {
+    "id": "L057",
+    "speaker": "HAL",
+    "text": "The bell rang, Chad.",
+    "dir": "joke"
+  },
+  {
+    "id": "L058",
+    "speaker": "CHAD",
+    "text": "So?",
+    "dir": "plain"
+  },
+  {
+    "id": "L059",
+    "speaker": "HAL",
+    "text": "So the night shift starts.",
+    "dir": "joke"
+  },
+  {
+    "id": "L060",
+    "speaker": "N",
+    "text": "After the close, two newspapers publish reports. The market reads both overnight.",
+    "dir": "plain"
+  },
+  {
+    "id": "L061",
+    "speaker": "N",
+    "text": "The New York Times reports a second relationship, with a senior Nvidia executive who reports to Huang.",
+    "dir": "plain"
+  },
+  {
+    "id": "L062",
+    "speaker": "N",
+    "text": "Neither Nvidia nor Huang had confirmed it. We're not saying it's true. We're saying it was reported.",
+    "dir": "limit"
+  },
+  {
+    "id": "L063",
+    "speaker": "N",
+    "text": "The Wall Street Journal reports that the board is preparing to remove him.",
+    "dir": "plain"
+  },
+  {
+    "id": "L064",
+    "speaker": "CHAD",
+    "text": "So it's true?",
+    "dir": "plain"
+  },
+  {
+    "id": "L065",
+    "speaker": "REGGIE",
+    "text": "Allegation.",
+    "dir": "plain"
+  },
+  {
+    "id": "L066",
+    "speaker": "CHAD",
+    "text": "So it's false?",
+    "dir": "plain"
+  },
+  {
+    "id": "L067",
+    "speaker": "REGGIE",
+    "text": "Allegation.",
+    "dir": "plain"
+  },
+  {
+    "id": "L068",
+    "speaker": "CHAD",
+    "text": "So what is it?",
+    "dir": "plain"
+  },
+  {
+    "id": "L069",
+    "speaker": "REGGIE",
+    "text": "Reported.",
+    "dir": "plain"
+  },
+  {
+    "id": "L070",
+    "speaker": "BENNY",
+    "text": "Down eight percent? After the bell?",
+    "dir": "plain"
+  },
+  {
+    "id": "L071",
+    "speaker": "CHAD",
+    "text": "After-hours, bro. Market never sleeps.",
+    "dir": "plain"
+  },
+  {
+    "id": "L072",
+    "speaker": "BENNY",
+    "text": "I'd like to.",
+    "dir": "joke"
+  },
+  {
+    "id": "L073",
+    "speaker": "N",
+    "text": "In after-hours trading, the shares fall eight to nine percent.",
+    "dir": "number"
+  },
+  {
+    "id": "L074",
+    "speaker": "N",
+    "text": "So on Wednesday night, two clocks ran at once. The board's... and the market's.",
+    "dir": "turn"
+  },
+  {
+    "id": "L075",
+    "speaker": "MARTHA",
+    "text": "Two reports in one night.",
+    "dir": "plain"
+  },
+  {
+    "id": "L076",
+    "speaker": "HAL",
+    "text": "Neither confirmed that night.",
+    "dir": "plain"
+  },
+  {
+    "id": "L077",
+    "speaker": "MARTHA",
+    "text": "So it's not proven.",
+    "dir": "plain"
+  },
+  {
+    "id": "L078",
+    "speaker": "HAL",
+    "text": "Not proven. Still priced.",
+    "dir": "plain"
+  },
+  {
+    "id": "L079",
+    "speaker": "N",
+    "text": "And according to Nvidia's own regulatory filing, the board accepted his resignation that same Wednesday.",
+    "dir": "plain"
+  },
+  {
+    "id": "L080",
+    "speaker": "N",
+    "text": "Nvidia would announce it on Thursday.",
+    "dir": "plain"
+  },
+  {
+    "id": "L081",
+    "speaker": "N",
+    "text": "Thursday. Nvidia puts out a release. The board announces that Jensen Huang has resigned... as president, chief executive and a member of the board, effective immediately.",
+    "dir": "plain"
+  },
+  {
+    "id": "L082",
+    "speaker": "N",
+    "text": "The release gives no reason. And no handover date: effective immediately means now.",
+    "dir": "limit"
+  },
+  {
+    "id": "L083",
+    "speaker": "N",
+    "text": "Some founders step down and stay on as chairman. Not here. He has no seat left.",
+    "dir": "plain"
+  },
+  {
+    "id": "L084",
+    "speaker": "CHAD",
+    "text": "One plate, please. Says boss.",
+    "dir": "plain"
+  },
+  {
+    "id": "L085",
+    "speaker": "MARTHA",
+    "text": "Permanent or temporary?",
+    "dir": "plain"
+  },
+  {
+    "id": "L086",
+    "speaker": "CHAD",
+    "text": "What's the difference?",
+    "dir": "plain"
+  },
+  {
+    "id": "L087",
+    "speaker": "MARTHA",
+    "text": "Tape.",
+    "dir": "joke"
+  },
+  {
+    "id": "L088",
+    "speaker": "N",
+    "text": "The chief executive's job goes to Colette Kress, Nvidia's finance chief since 2013. Her new title: interim chief executive... and chief financial officer. She keeps both.",
+    "dir": "number"
+  },
+  {
+    "id": "L089",
+    "speaker": "N",
+    "text": "Harvey Jones, on the board since 1993 and a former chief executive of Synopsys, becomes Nvidia's first-ever board chair.",
+    "dir": "plain"
+  },
+  {
+    "id": "L090",
+    "speaker": "CHIP",
+    "text": "Who's in the chair?",
+    "dir": "plain"
+  },
+  {
+    "id": "L091",
+    "speaker": "REGGIE",
+    "text": "Which chair? There are two now.",
+    "dir": "joke"
+  },
+  {
+    "id": "L092",
+    "speaker": "CHIP",
+    "text": "Is that better?",
+    "dir": "plain"
+  },
+  {
+    "id": "L093",
+    "speaker": "REGGIE",
+    "text": "It's more chairs.",
+    "dir": "joke"
+  },
+  {
+    "id": "L094",
+    "speaker": "N",
+    "text": "In the release, Jones says the board has \"full confidence in Colette and the leadership team\". The release adds, \"Jensen's contributions to NVIDIA are profound.\"",
+    "dir": "plain"
+  },
+  {
+    "id": "L095",
+    "speaker": "N",
+    "text": "And Kress says, \"Our focus remains on serving our customers, partners, developers and shareholders.\"",
+    "dir": "plain"
+  },
+  {
+    "id": "L096",
+    "speaker": "BENNY",
+    "text": "Does it say why?",
+    "dir": "plain"
+  },
+  {
+    "id": "L097",
+    "speaker": "MARTHA",
+    "text": "It says thank you.",
+    "dir": "plain"
+  },
+  {
+    "id": "L098",
+    "speaker": "BENNY",
+    "text": "That's not why.",
+    "dir": "plain"
+  },
+  {
+    "id": "L099",
+    "speaker": "MARTHA",
+    "text": "Both sides checked.",
+    "dir": "plain"
+  },
+  {
+    "id": "L100",
+    "speaker": "N",
+    "text": "The board starts a search for a permanent chief executive, looking at candidates inside and outside the company.",
+    "dir": "plain"
+  },
+  {
+    "id": "L101",
+    "speaker": "HAL",
+    "text": "Wanted: one chief executive.",
+    "dir": "plain"
+  },
+  {
+    "id": "L102",
+    "speaker": "CHAD",
+    "text": "Experience?",
+    "dir": "plain"
+  },
+  {
+    "id": "L103",
+    "speaker": "HAL",
+    "text": "Running four trillion dollars.",
+    "dir": "plain"
+  },
+  {
+    "id": "L104",
+    "speaker": "CHAD",
+    "text": "I ran a lemonade stand.",
+    "dir": "joke"
+  },
+  {
+    "id": "L105",
+    "speaker": "HAL",
+    "text": "Next.",
+    "dir": "joke"
+  },
+  {
+    "id": "L106",
+    "speaker": "N",
+    "text": "So for now, Nvidia is run by the person who counts its money. Who is she?",
+    "dir": "turn"
+  },
+  {
+    "id": "L107",
+    "speaker": "N",
+    "text": "Colette Kress isn't new. She joined Nvidia as finance chief in September 2013.",
+    "dir": "number"
+  },
+  {
+    "id": "L108",
+    "speaker": "N",
+    "text": "She's fifty-nine, according to Yahoo Finance.",
+    "dir": "number"
+  },
+  {
+    "id": "L109",
+    "speaker": "N",
+    "text": "Before that job, she ran finance for a unit at Cisco, and for Microsoft's server and tools division. Nearly twenty-five years in finance at tech companies.",
+    "dir": "plain"
+  },
+  {
+    "id": "L110",
+    "speaker": "MARTHA",
+    "text": "A quarter century under the hood.",
+    "dir": "plain"
+  },
+  {
+    "id": "L111",
+    "speaker": "HAL",
+    "text": "And now?",
+    "dir": "plain"
+  },
+  {
+    "id": "L112",
+    "speaker": "MARTHA",
+    "text": "Now she drives it too.",
+    "dir": "joke"
+  },
+  {
+    "id": "L113",
+    "speaker": "HAL",
+    "text": "Then who's under the hood?",
+    "dir": "plain"
+  },
+  {
+    "id": "L114",
+    "speaker": "N",
+    "text": "On Nvidia's earnings calls, she's the one who normally walks through the numbers.",
+    "dir": "plain"
+  },
+  {
+    "id": "L115",
+    "speaker": "CHAD",
+    "text": "Two jobs at once? I can't do one.",
+    "dir": "plain"
+  },
+  {
+    "id": "L116",
+    "speaker": "HAL",
+    "text": "We know.",
+    "dir": "joke"
+  },
+  {
+    "id": "L117",
+    "speaker": "N",
+    "text": "Here's the part few people noticed. The person who signs the numbers... reads them to the market... and now runs the company. Same person.",
+    "dir": "reveal"
+  },
+  {
+    "id": "L118",
+    "speaker": "BENNY",
+    "text": "So who's in the chair?",
+    "dir": "plain"
+  },
+  {
+    "id": "L119",
+    "speaker": "CHIP",
+    "text": "The one with the calculator.",
+    "dir": "reveal"
+  },
+  {
+    "id": "L120",
+    "speaker": "BENNY",
+    "text": "Is that normal?",
+    "dir": "joke"
+  },
+  {
+    "id": "L121",
+    "speaker": "CHIP",
+    "text": "Ask four analysts. Get five opinions.",
+    "dir": "joke"
+  },
+  {
+    "id": "L122",
+    "speaker": "N",
+    "text": "Fox Business asked four of them. One: Susannah Streeter of Wealth Club calls her a \"safe pair of hands\"... but says she lacks Huang's global status and his deep commercial ties.",
+    "dir": "plain"
+  },
+  {
+    "id": "L123",
+    "speaker": "N",
+    "text": "Two: Dan Ives of Yorkville Ives says, \"we are big fans\". Three: Bret Kenwell of eToro expects her to \"provide stability and reassurance\".",
+    "dir": "plain"
+  },
+  {
+    "id": "L124",
+    "speaker": "N",
+    "text": "Four: Gil Luria says the task is a heavy one, because so much ran through Huang.",
+    "dir": "plain"
+  },
+  {
+    "id": "L125",
+    "speaker": "MARTHA",
+    "text": "Safe pair of hands. Big fans. Stability.",
+    "dir": "plain"
+  },
+  {
+    "id": "L126",
+    "speaker": "HAL",
+    "text": "Notice the word nobody used.",
+    "dir": "plain"
+  },
+  {
+    "id": "L127",
+    "speaker": "MARTHA",
+    "text": "Which?",
+    "dir": "plain"
+  },
+  {
+    "id": "L128",
+    "speaker": "HAL",
+    "text": "Permanent.",
+    "dir": "plain"
+  },
+  {
+    "id": "L129",
+    "speaker": "N",
+    "text": "The analysts were calm. The market was not.",
+    "dir": "turn"
+  },
+  {
+    "id": "L130",
+    "speaker": "N",
+    "text": "Thursday, the shares fell more than twelve percent at one point.",
+    "dir": "number"
+  },
+  {
+    "id": "L131",
+    "speaker": "CHAD",
+    "text": "Down twelve! Buy the dip!",
+    "dir": "plain"
+  },
+  {
+    "id": "L132",
+    "speaker": "HAL",
+    "text": "It's climbing back.",
+    "dir": "plain"
+  },
+  {
+    "id": "L133",
+    "speaker": "CHAD",
+    "text": "Sell the rip!",
+    "dir": "joke"
+  },
+  {
+    "id": "L134",
+    "speaker": "HAL",
+    "text": "Pick one, Chad.",
+    "dir": "joke"
+  },
+  {
+    "id": "L135",
+    "speaker": "N",
+    "text": "Remember that four trillion dollars? The Friday before, it was four and a half.",
+    "dir": "turn"
+  },
+  {
+    "id": "L136",
+    "speaker": "N",
+    "text": "Between those two dates, about four hundred and ninety billion dollars of market value disappeared.",
+    "dir": "reveal"
+  },
+  {
+    "id": "L137",
+    "speaker": "N",
+    "text": "That's our subtraction, from figures in Yahoo Finance's live blog.",
+    "dir": "limit"
+  },
+  {
+    "id": "L138",
+    "speaker": "N",
+    "text": "That's more than four times what analysts expect Nvidia to sell in the whole quarter. Our arithmetic, not a forecast.",
+    "dir": "number"
+  },
+  {
+    "id": "L139",
+    "speaker": "N",
+    "text": "The neighbours shook too. On Thursday morning, CoreWeave was down about nine percent and Nebius about sixteen, according to TechCrunch.",
+    "dir": "number"
+  },
+  {
+    "id": "L140",
+    "speaker": "MARTHA",
+    "text": "What happened to you two?",
+    "dir": "plain"
+  },
+  {
+    "id": "L141",
+    "speaker": "COREWEAVE",
+    "text": "We stood next to him.",
+    "dir": "joke"
+  },
+  {
+    "id": "L142",
+    "speaker": "MARTHA",
+    "text": "That's it?",
+    "dir": "plain"
+  },
+  {
+    "id": "L143",
+    "speaker": "NEBIUS",
+    "text": "That's enough.",
+    "dir": "joke"
+  },
+  {
+    "id": "L144",
+    "speaker": "N",
+    "text": "Friday, the thirteenth. HSBC cuts Nvidia to Hold... and its price target from three hundred and sixty-five dollars to one hundred and seventy.",
+    "dir": "number"
+  },
+  {
+    "id": "L145",
+    "speaker": "N",
+    "text": "The new target is less than half the old one.",
+    "dir": "number"
+  },
+  {
+    "id": "L146",
+    "speaker": "N",
+    "text": "Its analyst, Frank Lee, said confidence was \"shaken\", as the \"leadership succession plan is unclear\". That's one bank's view.",
+    "dir": "limit"
+  },
+  {
+    "id": "L147",
+    "speaker": "N",
+    "text": "Michael Landsberg of Landsberg Bennett called the resignation \"the worst-case scenario\" in the saga, Fox Business reports.",
+    "dir": "plain"
+  },
+  {
+    "id": "L148",
+    "speaker": "HAL",
+    "text": "Hold.",
+    "dir": "plain"
+  },
+  {
+    "id": "L149",
+    "speaker": "CHIP",
+    "text": "Hold what?",
+    "dir": "plain"
+  },
+  {
+    "id": "L150",
+    "speaker": "HAL",
+    "text": "Your breath.",
+    "dir": "joke"
+  },
+  {
+    "id": "L151",
+    "speaker": "N",
+    "text": "On Friday, the shares closed at about one hundred and sixty-three dollars. StoneX puts them about thirty percent below their record high.",
+    "dir": "number"
+  },
+  {
+    "id": "L152",
+    "speaker": "CHIP",
+    "text": "And who's in the chair after her?",
+    "dir": "plain"
+  },
+  {
+    "id": "L153",
+    "speaker": "BENNY",
+    "text": "That's the bit nobody can tell you.",
+    "dir": "plain"
+  },
+  {
+    "id": "L154",
+    "speaker": "N",
+    "text": "Which is why Tuesday matters.",
+    "dir": "turn"
+  },
+  {
+    "id": "L155",
+    "speaker": "N",
+    "text": "So where does this touch you? In a fund you may never open.",
+    "dir": "turn"
+  },
+  {
+    "id": "L156",
+    "speaker": "N",
+    "text": "Before the fall, about seven dollars of every hundred in an S&P 500 index fund was Nvidia. After this week the slice is smaller. We haven't seen a current figure.",
+    "dir": "number"
+  },
+  {
+    "id": "L157",
+    "speaker": "MARTHA",
+    "text": "Do you own Nvidia?",
+    "dir": "plain"
+  },
+  {
+    "id": "L158",
+    "speaker": "BENNY",
+    "text": "No.",
+    "dir": "plain"
+  },
+  {
+    "id": "L159",
+    "speaker": "MARTHA",
+    "text": "Own an index fund?",
+    "dir": "plain"
+  },
+  {
+    "id": "L160",
+    "speaker": "BENNY",
+    "text": "...Yes.",
+    "dir": "plain"
+  },
+  {
+    "id": "L161",
+    "speaker": "MARTHA",
+    "text": "Then you own Nvidia.",
+    "dir": "reveal"
+  },
+  {
+    "id": "L162",
+    "speaker": "BENNY",
+    "text": "Wait. I own that?",
+    "dir": "joke"
+  },
+  {
+    "id": "L163",
+    "speaker": "N",
+    "text": "Which means a company inside your 401(k) is run by a finance executive on a temporary title.",
+    "dir": "turn"
+  },
+  {
+    "id": "L164",
+    "speaker": "N",
+    "text": "Whether you're thirty or sixty, if you own the index, you own a piece of this question.",
+    "dir": "plain"
+  },
+  {
+    "id": "L165",
+    "speaker": "N",
+    "text": "Tuesday, the seventeenth of November. At about four twenty p.m. Eastern, Nvidia releases its results for the quarter that ended on the twenty-fifth of October.",
+    "dir": "number"
+  },
+  {
+    "id": "L166",
+    "speaker": "N",
+    "text": "At five, the call begins. Kress's written finance commentary goes up right after the release.",
+    "dir": "plain"
+  },
+  {
+    "id": "L167",
+    "speaker": "N",
+    "text": "Notice the dates. Tuesday's numbers cover a quarter that closed before the board's review began.",
+    "dir": "turn"
+  },
+  {
+    "id": "L168",
+    "speaker": "BENNY",
+    "text": "So the numbers are from before?",
+    "dir": "plain"
+  },
+  {
+    "id": "L169",
+    "speaker": "HAL",
+    "text": "Before. The voice is after.",
+    "dir": "plain"
+  },
+  {
+    "id": "L170",
+    "speaker": "CHAD",
+    "text": "What time's the game?",
+    "dir": "plain"
+  },
+  {
+    "id": "L171",
+    "speaker": "HAL",
+    "text": "Four twenty. Eastern.",
+    "dir": "plain"
+  },
+  {
+    "id": "L172",
+    "speaker": "CHAD",
+    "text": "Who's playing?",
+    "dir": "plain"
+  },
+  {
+    "id": "L173",
+    "speaker": "HAL",
+    "text": "One person. Two jobs.",
+    "dir": "plain"
+  },
+  {
+    "id": "L174",
+    "speaker": "N",
+    "text": "Only analysts and big investors get to ask questions. Anyone can listen on the webcast at Nvidia's investor site.",
+    "dir": "limit"
+  },
+  {
+    "id": "L175",
+    "speaker": "BENNY",
+    "text": "Can I ask a question?",
+    "dir": "plain"
+  },
+  {
+    "id": "L176",
+    "speaker": "REGGIE",
+    "text": "No.",
+    "dir": "plain"
+  },
+  {
+    "id": "L177",
+    "speaker": "BENNY",
+    "text": "Can I listen?",
+    "dir": "plain"
+  },
+  {
+    "id": "L178",
+    "speaker": "REGGIE",
+    "text": "Yes. Quietly.",
+    "dir": "joke"
+  },
+  {
+    "id": "L179",
+    "speaker": "N",
+    "text": "It's the first Nvidia call without Jensen Huang as chief executive... and Kress's first as interim boss.",
+    "dir": "plain"
+  },
+  {
+    "id": "L180",
+    "speaker": "N",
+    "text": "StoneX's Matt Weller calls this report Nvidia's first test since Huang left.",
+    "dir": "plain"
+  },
+  {
+    "id": "L181",
+    "speaker": "BENNY",
+    "text": "So what do I do on Tuesday?",
+    "dir": "plain"
+  },
+  {
+    "id": "L182",
+    "speaker": "MARTHA",
+    "text": "Listen.",
+    "dir": "plain"
+  },
+  {
+    "id": "L183",
+    "speaker": "BENNY",
+    "text": "That's it?",
+    "dir": "limit"
+  },
+  {
+    "id": "L184",
+    "speaker": "MARTHA",
+    "text": "That's more than most people do.",
+    "dir": "joke"
+  },
+  {
+    "id": "L185",
+    "speaker": "N",
+    "text": "This isn't advice to buy or sell. It's a date on the calendar.",
+    "dir": "limit"
+  },
+  {
+    "id": "L186",
+    "speaker": "N",
+    "text": "So when the numbers land, here's what to look for. Three things.",
+    "dir": "turn"
+  },
+  {
+    "id": "L187",
+    "speaker": "N",
+    "text": "One: the big number. Analysts expect revenue of about one hundred and nine billion dollars for the quarter, according to StoneX. That's three months of sales.",
+    "dir": "number"
+  },
+  {
+    "id": "L188",
+    "speaker": "N",
+    "text": "Nvidia's own forecast, given in August, was one hundred and eight billion, give or take two percent. Both are estimates, not results.",
+    "dir": "number"
+  },
+  {
+    "id": "L189",
+    "speaker": "N",
+    "text": "Two details in that August fine print: Nvidia guided its gross margin to about seventy-four percent. And it assumed no data-center chip sales to China.",
+    "dir": "number"
+  },
+  {
+    "id": "L190",
+    "speaker": "CHAD",
+    "text": "Seventy-four percent of what?",
+    "dir": "plain"
+  },
+  {
+    "id": "L191",
+    "speaker": "HAL",
+    "text": "Of each sales dollar, left after making the product.",
+    "dir": "plain"
+  },
+  {
+    "id": "L192",
+    "speaker": "CHAD",
+    "text": "That's a lot of dollar.",
+    "dir": "plain"
+  },
+  {
+    "id": "L193",
+    "speaker": "MARTHA",
+    "text": "What if they beat it?",
+    "dir": "plain"
+  },
+  {
+    "id": "L194",
+    "speaker": "HAL",
+    "text": "Then we listen to part two.",
+    "dir": "plain"
+  },
+  {
+    "id": "L195",
+    "speaker": "MARTHA",
+    "text": "And if they miss?",
+    "dir": "plain"
+  },
+  {
+    "id": "L196",
+    "speaker": "HAL",
+    "text": "Then we listen harder.",
+    "dir": "joke"
+  },
+  {
+    "id": "L197",
+    "speaker": "N",
+    "text": "Two: the forecast for the next quarter. It's the first one given with Kress as interim boss.",
+    "dir": "turn"
+  },
+  {
+    "id": "L198",
+    "speaker": "CHAD",
+    "text": "I see... fog.",
+    "dir": "plain"
+  },
+  {
+    "id": "L199",
+    "speaker": "CHIP",
+    "text": "That's the guidance.",
+    "dir": "plain"
+  },
+  {
+    "id": "L200",
+    "speaker": "CHAD",
+    "text": "Is it good fog?",
+    "dir": "plain"
+  },
+  {
+    "id": "L201",
+    "speaker": "CHIP",
+    "text": "Ask me Tuesday.",
+    "dir": "joke"
+  },
+  {
+    "id": "L202",
+    "speaker": "N",
+    "text": "Three: any word on the search. As of Saturday, the fourteenth of November, no permanent chief executive has been named.",
+    "dir": "turn"
+  },
+  {
+    "id": "L203",
+    "speaker": "N",
+    "text": "On Friday, the Financial Times reported, as relayed by Reuters, that the board had approached an executive at another chip company. Nvidia's board says it has not formally engaged any candidate, and calls speculation about names \"premature\". It's one report.",
+    "dir": "limit"
+  },
+  {
+    "id": "L204",
+    "speaker": "BENNY",
+    "text": "Is that the new boss?",
+    "dir": "plain"
+  },
+  {
+    "id": "L205",
+    "speaker": "MARTHA",
+    "text": "It's a shadow with a phone.",
+    "dir": "joke"
+  },
+  {
+    "id": "L206",
+    "speaker": "N",
+    "text": "In the same release, Jones says the board expects \"the company's operations, customer commitments and product roadmap to continue without interruption\".",
+    "dir": "plain"
+  },
+  {
+    "id": "L207",
+    "speaker": "N",
+    "text": "As of Saturday, we found no statement from Huang on his resignation. And no report we read says whether the board's review goes on.",
+    "dir": "limit"
+  },
+  {
+    "id": "L208",
+    "speaker": "CHIP",
+    "text": "Who's in the chair on Tuesday?",
+    "dir": "plain"
+  },
+  {
+    "id": "L209",
+    "speaker": "BENNY",
+    "text": "She is.",
+    "dir": "plain"
+  },
+  {
+    "id": "L210",
+    "speaker": "CHIP",
+    "text": "And the stock?",
+    "dir": "plain"
+  },
+  {
+    "id": "L211",
+    "speaker": "BENNY",
+    "text": "Nobody knows that yet. Including us.",
+    "dir": "joke"
+  },
+  {
+    "id": "L212",
+    "speaker": "N",
+    "text": "And here's the twist. On Tuesday, the person reporting the quarter... is also the person the market is judging by it.",
+    "dir": "reveal"
+  },
+  {
+    "id": "L213",
+    "speaker": "BENNY",
+    "text": "Interim. And a question mark.",
+    "dir": "plain"
+  },
+  {
+    "id": "L214",
+    "speaker": "HAL",
+    "text": "And a clock.",
+    "dir": "joke"
+  },
+  {
+    "id": "L215",
+    "speaker": "CHIP",
+    "text": "So who's in the chair?",
+    "dir": "plain"
+  },
+  {
+    "id": "L216",
+    "speaker": "BENNY",
+    "text": "For now? The one with the calculator.",
+    "dir": "reveal"
+  },
+  {
+    "id": "L217",
+    "speaker": "N",
+    "text": "So who is running Nvidia now? Its finance chief, on a temporary title.",
+    "dir": "recap"
+  },
+  {
+    "id": "L218",
+    "speaker": "N",
+    "text": "And why does Tuesday matter? Because at four twenty, the numbers and the new boss arrive together... for the first time.",
+    "dir": "recap"
+  }
+]
