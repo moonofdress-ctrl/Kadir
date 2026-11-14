@@ -590,6 +590,10 @@
           tl.to(s, { x: 120, y: -150, rotation: 55, opacity: 0, duration: 0.9, ease: "power1.in" }, t); tl.set(q(".tt1"), { opacity: 0 }, t + 0.1); tl.set(q(".tt2"), { opacity: 1 }, t + 0.1); } } };
   }
 
+  // two smaller chips (COREWEAVE, NEBIUS): the chip body at three quarters, our own lettering; { wobble: seconds, ice: true }
+  const smallChip = (o, name, col) => { const T = THINGS.chip(Object.assign({}, o, { label: o.label || name, color: o.color || col })), ice = o.ice ? `<g transform="rotate(-10 0 -350)">${rc(-80, -404, 160, 70, "#bfe8ff", 14)}<path d="M-50,-390 L-20,-350 M10,-396 L40,-360" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".8"/></g>` : "";
+    return { w: T.w * 0.85, h: T.h, feet: 1, face: T.face, skin: T.skin, body: `<g transform="scale(.85)">${T.body}${ice}</g>`,
+      play(tl, a, t0) { if (o.wobble == null) return; gsap.set(a.el, { transformOrigin: "50% 100%", smoothOrigin: false }); tl.fromTo(a.el, { rotation: -4 }, { rotation: 4, duration: 0.09, yoyo: true, repeat: 17, ease: "sine.inOut", immediateRender: false }, t0 + o.wobble); tl.set(a.el, { rotation: 0 }, t0 + o.wobble + 1.7); } }; };
   const THINGS = {
     // a parcel: a marketplace, a retailer, a delivery
     box(o) { const c = o.color || "#d2a56d"; return { w: 170, h: 344, feet: 1, face: [0, -212, 0.72], skin: c,
@@ -661,6 +665,25 @@
         play(tl, a, t0) { const q = (s2) => a.el.querySelector(s2);
           if (o.open != null) { tl.set(q(".fclosed"), { opacity: 0 }, t0 + o.open); tl.set(q(".fopen"), { opacity: 1 }, t0 + o.open); gsap.set(q(".fopen"), { svgOrigin: "-150 -400", smoothOrigin: false }); tl.fromTo(q(".fopen"), { scaleY: 0.2 }, { scaleY: 1, duration: 0.35, ease: "back.out(2)", immediateRender: false }, t0 + o.open); }
           if (o.tip != null) { gsap.set(q(".lamp"), { svgOrigin: "190 -392", smoothOrigin: false }); tl.to(q(".lamp"), { rotation: 86, duration: 0.45, ease: "power2.in" }, t0 + o.tip); tl.to(q(".lamp"), { rotation: 78, duration: 0.2, yoyo: true, repeat: 1, ease: "sine.inOut" }, t0 + o.tip + 0.45); } } }; },
+    // a teleprinter that spits paper: { pile: seconds (ALLEGATION sheets pile up and bury the mug), sheets: n }
+    teleprinter(o) { const c = o.color || "#8d9199", n = o.sheets || 8; let pile = `<g class="mugw">${rc(150, -78, 60, 66, "#e0262b", 10)}</g>`;
+      for (let i = 0; i < n; i++) pile += `<g class="sheet" style="opacity:0"><g transform="rotate(${(i % 3 - 1) * 9} ${170 + (i % 3) * 14} ${-30 - i * 12})">${rc(110 + (i % 3) * 14, -64 - i * 12, 130, 60, "#f6f1e4", 2)}${txt(175 + (i % 3) * 14, -22 - i * 12, "ALLEGATION", 15)}</g></g>`;
+      return { w: 230, h: 380, feet: 1, face: [0, -190, 0.7], skin: c, body: rc(-220, -330, 440, 90, shade(c, 0.25), 12) + rc(-210, -250, 420, 200, c, 12) + rc(-120, -380, 240, 50, "#f6f1e4", 4) + rc(-140, -300, 280, 22, INK, 6) + rc(-160, -90, 320, 40, "#3d4a5c", 6) + pile,
+        play(tl, a, t0) { if (o.pile == null) { a.el.querySelectorAll(".sheet").forEach((e) => { e.style.opacity = 1; }); return; } const sh = a.el.querySelectorAll(".sheet"), d = Math.max(0.5, +o.pile || 2);
+          sh.forEach((e, i) => { const t = t0 + (o.at || 0.3) + (i / sh.length) * d; tl.fromTo(e, { opacity: 0, y: -90 }, { opacity: 1, y: 0, duration: 0.18, ease: "power2.in", immediateRender: false }, t); }); } }; },
+    // an office printer with a face, sweating, pushing out one page: { page: seconds }
+    printer(o) { const c = o.color || "#d8d8d0"; return { w: 220, h: 330, face: [0, -190, 0.72], skin: c, body: rc(-220, -330, 440, 90, shade(c, 0.12), 14) + rc(-200, -250, 400, 210, c, 14) + rc(-140, -50, 280, 24, INK, 6) + rc(-120, -350, 240, 26, "#f6f1e4", 4) +
+        `<g class="pg">${rc(-100, -90, 200, 60, "#f6f1e4", 2)}<path d="M-70,-70 L70,-70 M-70,-50 L40,-50" stroke="#9aa0b4" stroke-width="6" stroke-linecap="round"/></g>` + [[-232, -250], [232, -200], [-236, -140]].map((p) => `<path class="tick" d="M${p[0]},${p[1] - 28} Q${p[0] - 16},${p[1]} ${p[0]},${p[1] + 8} Q${p[0] + 16},${p[1]} ${p[0]},${p[1] - 28}Z" fill="#bfe8ff" ${st} stroke-width="4"/>`).join("") + rc(130, -222, 48, 20, "#46e08a", 5),
+      play(tl, a, t0) { const p = a.el.querySelector(".pg"); if (!p || o.page == null) return; tl.fromTo(p, { y: -60, opacity: 0 }, { y: 70, opacity: 1, duration: 1.1, ease: "power1.out", immediateRender: false }, t0 + o.page); } }; },
+    // a street newspaper box that turns to watch: { turn: seconds, label }
+    newspaper_box(o) { const c = o.color || "#3d6fb6"; return { w: 150, h: 380, feet: 1, face: [0, -250, 0.62], skin: c, body: rc(-110, -90, 30, 90, INK, 4) + rc(80, -90, 30, 90, INK, 4) + rc(-130, -380, 260, 300, c, 14) + rc(-100, -350, 200, 180, "#cfe6ee", 8) + rc(-70, -150, 140, 40, shade(c, 0.3), 6) + txt(0, -118, o.label || "NEWS", 30, "#f6f1e4") + rc(-100, -100, 200, 14, "#f0b429", 4) + `<path d="M-100,-350 L100,-350 L100,-340 L-100,-340Z" fill="rgba(255,255,255,.4)"/>`,
+      play(tl, a, t0) { if (o.turn == null) return; gsap.set(a.el, { transformOrigin: "50% 100%", smoothOrigin: false }); tl.to(a.el, { rotation: 7, skewX: -6, duration: 0.5, ease: "back.out(2)" }, t0 + o.turn); } }; },
+    // a retirement statement as an envelope with a face, sweating: { label: "401(K)", clip: true (a clip for the price tag) }
+    envelope(o) { const c = o.color || "#f3e6c8"; return { w: 200, h: 330, hover: 1, face: [0, -190, 0.68], skin: c, body: rc(-220, -330, 440, 280, c, 6) + `<path d="M-220,-330 L0,-190 L220,-330" fill="${shade(c, 0.08)}" ${st}/>` + rc(-190, -120, 150, 46, "#fff", 3) + txt(-115, -88, o.label || "401(K)", 28) + rc(110, -110, 80, 60, "#f6f1e4", 3) +
+        (o.clip !== false ? `<path d="M170,-340 L170,-280 Q170,-258 190,-258 Q210,-258 210,-280 L210,-350" fill="none" stroke="#8d9199" stroke-width="9" stroke-linecap="round"/>` : "") + [[-232, -260], [232, -230], [-236, -150]].map((p) => `<path class="tick" d="M${p[0]},${p[1] - 28} Q${p[0] - 16},${p[1]} ${p[0]},${p[1] + 8} Q${p[0] + 16},${p[1]} ${p[0]},${p[1] - 28}Z" fill="#bfe8ff" ${st} stroke-width="4"/>`).join("") }; },
+    // two smaller chips with their names on them (states: wobble: seconds a shake starts, ice: an ice pack on the head)
+    coreweave(o) { return smallChip(o, "COREWEAVE", "#6a8fd8"); },
+    nebius(o) { return smallChip(o, "NEBIUS", "#d86a8f"); },
     // @cfo-things
   };
 

@@ -833,10 +833,10 @@
     "night": false
    },
    "place": "bank front office",
-   "frame": "close",
+   "frame": "medium",
    "focus": [
     1250,
-    760
+    600
    ],
    "camera": "still",
    "actors": [
@@ -904,7 +904,7 @@
    "actors": [
     {
      "who": "FRANK_LEE",
-     "x": 1400,
+     "x": 1250,
      "y": 960,
      "scale": 0.8,
      "enter": "none"
@@ -1233,7 +1233,7 @@
     },
     {
      "who": "BENNY",
-     "x": 1340,
+     "x": 1450,
      "y": 960,
      "scale": 0.9,
      "enter": "none"
