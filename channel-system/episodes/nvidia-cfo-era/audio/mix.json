@@ -1,0 +1,114 @@
+{
+  "signature": "b56f868fb884730b",
+  "total": 740.714,
+  "lufs": -14.02,
+  "true_peak_db": -1.1,
+  "limiter": {
+    "max_cut_db": 6,
+    "pct_cut_over_1db": 1.04
+  },
+  "voice": {
+    "speakers": {
+      "N": {
+        "clips": 83,
+        "gain_db": 0
+      },
+      "CHIP": {
+        "clips": 17,
+        "gain_db": 2.1
+      },
+      "HAL": {
+        "clips": 29,
+        "gain_db": -1.9
+      },
+      "BENNY": {
+        "clips": 26,
+        "gain_db": -1.4
+      },
+      "CHAD": {
+        "clips": 23,
+        "gain_db": -2.7
+      },
+      "MARTHA": {
+        "clips": 25,
+        "gain_db": -7.3
+      },
+      "REGGIE": {
+        "clips": 13,
+        "gain_db": -0.2
+      },
+      "COREWEAVE": {
+        "clips": 1,
+        "gain_db": -1.6
+      },
+      "NEBIUS": {
+        "clips": 1,
+        "gain_db": -9.6
+      }
+    },
+    "clips_with_silent_edges": 0
+  },
+  "music": {
+    "source": "house bed (made in code)",
+    "files": [],
+    "beds": [
+      "steady"
+    ],
+    "climax_chapters": [],
+    "db_under_voice": 19,
+    "uncredited": []
+  },
+  "effects": {
+    "count": 1,
+    "per_minute": 0.1,
+    "list": [
+      {
+        "t": 8.58,
+        "name": "card",
+        "why": "t01 card"
+      }
+    ]
+  },
+  "ambience": [
+    {
+      "place": "studio",
+      "set": "studio",
+      "bed": "studio"
+    },
+    {
+      "place": "office",
+      "set": "office",
+      "bed": "office"
+    }
+  ],
+  "ambience_default": true,
+  "foley": {
+    "count": 2,
+    "sounds": 10
+  },
+  "dead_air": {
+    "pauses_over_250ms": 17,
+    "longest": [
+      {
+        "t": 354.59,
+        "d": 0.41
+      },
+      {
+        "t": 414.28,
+        "d": 0.38
+      },
+      {
+        "t": 530.44,
+        "d": 0.35
+      },
+      {
+        "t": 729.68,
+        "d": 0.33
+      },
+      {
+        "t": 218.27,
+        "d": 0.29
+      }
+    ]
+  }
+}

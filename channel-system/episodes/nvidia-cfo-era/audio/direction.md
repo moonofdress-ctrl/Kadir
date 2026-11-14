@@ -222,3 +222,5 @@ Notes are never spoken. Narrator Lawrence; characters in EL_VOICES (CHIP, COREWE
 | L216 | BENNY | reveal | Small breath before, then land it with quiet confidence. Do not shout. Friendly, slightly nervous. |
 | L217 | N | recap | Steady, a little warmer, tying the thread. Not rushed. |
 | L218 | N | recap | Steady, a little warmer, tying the thread. Not rushed. |
+
+- 14 Nov 2026 (main session): first pass ran 11:34 at 167 wpm (V1, V2 failed). Narrator speed 0.9 -> 0.83 in EL_VOICES and the 83 narrator lines re-voiced (8,500 characters); now 12:20 at 157 wpm, both ok.

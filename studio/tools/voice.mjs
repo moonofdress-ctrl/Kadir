@@ -25,7 +25,7 @@ export const VOICES = { N: ["am_michael", 1.05], BENNY: ["am_adam", 1.0], CHAD: 
 
 // speaker -> [ElevenLabs voice id, speed 0.7-1.2]. Narrator: Lawrence - Bright and Informative (chosen 13 Nov 2026); its own
 // sample reads at 234 wpm, so it runs slower to land near the rival's 160-175 wpm. Reserves: Tyler Cruz SA7eD52NRr8WAehitVt1, Mike zfc8CJQpe8Kqyl0vvCzo.
-export const EL_VOICES = { N: ["ktkP7Nsj67dw2zcplQYt", 0.9], BENNY: ["TX3LPaxmHKxFdv7VOQHJ", 1.0], SODA: ["IKne3meq5aSn9XLyUdCD", 1.05],
+export const EL_VOICES = { N: ["ktkP7Nsj67dw2zcplQYt", 0.83], BENNY: ["TX3LPaxmHKxFdv7VOQHJ", 1.0], SODA: ["IKne3meq5aSn9XLyUdCD", 1.05],
   GIANT: ["N2lVS1w4EtoT3dr4eOWO", 0.95], CHAD: ["bIHbv24MWmeRgasZH58o", 1.1], HAL: ["pqHfZKP75CvOlQylNhV4", 0.95], MARTHA: ["EXAVITQu4vr4xnSDxMaL", 1.0], REGGIE: ["nPczCjzI2devNBz1zQrb", 0.9],
   CHIP: ["ZauUyVXAz5znrgRuElJ5", 1.0], COREWEAVE: ["pPdl9cQBQq4p6mRkZy2Z", 1.0], NEBIUS: ["vChnJZ1Cu89g2XXumPfT", 1.0] };
 export const EL_MODEL = "eleven_multilingual_v2";
