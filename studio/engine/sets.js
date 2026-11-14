@@ -1712,6 +1712,7 @@
     let back = out.back, front = out.front || "";
     if (DRESS[name] && !o.bare) { const x = DRESS[name](o, pal(o, SET_PALETTE[name], night), night); back += x.back || ""; front += x.front || ""; }
     else if (o.palette && !DRESS[name] && PALETTES[o.palette]) back += wash(pal(o, o.palette, night), night);
+    if (o.rain === true && name !== "bus_stop" && name !== "phone_booth") front += K.rain(9); // rain over any other place
     return { back, front };
   }
 
