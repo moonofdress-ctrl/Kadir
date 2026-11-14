@@ -36,13 +36,15 @@
      "who": "MARTHA",
      "x": 1250,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "walk"
     },
     {
      "who": "BENNY",
      "x": 650,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "walk"
     }
    ],
    "explains": "A morning kitchen: the story is now about an ordinary person's savings, not the boardroom."
@@ -80,7 +82,8 @@
      "who": "MARTHA",
      "x": 1250,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "Inside the index-fund jar, seven coins in a hundred wear Nvidia's chip face."
@@ -103,13 +106,15 @@
      "who": "MARTHA",
      "x": 1250,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     },
     {
      "who": "BENNY",
      "x": 650,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "After this week the Nvidia stack in the jar is smaller."
@@ -136,7 +141,8 @@
      "who": "MARTHA",
      "x": 1250,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "Nobody has published the new share yet, so the channel does not guess one."
@@ -165,13 +171,15 @@
      "scale": 0.85,
      "speaks": [
       "L157"
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "BENNY",
      "x": 650,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "Martha asks Benny whether he owns Nvidia."
@@ -200,13 +208,15 @@
      "scale": 0.85,
      "speaks": [
       "L158"
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "MARTHA",
      "x": 1250,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "Benny is sure he owns none."
@@ -235,13 +245,15 @@
      "scale": 0.85,
      "speaks": [
       "L159"
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "BENNY",
      "x": 650,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "Martha, calculator in hand, asks about his index fund."
@@ -270,13 +282,15 @@
      "scale": 0.85,
      "speaks": [
       "L160"
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "MARTHA",
      "x": 1250,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "Benny admits he has an index fund."
@@ -305,13 +319,15 @@
      "scale": 0.85,
      "speaks": [
       "L161"
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "BENNY",
      "x": 650,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "An index fund owner owns Nvidia without choosing it."
@@ -340,13 +356,15 @@
      "scale": 0.85,
      "speaks": [
       "L162"
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "MARTHA",
      "x": 1250,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "Benny realises the company in the news is in his own savings."
@@ -431,13 +449,15 @@
      "who": "BENNY",
      "x": 650,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     },
     {
      "who": "MARTHA",
      "x": 1250,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "Young or old, anyone holding the index holds the same envelope."
@@ -464,13 +484,15 @@
      "who": "BENNY",
      "x": 650,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     },
     {
      "who": "MARTHA",
      "x": 1250,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "Owning the index means owning a share of Nvidia's leadership question."
@@ -530,11 +552,6 @@
     "dark": 0.45
    },
    "camera": "pan_left",
-   "frame": "close",
-   "focus": [
-    960,
-    540
-   ],
    "actors": [],
    "explains": "The numbers cover a quarter that ended on 25 October, weeks earlier."
   },
@@ -615,13 +632,15 @@
      "who": "BENNY",
      "x": 760,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "walk"
     },
     {
      "who": "HAL",
      "x": 1180,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "walk"
     }
    ],
    "explains": "Look at the dates on the board."
@@ -649,20 +668,22 @@
    "frame": "close",
    "focus": [
     960,
-    330
+    420
    ],
    "actors": [
     {
      "who": "BENNY",
      "x": 760,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     },
     {
      "who": "HAL",
      "x": 1180,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "The quarter in Tuesday's numbers closed before the board's review began: old numbers, new voice."
@@ -699,13 +720,15 @@
      "scale": 0.85,
      "speaks": [
       "L168"
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "HAL",
      "x": 1180,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "Benny checks: the numbers are from before."
@@ -742,13 +765,15 @@
      "scale": 0.85,
      "speaks": [
       "L169"
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "BENNY",
      "x": 760,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "Hal: the numbers are from before the change, the voice reading them is from after."
@@ -770,7 +795,7 @@
     "color": "#cfe8ff",
     "dark": 0.45
    },
-   "camera": "pan_left",
+   "camera": "pull_out",
    "extras": 10,
    "actors": [
     {
@@ -780,13 +805,15 @@
      "scale": 0.85,
      "speaks": [
       "L170"
-     ]
+     ],
+     "enter": "walk"
     },
     {
      "who": "HAL",
      "x": 1300,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "walk"
     }
    ],
    "explains": "A bar crowd waits for Tuesday like a big game."
@@ -823,13 +850,15 @@
      "scale": 0.85,
      "speaks": [
       "L171"
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "CHAD",
      "x": 700,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "Kick-off is 4:20 p.m. Eastern."
@@ -866,13 +895,15 @@
      "scale": 0.85,
      "speaks": [
       "L172"
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "HAL",
      "x": 1300,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "Chad wants to know who is playing."
@@ -909,13 +940,15 @@
      "scale": 0.85,
      "speaks": [
       "L173"
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "CHAD",
      "x": 700,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "One person plays both positions: finance chief and interim boss."
@@ -956,13 +989,15 @@
      "who": "BENNY",
      "x": 700,
      "y": 960,
-     "scale": 0.8
+     "scale": 0.8,
+     "enter": "walk"
     },
     {
      "who": "REGGIE",
      "x": 1250,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "walk"
     }
    ],
    "explains": "Anyone can listen on the webcast: Benny's ticket says listen only."
@@ -998,13 +1033,15 @@
      "scale": 0.85,
      "speaks": [
       "L175"
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "REGGIE",
      "x": 1250,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "Benny asks to ask a question."
@@ -1040,13 +1077,15 @@
      "scale": 0.85,
      "speaks": [
       "L176"
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "BENNY",
      "x": 700,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "The window says no."
@@ -1082,13 +1121,15 @@
      "scale": 0.85,
      "speaks": [
       "L177"
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "REGGIE",
      "x": 1250,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "Benny asks to listen."
@@ -1124,13 +1165,15 @@
      "scale": 0.85,
      "speaks": [
       "L178"
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "BENNY",
      "x": 700,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "Listening is free for everyone, quietly."
@@ -1222,13 +1265,15 @@
      "scale": 0.85,
      "speaks": [
       "L181"
-     ]
+     ],
+     "enter": "walk"
     },
     {
      "who": "MARTHA",
      "x": 1200,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "walk"
     }
    ],
    "explains": "At night on a park bench, Benny asks what he should do on Tuesday."
@@ -1265,13 +1310,15 @@
      "scale": 0.85,
      "speaks": [
       "L182"
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "BENNY",
      "x": 750,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "Martha's answer: listen."
@@ -1308,13 +1355,15 @@
      "scale": 0.85,
      "speaks": [
       "L183"
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "MARTHA",
      "x": 1200,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "Benny expected more."
@@ -1351,13 +1400,15 @@
      "scale": 0.85,
      "speaks": [
       "L184"
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "BENNY",
      "x": 750,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "Listening already puts you ahead of most people."
@@ -1387,13 +1438,15 @@
      "who": "BENNY",
      "x": 750,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     },
     {
      "who": "MARTHA",
      "x": 1200,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "This is not a tip to buy or sell."
@@ -1419,8 +1472,8 @@
    "camera": "tilt_down",
    "frame": "close",
    "focus": [
-    800,
-    640
+    750,
+    560
    ],
    "ambience": "night",
    "actors": [
@@ -1428,13 +1481,15 @@
      "who": "BENNY",
      "x": 750,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     },
     {
      "who": "MARTHA",
      "x": 1200,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "It is only a date to mark: Tuesday, 17 November."
@@ -1463,13 +1518,15 @@
      "who": "BENNY",
      "x": 750,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     },
     {
      "who": "MARTHA",
      "x": 1200,
      "y": 960,
-     "scale": 0.85
+     "scale": 0.85,
+     "enter": "none"
     }
    ],
    "explains": "Three things to watch for when the numbers land, coming next."
