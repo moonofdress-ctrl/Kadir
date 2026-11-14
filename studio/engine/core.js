@@ -38,6 +38,7 @@
       if (x.p.move) { const m = x.p.move, tm = m.cue || m.at != null ? TM.when(m, t0, L) : t0 + 0.3;
         tl.to(e, { x: m.to[0] - (x.p.x || 0), y: (m.to[1] != null ? m.to[1] : x.p.y || 0) - (x.p.y || 0), duration: m.dur || 0.8, ease: m.ease || "power1.inOut" }, tm); } };
     if (s.extras) crowd(svg, s, t0, t1); // background people stand behind the props and signs
+    if (set.mid) g(svg, set.mid); // a set's own middle piece (the phone booth) hides the extras walking behind it
     props.filter((x) => x.p.layer !== "front").forEach(drawProp);
     // First every figure is made (a handover needs the receiver), then their acts go on the timeline.
     const list = s.actors || [], made = [], recv = {};

@@ -200,14 +200,14 @@
     calc(x, y, k, t) { k = k || 1; let b = ""; for (let i = 0; i < 16; i++) b += R(-70 + (i % 4) * 36, -150 + Math.floor(i / 4) * 44, 30, 36, i === 15 ? "#e0262b" : i % 4 === 3 ? "#f0b429" : "#f6f1e4", 6, `stroke="${INK}" stroke-width="3"`);
       return cut(`<g transform="translate(${x},${y}) scale(${k})">${R(-90, -250, 180, 250, "#b8bcc6", 16)}${R(-74, -234, 148, 60, "#a8dcae", 6, `stroke="${INK}" stroke-width="4"`)}${T(66, -188, t == null ? "0." : t, 38, "#1b3a28", "end", 'font-family="IBM Plex Mono" font-weight="700"')}${b}</g>`); },
     namePlate(x, y, k, t, tape) { k = k || 1; return cut(`<g transform="translate(${x},${y}) scale(${k})">${R(-140, -14, 280, 14, "#5b4636", 4)}${R(-130, -76, 260, 64, "#c9a24a", 6)}${T(0, -28, t || "CFO", 44, "#2a2a33")}</g>`) +
-      (tape ? cut(`<g transform="translate(${x + 150 * k},${y - 40 * k}) rotate(-5) scale(${k})">${R(0, -34, 250, 50, "#e7d7a4", 0, `stroke="${INK}" stroke-width="4"`)}${T(125, 2, tape === true ? "INTERIM CEO" : tape, 30, "#5b4a2a")}</g>`) : ""); },
+      (tape ? cut(`<g transform="translate(${x},${y + 34 * k}) rotate(-3) scale(${k})">${R(-170, -4, 340, 50, "#e7d7a4", 0, `stroke="${INK}" stroke-width="4"`)}${T(0, 32, tape === true ? "INTERIM CEO" : tape, 30, "#5b4a2a")}</g>`) : ""); },
     // the clock on the wall: the time as hands, lit or in shadow
     clockFace(x, y, r, time, lit, n, P) { const m = /(\d+):(\d+)/.exec(time || "4:20") || [0, 4, 20], ha = ((+m[1] % 12) + m[2] / 60) * 30, ma = m[2] * 6; let s = `<circle cx="${x}" cy="${y}" r="${r}" fill="${P.trim}" ${st}/><circle cx="${x}" cy="${y}" r="${r * 0.82}" fill="${lit ? "#fff6d8" : "#fbf8ef"}"/>` + [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((i) => `<path d="M${x},${y - r * 0.76} L${x},${y - r * (i % 3 ? 0.68 : 0.6)}" stroke="${INK}" stroke-width="${i % 3 ? 3 : 6}" transform="rotate(${i * 30} ${x} ${y})"/>`).join("") +
         `<path d="M${x},${y} L${x},${y - r * 0.44}" stroke="${INK}" stroke-width="8" stroke-linecap="round" transform="rotate(${ha} ${x} ${y})"/><path d="M${x},${y} L${x},${y - r * 0.68}" stroke="${INK}" stroke-width="6" stroke-linecap="round" transform="rotate(${ma} ${x} ${y})"/>`;
       s = cut(s) + (lit ? `<g class="secs" data-cx="${x}" data-cy="${y}"><path d="M${x},${y + r * 0.12} L${x},${y - r * 0.7}" stroke="#e0262b" stroke-width="3"/></g>` + halo(x, y, r * 2.2, "#fff0b8", 0.3) : "");
       return s + `<circle cx="${x}" cy="${y}" r="5" fill="${INK}"/>` + (!lit && n ? `<circle cx="${x}" cy="${y}" r="${r + 2}" fill="rgba(24,18,44,.72)"/>` : ""); },
     jar(x, y, k, face) { k = k || 1; let c = ""; for (let i = 0; i < 4; i++) c += `<ellipse cx="${-22 + (i % 2) * 40}" cy="${-14 - i * 14}" rx="26" ry="9" fill="#f0b429" ${st} stroke-width="3"/>`;
-      return cut(`<g transform="translate(${x},${y}) scale(${k})"><path d="M-44,-110 L-50,0 L50,0 L44,-110Z" fill="rgba(200,232,244,.45)" ${st}/>${c}${R(-48, -126, 96, 20, "#8a5a3c", 6)}${R(-36, -60, 72, 30, "#f6f1e4", 3, `stroke="${INK}" stroke-width="3"`)}${T(0, -38, "INDEX FUND", 12)}` +
+      return cut(`<g transform="translate(${x},${y}) scale(${k})"><path d="M-44,-110 L-50,0 L50,0 L44,-110Z" fill="rgba(200,232,244,.45)" ${st}/>${c}${R(-48, -126, 96, 20, "#8a5a3c", 6)}${R(-40, -78, 80, 54, "#f6f1e4", 3, `stroke="${INK}" stroke-width="3"`)}${T(0, -56, "INDEX", 20)}${T(0, -34, "FUND", 20)}` +
         (face ? `<g transform="translate(10,-94)"><ellipse rx="26" ry="9" fill="#f0b429" ${st} stroke-width="3"/><circle cx="-8" cy="-2" r="3" fill="${INK}"/><circle cx="8" cy="-2" r="3" fill="${INK}"/></g>` : "") + `</g>`); },
     cityWin(x, y, w, h, n, seed, dawn) { const r = rng(seed || 5), sky = n ? "#1b2347" : dawn ? "#f2c6a6" : "#bfe0ea";
       return cut(R(x, y, w, h, sky, 6) + `<svg x="${x}" y="${y}" width="${w}" height="${h}" viewBox="${x} ${y} ${w} ${h}" overflow="hidden">` + (!n && dawn ? R(x, y + h * 0.42, w, h * 0.2, "#f7dcc0", 0, "") + R(x, y + h * 0.6, w, h * 0.14, "#f2a77a", 0, "") : "") + (n ? `<circle cx="${x + w * 0.78}" cy="${y + h * 0.2}" r="${w * 0.04}" fill="#f6f1e4"/>` : "") +
@@ -870,16 +870,16 @@
       return { back: b, front: f };
     },
 
-    // A wire-service desk at night: one glowing monitor, a wall of world clocks, pinned front pages, stacked paper. { night (default true), screen: "cold"|"red" }
+    // A wire-service desk at night (the desk is the set's middle layer, so figures and living things stand in front of it at any y, e.g. 900): one glowing monitor, a wall of world clocks, pinned front pages, stacked paper. { night (default true), screen: "cold"|"red" }
     newsroom(o) {
       const n = o.night !== false, P = pal(o, "slate", n), cold = "#cfe8ff"; let b = K.room(P, 790, 140);
       b += K.cityWin(110, 120, 430, 280, n, 33, false) + R(640, 120, 640, 260, P.panel, 8, `stroke="${INK}" stroke-width="5"`) + ["NY", "LDN", "TKY", "BJG"].map((c, i) => D.clock(710 + i * 150, 220, 56, P) + T(710 + i * 150, 330, c, 32, P.trim)).join("");
       [0, 1, 2, 3, 4].forEach((i) => { b += `<g transform="rotate(${(i % 3) * 3 - 3} ${1380 + i * 100} 240)">${cut(R(1330 + i * 100 - (i > 2 ? 40 : 0), 150 + (i % 2) * 60, 92, 120, "#ece6d3", 2) + R(1340 + i * 100 - (i > 2 ? 40 : 0), 160 + (i % 2) * 60, 72, 22, INK, 0, "") + R(1340 + i * 100 - (i > 2 ? 40 : 0), 194 + (i % 2) * 60, 30, 30, "#9aa0b4", 0, "") + [0, 1, 2].map((k) => R(1376 + i * 100 - (i > 2 ? 40 : 0), 194 + k * 12 + (i % 2) * 60, 36, 6, "#9aa0b4", 0, "")).join(""))}</g>`; });
       b += K.cab(60, 420, 130, 370, "#6b7384", P) + D.shelf(1400, 560, 400, P, 8) + D.vent(1520, 36) + D.cable(0, 1920, 100, P) + D.switch(600, 600) + D.plant(1850, 790, 0.9, P) + K.tube(960, 40, 260, true);
       b += `<g class="pass">${cut(`<g transform="translate(2100,790)"><circle cx="0" cy="-262" r="30" fill="${mixHex(P.panel, "#000000", 0.2)}" ${st}/><path d="M-44,-226 L44,-226 L38,-90 L-38,-90Z" fill="#3d4a5c" ${st}/>${R(-34, -90, 28, 90, INK, 8)}${R(6, -90, 28, 90, INK, 8)}${R(-60, -190, 40, 30, "#ece6d3", 3)}</g>`)}</g>`;
-      const f = cut(R(340, 700, 1240, 36, "#6f4a3a", 8) + R(360, 736, 1200, 360, "#573a2e", 0) + R(380, 756, 1160, 90, "rgba(27,29,54,.2)", 6, "")) + K.screen(760, 480, 380, 210, o.screen === "red" ? "#ff8a80" : "#8fe0b0", true, 5) + R(930, 690, 40, 20, INK, 0, "") + `<g class="pulse">${R(740, 460, 420, 250, o.screen === "red" ? "rgba(255,90,80,.1)" : "rgba(207,232,255,.12)", 12, "")}</g>` +
-        cut(R(420, 650, 250, 50, "#ece6d3", 3) + R(440, 620, 250, 34, "#f6f1e4", 3) + R(410, 590, 270, 34, "#ece6d3", 3)) + cut(R(1280, 644, 160, 60, "#9aa0b4", 6) + R(1300, 624, 120, 24, "#c9ced6", 4)) + D.mug(1250, 702, P) + D.fgPlant(1900, 1090, 1.3);
-      return { back: b, front: f };
+      const m = cut(R(340, 700, 1240, 36, "#6f4a3a", 8) + R(360, 736, 1200, 360, "#573a2e", 0) + R(380, 756, 1160, 90, "rgba(27,29,54,.2)", 6, "")) + K.screen(760, 480, 380, 210, o.screen === "red" ? "#ff8a80" : "#8fe0b0", true, 5) + R(930, 690, 40, 20, INK, 0, "") + `<g class="pulse">${R(740, 460, 420, 250, o.screen === "red" ? "rgba(255,90,80,.1)" : "rgba(207,232,255,.12)", 12, "")}</g>` +
+        cut(R(420, 650, 250, 50, "#ece6d3", 3) + R(440, 620, 250, 34, "#f6f1e4", 3) + R(410, 590, 270, 34, "#ece6d3", 3)) + cut(R(1280, 644, 160, 60, "#9aa0b4", 6) + R(1300, 624, 120, 24, "#c9ced6", 4)) + D.mug(1250, 702, P);
+            return { back: b, mid: m, front: D.fgPlant(1900, 1090, 1.3) };
     },
 
     // A diner on a weekday morning (night: the neon sign in the window). { night }. Booths on the left and right; free floor in the aisle for extras in the other booths.
@@ -995,7 +995,9 @@
       for (let x = 0; x < 1920; x += 180) b += `<path d="M${x},710 L${x - 60},1080" stroke="rgba(27,29,54,.16)" stroke-width="4"/>`;
       b += cut(R(140, 300, 12, 440, "#c9ced6", 3) + `<path d="M0,320 Q146,170 292,320Z" fill="${P.accent}" ${st}/><path d="M146,170 L146,320" stroke="${INK}" stroke-width="5"/>`) + cut(R(1500, 600, 230, 40, "#8a5a3c", 6) + R(1520, 640, 14, 110, "#8a5a3c", 3) + R(1696, 640, 14, 110, "#8a5a3c", 3));
       b += `<g class="sway">${cut(R(1560, 520, 120, 80, "#f6f1e4", 4) + R(1560, 520, 120, 24, "#e0262b", 4) + T(1620, 580, o.page || "FRI 6 NOV", 22) + `<path d="M1680,600 Q1720,570 1690,540 L1680,540Z" fill="#f6f1e4" ${st} stroke-width="4"/>`)}</g>`;
-      b += [[420, 0], [1000, 1]].map(([x, f]) => cut(`<g transform="translate(${x},760)"><path d="M-30,0 L-70,-130 L-30,-190 L130,-60 L150,0Z" fill="${f ? "#3d6fb6" : "#f0b429"}" ${st}/><path d="M-30,-190 L-40,-260 L-10,-250" fill="none" ${st}/></g>`)).join("") + D.cable(0, 1920, 60, P).slice(0, 0) + cut(R(1780, 520, 100, 190, "#3f9b5a", 12) + R(1780, 700, 100, 30, "#c9705a", 4)) + cut(R(60, 600, 200, 60, "#c9705a", 6) + `<circle cx="100" cy="590" r="26" fill="#3f9b5a" ${st}/><circle cx="170" cy="580" r="30" fill="#4f8f5b" ${st}/>`) + D.steam(1440, 700).slice(0, 0);
+      const deck = (x, y, c1, c2, fl) => { const seg = [[-96, -172], [-60, -132], [-24, -92], [12, -64], [60, -68], [108, -84]]; let sl = ""; for (let i = 0; i < seg.length - 1; i++) sl += `<path d="M${seg[i][0]},${seg[i][1]} L${seg[i + 1][0]},${seg[i + 1][1]}" stroke="${i % 2 ? c2 : c1}" stroke-width="30" stroke-linecap="butt" fill="none"/>`;
+        return cut(`<g transform="translate(${x},${y}) scale(${fl ? -1 : 1},1)"><path d="M-104,0 L-34,-120 M-34,0 L-20,-66 M92,0 L74,-66 M-20,-120 L96,-112 M96,-112 L112,0" fill="none" stroke="${INK}" stroke-width="22" stroke-linecap="round"/><path d="M-104,0 L-34,-120 M-34,0 L-20,-66 M92,0 L74,-66 M-20,-120 L96,-112 M96,-112 L112,0" fill="none" stroke="#c9a06a" stroke-width="12" stroke-linecap="round"/><path d="M${seg.map((p) => p.join(",")).join(" L")}" fill="none" stroke="${INK}" stroke-width="40" stroke-linejoin="round"/>${sl}<circle cx="-96" cy="-172" r="9" fill="#c9a06a" ${st} stroke-width="4"/></g>`); };
+      b += deck(430, 780, "#f0b429", "#f6f1e4", 0) + deck(1020, 800, "#3d6fb6", "#f6f1e4", 1) + D.cable(0, 1920, 60, P).slice(0, 0) + cut(R(1780, 520, 100, 190, "#3f9b5a", 12) + R(1780, 700, 100, 30, "#c9705a", 4)) + cut(R(60, 600, 200, 60, "#c9705a", 6) + `<circle cx="100" cy="590" r="26" fill="#3f9b5a" ${st}/><circle cx="170" cy="580" r="30" fill="#4f8f5b" ${st}/>`) + D.steam(1440, 700).slice(0, 0);
       return { back: b, front: cut(R(-20, 990, 2000, 130, P.panel, 0)) + D.fgPlant(1890, 1090, 1.3) };
     },
 
@@ -1111,7 +1113,7 @@
     // A sports bar: a big screen with a countdown, a bar with stools and taps, neon signs (made-up names), pennants. Room for 10 extras facing the screen. { night (default true), count: "4:20" }
     sports_bar(o) {
       const n = o.night !== false, P = pal(o, "green", n); let b = K.room(P, 800, 170);
-      b += cut(R(500, 120, 920, 480, "#0f1b2a", 12)) + R(520, 140, 880, 440, "#16304a", 6, "") + `<g class="tick">${T(960, 420, o.count || "4:20", 230, "#ffe14d", "middle", 'font-family="IBM Plex Mono" font-weight="700"')}${T(960, 220, "COUNTDOWN", 54, "#c9cfe6")}</g>` + `<g class="pulse">${R(520, 140, 880, 440, "rgba(143,216,255,.08)", 6, "")}</g>`;
+      b += cut(R(500, 120, 920, 480, "#0f1b2a", 12)) + R(520, 140, 880, 440, "#16304a", 6, "") + `<g class="pulse">${R(520, 140, 880, 440, "rgba(143,216,255,.08)", 6, "")}</g><g class="tick">${T(960, 420, o.count || "4:20", 230, "#ffe14d", "middle", 'font-family="IBM Plex Mono" font-weight="700"')}${T(960, 220, "COUNTDOWN", 54, "#c9cfe6")}</g>`;
       b += K.neon(220, 240, "GAME ON", "#ff4fd8", 60) + K.neon(1700, 250, "COLD", "#3ff0ff", 70) + K.neon(1700, 360, "BEER", "#ffd27a", 50) + [0, 1, 2, 3, 4, 5].map((i) => cut(`<path d="M${180 + i * 70},330 L${240 + i * 70},330 L${210 + i * 70},430Z" fill="${["#e0262b", "#f0b429", "#3d6fb6", "#f6f1e4", "#1fa85b", "#c95f8d"][i]}" ${st} stroke-width="4"/>`)).join("") + D.clock(1600, 140, 40, P).slice(0, 0) + D.cable(0, 1920, 60, P) + D.frame(100, 460, 180, 120, "chart", P) + D.vent(900, 20);
       b += cut(R(1380, 560, 520, 240, "#3d4a5c", 6) + [0, 1, 2, 3].map((i) => R(1420 + i * 110, 600, 80, 190, "#2b3242", 4)).join("")) + cut(R(1440, 500, 400, 30, "#c9ced6", 6) + [0, 1, 2, 3].map((i) => R(1480 + i * 90, 470, 20, 40, "#f0b429", 4) + R(1470 + i * 90, 440, 40, 36, ["#e0262b", "#1fa85b", "#3d6fb6", "#f0b429"][i], 6)).join(""));
       return { back: b, front: cut(R(1300, 780, 700, 40, "#8a5a3c", 8) + R(1340, 820, 620, 300, "#6f452c", 0)) + [0, 1, 2].map((i) => K.stool(1380 + i * 200, 1060, 1.1, "#b8473d")).join("").slice(0, 0) + [0, 1, 2].map((i) => K.stool(150 + i * 200, 1070, 1.1, "#b8473d")).join("") + D.mug(1480, 782, P) };
@@ -1133,11 +1135,11 @@
       const n = !!o.night, P = pal(o, "red", n), r = rng(161); let b = R(0, 0, 1920, 1080, n ? "#1c2236" : "#aeb8c2", 0, "") + K.buildings(-20, 1940, 640, r, ["#6b7384", "#8d9199", mixHex(P.wall, "#8d9199", 0.5)], n, 280, 460) + R(0, 640, 1920, 120, n ? "#1a1e30" : "#8d9199", 0, "") + `<path d="M0,640 L1920,640" ${st}/>` + [0, 1, 2, 3, 4, 5, 6].map((i) => R(60 + i * 290, 696, 150, 12, "#f6f1e4", 0, "")).join("");
       b += `<g class="pass">${cut(R(2300, 520, 360, 120, "#3d6fb6", 20) + R(2340, 540, 80, 50, n ? "#ffd27a" : "#cfe6ee", 6) + R(2440, 540, 80, 50, n ? "#ffd27a" : "#cfe6ee", 6) + `<circle cx="2380" cy="640" r="26" fill="${INK}"/><circle cx="2620" cy="640" r="26" fill="${INK}"/>`)}</g>`;
       b += R(0, 760, 1920, 320, n ? "#232738" : "#a09a8c", 0, "") + R(0, 760, 1920, 30, n ? "#2a2e44" : "#7d818c", 0, "") + `<path d="M0,760 L1920,760 M0,790 L1920,790" ${st}/>` + [[300, 920, 140], [1500, 960, 180], [900, 1010, 120]].map(([x, y, w]) => `<ellipse cx="${x}" cy="${y}" rx="${w}" ry="14" fill="rgba(255,255,255,.14)" ${st} stroke-width="3" opacity=".7"/>`).join("");
-      const bx = 700, bw = 520; b += cut(R(bx - 20, 200, bw + 40, 40, P.wall, 8) + R(bx - 20, 200, bw + 40, 40, P.wall, 8) + R(bx, 240, 24, 540, P.wall, 3) + R(bx + bw - 24, 240, 24, 540, P.wall, 3) + R(bx, 760, bw, 30, P.panel, 4)) + K.board(bx + 130, 206, 260, 28, "TELEPHONE", P.trim, INK, 20) + R(bx + 24, 240, bw - 48, 520, n ? "#1b2a36" : "#cfdce4", 0, "");
-      if (o.who !== false) b += cut(`<g transform="translate(${bx + 260},760)"><circle cx="0" cy="-440" r="52" fill="#1b1d36" ${st}/><path d="M-90,-380 L90,-380 L100,-120 L-100,-120Z" fill="#1b1d36" ${st}/>${R(-60, -120, 50, 120, "#10132a", 8)}${R(10, -120, 50, 120, "#10132a", 8)}<path d="M60,-340 L80,-440 L40,-470" fill="none" stroke="#1b1d36" stroke-width="24" stroke-linecap="round"/>${R(18, -500, 44, 24, "#3d4a5c", 8)}</g>`);
-      b += K.glass(bx + 24, 240, bw - 48, 520, n ? 12 : 12) + `<g class="stampg" transform="rotate(-8 ${bx + 260} 500)">${R(bx + 100, 450, 320, 100, "none", 8, `stroke="#e0262b" stroke-width="9"`)}${T(bx + 260, 520, o.stamp || "NO COMMENT", 44, "#e0262b", "middle", 'font-weight="800"')}</g>`;
-      b += K.post(240, 790, 540, n, "#ffd27a") + cut(R(1640, 620, 110, 150, "#4f8f5b", 12)) + K.walker(1500, 800, 0.9, "#4a4066", "#e0262b") + K.walker(1760, 820, 0.8, "#2c5490", "#f0b429") + K.walker(420, 840, 1, "#3d4a5c", "#3d6fb6").slice(0, 0);
-      return { back: b, front: (o.rain === false ? "" : K.rain(13)) + `<g class="fg">${cut(R(-10, 600, 36, 480, "#3d4a5c", 6))}</g>` };
+      const bx = 700, bw = 520; let m = cut(R(bx - 20, 200, bw + 40, 40, P.wall, 8) + R(bx - 20, 200, bw + 40, 40, P.wall, 8) + R(bx, 240, 24, 540, P.wall, 3) + R(bx + bw - 24, 240, 24, 540, P.wall, 3) + R(bx, 760, bw, 30, P.panel, 4)) + K.board(bx + 130, 206, 260, 28, "TELEPHONE", P.trim, INK, 20) + R(bx + 24, 240, bw - 48, 520, n ? "#1b2a36" : "#cfdce4", 0, "");
+      if (o.who !== false) m += cut(`<g transform="translate(${bx + 260},760)"><circle cx="0" cy="-440" r="52" fill="#1b1d36" ${st}/><path d="M-90,-380 L90,-380 L100,-120 L-100,-120Z" fill="#1b1d36" ${st}/>${R(-60, -120, 50, 120, "#10132a", 8)}${R(10, -120, 50, 120, "#10132a", 8)}<path d="M60,-340 L80,-440 L40,-470" fill="none" stroke="#1b1d36" stroke-width="24" stroke-linecap="round"/>${R(18, -500, 44, 24, "#3d4a5c", 8)}</g>`);
+      m += K.glass(bx + 24, 240, bw - 48, 520, n ? 12 : 12) + `<g class="stampg" transform="rotate(-8 ${bx + 260} 500)">${R(bx + 100, 450, 320, 100, "none", 8, `stroke="#e0262b" stroke-width="9"`)}${T(bx + 260, 520, o.stamp || "NO COMMENT", 44, "#e0262b", "middle", 'font-weight="800"')}</g>`;
+      b += K.post(240, 790, 540, n, "#ffd27a") + cut(R(1640, 620, 110, 150, "#4f8f5b", 12)) + K.walker(1500, 800, 0.9, "#4a4066", "#e0262b") + K.walker(1760, 820, 0.8, "#2c5490", "#f0b429");
+      return { back: b, mid: m, front: (o.rain === false ? "" : K.rain(13)) + `<g class="fg">${cut(R(-10, 600, 36, 480, "#3d4a5c", 6))}</g>` };
     },
 
     // @cfo-sets
@@ -1710,13 +1712,13 @@
   // @cfo-reg
   // Draw a set for a shot: the set itself, its dressing in its palette, or a palette wash over a set that draws its own colours.
   function draw(name, o) {
-    o = o || {}; const vf = VARIANT[name] && VARIANT[name][o.dress]; if (vf && !o.bare) { const x = vf(o); return { back: x.back || "", front: x.front || "" }; }
+    o = o || {}; const vf = VARIANT[name] && VARIANT[name][o.dress]; if (vf && !o.bare) { const x = vf(o); return { back: x.back || "", mid: x.mid || "", front: x.front || "" }; }
     const fn = SETS[name] || SETS.studio, out = fn(o), night = NIGHT_FIRST[name] ? o.night !== false : !!o.night;
     let back = out.back, front = out.front || "";
     if (DRESS[name] && !o.bare) { const x = DRESS[name](o, pal(o, SET_PALETTE[name], night), night); back += x.back || ""; front += x.front || ""; }
     else if (o.palette && !DRESS[name] && PALETTES[o.palette]) back += wash(pal(o, o.palette, night), night);
     if (o.rain === true && name !== "bus_stop" && name !== "phone_booth") front += K.rain(9); // rain over any other place
-    return { back, front };
+    return { back, mid: out.mid || "", front };
   }
 
   // Ambient motion that keeps a held shot alive.
@@ -1731,7 +1733,7 @@
     svg.querySelectorAll(".pulse").forEach((p, i) => tl.fromTo(p, { opacity: 1 }, { opacity: 0.62, duration: 1.3 + (i % 3) * 0.25, yoyo: true, repeat: Math.ceil(d / 1.3) + 1, ease: "sine.inOut", immediateRender: false }, t0));
     svg.querySelectorAll(".spin").forEach((p, i) => { gsap.set(p, { transformOrigin: "50% 50%", smoothOrigin: false }); tl.fromTo(p, { rotation: 0 }, { rotation: (i % 2 ? -1 : 1) * 360 * Math.max(1, d / 2.5), duration: d, ease: "none", immediateRender: false }, t0); });
     // steam rises and fades again and again; a clock's second hand steps once a second; the foreground drifts a little faster than the room (depth)
-    svg.querySelectorAll(".steam").forEach((p, i) => tl.fromTo(p, { y: 0, opacity: 0.75 }, { y: -46, opacity: 0, duration: 1.8, repeat: Math.ceil(d / 1.8) + 1, ease: "none", immediateRender: false }, t0 - (i % 3) * 0.6));
+    svg.querySelectorAll(".steam").forEach((p, i) => tl.fromTo(p, { y: 0, opacity: 0.75 }, { y: -46, opacity: 0, duration: 1.8, repeat: Math.ceil(d / 1.8) + 1, ease: "none", immediateRender: false }, Math.max(0, t0 - (i % 3) * 0.6)));
     svg.querySelectorAll(".secs").forEach((p) => { gsap.set(p, { svgOrigin: p.getAttribute("data-cx") + " " + p.getAttribute("data-cy"), smoothOrigin: false }); const n = Math.max(1, Math.ceil(d)); tl.fromTo(p, { rotation: 0 }, { rotation: 6 * n, duration: n, ease: "steps(" + n + ")", immediateRender: false }, t0); });
     svg.querySelectorAll(".rain").forEach((p, i) => { tl.fromTo(p, { y: -90, x: 0 }, { y: 0, x: -24, duration: 0.45, repeat: Math.ceil(d / 0.45) + 1, ease: "none", immediateRender: false }, t0); });
     svg.querySelectorAll(".wob").forEach((p) => { gsap.set(p, { transformOrigin: "50% 50%", smoothOrigin: false }); tl.fromTo(p, { rotation: -1.6, y: -2 }, { rotation: 1.6, y: 3, duration: 0.18, yoyo: true, repeat: Math.ceil(d / 0.18) + 1, ease: "sine.inOut", immediateRender: false }, t0); });
