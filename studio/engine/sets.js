@@ -1478,6 +1478,9 @@
     // { type:"name_plate", x, y, k, t: "CFO", tape: true | "INTERIM CEO" }: a desk name plate, with masking tape beside it.
     name_plate: { draw(o) { return K.namePlate(o.x, o.y, o.k || 1, o.t, o.tape); }, play: pop },
 
+    // { type:"jacket", x, y, k }: a black leather jacket draped over a seat back or a chair. x, y = the bottom middle.
+    jacket: { draw(o) { const k = o.k || 1; return cut(`<g transform="translate(${o.x},${o.y}) scale(${k})"><path d="M-120,-200 Q0,-290 120,-200 L150,0 L100,6 L86,-130 L-86,-130 L-100,6 L-150,0Z" fill="#1a1a22" ${st}/><path d="M-70,-250 L0,-150 L70,-250" fill="none" stroke="#5a5a6c" stroke-width="7"/><path d="M-100,-190 Q-116,-100 -128,-20" fill="none" stroke="#5a5a6c" stroke-width="5" opacity=".8"/><circle cx="0" cy="-110" r="8" fill="#8d9199"/></g>`); }, play: pop },
+
     // @cfo-props
   };
 

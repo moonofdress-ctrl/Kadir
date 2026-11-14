@@ -1,192 +1,4414 @@
 {
-  "episode": "gallery",
-  "demo": true,
-  "title": "Component gallery",
-  "viewer": "MARTHA",
-  "cast": { "GALLERY_FOUNDER": { "build": "slight", "jaw": "heart", "nose": "button", "age": "adult", "hair": "#2b2118", "hairStyle": "ponytail", "skin": "#c98d64", "top": "#f6f1e4", "topStyle": "blouse", "legs": "#3b3f4a", "shoes": "#2b2b2b", "shoeStyle": "flat", "extras": ["earrings", "glasses"] } },
-  "shots": [
-    { "id": "g01", "cue": "L001", "set": "trading_floor", "opts": { "mood": "red", "papers": true }, "grade": "red", "camera": "shake",
-      "overlays": [
-        { "type": "clock", "t": "10:35", "ap": "AM", "tz": "ET", "at": 0 },
-        { "type": "counter", "from": 0, "to": 2000, "prefix": "-$", "suffix": "B", "tone": "red", "pos": "tr", "cap": "S&P 500, BY MIDMORNING", "at": 0.4, "dur": 1.4, "plate": true },
-        { "type": "tag", "t": "THURSDAY", "tone": "red", "at": 0.2 }
-      ] },
-    { "id": "g02", "cue": "L002", "set": "trading_floor", "opts": { "mood": "green", "party": true }, "grade": "green", "camera": "pan_right",
-      "overlays": [ { "type": "slam", "t": "+3%", "tone": "green", "at": 0.9, "plate": true }, { "type": "tag", "t": "WEDNESDAY", "tone": "green", "at": 0.2 } ] },
-    { "id": "g03", "cue": "L003", "set": "street", "opts": { "signs": ["BANK", "CAFE", "PHARMACY"] }, "camera": "push_in",
-      "actors": [
-        { "who": "CHAD", "x": 620, "face": "happy", "pose": "cheer", "speaks": ["L003"] },
-        { "who": "MARTHA", "x": 1260, "face": "deadpan", "pose": "hips", "enter": "slide_right", "cue": "L004", "at": -0.3, "speaks": ["L004"],
-          "acts": [ { "cue": "L004", "word": 2, "face": "smug", "pose": "present" } ] }
-      ] },
-    { "id": "g04", "type": "card", "cue": "L005", "text": "So what actually broke?", "emph": ["broke"] },
-    { "id": "g05", "type": "chapter", "cue": "L006", "number": 2, "title": "The Top" },
-    { "id": "g06", "cue": "L006", "set": "studio", "camera": "tilt_up",
-      "overlays": [ { "type": "calendar", "month": "OCT", "day": 6, "dow": "TUESDAY", "from": { "month": "NOV", "day": 5 }, "x": 845, "y": 300, "at": 0.3, "flipAt": 1.3 } ] },
-    { "id": "g07", "cue": "L007", "set": "office", "opts": { "desk": false }, "camera": "push_in",
-      "overlays": [
-        { "type": "doc", "source": "Sample earnings call \u00b7 transcript", "date": "26 AUG", "by": "Chief financial officer", "quote": "We know some people will call this circular.", "hl": ["circular"], "at": 0.3, "hlAt": 1.6 },
-        { "type": "lower_third", "name": "SAMPLE NAME", "role": "Chief financial officer", "at": 1.0 }
-      ] },
-    { "id": "g08", "cue": "L008", "set": "plain", "opts": { "color": "#bfe0ea" }, "camera": "pull_out", "motif": "tower",
-      "props": [ { "type": "tower", "x": 960, "y": 900, "tilt": 5, "blocks": [
-        { "t": "CRACK 1", "color": "#e8a317", "cue": "L008", "word": 2 }, { "t": "CRACK 2", "color": "#1f8a8a", "cue": "L008", "word": 3 },
-        { "t": "CRACK 3", "color": "#c9705a", "cue": "L008", "word": 4 }, { "t": "CRACK 4", "color": "#e0262b", "cue": "L008", "word": 5 } ] } ] },
-    { "id": "g09", "cue": "L009", "set": "board", "opts": { "title": "QUARTERLY SALES" }, "camera": "push_in",
-      "props": [ { "type": "bars", "x": 420, "y": 240, "w": 1080, "h": 620, "items": [ { "label": "A YEAR AGO", "val": 47, "show": "$47B", "color": "#9aa0b4" }, { "label": "LAST QUARTER", "val": 96, "show": "$96B", "color": "#1fa85b" } ] } ],
-      "overlays": [ { "type": "source", "t": "sample data", "at": 0.4 }, { "type": "stamp", "t": "x2", "at": 1.3 } ] },
-    { "id": "g10", "cue": "L010", "set": "board", "opts": { "title": "SHARE PRICE" }, "camera": "pan_left", "grade": "red",
-      "props": [ { "type": "line", "x": 260, "y": 280, "w": 1400, "h": 520, "pts": [60, 66, 64, 72, 78, 74, 70, 52, 40, 31], "label": "-9%", "dur": 1.1, "at": 0.1 } ] },
-    { "id": "g11", "cue": "L011", "set": "studio", "opts": { "wall": "#d9d3e6", "floor": "#a59fbf" }, "camera": "push_in",
-      "actors": [ { "who": "REGGIE", "x": 380, "face": "deadpan", "prop": "stamp" } ],
-      "overlays": [ { "type": "post", "source": "Post", "date": "5 NOV", "name": "Sample Official", "handle": "@sample_official", "text": "Not yet.", "x": 1210, "y": 220, "at": 0.3 } ] },
-    { "id": "g12", "cue": "L012", "set": "kitchen", "opts": { "night": true, "window": "datacenter" }, "camera": "tilt_down", "callback": "bill",
-      "actors": [ { "who": "MARTHA", "x": 1420, "y": 960, "face": "angry", "prop": "bill", "flip": true } ],
-      "overlays": [ { "type": "label", "t": "+$27 A MONTH", "pos": "tl", "at": 1.0 }, { "type": "sfx", "t": "THUD", "x": 520, "y": 620, "at": 0.3 } ] },
-    { "id": "g13", "cue": "L013", "set": "night_city", "camera": "pull_out", "grade": "night", "callback": "bill",
-      "actors": [ { "who": "MARTHA", "x": 960, "y": 1000, "scale": 0.8, "face": "sad", "look": "up", "prop": "bill" } ] },
-    { "id": "g14", "cue": "L014", "set": "stage", "camera": "push_in",
-      "actors": [
-        { "thing": "box", "label": "MARKETPLACE", "x": 300, "y": 930, "face": "smug", "enter": "none" },
-        { "thing": "chip", "label": "CHIPS INC", "x": 720, "y": 930, "face": "happy", "pose": "cheer", "enter": "none" },
-        { "thing": "coin", "label": "INDEX FUND", "x": 1150, "y": 930, "face": "shocked", "pose": "shrug", "enter": "none" },
-        { "thing": "bag", "label": "PENSION", "x": 1580, "y": 930, "face": "scared", "pose": "panic", "enter": "none" } ],
-      "props": [ { "type": "bunting", "y": 230 } ] },
-    { "id": "g15", "cue": "L015", "set": "lawn", "camera": "tilt_up",
-      "actors": [
-        { "thing": "dome", "label": "CONGRESS", "x": 1060, "y": 790, "scale": 1.15, "face": "smug", "prop": "pen", "enter": "none" },
-        { "who": "CHAD", "x": 360, "y": 1000, "scale": 0.5, "prop": "briefcase", "face": "scared", "enter": "none" },
-        { "thing": "bank", "x": 1680, "y": 800, "scale": 0.6, "face": "happy", "enter": "none" } ],
-      "props": [ { "type": "banner", "x": 420, "y": 250, "w": 560, "t": "NEW RULES", "at": 0.9 } ] },
-    { "id": "g16", "cue": "L016", "set": "suburb", "camera": "pan_right",
-      "actors": [
-        { "who": "MARTHA", "x": 520, "y": 940, "badge": "52", "prop": "bill", "face": "furious", "enter": "none" },
-        { "thing": "house", "label": "OHIO", "x": 1280, "y": 900, "scale": 0.9, "face": "panic", "pose": "panic", "enter": "none" } ],
-      "props": [ { "type": "pricetag", "x": 900, "y": 300, "t": "+$27", "at": 0.8 }, { "type": "piggy", "x": 1690, "y": 846, "k": 0.36, "state": "cracked" } ] },
-    { "id": "g17", "cue": "L017", "set": "server_room", "camera": "push_in", "frame": "medium",
-      "light": { "x": 960, "y": 420, "r": 950, "color": "#ffe14d", "dark": 0.62 },
-      "actors": [
-        { "who": "BENNY", "x": 700, "face": "panic", "pose": "panic", "enter": "none", "acts": [ { "at": 1.6, "face": "crying" } ] },
-        { "who": "HAL", "x": 1240, "face": "greedy", "prop": "tag", "tag": "$9B", "hat": "crown", "enter": "none" } ] },
-    { "id": "g18", "cue": "L018", "set": "warehouse", "camera": "pull_out",
-      "actors": [
-        { "who": "SELLER", "x": 420, "y": 900, "face": "happy", "pose": "wave", "enter": "none" },
-        { "thing": "box", "label": "PARCEL", "x": 1900, "y": 1010, "scale": 0.5, "face": "happy", "enter": "none", "acts": [ { "at": 0.4, "to": [1300, 1010], "dur": 1.6 } ] },
-        { "who": "REGGIE", "x": 1020, "y": 900, "hat": "hardhat", "prop": "magnifier", "face": "deadpan", "enter": "none" },
-        { "who": "CHAD", "x": 1500, "y": 920, "hat": "party", "prop": "placard", "sign": "BUY", "face": "happy", "flip": false, "enter": "none" } ],
-      "props": [ { "type": "stall", "x": 420, "y": 985, "t": "HANDMADE", "price": "$19", "layer": "front" }, { "type": "podium", "x": 1020, "y": 960, "t": "AUDIT", "layer": "front" },
-        { "type": "cashpile", "x": 1780, "y": 930, "n": 7, "layer": "front" }, { "type": "crates", "x": 1220, "y": 930, "n": 3, "w": 130, "t": "FEES", "move": { "to": [1320, 930], "at": 1.2, "dur": 0.8 } }, { "type": "piggy", "x": 110, "y": 936, "k": 0.34, "state": "rich" } ] }
-    ,{ "id": "g19", "cue": "L018", "at": 0, "set": "studio", "camera": "still", "motif": "tent",
-      "actors": [ { "thing": "chip", "label": "NVIDIA", "x": 960, "y": 330, "scale": 0.3, "face": "worried", "enter": "none" } ],
-      "props": [ { "type": "tent", "x": 960, "y": 930, "w": 1500, "ropes": 6, "frayed": 1, "tilt": 3, "crowd": 120, "flag": "NVIDIA", "flap": true, "snap": { "cue": "L018", "at": 0.5 } }, { "type": "chair", "x": 220, "y": 960, "t": "NEXT", "dust": true } ] }
-    ,{ "id": "g20", "cue": "L018", "at": 0.8, "set": "bus", "opts": { "night": true }, "camera": "still",
-      "actors": [ { "thing": "newspaper", "label": "THE NEW YORK TIMES", "x": 700, "y": 930, "scale": 0.8, "face": "smug", "enter": "none" }, { "thing": "newspaper", "label": "THE WALL STREET JOURNAL", "x": 1250, "y": 930, "scale": 0.8, "face": "deadpan", "enter": "none" } ] }
-    ,{ "id": "g21", "cue": "L018", "at": 1.6, "set": "boardroom", "opts": { "doors": ["BOARD", "WASHINGTON", "17 NOV"] }, "camera": "still",
-      "props": [ { "type": "chair", "x": 960, "y": 960, "t": "CHAIRMAN", "web": true } ] }
-    ,{ "id": "g22", "cue": "L018", "at": 2.4, "set": "plain", "opts": { "color": "#bfe0ea" }, "camera": "still",
-      "props": [ { "type": "seesaw", "x": 960, "y": 900, "w": 1300, "tilt": -10, "left": "NVIDIA", "right": "499 OTHERS" } ] }
-    ,{ "id": "g23", "cue": "L018", "at": 3.2, "set": "warehouse", "opts": { "belt": false }, "camera": "still",
-      "actors": [ { "thing": "chip", "label": "NVIDIA", "x": 560, "y": 620, "scale": 0.55, "face": "smug", "enter": "none" } ],
-      "props": [ { "type": "scale", "x": 560, "y": 900, "t": "ABOUT 8%", "tilt": 8 }, { "type": "jar", "x": 1300, "y": 900, "t": "RETIREMENT", "amount": "$100,000", "level": 0.8 } ] }
-    ,{ "id": "g24", "cue": "L018", "at": 4.0, "set": "plain", "opts": { "color": "#e9dfc8" }, "camera": "still",
-      "props": [ { "type": "gate", "x": 480, "y": 900, "t": "CUSTOMS", "closed": true }, { "type": "highjump", "x": 1380, "y": 930, "w": 700, "t": "FORECAST $108B", "mark": "ANALYSTS ~$109B" } ] },
-    { "id": "g25", "cue": "L018", "at": 5.0, "set": "picture", "opts": { "src": "art/sample.jpg", "shows": "an empty chair in a spotlight, the chip crying beside it", "living": "chip" }, "camera": "push_in",
-      "props": [ { "type": "sign", "x": 1500, "y": 330, "t": "NEXT" } ],
-      "overlays": [ { "type": "tag", "t": "TEXT IS DRAWN BY THE ENGINE", "tone": "red", "pos": "tl", "at": 0.1 } ] },
-    {"id":"n01","cue":"L019","at":0,"set":"pitch_stage","opts":{"view":"table","night":true},"camera":"push_in","place":"pitch stage","light":{"x":1000,"y":520,"r":1000,"dark":0.4},"actors":[{"who":"ALLISON_ELLSWORTH","pregnant":true,"x":720,"y":960,"face":"scared","pose":"hold","enter":"none"},{"thing":"soda","shape":"bottle","label":"MOTHER","tag":"$1.95B","sweat":true,"x":1120,"y":700,"scale":0.5,"face":"neutral","enter":"none"}]},
-    {"id":"n02","cue":"L019","at":0.65,"set":"pitch_stage","opts":{"view":"chairs","night":true,"lit_chair":3},"camera":"pull_out","place":"pitch stage","actors":[{"who":"SHARK","shadow":true,"x":380,"y":900,"scale":0.7,"enter":"none"},{"who":"SHARK","shadow":true,"x":670,"y":880,"scale":0.7,"pose":"think","enter":"none"},{"who":"ROHAN_OZA","x":1250,"y":880,"scale":0.7,"face":"deadpan","pose":"fold","enter":"none"},{"who":"SHARK","shadow":true,"x":1540,"y":900,"scale":0.7,"enter":"none"}],"props":[{"type":"investor_chair","x":960,"y":930,"lit":false}]},
-    {"id":"n03","cue":"L019","at":1.3,"set":"pitch_stage","opts":{"view":"desk","night":true,"lit_chair":3},"camera":"tilt_up","place":"pitch stage","actors":[{"who":"STEPHEN_ELLSWORTH","x":760,"y":930,"scale":0.8,"face":"happy","enter":"none"},{"who":"RAMON_LAGUARTA","x":1300,"y":930,"scale":0.8,"face":"plain","prop":"pen","enter":"none"}]},
-    {"id":"n04","cue":"L020","at":0,"set":"pitch_stage","opts":{"view":"seats","night":true},"camera":"pan_right","place":"audience seats","actors":[{"who":"BENNY","x":960,"y":1000,"scale":0.75,"face":"shocked","prop":"popcorn","enter":"none"}]},
-    {"id":"n05","cue":"L020","at":0.65,"set":"pitch_stage","opts":{"view":"rafters","night":true,"lit_chair":2},"camera":"tilt_down","place":"the rafters","actors":[{"thing":"giant","color":"navy","label":"BIG COLA","x":1380,"y":760,"scale":1,"face":"greedy","look":"down","pose":"grab","enter":"none"}]},
-    {"id":"n06","cue":"L020","at":1.3,"set":"pitch_stage","opts":{"view":"wings","night":true},"camera":"pan_left","place":"stage wings","actors":[{"who":"ALLISON_ELLSWORTH","x":560,"y":960,"face":"relieved","enter":"none"}],"props":[{"type":"wall_calendar","x":860,"y":420,"circle":18}]},
-    {"id":"n07","cue":"L021","at":0,"set":"farmers_market","opts":{"night":true,"dawn":true},"camera":"pull_out","place":"farmers' market","actors":[{"who":"STEPHEN_ELLSWORTH","x":520,"y":940,"scale":0.8,"face":"happy","pose":"carry","enter":"none"},{"thing":"soda","shape":"can","label":"FIZZ","x":1220,"y":900,"scale":0.7,"face":"happy","pose":"cheer","enter":"none"}],"props":[{"type":"bottles","x":960,"y":820,"n":7,"speed":30}]},
-    {"id":"n08","cue":"L021","at":0.65,"set":"night_office","opts":{"dress":"hal","night":true},"camera":"push_in","place":"boss office","actors":[{"who":"HAL","x":1200,"y":960,"face":"deadpan","prop":"espresso","enter":"none"}]},
-    {"id":"n09","cue":"L021","at":1.3,"set":"night_office","opts":{"dress":"filing","night":true},"camera":"tilt_up","place":"records room","actors":[{"who":"MARTHA","x":1100,"y":960,"prop":"calculator","face":"confused","enter":"none"}]},
-    {"id":"n10","cue":"L022","at":0,"set":"car_lot","opts":{"night":true},"camera":"pull_out","place":"used-car lot","props":[{"type":"car","x":1060,"y":930,"sign":"SOLD"},{"type":"cards_fan","x":1000,"y":700,"n":5}]},
-    {"id":"n11","cue":"L022","at":0.65,"set":"car_lot","opts":{"night":true,"dress":"garage"},"camera":"push_in","place":"parking garage","props":[{"type":"car","x":1060,"y":930}]},
-    {"id":"n12","cue":"L022","at":1.3,"set":"bottling_plant","opts":{"night":true},"camera":"pan_left","place":"bottling plant","actors":[{"who":"HAL","x":560,"y":960,"hat":"hardhat","prop":"wallet","open":true,"face":"deadpan","enter":"none"}],"props":[{"type":"bottles","x":960,"y":700,"n":9,"speed":40}]},
-    {"id":"n13","cue":"L023","at":0,"set":"living_room","opts":{"night":true,"dress":"rehearsal"},"camera":"push_in","place":"living room","actors":[{"who":"ALLISON_ELLSWORTH","x":300,"y":960,"face":"happy","pose":"present","enter":"none"}]},
-    {"id":"n14","cue":"L023","at":0.65,"set":"living_room","opts":{"night":true,"dress":"sunday","light":"phone"},"camera":"pan_right","place":"family living room"},
-    {"id":"n15","cue":"L023","at":1.3,"set":"back_shop","opts":{"dress":"pawn"},"camera":"push_in","place":"pawn shop","actors":[{"who":"HAL","x":900,"y":960,"prop":"tape","face":"smug","enter":"none"}]},
-    {"id":"n16","cue":"L024","at":0,"set":"back_shop","opts":{"dress":"print"},"camera":"pan_left","place":"print shop"},
-    {"id":"n17","cue":"L024","at":0.65,"set":"corridor","opts":{"dress":"court"},"camera":"pull_out","place":"court corridor","actors":[{"who":"REGGIE","x":1000,"y":960,"prop":"clipboard","enter":"none"}]},
-    {"id":"n18","cue":"L024","at":1.3,"set":"corridor","opts":{"dress":"hospital"},"camera":"tilt_up","place":"hospital corridor","props":[]},
-    {"id":"n19","cue":"L025","at":0,"set":"design_studio","opts":{},"camera":"push_in","place":"design studio","actors":[{"who":"CHAD","x":560,"y":960,"face":"confused","enter":"none"}]},
-    {"id":"n20","cue":"L025","at":0.65,"set":"empty_hall","opts":{"dress":"convention"},"camera":"pull_out","place":"empty convention hall","actors":[{"who":"BENNY","x":700,"y":960,"prop":"mop","face":"deadpan","enter":"none"}]},
-    {"id":"n21","cue":"L025","at":1.3,"set":"empty_hall","opts":{"dress":"gym"},"camera":"pan_right","place":"school gym"},
-    {"id":"n22","cue":"L026","at":0,"set":"pitch_stage","opts":{"view":"table","night":true},"camera":"still","place":"pitch stage","actors":[{"thing":"soda","shape":"plain","x":700,"y":900,"scale":0.7,"face":"sad","enter":"none"},{"thing":"soda","shape":"can","label":"SOULBOOST","color":"#7fd0f0","x":1000,"y":900,"scale":0.6,"face":"smug","enter":"none"},{"thing":"giant","color":"red","coat":"lab","label":"RED COLA","x":1450,"y":900,"scale":0.9,"face":"smug","enter":"none"},{"thing":"vending","x":1750,"y":900,"scale":0.6,"face":"scared","enter":"none"}]},
-    {"id":"n23","cue":"L026","at":0.65,"set":"plain","opts":{"color":"#e9dfc8"},"camera":"still","actors":[{"thing":"soda","shape":"bottle","tag":"$1.95B","tagTear":0.5,"tagAfter":"$1.65B","x":760,"y":900,"scale":0.8,"face":"shocked","enter":"none"},{"thing":"giant","color":"teal","label":"TEAL","x":1300,"y":900,"scale":0.9,"face":"smug","enter":"none"}]},
-    {"id":"m01","cue":"L026","at":1.3,"set":"bedroom","opts":{"dress":"teen","night":true},"camera":"push_in","place":"teen bedroom","actors":[{"who":"CHAD","x":1000,"y":960,"face":"shocked","prop":"phone","enter":"none"}]},
-    {"id":"m02","cue":"L027","at":0,"set":"bedroom","opts":{"dress":"loft","night":true},"camera":"pan_right","place":"influencer loft","actors":[{"who":"BENNY","x":1300,"y":960,"face":"happy","pose":"present","enter":"none"}],"overlays":[{"type":"hearts","from":0,"to":4800,"suffix":"K","pos":"tr","at":0.3}]},
-    {"id":"m03","cue":"L027","at":0.65,"set":"bank","opts":{"dress":"vault","night":true},"camera":"pull_out","place":"bank vault","actors":[{"who":"HAL","x":960,"y":960,"face":"deadpan","enter":"none"}]},
-    {"id":"m04","cue":"L027","at":1.3,"set":"bank","opts":{"dress":"counter","night":true},"camera":"push_in","place":"bank counter","actors":[{"who":"MARTHA","x":960,"y":960,"face":"confused","enter":"none"}],"props":[{"type":"cheque","x":960,"y":900,"t":"$2.5M","move":{"to":[1160,900],"at":0.5,"dur":0.8}}]},
-    {"id":"m05","cue":"L028","at":0,"set":"red_carpet","opts":{"night":true},"camera":"push_in","place":"red carpet","actors":[{"who":"CHAD","x":960,"y":940,"face":"smug","pose":"hips","enter":"none"}]},
-    {"id":"m06","cue":"L028","at":0.65,"set":"supermarket","opts":{"dress":"aisle","night":true},"camera":"pull_out","place":"closed supermarket","actors":[{"who":"BENNY","x":960,"y":960,"face":"scared","enter":"none"}]},
-    {"id":"m07","cue":"L028","at":1.3,"set":"supermarket","opts":{"dress":"shelf","night":true},"camera":"pan_left","place":"supermarket stock room","actors":[{"thing":"soda","shape":"bottle","label":"JETTY","color":"#c95f8d","x":760,"y":900,"scale":0.7,"face":"scared","enter":"none"}]},
-    {"id":"m08","cue":"L029","at":0,"set":"mall","opts":{"night":true},"camera":"tilt_up","place":"empty mall","actors":[{"thing":"vending","x":560,"y":900,"scale":0.7,"face":"confused","enter":"none"}]},
-    {"id":"m09","cue":"L029","at":0.65,"set":"stadium","opts":{"view":"field","night":true},"camera":"pull_out","place":"stadium","props":[]},
-    {"id":"m10","cue":"L029","at":1.3,"set":"stadium","opts":{"view":"stands","night":true},"camera":"push_in","place":"stadium stands"},
-    {"id":"m11","cue":"L030","at":0,"set":"lab","opts":{"night":true},"camera":"push_in","place":"laboratory","actors":[{"thing":"giant","color":"navy","coat":"lab","label":"BIG COLA","x":1400,"y":900,"scale":0.9,"face":"smug","enter":"none"}],"props":[{"type":"beakers","x":700,"y":640,"at":0.6}]},
-    {"id":"m12","cue":"L030","at":0.65,"set":"scrapyard","opts":{"night":true},"camera":"pan_right","place":"scrapyard","actors":[{"thing":"soda","shape":"can","label":"SOULBOOST","color":"#7fd0f0","x":1000,"y":900,"scale":0.6,"face":"sad","enter":"none"}]},
-    {"id":"m13","cue":"L030","at":1.3,"set":"night_road","opts":{"dress":"highway","night":true},"camera":"push_in","place":"highway at night"},
-    {"id":"m14","cue":"L031","at":0,"set":"night_road","opts":{"dress":"racetrack","night":true},"camera":"pan_left","place":"racetrack","actors":[{"who":"BENNY","x":960,"y":960,"face":"shocked","enter":"none"}]},
-    {"id":"m15","cue":"L031","at":0.65,"set":"courtroom","opts":{"night":true},"camera":"pull_out","place":"courtroom","actors":[{"who":"REGGIE","x":1000,"y":960,"prop":"clipboard","enter":"none"}],"props":[{"type":"magnifier_big","x":1560,"y":520}]},
-    {"id":"m16","cue":"L031","at":1.3,"set":"stairwell","opts":{"night":true,"bulbs":4},"camera":"tilt_down","place":"stairwell","actors":[{"who":"MARTHA","x":380,"y":340,"scale":0.5,"face":"scared","enter":"none"}]},
-    {"id":"m17","cue":"L032","at":0,"set":"train_platform","opts":{"night":true},"camera":"pan_right","place":"train platform","actors":[{"who":"BENNY","x":900,"y":960,"face":"relieved","enter":"none"}]},
-    {"id":"m18","cue":"L032","at":0.65,"set":"desk_top","opts":{"night":true},"camera":"push_in","place":"desk from above","overlays":[{"type":"doc","source":"EXAMPLE OFFICE","date":"1 Jan","by":"A clerk","quote":"Plain text on a desk.","at":0.2}]},
-    {"id":"m19","cue":"L032","at":1.3,"set":"kitchen","opts":{"fridge":"open","night":true},"camera":"push_in","place":"kitchen at night","actors":[{"who":"BENNY","x":900,"y":960,"face":"scared","enter":"none"}]},
-    {"id":"m20","cue":"L033","at":0,"set":"kitchen","opts":{"dress":"martha","night":true},"camera":"pan_left","place":"martha's kitchen","actors":[{"who":"MARTHA","x":700,"y":960,"prop":"calculator","face":"deadpan","enter":"none"}]},
-    {"id":"m21","cue":"L033","at":0.65,"set":"warehouse","opts":{"night":true,"belt":false},"camera":"push_in","place":"warehouse at night","actors":[{"thing":"box","label":"BOX","x":1200,"y":900,"scale":0.8,"face":"scared","enter":"none"}]},
-    {"id":"m22","cue":"L033","at":1.3,"set":"boardroom","opts":{"glass":true,"night":false},"camera":"pull_out","place":"glass meeting room","actors":[{"who":"HAL","x":1000,"y":960,"face":"deadpan","enter":"none"}]},
-    {"id":"m23","cue":"L034","at":0,"set":"night_city","opts":{"towers":true},"camera":"push_in","place":"the city","actors":[{"thing":"giant","color":"red","label":"RED COLA","x":700,"y":900,"scale":1,"face":"furious","enter":"none"},{"thing":"giant","color":"navy","label":"NAVY COLA","x":1250,"y":900,"scale":1,"face":"smug","enter":"none"}]},
-    {"id":"m24","cue":"L034","at":0.65,"set":"pitch_stage","opts":{"view":"table","night":true},"camera":"push_in","place":"pitch stage","actors":[{"who":"ROHAN_OZA","x":700,"y":960,"face":"plain","prop":"briefcase","enter":"none"}],"props":[{"type":"briefcase","x":1300,"y":960,"move":{"to":[1100,960],"at":0.4,"dur":0.6}},{"type":"pricetag","x":1500,"y":420,"t":"$1.95B","flip":0.5}]},
-    {"id":"m25","cue":"L034","at":1.3,"set":"empty_hall","opts":{"dress":"gym","night":true},"camera":"still","place":"school gym","props":[{"type":"mirror_ball","x":960,"y":300},{"type":"pricetag","x":560,"y":700,"t":"$1.95B","tear":0.6,"after":"$1.65B"}]},
-    {"id":"m26","cue":"L035","at":0,"set":"plain","opts":{"color":"#e9dfc8"},"camera":"still","props":[{"type":"briefcase_tower","x":700,"y":900,"n":8,"grow":2},{"type":"toys","x":1300,"y":600},{"type":"blanket","x":1600,"y":900}]},
-    {"id":"m27","cue":"L035","at":0.65,"set":"living_room","opts":{"dress":"martha","night":true},"camera":"push_in","place":"martha's living room","actors":[{"who":"MARTHA","x":300,"y":960,"face":"happy","prop":"espresso","enter":"none"}],"props":[{"type":"toys","x":960,"y":560}]},
-    {"id":"m28","cue":"L035","at":1.3,"set":"back_shop","opts":{"dress":"tailor"},"camera":"pull_out","place":"tailor shop","actors":[{"who":"HAL","x":820,"y":960,"prop":"tape","face":"smug","enter":"none"}]},
-    {"id":"m29","cue":"L036","at":0,"set":"night_office","opts":{"dress":"clerk","night":true},"camera":"tilt_up","place":"trademark office","actors":[{"who":"REGGIE","x":640,"y":960,"prop":"clipboard","enter":"none"}]},
-    {"id":"m30","cue":"L036","at":0.65,"set":"night_office","opts":{"dress":"newsroom","night":true},"camera":"pan_left","place":"newsroom"},
-    {"id":"m31","cue":"L036","at":1.3,"set":"night_office","opts":{"dress":"supplier","night":true},"camera":"push_in","place":"supplier office"},
-    {"id":"m32","cue":"L037","at":0,"set":"night_office","opts":{"dress":"executive","night":true},"camera":"pull_out","place":"executive office"},
-    {"id":"tc1","cue":"L037","at":0.65,"type":"card","text":"Places for the soda story","emph":["soda"]},
-    {"id":"tc2","cue":"L037","at":1.3,"type":"card","text":"Things and guests too","emph":["guests"]},
-    {"id":"gs1","cue":"L038","set":"evidence_wall","opts":{"night":true},"place":"evidence wall","light":{"x":960,"y":470,"r":1100,"dark":0.55},"props":[{"type":"board_web","nodes":[{"id":"a","kind":"face","who":"ROHAN_OZA","name":"ROHAN OZA","sub":"the connector","at":0.3},{"id":"b","kind":"badge","icon":"can","color":"#8a3fb6","name":"CAVU","sub":"investor","at":1.6},{"id":"c","kind":"doc","title":"DEAL","name":"THE SALE","at":2.9}],"edges":[{"from":"a","to":"b","label":"backed by"},{"from":"b","to":"c"}]}]},
-    {"id":"gs2","cue":"L040","set":"timeline_road","opts":{"night":true},"place":"the road of years","light":{"x":960,"y":520,"r":1200,"dark":0.5},"props":[{"type":"timeline","years":[{"year":"2015","caption":"A kitchen","who":"ALLISON_ELLSWORTH","at":0.2},{"year":"2018","caption":"A few stores","icon":"can","color":"#8a3fb6","at":1.8},{"year":"2025","caption":"Everywhere","icon":"building","at":3.4}]}]},
-    {"id":"gs3","cue":"L042","set":"studio","place":"the studio","actors":[{"who":"BENNY","x":960,"face":"shocked"}],"overlays":[{"type":"counter","roll":true,"from":0,"to":1.95,"prefix":"$","suffix":"B","decimals":2,"cap":"SOLD FOR","pos":"tr","at":0.4,"dur":1.6},{"type":"counter","roll":true,"from":1.95,"to":1.42,"prefix":"$","suffix":"B","decimals":2,"cap":"A WEEK LATER","pos":"tl","at":1.2,"dur":1.6}]},
-    {"id":"gs4","cue":"L044","set":"map_table","opts":{"night":true},"place":"the US map","light":{"x":960,"y":540,"r":1300,"dark":0.3},"props":[{"type":"map_flight","map":"us","from":"dallas","to":"new york","dur":2.2,"at":0.3}]},
-    {"id":"gs5","cue":"L046","set":"map_table","opts":{"night":true},"place":"the world map","light":{"x":960,"y":540,"r":1300,"dark":0.3},"props":[{"type":"map_flight","map":"world","from":"taiwan","to":"santa clara","dur":2.2,"at":0.3}]},
-    {"id":"e01","cue":"L047","explains":"who paid whom when PepsiCo bought the soda","set":"dark_stage","opts":{"night":true},"place":"the money table","light":{"x":960,"y":560,"r":1300,"dark":0.45},"props":[{"type":"money_flow","parties":[{"id":"p","kind":"badge","icon":"building","color":"#1f6fb6","name":"PEPSICO"},{"id":"f","kind":"face","who":"ALLISON_ELLSWORTH","name":"FOUNDERS"},{"id":"i","kind":"badge","icon":"can","color":"#8a3fb6","name":"INVESTORS"}],"flows":[{"from":"p","to":"f","amount":"$1.95B","at":0.6},{"from":"f","to":"i","amount":"$300M","coins":true,"at":2.6}]}]},
-    {"id":"e02","cue":"L049","explains":"where the $1.95B went","set":"dark_stage","opts":{"night":true},"place":"the split","light":{"x":960,"y":560,"r":1300,"dark":0.45},"props":[{"type":"split_bar","total":"$1.95B","note":"what PepsiCo paid","parts":[{"label":"TAXES","amount":"$490M","share":0.25,"at":0.8},{"label":"EARNOUT","amount":"$680M","share":0.35,"at":2.0},{"label":"CASH","amount":"$780M","share":0.4,"at":3.2}]}]},
-    {"id":"e03","cue":"L051","explains":"why rich on paper is not rich in the bank","set":"dark_stage","opts":{"night":true},"place":"the chain","light":{"x":960,"y":560,"r":1300,"dark":0.45},"props":[{"type":"chain","nodes":[{"text":"The sale happened","icon":"coin","color":"#e8a317","at":0.3},{"text":"Founders were rich","who":"ALLISON_ELLSWORTH","at":1.8},{"text":"Only on paper","icon":"bank","color":"#8a3fb6","at":3.3},{"text":"The earnout had strings","icon":"can","color":"#e0262b","at":4.8}],"links":["so","but","because"]}]},
-    {"id":"e04","cue":"L054","explains":"the text message that is on the record","set":"dark_stage","opts":{"night":true},"place":"the phone","light":{"x":960,"y":520,"r":1300,"dark":0.45},"props":[{"type":"chat","name":"Court filing","source":"Exhibit 12, 2025","messages":[{"from":"them","text":"Did you see the offer?","at":0.8},{"from":"me","text":"I did. It is bigger than I hoped.","at":3.0},{"from":"them","text":"Sign before Friday.","at":5.2}]}],"overlays":[{"type":"source","t":"Court filing, exhibit 12","at":0.4}]},
-    {"id": "v01", "cue": "L056", "set": "studio", "place": "the studio", "light": {"kind": "day"}, "camera": "push_in", "actors": [{"who": "BENNY", "x": 300, "y": 950, "scale": 0.85, "face": "happy", "prop": "phone", "screen": "green", "enter": "none"},{"who": "CHAD", "x": 640, "y": 950, "scale": 0.85, "face": "greedy", "pose": "rest", "enter": "none", "acts": [{"cue": "L056", "word": 5, "pose": "cheer"}]},{"who": "HAL", "x": 960, "y": 950, "scale": 0.85, "face": "smug", "prop": "espresso", "pose": "hold", "enter": "none"},{"who": "MARTHA", "x": 1280, "y": 950, "scale": 0.85, "face": "deadpan", "prop": "bill", "enter": "none"},{"who": "REGGIE", "x": 1620, "y": 950, "scale": 0.85, "face": "plain", "prop": "stamp", "pose": "hold", "enter": "none"}]},
-    {"id": "v02", "cue": "L057", "set": "kitchen", "place": "the kitchen", "camera": "push_in", "frame": "medium", "actors": [{"who": "BENNY", "x": 700, "y": 940, "scale": 0.9, "face": "confused", "pose": "shrug", "speaks": ["L057"], "enter": "none", "acts": [{"cue": "L057", "word": 2, "face": "shocked", "pose": "panic"}]},{"who": "MARTHA", "x": 1220, "y": 940, "scale": 0.9, "face": "deadpan", "prop": "bill", "speaks": ["L058"], "enter": "none", "acts": [{"cue": "L058", "word": 3, "face": "smug"}]}]},
-    {"id": "v03", "cue": "L059", "set": "kitchen", "place": "the kitchen", "camera": "pan_right", "actors": [{"who": "MARTHA", "x": 960, "y": 960, "scale": 0.75, "face": "neutral", "prop": "mug", "enter": "none", "acts": [{"cue": "L059", "word": 6, "pose": "present"}]}]},
-    {"id": "v04", "cue": "L060", "set": "boardroom", "place": "the boardroom", "camera": "push_in", "actors": [{"who": "HAL", "x": 760, "y": 960, "scale": 0.8, "face": "smug", "pose": "hips", "enter": "none"},{"who": "REGGIE", "x": 1180, "y": 960, "scale": 0.8, "face": "plain", "prop": "clipboard", "enter": "none"}]},
-    {"id": "v05", "cue": "L061", "set": "pitch_stage", "place": "the pitch stage", "camera": "pull_out", "actors": [{"who": "ALLISON_ELLSWORTH", "x": 700, "y": 960, "scale": 0.85, "face": "happy", "pregnant": true, "pose": "present", "enter": "none"}]},
-    {"id": "v06", "cue": "L062", "set": "night_office", "place": "the night office", "camera": "pan_left", "actors": [{"who": "CHAD", "x": 560, "y": 960, "scale": 0.8, "face": "scared", "prop": "phone", "screen": "red", "enter": "none"}]},
-    {"id": "v07", "cue": "L063", "set": "bank", "place": "the vault", "camera": "push_in", "actors": [{"who": "REGGIE", "x": 1300, "y": 960, "scale": 0.8, "face": "deadpan", "prop": "clipboard", "enter": "none"}]},
-    {"id": "v08", "cue": "L064", "set": "supermarket", "place": "the supermarket", "camera": "pan_right", "actors": [{"who": "MARTHA", "x": 820, "y": 970, "scale": 0.8, "face": "shocked", "prop": "tag", "tag": "$2.99", "enter": "none"}]},
-    {"id": "v09", "cue": "L065", "set": "back_shop", "place": "the back shop", "camera": "push_in", "actors": [{"who": "STEPHEN_ELLSWORTH", "x": 960, "y": 960, "scale": 0.8, "face": "neutral", "pose": "fold", "enter": "none"}]},
-    {"id": "v10", "cue": "L066", "set": "desk_top", "place": "the desk", "camera": "still"},
-    {"id": "v11", "cue": "L067", "set": "office", "opts": {"palette": "pink"}, "place": "the pink office", "camera": "push_in", "actors": [{"who": "BENNY", "x": 960, "y": 960, "scale": 0.8, "face": "happy", "pose": "wave", "enter": "none"}]},
-    {"id": "v12", "cue": "L068", "set": "kitchen", "opts": {"night": true, "palette": "teal"}, "place": "the kitchen at night", "camera": "push_in", "actors": [{"who": "MARTHA", "x": 900, "y": 960, "scale": 0.8, "face": "sad", "prop": "bill", "enter": "none"}]},
-    {"id": "v13", "cue": "L069", "set": "office", "place": "the office", "light": {"kind": "window", "x": 1420}, "camera": "pan_right", "actors": [{"who": "BENNY", "x": 760, "y": 960, "scale": 0.85, "face": "relieved", "prop": "mug", "enter": "none"}]},
-    {"id": "v14", "cue": "L070", "set": "night_office", "opts": {"dress": "newsroom"}, "place": "the newsroom", "light": {"kind": "screen", "x": 760, "y": 980}, "camera": "push_in", "actors": [{"who": "CHAD", "x": 760, "y": 960, "scale": 0.9, "face": "greedy", "prop": "phone", "screen": "green", "enter": "none"}]},
-    {"id": "v15", "cue": "L071", "set": "night_city", "place": "the street at night", "light": {"kind": "neon"}, "camera": "pan_left", "actors": [{"who": "ROHAN_OZA", "x": 960, "y": 980, "scale": 0.85, "face": "smug", "pose": "hips", "enter": "none"}]},
-    {"id": "v16", "cue": "L072", "set": "suburb", "place": "the suburb", "light": {"kind": "day"}, "camera": "pull_out", "actors": [{"who": "MARTHA", "x": 760, "y": 960, "scale": 0.8, "face": "happy", "pose": "wave", "enter": "none"},{"who": "BENNY", "x": 1160, "y": 960, "scale": 0.8, "face": "happy", "prop": "popcorn", "enter": "none"}]},
-    {"id": "v17", "cue": "L073", "set": "boardroom", "place": "the boardroom", "frame": "ots", "ots": {"speaker": "HAL", "listener": "BENNY"}, "camera": "still", "actors": [{"who": "BENNY", "x": 600, "y": 960, "scale": 0.85, "face": "neutral", "enter": "none"},{"who": "HAL", "x": 1260, "y": 960, "scale": 0.85, "face": "smug", "pose": "present", "speaks": ["L073"], "enter": "none", "acts": [{"cue": "L073", "word": 5, "pose": "point"}]}]},
-    {"id": "v18", "cue": "L074", "set": "boardroom", "place": "the boardroom", "frame": "ots", "ots": {"speaker": "BENNY", "listener": "HAL"}, "camera": "still", "actors": [{"who": "BENNY", "x": 600, "y": 960, "scale": 0.85, "face": "angry", "pose": "shrug", "speaks": ["L074"], "enter": "none"},{"who": "HAL", "x": 1260, "y": 960, "scale": 0.85, "face": "smug", "enter": "none"}]},
-    {"id": "v19", "cue": "L075", "set": "boardroom", "place": "the boardroom", "angle": "low", "camera": "push_in", "actors": [{"who": "HAL", "x": 960, "y": 980, "scale": 1, "face": "smug", "pose": "fold", "enter": "none"}]},
-    {"id": "v20", "cue": "L076", "set": "street", "place": "the street", "angle": "high", "camera": "pull_out", "actors": [{"who": "BENNY", "x": 960, "y": 940, "scale": 0.65, "face": "sad", "pose": "rest", "prop": "wallet", "open": true, "enter": "none"}]},
-    {"id": "v21", "cue": "L077", "set": "design_studio", "opts": {"palette": "blue"}, "place": "the founder's studio", "camera": "push_in", "frame": "medium", "actors": [{"who": "GALLERY_FOUNDER", "x": 960, "y": 960, "scale": 0.9, "face": "happy", "pose": "wave", "speaks": ["L077"], "enter": "none"}]},
-    {"id": "w01", "cue": "L078", "set": "street", "place": "the street", "camera": "pan_right", "actors": [{"who": "BENNY", "x": 420, "y": 950, "scale": 0.8, "face": "happy", "enter": "none", "acts": [{"cue": "L078", "word": 1, "to": [1500], "dur": 2.4}]}]},
-    {"id": "w02", "cue": "L079", "set": "office", "place": "the office", "camera": "still", "actors": [{"who": "MARTHA", "x": 640, "y": 960, "scale": 0.8, "face": "neutral", "prop": "bill", "cue": "L079", "word": 0},{"who": "CHAD", "x": 1280, "y": 960, "scale": 0.8, "face": "greedy", "prop": "phone", "screen": "green", "cue": "L079", "word": 4}]},
-    {"id": "w03", "cue": "L080", "set": "street", "place": "the street", "extras": 9, "camera": "push_in", "actors": [{"who": "BENNY", "x": 960, "y": 980, "scale": 0.85, "face": "shocked", "enter": "none"}]},
-    {"id": "w04", "cue": "L081", "set": "farmers_market", "place": "the market", "extras": 7, "camera": "pan_left", "actors": [{"who": "MARTHA", "x": 900, "y": 980, "scale": 0.85, "face": "happy", "prop": "tag", "tag": "$4", "enter": "none"}]},
-    {"id": "w05", "cue": "L082", "set": "kitchen", "place": "the kitchen", "camera": "still", "frame": "medium", "actors": [{"who": "MARTHA", "x": 720, "y": 960, "scale": 0.9, "face": "deadpan", "prop": "bill", "speaks": ["L082"], "enter": "none", "acts": [{"cue": "L082", "word": 0, "act": "handover", "with": "BENNY"}]},{"who": "BENNY", "x": 1220, "y": 960, "scale": 0.9, "face": "confused", "speaks": ["L083"], "enter": "none", "acts": [{"cue": "L083", "word": 1, "face": "sad"}]}]},
-    {"id": "w06", "cue": "L084", "set": "living_room", "place": "the living room", "camera": "still", "actors": [{"who": "MARTHA", "x": 700, "y": 960, "scale": 0.85, "face": "sad", "enter": "none", "acts": [{"cue": "L084", "word": 1, "act": "sit"}]},{"who": "BENNY", "x": 1240, "y": 960, "scale": 0.85, "face": "sad", "enter": "none", "acts": [{"cue": "L084", "word": 5, "act": "turn"}]}]},
-    {"id": "w07", "cue": "L085", "set": "boardroom", "opts": {"tableFront": true}, "place": "the boardroom", "camera": "shake", "actors": [{"who": "HAL", "x": 960, "y": 1000, "scale": 0.95, "face": "angry", "speaks": ["L085"], "enter": "none", "acts": [{"cue": "L085", "word": 0, "act": "slam", "face": "furious"}]}]},
-    {"id": "w08", "cue": "L086", "set": "boardroom", "place": "the boardroom", "camera": "push_in", "angle": "low", "actors": [{"who": "REGGIE", "x": 640, "y": 960, "scale": 0.85, "face": "scared", "enter": "none"},{"who": "HAL", "x": 1180, "y": 960, "scale": 0.85, "face": "smug", "enter": "none", "acts": [{"cue": "L086", "word": 2, "act": "lean"}]}]}
-  ]
+ "episode": "gallery",
+ "demo": true,
+ "title": "Component gallery",
+ "viewer": "MARTHA",
+ "cast": {
+  "GALLERY_FOUNDER": {
+   "build": "slight",
+   "jaw": "heart",
+   "nose": "button",
+   "age": "adult",
+   "hair": "#2b2118",
+   "hairStyle": "ponytail",
+   "skin": "#c98d64",
+   "top": "#f6f1e4",
+   "topStyle": "blouse",
+   "legs": "#3b3f4a",
+   "shoes": "#2b2b2b",
+   "shoeStyle": "flat",
+   "extras": [
+    "earrings",
+    "glasses"
+   ]
+  },
+  "COLETTE_KRESS": {
+   "build": "slight",
+   "jaw": "oval",
+   "nose": "straight",
+   "age": "middle",
+   "hair": "#5a3b2a",
+   "hairStyle": "bob",
+   "skin": "#e8c5a9",
+   "top": "#2f6f5a",
+   "topStyle": "suit",
+   "legs": "#2b2b33",
+   "shoes": "#2b2b2b",
+   "shoeStyle": "dress"
+  },
+  "HARVEY_JONES": {
+   "build": "normal",
+   "jaw": "square",
+   "nose": "wide",
+   "age": "old",
+   "hair": "#cfd2d8",
+   "hairStyle": "side_part",
+   "skin": "#e8c5a9",
+   "top": "#2c3766",
+   "topStyle": "suit",
+   "tie": "#8a2f2a",
+   "legs": "#2c3766",
+   "shoes": "#2b2b2b",
+   "shoeStyle": "dress",
+   "extras": [
+    "glasses"
+   ]
+  },
+  "JENSEN_HUANG": {
+   "build": "normal",
+   "jaw": "square",
+   "nose": "straight",
+   "age": "old",
+   "hair": "#d9dce2",
+   "hairStyle": "swept",
+   "skin": "#e8c5a9",
+   "top": "#1b1b1f",
+   "topStyle": "jacket",
+   "legs": "#2b2b33",
+   "shoes": "#2b2b2b",
+   "shoeStyle": "dress",
+   "extras": []
+  },
+  "GIL_LURIA": {
+   "build": "slight",
+   "jaw": "long",
+   "nose": "pointed",
+   "age": "middle",
+   "hair": "#3b2f2a",
+   "hairStyle": "short",
+   "skin": "#e0b99a",
+   "top": "#7a8a9a",
+   "topStyle": "suit",
+   "legs": "#2b2b33",
+   "shoes": "#2b2b2b",
+   "shoeStyle": "dress",
+   "extras": [
+    "glasses"
+   ]
+  },
+  "FRANK_LEE": {
+   "build": "normal",
+   "jaw": "round",
+   "nose": "button",
+   "age": "adult",
+   "hair": "#1f1a1a",
+   "hairStyle": "side_part",
+   "skin": "#e8c9a0",
+   "top": "#3d4a5c",
+   "topStyle": "suit",
+   "tie": "#c9a24a",
+   "legs": "#2b2b33",
+   "shoes": "#2b2b2b",
+   "shoeStyle": "dress"
+  },
+  "ANALYST_1": {
+   "build": "broad",
+   "jaw": "square",
+   "nose": "wide",
+   "age": "middle",
+   "hair": "#6b4a32",
+   "hairStyle": "buzz",
+   "skin": "#d9a98a",
+   "top": "#4a5a6a",
+   "topStyle": "suit",
+   "legs": "#2b2b33",
+   "shoes": "#2b2b2b",
+   "shoeStyle": "dress"
+  },
+  "ANALYST_2": {
+   "build": "slight",
+   "jaw": "heart",
+   "nose": "straight",
+   "age": "adult",
+   "hair": "#a8743c",
+   "hairStyle": "slick",
+   "skin": "#e8c5a9",
+   "top": "#6a4a5a",
+   "topStyle": "suit",
+   "legs": "#2b2b33",
+   "shoes": "#2b2b2b",
+   "shoeStyle": "dress",
+   "extras": [
+    "glasses"
+   ]
+  },
+  "ANALYST_3": {
+   "build": "round",
+   "jaw": "round",
+   "nose": "button",
+   "age": "old",
+   "hair": "#b8bcc4",
+   "hairStyle": "short",
+   "skin": "#e8c5a9",
+   "top": "#3a5a4a",
+   "topStyle": "suit",
+   "legs": "#2b2b33",
+   "shoes": "#2b2b2b",
+   "shoeStyle": "dress"
+  },
+  "ANALYST_4": {
+   "build": "tall",
+   "jaw": "long",
+   "nose": "hook",
+   "age": "middle",
+   "hair": "#2b2118",
+   "hairStyle": "wavy",
+   "skin": "#c98d64",
+   "top": "#8a6a3c",
+   "topStyle": "suit",
+   "legs": "#2b2b33",
+   "shoes": "#2b2b2b",
+   "shoeStyle": "dress"
+  }
+ },
+ "shots": [
+  {
+   "id": "cfo_t04",
+   "set": "corner_office",
+   "opts": {
+    "night": true,
+    "dark_right": true,
+    "clock": "4:20",
+    "clock_lit": true
+   },
+   "camera": "still",
+   "cue": "L058",
+   "at": 1.1
+  },
+  {
+   "id": "cfo_t01",
+   "set": "newsroom",
+   "actors": [
+    {
+     "thing": "teleprinter",
+     "who": "WIRE",
+     "x": 900,
+     "y": 900,
+     "scale": 1,
+     "pile": 2,
+     "face": "scared",
+     "enter": "none"
+    }
+   ],
+   "cue": "L055",
+   "at": 1.1
+  },
+  {
+   "id": "cfo_g12",
+   "set": "stadium",
+   "opts": {
+    "dress": "scoreboard"
+   },
+   "camera": "pan_right",
+   "extras": 1,
+   "cue": "L053",
+   "at": 1.1
+  },
+  {
+   "id": "cfo_g11",
+   "set": "train_platform",
+   "opts": {
+    "dress": "night"
+   },
+   "camera": "pan_left",
+   "extras": 3,
+   "cue": "L052",
+   "at": 1.1
+  },
+  {
+   "id": "cfo_g09",
+   "set": "street",
+   "opts": {
+    "dress": "shuttered"
+   },
+   "camera": "pan_right",
+   "cue": "L050",
+   "at": 1.1
+  },
+  {
+   "id": "cfo_g07",
+   "set": "farmers_market",
+   "opts": {
+    "dress": "night"
+   },
+   "camera": "pan_right",
+   "extras": 4,
+   "cue": "L048",
+   "at": 1.1
+  },
+  {
+   "id": "cfo_g04",
+   "set": "back_shop",
+   "opts": {
+    "dress": "print"
+   },
+   "camera": "push_in",
+   "cue": "L045",
+   "at": 1.1
+  },
+  {
+   "id": "cfo_g02",
+   "set": "office",
+   "opts": {
+    "dress": "cubicle",
+    "night": true
+   },
+   "camera": "pan_right",
+   "cue": "L043",
+   "at": 1.1
+  },
+  {
+   "id": "cfo_f07",
+   "set": "phone_booth",
+   "opts": {
+    "stamp": "NO COMMENT"
+   },
+   "camera": "push_in",
+   "extras": 3,
+   "cue": "L041",
+   "at": 1.1
+  },
+  {
+   "id": "cfo_f05",
+   "set": "sports_bar",
+   "camera": "pan_left",
+   "extras": 10,
+   "cue": "L039",
+   "at": 1.1
+  },
+  {
+   "id": "cfo_c03",
+   "set": "corner_office",
+   "opts": {
+    "view": "desk",
+    "clock_lit": true
+   },
+   "camera": "push_in",
+   "actors": [
+    {
+     "who": "GALLERY_FOUNDER",
+     "x": 1100,
+     "y": 960,
+     "scale": 0.9,
+     "enter": "none"
+    }
+   ],
+   "cue": "L004",
+   "at": 1.1
+  },
+  {
+   "id": "g01",
+   "cue": "L001",
+   "set": "trading_floor",
+   "opts": {
+    "mood": "red",
+    "papers": true
+   },
+   "grade": "red",
+   "camera": "shake",
+   "overlays": [
+    {
+     "type": "clock",
+     "t": "10:35",
+     "ap": "AM",
+     "tz": "ET",
+     "at": 0
+    },
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 2000,
+     "prefix": "-$",
+     "suffix": "B",
+     "tone": "red",
+     "pos": "tr",
+     "cap": "S&P 500, BY MIDMORNING",
+     "at": 0.4,
+     "dur": 1.4,
+     "plate": true
+    },
+    {
+     "type": "tag",
+     "t": "THURSDAY",
+     "tone": "red",
+     "at": 0.2
+    }
+   ]
+  },
+  {
+   "id": "g02",
+   "cue": "L002",
+   "set": "trading_floor",
+   "opts": {
+    "mood": "green",
+    "party": true
+   },
+   "grade": "green",
+   "camera": "pan_right",
+   "overlays": [
+    {
+     "type": "slam",
+     "t": "+3%",
+     "tone": "green",
+     "at": 0.9,
+     "plate": true
+    },
+    {
+     "type": "tag",
+     "t": "WEDNESDAY",
+     "tone": "green",
+     "at": 0.2
+    }
+   ]
+  },
+  {
+   "id": "cfo_c01",
+   "set": "corner_office",
+   "opts": {
+    "night": true,
+    "palette": "violet"
+   },
+   "camera": "pan_right",
+   "actors": [
+    {
+     "who": "GALLERY_FOUNDER",
+     "x": 1500,
+     "y": 900,
+     "scale": 0.8,
+     "enter": "none"
+    }
+   ],
+   "light": {
+    "x": 1400,
+    "y": 640,
+    "r": 900,
+    "color": "#ffd27a",
+    "dark": 0.5
+   },
+   "cue": "L002",
+   "at": 1.1
+  },
+  {
+   "id": "g03",
+   "cue": "L003",
+   "set": "street",
+   "opts": {
+    "signs": [
+     "BANK",
+     "CAFE",
+     "PHARMACY"
+    ]
+   },
+   "camera": "push_in",
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 620,
+     "face": "happy",
+     "pose": "cheer",
+     "speaks": [
+      "L003"
+     ]
+    },
+    {
+     "who": "MARTHA",
+     "x": 1260,
+     "face": "deadpan",
+     "pose": "hips",
+     "enter": "slide_right",
+     "cue": "L004",
+     "at": -0.3,
+     "speaks": [
+      "L004"
+     ],
+     "acts": [
+      {
+       "cue": "L004",
+       "word": 2,
+       "face": "smug",
+       "pose": "present"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cfo_c02",
+   "set": "corner_office",
+   "opts": {
+    "view": "door",
+    "plate": false
+   },
+   "camera": "push_in",
+   "props": [
+    {
+     "type": "door_plate",
+     "x": 960,
+     "y": 520,
+     "k": 1.7,
+     "state": "taped",
+     "act": "press"
+    }
+   ],
+   "cue": "L003",
+   "at": 1.1
+  },
+  {
+   "id": "g04",
+   "type": "card",
+   "cue": "L005",
+   "text": "So what actually broke?",
+   "emph": [
+    "broke"
+   ]
+  },
+  {
+   "id": "cfo_c04",
+   "set": "corner_office",
+   "opts": {
+    "night": false,
+    "chair": "agenda",
+    "plate": "frame"
+   },
+   "camera": "pan_left",
+   "cue": "L005",
+   "at": 1.1
+  },
+  {
+   "id": "g05",
+   "type": "chapter",
+   "cue": "L006",
+   "number": 2,
+   "title": "The Top"
+  },
+  {
+   "id": "g06",
+   "cue": "L006",
+   "set": "studio",
+   "camera": "tilt_up",
+   "overlays": [
+    {
+     "type": "calendar",
+     "month": "OCT",
+     "day": 6,
+     "dow": "TUESDAY",
+     "from": {
+      "month": "NOV",
+      "day": 5
+     },
+     "x": 845,
+     "y": 300,
+     "at": 0.3,
+     "flipAt": 1.3
+    }
+   ]
+  },
+  {
+   "id": "cfo_c05",
+   "set": "corner_office",
+   "opts": {
+    "view": "door",
+    "plate": "two",
+    "night": true
+   },
+   "camera": "still",
+   "cue": "L006",
+   "at": 1.1
+  },
+  {
+   "id": "g07",
+   "cue": "L007",
+   "set": "office",
+   "opts": {
+    "desk": false
+   },
+   "camera": "push_in",
+   "overlays": [
+    {
+     "type": "doc",
+     "source": "Sample earnings call · transcript",
+     "date": "26 AUG",
+     "by": "Chief financial officer",
+     "quote": "We know some people will call this circular.",
+     "hl": [
+      "circular"
+     ],
+     "at": 0.3,
+     "hlAt": 1.6
+    },
+    {
+     "type": "lower_third",
+     "name": "SAMPLE NAME",
+     "role": "Chief financial officer",
+     "at": 1
+    }
+   ]
+  },
+  {
+   "id": "cfo_c06",
+   "set": "plain",
+   "props": [
+    {
+     "type": "door_plate",
+     "x": 400,
+     "y": 300,
+     "k": 0.8,
+     "state": "before"
+    },
+    {
+     "type": "door_plate",
+     "x": 1000,
+     "y": 300,
+     "k": 0.8,
+     "state": "unscrewed"
+    },
+    {
+     "type": "door_plate",
+     "x": 1560,
+     "y": 300,
+     "k": 0.8,
+     "state": "frame"
+    },
+    {
+     "type": "exec_chair",
+     "x": 400,
+     "y": 960,
+     "k": 0.8,
+     "state": "jacket"
+    },
+    {
+     "type": "exec_chair",
+     "x": 800,
+     "y": 960,
+     "k": 0.8,
+     "state": "agenda"
+    },
+    {
+     "type": "desk_phone",
+     "x": 1150,
+     "y": 900,
+     "k": 1.2,
+     "state": "tangled"
+    },
+    {
+     "type": "calculator",
+     "x": 1550,
+     "y": 900,
+     "k": 1
+    },
+    {
+     "type": "name_plate",
+     "x": 1300,
+     "y": 600,
+     "t": "CFO",
+     "tape": true
+    }
+   ],
+   "cue": "L007",
+   "at": 1.1
+  },
+  {
+   "id": "g08",
+   "cue": "L008",
+   "set": "plain",
+   "opts": {
+    "color": "#bfe0ea"
+   },
+   "camera": "pull_out",
+   "motif": "tower",
+   "props": [
+    {
+     "type": "tower",
+     "x": 960,
+     "y": 900,
+     "tilt": 5,
+     "blocks": [
+      {
+       "t": "CRACK 1",
+       "color": "#e8a317",
+       "cue": "L008",
+       "word": 2
+      },
+      {
+       "t": "CRACK 2",
+       "color": "#1f8a8a",
+       "cue": "L008",
+       "word": 3
+      },
+      {
+       "t": "CRACK 3",
+       "color": "#c9705a",
+       "cue": "L008",
+       "word": 4
+      },
+      {
+       "t": "CRACK 4",
+       "color": "#e0262b",
+       "cue": "L008",
+       "word": 5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cfo_b01",
+   "set": "bus_stop",
+   "camera": "pan_right",
+   "extras": 6,
+   "actors": [
+    {
+     "who": "GALLERY_FOUNDER",
+     "x": 700,
+     "y": 900,
+     "scale": 0.8,
+     "enter": "none"
+    }
+   ],
+   "cue": "L008",
+   "at": 1.1
+  },
+  {
+   "id": "g09",
+   "cue": "L009",
+   "set": "board",
+   "opts": {
+    "title": "QUARTERLY SALES"
+   },
+   "camera": "push_in",
+   "props": [
+    {
+     "type": "bars",
+     "x": 420,
+     "y": 240,
+     "w": 1080,
+     "h": 620,
+     "items": [
+      {
+       "label": "A YEAR AGO",
+       "val": 47,
+       "show": "$47B",
+       "color": "#9aa0b4"
+      },
+      {
+       "label": "LAST QUARTER",
+       "val": 96,
+       "show": "$96B",
+       "color": "#1fa85b"
+      }
+     ]
+    }
+   ],
+   "overlays": [
+    {
+     "type": "source",
+     "t": "sample data",
+     "at": 0.4
+    },
+    {
+     "type": "stamp",
+     "t": "x2",
+     "at": 1.3
+    }
+   ]
+  },
+  {
+   "id": "cfo_b02",
+   "set": "bus_stop",
+   "opts": {
+    "night": true
+   },
+   "camera": "push_in",
+   "extras": 3,
+   "cue": "L009",
+   "at": 1.1
+  },
+  {
+   "id": "g10",
+   "cue": "L010",
+   "set": "board",
+   "opts": {
+    "title": "SHARE PRICE"
+   },
+   "camera": "pan_left",
+   "grade": "red",
+   "props": [
+    {
+     "type": "line",
+     "x": 260,
+     "y": 280,
+     "w": 1400,
+     "h": 520,
+     "pts": [
+      60,
+      66,
+      64,
+      72,
+      78,
+      74,
+      70,
+      52,
+      40,
+      31
+     ],
+     "label": "-9%",
+     "dur": 1.1,
+     "at": 0.1
+    }
+   ]
+  },
+  {
+   "id": "cfo_b03",
+   "set": "newsroom",
+   "camera": "pan_left",
+   "cue": "L010",
+   "at": 1.1
+  },
+  {
+   "id": "g11",
+   "cue": "L011",
+   "set": "studio",
+   "opts": {
+    "wall": "#d9d3e6",
+    "floor": "#a59fbf"
+   },
+   "camera": "push_in",
+   "actors": [
+    {
+     "who": "REGGIE",
+     "x": 380,
+     "face": "deadpan",
+     "prop": "stamp"
+    }
+   ],
+   "overlays": [
+    {
+     "type": "post",
+     "source": "Post",
+     "date": "5 NOV",
+     "name": "Sample Official",
+     "handle": "@sample_official",
+     "text": "Not yet.",
+     "x": 1210,
+     "y": 220,
+     "at": 0.3
+    }
+   ]
+  },
+  {
+   "id": "cfo_b04",
+   "set": "diner",
+   "camera": "push_in",
+   "extras": 3,
+   "cue": "L011",
+   "at": 1.1
+  },
+  {
+   "id": "g12",
+   "cue": "L012",
+   "set": "kitchen",
+   "opts": {
+    "night": true,
+    "window": "datacenter"
+   },
+   "camera": "tilt_down",
+   "callback": "bill",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 1420,
+     "y": 960,
+     "face": "angry",
+     "prop": "bill",
+     "flip": true
+    }
+   ],
+   "overlays": [
+    {
+     "type": "label",
+     "t": "+$27 A MONTH",
+     "pos": "tl",
+     "at": 1
+    },
+    {
+     "type": "sfx",
+     "t": "THUD",
+     "x": 520,
+     "y": 620,
+     "at": 0.3
+    }
+   ]
+  },
+  {
+   "id": "cfo_b05",
+   "set": "cinema",
+   "opts": {
+    "jacket": true
+   },
+   "camera": "push_in",
+   "cue": "L012",
+   "at": 1.1
+  },
+  {
+   "id": "g13",
+   "cue": "L013",
+   "set": "night_city",
+   "camera": "pull_out",
+   "grade": "night",
+   "callback": "bill",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 960,
+     "y": 1000,
+     "scale": 0.8,
+     "face": "sad",
+     "look": "up",
+     "prop": "bill"
+    }
+   ]
+  },
+  {
+   "id": "cfo_b06",
+   "set": "records_office",
+   "opts": {
+    "night": true
+   },
+   "camera": "pan_right",
+   "cue": "L013",
+   "at": 1.1
+  },
+  {
+   "id": "g14",
+   "cue": "L014",
+   "set": "stage",
+   "camera": "push_in",
+   "actors": [
+    {
+     "thing": "box",
+     "label": "MARKETPLACE",
+     "x": 300,
+     "y": 930,
+     "face": "smug",
+     "enter": "none"
+    },
+    {
+     "thing": "chip",
+     "label": "CHIPS INC",
+     "x": 720,
+     "y": 930,
+     "face": "happy",
+     "pose": "cheer",
+     "enter": "none"
+    },
+    {
+     "thing": "coin",
+     "label": "INDEX FUND",
+     "x": 1150,
+     "y": 930,
+     "face": "shocked",
+     "pose": "shrug",
+     "enter": "none"
+    },
+    {
+     "thing": "bag",
+     "label": "PENSION",
+     "x": 1580,
+     "y": 930,
+     "face": "scared",
+     "pose": "panic",
+     "enter": "none"
+    }
+   ],
+   "props": [
+    {
+     "type": "bunting",
+     "y": 230
+    }
+   ]
+  },
+  {
+   "id": "cfo_b07",
+   "set": "boardroom",
+   "opts": {
+    "dress": "head_chair",
+    "night": true
+   },
+   "camera": "pan_right",
+   "cue": "L014",
+   "at": 1.1
+  },
+  {
+   "id": "g15",
+   "cue": "L015",
+   "set": "lawn",
+   "camera": "tilt_up",
+   "actors": [
+    {
+     "thing": "dome",
+     "label": "CONGRESS",
+     "x": 1060,
+     "y": 790,
+     "scale": 1.15,
+     "face": "smug",
+     "prop": "pen",
+     "enter": "none"
+    },
+    {
+     "who": "CHAD",
+     "x": 360,
+     "y": 1000,
+     "scale": 0.5,
+     "prop": "briefcase",
+     "face": "scared",
+     "enter": "none"
+    },
+    {
+     "thing": "bank",
+     "x": 1680,
+     "y": 800,
+     "scale": 0.6,
+     "face": "happy",
+     "enter": "none"
+    }
+   ],
+   "props": [
+    {
+     "type": "banner",
+     "x": 420,
+     "y": 250,
+     "w": 560,
+     "t": "NEW RULES",
+     "at": 0.9
+    }
+   ]
+  },
+  {
+   "id": "cfo_b08",
+   "set": "studio",
+   "actors": [
+    {
+     "thing": "the_board",
+     "x": 900,
+     "y": 900,
+     "scale": 1,
+     "label": "THE BOARD",
+     "open": 0.5,
+     "tip": 1.2,
+     "face": "smug",
+     "enter": "none"
+    }
+   ],
+   "cue": "L015",
+   "at": 1.1
+  },
+  {
+   "id": "g16",
+   "cue": "L016",
+   "set": "suburb",
+   "camera": "pan_right",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 520,
+     "y": 940,
+     "badge": "52",
+     "prop": "bill",
+     "face": "furious",
+     "enter": "none"
+    },
+    {
+     "thing": "house",
+     "label": "OHIO",
+     "x": 1280,
+     "y": 900,
+     "scale": 0.9,
+     "face": "panic",
+     "pose": "panic",
+     "enter": "none"
+    }
+   ],
+   "props": [
+    {
+     "type": "pricetag",
+     "x": 900,
+     "y": 300,
+     "t": "+$27",
+     "at": 0.8
+    },
+    {
+     "type": "piggy",
+     "x": 1690,
+     "y": 846,
+     "k": 0.36,
+     "state": "cracked"
+    }
+   ]
+  },
+  {
+   "id": "cfo_d01",
+   "set": "trading_floor",
+   "opts": {
+    "dress": "dawn"
+   },
+   "camera": "push_in",
+   "extras": 8,
+   "cue": "L016",
+   "at": 1.1
+  },
+  {
+   "id": "g17",
+   "cue": "L017",
+   "set": "server_room",
+   "camera": "push_in",
+   "frame": "medium",
+   "light": {
+    "x": 960,
+    "y": 420,
+    "r": 950,
+    "color": "#ffe14d",
+    "dark": 0.62
+   },
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 700,
+     "face": "panic",
+     "pose": "panic",
+     "enter": "none",
+     "acts": [
+      {
+       "at": 1.6,
+       "face": "crying"
+      }
+     ]
+    },
+    {
+     "who": "HAL",
+     "x": 1240,
+     "face": "greedy",
+     "prop": "tag",
+     "tag": "$9B",
+     "hat": "crown",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "cfo_d02",
+   "set": "trading_floor",
+   "opts": {
+    "dress": "exchange"
+   },
+   "camera": "pan_right",
+   "extras": 10,
+   "cue": "L017",
+   "at": 1.1
+  },
+  {
+   "id": "g18",
+   "cue": "L018",
+   "set": "warehouse",
+   "camera": "pull_out",
+   "actors": [
+    {
+     "who": "SELLER",
+     "x": 420,
+     "y": 900,
+     "face": "happy",
+     "pose": "wave",
+     "enter": "none"
+    },
+    {
+     "thing": "box",
+     "label": "PARCEL",
+     "x": 1900,
+     "y": 1010,
+     "scale": 0.5,
+     "face": "happy",
+     "enter": "none",
+     "acts": [
+      {
+       "at": 0.4,
+       "to": [
+        1300,
+        1010
+       ],
+       "dur": 1.6
+      }
+     ]
+    },
+    {
+     "who": "REGGIE",
+     "x": 1020,
+     "y": 900,
+     "hat": "hardhat",
+     "prop": "magnifier",
+     "face": "deadpan",
+     "enter": "none"
+    },
+    {
+     "who": "CHAD",
+     "x": 1500,
+     "y": 920,
+     "hat": "party",
+     "prop": "placard",
+     "sign": "BUY",
+     "face": "happy",
+     "flip": false,
+     "enter": "none"
+    }
+   ],
+   "props": [
+    {
+     "type": "stall",
+     "x": 420,
+     "y": 985,
+     "t": "HANDMADE",
+     "price": "$19",
+     "layer": "front"
+    },
+    {
+     "type": "podium",
+     "x": 1020,
+     "y": 960,
+     "t": "AUDIT",
+     "layer": "front"
+    },
+    {
+     "type": "cashpile",
+     "x": 1780,
+     "y": 930,
+     "n": 7,
+     "layer": "front"
+    },
+    {
+     "type": "crates",
+     "x": 1220,
+     "y": 930,
+     "n": 3,
+     "w": 130,
+     "t": "FEES",
+     "move": {
+      "to": [
+       1320,
+       930
+      ],
+      "at": 1.2,
+      "dur": 0.8
+     }
+    },
+    {
+     "type": "piggy",
+     "x": 110,
+     "y": 936,
+     "k": 0.34,
+     "state": "rich"
+    }
+   ]
+  },
+  {
+   "id": "g19",
+   "cue": "L018",
+   "at": 0,
+   "set": "studio",
+   "camera": "still",
+   "motif": "tent",
+   "actors": [
+    {
+     "thing": "chip",
+     "label": "NVIDIA",
+     "x": 960,
+     "y": 330,
+     "scale": 0.3,
+     "face": "worried",
+     "enter": "none"
+    }
+   ],
+   "props": [
+    {
+     "type": "tent",
+     "x": 960,
+     "y": 930,
+     "w": 1500,
+     "ropes": 6,
+     "frayed": 1,
+     "tilt": 3,
+     "crowd": 120,
+     "flag": "NVIDIA",
+     "flap": true,
+     "snap": {
+      "cue": "L018",
+      "at": 0.5
+     }
+    },
+    {
+     "type": "chair",
+     "x": 220,
+     "y": 960,
+     "t": "NEXT",
+     "dust": true
+    }
+   ]
+  },
+  {
+   "id": "g20",
+   "cue": "L018",
+   "at": 0.8,
+   "set": "bus",
+   "opts": {
+    "night": true
+   },
+   "camera": "still",
+   "actors": [
+    {
+     "thing": "newspaper",
+     "label": "THE NEW YORK TIMES",
+     "x": 700,
+     "y": 930,
+     "scale": 0.8,
+     "face": "smug",
+     "enter": "none"
+    },
+    {
+     "thing": "newspaper",
+     "label": "THE WALL STREET JOURNAL",
+     "x": 1250,
+     "y": 930,
+     "scale": 0.8,
+     "face": "deadpan",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "g21",
+   "cue": "L018",
+   "at": 1.6,
+   "set": "boardroom",
+   "opts": {
+    "doors": [
+     "BOARD",
+     "WASHINGTON",
+     "17 NOV"
+    ]
+   },
+   "camera": "still",
+   "props": [
+    {
+     "type": "chair",
+     "x": 960,
+     "y": 960,
+     "t": "CHAIRMAN",
+     "web": true
+    }
+   ]
+  },
+  {
+   "id": "g22",
+   "cue": "L018",
+   "at": 2.4,
+   "set": "plain",
+   "opts": {
+    "color": "#bfe0ea"
+   },
+   "camera": "still",
+   "props": [
+    {
+     "type": "seesaw",
+     "x": 960,
+     "y": 900,
+     "w": 1300,
+     "tilt": -10,
+     "left": "NVIDIA",
+     "right": "499 OTHERS"
+    }
+   ]
+  },
+  {
+   "id": "g23",
+   "cue": "L018",
+   "at": 3.2,
+   "set": "warehouse",
+   "opts": {
+    "belt": false
+   },
+   "camera": "still",
+   "actors": [
+    {
+     "thing": "chip",
+     "label": "NVIDIA",
+     "x": 560,
+     "y": 620,
+     "scale": 0.55,
+     "face": "smug",
+     "enter": "none"
+    }
+   ],
+   "props": [
+    {
+     "type": "scale",
+     "x": 560,
+     "y": 900,
+     "t": "ABOUT 8%",
+     "tilt": 8
+    },
+    {
+     "type": "jar",
+     "x": 1300,
+     "y": 900,
+     "t": "RETIREMENT",
+     "amount": "$100,000",
+     "level": 0.8
+    }
+   ]
+  },
+  {
+   "id": "g24",
+   "cue": "L018",
+   "at": 4,
+   "set": "plain",
+   "opts": {
+    "color": "#e9dfc8"
+   },
+   "camera": "still",
+   "props": [
+    {
+     "type": "gate",
+     "x": 480,
+     "y": 900,
+     "t": "CUSTOMS",
+     "closed": true
+    },
+    {
+     "type": "highjump",
+     "x": 1380,
+     "y": 930,
+     "w": 700,
+     "t": "FORECAST $108B",
+     "mark": "ANALYSTS ~$109B"
+    }
+   ]
+  },
+  {
+   "id": "g25",
+   "cue": "L018",
+   "at": 5,
+   "set": "picture",
+   "opts": {
+    "src": "art/sample.jpg",
+    "shows": "an empty chair in a spotlight, the chip crying beside it",
+    "living": "chip"
+   },
+   "camera": "push_in",
+   "props": [
+    {
+     "type": "sign",
+     "x": 1500,
+     "y": 330,
+     "t": "NEXT"
+    }
+   ],
+   "overlays": [
+    {
+     "type": "tag",
+     "t": "TEXT IS DRAWN BY THE ENGINE",
+     "tone": "red",
+     "pos": "tl",
+     "at": 0.1
+    }
+   ]
+  },
+  {
+   "id": "cfo_d03",
+   "set": "corridor",
+   "opts": {
+    "dress": "exec",
+    "night": true
+   },
+   "camera": "push_in",
+   "cue": "L018",
+   "at": 1.1
+  },
+  {
+   "id": "n01",
+   "cue": "L019",
+   "at": 0,
+   "set": "pitch_stage",
+   "opts": {
+    "view": "table",
+    "night": true
+   },
+   "camera": "push_in",
+   "place": "pitch stage",
+   "light": {
+    "x": 1000,
+    "y": 520,
+    "r": 1000,
+    "dark": 0.4
+   },
+   "actors": [
+    {
+     "who": "ALLISON_ELLSWORTH",
+     "pregnant": true,
+     "x": 720,
+     "y": 960,
+     "face": "scared",
+     "pose": "hold",
+     "enter": "none"
+    },
+    {
+     "thing": "soda",
+     "shape": "bottle",
+     "label": "MOTHER",
+     "tag": "$1.95B",
+     "sweat": true,
+     "x": 1120,
+     "y": 700,
+     "scale": 0.5,
+     "face": "neutral",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "n02",
+   "cue": "L019",
+   "at": 0.65,
+   "set": "pitch_stage",
+   "opts": {
+    "view": "chairs",
+    "night": true,
+    "lit_chair": 3
+   },
+   "camera": "pull_out",
+   "place": "pitch stage",
+   "actors": [
+    {
+     "who": "SHARK",
+     "shadow": true,
+     "x": 380,
+     "y": 900,
+     "scale": 0.7,
+     "enter": "none"
+    },
+    {
+     "who": "SHARK",
+     "shadow": true,
+     "x": 670,
+     "y": 880,
+     "scale": 0.7,
+     "pose": "think",
+     "enter": "none"
+    },
+    {
+     "who": "ROHAN_OZA",
+     "x": 1250,
+     "y": 880,
+     "scale": 0.7,
+     "face": "deadpan",
+     "pose": "fold",
+     "enter": "none"
+    },
+    {
+     "who": "SHARK",
+     "shadow": true,
+     "x": 1540,
+     "y": 900,
+     "scale": 0.7,
+     "enter": "none"
+    }
+   ],
+   "props": [
+    {
+     "type": "investor_chair",
+     "x": 960,
+     "y": 930,
+     "lit": false
+    }
+   ]
+  },
+  {
+   "id": "n03",
+   "cue": "L019",
+   "at": 1.3,
+   "set": "pitch_stage",
+   "opts": {
+    "view": "desk",
+    "night": true,
+    "lit_chair": 3
+   },
+   "camera": "tilt_up",
+   "place": "pitch stage",
+   "actors": [
+    {
+     "who": "STEPHEN_ELLSWORTH",
+     "x": 760,
+     "y": 930,
+     "scale": 0.8,
+     "face": "happy",
+     "enter": "none"
+    },
+    {
+     "who": "RAMON_LAGUARTA",
+     "x": 1300,
+     "y": 930,
+     "scale": 0.8,
+     "face": "plain",
+     "prop": "pen",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "cfo_d04",
+   "set": "corridor",
+   "opts": {
+    "dress": "doors"
+   },
+   "camera": "pan_left",
+   "cue": "L019",
+   "at": 1.1
+  },
+  {
+   "id": "n04",
+   "cue": "L020",
+   "at": 0,
+   "set": "pitch_stage",
+   "opts": {
+    "view": "seats",
+    "night": true
+   },
+   "camera": "pan_right",
+   "place": "audience seats",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 960,
+     "y": 1000,
+     "scale": 0.75,
+     "face": "shocked",
+     "prop": "popcorn",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "n05",
+   "cue": "L020",
+   "at": 0.65,
+   "set": "pitch_stage",
+   "opts": {
+    "view": "rafters",
+    "night": true,
+    "lit_chair": 2
+   },
+   "camera": "tilt_down",
+   "place": "the rafters",
+   "actors": [
+    {
+     "thing": "giant",
+     "color": "navy",
+     "label": "BIG COLA",
+     "x": 1380,
+     "y": 760,
+     "scale": 1,
+     "face": "greedy",
+     "look": "down",
+     "pose": "grab",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "n06",
+   "cue": "L020",
+   "at": 1.3,
+   "set": "pitch_stage",
+   "opts": {
+    "view": "wings",
+    "night": true
+   },
+   "camera": "pan_left",
+   "place": "stage wings",
+   "actors": [
+    {
+     "who": "ALLISON_ELLSWORTH",
+     "x": 560,
+     "y": 960,
+     "face": "relieved",
+     "enter": "none"
+    }
+   ],
+   "props": [
+    {
+     "type": "wall_calendar",
+     "x": 860,
+     "y": 420,
+     "circle": 18
+    }
+   ]
+  },
+  {
+   "id": "cfo_d05",
+   "set": "corridor",
+   "opts": {
+    "dress": "courthouse"
+   },
+   "camera": "still",
+   "cue": "L020",
+   "at": 1.1
+  },
+  {
+   "id": "n07",
+   "cue": "L021",
+   "at": 0,
+   "set": "farmers_market",
+   "opts": {
+    "night": true,
+    "dawn": true
+   },
+   "camera": "pull_out",
+   "place": "farmers' market",
+   "actors": [
+    {
+     "who": "STEPHEN_ELLSWORTH",
+     "x": 520,
+     "y": 940,
+     "scale": 0.8,
+     "face": "happy",
+     "pose": "carry",
+     "enter": "none"
+    },
+    {
+     "thing": "soda",
+     "shape": "can",
+     "label": "FIZZ",
+     "x": 1220,
+     "y": 900,
+     "scale": 0.7,
+     "face": "happy",
+     "pose": "cheer",
+     "enter": "none"
+    }
+   ],
+   "props": [
+    {
+     "type": "bottles",
+     "x": 960,
+     "y": 820,
+     "n": 7,
+     "speed": 30
+    }
+   ]
+  },
+  {
+   "id": "n08",
+   "cue": "L021",
+   "at": 0.65,
+   "set": "night_office",
+   "opts": {
+    "dress": "hal",
+    "night": true
+   },
+   "camera": "push_in",
+   "place": "boss office",
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 1200,
+     "y": 960,
+     "face": "deadpan",
+     "prop": "espresso",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "n09",
+   "cue": "L021",
+   "at": 1.3,
+   "set": "night_office",
+   "opts": {
+    "dress": "filing",
+    "night": true
+   },
+   "camera": "tilt_up",
+   "place": "records room",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 1100,
+     "y": 960,
+     "prop": "calculator",
+     "face": "confused",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "cfo_d06",
+   "set": "lawn",
+   "opts": {
+    "dress": "playground"
+   },
+   "camera": "push_in",
+   "extras": 6,
+   "cue": "L021",
+   "at": 1.1
+  },
+  {
+   "id": "n10",
+   "cue": "L022",
+   "at": 0,
+   "set": "car_lot",
+   "opts": {
+    "night": true
+   },
+   "camera": "pull_out",
+   "place": "used-car lot",
+   "props": [
+    {
+     "type": "car",
+     "x": 1060,
+     "y": 930,
+     "sign": "SOLD"
+    },
+    {
+     "type": "cards_fan",
+     "x": 1000,
+     "y": 700,
+     "n": 5
+    }
+   ]
+  },
+  {
+   "id": "n11",
+   "cue": "L022",
+   "at": 0.65,
+   "set": "car_lot",
+   "opts": {
+    "night": true,
+    "dress": "garage"
+   },
+   "camera": "push_in",
+   "place": "parking garage",
+   "props": [
+    {
+     "type": "car",
+     "x": 1060,
+     "y": 930
+    }
+   ]
+  },
+  {
+   "id": "n12",
+   "cue": "L022",
+   "at": 1.3,
+   "set": "bottling_plant",
+   "opts": {
+    "night": true
+   },
+   "camera": "pan_left",
+   "place": "bottling plant",
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 560,
+     "y": 960,
+     "hat": "hardhat",
+     "prop": "wallet",
+     "open": true,
+     "face": "deadpan",
+     "enter": "none"
+    }
+   ],
+   "props": [
+    {
+     "type": "bottles",
+     "x": 960,
+     "y": 700,
+     "n": 9,
+     "speed": 40
+    }
+   ]
+  },
+  {
+   "id": "cfo_d07",
+   "set": "lawn",
+   "opts": {
+    "dress": "park"
+   },
+   "camera": "pan_right",
+   "cue": "L022",
+   "at": 1.1
+  },
+  {
+   "id": "n13",
+   "cue": "L023",
+   "at": 0,
+   "set": "living_room",
+   "opts": {
+    "night": true,
+    "dress": "rehearsal"
+   },
+   "camera": "push_in",
+   "place": "living room",
+   "actors": [
+    {
+     "who": "ALLISON_ELLSWORTH",
+     "x": 300,
+     "y": 960,
+     "face": "happy",
+     "pose": "present",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "n14",
+   "cue": "L023",
+   "at": 0.65,
+   "set": "living_room",
+   "opts": {
+    "night": true,
+    "dress": "sunday",
+    "light": "phone"
+   },
+   "camera": "pan_right",
+   "place": "family living room"
+  },
+  {
+   "id": "n15",
+   "cue": "L023",
+   "at": 1.3,
+   "set": "back_shop",
+   "opts": {
+    "dress": "pawn"
+   },
+   "camera": "push_in",
+   "place": "pawn shop",
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 900,
+     "y": 960,
+     "prop": "tape",
+     "face": "smug",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "cfo_d08",
+   "set": "tv_studio",
+   "opts": {
+    "outlet": "CNBC"
+   },
+   "camera": "push_in",
+   "cue": "L023",
+   "at": 1.1
+  },
+  {
+   "id": "n16",
+   "cue": "L024",
+   "at": 0,
+   "set": "back_shop",
+   "opts": {
+    "dress": "print"
+   },
+   "camera": "pan_left",
+   "place": "print shop"
+  },
+  {
+   "id": "n17",
+   "cue": "L024",
+   "at": 0.65,
+   "set": "corridor",
+   "opts": {
+    "dress": "court"
+   },
+   "camera": "pull_out",
+   "place": "court corridor",
+   "actors": [
+    {
+     "who": "REGGIE",
+     "x": 1000,
+     "y": 960,
+     "prop": "clipboard",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "n18",
+   "cue": "L024",
+   "at": 1.3,
+   "set": "corridor",
+   "opts": {
+    "dress": "hospital"
+   },
+   "camera": "tilt_up",
+   "place": "hospital corridor",
+   "props": []
+  },
+  {
+   "id": "cfo_d09",
+   "set": "theatre",
+   "opts": {
+    "dress": "coat_check"
+   },
+   "camera": "pan_right",
+   "cue": "L024",
+   "at": 1.1
+  },
+  {
+   "id": "n19",
+   "cue": "L025",
+   "at": 0,
+   "set": "design_studio",
+   "opts": {},
+   "camera": "push_in",
+   "place": "design studio",
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 560,
+     "y": 960,
+     "face": "confused",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "n20",
+   "cue": "L025",
+   "at": 0.65,
+   "set": "empty_hall",
+   "opts": {
+    "dress": "convention"
+   },
+   "camera": "pull_out",
+   "place": "empty convention hall",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 700,
+     "y": 960,
+     "prop": "mop",
+     "face": "deadpan",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "n21",
+   "cue": "L025",
+   "at": 1.3,
+   "set": "empty_hall",
+   "opts": {
+    "dress": "gym"
+   },
+   "camera": "pan_right",
+   "place": "school gym"
+  },
+  {
+   "id": "cfo_d10",
+   "set": "theatre",
+   "opts": {
+    "dress": "box_office"
+   },
+   "camera": "still",
+   "cue": "L025",
+   "at": 1.1
+  },
+  {
+   "id": "n22",
+   "cue": "L026",
+   "at": 0,
+   "set": "pitch_stage",
+   "opts": {
+    "view": "table",
+    "night": true
+   },
+   "camera": "still",
+   "place": "pitch stage",
+   "actors": [
+    {
+     "thing": "soda",
+     "shape": "plain",
+     "x": 700,
+     "y": 900,
+     "scale": 0.7,
+     "face": "sad",
+     "enter": "none"
+    },
+    {
+     "thing": "soda",
+     "shape": "can",
+     "label": "SOULBOOST",
+     "color": "#7fd0f0",
+     "x": 1000,
+     "y": 900,
+     "scale": 0.6,
+     "face": "smug",
+     "enter": "none"
+    },
+    {
+     "thing": "giant",
+     "color": "red",
+     "coat": "lab",
+     "label": "RED COLA",
+     "x": 1450,
+     "y": 900,
+     "scale": 0.9,
+     "face": "smug",
+     "enter": "none"
+    },
+    {
+     "thing": "vending",
+     "x": 1750,
+     "y": 900,
+     "scale": 0.6,
+     "face": "scared",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "n23",
+   "cue": "L026",
+   "at": 0.65,
+   "set": "plain",
+   "opts": {
+    "color": "#e9dfc8"
+   },
+   "camera": "still",
+   "actors": [
+    {
+     "thing": "soda",
+     "shape": "bottle",
+     "tag": "$1.95B",
+     "tagTear": 0.5,
+     "tagAfter": "$1.65B",
+     "x": 760,
+     "y": 900,
+     "scale": 0.8,
+     "face": "shocked",
+     "enter": "none"
+    },
+    {
+     "thing": "giant",
+     "color": "teal",
+     "label": "TEAL",
+     "x": 1300,
+     "y": 900,
+     "scale": 0.9,
+     "face": "smug",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "m01",
+   "cue": "L026",
+   "at": 1.3,
+   "set": "bedroom",
+   "opts": {
+    "dress": "teen",
+    "night": true
+   },
+   "camera": "push_in",
+   "place": "teen bedroom",
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 1000,
+     "y": 960,
+     "face": "shocked",
+     "prop": "phone",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "cfo_d11",
+   "set": "theatre",
+   "opts": {
+    "dress": "dressing_room",
+    "pop": 1.5
+   },
+   "camera": "push_in",
+   "cue": "L026",
+   "at": 1.1
+  },
+  {
+   "id": "m02",
+   "cue": "L027",
+   "at": 0,
+   "set": "bedroom",
+   "opts": {
+    "dress": "loft",
+    "night": true
+   },
+   "camera": "pan_right",
+   "place": "influencer loft",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 1300,
+     "y": 960,
+     "face": "happy",
+     "pose": "present",
+     "enter": "none"
+    }
+   ],
+   "overlays": [
+    {
+     "type": "hearts",
+     "from": 0,
+     "to": 4800,
+     "suffix": "K",
+     "pos": "tr",
+     "at": 0.3
+    }
+   ]
+  },
+  {
+   "id": "m03",
+   "cue": "L027",
+   "at": 0.65,
+   "set": "bank",
+   "opts": {
+    "dress": "vault",
+    "night": true
+   },
+   "camera": "pull_out",
+   "place": "bank vault",
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 960,
+     "y": 960,
+     "face": "deadpan",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "m04",
+   "cue": "L027",
+   "at": 1.3,
+   "set": "bank",
+   "opts": {
+    "dress": "counter",
+    "night": true
+   },
+   "camera": "push_in",
+   "place": "bank counter",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 960,
+     "y": 960,
+     "face": "confused",
+     "enter": "none"
+    }
+   ],
+   "props": [
+    {
+     "type": "cheque",
+     "x": 960,
+     "y": 900,
+     "t": "$2.5M",
+     "move": {
+      "to": [
+       1160,
+       900
+      ],
+      "at": 0.5,
+      "dur": 0.8
+     }
+    }
+   ]
+  },
+  {
+   "id": "cfo_d12",
+   "set": "gym",
+   "camera": "pan_right",
+   "cue": "L027",
+   "at": 1.1
+  },
+  {
+   "id": "m05",
+   "cue": "L028",
+   "at": 0,
+   "set": "red_carpet",
+   "opts": {
+    "night": true
+   },
+   "camera": "push_in",
+   "place": "red carpet",
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 960,
+     "y": 940,
+     "face": "smug",
+     "pose": "hips",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "m06",
+   "cue": "L028",
+   "at": 0.65,
+   "set": "supermarket",
+   "opts": {
+    "dress": "aisle",
+    "night": true
+   },
+   "camera": "pull_out",
+   "place": "closed supermarket",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 960,
+     "y": 960,
+     "face": "scared",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "m07",
+   "cue": "L028",
+   "at": 1.3,
+   "set": "supermarket",
+   "opts": {
+    "dress": "shelf",
+    "night": true
+   },
+   "camera": "pan_left",
+   "place": "supermarket stock room",
+   "actors": [
+    {
+     "thing": "soda",
+     "shape": "bottle",
+     "label": "JETTY",
+     "color": "#c95f8d",
+     "x": 760,
+     "y": 900,
+     "scale": 0.7,
+     "face": "scared",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "cfo_e01",
+   "set": "rooftop",
+   "camera": "pan_right",
+   "cue": "L028",
+   "at": 1.1
+  },
+  {
+   "id": "m08",
+   "cue": "L029",
+   "at": 0,
+   "set": "mall",
+   "opts": {
+    "night": true
+   },
+   "camera": "tilt_up",
+   "place": "empty mall",
+   "actors": [
+    {
+     "thing": "vending",
+     "x": 560,
+     "y": 900,
+     "scale": 0.7,
+     "face": "confused",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "m09",
+   "cue": "L029",
+   "at": 0.65,
+   "set": "stadium",
+   "opts": {
+    "view": "field",
+    "night": true
+   },
+   "camera": "pull_out",
+   "place": "stadium",
+   "props": []
+  },
+  {
+   "id": "m10",
+   "cue": "L029",
+   "at": 1.3,
+   "set": "stadium",
+   "opts": {
+    "view": "stands",
+    "night": true
+   },
+   "camera": "push_in",
+   "place": "stadium stands"
+  },
+  {
+   "id": "cfo_e02",
+   "set": "printing_press",
+   "camera": "push_in",
+   "cue": "L029",
+   "at": 1.1
+  },
+  {
+   "id": "m11",
+   "cue": "L030",
+   "at": 0,
+   "set": "lab",
+   "opts": {
+    "night": true
+   },
+   "camera": "push_in",
+   "place": "laboratory",
+   "actors": [
+    {
+     "thing": "giant",
+     "color": "navy",
+     "coat": "lab",
+     "label": "BIG COLA",
+     "x": 1400,
+     "y": 900,
+     "scale": 0.9,
+     "face": "smug",
+     "enter": "none"
+    }
+   ],
+   "props": [
+    {
+     "type": "beakers",
+     "x": 700,
+     "y": 640,
+     "at": 0.6
+    }
+   ]
+  },
+  {
+   "id": "m12",
+   "cue": "L030",
+   "at": 0.65,
+   "set": "scrapyard",
+   "opts": {
+    "night": true
+   },
+   "camera": "pan_right",
+   "place": "scrapyard",
+   "actors": [
+    {
+     "thing": "soda",
+     "shape": "can",
+     "label": "SOULBOOST",
+     "color": "#7fd0f0",
+     "x": 1000,
+     "y": 900,
+     "scale": 0.6,
+     "face": "sad",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "m13",
+   "cue": "L030",
+   "at": 1.3,
+   "set": "night_road",
+   "opts": {
+    "dress": "highway",
+    "night": true
+   },
+   "camera": "push_in",
+   "place": "highway at night"
+  },
+  {
+   "id": "cfo_e03",
+   "set": "laundromat",
+   "camera": "pan_left",
+   "extras": 2,
+   "cue": "L030",
+   "at": 1.1
+  },
+  {
+   "id": "m14",
+   "cue": "L031",
+   "at": 0,
+   "set": "night_road",
+   "opts": {
+    "dress": "racetrack",
+    "night": true
+   },
+   "camera": "pan_left",
+   "place": "racetrack",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 960,
+     "y": 960,
+     "face": "shocked",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "m15",
+   "cue": "L031",
+   "at": 0.65,
+   "set": "courtroom",
+   "opts": {
+    "night": true
+   },
+   "camera": "pull_out",
+   "place": "courtroom",
+   "actors": [
+    {
+     "who": "REGGIE",
+     "x": 1000,
+     "y": 960,
+     "prop": "clipboard",
+     "enter": "none"
+    }
+   ],
+   "props": [
+    {
+     "type": "magnifier_big",
+     "x": 1560,
+     "y": 520
+    }
+   ]
+  },
+  {
+   "id": "m16",
+   "cue": "L031",
+   "at": 1.3,
+   "set": "stairwell",
+   "opts": {
+    "night": true,
+    "bulbs": 4
+   },
+   "camera": "tilt_down",
+   "place": "stairwell",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 380,
+     "y": 340,
+     "scale": 0.5,
+     "face": "scared",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "cfo_e04",
+   "set": "lobby",
+   "opts": {
+    "spin": 1
+   },
+   "camera": "push_in",
+   "extras": 2,
+   "cue": "L031",
+   "at": 1.1
+  },
+  {
+   "id": "m17",
+   "cue": "L032",
+   "at": 0,
+   "set": "train_platform",
+   "opts": {
+    "night": true
+   },
+   "camera": "pan_right",
+   "place": "train platform",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 900,
+     "y": 960,
+     "face": "relieved",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "m18",
+   "cue": "L032",
+   "at": 0.65,
+   "set": "desk_top",
+   "opts": {
+    "night": true
+   },
+   "camera": "push_in",
+   "place": "desk from above",
+   "overlays": [
+    {
+     "type": "doc",
+     "source": "EXAMPLE OFFICE",
+     "date": "1 Jan",
+     "by": "A clerk",
+     "quote": "Plain text on a desk.",
+     "at": 0.2
+    }
+   ]
+  },
+  {
+   "id": "m19",
+   "cue": "L032",
+   "at": 1.3,
+   "set": "kitchen",
+   "opts": {
+    "fridge": "open",
+    "night": true
+   },
+   "camera": "push_in",
+   "place": "kitchen at night",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 900,
+     "y": 960,
+     "face": "scared",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "cfo_e05",
+   "set": "garage",
+   "opts": {
+    "creeper": 1
+   },
+   "camera": "pan_right",
+   "cue": "L032",
+   "at": 1.1
+  },
+  {
+   "id": "m20",
+   "cue": "L033",
+   "at": 0,
+   "set": "kitchen",
+   "opts": {
+    "dress": "martha",
+    "night": true
+   },
+   "camera": "pan_left",
+   "place": "martha's kitchen",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 700,
+     "y": 960,
+     "prop": "calculator",
+     "face": "deadpan",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "m21",
+   "cue": "L033",
+   "at": 0.65,
+   "set": "warehouse",
+   "opts": {
+    "night": true,
+    "belt": false
+   },
+   "camera": "push_in",
+   "place": "warehouse at night",
+   "actors": [
+    {
+     "thing": "box",
+     "label": "BOX",
+     "x": 1200,
+     "y": 900,
+     "scale": 0.8,
+     "face": "scared",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "m22",
+   "cue": "L033",
+   "at": 1.3,
+   "set": "boardroom",
+   "opts": {
+    "glass": true,
+    "night": false
+   },
+   "camera": "pull_out",
+   "place": "glass meeting room",
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 1000,
+     "y": 960,
+     "face": "deadpan",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "cfo_e06",
+   "set": "food_truck",
+   "camera": "push_in",
+   "extras": 5,
+   "cue": "L033",
+   "at": 1.1
+  },
+  {
+   "id": "m23",
+   "cue": "L034",
+   "at": 0,
+   "set": "night_city",
+   "opts": {
+    "towers": true
+   },
+   "camera": "push_in",
+   "place": "the city",
+   "actors": [
+    {
+     "thing": "giant",
+     "color": "red",
+     "label": "RED COLA",
+     "x": 700,
+     "y": 900,
+     "scale": 1,
+     "face": "furious",
+     "enter": "none"
+    },
+    {
+     "thing": "giant",
+     "color": "navy",
+     "label": "NAVY COLA",
+     "x": 1250,
+     "y": 900,
+     "scale": 1,
+     "face": "smug",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "m24",
+   "cue": "L034",
+   "at": 0.65,
+   "set": "pitch_stage",
+   "opts": {
+    "view": "table",
+    "night": true
+   },
+   "camera": "push_in",
+   "place": "pitch stage",
+   "actors": [
+    {
+     "who": "ROHAN_OZA",
+     "x": 700,
+     "y": 960,
+     "face": "plain",
+     "prop": "briefcase",
+     "enter": "none"
+    }
+   ],
+   "props": [
+    {
+     "type": "briefcase",
+     "x": 1300,
+     "y": 960,
+     "move": {
+      "to": [
+       1100,
+       960
+      ],
+      "at": 0.4,
+      "dur": 0.6
+     }
+    },
+    {
+     "type": "pricetag",
+     "x": 1500,
+     "y": 420,
+     "t": "$1.95B",
+     "flip": 0.5
+    }
+   ]
+  },
+  {
+   "id": "m25",
+   "cue": "L034",
+   "at": 1.3,
+   "set": "empty_hall",
+   "opts": {
+    "dress": "gym",
+    "night": true
+   },
+   "camera": "still",
+   "place": "school gym",
+   "props": [
+    {
+     "type": "mirror_ball",
+     "x": 960,
+     "y": 300
+    },
+    {
+     "type": "pricetag",
+     "x": 560,
+     "y": 700,
+     "t": "$1.95B",
+     "tear": 0.6,
+     "after": "$1.65B"
+    }
+   ]
+  },
+  {
+   "id": "cfo_e07",
+   "set": "library",
+   "camera": "push_in",
+   "extras": 1,
+   "cue": "L034",
+   "at": 1.1
+  },
+  {
+   "id": "m26",
+   "cue": "L035",
+   "at": 0,
+   "set": "plain",
+   "opts": {
+    "color": "#e9dfc8"
+   },
+   "camera": "still",
+   "props": [
+    {
+     "type": "briefcase_tower",
+     "x": 700,
+     "y": 900,
+     "n": 8,
+     "grow": 2
+    },
+    {
+     "type": "toys",
+     "x": 1300,
+     "y": 600
+    },
+    {
+     "type": "blanket",
+     "x": 1600,
+     "y": 900
+    }
+   ]
+  },
+  {
+   "id": "m27",
+   "cue": "L035",
+   "at": 0.65,
+   "set": "living_room",
+   "opts": {
+    "dress": "martha",
+    "night": true
+   },
+   "camera": "push_in",
+   "place": "martha's living room",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 300,
+     "y": 960,
+     "face": "happy",
+     "prop": "espresso",
+     "enter": "none"
+    }
+   ],
+   "props": [
+    {
+     "type": "toys",
+     "x": 960,
+     "y": 560
+    }
+   ]
+  },
+  {
+   "id": "m28",
+   "cue": "L035",
+   "at": 1.3,
+   "set": "back_shop",
+   "opts": {
+    "dress": "tailor"
+   },
+   "camera": "pull_out",
+   "place": "tailor shop",
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 820,
+     "y": 960,
+     "prop": "tape",
+     "face": "smug",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "cfo_f01",
+   "set": "weather_station",
+   "camera": "pan_right",
+   "cue": "L035",
+   "at": 1.1
+  },
+  {
+   "id": "m29",
+   "cue": "L036",
+   "at": 0,
+   "set": "night_office",
+   "opts": {
+    "dress": "clerk",
+    "night": true
+   },
+   "camera": "tilt_up",
+   "place": "trademark office",
+   "actors": [
+    {
+     "who": "REGGIE",
+     "x": 640,
+     "y": 960,
+     "prop": "clipboard",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "m30",
+   "cue": "L036",
+   "at": 0.65,
+   "set": "night_office",
+   "opts": {
+    "dress": "newsroom",
+    "night": true
+   },
+   "camera": "pan_left",
+   "place": "newsroom"
+  },
+  {
+   "id": "m31",
+   "cue": "L036",
+   "at": 1.3,
+   "set": "night_office",
+   "opts": {
+    "dress": "supplier",
+    "night": true
+   },
+   "camera": "push_in",
+   "place": "supplier office"
+  },
+  {
+   "id": "cfo_f02",
+   "set": "auction_house",
+   "camera": "push_in",
+   "extras": 5,
+   "cue": "L036",
+   "at": 1.1
+  },
+  {
+   "id": "m32",
+   "cue": "L037",
+   "at": 0,
+   "set": "night_office",
+   "opts": {
+    "dress": "executive",
+    "night": true
+   },
+   "camera": "pull_out",
+   "place": "executive office"
+  },
+  {
+   "id": "tc1",
+   "cue": "L037",
+   "at": 0.65,
+   "type": "card",
+   "text": "Places for the soda story",
+   "emph": [
+    "soda"
+   ]
+  },
+  {
+   "id": "tc2",
+   "cue": "L037",
+   "at": 1.3,
+   "type": "card",
+   "text": "Things and guests too",
+   "emph": [
+    "guests"
+   ]
+  },
+  {
+   "id": "cfo_f03",
+   "set": "hospital",
+   "camera": "push_in",
+   "extras": 2,
+   "cue": "L037",
+   "at": 1.1
+  },
+  {
+   "id": "gs1",
+   "cue": "L038",
+   "set": "evidence_wall",
+   "opts": {
+    "night": true
+   },
+   "place": "evidence wall",
+   "light": {
+    "x": 960,
+    "y": 470,
+    "r": 1100,
+    "dark": 0.55
+   },
+   "props": [
+    {
+     "type": "board_web",
+     "nodes": [
+      {
+       "id": "a",
+       "kind": "face",
+       "who": "ROHAN_OZA",
+       "name": "ROHAN OZA",
+       "sub": "the connector",
+       "at": 0.3
+      },
+      {
+       "id": "b",
+       "kind": "badge",
+       "icon": "can",
+       "color": "#8a3fb6",
+       "name": "CAVU",
+       "sub": "investor",
+       "at": 1.6
+      },
+      {
+       "id": "c",
+       "kind": "doc",
+       "title": "DEAL",
+       "name": "THE SALE",
+       "at": 2.9
+      }
+     ],
+     "edges": [
+      {
+       "from": "a",
+       "to": "b",
+       "label": "backed by"
+      },
+      {
+       "from": "b",
+       "to": "c"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cfo_f04",
+   "set": "radio_studio",
+   "opts": {
+    "air": 1
+   },
+   "camera": "push_in",
+   "cue": "L038",
+   "at": 1.1
+  },
+  {
+   "id": "gs2",
+   "cue": "L040",
+   "set": "timeline_road",
+   "opts": {
+    "night": true
+   },
+   "place": "the road of years",
+   "light": {
+    "x": 960,
+    "y": 520,
+    "r": 1200,
+    "dark": 0.5
+   },
+   "props": [
+    {
+     "type": "timeline",
+     "years": [
+      {
+       "year": "2015",
+       "caption": "A kitchen",
+       "who": "ALLISON_ELLSWORTH",
+       "at": 0.2
+      },
+      {
+       "year": "2018",
+       "caption": "A few stores",
+       "icon": "can",
+       "color": "#8a3fb6",
+       "at": 1.8
+      },
+      {
+       "year": "2025",
+       "caption": "Everywhere",
+       "icon": "building",
+       "at": 3.4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cfo_f06",
+   "set": "lighthouse",
+   "camera": "pan_right",
+   "cue": "L040",
+   "at": 1.1
+  },
+  {
+   "id": "gs3",
+   "cue": "L042",
+   "set": "studio",
+   "place": "the studio",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 960,
+     "face": "shocked"
+    }
+   ],
+   "overlays": [
+    {
+     "type": "counter",
+     "roll": true,
+     "from": 0,
+     "to": 1.95,
+     "prefix": "$",
+     "suffix": "B",
+     "decimals": 2,
+     "cap": "SOLD FOR",
+     "pos": "tr",
+     "at": 0.4,
+     "dur": 1.6
+    },
+    {
+     "type": "counter",
+     "roll": true,
+     "from": 1.95,
+     "to": 1.42,
+     "prefix": "$",
+     "suffix": "B",
+     "decimals": 2,
+     "cap": "A WEEK LATER",
+     "pos": "tl",
+     "at": 1.2,
+     "dur": 1.6
+    }
+   ]
+  },
+  {
+   "id": "cfo_g01",
+   "set": "office",
+   "opts": {
+    "dress": "after_hours"
+   },
+   "camera": "push_in",
+   "cue": "L042",
+   "at": 1.1
+  },
+  {
+   "id": "gs4",
+   "cue": "L044",
+   "set": "map_table",
+   "opts": {
+    "night": true
+   },
+   "place": "the US map",
+   "light": {
+    "x": 960,
+    "y": 540,
+    "r": 1300,
+    "dark": 0.3
+   },
+   "props": [
+    {
+     "type": "map_flight",
+     "map": "us",
+     "from": "dallas",
+     "to": "new york",
+     "dur": 2.2,
+     "at": 0.3
+    }
+   ]
+  },
+  {
+   "id": "cfo_g03",
+   "set": "back_shop",
+   "opts": {
+    "dress": "engraver",
+    "night": false
+   },
+   "camera": "pan_left",
+   "cue": "L044",
+   "at": 1.1
+  },
+  {
+   "id": "gs5",
+   "cue": "L046",
+   "set": "map_table",
+   "opts": {
+    "night": true
+   },
+   "place": "the world map",
+   "light": {
+    "x": 960,
+    "y": 540,
+    "r": 1300,
+    "dark": 0.3
+   },
+   "props": [
+    {
+     "type": "map_flight",
+     "map": "world",
+     "from": "taiwan",
+     "to": "santa clara",
+     "dur": 2.2,
+     "at": 0.3
+    }
+   ]
+  },
+  {
+   "id": "cfo_g05",
+   "set": "night_office",
+   "opts": {
+    "dress": "recruiter"
+   },
+   "camera": "pan_right",
+   "cue": "L046",
+   "at": 1.1
+  },
+  {
+   "id": "e01",
+   "cue": "L047",
+   "explains": "who paid whom when PepsiCo bought the soda",
+   "set": "dark_stage",
+   "opts": {
+    "night": true
+   },
+   "place": "the money table",
+   "light": {
+    "x": 960,
+    "y": 560,
+    "r": 1300,
+    "dark": 0.45
+   },
+   "props": [
+    {
+     "type": "money_flow",
+     "parties": [
+      {
+       "id": "p",
+       "kind": "badge",
+       "icon": "building",
+       "color": "#1f6fb6",
+       "name": "PEPSICO"
+      },
+      {
+       "id": "f",
+       "kind": "face",
+       "who": "ALLISON_ELLSWORTH",
+       "name": "FOUNDERS"
+      },
+      {
+       "id": "i",
+       "kind": "badge",
+       "icon": "can",
+       "color": "#8a3fb6",
+       "name": "INVESTORS"
+      }
+     ],
+     "flows": [
+      {
+       "from": "p",
+       "to": "f",
+       "amount": "$1.95B",
+       "at": 0.6
+      },
+      {
+       "from": "f",
+       "to": "i",
+       "amount": "$300M",
+       "coins": true,
+       "at": 2.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cfo_g06",
+   "set": "pitch_stage",
+   "opts": {
+    "dress": "earnings",
+    "squeal": 1
+   },
+   "camera": "push_in",
+   "cue": "L047",
+   "at": 1.1
+  },
+  {
+   "id": "e02",
+   "cue": "L049",
+   "explains": "where the $1.95B went",
+   "set": "dark_stage",
+   "opts": {
+    "night": true
+   },
+   "place": "the split",
+   "light": {
+    "x": 960,
+    "y": 560,
+    "r": 1300,
+    "dark": 0.45
+   },
+   "props": [
+    {
+     "type": "split_bar",
+     "total": "$1.95B",
+     "note": "what PepsiCo paid",
+     "parts": [
+      {
+       "label": "TAXES",
+       "amount": "$490M",
+       "share": 0.25,
+       "at": 0.8
+      },
+      {
+       "label": "EARNOUT",
+       "amount": "$680M",
+       "share": 0.35,
+       "at": 2
+      },
+      {
+       "label": "CASH",
+       "amount": "$780M",
+       "share": 0.4,
+       "at": 3.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cfo_g08",
+   "set": "bank",
+   "opts": {
+    "dress": "counter",
+    "sign": "HSBC",
+    "night": false,
+    "chart": true
+   },
+   "camera": "push_in",
+   "cue": "L049",
+   "at": 1.1
+  },
+  {
+   "id": "e03",
+   "cue": "L051",
+   "explains": "why rich on paper is not rich in the bank",
+   "set": "dark_stage",
+   "opts": {
+    "night": true
+   },
+   "place": "the chain",
+   "light": {
+    "x": 960,
+    "y": 560,
+    "r": 1300,
+    "dark": 0.45
+   },
+   "props": [
+    {
+     "type": "chain",
+     "nodes": [
+      {
+       "text": "The sale happened",
+       "icon": "coin",
+       "color": "#e8a317",
+       "at": 0.3
+      },
+      {
+       "text": "Founders were rich",
+       "who": "ALLISON_ELLSWORTH",
+       "at": 1.8
+      },
+      {
+       "text": "Only on paper",
+       "icon": "bank",
+       "color": "#8a3fb6",
+       "at": 3.3
+      },
+      {
+       "text": "The earnout had strings",
+       "icon": "can",
+       "color": "#e0262b",
+       "at": 4.8
+      }
+     ],
+     "links": [
+      "so",
+      "but",
+      "because"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cfo_g10",
+   "set": "kitchen",
+   "opts": {
+    "dress": "jar"
+   },
+   "camera": "push_in",
+   "cue": "L051",
+   "at": 1.1
+  },
+  {
+   "id": "e04",
+   "cue": "L054",
+   "explains": "the text message that is on the record",
+   "set": "dark_stage",
+   "opts": {
+    "night": true
+   },
+   "place": "the phone",
+   "light": {
+    "x": 960,
+    "y": 520,
+    "r": 1300,
+    "dark": 0.45
+   },
+   "props": [
+    {
+     "type": "chat",
+     "name": "Court filing",
+     "source": "Exhibit 12, 2025",
+     "messages": [
+      {
+       "from": "them",
+       "text": "Did you see the offer?",
+       "at": 0.8
+      },
+      {
+       "from": "me",
+       "text": "I did. It is bigger than I hoped.",
+       "at": 3
+      },
+      {
+       "from": "them",
+       "text": "Sign before Friday.",
+       "at": 5.2
+      }
+     ]
+    }
+   ],
+   "overlays": [
+    {
+     "type": "source",
+     "t": "Court filing, exhibit 12",
+     "at": 0.4
+    }
+   ]
+  },
+  {
+   "id": "cfo_g13",
+   "set": "bedroom",
+   "opts": {
+    "dress": "dusk"
+   },
+   "camera": "push_in",
+   "cue": "L054",
+   "at": 1.1
+  },
+  {
+   "id": "v01",
+   "cue": "L056",
+   "set": "studio",
+   "place": "the studio",
+   "light": {
+    "kind": "day"
+   },
+   "camera": "push_in",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 300,
+     "y": 950,
+     "scale": 0.85,
+     "face": "happy",
+     "prop": "phone",
+     "screen": "green",
+     "enter": "none"
+    },
+    {
+     "who": "CHAD",
+     "x": 640,
+     "y": 950,
+     "scale": 0.85,
+     "face": "greedy",
+     "pose": "rest",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L056",
+       "word": 5,
+       "pose": "cheer"
+      }
+     ]
+    },
+    {
+     "who": "HAL",
+     "x": 960,
+     "y": 950,
+     "scale": 0.85,
+     "face": "smug",
+     "prop": "espresso",
+     "pose": "hold",
+     "enter": "none"
+    },
+    {
+     "who": "MARTHA",
+     "x": 1280,
+     "y": 950,
+     "scale": 0.85,
+     "face": "deadpan",
+     "prop": "bill",
+     "enter": "none"
+    },
+    {
+     "who": "REGGIE",
+     "x": 1620,
+     "y": 950,
+     "scale": 0.85,
+     "face": "plain",
+     "prop": "stamp",
+     "pose": "hold",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "cfo_t02",
+   "set": "corner_office",
+   "opts": {
+    "night": false,
+    "chair": "bare"
+   },
+   "actors": [
+    {
+     "thing": "printer",
+     "who": "PRINTER",
+     "x": 820,
+     "y": 900,
+     "scale": 0.9,
+     "page": 0.5,
+     "face": "scared",
+     "enter": "none"
+    }
+   ],
+   "cue": "L056",
+   "at": 1.1
+  },
+  {
+   "id": "v02",
+   "cue": "L057",
+   "set": "kitchen",
+   "place": "the kitchen",
+   "camera": "push_in",
+   "frame": "medium",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 700,
+     "y": 940,
+     "scale": 0.9,
+     "face": "confused",
+     "pose": "shrug",
+     "speaks": [
+      "L057"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L057",
+       "word": 2,
+       "face": "shocked",
+       "pose": "panic"
+      }
+     ]
+    },
+    {
+     "who": "MARTHA",
+     "x": 1220,
+     "y": 940,
+     "scale": 0.9,
+     "face": "deadpan",
+     "prop": "bill",
+     "speaks": [
+      "L058"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L058",
+       "word": 3,
+       "face": "smug"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cfo_t03",
+   "set": "street",
+   "opts": {
+    "dress": "shuttered"
+   },
+   "actors": [
+    {
+     "thing": "newspaper_box",
+     "who": "BOX",
+     "x": 700,
+     "y": 900,
+     "turn": 1,
+     "label": "NEWS",
+     "enter": "none"
+    },
+    {
+     "thing": "coreweave",
+     "who": "CW",
+     "x": 1100,
+     "y": 900,
+     "scale": 0.8,
+     "wobble": 0.5,
+     "ice": true,
+     "enter": "none"
+    },
+    {
+     "thing": "nebius",
+     "who": "NB",
+     "x": 1400,
+     "y": 900,
+     "scale": 0.8,
+     "enter": "none"
+    },
+    {
+     "thing": "envelope",
+     "who": "ENV",
+     "x": 1700,
+     "y": 900,
+     "scale": 0.8,
+     "enter": "none"
+    }
+   ],
+   "cue": "L057",
+   "at": 1.1
+  },
+  {
+   "id": "v03",
+   "cue": "L059",
+   "set": "kitchen",
+   "place": "the kitchen",
+   "camera": "pan_right",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 960,
+     "y": 960,
+     "scale": 0.75,
+     "face": "neutral",
+     "prop": "mug",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L059",
+       "word": 6,
+       "pose": "present"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cfo_t05",
+   "set": "boardroom",
+   "opts": {
+    "dress": "two_chairs",
+    "night": true
+   },
+   "camera": "still",
+   "cue": "L059",
+   "at": 1.1
+  },
+  {
+   "id": "v04",
+   "cue": "L060",
+   "set": "boardroom",
+   "place": "the boardroom",
+   "camera": "push_in",
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 760,
+     "y": 960,
+     "scale": 0.8,
+     "face": "smug",
+     "pose": "hips",
+     "enter": "none"
+    },
+    {
+     "who": "REGGIE",
+     "x": 1180,
+     "y": 960,
+     "scale": 0.8,
+     "face": "plain",
+     "prop": "clipboard",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "cfo_gst",
+   "set": "corner_office",
+   "opts": {
+    "night": true
+   },
+   "camera": "push_in",
+   "actors": [
+    {
+     "who": "COLETTE_KRESS",
+     "x": 1480,
+     "y": 900,
+     "scale": 0.8,
+     "face": "neutral",
+     "pose": "hold",
+     "enter": "none"
+    },
+    {
+     "who": "HARVEY_JONES",
+     "x": 640,
+     "y": 900,
+     "scale": 0.8,
+     "face": "plain",
+     "pose": "present",
+     "enter": "none"
+    },
+    {
+     "who": "JENSEN_HUANG",
+     "x": 960,
+     "y": 900,
+     "scale": 0.8,
+     "back": true,
+     "enter": "none"
+    }
+   ],
+   "cue": "L060",
+   "at": 1.1
+  },
+  {
+   "id": "v05",
+   "cue": "L061",
+   "set": "pitch_stage",
+   "place": "the pitch stage",
+   "camera": "pull_out",
+   "actors": [
+    {
+     "who": "ALLISON_ELLSWORTH",
+     "x": 700,
+     "y": 960,
+     "scale": 0.85,
+     "face": "happy",
+     "pregnant": true,
+     "pose": "present",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "cfo_gst2",
+   "set": "tv_studio",
+   "opts": {
+    "outlet": "YAHOO FINANCE"
+   },
+   "camera": "still",
+   "actors": [
+    {
+     "who": "GIL_LURIA",
+     "x": 700,
+     "y": 900,
+     "scale": 0.7,
+     "face": "neutral",
+     "enter": "none"
+    },
+    {
+     "who": "FRANK_LEE",
+     "x": 1200,
+     "y": 900,
+     "scale": 0.7,
+     "face": "deadpan",
+     "enter": "none"
+    },
+    {
+     "who": "ANALYST_1",
+     "x": 300,
+     "y": 900,
+     "scale": 0.6,
+     "enter": "none"
+    },
+    {
+     "who": "ANALYST_2",
+     "x": 1500,
+     "y": 900,
+     "scale": 0.6,
+     "enter": "none"
+    },
+    {
+     "who": "ANALYST_3",
+     "x": 1700,
+     "y": 900,
+     "scale": 0.6,
+     "enter": "none"
+    },
+    {
+     "who": "ANALYST_4",
+     "x": 100,
+     "y": 900,
+     "scale": 0.6,
+     "enter": "none"
+    }
+   ],
+   "cue": "L061",
+   "at": 1.1
+  },
+  {
+   "id": "v06",
+   "cue": "L062",
+   "set": "night_office",
+   "place": "the night office",
+   "camera": "pan_left",
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 560,
+     "y": 960,
+     "scale": 0.8,
+     "face": "scared",
+     "prop": "phone",
+     "screen": "red",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "v07",
+   "cue": "L063",
+   "set": "bank",
+   "place": "the vault",
+   "camera": "push_in",
+   "actors": [
+    {
+     "who": "REGGIE",
+     "x": 1300,
+     "y": 960,
+     "scale": 0.8,
+     "face": "deadpan",
+     "prop": "clipboard",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "v08",
+   "cue": "L064",
+   "set": "supermarket",
+   "place": "the supermarket",
+   "camera": "pan_right",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 820,
+     "y": 970,
+     "scale": 0.8,
+     "face": "shocked",
+     "prop": "tag",
+     "tag": "$2.99",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "v09",
+   "cue": "L065",
+   "set": "back_shop",
+   "place": "the back shop",
+   "camera": "push_in",
+   "actors": [
+    {
+     "who": "STEPHEN_ELLSWORTH",
+     "x": 960,
+     "y": 960,
+     "scale": 0.8,
+     "face": "neutral",
+     "pose": "fold",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "v10",
+   "cue": "L066",
+   "set": "desk_top",
+   "place": "the desk",
+   "camera": "still"
+  },
+  {
+   "id": "v11",
+   "cue": "L067",
+   "set": "office",
+   "opts": {
+    "palette": "pink"
+   },
+   "place": "the pink office",
+   "camera": "push_in",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 960,
+     "y": 960,
+     "scale": 0.8,
+     "face": "happy",
+     "pose": "wave",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "v12",
+   "cue": "L068",
+   "set": "kitchen",
+   "opts": {
+    "night": true,
+    "palette": "teal"
+   },
+   "place": "the kitchen at night",
+   "camera": "push_in",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 900,
+     "y": 960,
+     "scale": 0.8,
+     "face": "sad",
+     "prop": "bill",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "v13",
+   "cue": "L069",
+   "set": "office",
+   "place": "the office",
+   "light": {
+    "kind": "window",
+    "x": 1420
+   },
+   "camera": "pan_right",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 760,
+     "y": 960,
+     "scale": 0.85,
+     "face": "relieved",
+     "prop": "mug",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "v14",
+   "cue": "L070",
+   "set": "night_office",
+   "opts": {
+    "dress": "newsroom"
+   },
+   "place": "the newsroom",
+   "light": {
+    "kind": "screen",
+    "x": 760,
+    "y": 980
+   },
+   "camera": "push_in",
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 760,
+     "y": 960,
+     "scale": 0.9,
+     "face": "greedy",
+     "prop": "phone",
+     "screen": "green",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "v15",
+   "cue": "L071",
+   "set": "night_city",
+   "place": "the street at night",
+   "light": {
+    "kind": "neon"
+   },
+   "camera": "pan_left",
+   "actors": [
+    {
+     "who": "ROHAN_OZA",
+     "x": 960,
+     "y": 980,
+     "scale": 0.85,
+     "face": "smug",
+     "pose": "hips",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "v16",
+   "cue": "L072",
+   "set": "suburb",
+   "place": "the suburb",
+   "light": {
+    "kind": "day"
+   },
+   "camera": "pull_out",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 760,
+     "y": 960,
+     "scale": 0.8,
+     "face": "happy",
+     "pose": "wave",
+     "enter": "none"
+    },
+    {
+     "who": "BENNY",
+     "x": 1160,
+     "y": 960,
+     "scale": 0.8,
+     "face": "happy",
+     "prop": "popcorn",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "v17",
+   "cue": "L073",
+   "set": "boardroom",
+   "place": "the boardroom",
+   "frame": "ots",
+   "ots": {
+    "speaker": "HAL",
+    "listener": "BENNY"
+   },
+   "camera": "still",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 600,
+     "y": 960,
+     "scale": 0.85,
+     "face": "neutral",
+     "enter": "none"
+    },
+    {
+     "who": "HAL",
+     "x": 1260,
+     "y": 960,
+     "scale": 0.85,
+     "face": "smug",
+     "pose": "present",
+     "speaks": [
+      "L073"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L073",
+       "word": 5,
+       "pose": "point"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "v18",
+   "cue": "L074",
+   "set": "boardroom",
+   "place": "the boardroom",
+   "frame": "ots",
+   "ots": {
+    "speaker": "BENNY",
+    "listener": "HAL"
+   },
+   "camera": "still",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 600,
+     "y": 960,
+     "scale": 0.85,
+     "face": "angry",
+     "pose": "shrug",
+     "speaks": [
+      "L074"
+     ],
+     "enter": "none"
+    },
+    {
+     "who": "HAL",
+     "x": 1260,
+     "y": 960,
+     "scale": 0.85,
+     "face": "smug",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "v19",
+   "cue": "L075",
+   "set": "boardroom",
+   "place": "the boardroom",
+   "angle": "low",
+   "camera": "push_in",
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 960,
+     "y": 980,
+     "scale": 1,
+     "face": "smug",
+     "pose": "fold",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "v20",
+   "cue": "L076",
+   "set": "street",
+   "place": "the street",
+   "angle": "high",
+   "camera": "pull_out",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 960,
+     "y": 940,
+     "scale": 0.65,
+     "face": "sad",
+     "pose": "rest",
+     "prop": "wallet",
+     "open": true,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "v21",
+   "cue": "L077",
+   "set": "design_studio",
+   "opts": {
+    "palette": "blue"
+   },
+   "place": "the founder's studio",
+   "camera": "push_in",
+   "frame": "medium",
+   "actors": [
+    {
+     "who": "GALLERY_FOUNDER",
+     "x": 960,
+     "y": 960,
+     "scale": 0.9,
+     "face": "happy",
+     "pose": "wave",
+     "speaks": [
+      "L077"
+     ],
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "w01",
+   "cue": "L078",
+   "set": "street",
+   "place": "the street",
+   "camera": "pan_right",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 420,
+     "y": 950,
+     "scale": 0.8,
+     "face": "happy",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L078",
+       "word": 1,
+       "to": [
+        1500
+       ],
+       "dur": 2.4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w02",
+   "cue": "L079",
+   "set": "office",
+   "place": "the office",
+   "camera": "still",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 640,
+     "y": 960,
+     "scale": 0.8,
+     "face": "neutral",
+     "prop": "bill",
+     "cue": "L079",
+     "word": 0
+    },
+    {
+     "who": "CHAD",
+     "x": 1280,
+     "y": 960,
+     "scale": 0.8,
+     "face": "greedy",
+     "prop": "phone",
+     "screen": "green",
+     "cue": "L079",
+     "word": 4
+    }
+   ]
+  },
+  {
+   "id": "w03",
+   "cue": "L080",
+   "set": "street",
+   "place": "the street",
+   "extras": 9,
+   "camera": "push_in",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 960,
+     "y": 980,
+     "scale": 0.85,
+     "face": "shocked",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "w04",
+   "cue": "L081",
+   "set": "farmers_market",
+   "place": "the market",
+   "extras": 7,
+   "camera": "pan_left",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 900,
+     "y": 980,
+     "scale": 0.85,
+     "face": "happy",
+     "prop": "tag",
+     "tag": "$4",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "w05",
+   "cue": "L082",
+   "set": "kitchen",
+   "place": "the kitchen",
+   "camera": "still",
+   "frame": "medium",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 720,
+     "y": 960,
+     "scale": 0.9,
+     "face": "deadpan",
+     "prop": "bill",
+     "speaks": [
+      "L082"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L082",
+       "word": 0,
+       "act": "handover",
+       "with": "BENNY"
+      }
+     ]
+    },
+    {
+     "who": "BENNY",
+     "x": 1220,
+     "y": 960,
+     "scale": 0.9,
+     "face": "confused",
+     "speaks": [
+      "L083"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L083",
+       "word": 1,
+       "face": "sad"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w06",
+   "cue": "L084",
+   "set": "living_room",
+   "place": "the living room",
+   "camera": "still",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 700,
+     "y": 960,
+     "scale": 0.85,
+     "face": "sad",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L084",
+       "word": 1,
+       "act": "sit"
+      }
+     ]
+    },
+    {
+     "who": "BENNY",
+     "x": 1240,
+     "y": 960,
+     "scale": 0.85,
+     "face": "sad",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L084",
+       "word": 5,
+       "act": "turn"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w07",
+   "cue": "L085",
+   "set": "boardroom",
+   "opts": {
+    "tableFront": true
+   },
+   "place": "the boardroom",
+   "camera": "shake",
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 960,
+     "y": 1000,
+     "scale": 0.95,
+     "face": "angry",
+     "speaks": [
+      "L085"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L085",
+       "word": 0,
+       "act": "slam",
+       "face": "furious"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w08",
+   "cue": "L086",
+   "set": "boardroom",
+   "place": "the boardroom",
+   "camera": "push_in",
+   "angle": "low",
+   "actors": [
+    {
+     "who": "REGGIE",
+     "x": 640,
+     "y": 960,
+     "scale": 0.85,
+     "face": "scared",
+     "enter": "none"
+    },
+    {
+     "who": "HAL",
+     "x": 1180,
+     "y": 960,
+     "scale": 0.85,
+     "face": "smug",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L086",
+       "word": 2,
+       "act": "lean"
+      }
+     ]
+    }
+   ]
+  }
+ ]
 }

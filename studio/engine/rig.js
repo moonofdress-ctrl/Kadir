@@ -684,6 +684,8 @@
     // two smaller chips with their names on them (states: wobble: seconds a shake starts, ice: an ice pack on the head)
     coreweave(o) { return smallChip(o, "COREWEAVE", "#6a8fd8"); },
     nebius(o) { return smallChip(o, "NEBIUS", "#d86a8f"); },
+    // Kress's desk lamp with a face on its shade (it swings: act `to` rocks it): { color }
+    desk_lamp(o) { const c = o.color || "#e8a317"; return { w: 140, h: 400, feet: 0, face: [0, -270, 0.55], skin: c, body: rc(-110, -40, 220, 40, "#3d4a5c", 12) + `<path d="M0,-40 L-30,-170 L0,-250" fill="none" stroke="${INK}" stroke-width="14" stroke-linecap="round"/><path d="M-170,-150 L170,-150 L120,-380 L-120,-380Z" fill="${c}" ${st}/><ellipse cx="0" cy="-152" rx="150" ry="22" fill="#fff0b8" ${st} stroke-width="5"/>` }; },
     // @cfo-things
   };
 
