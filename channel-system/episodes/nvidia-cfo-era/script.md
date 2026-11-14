@@ -32,11 +32,11 @@ N: Colette Kress, the finance chief, has just been named interim chief executive
 CHIP: Who's in the chair?
 HAL: Nobody. That's the news.
 [CARD]
-N: By Thursday's close, the market valued Nvidia at about four trillion dollars. Keep that number in mind.
+N: By Thursday's close, the market put this company at about four trillion dollars. Keep that number in mind.
 [SCENE s03 | set: the chip on the desk, a price tag hanging from its corner flips over to read $4.0T; the chip gulps | text: $4.0T]
 N: A slice of it sits in every S&P 500 index fund.
 [SCENE s03a | set: close on the desk phone under the lamp, the yellow sticky note on its receiver reads TUE 5:00 PM; the lamp's heat curls the note's corner up like a raised eyebrow | text: TUE 5:00 PM ET]
-N: And on her desk... a date. Tuesday: Nvidia's first results call since it went public... without Jensen Huang as chief executive.
+N: And on her desk... a date. Tuesday: the first results call since Nvidia went public... with Jensen Huang gone from the top job.
 [SKIT k02 | set: a bus stop on a grey morning, daylight, a queue of commuters (extras), Benny staring at his phone, Chad beside him with an energy drink]
 BENNY: Wait. Who's running Nvidia?
 CHAD: The money person.

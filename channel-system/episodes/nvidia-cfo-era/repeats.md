@@ -1,23 +1,14 @@
 # Repetition report: nvidia-cfo-era
 
-218 lines, 1934 words, 11126 characters. Made by `studio/tools/script-repeats.mjs`. Suggestions only: the scriptwriter decides, and a cut line must keep the storyboard's cue ids (edit the text, do not delete a line that a shot cues on).
+218 lines, 1937 words, 11128 characters. Made by `studio/tools/script-repeats.mjs`. Suggestions only: the scriptwriter decides, and a cut line must keep the storyboard's cue ids (edit the text, do not delete a line that a shot cues on).
 
-## R1 Repeated word runs (10)
+## R1 Repeated word runs (7)
 Say it once; the second time, point back to it ("that number", "the same deal") or cut it.
 
 - "about one hundred and" in L054, L151, L187
   - L054 (N): "Wednesday, the eleventh. The shares close up almost three percent, at about one hundred and seventy-four do..."
   - L151 (N): "On Friday, the shares closed at about one hundred and sixty-three dollars. StoneX puts them about thirty pe..."
   - L187 (N): "One: the big number. Analysts expect revenue of about one hundred and nine billion dollars for the quarter,..."
-- "the market valued nvidia at" in L005, L049
-  - L005 (N): "By Thursday's close, the market valued Nvidia at about four trillion dollars. Keep that number in mind."
-  - L049 (N): "On Friday, the sixth, the market valued Nvidia at about four and a half trillion dollars."
-- "valued nvidia at about four" in L005, L049
-  - L005 (N): "By Thursday's close, the market valued Nvidia at about four trillion dollars. Keep that number in mind."
-  - L049 (N): "On Friday, the sixth, the market valued Nvidia at about four and a half trillion dollars."
-- "without jensen huang as chief" in L007, L179
-  - L007 (N): "And on her desk... a date. Tuesday: Nvidia's first results call since it went public... without Jensen Huan..."
-  - L179 (N): "It's the first Nvidia call without Jensen Huang as chief executive... and Kress's first as interim boss."
 - "so who is running nvidia" in L013, L217
   - L013 (N): "So who is running Nvidia now... and why does Tuesday matter?"
   - L217 (N): "So who is running Nvidia now? Its finance chief, on a temporary title."

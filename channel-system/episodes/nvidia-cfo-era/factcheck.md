@@ -96,6 +96,6 @@ Checked against primary documents where they exist: Nvidia's 12 Nov release (Exh
 | Claim | Line | Source | Status | Note |
 |---|---|---|---|---|
 | "A slice of it sits in every S&P 500 index fund." | CH1 after s03 | Nvidia is an S&P 500 constituent (S&P Dow Jones Indices); an index fund holds every member | Verified | No weight given here; CH7 carries the "about seven dollars in every hundred" figure |
-| "Tuesday: Nvidia's first results call since it went public... without Jensen Huang as chief executive." | CH1 s03a | Nvidia IPO 22 Jan 1999; Huang co-founder and CEO from 1993 until his resignation effective 12 Nov 2026 (8-K, Item 5.02); call 17 Nov (28 Oct notice) | Verified | Says nothing about who speaks on the call |
+| "Tuesday: the first results call since Nvidia went public... with Jensen Huang gone from the top job." | CH1 s03a | Nvidia IPO 22 Jan 1999; Huang co-founder and CEO from 1993 until his resignation effective 12 Nov 2026 (8-K, Item 5.02); call 17 Nov (28 Oct notice) | Verified | Says nothing about who speaks on the call |
 | "what to listen for at four twenty" | CH1 after k02 | Results about 4:20 p.m. ET Tue 17 Nov (research.md timeline) | Verified | Promise kept by CH8 |
 | Sticky note TUE 5:00 PM / TODAY on Kress's desk phone | s01, s03a, s56 | Cartoon prop; call time 5:00 p.m. ET (notice) | Safeguard 4/5 pass | A prop, not a claim about what she did; drawing stays neutral |
