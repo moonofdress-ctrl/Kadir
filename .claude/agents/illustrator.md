@@ -1,6 +1,6 @@
 ---
 name: illustrator
-description: Paints the episode's three thumbnails, and a background for a place the engine cannot draw. Use after the storyboard of the first 30 seconds exists (thumbnails) and when art-requests.md lists a background.
+description: Paints the episode's three thumbnails, and a background for a place the engine cannot draw. Use after the Look gate, from its frames (thumbnails, pipeline step 8) and when art-requests.md lists a background.
 model: sonnet
 tools: Read, Write, Edit, Bash, Glob, Grep
 ---

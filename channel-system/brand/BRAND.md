@@ -29,6 +29,9 @@ Every number is sourced in the description. Nothing here is financial advice.
 
 Both pictures are drawn by the rig. Redraw them after a change to the cast: `node studio/tools/stills.mjs brand`.
 
+## Sponsors (rule, 14 Nov 2026)
+Never a sponsor in the business the episode covers, nor a finance product we cannot check (no trading apps, no crypto, no loans). YouTube's paid-promotion box is ticked and the sponsor is said aloud at the start of its segment. A business e-mail goes into the channel description and a one-page media kit is made at 1,000 subscribers (the user chooses the address).
+
 ## Channel set-up (approved 14 Nov 2026; once, then per episode)
 Every change in Studio needs the user's yes each time; a session can prepare it in the built-in browser.
 - **Playlists** per series: "Billion-Dollar Deals", "CEO Stories", "Crashes and Scandals". Each episode goes into one (the packager names it).
