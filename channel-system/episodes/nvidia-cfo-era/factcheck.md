@@ -99,3 +99,20 @@ Checked against primary documents where they exist: Nvidia's 12 Nov release (Exh
 | "Tuesday: the first results call since Nvidia went public... with Jensen Huang gone from the top job." | CH1 s03a | Nvidia IPO 22 Jan 1999; Huang co-founder and CEO from 1993 until his resignation effective 12 Nov 2026 (8-K, Item 5.02); call 17 Nov (28 Oct notice) | Verified | Says nothing about who speaks on the call |
 | "what to listen for at four twenty" | CH1 after k02 | Results about 4:20 p.m. ET Tue 17 Nov (research.md timeline) | Verified | Promise kept by CH8 |
 | Sticky note TUE 5:00 PM / TODAY on Kress's desk phone | s01, s03a, s56 | Cartoon prop; call time 5:00 p.m. ET (notice) | Safeguard 4/5 pass | A prop, not a claim about what she did; drawing stays neutral |
+
+## Guest likenesses (14 Nov)
+Checked `guests.json` against brief.md safeguards (1) and (5) and the public record. Rule used: a trait stays only if it is a public, neutral one (official photo, TV appearances) or a generic default; no trait that could read as an ethnic or age stereotype; no glasses or features nobody has shown us.
+
+| Entry | Person (name strip) | Who names them on screen | Change | Result |
+|---|---|---|---|---|
+| COLETTE_KRESS | Colette Kress, interim CEO and CFO | Nvidia release (primary) | hair dark brown -> light blonde (as in her widely used press photos; the Nvidia management-team page was found but its photo not opened: art director confirms against it); bob, suit kept | pass (fixed) |
+| HARVEY_JONES | Harvey C. Jones, chair | Nvidia release | white hair, suit, age kept; "wide" nose -> straight; glasses removed (not shown in anything opened) | pass (fixed) |
+| JENSEN_HUANG | Jensen Huang, back only | release, 8-K | grey swept hair and black jacket are his best-known public traits; from behind only (s11, s24b) | pass |
+| GIL_LURIA | Gil Luria, DA Davidson (s13, s34 panel 4) | Fox Business | "pointed" nose and "long" jaw -> straight / oval (avoid a stereotyped nose); glasses removed (unverified); script s13 "in glasses" dropped | pass (fixed) |
+| FRANK_LEE | Frank Lee, HSBC (s39) | Yahoo live blog | "button" nose and round jaw -> straight / oval (avoid a stereotyped face); script s39 "man in glasses" -> "man" | pass (fixed) |
+| ANALYST_1 | Dan Ives, Yorkville Ives (s34 panel 2), man | Fox Business | buzz, broad -> dark slicked hair, normal build, straight nose | bound |
+| ANALYST_2 | Susannah Streeter, Wealth Club (s34 panel 1), woman | Fox Business | slick hair and glasses -> blonde bob, blouse, flat shoes, no glasses | bound |
+| ANALYST_3 | Bret Kenwell, eToro (s34 panel 3), man | Fox Business | old, round, grey -> adult, normal build, brown short hair | bound |
+| ANALYST_4 | none | - | "hook" nose -> straight; left UNBOUND (s34 panel 4 is GIL_LURIA). Landsberg and Weller are narrated, not drawn: do not bind | reserve |
+
+Bindings follow brief.md: only analysts the script names on screen with the outlet that quoted them (s34 "FOX BUSINESS"); they are on-record commentators, not people in the reports, so line 1's two-outlet test applies to the report subjects (unchanged rows above). Genders: Streeter woman, Ives, Kenwell, Luria, Lee men (outlet bylines and quotes use he/she). Art director: copy the `_who` name into the s34 name strips; faces neutral, poses rest/hold/present/think. Open: no photo was opened for Ives, Kenwell, Luria, Lee in this pass, so their hair colours are plausible defaults, not likenesses; the storyboard contact sheet check (second pass) confirms no mocking pose.

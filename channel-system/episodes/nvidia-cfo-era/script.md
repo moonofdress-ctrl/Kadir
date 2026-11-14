@@ -86,7 +86,7 @@ REGGIE: It will.
 [SCENE s12 | set: a sunny office corridor of glass doors; the corner door's plate reads CHIEF EXECUTIVE with one name, and three small brass plates under it: CEO, PRESIDENT, BOARD, stacked so low the last one hides behind the doorknob]
 [CARD]
 N: Until this week, Nvidia's board had no chair at all. The man at the top held the company's three biggest seats himself.
-[SCENE s13 | set: a TV studio at night, one key light, an analyst figure in glasses at a desk with a name strip (Gil Luria caricature, neutral) and a small card reading FOX BUSINESS; on the monitor behind him a seesaw tips with all its weight on one end | text: GIL LURIA, DA DAVIDSON]
+[SCENE s13 | set: a TV studio at night, one key light, an analyst figure at a desk with a name strip (Gil Luria caricature, neutral) and a small card reading FOX BUSINESS; on the monitor behind him a seesaw tips with all its weight on one end | text: GIL LURIA, DA DAVIDSON]
 N: Gil Luria of DA Davidson told Fox Business that much of the decision-making was concentrated in Huang.
 N: So the risk was never only the reports. It was the empty seats they could leave behind.
 [SKIT k06a | set: a theatre coat check at night, one lamp over the counter, Reggie holding three claim tickets, a single black jacket on one hook, the chip peering over the counter]
@@ -258,7 +258,7 @@ MARTHA: What happened to you two?
 COREWEAVE: We stood next to him.
 MARTHA: That's it?
 NEBIUS: That's enough.
-[SCENE s39 | set: a bank's front office on Friday, cold daylight, a man in glasses at a desk with a name strip (Frank Lee caricature, neutral) and a desk sign HSBC; a wall chart has a price target arrow falling from $365 to $170, so far it runs off the chart and down onto the carpet | text: HSBC: HOLD]
+[SCENE s39 | set: a bank's front office on Friday, cold daylight, a man at a desk with a name strip (Frank Lee caricature, neutral) and a desk sign HSBC; a wall chart has a price target arrow falling from $365 to $170, so far it runs off the chart and down onto the carpet | text: HSBC: HOLD]
 [CARD]
 N: Friday, the thirteenth. HSBC cuts Nvidia to Hold... and its price target from three hundred and sixty-five dollars to one hundred and seventy.
 [SCENE s40 | set: the corner office door at night, the INTERIM tape and the CFO plate rattling on their screws as somewhere a ticker slams]
