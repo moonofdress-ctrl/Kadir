@@ -247,8 +247,9 @@ Since 16 July 2026 YouTube does not monetize three kinds of "inauthentic content
 - **No two episodes look the same**: new sets, a new motif and new skits per story. The engine is a toolbox, not a template.
 - **No fear bait**: titles and thumbnails state what happened. No "it's over", no countdowns to collapse.
 - **No imitation of real people**: no cloned voices, no invented quotes, no realistic likeness. Caricatures are clearly cartoons and only say obviously comic lines.
-- **A human decides**: three approval gates per episode (topic, script, final cut).
-- Voice: decide with the user between a human narrator and a disclosed synthetic voice before the first upload, and re-check the policy text at that point.
+- **A human decides**: three approval gates per episode (topic, script, final cut) and the Look gate. The user may waive Gate 1, Gate 2 or waiting at the Look gate for one episode (recorded in `brief.md`); the Look gate's draft is still sent, and Gate 3, the upload, is always the user's.
+- Voice: a disclosed synthetic voice (ElevenLabs, decided 13 Nov 2026, README Voice row); YouTube's altered-content label set on every upload; re-check the policy text before each upload.
+- **Corrections**: an error found after upload gets a pinned comment that corrects it and a line at the top of the description ("Correction <date>: ..."); no silent edit, no re-upload.
 - **Painted thumbnails and backgrounds** are generated illustrations in our own style: clearly cartoons, made for this story only, each checked by a person. Re-read YouTube's current text on generated and altered content before each upload and set the label it asks for.
 
 ## 15. Packaging

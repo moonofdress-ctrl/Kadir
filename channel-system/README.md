@@ -33,12 +33,16 @@ Redesigned on 13 Nov 2026 so that independent steps run at the same time and eve
    ‖ packager        → captions, package.md, youtube-upload.txt, Shorts built and linted (rendered after)
    ‖ fact-checker    → currency check on the render day, for a story still moving
                                                                      ─── GATE 3: you approve and upload
-12 analyst           → learnings.md, a few days after the upload
+12 analyst           → analytics at 48 h, 7 and 28 days (Shorts too), comments and reply drafts, learnings.md
 13 improver          → improvements/<date>-<slug>.md: what to make better and why, asked one item at a time
                        in Turkish; only what you approve goes into the rules, agents, lint or an engine request
 ```
 
 **Why this order** (measured from Poppi's git history on 13 Nov 2026; tokens are not in git, so lines rewritten stand for them). Poppi went from topic to script and fact-check in 30 minutes, then ran one step at a time for about 21 hours. About a fifth of the lines its commits added redid finished work: the whole episode revoiced and retimed after the storyboard (the voice was chosen in ten commits over three hours after the storyboards existed), script trims applied after the storyboard and the voice, `explains` written into 316 shots in a separate pass, a second QA round, the captions and the package written again after the render. And its look was judged only after the full render. So: the voice is recorded right after Gate 2 and the script is final before it (punch-up and fact-check first); sets, voice and the blocking pass run side by side; `explains` is written in the blocking pass; the structure is checked on the animatic and the look on a 30-second draft; each chapter checks itself before QA; packaging runs during the render. Eight chapter art directors each read about 70 KB of rules before writing; they now read one page (`checklists/storyboard.md`) and the episode's `look.md`.
+
+**Rhythm** (approved by the user on 14 Nov 2026): two long episodes a week, Monday and Thursday 22:00 Turkey time (14:00 New York), and a Short every day between them. Once episodes 3 and 4 come out on this pipeline without a second QA round, move to one every two days (the rival's pace). **Dated plan** (improvement O): every `brief.md` has a Schedule line counted back from its upload slot: Gate 1 D-4, Gate 2 D-3, Look gate D-2, QA pass D-1, render the night before. Two episodes may be in flight at once, each on its own branch. The trend scout keeps five approved topics ready in `topics/backlog.md`, so Gate 1 never waits.
+
+Two a week needs about 25,000 ElevenLabs characters a week: the Creator plan (about $22 a month); the user upgrades it on elevenlabs.io before episode 3.
 
 Agent definitions live in `.claude/agents/` at the repository root, so every Claude Code session in this repo can run them by name.
 
