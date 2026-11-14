@@ -844,6 +844,7 @@
       f = cut(R(1220, 662, 560, 26, mixHex("#6f4a3a", "#ffffff", 0.16), 6) + R(1234, 688, 532, 130, "#6f4a3a", 0) + R(1260, 708, 150, 100, "#573a2e", 4, `stroke="${INK}" stroke-width="4"`) + R(1590, 708, 150, 100, "#573a2e", 4, `stroke="${INK}" stroke-width="4"`)) + K.lamp(1260, 664, 0.8, n, glow) +
         (o.bare_desk ? "" : K.namePlate(1420, 664, 0.45, "CFO", true) + K.calc(1620, 664, 0.5, "4.0") + K.deskPhone(1700, 664, 0.4, o.note || "TUE 5:00 PM")) + D.fgPlant(-30, 1090, 1.5);
       if (n) b += pool(1500, 830, 520, 50, glow, 0.2);
+      if (o.dark_right) f += `<rect x="900" y="-20" width="1100" height="1120" fill="#0c0a1c" opacity=".82"/><rect x="700" y="-20" width="200" height="1120" fill="#0c0a1c" opacity=".4"/>`;
       return { back: b, front: f };
     },
 
@@ -1136,7 +1137,7 @@
       if (o.who !== false) b += cut(`<g transform="translate(${bx + 260},760)"><circle cx="0" cy="-440" r="52" fill="#1b1d36" ${st}/><path d="M-90,-380 L90,-380 L100,-120 L-100,-120Z" fill="#1b1d36" ${st}/>${R(-60, -120, 50, 120, "#10132a", 8)}${R(10, -120, 50, 120, "#10132a", 8)}<path d="M60,-340 L80,-440 L40,-470" fill="none" stroke="#1b1d36" stroke-width="24" stroke-linecap="round"/>${R(18, -500, 44, 24, "#3d4a5c", 8)}</g>`);
       b += K.glass(bx + 24, 240, bw - 48, 520, n ? 12 : 12) + `<g class="stampg" transform="rotate(-8 ${bx + 260} 500)">${R(bx + 100, 450, 320, 100, "none", 8, `stroke="#e0262b" stroke-width="9"`)}${T(bx + 260, 520, o.stamp || "NO COMMENT", 44, "#e0262b", "middle", 'font-weight="800"')}</g>`;
       b += K.post(240, 790, 540, n, "#ffd27a") + cut(R(1640, 620, 110, 150, "#4f8f5b", 12)) + K.walker(1500, 800, 0.9, "#4a4066", "#e0262b") + K.walker(1760, 820, 0.8, "#2c5490", "#f0b429") + K.walker(420, 840, 1, "#3d4a5c", "#3d6fb6").slice(0, 0);
-      return { back: b, front: K.rain(13) + `<g class="fg">${cut(R(-10, 600, 36, 480, "#3d4a5c", 6))}</g>` };
+      return { back: b, front: (o.rain === false ? "" : K.rain(13)) + `<g class="fg">${cut(R(-10, 600, 36, 480, "#3d4a5c", 6))}</g>` };
     },
 
     // @cfo-sets
@@ -1618,6 +1619,91 @@
   Object.assign(SET_AMBIENCE, { weather_station: "outdoors", auction_house: "crowd", hospital: "room", radio_studio: "studio", sports_bar: "crowd", lighthouse: "outdoors", phone_booth: "rain" });
   Object.assign(NIGHT_FIRST, { auction_house: 1, radio_studio: 1, sports_bar: 1, lighthouse: 1 });
 
+  // ---- more dressings (CFO episode) ----
+  const baseWithDress = (name, o, night) => { const out = SETS[name](o), x = DRESS[name] ? DRESS[name](o, pal(o, SET_PALETTE[name], night), night) : {}; return { back: (out.back || "") + (x.back || ""), front: (out.front || "") + (x.front || "") }; };
+  // office: after_hours (blue: an empty office, one monitor with a red line, a plant that wilts) and cubicle (slate: Benny's cubicle)
+  VARIANT.office = {
+    after_hours(o) { const P = pal(o, "blue", true), r = rng(171); let b = K.room(P, 800, 0) + K.cityWin(1200, 110, 560, 380, true, 81, false);
+      for (let i = 0; i < 3; i++) for (let j = 0; j < 4; j++) b += cut(R(90 + j * 290 - i * 20, 560 + i * 70, 220, 14, "#56606f", 4) + R(110 + j * 290 - i * 20, 574 + i * 70, 14, 60, INK, 2, "") + R(276 + j * 290 - i * 20, 574 + i * 70, 14, 60, INK, 2, "")) + (i * 4 + j === 5 ? "" : K.screen(130 + j * 290 - i * 20, 480 + i * 70, 120, 80, "#2c3766", false, 0)) ;
+      b += K.tube(500, 40, 400, false) + `<g class="tick">${K.tube(1300, 40, 400, true)}</g>` + D.clock(700, 200, 50, P) + D.cable(0, 1920, 90, P) + D.vent(960, 36) + D.poster(240, 210, 140, 180, P, -3) + D.switch(1000, 560) + `<path d="M0,800 L1920,800" ${st}/>`;
+      const f = cut(R(760, 780, 760, 30, "#6f452c", 8) + R(790, 810, 700, 300, "#573a2e", 0)) + K.screen(980, 540, 340, 220, "#ff5a4f", true, 0).replace("</g></g>", "") .slice(0, 0) + cut(R(980, 540, 340, 220, INK, 10) + R(992, 552, 316, 196, "#2b0f14", 4, "") + `<path class="tick" d="M1010,720 L1070,660 L1130,690 L1190,610 L1280,590" fill="none" stroke="#ff5a4f" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>` + R(1140, 760, 20, 24, INK, 0, "")) + `<g class="pulse">${R(900, 520, 500, 280, "rgba(255,90,80,.12)", 14, "")}</g>` +
+        `<g class="wilt">${cut(`<g transform="translate(1440,780)"><path d="M-46,-66 L46,-66 L34,0 L-34,0Z" fill="#c9705a" ${st}/><path d="M0,-66 Q-30,-130 -60,-120 M0,-66 Q10,-140 40,-130 M0,-66 Q50,-100 80,-70" fill="none" stroke="#3f9b5a" stroke-width="10" stroke-linecap="round"/><path d="M-60,-120 q-20,-4 -30,20 M40,-130 q20,0 24,24" fill="none" stroke="#7a8a3c" stroke-width="8" stroke-linecap="round"/></g>`)}</g>` + D.mug(1080, 782, P).slice(0, 0);
+      return { back: b + halo(1150, 650, 420, "#ff5a4f", 0.12), front: f }; },
+    cubicle(o) { const n = !!o.night, P = pal(o, "slate", n); let b = K.room(P, 800, 0) + `<path d="M0,800 L1920,800" ${st}/>` + K.tube(600, 40, 400, true) + D.cable(0, 1920, 80, P);
+      for (const x of [-20, 1480]) b += cut(R(x, 260, 460, 540, mixHex(P.wall, "#8d9199", 0.3), 12) + R(x + 20, 280, 420, 40, "rgba(255,255,255,.08)", 6, ""));
+      b += cut(R(440, 220, 1040, 580, mixHex(P.wall, "#8d9199", 0.15), 8)) + D.poster(520, 280, 150, 190, P, -3) + D.clock(1360, 330, 44, P) + cut(R(740, 300, 200, 160, "#f6f1e4", 3) + [0, 1, 2, 3].map((i) => R(756 + (i % 2) * 90, 316 + Math.floor(i / 2) * 70, 76, 56, ["#ffe14d", "#7fd0f0", "#f08a7a", "#9fd8a8"][i], 1, `stroke="${INK}" stroke-width="3"`)).join("")) + D.frame(1010, 300, 120, 100, "chart", P) + `<circle cx="1250" cy="420" r="0"/>` + D.plant(1440, 800, 0.5, P).slice(0, 0);
+      const f = cut(R(420, 700, 1080, 30, "#c9a36b", 8) + R(440, 730, 1040, 380, "#8d9199", 0)) + K.lamp(560, 702, 1.0, n, "#ffe9b0") + K.screen(840, 480, 380, 220, "#8fe0b0", true, 5) + R(1010, 700, 40, 14, INK, 0, "") + cut(R(820, 730, 420, 40, "#2b3242", 10) + [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => R(836 + i * 40, 740, 30, 10, "#c9ced6", 2, "")).join("")) + D.mug(1380, 702, P) + cut(R(1280, 650, 100, 50, "#ece6d3", 3) + R(1290, 626, 100, 30, "#f6f1e4", 3));
+      return { back: b, front: f }; },
+  };
+  // back_shop: engraver (ochre, day: blank brass plates, an engraving machine, a shop window) and print (olive, night: a copier, a counter under one lamp)
+  VARIANT.back_shop = {
+    engraver(o) { const n = !!o.night, P = pal(o, "ochre", n); let b = K.room(P, 800, 130);
+      b += K.cityWin(1200, 140, 560, 380, n, 91, false).replace(/#bfe0ea/g, "#dbe9ee") + K.board(1260, 70, 440, 54, "ENGRAVING", "#f6f1e4", INK, 36) + R(1200, 300, 560, 12, "none", 0, "") + D.shelf(120, 330, 500, P, 31) + D.shelf(120, 470, 500, P, 32) + D.clock(700, 200, 46, P) + D.poster(150, 130, 130, 150, P, -3) + D.cable(0, 1920, 60, P) + D.vent(900, 30) + D.switch(1100, 600);
+      for (let i = 0; i < 8; i++) b += cut(R(130 + i * 62, 560, 54, 34, "#c9a24a", 3)).slice(0, 0);
+      b += cut(R(700, 520, 400, 280, "#56606f", 10) + R(740, 560, 320, 70, "#3d4a5c", 6) + `<g class="pulse"><circle cx="900" cy="700" r="30" fill="#e0262b" ${st}/></g>` + R(820, 630, 160, 24, "#c9ced6", 4)) + cut(R(1180, 640, 300, 24, "#c9a24a", 4) + R(1200, 600, 260, 40, "#c9a24a", 4));
+      const f = cut(R(-20, 800, 2000, 36, "#8a5a3c", 8) + R(0, 836, 1940, 300, "#6f452c", 0)) + [0, 1, 2, 3, 4, 5].map((i) => cut(R(180 + i * 130, 756, 110, 44, "#c9a24a", 3) + R(190 + i * 130, 764, 90, 8, "#b08a30", 1, "") + `<circle cx="${192 + i * 130}" cy="${790}" r="3" fill="${INK}"/>`)).join("") + cut(R(1300, 740, 200, 60, "#c9ced6", 6) + R(1320, 710, 160, 36, "#8d9199", 6)) + D.fgPlant(1890, 1090, 1.2);
+      return { back: b, front: f }; },
+    print(o) { const n = o.night !== false, P = pal(o, "olive", n); let b = K.room(P, 800, 130);
+      b += cut(R(160, 300, 560, 500, "#d8d8d0", 10) + R(190, 330, 500, 120, "#9aa0b4", 6) + K.screen(220, 350, 160, 80, "#8fe0b0", true, 2).slice(0, 0) + [0, 1, 2].map((i) => R(420 + i * 80, 350, 60, 40, ["#e0262b", "#f0b429", "#46e08a"][i], 6)).join("") + R(190, 470, 500, 200, "#bfc4cc", 6) + `<g class="tick">${R(210, 700, 460, 14, "#fff6c8", 4)}</g>`) + K.board(220, 232, 300, 50, "COPY  PRINT", "#f6f1e4", INK, 30);
+      b += cut(R(900, 340, 360, 460, "#8a5a3c", 6) + [0, 1, 2].map((i) => R(920, 360 + i * 140, 320, 120, "#6f452c", 4, `stroke="${INK}" stroke-width="4"`)).join("")) + D.shelf(1340, 340, 500, P, 41) + D.shelf(1340, 480, 500, P, 42) + D.clock(1000, 170, 44, P) + D.cable(0, 1920, 60, P) + D.vent(500, 30) + hang(1000, 90, 50, n, "#fff1b0") + (n ? pool(1000, 800, 420, 30, "#fff1b0", 0.25) : "");
+      b += `<g class="pass">${cut(R(2100, 700, 90, 60, "#f6f1e4", 3))}</g>`;
+      const f = cut(R(-20, 800, 2000, 36, "#8a5a3c", 8) + R(0, 836, 1940, 300, "#6f452c", 0)) + cut(R(300, 740, 200, 60, "#ece6d3", 3) + R(310, 712, 200, 36, "#f6f1e4", 3)) + K.lamp(1500, 802, 1.0, n, "#ffe9b0");
+      return { back: b, front: f }; },
+  };
+  // night_office: recruiter (slate: a corkboard with one card WANTED, a take-a-number dispenser showing 001, a visitor's chair)
+  VARIANT.night_office = {
+    recruiter(o) { const n = o.night !== false, P = pal(o, "slate", n); let b = K.room(P, 800, 130);
+      b += cut(R(560, 130, 800, 430, "#8a5a3c", 8) + R(580, 150, 760, 390, "#c9a36b", 4)) + cut(`<g transform="rotate(-2 960 340)">${R(780, 220, 360, 240, "#f6f1e4", 3)}${T(960, 290, "WANTED", 64, "#e0262b", "middle", 'font-weight="800"')}${T(960, 350, "CEO", 70)}${T(960, 410, "INSIDE OR OUTSIDE", 28)}${T(960, 442, "APPLY WITHIN", 22)}<circle cx="960" cy="232" r="9" fill="#e0262b" ${st} stroke-width="3"/></g>`) + [[620, 190], [640, 400], [1240, 170], [1240, 420]].map(([x, y], i) => cut(`<g transform="rotate(${i * 4 - 6} ${x} ${y})">${R(x, y, 90, 70, ["#ffe14d", "#7fd0f0", "#f08a7a", "#9fd8a8"][i], 1, `stroke="${INK}" stroke-width="3"`)}</g>`)).join("");
+      b += D.clock(1560, 200, 54, P) + D.frame(120, 200, 200, 150, "chart", P) + D.cable(0, 1920, 70, P) + D.vent(900, 30) + D.switch(1480, 560) + K.tube(900, 36, 500, true) + cut(R(140, 540, 180, 260, "#6b7384", 6) + R(150, 560, 160, 60, "#8d9199", 4) + R(150, 640, 160, 60, "#8d9199", 4)) + D.plant(1840, 800, 0.9, P);
+      b += cut(R(1560, 420, 230, 330, "#e0262b", 14) + R(1580, 440, 190, 130, "#0f1b2a", 8) + `<g class="tick">${T(1675, 540, "001", 100, "#ffe14d", "middle", 'font-family="IBM Plex Mono" font-weight="700"')}</g>` + R(1620, 600, 110, 36, "#f6f1e4", 4) + R(1640, 650, 70, 90, "#f6f1e4", 3)) + K.board(1560, 370, 230, 40, "TAKE A NUMBER", "#f6f1e4", INK, 20);
+      return { back: b, front: K.pchair(300, 1040, 1.2, "#3d6fb6") + cut(R(-20, 1010, 2000, 100, "#2b3242", 0)).slice(0, 0) }; },
+  };
+  // pitch_stage: earnings (plum: a dark conference room, a screen EARNINGS CALL in a projector beam, an empty lectern with a microphone that squeals at `squeal` seconds)
+  VARIANT.pitch_stage = {
+    earnings(o) { const P = pal(o, "plum", true); let b = K.room(P, 800, 0) + R(0, 0, 1920, 1080, "rgba(8,6,20,.35)", 0, "") + `<path d="M0,800 L1920,800" ${st}/>`;
+      b += cut(R(460, 150, 1000, 480, "#f6f1e4", 6)) + R(480, 170, 960, 440, "#16304a", 0, "") + T(960, 340, "EARNINGS CALL", 100, "#f6f1e4", "middle", 'font-weight="800"') + T(960, 450, "Q3  FISCAL 2027", 50, "#9fb8d8") + `<path d="M500,520 L900,520" stroke="#46e08a" stroke-width="8"/>`;
+      b += `<g class="pulse">${beam(960, 70, 90, 1200, 740, "#cfe8ff", 0.14)}</g>` + cut(R(900, 20, 120, 80, "#3d4a5c", 10) + R(920, 90, 80, 24, "#2b2b33", 6)) + K.dust(300, 150, 1300, 600, 7);
+      for (let i = 0; i < 3; i++) for (let j = 0; j < 7; j++) b += K.pchair(160 + j * 250 + (i % 2) * 60, 800 + i * 0, 0.0001, "#000").slice(0, 0);
+      b += [0, 1, 2, 3].map((i) => cut(R(120 + i * 460, 700, 150, 100, "#2b3242", 10) + R(100 + i * 460, 690, 190, 16, "#3d4a5c", 6))).join("") + D.cable(0, 1920, 880, P).slice(0, 0) + D.clock(1700, 200, 46, P);
+      const f = cut(`<path d="M780,1090 L820,640 L1100,640 L1140,1090Z" fill="#6f452c" ${st}/>` + R(800, 610, 320, 36, "#8a5a3c", 8) + R(900, 700, 120, 80, "#573a2e", 6)) + `<g class="sq" data-sq="${o.squeal == null ? "" : o.squeal}">${cut(`<path d="M960,610 L960,500 Q960,440 1040,440" fill="none" stroke="${INK}" stroke-width="14"/><path d="M960,610 L960,500 Q960,440 1040,440" fill="none" stroke="#8d9199" stroke-width="7"/><circle cx="1060" cy="448" r="28" fill="#2b2b33" ${st}/><path d="M1040,448 L1080,448" stroke="#8d9199" stroke-width="5"/>`)}<g class="sqr" style="opacity:0"><circle cx="1060" cy="448" r="60" fill="none" stroke="#fff" stroke-width="6"/><circle cx="1060" cy="448" r="100" fill="none" stroke="#fff" stroke-width="4"/></g></g>`;
+      return { back: b, front: f }; },
+  };
+  // farmers_market at night (olive, string lights, two stools), bank counter (a desk sign and the wall chart that runs off), street shuttered, kitchen jar, train_platform night, stadium scoreboard, bedroom dusk
+  VARIANT.farmers_market = {
+    night(o) { const oo = Object.assign({}, o, { night: true, palette: o.palette || "olive" }), x = baseWithDress("farmers_market", oo, true), P = pal(oo, "olive", true);
+      return { back: x.back + `<path d="M0,120 Q480,260 960,120 Q1440,260 1920,120" fill="none" stroke="${INK}" stroke-width="5"/>` + Array.from({ length: 16 }, (_, i) => `<circle class="tick" cx="${60 + i * 120}" cy="${i % 2 ? 182 : 150}" r="14" fill="#fff1b0" stroke="${INK}" stroke-width="4"/>${halo(60 + i * 120, i % 2 ? 182 : 150, 60, "#fff1b0", 0.2)}`).join("") + K.stool(700, 900, 1.1, P.accent) + K.stool(1240, 900, 1.1, P.accent), front: x.front }; },
+  };
+  VARIANT.bank = {
+    counter(o) { if (!(o.sign || o.chart)) return baseWithDress("bank", o, o.night !== false); const n = !!o.night, P = pal(o, "blue", n); let b = K.room(P, 800, 150);
+      b += K.cityWin(1400, 130, 380, 320, n, 95, false) + D.clock(1150, 180, 48, P) + D.plant(100, 800, 1, P) + D.cable(0, 1920, 60, P) + D.vent(700, 30);
+      b += cut(R(260, 120, 760, 560, "#f6f1e4", 6)) + `<path d="M300,620 L1000,620 M300,540 L1000,540 M300,460 L1000,460 M300,380 L1000,380 M300,300 L1000,300 M300,220 L1000,220" stroke="rgba(27,29,54,.15)" stroke-width="3"/>` + T(280, 260, "$365", 36, INK, "start") + T(280, 660, "$170", 36, "#e0262b", "start") + `<path class="chart" d="M360,260 L520,300 L700,420 L860,560 L960,640 L990,760" fill="none" stroke="#e0262b" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>` + `<path d="M990,760 L1010,800 L970,790Z" fill="#e0262b"/>`;
+      const f = cut(R(-20, 780, 2000, 36, "#8a5a3c", 8) + R(0, 816, 1940, 300, "#6f452c", 0)) + K.board(700, 840, 520, 90, o.name || "ANALYST", "#f6f1e4", INK, 40) + cut(`<g transform="translate(1500,780)">${R(-110, -90, 220, 90, "#f6f1e4", 4)}${T(0, -30, o.sign || "HSBC", 52, "#e0262b")}${R(-30, 0, 60, 10, "#8d9199", 2)}</g>`) + D.mug(400, 782, P) + K.lamp(220, 782, 0.8, n, "#ffe9b0");
+      return { back: b, front: f }; },
+  };
+  VARIANT.street = {
+    shuttered(o) { const P = pal(o, "ochre", true), r = rng(181); let b = R(0, 0, 1920, 1080, "#f3a870", 0, "") + R(0, 0, 1920, 260, "#6b3f5a", 0, "") + R(0, 260, 1920, 140, "#c9705a", 0, "") + `<circle cx="1500" cy="420" r="70" fill="#ffb347" ${st}/>`;
+      const sh = ["PHARMACY", "BAKERY", "BOOKS", "CAFE"]; sh.forEach((t, i) => { const x = i * 480 + 10; b += cut(R(x, 220, 460, 620, ["#a05a3c", "#7a4a50", "#8a6a3c", "#6a5060"][i], 0) + R(x + 20, 520, 420, 300, "#8d9199", 4) + [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((k) => `<path d="M${x + 20},${540 + k * 22} L${x + 440},${540 + k * 22}" stroke="${INK}" stroke-width="3"/>`).join("") + R(x + 40, 300, 380, 150, "#2b2433", 6)) + K.board(x + 80, 440 - 150 + 10, 300, 60, t, "#f6f1e4", INK, 36).slice(0, 0) + K.board(x + 90, 240, 280, 56, t, "#f6f1e4", INK, 34); });
+      b += R(0, 840, 1920, 90, "#a7948a", 0, "") + `<path d="M0,840 L1920,840 M0,930 L1920,930" ${st}/>` + R(0, 930, 1920, 150, "#3d3a4f", 0, "") + [0, 1, 2, 3, 4, 5, 6].map((i) => R(60 + i * 290, 1000, 150, 14, "#f6f1e4", 0, "")).join("") + K.post(1650, 880, 640, true, "#ffb347") + K.post(200, 880, 600, false) + `<g class="pass">${cut(`<path d="M2100,880 q30,-40 60,0 l-10,40 l-40,0Z" fill="#8d8a7e" ${st}/>`)}</g>` + `<path d="M300,420 l60,0" stroke="${INK}" stroke-width="0"/>`;
+      return { back: b, front: cut(R(1780, 850, 90, 120, "#3d6fb6", 12)) + `<g class="fg">${cut(R(-10, 700, 34, 380, "#3d4a5c", 6))}</g>` }; },
+  };
+  VARIANT.kitchen = {
+    jar(o) { const x = baseWithDress("kitchen", Object.assign({}, o, { palette: o.palette || "amber" }), false); return { back: x.back + cut(R(760, 700, 400, 24, "#8a5a3c", 6)) + K.jar(960, 700, 2.3, true) + K.board(790, 560, 0, 0, "", "none", INK, 1).slice(0, 0), front: x.front }; },
+  };
+  VARIANT.train_platform = {
+    night(o) { const x = SETS.train_platform(Object.assign({}, o, { night: true })); return { back: x.back.replace(/#161b3c/g, "#12303a") + K.board(1100, 160, 380, 150, "", "#0f1b2a", INK, 10) + T(1290, 210, "DEPARTS", 30, "#c9cfe6") + `<g class="tick">${T(1290, 280, "4:20", 84, "#ffe14d", "middle", 'font-family="IBM Plex Mono" font-weight="700"')}</g>`, front: x.front || "" }; },
+  };
+  VARIANT.stadium = {
+    scoreboard(o) { const x = SETS.stadium(Object.assign({}, o, { night: true })); const P = pal(o, "green", true);
+      return { back: x.back + cut(R(360, 90, 1200, 330, "#10182a", 12)) + R(380, 110, 1160, 290, "#0b1220", 6, "") + T(660, 180, "EXPECTED", 48, "#c9cfe6") + T(1260, 180, "RESULT", 48, "#c9cfe6") + `<path d="M960,130 L960,370" stroke="#3d4a5c" stroke-width="6"/>` + `<g class="tick" id="sbcount">${T(660, 330, "$109B", 120, "#46e08a", "middle", 'font-family="IBM Plex Mono" font-weight="700"')}</g>` + T(1260, 330, "-", 120, "#3d4a5c", "middle", 'font-family="IBM Plex Mono" font-weight="700"') + T(960, 390, "MARGIN ~74%", 30, "#9fb8d8") + [0, 1, 2, 3].map((i) => `<circle class="pulse" cx="${420 + i * 360}" cy="60" r="26" fill="#fff6d8" ${st} stroke-width="4"/>`).join("") + halo(560, 60, 300, "#fff6d8", 0.3) + halo(1360, 60, 300, "#fff6d8", 0.3), front: x.front || "" }; },
+  };
+  VARIANT.bedroom = {
+    dusk(o) { const x = baseWithDress("bedroom", Object.assign({}, o, { palette: o.palette || "pink", night: false }), false);
+      return { back: x.back + `<rect x="0" y="0" width="1920" height="1080" fill="#e87aa8" opacity=".2" style="mix-blend-mode:multiply"/>` + D.poster(120, 140, 140, 190, pal(o, "pink", false), -4) + D.poster(300, 180, 120, 160, pal(o, "pink", false), 5) + cut(R(1360, 560, 440, 24, "#8a5a3c", 6) + R(1380, 584, 14, 220, INK, 2, "") + R(1766, 584, 14, 220, INK, 2, "")) + K.screen(1420, 360, 340, 200, "#46e08a", true, 5) + R(1570, 560, 40, 14, INK, 0, "") + halo(1590, 460, 380, "#46e08a", 0.2), front: x.front || "" }; },
+  };
+
+  Object.assign(SET_AMBIENCE, { "office:after_hours": "night", "office:cubicle": "office", "back_shop:engraver": "room", "back_shop:print": "machine", "night_office:recruiter": "office", "pitch_stage:earnings": "studio", "farmers_market:night": "night", "bank:counter": "room",
+    "street:shuttered": "street", "kitchen:jar": "room", "train_platform:night": "street", "stadium:scoreboard": "crowd", "bedroom:dusk": "night" });
+
   // @cfo-reg
   // Draw a set for a shot: the set itself, its dressing in its palette, or a palette wash over a set that draws its own colours.
   function draw(name, o) {
@@ -1652,6 +1738,8 @@
     // the ON AIR light flickers on at data-air; the lighthouse beam sweeps
     svg.querySelectorAll(".air").forEach((p) => { const a = p.getAttribute("data-air"); if (a === "" || a == null) return; const t = t0 + parseFloat(a); tl.set(p, { opacity: 0.1 }, t0); [0, 0.12, 0.3, 0.38, 0.6].forEach((o2, i) => tl.set(p, { opacity: i % 2 ? 0.25 : 1 }, t + o2)); tl.set(p, { opacity: 1 }, t + 0.8); });
     svg.querySelectorAll(".beam").forEach((p) => { gsap.set(p, { svgOrigin: "960 380", smoothOrigin: false }); tl.fromTo(p, { rotation: -14 }, { rotation: 14, duration: 3.2, yoyo: true, repeat: Math.ceil(d / 3.2) + 1, ease: "sine.inOut", immediateRender: false }, t0); });
+    svg.querySelectorAll(".sq").forEach((p) => { const a = p.getAttribute("data-sq"); if (a === "" || a == null) return; const t = t0 + parseFloat(a), rg = p.querySelector(".sqr"); tl.fromTo(p, { x: -4 }, { x: 4, duration: 0.05, yoyo: true, repeat: 17, ease: "none", immediateRender: false }, t); tl.set(p, { x: 0 }, t + 0.95); if (rg) { gsap.set(rg, { transformOrigin: "50% 50%", smoothOrigin: false }); tl.set(rg, { opacity: 1 }, t); tl.fromTo(rg, { scale: 0.5 }, { scale: 1.5, duration: 0.9, ease: "power1.out", immediateRender: false }, t); tl.set(rg, { opacity: 0 }, t + 0.9); } });
+    svg.querySelectorAll(".wilt").forEach((p) => { gsap.set(p, { svgOrigin: "1440 780", smoothOrigin: false }); tl.fromTo(p, { rotation: 0, scaleY: 1 }, { rotation: 14, scaleY: 0.86, duration: Math.max(d, 2), ease: "power1.inOut", immediateRender: false }, t0); });
     svg.querySelectorAll(".fg").forEach((p) => tl.fromTo(p, { x: 28 }, { x: -28, duration: d, ease: "none", immediateRender: false }, t0));
     svg.querySelectorAll(".tick").forEach((k, i) => { for (let t = t0 + 0.4 + (i % 6) * 0.31; t < t1; t += 1.7 + (i % 4) * 0.4) { tl.set(k, { opacity: 0.35 }, t); tl.set(k, { opacity: 1 }, t + 0.12); } });
   }

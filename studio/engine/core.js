@@ -114,8 +114,8 @@
   // "frame": "ots": over the shoulder of the listener, aimed at the speaker. "ots": { "speaker": WHO, "listener": WHO } picks them;
   // else the speaker is the first figure that speaks and the listener the next person in the shot.
   function otsPick(s) {
-    const A = (s.actors || []).map((a, i) => ({ a, i })).filter((x) => !x.a.thing), want = s.ots || {};
-    const sp = A.find((x) => x.a.who === want.speaker) || A.find((x) => (x.a.speaks || []).length) || A[0];
+    const all = (s.actors || []).map((a, i) => ({ a, i })), A = all.filter((x) => !x.a.thing), want = s.ots || {};
+    const sp = all.find((x) => (x.a.who || x.a.thing) === want.speaker) || all.find((x) => (x.a.speaks || []).length) || A[0]; // a living thing may be the speaker (the listener is always a person)
     const li = A.find((x) => x !== sp && (!want.listener || x.a.who === want.listener));
     return sp ? { sp, li } : null;
   }
@@ -168,7 +168,7 @@
     const w = div("world", sh), tilt = div("tilt", w), inner = div("inner", tilt); world(inner, s, t0, t1, null, ots && ots.li ? ots.li.i : -1);
     const lim = (v, h) => Math.max(-h, Math.min(h, v));
     if (ots) { // the speaker's face a third of the way in, on their own side; the listener's shoulder fills the other lower corner
-      const a = ots.sp.a, sc = a.scale || 1, x = a.x != null ? a.x : 960, y = a.y || 900, k = V ? 1.5 : 1.65, side = x >= 960 ? 1 : -1, hy = y - 520 * sc;
+      const a = ots.sp.a, sc = a.scale || 1, x = a.x != null ? a.x : 960, y = a.y || 900, k = V ? 1.5 : 1.65, side = x >= 960 ? 1 : -1, hy = a.thing ? y + (Rig.THINGS[a.thing] || Rig.THINGS.box)(a).face[1] * sc : y - 520 * sc;
       inner.style.transformOrigin = W / 2 + "px 540px";
       inner.style.transform = `scale(${k}) translate(${lim(960 - x + (230 * side) / k, 960 * (1 - 1 / k)).toFixed(1)}px, ${lim(540 - hy - 110 / k, 540 * (1 - 1 / k)).toFixed(1)}px)`;
       if (ots.li) otsLayer(w, ots.li, side, t0, t1);
