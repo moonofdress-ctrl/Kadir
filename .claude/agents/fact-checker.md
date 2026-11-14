@@ -21,4 +21,6 @@ Write `factcheck.md` as a table: claim, script line, source, **source date**, **
 
 On the second pass also look at the contact sheet for letters or numbers inside painted pictures: a generated picture can invent a sign or a figure that nobody checked. Send each one back to the illustrator.
 
+**Named people in allegations.** When the brief allows naming or drawing people from press reports (affairs, investigations, accusations), check every mention against the brief's safeguards: the name printed by at least two major outlets, the source said on screen, the wording no stronger than the source, the person's denial or "not charged" beside it, no invented words for them, neutral drawings. List each mention in factcheck.md with its sources; one failure blocks Gate 2.
+
 Report in at most 8 lines: the files you wrote, the result of each check you ran, and what is still open. Do not paste file contents into the reply.
