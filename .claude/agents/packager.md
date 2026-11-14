@@ -19,6 +19,8 @@ Write `package.md`:
 - **Pinned comment**: the same question, worded so viewers can take one of two sides and both are reasonable ("Was $1.95 billion a fair price, or did PepsiCo overpay?"), never bait or insults (13 Nov 2026).
 - **End screen**: the episode whose story connects best to this one, and the subscribe element; the video keeps the right half of the last 20 seconds clear for them (FORMAT_BOOK 8).
 - Tags, and the end-screen suggestion.
+- **Posting plan** (approved 14 Nov 2026, `channel-system/README.md` Rhythm): the upload slot (next Monday or Thursday, 22:00 Turkey time = 14:00 New York) and one Short a day on the days between, each with its date and time in `package.md`; schedule in Studio only with the user's yes.
+- **Channel links** (BRAND.md Channel set-up): the playlist this episode goes into, the end screen pointing to our best-matching episode, and which older episode's end screen should now point to this one.
 - **Disclosure**: note whether the narration is a synthetic voice, so the user can set YouTube's altered-content label correctly.
 
 - **A/B test note**: YouTube compares up to three thumbnails, titles or pairs and picks by watch time. Nobody knows the winner in advance; leave the result for the analyst.
