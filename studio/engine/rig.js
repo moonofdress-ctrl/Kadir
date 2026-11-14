@@ -250,7 +250,7 @@
     if (ex.includes("earrings")) { const ex2 = headW(G.J, 118); s += `<circle cx="${f1(-ex2 - 4)}" cy="${G.yE + 42}" r="6" fill="#f0b429" ${st4}/><circle cx="${f1(ex2 + 2)}" cy="${G.yE + 42}" r="5" fill="#f0b429" ${st4}/>`; }
     return s;
   }
-  function head2(c, G) {
+  function head2(c, G, back) {
     const J = G.J, sk = c.skin, sd = shade(sk, 0.18), hr = hair2(c, G), big = c.ears === "big" ? 1.25 : c.ears === "small" ? 0.85 : 1, ey = G.yE + 16;
     const ear = (s) => { const x = s * (headW(J, 110) - 6), k = s > 0 ? 0.82 : 1;
       return `<g transform="translate(${f1(x)},${f1(ey)}) scale(${s * k},1)"><ellipse cx="6" cy="0" rx="${f1(14 * big)}" ry="${f1(23 * big)}" fill="${s > 0 ? sd : sk}" stroke="${INK}" stroke-width="5.5"/>${line(`M${f1(4 * big)},${f1(-12 * big)} Q${f1(15 * big)},${f1(-3 * big)} ${f1(6 * big)},${f1(10 * big)}`, 3.5)}</g>`; };
@@ -260,7 +260,14 @@
         <g class="mouth" transform="translate(${tq},${f1(G.yM)})">${mouths}</g>${faceWear(c, G)}
         <path class="sweat" d="M${tq + 62},${G.yE - 40} Q${tq + 52},${G.yE - 22} ${tq + 62},${G.yE - 16} Q${tq + 72},${G.yE - 22} ${tq + 62},${G.yE - 40}Z" fill="#7fd0f0" ${st4}/>
         <path class="tear" d="M${tq - 30},${G.yE + 14} Q${tq - 38},${G.yE + 28} ${tq - 30},${G.yE + 33} Q${tq - 22},${G.yE + 28} ${tq - 30},${G.yE + 14}Z" fill="#7fd0f0" ${st4}/>
-      </g>` + hr.front + headWear(c, G) };
+      </g>` + (back ? backHair(c, G) : hr.front + headWear(c, G)) };
+  }
+  // Seen from behind (the listener of an over-the-shoulder shot, a figure that turns away): hair over the whole back of the head.
+  function backHair(c, G) {
+    const J = G.J, k = G.hw / 76, bald = c.hairStyle === "bald" || c.hairStyle === "buzz", long = /long|wavy|bob|curly/.test(c.hairStyle || ""), nape = long ? G.hh + 10 : 150;
+    const half = J.filter((p) => p[1] < nape - 8).map(([x, y]) => [x * 1.07, y - 8]).concat([[headW(J, nape) * 0.9, nape], [0, nape + 8]]);
+    if (c.hairStyle === "cap") return toned(smooth(mv(both([[0, -24], [58, -14], [86, 22], [84, 60], [0, 62]].map(([x, y]) => [x * k, y])), 0, G.yT), true), c.cap || "#3d6fb6", { dx: 10 });
+    return bald ? "" : toned(smooth(mv(both(half), 0, G.yT), true), c.hair || "#2b2118", { dx: 12, inside: line(smooth(mv([[-30, 20], [-10, 60], [-16, 120]], 0, G.yT), false), 3, shade(c.hair || "#2b2118", 0.3)) + line(smooth(mv([[24, 16], [34, 70], [28, 126]], 0, G.yT), false), 3, shade(c.hair || "#2b2118", 0.3)) });
   }
 
   /* ---------------- torso and clothes ---------------- */
@@ -354,7 +361,7 @@
   }
 
   /* ---------------- arms and hands (drawn in the frame of the right arm: outward is +x, the arm hangs down +y) ---------------- */
-  function hands2(sk, k) {
+  function hands2(sk, k, need) {
     const s = `fill="${sk}" stroke="${INK}" stroke-width="4.5" stroke-linejoin="round"`, P = (pts) => `<path d="${smooth(pts, true)}" ${s}/>`, L = (d) => line(d, 2.5);
     const fin = (x, y, a, len) => `<rect x="-4.6" y="0" width="9.2" height="${len}" rx="4.6" transform="translate(${x},${y}) rotate(${a})" ${s}/>`;
     const H = {
@@ -365,9 +372,10 @@
       flat: P([[-14, -2], [-16, 18], [-14, 46], [-5, 58], [6, 58], [14, 46], [16, 18], [14, -2]]) + L("M-6,44 L-5,57 M1,45 L1,58 M7,44 L7,56") + P([[-12, 6], [-26, 16], [-29, 24], [-22, 26], [-12, 20]]),
       grip: P([[-20, -16], [-23, 2], [-19, 18], [0, 23], [19, 18], [23, 2], [20, -16], [0, -21]]) + L("M-2,-8 L19,-8 M-2,2 L21,2 M-2,12 L18,12") + P([[-20, -10], [-8, -20], [8, -18], [6, -12], [-10, -6]]),
     };
-    return Object.keys(H).map((n) => `<g class="hs hs-${n}" data-k="${n}"><g transform="scale(${k})">${H[n]}</g></g>`).join("");
+    // only the hand shapes this figure's poses use (a whole episode is in the page at once, so every node counts)
+    return Object.keys(H).filter((n) => !need || need.has(n)).map((n) => `<g class="hs hs-${n}" data-k="${n}"><g transform="scale(${k})">${H[n]}</g></g>`).join("");
   }
-  function arm2(c, G, T, side, prop) {
+  function arm2(c, G, T, side, prop, need) {
     const B = G.B, aw = B.aw, L1 = f1(G.L1), L2 = f1(G.L2), top = c.top || "#56606f", sk = c.skin, long = T.sleeves === "long", dk = shade(top, 0.24), style = c.topStyle;
     const fw = aw * 0.86, bw = aw * 0.7;
     const upper = long ? toned(capsule(aw, 0, L1), top, { dx: 7, dy: 0, sw: 6 })
@@ -379,7 +387,7 @@
       else fore += line(`M${f1(-fw)},${L2 - 16} L${f1(fw)},${L2 - 16}`, 3.5) + `<circle cx="${f1(fw * 0.4)}" cy="${L2 - 9}" r="3" fill="${tint(top, 0.6)}"/>`;
     } else fore += "";
     if (side === "l" && !long && (c.extras || []).includes("watch")) fore += shape(`M${f1(-bw - 2)},${L2 - 26} L${f1(bw + 2)},${L2 - 26} L${f1(bw + 2)},${L2 - 16} L${f1(-bw - 2)},${L2 - 16}Z`, "#d4a72c", 3);
-    return `<g class="sw"><g class="ua">${upper}<g transform="translate(0,${L1})"><g class="fa"><g class="fg">${fore}<g transform="translate(0,${L2})"><g class="wr">${prop}${hands2(sk, B.hand)}</g></g></g></g></g></g></g>`;
+    return `<g class="sw"><g class="ua">${upper}<g transform="translate(0,${L1})"><g class="fa"><g class="fg">${fore}<g transform="translate(0,${L2})"><g class="wr">${prop}${hands2(sk, B.hand, need)}</g></g></g></g></g></g></g>`;
   }
 
   /* ---------------- legs and shoes (frame of the right leg: the toe points outward, +x) ---------------- */
@@ -679,13 +687,14 @@
 
   // A person (see CAST): legs, then the upper body (torso, head, both arms), which breathes, sways, turns and leans.
   function makePerson(c, o) {
-    const G = geo(c), B = G.B, T = torso2(c, G, o), H = head2(c, G), g = document.createElementNS(NS, "g"); g.setAttribute("class", "actor cut");
+    const G = geo(c), B = G.B, T = torso2(c, G, o), H = head2(c, G, o.back), g = document.createElementNS(NS, "g"); g.setAttribute("class", "actor cut");
     const prop = o.prop && PROPS[o.prop] ? `<g class="prop">${PROPS[o.prop](o)}</g>` : "";
-    const arm = (s) => `<g class="arm a${s} hand h${s}" transform="translate(${f1(s === "l" ? -G.jx : G.jx)},${f1(G.jy)})${s === "l" ? " scale(-1,1)" : ""}">${arm2(c, G, T, s, s === "r" ? prop : "")}</g>`;
+    const need = handsNeeded(o, !!prop);
+    const arm = (s) => `<g class="arm a${s} hand h${s}" transform="translate(${f1(s === "l" ? -G.jx : G.jx)},${f1(G.jy)})${s === "l" ? " scale(-1,1)" : ""}">${arm2(c, G, T, s, s === "r" ? prop : "", need[s])}</g>`;
     const leg = (s) => `<g class="leg g${s}" transform="translate(${f1(s === "l" ? -G.hx : G.hx)},${G.yH})${s === "l" ? " scale(-1,1)" : ""}">${leg2(c, G, s)}</g>`;
     g.innerHTML = (`<ellipse cx="0" cy="4" rx="${B.sh + 46}" ry="17" fill="rgba(15,18,40,.25)"/>
       <g class="body"><g class="sway"><g class="legs">${leg("l")}${leg("r")}</g>
-        <g class="upper"><g class="hb">${H.back}</g><g class="torso">${T.behind}${T.body}${T.over}${T.lower}</g><g class="head">${H.main}${o.hat && HATS[o.hat] ? HATS[o.hat](G) : ""}</g>${arm("l")}${arm("r")}</g>
+        <g class="upper"><g class="hb">${H.back}</g><g class="torso">${T.behind}${T.body}${o.back ? "" : T.over}${T.lower}</g><g class="head">${H.main}${o.hat && HATS[o.hat] ? HATS[o.hat](G) : ""}</g>${arm("l")}${arm("r")}</g>
       </g></g>`).replace(/SKIN/g, c.skin);
     const q = (s) => g.querySelector(s), qa = (s) => Array.from(g.querySelectorAll(s));
     const armRef = (s) => { const r = q(".a" + s), hs = {}; r.querySelectorAll(".hs").forEach((e) => { hs[e.getAttribute("data-k")] = e; });
@@ -698,9 +707,20 @@
     a.hl = a.arms.l.root; a.hr = a.arms.r.root;
     Object.keys(MOUTHS2).forEach((k) => { a.mouth[k] = q(".m-" + k); });
     ["open", "wide", "half", "happy"].forEach((k) => { a.eyes[k] = qa(".e-" + k); });
-    if (o.shadow || c.flat) q(".face").style.display = "none"; // a silhouette: no face at all
+    if (o.shadow || c.flat || o.back) q(".face").style.display = "none"; // a silhouette or a figure seen from behind: no face at all
     return a;
   }
+
+  // The hand shapes a figure will show: those of its first pose and of every pose in its acts ("relax" always, "grip" when it holds a prop).
+  function handsNeeded(o, holds) {
+    const need = { l: new Set(["relax"]), r: new Set([holds ? "grip" : "relax"]) };
+    const add = (p) => { const P = POSES[p]; if (!P) return; need.l.add(P[0][2] || "relax"); need.r.add(holds ? "grip" : P[1][2] || "relax"); };
+    add(o.pose || (o.prop ? PROP_POSE[o.prop] || "phone" : "rest")); (o.acts || []).forEach((a) => { if (a && a.pose) add(a.pose); });
+    if (o.allHands) ["relax", "open", "point", "fist", "flat", "grip"].forEach((n) => { need.l.add(n); need.r.add(n); });
+    return need;
+  }
+  // Show one hand shape (or the nearest one drawn, if a pose was added after the figure was made).
+  const handName = (A, n) => (A.hs[n] ? n : A.hs.relax ? "relax" : Object.keys(A.hs)[0]);
 
   // A name nobody cast: a background person whose look is picked from the name (the same name always gives the same person).
   const hashName = (s) => { let h = 7; for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) % 100003; return h; };
@@ -738,7 +758,7 @@
     const S = armState(a, a.pose); a.armNow = S;
     ["l", "r"].forEach((s) => { const A = a.arms[s], p = S[s], L = a.legs[s];
       gsap.set(A.ua, { rotation: p.u }); gsap.set(A.fa, { rotation: p.f }); gsap.set(A.wr, { rotation: p.w });
-      Object.keys(A.hs).forEach((n) => { A.hs[n].style.opacity = n === p.hand ? 1 : 0; });
+      const hn = handName(A, p.hand); Object.keys(A.hs).forEach((n) => { A.hs[n].style.opacity = n === hn ? 1 : 0; });
       gsap.set(L.th, { rotation: -2 }); gsap.set(L.sh, { rotation: 1 }); gsap.set(L.ft, { rotation: 1 }); }); // feet a little apart, toes out
   }
 
@@ -769,7 +789,7 @@
       if (p.u !== q.u || p.f !== q.f || p.w !== q.w) ["u", "f", "w"].forEach((j) => { const el = j === "u" ? A.ua : j === "f" ? A.fa : A.wr, ant = p[j] - (q[j] - p[j]) * k;
         tl.fromTo(el, { rotation: p[j] }, { rotation: ant, duration: 0.08, ease: "sine.out", immediateRender: false }, t);
         tl.fromTo(el, { rotation: ant }, { rotation: q[j], duration: d, ease: "back.out(1.6)", immediateRender: false }, t + 0.08); });
-      if (p.hand !== q.hand) Object.keys(A.hs).forEach((n) => tl.set(A.hs[n], { opacity: n === q.hand ? 1 : 0 }, t + 0.08 + d * 0.3)); });
+      if (p.hand !== q.hand) { const hn = handName(A, q.hand); Object.keys(A.hs).forEach((n) => tl.set(A.hs[n], { opacity: n === hn ? 1 : 0 }, t + 0.08 + d * 0.3)); } });
     a.armNow = to; a.pose = name;
   }
 

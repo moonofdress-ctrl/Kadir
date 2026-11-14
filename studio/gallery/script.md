@@ -57,3 +57,47 @@ N: Explainer scenes, part 6.
 N: Explainer scenes, part 7.
 N: Explainer scenes, part 8.
 N: Explainer scenes, part 9.
+
+N: Rig v2. The cast as adults, with arms, hands and faces of their own.
+
+BENNY: Wait. I have elbows now?
+
+MARTHA: And I can finally hold my own bill.
+
+N: Every place has a colour of its own. A kitchen in amber.
+
+N: A boardroom in wood.
+
+N: The pitch stage at night, in plum.
+
+N: A night office in violet.
+
+N: A bank vault in brass.
+
+N: A supermarket in mint.
+
+N: A back shop in olive.
+
+N: A desk seen from above.
+
+N: Any older set takes a palette too.
+
+N: The same kitchen at night, in teal.
+
+N: Light through a window.
+
+N: The cold light of a screen.
+
+N: Two neon tubes.
+
+N: Plain daylight, warm, with no vignette.
+
+HAL: The deal is simple. You sell, I buy.
+
+BENNY: That is not a deal, Hal.
+
+N: A low angle looks up at power.
+
+N: A high angle looks down on the small.
+
+GALLERY_FOUNDER: I come from the storyboard's own cast table.

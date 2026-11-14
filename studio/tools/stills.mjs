@@ -57,7 +57,7 @@ async function shoot(url, file, width, height, scale = 1, ready = null) {
     if (ready) await p.waitForSelector(ready, { timeout: 15000 });
     await p.evaluate(() => document.fonts.ready); await p.waitForTimeout(/sheet\.html/.test(url) ? 4500 : 1200); // a sheet is many copies of the episode: give them time to draw
     fs.mkdirSync(path.dirname(file), { recursive: true });
-    await p.screenshot({ path: file, type: /\.jpe?g$/i.test(file) ? "jpeg" : "png", ...(/\.jpe?g$/i.test(file) ? { quality: 84 } : {}) });
+    await p.screenshot({ timeout: 180000, path: file, type: /\.jpe?g$/i.test(file) ? "jpeg" : "png", ...(/\.jpe?g$/i.test(file) ? { quality: 84 } : {}) });
     if (errors.length) console.warn("page errors: " + [...new Set(errors)].join(" | "));
   } finally { await b.close(); server.close(); }
 }
