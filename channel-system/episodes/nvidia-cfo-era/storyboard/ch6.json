@@ -846,6 +846,13 @@
      "y": 940,
      "scale": 0.5,
      "enter": "none"
+    },
+    {
+     "who": "FRANK_LEE",
+     "x": 1600,
+     "y": 960,
+     "scale": 0.85,
+     "enter": "none"
     }
    ]
   },
@@ -1127,7 +1134,7 @@
     "dark": 0.45
    },
    "angle": "high",
-   "camera": "pan_left",
+   "camera": "pan_right",
    "actors": [
     {
      "thing": "chip",

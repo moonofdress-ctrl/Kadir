@@ -233,7 +233,7 @@
    "place": "corner office",
    "frame": "close",
    "focus": [
-    800,
+    940,
     520
    ],
    "camera": "tilt_up",
@@ -247,7 +247,7 @@
    "actors": [
     {
      "who": "COLETTE_KRESS",
-     "x": 800,
+     "x": 880,
      "y": 980,
      "scale": 1.0,
      "face": "neutral",
@@ -388,7 +388,7 @@
      "thing": "chip",
      "label": "NVIDIA",
      "x": 1220,
-     "y": 800,
+     "y": 730,
      "scale": 0.5,
      "face": "confused",
      "speaks": [
@@ -413,7 +413,8 @@
    "opts": {
     "night": true,
     "palette": "violet",
-    "view": "wide"
+    "view": "wide",
+    "plate": false
    },
    "place": "corner office",
    "frame": "ots",
@@ -1187,7 +1188,7 @@
      "thing": "teleprinter",
      "label": "NEWS WIRE",
      "x": 900,
-     "y": 960,
+     "y": 880,
      "scale": 0.9,
      "face": "shocked",
      "enter": "none",

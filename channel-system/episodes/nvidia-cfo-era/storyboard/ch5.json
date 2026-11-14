@@ -430,7 +430,7 @@
      "actors": [
       {
        "who": "KRESS",
-       "x": 960,
+       "x": 1320,
        "y": 990,
        "scale": 0.8
       }
@@ -480,7 +480,11 @@
      "scale": 0.7
     }
    ],
-   "explains": "Benny, the viewer, asks the episode's question again from his desk: who is in charge now?"
+   "explains": "Benny, the viewer, asks the episode's question again from his desk: who is in charge now?",
+   "focus": [
+    860,
+    520
+   ]
   },
   {
    "id": "c5s15",

@@ -984,6 +984,161 @@
       return { back: b, front: cut(R(-20, 930, 2000, 200, mixHex(P.floor, "#000000", 0.3), 0)) + cut(`<ellipse cx="160" cy="1000" rx="90" ry="36" fill="#e0262b" ${st}/><ellipse cx="160" cy="990" rx="90" ry="36" fill="#f0b429" ${st}/>`) };
     },
 
+
+    // A sunny rooftop deck: deck chairs, a parasol, a side table with a desk calendar (page flutters), the skyline. { night (default false), page: "FRI 6 NOV" }
+    rooftop(o) {
+      const n = !!o.night, P = pal(o, "mint", n), r = rng(101); let b = R(0, 0, 1920, 1080, n ? "#1b2347" : "#9fd8f0", 0, "") + (n ? "" : `<circle cx="1560" cy="170" r="80" fill="#fff0a0" ${st}/>` + cloud(200, 110, 1) + cloud(900, 190, 0.8)) + K.buildings(-20, 1940, 640, r, n ? ["#232c54", "#2c3766", "#1c2340"] : ["#7f9fc0", "#9db7d1", "#6c88ab"], n, 220, 460);
+      b += `<g class="pass">${cut(`<ellipse cx="2000" cy="180" rx="60" ry="16" fill="#f6f1e4" ${st}/><path d="M1960,176 L2040,176" stroke="${INK}" stroke-width="4"/>`)}</g>`;
+      b += R(0, 640, 1920, 440, P.floor, 0, "") + floorLine(640) + R(0, 640, 1920, 70, P.panel, 0, "") + `<path d="M0,710 L1920,710" ${st}/>`;
+      for (let x = 20; x < 1920; x += 40) b += R(x, 640, 14, 70, P.trim, 2, `stroke="${INK}" stroke-width="3"`);
+      for (let x = 0; x < 1920; x += 180) b += `<path d="M${x},710 L${x - 60},1080" stroke="rgba(27,29,54,.16)" stroke-width="4"/>`;
+      b += cut(R(140, 300, 12, 440, "#c9ced6", 3) + `<path d="M0,320 Q146,170 292,320Z" fill="${P.accent}" ${st}/><path d="M146,170 L146,320" stroke="${INK}" stroke-width="5"/>`) + cut(R(1500, 600, 230, 40, "#8a5a3c", 6) + R(1520, 640, 14, 110, "#8a5a3c", 3) + R(1696, 640, 14, 110, "#8a5a3c", 3));
+      b += `<g class="sway">${cut(R(1560, 520, 120, 80, "#f6f1e4", 4) + R(1560, 520, 120, 24, "#e0262b", 4) + T(1620, 580, o.page || "FRI 6 NOV", 22) + `<path d="M1680,600 Q1720,570 1690,540 L1680,540Z" fill="#f6f1e4" ${st} stroke-width="4"/>`)}</g>`;
+      b += [[420, 0], [1000, 1]].map(([x, f]) => cut(`<g transform="translate(${x},760)"><path d="M-30,0 L-70,-130 L-30,-190 L130,-60 L150,0Z" fill="${f ? "#3d6fb6" : "#f0b429"}" ${st}/><path d="M-30,-190 L-40,-260 L-10,-250" fill="none" ${st}/></g>`)).join("") + D.cable(0, 1920, 60, P).slice(0, 0) + cut(R(1780, 520, 100, 190, "#3f9b5a", 12) + R(1780, 700, 100, 30, "#c9705a", 4)) + cut(R(60, 600, 200, 60, "#c9705a", 6) + `<circle cx="100" cy="590" r="26" fill="#3f9b5a" ${st}/><circle cx="170" cy="580" r="30" fill="#4f8f5b" ${st}/>`) + D.steam(1440, 700).slice(0, 0);
+      return { back: b, front: cut(R(-20, 990, 2000, 130, P.panel, 0)) + D.fgPlant(1890, 1090, 1.3) };
+    },
+
+    // A printing press hall at night: a belt of paper, rolls, a hanging lamp, ink drums. { night (default true) }
+    printing_press(o) {
+      const n = o.night !== false, P = pal(o, "olive", n); let b = K.room(P, 800, 0);
+      b += R(0, 0, 1920, 100, P.panel, 0) + D.cable(0, 1920, 60, P) + hang(420, 100, 60, n, "#fff1b0") + hang(1500, 100, 80, n, "#fff1b0") + (n ? pool(420, 800, 380, 30, "#fff1b0", 0.26) + pool(1500, 800, 380, 30, "#fff1b0", 0.2) : "");
+      for (let i = 0; i < 3; i++) b += cut(R(110 + i * 150, 260, 130, 520, "#3d4a5c", 10) + `<circle cx="${175 + i * 150}" cy="400" r="46" fill="${["#e0262b", "#3d6fb6", "#f0b429"][i]}" ${st}/><circle cx="${175 + i * 150}" cy="560" r="46" fill="#1b1d36" ${st}/><circle cx="${175 + i * 150}" cy="700" r="40" fill="#c9ced6" ${st}/>`);
+      b += cut(R(660, 200, 780, 540, "#56606f", 14) + R(690, 230, 720, 140, "#3d4a5c", 8) + [0, 1, 2, 3, 4].map((i) => `<circle class="spin" cx="${760 + i * 140}" cy="300" r="42" fill="#c9ced6" ${st}/><path d="M${760 + i * 140},260 L${760 + i * 140},340" stroke="${INK}" stroke-width="5"/>`).join("") + R(700, 420, 700, 200, "#3d4a5c", 8)) + K.screen(1100, 440, 270, 150, "#8fe0b0", true, 3) + [0, 1, 2, 3, 4, 5].map((i) => cut(R(700 + i * 100, 640, 60, 80, i % 2 ? "#e0262b" : "#f6f1e4", 6))).join("");
+      b += cut(R(1560, 280, 100, 500, "#e8dcc0", 8) + [0, 1, 2, 3].map((i) => `<path d="M1560,${340 + i * 100} L1660,${340 + i * 100}" stroke="${INK}" stroke-width="4"/>`).join("")) + cut(`<ellipse cx="1780" cy="750" rx="90" ry="40" fill="#e8dcc0" ${st}/><rect x="1690" y="640" width="180" height="110" fill="#ece6d3" ${st}/><ellipse cx="1780" cy="640" rx="90" ry="40" fill="#f6f1e4" ${st}/>`) + D.vent(1000, 30) + D.clock(560, 160, 44, P) + D.switch(640, 640);
+      // the belt: paper sheets slide along (class pass)
+      const belt = cut(R(-20, 800, 2000, 50, "#2b2b33", 8) + R(-20, 850, 2000, 26, "#56606f", 4)) + `<g class="pass">${[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => cut(R(100 + i * 260, 756, 190, 46, "#ece6d3", 3) + R(110 + i * 260, 768, 100, 8, "#9aa0b4", 2, "") + R(110 + i * 260, 784, 140, 6, "#9aa0b4", 2, ""))).join("")}</g>`;
+      return { back: b, front: belt + D.fgPlant(60, 1090, 1.0).slice(0, 0) };
+    },
+
+    // A laundromat at night: a row of washers with spinning windows, plastic chairs, a folding table, a change machine, one flickering tube. Room for 2 extras. { night (default true) }
+    laundromat(o) {
+      const n = o.night !== false, P = pal(o, "mint", n); let b = K.room(P, 790, 140);
+      b += K.tube(500, 40, 420, true) + K.tube(1300, 40, 420, false) + (n ? `<g class="pulse">${R(0, 0, 1920, 790, "rgba(239,255,239,.05)", 0, "")}</g>` : "");
+      for (let i = 0; i < 6; i++) { const x = 90 + i * 210; b += cut(R(x, 330, 190, 460, "#f6f1e4", 12) + R(x + 14, 344, 162, 50, "#c9ced6", 6) + `<circle cx="${x + 40}" cy="370" r="9" fill="${["#e0262b", "#46e08a", "#f0b429"][i % 3]}" ${st} stroke-width="3"/>` + `<circle cx="${x + 95}" cy="600" r="72" fill="#c9ced6" ${st}/><circle cx="${x + 95}" cy="600" r="54" fill="#6fa8c4" ${st} stroke-width="5"/>` + `<g class="spin"><circle cx="${x + 95}" cy="600" r="40" fill="${["#e0262b", "#f0b429", "#3d6fb6", "#f6f1e4"][i % 4]}" opacity=".85"/><path d="M${x + 95},566 L${x + 95},634 M${x + 61},600 L${x + 129},600" stroke="#fff" stroke-width="8" opacity=".6"/></g>`); }
+      b += cut(R(1380, 330, 160, 460, "#3d6fb6", 10) + R(1400, 360, 120, 70, "#c9ced6", 6) + R(1410, 460, 100, 20, INK, 6, "") + R(1400, 520, 120, 90, "#f6f1e4", 6)) + K.board(1380, 270, 160, 46, "CHANGE", "#f6f1e4", INK, 28);
+      b += cut(R(1640, 380, 220, 300, "#e8dcc0", 6) + D.steam(1750, 380).slice(0, 0) + R(1660, 400, 180, 90, "#f6f1e4", 4) + T(1750, 462, "SOAP", 40)) + D.clock(1000, 150, 46, P) + D.poster(1100, 200, 130, 170, P, 3) + D.vent(300, 40) + D.cable(0, 1920, 90, P);
+      const f = cut(R(300, 860, 900, 36, "#cfd4dc", 8) + R(340, 896, 16, 190, "#8d9199", 3) + R(1144, 896, 16, 190, "#8d9199", 3)) + cut(R(560, 800, 260, 60, "#6fa8c4", 20) + R(600, 770, 180, 40, "#f6f1e4", 12)) + K.pchair(110, 1040, 1, "#e8a317") + K.pchair(1830, 1040, 1, "#e8a317");
+      return { back: b, front: f };
+    },
+
+    // A glass lobby at dawn with a revolving door that turns as someone walks out. { night, spin: seconds the door turns } Room for 2 small extras.
+    lobby(o) {
+      const n = !!o.night, P = pal(o, "cream", n), r = rng(111); let b = R(0, 0, 1920, 1080, n ? "#1b2347" : "#f2c6a6", 0, "") + (n ? "" : R(0, 250, 1920, 160, "#f7dcc0", 0, "") + R(0, 380, 1920, 120, "#f2a77a", 0, "")) + skyline(0, 1920, 640, r, n ? ["#232c54", "#2c3766"] : ["#9aa6b8", "#8794aa", "#a8b3c4"], n) + R(0, 640, 1920, 440, mixHex(P.floor, "#f6f1e4", 0.5), 0, "") + floorLine(640);
+      for (let x = 0; x < 1920; x += 240) b += `<path d="M${x},40 L${x},640" stroke="${INK}" stroke-width="10"/>`;
+      b += `<path d="M0,260 L1920,260" stroke="${INK}" stroke-width="8"/>`;
+      for (let i = 0; i < 9; i++) b += `<path d="M${i * 240 + 40},640 L${i * 240 - 300 + 40},1080" stroke="rgba(27,29,54,.1)" stroke-width="3"/>`;
+      for (let x = 100; x < 1920; x += 260) b += `<path d="M${x},700 L${x + 520},1080 L${x + 600},1080 L${x + 120},700Z" fill="rgba(27,29,54,.08)"/>`;
+      b += cut(R(560, 150, 800, 490, "rgba(200,232,244,.25)", 6, `stroke="${INK}" stroke-width="7"`)) + `<circle cx="960" cy="400" r="200" fill="rgba(200,232,244,.2)" ${st}/>` + `<g class="rd" data-spin="${o.spin == null ? "" : o.spin}">${[0, 90, 180, 270].map((a) => `<path d="M960,400 L960,200" stroke="${INK}" stroke-width="12" transform="rotate(${a} 960 400)"/><path d="M960,400 L960,205" stroke="#c9ced6" stroke-width="40" opacity=".35" transform="rotate(${a} 960 400)"/>`).join("")}</g>`;
+      b += cut(R(1500, 460, 360, 120, "#8a5a3c", 8) + R(1500, 580, 360, 200, "#6f452c", 0) + R(1530, 400, 80, 60, "#c9ced6", 6) + `<path d="M1700,390 L1800,390" ${st}/>`) + K.board(1540, 310, 280, 70, "RECEPTION", P.trim, INK, 36) + D.clock(300, 150, 50, P) + D.plant(120, 640, 1.2, P) + D.frame(1250, 330, 0, 0, "abstract", P).slice(0, 0) + D.vent(920, 20);
+      return { back: b, front: D.fgPlant(1890, 1090, 1.4) + cut(R(-20, 1010, 2000, 100, mixHex(P.panel, "#141a3a", n ? 0.4 : 0.1), 0)) };
+    },
+
+    // A garage: a roller door open to noon light, a car on the floor with a creeper beside it (it rolls out), tool chests, tyres, a calendar. { night, creeper: seconds }
+    garage(o) {
+      const n = !!o.night, P = pal(o, "red", n); let b = K.room(P, 790, 0);
+      b += R(0, 0, 1920, 120, P.panel, 0) + cut(R(560, 120, 800, 90, "#c9ced6", 8)) + [0, 1, 2, 3, 4, 5].map((i) => `<path d="M560,${150 + i * 0} L1360,150" stroke="none"/>`).join("") + R(580, 210, 760, 580, n ? "#1b2347" : "#fff6d8", 0, `stroke="${INK}" stroke-width="7"`) + `<g class="pulse">${R(580, 210, 760, 580, n ? "rgba(0,0,0,0)" : "rgba(255,246,200,.4)", 0, "")}</g>` + [0, 1, 2, 3, 4].map((i) => `<path d="M580,${230 + i * 22} L1340,${230 + i * 22}" stroke="${INK}" stroke-width="3" opacity=".5"/>`).join("") + (n ? "" : `<path d="M560,790 L40,1080 L1900,1080 L1360,790Z" fill="rgba(255,246,200,.35)"/>`);
+      b += cut(R(60, 330, 420, 460, "#b8473d", 8) + [0, 1, 2, 3].map((i) => R(80, 350 + i * 108, 380, 90, "#8a2f2a", 5, `stroke="${INK}" stroke-width="4"`) + R(240, 392 + i * 108, 60, 10, "#c9ced6", 3, "")).join("")) + cut(R(1500, 330, 400, 460, "#3d4a5c", 8) + [0, 1, 2, 3].map((i) => R(1520, 350 + i * 108, 360, 90, "#2b3242", 5, `stroke="${INK}" stroke-width="4"`) + R(1670, 392 + i * 108, 60, 10, "#c9ced6", 3, "")).join(""));
+      b += cut(R(1500, 130, 120, 160, "#f6f1e4", 3) + R(1500, 130, 120, 40, "#e0262b", 3)) + [0, 1, 2, 3].map((i) => R(1512 + (i % 2) * 52, 180 + Math.floor(i / 2) * 50, 44, 40, "#fff", 0, `stroke="${INK}" stroke-width="3"`)).join("") + D.clock(1000, 60, 0, P).slice(0, 0) + D.vent(860, 20).slice(0, 0) + D.cable(0, 1920, 60, P) + cut(R(200, 140, 220, 120, "#2b3242", 6) + [0, 1, 2].map((i) => `<path d="M${230 + i * 60},170 L${230 + i * 60},240" stroke="#c9ced6" stroke-width="12" stroke-linecap="round"/>`).join(""));
+      b += [0, 1, 2].map((i) => cut(`<circle cx="${130 + i * 24}" cy="${860 - i * 70}" r="64" fill="#2b2b33" ${st}/><circle cx="${130 + i * 24}" cy="${860 - i * 70}" r="28" fill="#8d9199" ${st} stroke-width="5"/>`)).join("").slice(0, 0);
+      const car = `<g transform="translate(600,780)">${cut(R(0, -110, 640, 90, o.color || "#3d8fb0", 24) + `<path d="M120,-110 L190,-190 L440,-190 L520,-110Z" fill="${o.color || "#3d8fb0"}" ${st}/><path d="M160,-112 L206,-178 L300,-178 L300,-112Z M320,-112 L320,-178 L430,-178 L490,-112Z" fill="#cfe6ee" ${st} stroke-width="5"/>` + `<circle cx="140" cy="-14" r="50" fill="#2b2b33" ${st}/><circle cx="500" cy="-14" r="50" fill="#2b2b33" ${st}/><circle cx="140" cy="-14" r="20" fill="#c9ced6"/><circle cx="500" cy="-14" r="20" fill="#c9ced6"/>`)}</g>`;
+      const creeper = `<g class="pass2" data-at="${o.creeper == null ? "" : o.creeper}">${cut(R(820, 1000, 260, 34, "#e8a317", 10) + `<circle cx="850" cy="1048" r="14" fill="${INK}"/><circle cx="1050" cy="1048" r="14" fill="${INK}"/>`)}</g>`;
+      return { back: b + car, front: creeper + D.fgPlant(1890, 1090, 1.2).slice(0, 0) };
+    },
+
+    // A food truck on a pavement: serving window, menu board, grill and till inside. Day first; night = string of bulbs. Room for 5 queueing extras. { night }
+    food_truck(o) {
+      const n = !!o.night, P = pal(o, "amber", n), r = rng(121); let b = R(0, 0, 1920, 1080, n ? "#1c1830" : "#bfe0ea", 0, "") + (n ? "" : cloud(200, 100, 1) + cloud(1400, 160, 1)) + K.buildings(-20, 1940, 560, r, [P.panel, "#c9705a", "#9db7d1"], n, 200, 380) + R(0, 560, 1920, 520, n ? "#2a2433" : "#c9c2b0", 0, "") + floorLine(560);
+      b += R(0, 560, 1920, 60, n ? "#3a3345" : "#a7acb8", 0, "") + `<path d="M0,620 L1920,620" ${st}/>`;
+      b += cut(R(300, 180, 1320, 560, P.wall, 30) + R(300, 640, 1320, 100, P.panel, 10) + R(340, 190, 1240, 70, "#e0262b", 20) + [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((i) => `<path d="M${380 + i * 100},260 l50,0 l-25,40Z" fill="${i % 2 ? "#f6f1e4" : "#e0262b"}" ${st} stroke-width="4"/>`).join("")) + K.board(760, 200, 400, 52, "TACOS  TRUCK", "#f6f1e4", INK, 34);
+      b += cut(R(700, 320, 560, 250, "#2b2b33", 10) + R(720, 340, 520, 210, n ? "#ffd27a" : "#e8c070", 6)) + cut(R(760, 480, 200, 70, "#3d4a5c", 6) + R(990, 480, 200, 70, "#c9ced6", 6)) + D.steam(860, 480) + cut(R(1000, 410, 120, 70, "#9aa0b4", 6) + R(1020, 424, 80, 20, "#9ad7a0", 3, "")) + cut(R(660, 540, 640, 26, "#8d9199", 6));
+      b += K.board(360, 320, 280, 300, "", "#2b2b33", INK, 10) + ["TACO  3", "BURRITO  6", "JUICE  2", "FRIES  3"].map((t, i) => T(380, 380 + i * 58, t, 30, "#f6f1e4", "start")).join("") + cut(R(1340, 330, 240, 230, "#f6f1e4", 4) + R(1360, 350, 200, 120, P.accent, 0, "") + R(1360, 490, 150, 12, "#9aa0b4", 3, "") + R(1360, 514, 110, 12, "#9aa0b4", 3, ""));
+      b += [[470, 760], [1450, 760]].map(([x, y]) => cut(`<circle cx="${x}" cy="${y}" r="74" fill="#2b2b33" ${st}/><circle cx="${x}" cy="${y}" r="30" fill="#c9ced6" ${st} stroke-width="5"/>`)).join("") + `<path d="M300,60 Q600,160 900,60 Q1200,160 1500,60" fill="none" stroke="${INK}" stroke-width="5"/>` + [0, 1, 2, 3, 4, 5, 6].map((i) => `<circle class="tick" cx="${300 + i * 200}" cy="${i % 2 ? 120 : 100}" r="14" fill="${n ? "#fff1b0" : "#ece6d3"}" ${st} stroke-width="4"/>`).join("") + D.cable(0, 1920, 40, P).slice(0, 0) + K.post(120, 760, 460, n, "#ffb347") + cut(R(1760, 620, 100, 140, "#3d6fb6", 12));
+      return { back: b, front: D.fgPlant(1890, 1090, 1.3) };
+    },
+
+    // A library at night: a long reading table with green banker's lamps, tall shelves, a ladder, a fireplace. Room for 1 extra. { night (default true), fire (default true) }
+    library(o) {
+      const n = o.night !== false, P = pal(o, "green", n), r = rng(131); let b = K.room(P, 800, 0);
+      for (let i = 0; i < 4; i++) { b += cut(R(60 + i * 250, 130, 220, 660, mixHex(P.panel, "#3b2a1e", 0.5), 6)); for (let s = 0; s < 5; s++) b += D.shelf(70 + i * 250, 250 + s * 120, 200, P, 3 + i * 7 + s); }
+      b += cut(R(1100, 330, 560, 460, "#8d8a7e", 10) + R(1160, 420, 440, 370, "#1b1d36", 6) + R(1080, 300, 600, 40, "#c9b88a", 8)) + (o.fire !== false ? `<g class="pulse"><path d="M1230,790 Q1250,640 1300,700 Q1330,560 1380,680 Q1420,600 1450,700 Q1500,650 1520,790Z" fill="#ffb347" ${st}/><path d="M1290,790 Q1320,700 1360,740 Q1400,690 1430,790Z" fill="#ffe14d"/></g>` + halo(1380, 700, 360, "#ffb060", 0.28) : "") + D.frame(1280, 150, 200, 130, "landscape", P) + D.clock(1740, 200, 50, P) + D.cable(0, 1920, 60, P);
+      b += cut(R(1000, 180, 14, 620, "#8a5a3c", 3) + R(1090, 180, 14, 620, "#8a5a3c", 3) + [0, 1, 2, 3, 4, 5, 6].map((i) => R(1000, 250 + i * 80, 104, 10, "#8a5a3c", 2)).join(""));
+      const f = cut(R(200, 780, 1500, 36, "#8a5a3c", 8) + R(240, 816, 1420, 300, "#6f452c", 0)) + [420, 800, 1180, 1560].map((x) => K.lamp(x, 782, 0.8, n, "#b8f0a0", true)).join("") + cut(R(560, 750, 120, 34, "#ece6d3", 3) + R(580, 724, 120, 30, "#e8dcc0", 3)) + D.fgPlant(60, 1090, 1.2);
+      return { back: b, front: f };
+    },
+
+
+    // A hilltop at dusk: an anemometer spinning, a small hut, wide sky, grass bending. { night }
+    weather_station(o) {
+      const n = !!o.night, P = pal(o, "pink", n), r = rng(141); let b = R(0, 0, 1920, 1080, n ? "#241a3a" : "#f0a0b8", 0, "") + R(0, 300, 1920, 160, n ? "#3a2a50" : "#f6b8a0", 0, "") + R(0, 460, 1920, 120, n ? "#4a3560" : "#f6d0a0", 0, "") + `<circle cx="1480" cy="520" r="90" fill="${n ? "#f6f1e4" : "#fff0a0"}" ${st}/>` + cloud(200, 120, 1.2) + cloud(900, 220, 0.9) + cloud(1500, 90, 1);
+      b += `<path d="M0,640 Q480,520 960,600 Q1440,520 1920,620 L1920,1080 L0,1080Z" fill="${n ? "#2a3a3a" : "#7aa860"}" ${st}/><path d="M0,760 Q600,680 1200,740 Q1600,700 1920,760 L1920,1080 L0,1080Z" fill="${n ? "#25332f" : "#5f9a52"}" ${st}/>`;
+      b += cut(R(1180, 560, 300, 200, P.trim, 6) + `<path d="M1160,560 L1330,470 L1500,560Z" fill="${P.panel}" ${st}/>` + R(1230, 610, 90, 150, P.accent, 4) + R(1350, 610, 90, 70, n ? "#ffd27a" : "#cfe6ee", 4)) + (n ? halo(1395, 645, 140, "#ffd27a", 0.3) : "");
+      b += cut(R(420, 300, 14, 480, "#c9ced6", 3) + `<path d="M427,300 L330,360 M427,300 L520,360 M427,300 L427,230" stroke="${INK}" stroke-width="10" stroke-linecap="round"/>`) + [[330, 360], [520, 360], [427, 230]].map(([x, y]) => `<g class="spin"><circle cx="${x}" cy="${y}" r="38" fill="#f6f1e4" ${st}/><path d="M${x - 38},${y} L${x + 38},${y}" stroke="#e0262b" stroke-width="8"/></g>`).join("");
+      b += cut(R(760, 520, 12, 250, "#8d9199", 3) + `<path d="M772,540 L900,570 L772,600Z" fill="#f0b429" ${st}/>`) + `<g class="sway">${cut(R(1560, 560, 12, 220, "#8d9199", 3) + `<path d="M1572,580 L1700,600 L1572,630Z" fill="#e0262b" ${st}/>`)}</g>` + cut(R(1640, 690, 90, 90, "#f6f1e4", 4) + `<path d="M1655,760 L1715,710" stroke="#e0262b" stroke-width="5"/>`);
+      for (let i = 0; i < 40; i++) b += `<path class="sway" d="M${(r() * 1920).toFixed(0)},${(820 + r() * 240).toFixed(0)} q6,-40 22,-56" stroke="${n ? "#35523f" : "#4a8a44"}" stroke-width="7" fill="none" stroke-linecap="round"/>`;
+      return { back: b, front: `<g class="fg">${[0, 1, 2, 3, 4, 5, 6, 7].map((i) => `<path d="M${i * 260 + 40},1090 q20,-120 90,-160 q-30,100 -50,160Z" fill="${n ? "#35523f" : "#4a8a44"}" ${st} stroke-width="5"/>`).join("")}</g>` };
+    },
+
+    // An auction house: a block on a stage, a chandelier, rows of chairs for bidder extras, an easel. { night (default true), lot: text on the easel } Chairs sit low so extras stand behind them.
+    auction_house(o) {
+      const n = o.night !== false, P = pal(o, "plum", n); let b = K.room(P, 800, 170);
+      b += K.cityWin(110, 150, 260, 440, n, 61, false).replace(/#bfe0ea/g, n ? "#1b2347" : "#cfe6ee") + K.cityWin(1550, 150, 260, 440, n, 62, false) + R(420, 90, 1080, 560, "rgba(255,255,255,0)", 0, "") + D.frame(560, 190, 200, 260, "portrait", P) + D.frame(1160, 190, 200, 260, "abstract", P) + D.sconce(880, 380, P, n) + D.sconce(1040, 380, P, n) + D.cable(0, 1920, 50, P);
+      b += `<path d="M960,0 L960,110" ${st}/>` + cut(`<path d="M820,170 L1100,170 L1060,120 L860,120Z" fill="#c9a24a" ${st}/>` + [0, 1, 2, 3, 4].map((i) => `<path d="M${850 + i * 55},170 L${850 + i * 55},210" stroke="${INK}" stroke-width="5"/><circle cx="${850 + i * 55}" cy="218" r="12" fill="#fff1b0" ${st} stroke-width="4"/>`).join("")) + halo(960, 200, 420, "#fff1b0", n ? 0.3 : 0.1);
+      b += cut(R(560, 660, 800, 140, "#6f452c", 6) + R(560, 640, 800, 28, "#8a5a3c", 6)) + cut(R(860, 560, 200, 90, "#8a5a3c", 8) + R(900, 530, 120, 40, "#8a5a3c", 6)) + cut(`<circle cx="1120" cy="620" r="18" fill="#8a5a3c" ${st}/><path d="M1130,600 L1170,560" stroke="${INK}" stroke-width="10"/>`);
+      b += cut(`<path d="M1540,780 L1580,430 M1760,780 L1720,430 M1650,780 L1650,430" stroke="${INK}" stroke-width="10"/>` + R(1540, 420, 220, 20, "#8a5a3c", 4) + R(1560, 440, 180, 220, "#f6f1e4", 3)) + T(1650, 530, "LOT", 34) + T(1650, 590, o.lot || "17", 70);
+      return { back: b, front: [0, 1, 2, 3, 4].map((i) => cut(`<g transform="translate(${180 + i * 340},1040)">${R(-80, -110, 160, 40, P.accent, 12)}${R(-70, -220, 140, 120, mixHex(P.accent, "#141a3a", 0.2), 18)}<path d="M-60,-70 L-66,0 M60,-70 L66,0" stroke="${INK}" stroke-width="9"/></g>`)).join("") };
+    },
+
+    // A hospital waiting room: rows of plastic chairs, a reception window, a number display, a water cooler. Room for 2 extras. { night, number }
+    hospital(o) {
+      const n = !!o.night, P = pal(o, "mint", n); let b = K.room(P, 790, 130);
+      b += cut(R(110, 230, 440, 380, P.trim, 8) + R(130, 250, 400, 250, "#1b2a36", 6)) + K.glass(130, 250, 400, 250, 0) + R(130, 520, 400, 40, "#8a5a3c", 6) + K.board(180, 150, 300, 56, "RECEPTION", "#f6f1e4", INK, 34) + cut(R(660, 160, 340, 130, "#0f1b2a", 8)) + `<g class="tick">${T(830, 262, o.number || "042", 96, "#ff5a4f", "middle", 'font-family="IBM Plex Mono" font-weight="700"')}</g>` + T(830, 190, "NOW SERVING", 26, "#c9cfe6");
+      b += K.cityWin(1120, 150, 380, 330, n, 71, false).replace(/#bfe0ea/g, n ? "#1b2347" : "#d8e8ee") + D.clock(1640, 200, 50, P) + D.poster(1620, 330, 150, 200, P, 2) + cut(R(1780, 520, 100, 270, "#cfe6ee", 10) + R(1800, 480, 60, 50, "rgba(143,216,255,.7)", 14)) + D.vent(700, 36) + K.tube(500, 40, 400, true) + K.tube(1300, 40, 400, false) + D.plant(620, 790, 0.9, P) + D.cable(0, 1920, 100, P);
+      for (let i = 0; i < 6; i++) b += K.pchair(760 + i * 120, 790, 0.9, i % 2 ? "#3d6fb6" : "#7fb8d0");
+      return { back: b, front: [0, 1, 2, 3].map((i) => K.pchair(240 + i * 130, 1060, 1.1, "#3d6fb6")).join("") + cut(R(1480, 960, 360, 18, "#8a5a3c", 6)) };
+    },
+
+    // A radio studio: a desk with an empty microphone on an arm, a red ON AIR light, foam panels, a clock, a mixing desk. { night (default true), air: seconds the light flickers on, time: "5:00" }
+    radio_studio(o) {
+      const n = o.night !== false, P = pal(o, "red", n); let b = K.room(P, 800, 0);
+      for (let i = 0; i < 12; i++) for (let j = 0; j < 4; j++) b += `<path d="M${60 + i * 150},${150 + j * 130} l75,-0 l0,0 L${135 + i * 150},${150 + j * 130} L${97 + i * 150},${220 + j * 130}Z" fill="${(i + j) % 2 ? mixHex(P.panel, "#000000", 0.25) : mixHex(P.panel, "#000000", 0.45)}" ${st} stroke-width="3"/>`;
+      b += cut(R(780, 60, 360, 130, "#1b1d36", 12)) + `<g class="air" data-air="${o.air == null ? "" : o.air}">${R(800, 80, 320, 90, "#e0262b", 8, `stroke="${INK}" stroke-width="5"`)}${T(960, 150, "ON AIR", 62, "#f6f1e4", "middle", 'font-weight="800"')}${halo(960, 125, 300, "#ff4040", 0.3)}</g>` + D.clock(1560, 130, 56, P) + D.cable(0, 1920, 40, P) + `<g class="tick">${R(120, 60, 120, 40, "#2b2b33", 6)}</g>`;
+      b += cut(R(1080, 310, 140, 90, "#c9ced6", 8) + R(1100, 330, 100, 50, "#9aa0b4", 4)).slice(0, 0) + cut(R(1480, 280, 300, 200, "#f6f1e4", 4) + `<path d="M1520,420 L1560,360 L1600,400 L1660,320 L1740,380" fill="none" stroke="#e0262b" stroke-width="7"/>`).slice(0, 0);
+      const f = cut(R(200, 760, 1520, 40, "#3d4a5c", 8) + R(240, 800, 1440, 300, "#2b3242", 0)) + cut(R(260, 700, 520, 70, "#56606f", 8) + [0, 1, 2, 3, 4, 5, 6, 7].map((i) => R(290 + i * 58, 712, 28, 46, i % 3 ? "#8d9199" : "#f0b429", 4, `stroke="${INK}" stroke-width="3"`)).join("")) + cut(`<path d="M1300,760 L1300,520 Q1300,440 1180,440" fill="none" stroke="${INK}" stroke-width="14"/><path d="M1300,760 L1300,520 Q1300,440 1180,440" fill="none" stroke="#8d9199" stroke-width="7"/><circle cx="1160" cy="450" r="30" fill="#2b2b33" ${st}/><path d="M1138,450 L1182,450" stroke="#8d9199" stroke-width="5"/>`) + K.screen(1380, 640, 260, 120, "#8fe0b0", true, 3) + D.mug(1700, 762, P).slice(0, 0);
+      return { back: b, front: f };
+    },
+
+    // A sports bar: a big screen with a countdown, a bar with stools and taps, neon signs (made-up names), pennants. Room for 10 extras facing the screen. { night (default true), count: "4:20" }
+    sports_bar(o) {
+      const n = o.night !== false, P = pal(o, "green", n); let b = K.room(P, 800, 170);
+      b += cut(R(500, 120, 920, 480, "#0f1b2a", 12)) + R(520, 140, 880, 440, "#16304a", 6, "") + `<g class="tick">${T(960, 420, o.count || "4:20", 230, "#ffe14d", "middle", 'font-family="IBM Plex Mono" font-weight="700"')}${T(960, 220, "COUNTDOWN", 54, "#c9cfe6")}</g>` + `<g class="pulse">${R(520, 140, 880, 440, "rgba(143,216,255,.08)", 6, "")}</g>`;
+      b += K.neon(220, 240, "GAME ON", "#ff4fd8", 60) + K.neon(1700, 250, "COLD", "#3ff0ff", 70) + K.neon(1700, 360, "BEER", "#ffd27a", 50) + [0, 1, 2, 3, 4, 5].map((i) => cut(`<path d="M${180 + i * 70},330 L${240 + i * 70},330 L${210 + i * 70},430Z" fill="${["#e0262b", "#f0b429", "#3d6fb6", "#f6f1e4", "#1fa85b", "#c95f8d"][i]}" ${st} stroke-width="4"/>`)).join("") + D.clock(1600, 140, 40, P).slice(0, 0) + D.cable(0, 1920, 60, P) + D.frame(100, 460, 180, 120, "chart", P) + D.vent(900, 20);
+      b += cut(R(1380, 560, 520, 240, "#3d4a5c", 6) + [0, 1, 2, 3].map((i) => R(1420 + i * 110, 600, 80, 190, "#2b3242", 4)).join("")) + cut(R(1440, 500, 400, 30, "#c9ced6", 6) + [0, 1, 2, 3].map((i) => R(1480 + i * 90, 470, 20, 40, "#f0b429", 4) + R(1470 + i * 90, 440, 40, 36, ["#e0262b", "#1fa85b", "#3d6fb6", "#f0b429"][i], 6)).join(""));
+      return { back: b, front: cut(R(1300, 780, 700, 40, "#8a5a3c", 8) + R(1340, 820, 620, 300, "#6f452c", 0)) + [0, 1, 2].map((i) => K.stool(1380 + i * 200, 1060, 1.1, "#b8473d")).join("").slice(0, 0) + [0, 1, 2].map((i) => K.stool(150 + i * 200, 1070, 1.1, "#b8473d")).join("") + D.mug(1480, 782, P) };
+    },
+
+    // The gallery rail of a lighthouse at night: a beam sweeping over a black sea, a telescope, a fog bank labelled NEXT QUARTER. The one navy place. { fog: text }
+    lighthouse(o) {
+      const P = pal(o, "navy", true), r = rng(151); let b = R(0, 0, 1920, 1080, "#0b1030", 0, "") + Array.from({ length: 60 }, () => `<circle cx="${(r() * 1920).toFixed(0)}" cy="${(r() * 460).toFixed(0)}" r="${(1.5 + r() * 2.5).toFixed(1)}" fill="#f6f1e4"/>`).join("") + `<circle cx="1620" cy="170" r="66" fill="#f6f1e4" ${st}/>` + R(0, 560, 1920, 520, "#0a1028", 0, "") + floorLine(560);
+      for (let i = 0; i < 14; i++) b += `<path class="sway" d="M${i * 150 - 20},${620 + (i % 4) * 90} q40,-24 80,0 q40,24 80,0" fill="none" stroke="#2c3766" stroke-width="6"/>`;
+      b += `<g class="beam"><path d="M960,380 L-300,200 L-300,640Z" fill="#fff6d8" opacity=".16"/></g>` + cut(`<path d="M300,1080 L360,560 L540,560 L600,1080Z" fill="#1b2142" ${st}/>`).slice(0, 0);
+      b += cut(R(120, 480, 700, 190, "#8d9aa8", 40) + R(180, 500, 580, 120, "#c9d4e0", 40) + `<text x="470" y="595" font-size="64" text-anchor="middle" fill="${INK}" font-weight="800">${String(o.fog || "NEXT QUARTER").replace(/&/g, "&amp;")}</text>`) + `<g class="pass">${cut(`<ellipse cx="2100" cy="540" rx="120" ry="30" fill="#8d9aa8" ${st}/>`)}</g>`;
+      b += cut(R(660, 120, 600, 90, "#2c3766", 10) + R(700, 210, 520, 70, "#fff1b0", 10) + `<circle cx="960" cy="245" r="22" fill="#fff"/>`) + halo(960, 245, 420, "#fff1b0", 0.4) + K.board(0, 0, 0, 0, "", "none", INK, 1).slice(0, 0);
+      const f = cut(R(-20, 780, 2000, 40, "#56606f", 10) + [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((i) => R(40 + i * 150, 820, 26, 260, "#56606f", 4)).join("") + R(-20, 960, 2000, 130, "#3d4a5c", 0)) + cut(`<path d="M1500,800 L1560,640 M1620,800 L1560,640" stroke="${INK}" stroke-width="12"/><rect x="1440" y="560" width="220" height="50" rx="14" fill="#8d9199" ${st} transform="rotate(-14 1560 590)"/><circle cx="1430" cy="620" r="30" fill="#2b3242" ${st} transform="rotate(-14 1560 590)"/>`);
+      return { back: b, front: f };
+    },
+
+    // A phone booth on a rainy street in grey afternoon daylight; inside, a faceless silhouette with a receiver (brief.md safeguard 1); a stamp on the glass. Room for 3 passers-by with umbrellas. { stamp: text, night, who: false (empty booth) }
+    phone_booth(o) {
+      const n = !!o.night, P = pal(o, "red", n), r = rng(161); let b = R(0, 0, 1920, 1080, n ? "#1c2236" : "#aeb8c2", 0, "") + K.buildings(-20, 1940, 640, r, ["#6b7384", "#8d9199", mixHex(P.wall, "#8d9199", 0.5)], n, 280, 460) + R(0, 640, 1920, 120, n ? "#1a1e30" : "#8d9199", 0, "") + `<path d="M0,640 L1920,640" ${st}/>` + [0, 1, 2, 3, 4, 5, 6].map((i) => R(60 + i * 290, 696, 150, 12, "#f6f1e4", 0, "")).join("");
+      b += `<g class="pass">${cut(R(2300, 520, 360, 120, "#3d6fb6", 20) + R(2340, 540, 80, 50, n ? "#ffd27a" : "#cfe6ee", 6) + R(2440, 540, 80, 50, n ? "#ffd27a" : "#cfe6ee", 6) + `<circle cx="2380" cy="640" r="26" fill="${INK}"/><circle cx="2620" cy="640" r="26" fill="${INK}"/>`)}</g>`;
+      b += R(0, 760, 1920, 320, n ? "#232738" : "#a09a8c", 0, "") + R(0, 760, 1920, 30, n ? "#2a2e44" : "#7d818c", 0, "") + `<path d="M0,760 L1920,760 M0,790 L1920,790" ${st}/>` + [[300, 920, 140], [1500, 960, 180], [900, 1010, 120]].map(([x, y, w]) => `<ellipse cx="${x}" cy="${y}" rx="${w}" ry="14" fill="rgba(255,255,255,.14)" ${st} stroke-width="3" opacity=".7"/>`).join("");
+      const bx = 700, bw = 520; b += cut(R(bx - 20, 200, bw + 40, 40, P.wall, 8) + R(bx - 20, 200, bw + 40, 40, P.wall, 8) + R(bx, 240, 24, 540, P.wall, 3) + R(bx + bw - 24, 240, 24, 540, P.wall, 3) + R(bx, 760, bw, 30, P.panel, 4)) + K.board(bx + 130, 206, 260, 28, "TELEPHONE", P.trim, INK, 20) + R(bx + 24, 240, bw - 48, 520, n ? "#1b2a36" : "#cfdce4", 0, "");
+      if (o.who !== false) b += cut(`<g transform="translate(${bx + 260},760)"><circle cx="0" cy="-440" r="52" fill="#1b1d36" ${st}/><path d="M-90,-380 L90,-380 L100,-120 L-100,-120Z" fill="#1b1d36" ${st}/>${R(-60, -120, 50, 120, "#10132a", 8)}${R(10, -120, 50, 120, "#10132a", 8)}<path d="M60,-340 L80,-440 L40,-470" fill="none" stroke="#1b1d36" stroke-width="24" stroke-linecap="round"/>${R(18, -500, 44, 24, "#3d4a5c", 8)}</g>`);
+      b += K.glass(bx + 24, 240, bw - 48, 520, n ? 12 : 12) + `<g class="stampg" transform="rotate(-8 ${bx + 260} 500)">${R(bx + 100, 450, 320, 100, "none", 8, `stroke="#e0262b" stroke-width="9"`)}${T(bx + 260, 520, o.stamp || "NO COMMENT", 44, "#e0262b", "middle", 'font-weight="800"')}</g>`;
+      b += K.post(240, 790, 540, n, "#ffd27a") + cut(R(1640, 620, 110, 150, "#4f8f5b", 12)) + K.walker(1500, 800, 0.9, "#4a4066", "#e0262b") + K.walker(1760, 820, 0.8, "#2c5490", "#f0b429") + K.walker(420, 840, 1, "#3d4a5c", "#3d6fb6").slice(0, 0);
+      return { back: b, front: K.rain(13) + `<g class="fg">${cut(R(-10, 600, 36, 480, "#3d4a5c", 6))}</g>` };
+    },
+
     // @cfo-sets
   };
 
@@ -1455,6 +1610,14 @@
 
   Object.assign(SET_AMBIENCE, { "trading_floor:dawn": "office", "trading_floor:exchange": "crowd", "corridor:exec": "room", "corridor:doors": "room", "corridor:courthouse": "room", "lawn:playground": "outdoors", "lawn:park": "night" });
 
+  Object.assign(SET_PALETTE, { rooftop: "mint", printing_press: "olive", laundromat: "mint", lobby: "cream", garage: "red", food_truck: "amber", library: "green" });
+  Object.assign(SET_AMBIENCE, { rooftop: "outdoors", printing_press: "machine", laundromat: "machine", lobby: "room", garage: "machine", food_truck: "street", library: "room" });
+  Object.assign(NIGHT_FIRST, { printing_press: 1, laundromat: 1, library: 1 });
+
+  Object.assign(SET_PALETTE, { weather_station: "pink", auction_house: "plum", hospital: "mint", radio_studio: "red", sports_bar: "green", lighthouse: "navy", phone_booth: "red" });
+  Object.assign(SET_AMBIENCE, { weather_station: "outdoors", auction_house: "crowd", hospital: "room", radio_studio: "studio", sports_bar: "crowd", lighthouse: "outdoors", phone_booth: "rain" });
+  Object.assign(NIGHT_FIRST, { auction_house: 1, radio_studio: 1, sports_bar: 1, lighthouse: 1 });
+
   // @cfo-reg
   // Draw a set for a shot: the set itself, its dressing in its palette, or a palette wash over a set that draws its own colours.
   function draw(name, o) {
@@ -1483,6 +1646,12 @@
     svg.querySelectorAll(".rain").forEach((p, i) => { tl.fromTo(p, { y: -90, x: 0 }, { y: 0, x: -24, duration: 0.45, repeat: Math.ceil(d / 0.45) + 1, ease: "none", immediateRender: false }, t0); });
     svg.querySelectorAll(".wob").forEach((p) => { gsap.set(p, { transformOrigin: "50% 50%", smoothOrigin: false }); tl.fromTo(p, { rotation: -1.6, y: -2 }, { rotation: 1.6, y: 3, duration: 0.18, yoyo: true, repeat: Math.ceil(d / 0.18) + 1, ease: "sine.inOut", immediateRender: false }, t0); });
     svg.querySelectorAll(".pb").forEach((p) => { gsap.set(p, { transformOrigin: "50% 50%", smoothOrigin: false }); tl.fromTo(p, { opacity: 1, scale: 1 }, { opacity: 0, scale: 2.2, duration: 0.14, ease: "none", immediateRender: false }, t0 + parseFloat(p.getAttribute("data-pop") || 1)); });
+    // a revolving door turns once at data-spin seconds; a creeper rolls out at data-at
+    svg.querySelectorAll(".rd").forEach((p) => { const a = p.getAttribute("data-spin"); if (a === "" || a == null) return; gsap.set(p, { svgOrigin: "960 400", smoothOrigin: false }); tl.fromTo(p, { rotation: 0 }, { rotation: 90, duration: 1.6, ease: "power1.inOut", immediateRender: false }, t0 + parseFloat(a)); });
+    svg.querySelectorAll(".pass2").forEach((p) => { const a = p.getAttribute("data-at"); if (a === "" || a == null) return; tl.fromTo(p, { x: 0 }, { x: 520, duration: 1.8, ease: "power2.out", immediateRender: false }, t0 + parseFloat(a)); });
+    // the ON AIR light flickers on at data-air; the lighthouse beam sweeps
+    svg.querySelectorAll(".air").forEach((p) => { const a = p.getAttribute("data-air"); if (a === "" || a == null) return; const t = t0 + parseFloat(a); tl.set(p, { opacity: 0.1 }, t0); [0, 0.12, 0.3, 0.38, 0.6].forEach((o2, i) => tl.set(p, { opacity: i % 2 ? 0.25 : 1 }, t + o2)); tl.set(p, { opacity: 1 }, t + 0.8); });
+    svg.querySelectorAll(".beam").forEach((p) => { gsap.set(p, { svgOrigin: "960 380", smoothOrigin: false }); tl.fromTo(p, { rotation: -14 }, { rotation: 14, duration: 3.2, yoyo: true, repeat: Math.ceil(d / 3.2) + 1, ease: "sine.inOut", immediateRender: false }, t0); });
     svg.querySelectorAll(".fg").forEach((p) => tl.fromTo(p, { x: 28 }, { x: -28, duration: d, ease: "none", immediateRender: false }, t0));
     svg.querySelectorAll(".tick").forEach((k, i) => { for (let t = t0 + 0.4 + (i % 6) * 0.31; t < t1; t += 1.7 + (i % 4) * 0.4) { tl.set(k, { opacity: 0.35 }, t); tl.set(k, { opacity: 1 }, t + 0.12); } });
   }

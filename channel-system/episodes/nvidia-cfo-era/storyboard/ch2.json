@@ -1,0 +1,1220 @@
+{
+ "shots": [
+  {
+   "id": "c2c00",
+   "type": "chapter",
+   "cue": "L024",
+   "number": 2,
+   "title": "Three seats",
+   "explains": "A new chapter: how many jobs one man held."
+  },
+  {
+   "set": "cinema",
+   "place": "empty cinema",
+   "opts": {
+    "palette": "red",
+    "night": true
+   },
+   "extras": 0,
+   "id": "c2s10",
+   "cue": "L024",
+   "word": 5,
+   "camera": "pan_right",
+   "light": {
+    "x": 960,
+    "y": 140,
+    "r": 900,
+    "color": "#e8f4ff",
+    "dark": 0.45
+   },
+   "explains": "Three front-row seats all wear the same black jacket: one owner for three seats.",
+   "props": [
+    {
+     "type": "jacket",
+     "x": 700,
+     "y": 820
+    },
+    {
+     "type": "jacket",
+     "x": 960,
+     "y": 820
+    },
+    {
+     "type": "jacket",
+     "x": 1220,
+     "y": 820
+    }
+   ]
+  },
+  {
+   "id": "c2t01",
+   "type": "card",
+   "cue": "L025",
+   "text": "One man. Three seats.",
+   "emph": [
+    "Three"
+   ],
+   "explains": "The chapter's point in one line: one man filled three seats."
+  },
+  {
+   "set": "cinema",
+   "place": "empty cinema",
+   "opts": {
+    "palette": "red",
+    "night": true
+   },
+   "extras": 0,
+   "id": "c2s11a",
+   "cue": "L025",
+   "word": 7,
+   "frame": "medium",
+   "angle": "low",
+   "light": {
+    "x": 960,
+    "y": 200,
+    "r": 900,
+    "color": "#e8f4ff",
+    "dark": 0.45
+   },
+   "focus": [
+    960,
+    600
+   ],
+   "explains": "Huang, seen from behind, sits in the middle seat while his jacket keeps the other two.",
+   "actors": [
+    {
+     "who": "JENSEN_HUANG",
+     "x": 960,
+     "y": 960,
+     "scale": 0.8,
+     "back": true,
+     "pose": "rest"
+    }
+   ],
+   "props": [
+    {
+     "type": "jacket",
+     "x": 700,
+     "y": 820
+    },
+    {
+     "type": "jacket",
+     "x": 1220,
+     "y": 820
+    }
+   ],
+   "overlays": [
+    {
+     "type": "lower_third",
+     "name": "JENSEN HUANG",
+     "role": "Founder, Nvidia",
+     "at": 0.3
+    }
+   ],
+   "camera": "still"
+  },
+  {
+   "set": "cinema",
+   "place": "empty cinema",
+   "opts": {
+    "palette": "red",
+    "night": true
+   },
+   "extras": 1,
+   "id": "c2s11b",
+   "cue": "L026",
+   "frame": "medium",
+   "light": {
+    "x": 1300,
+    "y": 300,
+    "r": 900,
+    "color": "#e8f4ff",
+    "dark": 0.45
+   },
+   "explains": "Nobody is waiting in the row behind him: no successor had been named.",
+   "focus": [
+    1150,
+    620
+   ],
+   "camera": "pan_left"
+  },
+  {
+   "set": "cinema",
+   "place": "empty cinema",
+   "opts": {
+    "palette": "red",
+    "night": true
+   },
+   "extras": 0,
+   "id": "c2s11c",
+   "cue": "L027",
+   "light": {
+    "x": 960,
+    "y": 360,
+    "r": 950,
+    "color": "#e8f4ff",
+    "dark": 0.45
+   },
+   "camera": "pull_out",
+   "explains": "Investors liked it simple: one face on the screen, one voice to listen to.",
+   "actors": [
+    {
+     "thing": "coin",
+     "label": "INVESTORS",
+     "x": 600,
+     "y": 980,
+     "scale": 0.5
+    },
+    {
+     "thing": "coin",
+     "x": 960,
+     "y": 990,
+     "scale": 0.5
+    },
+    {
+     "thing": "coin",
+     "x": 1320,
+     "y": 980,
+     "scale": 0.5
+    }
+   ]
+  },
+  {
+   "set": "cinema",
+   "place": "empty cinema",
+   "opts": {
+    "palette": "red",
+    "night": true
+   },
+   "extras": 0,
+   "id": "c2s11d",
+   "cue": "L027",
+   "word": 9,
+   "frame": "close",
+   "light": {
+    "x": 960,
+    "y": 500,
+    "r": 800,
+    "color": "#e8f4ff",
+    "dark": 0.45
+   },
+   "focus": [
+    960,
+    760
+   ],
+   "explains": "The catch: if he left, all three seats would flip up empty at the same moment.",
+   "props": [
+    {
+     "type": "jacket",
+     "x": 700,
+     "y": 820
+    },
+    {
+     "type": "jacket",
+     "x": 960,
+     "y": 820
+    },
+    {
+     "type": "jacket",
+     "x": 1220,
+     "y": 820
+    }
+   ],
+   "camera": "tilt_down"
+  },
+  {
+   "set": "lawn",
+   "place": "playground",
+   "opts": {
+    "palette": "green",
+    "dress": "playground",
+    "night": false
+   },
+   "extras": 6,
+   "id": "c2k05a1",
+   "cue": "L028",
+   "frame": "medium",
+   "focus": [
+    700,
+    420
+   ],
+   "explains": "Benny asks the obvious question on the bench: who was next in line?",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 700,
+     "y": 980,
+     "scale": 0.85,
+     "speaks": [
+      "L028"
+     ]
+    },
+    {
+     "who": "MARTHA",
+     "x": 1120,
+     "y": 980,
+     "scale": 0.85
+    }
+   ],
+   "camera": "still"
+  },
+  {
+   "set": "lawn",
+   "place": "playground",
+   "opts": {
+    "palette": "green",
+    "dress": "playground",
+    "night": false
+   },
+   "extras": 6,
+   "id": "c2k05a2",
+   "cue": "L029",
+   "frame": "close",
+   "focus": [
+    1120,
+    420
+   ],
+   "explains": "Martha's answer: nobody ever said who was next.",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 700,
+     "y": 980,
+     "scale": 0.85
+    },
+    {
+     "who": "MARTHA",
+     "x": 1120,
+     "y": 980,
+     "scale": 0.85,
+     "speaks": [
+      "L029"
+     ]
+    }
+   ],
+   "camera": "pan_right"
+  },
+  {
+   "set": "lawn",
+   "place": "playground",
+   "opts": {
+    "palette": "green",
+    "dress": "playground",
+    "night": false
+   },
+   "extras": 6,
+   "id": "c2k05a3",
+   "cue": "L030",
+   "frame": "ots",
+   "ots": {
+    "speaker": "BENNY",
+    "listener": "MARTHA"
+   },
+   "explains": "Benny wonders whether anyone even asked.",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 1260,
+     "y": 980,
+     "scale": 0.85
+    },
+    {
+     "who": "BENNY",
+     "x": 600,
+     "y": 980,
+     "scale": 0.85,
+     "speaks": [
+      "L030"
+     ]
+    }
+   ],
+   "camera": "still"
+  },
+  {
+   "set": "lawn",
+   "place": "playground",
+   "opts": {
+    "palette": "green",
+    "dress": "playground",
+    "night": false
+   },
+   "extras": 6,
+   "id": "c2k05a4",
+   "cue": "L031",
+   "camera": "pull_out",
+   "explains": "Now everyone is asking: the whole queue at the slide turns round.",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 700,
+     "y": 980,
+     "scale": 0.85
+    },
+    {
+     "who": "MARTHA",
+     "x": 1120,
+     "y": 980,
+     "scale": 0.85,
+     "speaks": [
+      "L031"
+     ]
+    }
+   ]
+  },
+  {
+   "set": "records_office",
+   "place": "records office",
+   "opts": {
+    "palette": "ochre",
+    "night": false
+   },
+   "extras": 1,
+   "id": "c2k05b1",
+   "cue": "L032",
+   "frame": "medium",
+   "focus": [
+    1200,
+    420
+   ],
+   "explains": "The records clerk asks the company who chairs its board.",
+   "actors": [
+    {
+     "who": "REGGIE",
+     "x": 1200,
+     "y": 980,
+     "scale": 0.85,
+     "speaks": [
+      "L032"
+     ],
+     "prop": "stamp"
+    },
+    {
+     "thing": "chip",
+     "x": 700,
+     "y": 760,
+     "scale": 0.45,
+     "label": "NVIDIA"
+    }
+   ],
+   "camera": "pan_left"
+  },
+  {
+   "set": "records_office",
+   "place": "records office",
+   "opts": {
+    "palette": "ochre",
+    "night": false
+   },
+   "extras": 1,
+   "id": "c2k05b3",
+   "cue": "L033",
+   "frame": "ots",
+   "ots": {
+    "speaker": "REGGIE",
+    "listener": "CHIP"
+   },
+   "explains": "Nobody chairs the board, and the clerk cannot believe it.",
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 620,
+     "y": 760,
+     "scale": 0.45,
+     "speaks": [
+      "L033"
+     ]
+    },
+    {
+     "who": "REGGIE",
+     "x": 1260,
+     "y": 980,
+     "scale": 0.85,
+     "speaks": [
+      "L034"
+     ],
+     "prop": "stamp"
+    }
+   ],
+   "camera": "still"
+  },
+  {
+   "set": "records_office",
+   "place": "records office",
+   "opts": {
+    "palette": "ochre",
+    "night": false
+   },
+   "extras": 1,
+   "id": "c2k05b4",
+   "cue": "L035",
+   "frame": "close",
+   "focus": [
+    700,
+    625
+   ],
+   "explains": "The chip shrugs: the question never came up.",
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 700,
+     "y": 760,
+     "scale": 0.45,
+     "speaks": [
+      "L035"
+     ]
+    },
+    {
+     "who": "REGGIE",
+     "x": 1200,
+     "y": 980,
+     "scale": 0.85,
+     "prop": "stamp"
+    }
+   ],
+   "camera": "pan_right"
+  },
+  {
+   "set": "records_office",
+   "place": "records office",
+   "opts": {
+    "palette": "ochre",
+    "night": false
+   },
+   "extras": 1,
+   "id": "c2k05b5",
+   "cue": "L036",
+   "explains": "The clerk warns it will come up, the stamp raised over the counter.",
+   "actors": [
+    {
+     "who": "REGGIE",
+     "x": 1200,
+     "y": 980,
+     "scale": 0.85,
+     "speaks": [
+      "L036"
+     ],
+     "prop": "stamp"
+    },
+    {
+     "thing": "chip",
+     "x": 700,
+     "y": 760,
+     "scale": 0.45
+    }
+   ],
+   "camera": "tilt_up"
+  },
+  {
+   "id": "c2t02",
+   "type": "card",
+   "cue": "L037",
+   "text": "Until this week...",
+   "emph": [
+    "this week"
+   ],
+   "explains": "The turn: what was true right up to this week."
+  },
+  {
+   "set": "corridor",
+   "place": "executive corridor, before",
+   "opts": {
+    "palette": "teal",
+    "dress": "exec",
+    "night": false
+   },
+   "grade": "sepia",
+   "extras": 2,
+   "id": "c2s12a",
+   "cue": "L037",
+   "word": 3,
+   "camera": "pan_left",
+   "motif": "the door plate, before: one name and three brass plates",
+   "explains": "In sunny days before, the corner door wore one name and three little plates: CEO, president, board.",
+   "props": [
+    {
+     "type": "door_plate",
+     "state": "before",
+     "x": 960,
+     "y": 520
+    }
+   ]
+  },
+  {
+   "set": "corridor",
+   "place": "executive corridor, before",
+   "opts": {
+    "palette": "teal",
+    "dress": "exec",
+    "night": false
+   },
+   "grade": "sepia",
+   "extras": 2,
+   "id": "c2s12b",
+   "cue": "L037",
+   "word": 10,
+   "frame": "close",
+   "camera": "push_in",
+   "focus": [
+    960,
+    640
+   ],
+   "motif": "the door plate, before: the BOARD plate hides behind the doorknob",
+   "explains": "The three biggest seats were all one man's, the board's plate tucked so low it hides behind the knob.",
+   "props": [
+    {
+     "type": "door_plate",
+     "state": "before",
+     "x": 960,
+     "y": 520
+    }
+   ]
+  },
+  {
+   "set": "tv_studio",
+   "place": "TV studio",
+   "opts": {
+    "palette": "blue",
+    "night": true,
+    "outlet": "FOX BUSINESS"
+   },
+   "id": "c2s13a",
+   "cue": "L038",
+   "frame": "medium",
+   "light": {
+    "x": 760,
+    "y": 260,
+    "r": 850,
+    "color": "#fff4dc",
+    "dark": 0.45
+   },
+   "focus": [
+    760,
+    504
+   ],
+   "explains": "An analyst on Fox Business says so on air.",
+   "actors": [
+    {
+     "who": "GIL_LURIA",
+     "x": 760,
+     "y": 980,
+     "scale": 0.85,
+     "face": "neutral",
+     "pose": "rest"
+    }
+   ],
+   "overlays": [
+    {
+     "type": "lower_third",
+     "name": "GIL LURIA",
+     "role": "DA Davidson",
+     "at": 0.4
+    }
+   ],
+   "camera": "still"
+  },
+  {
+   "set": "tv_studio",
+   "place": "TV studio",
+   "opts": {
+    "palette": "blue",
+    "night": true,
+    "outlet": "FOX BUSINESS"
+   },
+   "id": "c2s13b",
+   "cue": "L038",
+   "word": 8,
+   "frame": "close",
+   "light": {
+    "x": 1300,
+    "y": 420,
+    "r": 850,
+    "color": "#fff4dc",
+    "dark": 0.45
+   },
+   "focus": [
+    1300,
+    480
+   ],
+   "explains": "Most of the decisions sat with one man: the seesaw on the monitor has all its weight on one end.",
+   "props": [
+    {
+     "type": "seesaw",
+     "x": 1300,
+     "y": 600,
+     "w": 520,
+     "tilt": -18
+    }
+   ],
+   "camera": "tilt_down"
+  },
+  {
+   "set": "tv_studio",
+   "place": "TV studio",
+   "opts": {
+    "palette": "blue",
+    "night": true,
+    "outlet": "FOX BUSINESS"
+   },
+   "id": "c2s13c",
+   "cue": "L039",
+   "camera": "pull_out",
+   "light": {
+    "x": 960,
+    "y": 300,
+    "r": 900,
+    "color": "#fff4dc",
+    "dark": 0.45
+   },
+   "explains": "The risk was bigger than the newspaper reports themselves.",
+   "actors": [
+    {
+     "who": "GIL_LURIA",
+     "x": 760,
+     "y": 980,
+     "scale": 0.7,
+     "face": "neutral",
+     "pose": "hold"
+    }
+   ],
+   "props": [
+    {
+     "type": "seesaw",
+     "x": 1300,
+     "y": 560,
+     "w": 420,
+     "tilt": -18
+    }
+   ]
+  },
+  {
+   "set": "cinema",
+   "place": "empty cinema",
+   "opts": {
+    "palette": "red",
+    "night": true
+   },
+   "extras": 0,
+   "id": "c2s13d",
+   "cue": "L039",
+   "word": 8,
+   "camera": "pan_right",
+   "light": {
+    "x": 960,
+    "y": 140,
+    "r": 900,
+    "color": "#e8f4ff",
+    "dark": 0.5
+   },
+   "callback": "the three seats from c2s10, now bare",
+   "explains": "What the reports could leave behind: three empty seats at once."
+  },
+  {
+   "set": "theatre",
+   "place": "theatre coat check",
+   "opts": {
+    "palette": "plum",
+    "dress": "coat_check",
+    "night": true
+   },
+   "id": "c2k06a1",
+   "cue": "L040",
+   "frame": "medium",
+   "light": {
+    "x": 960,
+    "y": 220,
+    "r": 820,
+    "color": "#ffd9a0",
+    "dark": 0.45
+   },
+   "focus": [
+    1180,
+    420
+   ],
+   "explains": "Three claim tickets for one coat: one man with three seats.",
+   "actors": [
+    {
+     "who": "REGGIE",
+     "x": 1180,
+     "y": 980,
+     "scale": 0.85,
+     "speaks": [
+      "L040"
+     ]
+    },
+    {
+     "thing": "chip",
+     "x": 640,
+     "y": 780,
+     "scale": 0.45
+    }
+   ],
+   "props": [
+    {
+     "type": "jacket",
+     "x": 1500,
+     "y": 520
+    }
+   ],
+   "camera": "pan_left"
+  },
+  {
+   "set": "theatre",
+   "place": "theatre coat check",
+   "opts": {
+    "palette": "plum",
+    "dress": "coat_check",
+    "night": true
+   },
+   "id": "c2k06a2",
+   "cue": "L041",
+   "frame": "close",
+   "light": {
+    "x": 640,
+    "y": 220,
+    "r": 820,
+    "color": "#ffd9a0",
+    "dark": 0.45
+   },
+   "focus": [
+    640,
+    645
+   ],
+   "explains": "The chip asks if that is even allowed.",
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 640,
+     "y": 780,
+     "scale": 0.45,
+     "speaks": [
+      "L041"
+     ]
+    },
+    {
+     "who": "REGGIE",
+     "x": 1180,
+     "y": 980,
+     "scale": 0.85
+    }
+   ],
+   "camera": "still"
+  },
+  {
+   "set": "theatre",
+   "place": "theatre coat check",
+   "opts": {
+    "palette": "plum",
+    "dress": "coat_check",
+    "night": true
+   },
+   "id": "c2k06a3",
+   "cue": "L042",
+   "frame": "ots",
+   "ots": {
+    "speaker": "REGGIE",
+    "listener": "CHIP"
+   },
+   "light": {
+    "x": 1260,
+    "y": 220,
+    "r": 820,
+    "color": "#ffd9a0",
+    "dark": 0.45
+   },
+   "explains": "It is allowed; whether it is wise is another matter.",
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 600,
+     "y": 780,
+     "scale": 0.45,
+     "speaks": [
+      "L043"
+     ]
+    },
+    {
+     "who": "REGGIE",
+     "x": 1260,
+     "y": 980,
+     "scale": 0.85,
+     "speaks": [
+      "L042"
+     ]
+    }
+   ],
+   "camera": "tilt_up"
+  },
+  {
+   "set": "theatre",
+   "place": "theatre coat check",
+   "opts": {
+    "palette": "plum",
+    "dress": "coat_check",
+    "night": true
+   },
+   "id": "c2k06a4",
+   "cue": "L044",
+   "light": {
+    "x": 1100,
+    "y": 220,
+    "r": 900,
+    "color": "#ffd9a0",
+    "dark": 0.45
+   },
+   "explains": "Allowed and wise are answered at different counters.",
+   "actors": [
+    {
+     "who": "REGGIE",
+     "x": 1180,
+     "y": 980,
+     "scale": 0.85,
+     "speaks": [
+      "L044"
+     ],
+     "pose": "point"
+    },
+    {
+     "thing": "chip",
+     "x": 640,
+     "y": 780,
+     "scale": 0.45
+    }
+   ],
+   "props": [
+    {
+     "type": "jacket",
+     "x": 1500,
+     "y": 520
+    }
+   ],
+   "camera": "pan_right"
+  },
+  {
+   "set": "gym",
+   "place": "gym",
+   "opts": {
+    "palette": "slate",
+    "night": true
+   },
+   "id": "c2k06g1",
+   "cue": "L045",
+   "frame": "medium",
+   "light": {
+    "x": 960,
+    "y": 120,
+    "r": 850,
+    "color": "#e8fff4",
+    "dark": 0.45
+   },
+   "focus": [
+    860,
+    640
+   ],
+   "explains": "Chad thinks one man doing three jobs is efficient.",
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 860,
+     "y": 900,
+     "scale": 0.85,
+     "speaks": [
+      "L045"
+     ]
+    },
+    {
+     "who": "HAL",
+     "x": 1240,
+     "y": 980,
+     "scale": 0.85
+    }
+   ],
+   "camera": "still"
+  },
+  {
+   "set": "gym",
+   "place": "gym",
+   "opts": {
+    "palette": "slate",
+    "night": true
+   },
+   "id": "c2k06g2",
+   "cue": "L046",
+   "frame": "close",
+   "light": {
+    "x": 1240,
+    "y": 120,
+    "r": 850,
+    "color": "#e8fff4",
+    "dark": 0.45
+   },
+   "focus": [
+    1240,
+    420
+   ],
+   "explains": "Hal's catch: it works until he leaves all three at once.",
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 860,
+     "y": 900,
+     "scale": 0.85
+    },
+    {
+     "who": "HAL",
+     "x": 1240,
+     "y": 980,
+     "scale": 0.85,
+     "speaks": [
+      "L046"
+     ]
+    }
+   ],
+   "camera": "pan_left"
+  },
+  {
+   "set": "gym",
+   "place": "gym",
+   "opts": {
+    "palette": "slate",
+    "night": true
+   },
+   "id": "c2k06g3",
+   "cue": "L047",
+   "frame": "ots",
+   "ots": {
+    "speaker": "CHAD",
+    "listener": "HAL"
+   },
+   "light": {
+    "x": 760,
+    "y": 120,
+    "r": 850,
+    "color": "#e8fff4",
+    "dark": 0.45
+   },
+   "explains": "Chad cannot imagine anyone leaving all three.",
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 1260,
+     "y": 980,
+     "scale": 0.85
+    },
+    {
+     "who": "CHAD",
+     "x": 640,
+     "y": 900,
+     "scale": 0.85,
+     "speaks": [
+      "L047"
+     ]
+    }
+   ],
+   "camera": "still"
+  },
+  {
+   "set": "gym",
+   "place": "gym",
+   "opts": {
+    "palette": "slate",
+    "night": true
+   },
+   "id": "c2k06g4",
+   "cue": "L048",
+   "angle": "high",
+   "light": {
+    "x": 960,
+    "y": 120,
+    "r": 850,
+    "color": "#e8fff4",
+    "dark": 0.45
+   },
+   "explains": "Hal lifts his one finger and the bar wobbles over Chad: one support holding everything.",
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 860,
+     "y": 900,
+     "scale": 0.85
+    },
+    {
+     "who": "HAL",
+     "x": 1240,
+     "y": 980,
+     "scale": 0.85,
+     "speaks": [
+      "L048"
+     ]
+    }
+   ],
+   "camera": "tilt_down"
+  },
+  {
+   "id": "c2t03",
+   "type": "card",
+   "cue": "L049",
+   "text": "The Friday before.",
+   "emph": [
+    "Friday"
+   ],
+   "explains": "We step back to the last calm day before the news."
+  },
+  {
+   "set": "rooftop",
+   "place": "rooftop terrace",
+   "opts": {
+    "palette": "mint",
+    "night": false
+   },
+   "id": "c2s15",
+   "cue": "L049",
+   "word": 4,
+   "grade": "green",
+   "camera": "pan_right",
+   "explains": "On Friday 6 November Nvidia was worth about $4.5 trillion, sunbathing without a care.",
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 1000,
+     "y": 900,
+     "scale": 0.6,
+     "tag": "$4.5T"
+    }
+   ]
+  },
+  {
+   "set": "rooftop",
+   "place": "rooftop terrace",
+   "opts": {
+    "palette": "mint",
+    "night": false
+   },
+   "id": "c2k07a",
+   "cue": "L050",
+   "frame": "medium",
+   "focus": [
+    620,
+    420
+   ],
+   "explains": "Benny brings the chip a lemonade: a big week.",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 620,
+     "y": 980,
+     "scale": 0.85,
+     "speaks": [
+      "L050"
+     ]
+    },
+    {
+     "thing": "chip",
+     "x": 1200,
+     "y": 900,
+     "scale": 0.55
+    }
+   ],
+   "camera": "pan_left"
+  },
+  {
+   "set": "rooftop",
+   "place": "rooftop terrace",
+   "opts": {
+    "palette": "mint",
+    "night": false
+   },
+   "id": "c2k07b",
+   "cue": "L051",
+   "frame": "ots",
+   "ots": {
+    "speaker": "CHIP",
+    "listener": "BENNY"
+   },
+   "explains": "The chip is sure nothing can go wrong.",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 600,
+     "y": 980,
+     "scale": 0.85
+    },
+    {
+     "thing": "chip",
+     "x": 1260,
+     "y": 900,
+     "scale": 0.55,
+     "speaks": [
+      "L051"
+     ]
+    }
+   ],
+   "camera": "tilt_up"
+  },
+  {
+   "set": "rooftop",
+   "place": "rooftop terrace",
+   "opts": {
+    "palette": "mint",
+    "night": false
+   },
+   "id": "c2k07c",
+   "cue": "L052",
+   "frame": "close",
+   "focus": [
+    620,
+    420
+   ],
+   "explains": "Benny's warning: it is only Friday.",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 620,
+     "y": 980,
+     "scale": 0.85,
+     "speaks": [
+      "L052"
+     ]
+    },
+    {
+     "thing": "chip",
+     "x": 1200,
+     "y": 900,
+     "scale": 0.55
+    }
+   ],
+   "camera": "pan_right"
+  },
+  {
+   "set": "rooftop",
+   "place": "rooftop terrace",
+   "opts": {
+    "palette": "mint",
+    "night": false
+   },
+   "id": "c2k07d",
+   "cue": "L053",
+   "frame": "close",
+   "focus": [
+    1300,
+    560
+   ],
+   "explains": "The calendar blows from Friday toward Wednesday: the calm is about to end.",
+   "overlays": [
+    {
+     "type": "calendar",
+     "month": "NOV",
+     "day": 11,
+     "dow": "WEDNESDAY",
+     "from": {
+      "month": "NOV",
+      "day": 6,
+      "dow": "FRIDAY"
+     },
+     "x": 1300,
+     "y": 560
+    }
+   ],
+   "camera": "tilt_down"
+  }
+ ]
+}
