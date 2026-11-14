@@ -651,6 +651,17 @@
     vending(o) { const c = o.color || "#e87aa8"; let cans = ""; for (let r = 0; r < 4; r++) for (let i = 0; i < 6; i++) cans += rc(-112 + i * 38, -420 + r * 60, 26, 44, ["#f08a7a", "#7fd0f0", "#f3e6c8", "#9fd8a8"][(r + i) % 4], 5);
       return { w: 190, h: 480, feet: 1, face: [0, -300, 0.7], skin: "#fbe3ec", body: rc(-190, -480, 380, 460, c, 18) + rc(-140, -440, 280, 270, "#2c3766", 8) + cans + rc(-140, -440, 280, 270, "rgba(255,255,255,.14)", 8) +
         rc(-150, -158, 300, 96, shade(c, 0.22), 8) + rc(-70, -140, 140, 54, "#1c2340", 8) + rc(-170, -450, 20, 380, shade(c, 0.25), 6) + (o.label ? txt(0, -462, o.label, 34, "#f6f1e4") : "") }; },
+    // the board of directors as a meeting table with a face: THE BOARD on its edge. { open: seconds (the thick folder REVIEW opens), tip: seconds (the banker's lamp tips over) }
+    the_board(o) { const c = o.color || "#8a5a3c", lamp = "#2f8f5a";
+      const body = rc(-250, -100, 36, 100, shade(c, 0.3), 6) + rc(214, -100, 36, 100, shade(c, 0.3), 6) + rc(-270, -340, 540, 240, c, 10) + rc(-300, -392, 600, 56, shade(c, -0.12), 12) + rc(-240, -150, 480, 46, "#f6f1e4", 6) + txt(0, -114, o.label || "THE BOARD", 36) +
+        `<g class="lamp"><path d="M190,-392 L190,-480" stroke="${INK}" stroke-width="10"/>${rc(150, -404, 80, 18, "#3d4a5c", 6)}<path d="M138,-470 L242,-470 L222,-540 L158,-540Z" fill="${lamp}" ${st}/><ellipse cx="190" cy="-470" rx="48" ry="8" fill="#b8f0a0"/></g>` +
+        `<g class="fclosed">${rc(-240, -424, 190, 34, "#e8dcc0", 4)}${rc(-240, -424, 190, 10, "#c9b88a", 3)}${txt(-145, -396, "REVIEW", 22)}</g>` +
+        `<g class="fopen" style="opacity:0">${rc(-262, -560, 220, 160, "#f6f1e4", 4)}<path d="M-244,-532 L-70,-532 M-244,-502 L-90,-502 M-244,-472 L-120,-472" stroke="#9aa0b4" stroke-width="6" stroke-linecap="round"/>${rc(-252, -440, 240, 42, "#e8dcc0", 4)}${txt(-132, -409, "REVIEW", 30)}</g>`;
+      return { w: 300, h: 420, feet: 0, face: [0, -250, 0.74], skin: c, body,
+        play(tl, a, t0) { const q = (s2) => a.el.querySelector(s2);
+          if (o.open != null) { tl.set(q(".fclosed"), { opacity: 0 }, t0 + o.open); tl.set(q(".fopen"), { opacity: 1 }, t0 + o.open); gsap.set(q(".fopen"), { svgOrigin: "-150 -400", smoothOrigin: false }); tl.fromTo(q(".fopen"), { scaleY: 0.2 }, { scaleY: 1, duration: 0.35, ease: "back.out(2)", immediateRender: false }, t0 + o.open); }
+          if (o.tip != null) { gsap.set(q(".lamp"), { svgOrigin: "190 -392", smoothOrigin: false }); tl.to(q(".lamp"), { rotation: 86, duration: 0.45, ease: "power2.in" }, t0 + o.tip); tl.to(q(".lamp"), { rotation: 78, duration: 0.2, yoyo: true, repeat: 1, ease: "sine.inOut" }, t0 + o.tip + 0.45); } } }; },
+    // @cfo-things
   };
 
   // { hat: "party" | "crown" | "hardhat" }: worn over the hair (G: the figure landmarks from geo()).

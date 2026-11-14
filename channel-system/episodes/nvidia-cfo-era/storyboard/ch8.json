@@ -1,0 +1,1598 @@
+{
+ "shots": [
+  {
+   "id": "c8ch",
+   "type": "chapter",
+   "cue": "L187",
+   "number": 8,
+   "title": "Four twenty"
+  },
+  {
+   "id": "c8t01",
+   "type": "card",
+   "cue": "L187",
+   "text": "One: the big number.",
+   "emph": [
+    "big",
+    "number"
+   ],
+   "explains": "The first of three things to watch on Tuesday is revenue."
+  },
+  {
+   "id": "c8s50",
+   "cue": "L187",
+   "word": 5,
+   "set": "stadium",
+   "place": "empty stadium",
+   "opts": {
+    "night": true,
+    "palette": "green",
+    "dress": "scoreboard"
+   },
+   "camera": "tilt_up",
+   "light": {
+    "x": 960,
+    "y": 140,
+    "r": 1000,
+    "color": "#f4fbff",
+    "dark": 0.4
+   },
+   "extras": 1,
+   "ambience": "outdoors",
+   "actors": [],
+   "explains": "Analysts expect about $109 billion of revenue; the RESULT column is still blank."
+  },
+  {
+   "id": "c8s50a",
+   "cue": "L187",
+   "word": 21,
+   "set": "stadium",
+   "place": "empty stadium",
+   "opts": {
+    "night": true,
+    "palette": "green",
+    "dress": "scoreboard",
+    "view": "stands"
+   },
+   "camera": "pan_left",
+   "light": {
+    "x": 1800,
+    "y": 160,
+    "r": 1100,
+    "color": "#f4fbff",
+    "dark": 0.4
+   },
+   "ambience": "outdoors",
+   "frame": "medium",
+   "focus": [
+    760,
+    620
+   ],
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 760,
+     "y": 980,
+     "scale": 0.9,
+     "enter": "none"
+    },
+    {
+     "who": "HAL",
+     "x": 1180,
+     "y": 980,
+     "scale": 0.9,
+     "enter": "none"
+    }
+   ],
+   "explains": "That figure is only three months of sales, counted in the empty seats."
+  },
+  {
+   "id": "c8s50c",
+   "cue": "L188",
+   "set": "stadium",
+   "place": "empty stadium",
+   "opts": {
+    "night": true,
+    "palette": "green",
+    "dress": "scoreboard"
+   },
+   "camera": "pan_right",
+   "light": {
+    "x": 960,
+    "y": 140,
+    "r": 1000,
+    "color": "#f4fbff",
+    "dark": 0.4
+   },
+   "extras": 1,
+   "ambience": "outdoors",
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 760,
+     "y": 980,
+     "enter": "none"
+    },
+    {
+     "who": "CHAD",
+     "x": 1160,
+     "y": 980,
+     "enter": "none"
+    }
+   ],
+   "explains": "Nvidia's own August forecast was about $108 billion."
+  },
+  {
+   "id": "c8s50d",
+   "cue": "L188",
+   "word": 12,
+   "set": "stadium",
+   "place": "empty stadium",
+   "opts": {
+    "night": true,
+    "palette": "green",
+    "dress": "scoreboard"
+   },
+   "camera": "still",
+   "light": {
+    "x": 960,
+    "y": 140,
+    "r": 1000,
+    "color": "#f4fbff",
+    "dark": 0.4
+   },
+   "extras": 1,
+   "ambience": "outdoors",
+   "frame": "close",
+   "focus": [
+    960,
+    380
+   ],
+   "actors": [],
+   "explains": "Give or take two percent: the forecast is a range, not a point."
+  },
+  {
+   "id": "c8s50e",
+   "cue": "L188",
+   "word": 17,
+   "set": "stadium",
+   "place": "empty stadium",
+   "opts": {
+    "night": true,
+    "palette": "green",
+    "dress": "scoreboard"
+   },
+   "camera": "tilt_down",
+   "light": {
+    "x": 960,
+    "y": 140,
+    "r": 1000,
+    "color": "#f4fbff",
+    "dark": 0.4
+   },
+   "extras": 1,
+   "ambience": "outdoors",
+   "angle": "high",
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 820,
+     "y": 980,
+     "scale": 0.7,
+     "enter": "none"
+    },
+    {
+     "who": "CHAD",
+     "x": 1100,
+     "y": 980,
+     "scale": 0.7,
+     "enter": "none"
+    }
+   ],
+   "explains": "Both figures are guesses: nothing is in the RESULT column yet."
+  },
+  {
+   "id": "c8t02",
+   "type": "card",
+   "cue": "L189",
+   "text": "Two details in the fine print.",
+   "emph": [
+    "fine",
+    "print"
+   ],
+   "explains": "The August forecast came with two small conditions worth knowing."
+  },
+  {
+   "id": "c8k26a0",
+   "cue": "L189",
+   "word": 7,
+   "set": "stadium",
+   "place": "empty stadium",
+   "opts": {
+    "night": true,
+    "palette": "green",
+    "dress": "scoreboard"
+   },
+   "camera": "tilt_up",
+   "light": {
+    "x": 960,
+    "y": 140,
+    "r": 1000,
+    "color": "#f4fbff",
+    "dark": 0.4
+   },
+   "extras": 1,
+   "ambience": "outdoors",
+   "angle": "low",
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 700,
+     "y": 980,
+     "enter": "none"
+    },
+    {
+     "who": "HAL",
+     "x": 1060,
+     "y": 980,
+     "enter": "none"
+    }
+   ],
+   "explains": "Nvidia expects to keep about 74% of each sales dollar as gross margin."
+  },
+  {
+   "id": "c8k26a1",
+   "cue": "L189",
+   "word": 16,
+   "set": "stadium",
+   "place": "empty stadium",
+   "opts": {
+    "night": true,
+    "palette": "green",
+    "dress": "scoreboard"
+   },
+   "camera": "pull_out",
+   "light": {
+    "x": 960,
+    "y": 140,
+    "r": 1000,
+    "color": "#f4fbff",
+    "dark": 0.4
+   },
+   "extras": 1,
+   "ambience": "outdoors",
+   "frame": "medium",
+   "focus": [
+    900,
+    620
+   ],
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 900,
+     "y": 980,
+     "enter": "none"
+    },
+    {
+     "who": "CHAD",
+     "x": 1240,
+     "y": 980,
+     "enter": "none"
+    }
+   ],
+   "explains": "The forecast counts on zero data-center chip sales to China."
+  },
+  {
+   "id": "c8k26b",
+   "cue": "L190",
+   "set": "stadium",
+   "place": "empty stadium",
+   "opts": {
+    "night": true,
+    "palette": "green",
+    "dress": "scoreboard"
+   },
+   "camera": "still",
+   "light": {
+    "x": 960,
+    "y": 140,
+    "r": 1000,
+    "color": "#f4fbff",
+    "dark": 0.4
+   },
+   "extras": 1,
+   "ambience": "outdoors",
+   "frame": "close",
+   "focus": [
+    760,
+    600
+   ],
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 760,
+     "y": 980,
+     "speaks": [
+      "L190"
+     ],
+     "enter": "none"
+    },
+    {
+     "who": "HAL",
+     "x": 1200,
+     "y": 980,
+     "enter": "none"
+    }
+   ],
+   "explains": "Chad does not know what the margin is a percentage of."
+  },
+  {
+   "id": "c8k26c",
+   "cue": "L191",
+   "set": "stadium",
+   "place": "empty stadium",
+   "opts": {
+    "night": true,
+    "palette": "green",
+    "dress": "scoreboard"
+   },
+   "camera": "pan_left",
+   "light": {
+    "x": 960,
+    "y": 140,
+    "r": 1000,
+    "color": "#f4fbff",
+    "dark": 0.4
+   },
+   "extras": 1,
+   "ambience": "outdoors",
+   "frame": "ots",
+   "ots": {
+    "speaker": "HAL",
+    "listener": "CHAD"
+   },
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 640,
+     "y": 980,
+     "enter": "none"
+    },
+    {
+     "who": "HAL",
+     "x": 1240,
+     "y": 980,
+     "speaks": [
+      "L191"
+     ],
+     "enter": "none"
+    }
+   ],
+   "explains": "Gross margin is what is left of each sales dollar after making the product."
+  },
+  {
+   "id": "c8k26d",
+   "cue": "L192",
+   "set": "stadium",
+   "place": "empty stadium",
+   "opts": {
+    "night": true,
+    "palette": "green",
+    "dress": "scoreboard"
+   },
+   "camera": "tilt_up",
+   "light": {
+    "x": 960,
+    "y": 140,
+    "r": 1000,
+    "color": "#f4fbff",
+    "dark": 0.4
+   },
+   "extras": 1,
+   "ambience": "outdoors",
+   "frame": "close",
+   "focus": [
+    760,
+    600
+   ],
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 760,
+     "y": 980,
+     "speaks": [
+      "L192"
+     ],
+     "enter": "none"
+    },
+    {
+     "who": "HAL",
+     "x": 1200,
+     "y": 980,
+     "enter": "none"
+    }
+   ],
+   "explains": "Seventy-four cents of every dollar is a lot."
+  },
+  {
+   "id": "c8k26e",
+   "cue": "L193",
+   "set": "stadium",
+   "place": "empty stadium",
+   "opts": {
+    "night": true,
+    "palette": "green",
+    "dress": "scoreboard",
+    "view": "stands"
+   },
+   "camera": "pan_right",
+   "light": {
+    "x": 1800,
+    "y": 160,
+    "r": 1100,
+    "color": "#f4fbff",
+    "dark": 0.4
+   },
+   "ambience": "outdoors",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 760,
+     "y": 980,
+     "speaks": [
+      "L193"
+     ],
+     "enter": "none"
+    },
+    {
+     "who": "HAL",
+     "x": 1120,
+     "y": 980,
+     "enter": "none"
+    }
+   ],
+   "explains": "Even the regulars only know what to do next, not what will happen."
+  },
+  {
+   "id": "c8k26f",
+   "cue": "L194",
+   "set": "stadium",
+   "place": "empty stadium",
+   "opts": {
+    "night": true,
+    "palette": "green",
+    "dress": "scoreboard",
+    "view": "stands"
+   },
+   "camera": "still",
+   "light": {
+    "x": 1800,
+    "y": 160,
+    "r": 1100,
+    "color": "#f4fbff",
+    "dark": 0.4
+   },
+   "ambience": "outdoors",
+   "frame": "ots",
+   "ots": {
+    "speaker": "HAL",
+    "listener": "MARTHA"
+   },
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 640,
+     "y": 980,
+     "enter": "none"
+    },
+    {
+     "who": "HAL",
+     "x": 1200,
+     "y": 980,
+     "speaks": [
+      "L194"
+     ],
+     "enter": "none"
+    }
+   ],
+   "explains": "If the numbers beat the forecast, the call is the next thing to hear."
+  },
+  {
+   "id": "c8k26g",
+   "cue": "L195",
+   "set": "stadium",
+   "place": "empty stadium",
+   "opts": {
+    "night": true,
+    "palette": "green",
+    "dress": "scoreboard",
+    "view": "stands"
+   },
+   "camera": "tilt_down",
+   "light": {
+    "x": 1800,
+    "y": 160,
+    "r": 1100,
+    "color": "#f4fbff",
+    "dark": 0.4
+   },
+   "ambience": "outdoors",
+   "frame": "close",
+   "focus": [
+    760,
+    600
+   ],
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 760,
+     "y": 980,
+     "speaks": [
+      "L195"
+     ],
+     "enter": "none"
+    },
+    {
+     "who": "HAL",
+     "x": 1200,
+     "y": 980,
+     "enter": "none"
+    }
+   ],
+   "explains": "A miss is possible too."
+  },
+  {
+   "id": "c8k26h",
+   "cue": "L196",
+   "set": "stadium",
+   "place": "empty stadium",
+   "opts": {
+    "night": true,
+    "palette": "green",
+    "dress": "scoreboard",
+    "view": "stands"
+   },
+   "camera": "pan_left",
+   "light": {
+    "x": 1800,
+    "y": 160,
+    "r": 1100,
+    "color": "#f4fbff",
+    "dark": 0.4
+   },
+   "ambience": "outdoors",
+   "frame": "close",
+   "focus": [
+    1120,
+    600
+   ],
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 760,
+     "y": 980,
+     "enter": "none"
+    },
+    {
+     "who": "HAL",
+     "x": 1120,
+     "y": 980,
+     "speaks": [
+      "L196"
+     ],
+     "enter": "none"
+    }
+   ],
+   "explains": "Either way the call matters more than the headline number."
+  },
+  {
+   "id": "c8t03",
+   "type": "card",
+   "cue": "L197",
+   "text": "Two: the next forecast.",
+   "emph": [
+    "next",
+    "forecast"
+   ],
+   "explains": "The second thing to watch is the forecast for the next quarter."
+  },
+  {
+   "id": "c8s51",
+   "cue": "L197",
+   "word": 7,
+   "set": "lighthouse",
+   "place": "lighthouse",
+   "opts": {
+    "night": true,
+    "palette": "navy"
+   },
+   "camera": "pan_right",
+   "light": {
+    "x": 960,
+    "y": 300,
+    "r": 850,
+    "color": "#fff1b0",
+    "dark": 0.45
+   },
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 1100,
+     "y": 900,
+     "label": "NVIDIA",
+     "scale": 0.5,
+     "enter": "none"
+    }
+   ],
+   "explains": "The next quarter is fog, and this is the first forecast under the interim boss."
+  },
+  {
+   "id": "c8k27a",
+   "cue": "L198",
+   "set": "lighthouse",
+   "place": "lighthouse",
+   "opts": {
+    "night": true,
+    "palette": "navy"
+   },
+   "camera": "still",
+   "light": {
+    "x": 960,
+    "y": 300,
+    "r": 850,
+    "color": "#fff1b0",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    760,
+    600
+   ],
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 760,
+     "y": 980,
+     "speaks": [
+      "L198"
+     ],
+     "enter": "none"
+    },
+    {
+     "thing": "chip",
+     "x": 1220,
+     "y": 900,
+     "scale": 0.45,
+     "enter": "none"
+    }
+   ],
+   "explains": "Looking ahead, Chad sees nothing clear."
+  },
+  {
+   "id": "c8k27b",
+   "cue": "L199",
+   "set": "lighthouse",
+   "place": "lighthouse",
+   "opts": {
+    "night": true,
+    "palette": "navy"
+   },
+   "camera": "tilt_up",
+   "light": {
+    "x": 960,
+    "y": 300,
+    "r": 850,
+    "color": "#fff1b0",
+    "dark": 0.45
+   },
+   "frame": "medium",
+   "focus": [
+    1220,
+    640
+   ],
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 700,
+     "y": 980,
+     "enter": "none"
+    },
+    {
+     "thing": "chip",
+     "x": 1220,
+     "y": 900,
+     "scale": 0.45,
+     "speaks": [
+      "L199"
+     ],
+     "enter": "none"
+    }
+   ],
+   "explains": "A company's forecast for the coming months is called guidance."
+  },
+  {
+   "id": "c8k27c",
+   "cue": "L200",
+   "set": "lighthouse",
+   "place": "lighthouse",
+   "opts": {
+    "night": true,
+    "palette": "navy"
+   },
+   "camera": "pan_left",
+   "light": {
+    "x": 960,
+    "y": 300,
+    "r": 850,
+    "color": "#fff1b0",
+    "dark": 0.45
+   },
+   "frame": "ots",
+   "ots": {
+    "speaker": "CHAD",
+    "listener": "CHIP"
+   },
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 640,
+     "y": 900,
+     "scale": 0.45,
+     "enter": "none"
+    },
+    {
+     "who": "CHAD",
+     "x": 1220,
+     "y": 980,
+     "speaks": [
+      "L200"
+     ],
+     "enter": "none"
+    }
+   ],
+   "explains": "Nobody can yet say if the guidance is good."
+  },
+  {
+   "id": "c8k27d",
+   "cue": "L201",
+   "set": "lighthouse",
+   "place": "lighthouse",
+   "opts": {
+    "night": true,
+    "palette": "navy"
+   },
+   "camera": "pull_out",
+   "light": {
+    "x": 960,
+    "y": 300,
+    "r": 850,
+    "color": "#fff1b0",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    1100,
+    640
+   ],
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 700,
+     "y": 980,
+     "enter": "none"
+    },
+    {
+     "thing": "chip",
+     "x": 1100,
+     "y": 900,
+     "scale": 0.45,
+     "speaks": [
+      "L201"
+     ],
+     "enter": "none"
+    }
+   ],
+   "explains": "The answer comes on Tuesday."
+  },
+  {
+   "id": "c8t04",
+   "type": "card",
+   "cue": "L202",
+   "text": "Three: the search.",
+   "emph": [
+    "search"
+   ],
+   "explains": "The third thing to watch is any news on a permanent chief executive."
+  },
+  {
+   "id": "c8s52",
+   "cue": "L202",
+   "word": 6,
+   "set": "corridor",
+   "place": "executive corridor",
+   "opts": {
+    "night": true,
+    "palette": "teal",
+    "dress": "exec"
+   },
+   "camera": "pan_left",
+   "light": {
+    "x": 960,
+    "y": 170,
+    "r": 820,
+    "color": "#ffe9a8",
+    "dark": 0.45
+   },
+   "motif": "the door plate",
+   "callback": "the door plate",
+   "actors": [],
+   "explains": "An empty frame waits on the door for a permanent name."
+  },
+  {
+   "id": "c8s52b",
+   "cue": "L202",
+   "word": 13,
+   "set": "corridor",
+   "place": "executive corridor",
+   "opts": {
+    "night": true,
+    "palette": "teal",
+    "dress": "exec"
+   },
+   "camera": "still",
+   "light": {
+    "x": 960,
+    "y": 170,
+    "r": 820,
+    "color": "#ffe9a8",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    960,
+    420
+   ],
+   "motif": "the door plate",
+   "actors": [],
+   "explains": "As of Saturday 14 November, nobody has been named."
+  },
+  {
+   "id": "c8t05",
+   "type": "card",
+   "cue": "L203",
+   "text": "One report.",
+   "emph": [
+    "One"
+   ],
+   "explains": "What follows is a single press report, not a confirmed fact."
+  },
+  {
+   "id": "c8s53",
+   "cue": "L203",
+   "word": 6,
+   "set": "phone_booth",
+   "place": "phone booth on a rainy street",
+   "opts": {
+    "night": false,
+    "palette": "red",
+    "rain": true
+   },
+   "camera": "pan_right",
+   "extras": 3,
+   "ambience": "street",
+   "actors": [],
+   "explains": "A report says the board approached an executive at another chip company."
+  },
+  {
+   "id": "c8s53b",
+   "cue": "L203",
+   "word": 14,
+   "set": "phone_booth",
+   "place": "phone booth on a rainy street",
+   "opts": {
+    "night": false,
+    "palette": "red",
+    "rain": true
+   },
+   "camera": "tilt_down",
+   "extras": 3,
+   "ambience": "street",
+   "frame": "medium",
+   "focus": [
+    960,
+    560
+   ],
+   "actors": [],
+   "explains": "Who that executive is stays a shadow: no name is confirmed."
+  },
+  {
+   "id": "c8s53c",
+   "cue": "L203",
+   "word": 21,
+   "set": "phone_booth",
+   "place": "phone booth on a rainy street",
+   "opts": {
+    "night": false,
+    "palette": "red",
+    "rain": true
+   },
+   "camera": "still",
+   "extras": 3,
+   "ambience": "street",
+   "frame": "close",
+   "focus": [
+    960,
+    460
+   ],
+   "actors": [],
+   "explains": "Nvidia's board says it has not formally engaged any candidate."
+  },
+  {
+   "id": "c8s53d",
+   "cue": "L203",
+   "word": 31,
+   "set": "phone_booth",
+   "place": "phone booth on a rainy street",
+   "opts": {
+    "night": false,
+    "palette": "red",
+    "rain": true
+   },
+   "camera": "pull_out",
+   "extras": 3,
+   "ambience": "street",
+   "actors": [],
+   "explains": "The board calls talk about names premature: it is one report."
+  },
+  {
+   "id": "c8k28a",
+   "cue": "L204",
+   "set": "phone_booth",
+   "place": "phone booth on a rainy street",
+   "opts": {
+    "night": false,
+    "palette": "red",
+    "rain": true
+   },
+   "camera": "pan_left",
+   "extras": 3,
+   "ambience": "street",
+   "frame": "medium",
+   "focus": [
+    860,
+    620
+   ],
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 860,
+     "y": 980,
+     "speaks": [
+      "L204"
+     ],
+     "enter": "none"
+    },
+    {
+     "who": "MARTHA",
+     "x": 1160,
+     "y": 980,
+     "enter": "none"
+    }
+   ],
+   "explains": "Benny takes the report for the new boss."
+  },
+  {
+   "id": "c8k28b",
+   "cue": "L205",
+   "set": "phone_booth",
+   "place": "phone booth on a rainy street",
+   "opts": {
+    "night": false,
+    "palette": "red",
+    "rain": true
+   },
+   "camera": "still",
+   "extras": 3,
+   "ambience": "street",
+   "frame": "close",
+   "focus": [
+    1100,
+    600
+   ],
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 760,
+     "y": 980,
+     "enter": "none"
+    },
+    {
+     "who": "MARTHA",
+     "x": 1100,
+     "y": 980,
+     "speaks": [
+      "L205"
+     ],
+     "enter": "none"
+    }
+   ],
+   "explains": "Martha: a report is not a name."
+  },
+  {
+   "id": "c8s54",
+   "cue": "L206",
+   "set": "desk_top",
+   "place": "document desk",
+   "opts": {
+    "night": true,
+    "palette": "amber"
+   },
+   "camera": "tilt_down",
+   "light": {
+    "x": 900,
+    "y": 260,
+    "r": 820,
+    "color": "#ffe0a0",
+    "dark": 0.45
+   },
+   "actors": [],
+   "explains": "The same release that named the interim boss also promised business as usual."
+  },
+  {
+   "id": "c8s54b",
+   "cue": "L206",
+   "word": 9,
+   "set": "desk_top",
+   "place": "document desk",
+   "opts": {
+    "night": true,
+    "palette": "amber"
+   },
+   "camera": "still",
+   "light": {
+    "x": 900,
+    "y": 260,
+    "r": 820,
+    "color": "#ffe0a0",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    960,
+    520
+   ],
+   "actors": [],
+   "explains": "The board's chair says operations, customers and products continue without interruption."
+  },
+  {
+   "id": "c8s54c",
+   "cue": "L207",
+   "set": "desk_top",
+   "place": "document desk",
+   "opts": {
+    "night": true,
+    "palette": "amber"
+   },
+   "camera": "pan_right",
+   "light": {
+    "x": 900,
+    "y": 260,
+    "r": 820,
+    "color": "#ffe0a0",
+    "dark": 0.45
+   },
+   "frame": "medium",
+   "focus": [
+    960,
+    560
+   ],
+   "actors": [],
+   "explains": "As of Saturday there is no statement from Huang on his resignation."
+  },
+  {
+   "id": "c8s54d",
+   "cue": "L207",
+   "word": 12,
+   "set": "desk_top",
+   "place": "document desk",
+   "opts": {
+    "night": true,
+    "palette": "amber"
+   },
+   "camera": "pull_out",
+   "light": {
+    "x": 900,
+    "y": 260,
+    "r": 820,
+    "color": "#ffe0a0",
+    "dark": 0.45
+   },
+   "callback": "the two newspapers",
+   "actors": [],
+   "explains": "No report we read says whether the board's review goes on."
+  },
+  {
+   "id": "c8k29a",
+   "cue": "L208",
+   "set": "bus_stop",
+   "place": "empty bus stop",
+   "opts": {
+    "night": true,
+    "palette": "cream",
+    "rain": true
+   },
+   "camera": "tilt_down",
+   "light": {
+    "x": 1450,
+    "y": 180,
+    "r": 850,
+    "color": "#ffb04a",
+    "dark": 0.45
+   },
+   "angle": "high",
+   "callback": "Benny at the bus stop",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 760,
+     "y": 980,
+     "enter": "none"
+    },
+    {
+     "thing": "chip",
+     "x": 1080,
+     "y": 900,
+     "scale": 0.4,
+     "speaks": [
+      "L208"
+     ],
+     "enter": "none"
+    }
+   ],
+   "explains": "Benny and the chip wait alone in the rain for Tuesday."
+  },
+  {
+   "id": "c8k29b",
+   "cue": "L209",
+   "set": "bus_stop",
+   "place": "empty bus stop",
+   "opts": {
+    "night": true,
+    "palette": "cream",
+    "rain": true
+   },
+   "camera": "still",
+   "light": {
+    "x": 1450,
+    "y": 180,
+    "r": 850,
+    "color": "#ffb04a",
+    "dark": 0.45
+   },
+   "frame": "ots",
+   "ots": {
+    "speaker": "BENNY",
+    "listener": "CHIP"
+   },
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 1240,
+     "y": 900,
+     "scale": 0.4,
+     "enter": "none"
+    },
+    {
+     "who": "BENNY",
+     "x": 700,
+     "y": 980,
+     "speaks": [
+      "L209"
+     ],
+     "enter": "none"
+    }
+   ],
+   "explains": "On Tuesday the interim chief executive is in the chair."
+  },
+  {
+   "id": "c8k29c",
+   "cue": "L210",
+   "set": "bus_stop",
+   "place": "empty bus stop",
+   "opts": {
+    "night": true,
+    "palette": "cream",
+    "rain": true
+   },
+   "camera": "pan_left",
+   "light": {
+    "x": 1450,
+    "y": 180,
+    "r": 850,
+    "color": "#ffb04a",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    1080,
+    640
+   ],
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 700,
+     "y": 980,
+     "enter": "none"
+    },
+    {
+     "thing": "chip",
+     "x": 1080,
+     "y": 900,
+     "scale": 0.4,
+     "speaks": [
+      "L210"
+     ],
+     "enter": "none"
+    }
+   ],
+   "explains": "The stock's reaction is the open question."
+  },
+  {
+   "id": "c8k29d",
+   "cue": "L211",
+   "set": "bus_stop",
+   "place": "empty bus stop",
+   "opts": {
+    "night": true,
+    "palette": "cream",
+    "rain": true
+   },
+   "camera": "tilt_up",
+   "light": {
+    "x": 1450,
+    "y": 180,
+    "r": 850,
+    "color": "#ffb04a",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    760,
+    600
+   ],
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 760,
+     "y": 980,
+     "speaks": [
+      "L211"
+     ],
+     "enter": "none"
+    },
+    {
+     "thing": "chip",
+     "x": 1180,
+     "y": 900,
+     "scale": 0.4,
+     "enter": "none"
+    }
+   ],
+   "explains": "Nobody, us included, knows what the stock will do."
+  },
+  {
+   "id": "c8t06",
+   "type": "card",
+   "cue": "L212",
+   "text": "Here's the twist.",
+   "emph": [
+    "twist"
+   ],
+   "explains": "One more thing makes Tuesday unusual."
+  },
+  {
+   "id": "c8s56",
+   "cue": "L212",
+   "word": 4,
+   "set": "corner_office",
+   "place": "corner office",
+   "opts": {
+    "night": true,
+    "palette": "violet",
+    "view": "desk"
+   },
+   "camera": "push_in",
+   "light": {
+    "x": 760,
+    "y": 300,
+    "r": 800,
+    "color": "#ffd27a",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    820,
+    560
+   ],
+   "sound": "riser",
+   "callback": "the phone note",
+   "actors": [],
+   "explains": "The note on the phone now says TODAY: the call she signs is her own first test."
+  },
+  {
+   "id": "c8s56b",
+   "cue": "L212",
+   "word": 11,
+   "set": "corner_office",
+   "place": "corner office",
+   "opts": {
+    "night": true,
+    "palette": "violet",
+    "view": "desk"
+   },
+   "camera": "pan_left",
+   "light": {
+    "x": 760,
+    "y": 300,
+    "r": 800,
+    "color": "#ffd27a",
+    "dark": 0.45
+   },
+   "frame": "medium",
+   "focus": [
+    760,
+    560
+   ],
+   "callback": "the calculator",
+   "actors": [],
+   "explains": "The person reporting the numbers is the same person the market will judge by them."
+  },
+  {
+   "id": "c8k30a",
+   "cue": "L213",
+   "set": "corridor",
+   "place": "executive corridor",
+   "opts": {
+    "night": true,
+    "palette": "teal",
+    "dress": "exec"
+   },
+   "camera": "tilt_up",
+   "light": {
+    "x": 960,
+    "y": 170,
+    "r": 820,
+    "color": "#ffe9a8",
+    "dark": 0.45
+   },
+   "frame": "medium",
+   "focus": [
+    960,
+    600
+   ],
+   "motif": "the door plate",
+   "callback": "the one on the door",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 620,
+     "y": 980,
+     "speaks": [
+      "L213"
+     ],
+     "enter": "none"
+    },
+    {
+     "who": "HAL",
+     "x": 880,
+     "y": 980,
+     "enter": "none"
+    }
+   ],
+   "explains": "The door now reads interim, with an empty frame for whoever comes next."
+  },
+  {
+   "id": "c8k30b",
+   "cue": "L214",
+   "set": "corridor",
+   "place": "executive corridor",
+   "opts": {
+    "night": true,
+    "palette": "teal",
+    "dress": "exec"
+   },
+   "camera": "still",
+   "light": {
+    "x": 960,
+    "y": 170,
+    "r": 820,
+    "color": "#ffe9a8",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    960,
+    600
+   ],
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 560,
+     "y": 980,
+     "enter": "none"
+    },
+    {
+     "who": "HAL",
+     "x": 840,
+     "y": 980,
+     "speaks": [
+      "L214"
+     ],
+     "enter": "none"
+    }
+   ],
+   "explains": "And the clock is running toward Tuesday's call."
+  },
+  {
+   "id": "c8k31a",
+   "cue": "L215",
+   "set": "corner_office",
+   "place": "corner office",
+   "opts": {
+    "night": true,
+    "palette": "violet",
+    "view": "wide",
+    "clock_lit": true,
+    "clock": "4:20"
+   },
+   "camera": "pan_right",
+   "light": {
+    "x": 760,
+    "y": 340,
+    "r": 820,
+    "color": "#ffd27a",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    960,
+    620
+   ],
+   "callback": "who's in the chair",
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 720,
+     "y": 900,
+     "scale": 0.45,
+     "speaks": [
+      "L215"
+     ],
+     "enter": "none"
+    }
+   ],
+   "explains": "The company still asks who is in the chair, its value with a question mark."
+  },
+  {
+   "id": "c8k31b",
+   "cue": "L216",
+   "set": "corner_office",
+   "place": "corner office",
+   "opts": {
+    "night": true,
+    "palette": "violet",
+    "view": "wide",
+    "clock_lit": true,
+    "clock": "4:20"
+   },
+   "camera": "tilt_up",
+   "light": {
+    "x": 760,
+    "y": 340,
+    "r": 820,
+    "color": "#ffd27a",
+    "dark": 0.45
+   },
+   "frame": "medium",
+   "focus": [
+    960,
+    600
+   ],
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 520,
+     "y": 980,
+     "speaks": [
+      "L216"
+     ],
+     "enter": "none"
+    },
+    {
+     "thing": "chip",
+     "x": 860,
+     "y": 900,
+     "scale": 0.4,
+     "enter": "none"
+    }
+   ],
+   "explains": "For now, the finance chief, the one with the calculator, runs the company."
+  },
+  {
+   "id": "c8t07",
+   "type": "card",
+   "cue": "L217",
+   "text": "Who is running Nvidia now?",
+   "emph": [
+    "Nvidia",
+    "now"
+   ],
+   "explains": "The answer to the title question."
+  },
+  {
+   "id": "c8s58a",
+   "cue": "L217",
+   "word": 6,
+   "set": "corner_office",
+   "place": "corner office",
+   "opts": {
+    "night": true,
+    "palette": "violet",
+    "view": "wide",
+    "clock_lit": true,
+    "clock": "4:20"
+   },
+   "camera": "pull_out",
+   "light": {
+    "x": 760,
+    "y": 340,
+    "r": 820,
+    "color": "#ffd27a",
+    "dark": 0.45
+   },
+   "callback": "the jacket on the chair",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 420,
+     "y": 980,
+     "enter": "none"
+    }
+   ],
+   "explains": "Its finance chief runs it, on a temporary title; the boss's chair is still bare."
+  },
+  {
+   "id": "c8s58",
+   "cue": "L218",
+   "word": 5,
+   "set": "corner_office",
+   "place": "corner office",
+   "opts": {
+    "night": true,
+    "palette": "violet",
+    "view": "wide",
+    "clock_lit": true,
+    "clock": "4:20"
+   },
+   "camera": "tilt_down",
+   "light": {
+    "x": 760,
+    "y": 340,
+    "r": 820,
+    "color": "#ffd27a",
+    "dark": 0.45
+   },
+   "motif": "the door plate",
+   "callback": "the opening office",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 520,
+     "y": 980,
+     "enter": "none"
+    }
+   ],
+   "explains": "At 4:20 on Tuesday the numbers and the new boss arrive together for the first time."
+  }
+ ]
+}

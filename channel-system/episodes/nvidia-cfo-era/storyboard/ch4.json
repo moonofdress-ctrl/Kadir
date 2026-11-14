@@ -1,0 +1,1208 @@
+{
+ "shots": [
+  {
+   "id": "c4c00",
+   "type": "chapter",
+   "cue": "L081",
+   "number": 4,
+   "title": "Effective Immediately",
+   "explains": "Chapter four: the day the resignation is made official."
+  },
+  {
+   "id": "c4t01",
+   "type": "card",
+   "cue": "L081",
+   "text": "Thursday: it's official.",
+   "emph": [
+    "official"
+   ],
+   "explains": "The rumour of Wednesday night becomes an announcement on Thursday."
+  },
+  {
+   "id": "c4s01",
+   "cue": "L081",
+   "word": 6,
+   "set": "corner_office",
+   "place": "corner office",
+   "opts": {
+    "night": false,
+    "palette": "violet",
+    "view": "wide"
+   },
+   "camera": "pan_right",
+   "actors": [
+    {
+     "thing": "printer",
+     "label": "NVIDIA",
+     "x": 1380,
+     "y": 800,
+     "scale": 0.6
+    }
+   ],
+   "props": [
+    {
+     "type": "exec_chair",
+     "state": "bare",
+     "x": 560,
+     "y": 900
+    }
+   ],
+   "explains": "At dawn the company's own printer pushes out the release that says Huang has resigned."
+  },
+  {
+   "id": "c4s02",
+   "cue": "L081",
+   "word": 14,
+   "set": "corner_office",
+   "place": "corner office",
+   "opts": {
+    "night": false,
+    "palette": "violet",
+    "view": "wide"
+   },
+   "frame": "close",
+   "focus": [
+    560,
+    620
+   ],
+   "camera": "tilt_down",
+   "callback": "the jacket on the chair",
+   "props": [
+    {
+     "type": "exec_chair",
+     "state": "bare",
+     "x": 560,
+     "y": 900
+    }
+   ],
+   "explains": "The jacket is gone from the chair: all three of his titles go at once, president, chief executive and board member."
+  },
+  {
+   "id": "c4s03",
+   "cue": "L081",
+   "word": 24,
+   "set": "lobby",
+   "place": "glass lobby",
+   "opts": {
+    "night": false,
+    "palette": "cream"
+   },
+   "extras": 2,
+   "camera": "still",
+   "actors": [
+    {
+     "who": "HUANG",
+     "x": 1000,
+     "y": 930,
+     "scale": 0.8,
+     "acts": [
+      {
+       "cue": "L081",
+       "word": 24,
+       "act": "turn"
+      }
+     ]
+    }
+   ],
+   "explains": "Effective immediately: the founder walks out through the revolving door the same day, seen only from behind."
+  },
+  {
+   "id": "c4s04",
+   "cue": "L082",
+   "word": 5,
+   "set": "lobby",
+   "place": "glass lobby",
+   "opts": {
+    "night": false,
+    "palette": "cream"
+   },
+   "extras": 2,
+   "frame": "close",
+   "focus": [
+    1000,
+    560
+   ],
+   "camera": "pan_left",
+   "explains": "The door keeps turning with nobody in it: no reason given and no handover date."
+  },
+  {
+   "id": "c4s05",
+   "cue": "L083",
+   "set": "corridor",
+   "place": "executive corridor",
+   "opts": {
+    "night": false,
+    "palette": "teal",
+    "dress": "exec",
+    "plate": "unscrewed"
+   },
+   "frame": "medium",
+   "focus": [
+    960,
+    460
+   ],
+   "camera": "pull_out",
+   "motif": "door plate: the three brass plates come off",
+   "explains": "The three small plates under his name, CEO, PRESIDENT and BOARD, are unscrewed one by one."
+  },
+  {
+   "id": "c4s06",
+   "cue": "L083",
+   "word": 9,
+   "set": "corridor",
+   "place": "executive corridor",
+   "opts": {
+    "night": false,
+    "palette": "teal",
+    "dress": "exec",
+    "plate": "unscrewed"
+   },
+   "frame": "close",
+   "focus": [
+    960,
+    760
+   ],
+   "angle": "high",
+   "camera": "tilt_down",
+   "motif": "door plate: the plates drop into the box MISC",
+   "explains": "Unlike founders who stay on as chairman, he keeps no seat at all: every plate ends in the box."
+  },
+  {
+   "id": "c4k11a",
+   "cue": "L084",
+   "set": "back_shop",
+   "place": "engraver's shop",
+   "opts": {
+    "night": false,
+    "palette": "ochre",
+    "dress": "engraver"
+   },
+   "frame": "medium",
+   "focus": [
+    760,
+    480
+   ],
+   "camera": "pan_right",
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 620,
+     "y": 950,
+     "speaks": [
+      "L084"
+     ]
+    },
+    {
+     "who": "MARTHA",
+     "x": 1300,
+     "y": 950
+    }
+   ],
+   "explains": "Chad orders a plate that says boss, as if a title were a thing you buy over a counter."
+  },
+  {
+   "id": "c4k11b",
+   "cue": "L085",
+   "set": "back_shop",
+   "place": "engraver's shop",
+   "opts": {
+    "night": false,
+    "palette": "ochre",
+    "dress": "engraver"
+   },
+   "frame": "close",
+   "focus": [
+    1300,
+    420
+   ],
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 1300,
+     "y": 950,
+     "speaks": [
+      "L085"
+     ]
+    },
+    {
+     "who": "CHAD",
+     "x": 620,
+     "y": 950
+    }
+   ],
+   "explains": "Martha asks the question the whole chapter turns on: permanent or temporary.",
+   "camera": "still"
+  },
+  {
+   "id": "c4k11c",
+   "cue": "L086",
+   "set": "back_shop",
+   "place": "engraver's shop",
+   "opts": {
+    "night": false,
+    "palette": "ochre",
+    "dress": "engraver"
+   },
+   "frame": "ots",
+   "ots": {
+    "speaker": "CHAD",
+    "listener": "MARTHA"
+   },
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 620,
+     "y": 950,
+     "speaks": [
+      "L086"
+     ]
+    },
+    {
+     "who": "MARTHA",
+     "x": 1300,
+     "y": 950
+    }
+   ],
+   "explains": "Chad does not see the difference between a permanent and a temporary boss.",
+   "camera": "tilt_up"
+  },
+  {
+   "id": "c4k11d",
+   "cue": "L087",
+   "set": "back_shop",
+   "place": "engraver's shop",
+   "opts": {
+    "night": false,
+    "palette": "ochre",
+    "dress": "engraver"
+   },
+   "frame": "close",
+   "focus": [
+    1300,
+    420
+   ],
+   "camera": "still",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 1300,
+     "y": 950,
+     "speaks": [
+      "L087"
+     ]
+    },
+    {
+     "who": "CHAD",
+     "x": 620,
+     "y": 950
+    }
+   ],
+   "explains": "The difference is tape: a temporary title is stuck on, not engraved."
+  },
+  {
+   "id": "c4t02",
+   "type": "card",
+   "cue": "L088",
+   "text": "The chair goes to...",
+   "emph": [
+    "chair"
+   ],
+   "explains": "Now we learn who takes the chief executive's job."
+  },
+  {
+   "id": "c4s07",
+   "cue": "L088",
+   "word": 6,
+   "set": "corner_office",
+   "place": "corner office",
+   "opts": {
+    "night": true,
+    "palette": "violet",
+    "view": "desk"
+   },
+   "light": {
+    "x": 1350,
+    "y": 430,
+    "r": 900,
+    "color": "#ffd27a",
+    "dark": 0.45
+   },
+   "frame": "medium",
+   "focus": [
+    1250,
+    470
+   ],
+   "angle": "low",
+   "camera": "pull_out",
+   "actors": [
+    {
+     "who": "KRESS",
+     "x": 1250,
+     "y": 960,
+     "face": "neutral",
+     "pose": "hold"
+    }
+   ],
+   "explains": "Colette Kress, the finance chief since 2013, is the one at the desk under the lamp."
+  },
+  {
+   "id": "c4s08",
+   "cue": "L088",
+   "word": 13,
+   "set": "corner_office",
+   "place": "corner office",
+   "opts": {
+    "night": true,
+    "palette": "violet",
+    "view": "desk"
+   },
+   "light": {
+    "x": 1350,
+    "y": 430,
+    "r": 900,
+    "color": "#ffd27a",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    1060,
+    640
+   ],
+   "camera": "still",
+   "callback": "the INTERIM tape from the door",
+   "explains": "Her new title is a strip of tape, INTERIM CEO, stuck beside her old plate."
+  },
+  {
+   "id": "c4s09",
+   "cue": "L088",
+   "word": 19,
+   "set": "corner_office",
+   "place": "corner office",
+   "opts": {
+    "night": true,
+    "palette": "violet",
+    "view": "desk"
+   },
+   "light": {
+    "x": 1350,
+    "y": 430,
+    "r": 900,
+    "color": "#ffd27a",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    1300,
+    660
+   ],
+   "camera": "pan_left",
+   "explains": "She keeps the old job too: the CFO plate and the calculator stay where they were."
+  },
+  {
+   "id": "c4s10",
+   "cue": "L089",
+   "set": "boardroom",
+   "place": "boardroom",
+   "opts": {
+    "night": true,
+    "palette": "wood",
+    "dress": "two_chairs"
+   },
+   "light": {
+    "x": 960,
+    "y": 420,
+    "r": 950,
+    "color": "#b8f0a0",
+    "dark": 0.45
+   },
+   "camera": "pan_right",
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 960,
+     "y": 640,
+     "scale": 0.5,
+     "label": "NVIDIA",
+     "tag": "$4.0T"
+    }
+   ],
+   "explains": "The board makes a second chair: there is now a chair of the board as well as a chief executive."
+  },
+  {
+   "id": "c4s11",
+   "cue": "L089",
+   "word": 7,
+   "set": "boardroom",
+   "place": "boardroom",
+   "opts": {
+    "night": true,
+    "palette": "wood",
+    "dress": "two_chairs"
+   },
+   "light": {
+    "x": 960,
+    "y": 420,
+    "r": 950,
+    "color": "#b8f0a0",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    700,
+    600
+   ],
+   "camera": "tilt_down",
+   "callback": "the chair still in its plastic wrap (CH1 s02)",
+   "explains": "The new chair of the board is a long-time director, and the seat has never been sat in."
+  },
+  {
+   "id": "c4t03",
+   "type": "card",
+   "cue": "L089",
+   "word": 14,
+   "text": "A first-ever chair.",
+   "emph": [
+    "first-ever"
+   ],
+   "explains": "Nvidia has never had a separate board chair before."
+  },
+  {
+   "id": "c4k13a",
+   "cue": "L090",
+   "set": "boardroom",
+   "place": "boardroom",
+   "opts": {
+    "night": true,
+    "palette": "wood",
+    "dress": "two_chairs"
+   },
+   "light": {
+    "x": 960,
+    "y": 420,
+    "r": 950,
+    "color": "#b8f0a0",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    960,
+    540
+   ],
+   "camera": "pull_out",
+   "callback": "Who's in the chair? (CH1 k01)",
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 960,
+     "y": 700,
+     "scale": 0.6,
+     "speaks": [
+      "L090"
+     ]
+    },
+    {
+     "who": "REGGIE",
+     "x": 1450,
+     "y": 950
+    }
+   ],
+   "explains": "CHIP asks his question again, now that the empty chair has been filled."
+  },
+  {
+   "id": "c4k13b",
+   "cue": "L091",
+   "set": "boardroom",
+   "place": "boardroom",
+   "opts": {
+    "night": true,
+    "palette": "wood",
+    "dress": "two_chairs"
+   },
+   "light": {
+    "x": 960,
+    "y": 420,
+    "r": 950,
+    "color": "#b8f0a0",
+    "dark": 0.45
+   },
+   "frame": "medium",
+   "focus": [
+    1450,
+    470
+   ],
+   "actors": [
+    {
+     "who": "REGGIE",
+     "x": 1450,
+     "y": 950,
+     "prop": "stamp",
+     "speaks": [
+      "L091"
+     ]
+    },
+    {
+     "thing": "chip",
+     "x": 800,
+     "y": 700,
+     "scale": 0.6
+    }
+   ],
+   "explains": "Reggie points out the answer is not one chair but two: chief executive and board chair.",
+   "camera": "tilt_up"
+  },
+  {
+   "id": "c4k13c",
+   "cue": "L092",
+   "set": "boardroom",
+   "place": "boardroom",
+   "opts": {
+    "night": true,
+    "palette": "wood",
+    "dress": "two_chairs"
+   },
+   "light": {
+    "x": 960,
+    "y": 420,
+    "r": 950,
+    "color": "#b8f0a0",
+    "dark": 0.45
+   },
+   "frame": "ots",
+   "ots": {
+    "speaker": "CHIP",
+    "listener": "REGGIE"
+   },
+   "camera": "pan_left",
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 760,
+     "y": 700,
+     "scale": 0.6,
+     "speaks": [
+      "L092"
+     ]
+    },
+    {
+     "who": "REGGIE",
+     "x": 1450,
+     "y": 950
+    }
+   ],
+   "explains": "CHIP wonders whether splitting the jobs is an improvement."
+  },
+  {
+   "id": "c4k13d",
+   "cue": "L093",
+   "set": "boardroom",
+   "place": "boardroom",
+   "opts": {
+    "night": true,
+    "palette": "wood",
+    "dress": "two_chairs"
+   },
+   "light": {
+    "x": 960,
+    "y": 420,
+    "r": 950,
+    "color": "#b8f0a0",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    1450,
+    430
+   ],
+   "actors": [
+    {
+     "who": "REGGIE",
+     "x": 1450,
+     "y": 950,
+     "prop": "stamp",
+     "speaks": [
+      "L093"
+     ]
+    },
+    {
+     "thing": "chip",
+     "x": 800,
+     "y": 700,
+     "scale": 0.6
+    }
+   ],
+   "explains": "Reggie will not say it is better, only that it is more chairs.",
+   "camera": "still"
+  },
+  {
+   "id": "c4s12",
+   "cue": "L094",
+   "set": "desk_top",
+   "place": "document desk",
+   "opts": {
+    "night": true,
+    "palette": "amber"
+   },
+   "light": {
+    "x": 960,
+    "y": 380,
+    "r": 1000,
+    "color": "#ffe0a0",
+    "dark": 0.45
+   },
+   "camera": "tilt_down",
+   "overlays": [
+    {
+     "type": "doc",
+     "source": "NVIDIA RELEASE, 12 NOV 2026",
+     "by": "Harvey C. Jones, board chair",
+     "quote": "full confidence in Colette and the leadership team",
+     "hl": [
+      "full confidence"
+     ],
+     "at": 0.3
+    }
+   ],
+   "explains": "The release's own words: the board says it has full confidence in Kress and her team."
+  },
+  {
+   "id": "c4s13",
+   "cue": "L094",
+   "word": 16,
+   "set": "desk_top",
+   "place": "document desk",
+   "opts": {
+    "night": true,
+    "palette": "amber"
+   },
+   "light": {
+    "x": 960,
+    "y": 380,
+    "r": 1000,
+    "color": "#ffe0a0",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    960,
+    500
+   ],
+   "camera": "pan_right",
+   "overlays": [
+    {
+     "type": "doc",
+     "source": "NVIDIA RELEASE, 12 NOV 2026",
+     "by": "Nvidia",
+     "quote": "Jensen's contributions to NVIDIA are profound.",
+     "hl": [
+      "profound"
+     ],
+     "at": 0.3
+    }
+   ],
+   "explains": "The release thanks Huang warmly, and says nothing about why he left."
+  },
+  {
+   "id": "c4s14",
+   "cue": "L095",
+   "set": "desk_top",
+   "place": "document desk",
+   "opts": {
+    "night": true,
+    "palette": "amber"
+   },
+   "light": {
+    "x": 960,
+    "y": 380,
+    "r": 1000,
+    "color": "#ffe0a0",
+    "dark": 0.45
+   },
+   "camera": "pan_left",
+   "overlays": [
+    {
+     "type": "doc",
+     "source": "NVIDIA RELEASE, 12 NOV 2026",
+     "by": "Colette Kress, interim CEO and CFO",
+     "quote": "Our focus remains on serving our customers, partners, developers and shareholders.",
+     "hl": [
+      "Our focus remains"
+     ],
+     "at": 0.3
+    }
+   ],
+   "explains": "Kress's first words as boss promise business as usual."
+  },
+  {
+   "id": "c4s15",
+   "cue": "L095",
+   "word": 8,
+   "set": "desk_top",
+   "place": "document desk",
+   "opts": {
+    "night": true,
+    "palette": "amber"
+   },
+   "light": {
+    "x": 960,
+    "y": 380,
+    "r": 1000,
+    "color": "#ffe0a0",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    960,
+    560
+   ],
+   "camera": "still",
+   "overlays": [
+    {
+     "type": "doc",
+     "source": "NVIDIA RELEASE, 12 NOV 2026",
+     "by": "Colette Kress, interim CEO and CFO",
+     "quote": "Our focus remains on serving our customers, partners, developers and shareholders.",
+     "hl": [
+      "customers, partners, developers and shareholders"
+     ],
+     "at": 0
+    }
+   ],
+   "explains": "Customers, partners, developers, shareholders: everyone is named, no reason is given."
+  },
+  {
+   "id": "c4k13a1",
+   "cue": "L096",
+   "set": "back_shop",
+   "place": "print shop",
+   "opts": {
+    "night": true,
+    "palette": "olive",
+    "dress": "print"
+   },
+   "light": {
+    "x": 980,
+    "y": 300,
+    "r": 900,
+    "color": "#ffe0a0",
+    "dark": 0.45
+   },
+   "frame": "medium",
+   "focus": [
+    1180,
+    460
+   ],
+   "camera": "pan_right",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 1200,
+     "y": 950,
+     "speaks": [
+      "L096"
+     ]
+    },
+    {
+     "who": "MARTHA",
+     "x": 800,
+     "y": 950,
+     "prop": "bill"
+    }
+   ],
+   "explains": "Benny reads the release over Martha's shoulder, looking for the reason."
+  },
+  {
+   "id": "c4k13a2",
+   "cue": "L097",
+   "set": "back_shop",
+   "place": "print shop",
+   "opts": {
+    "night": true,
+    "palette": "olive",
+    "dress": "print"
+   },
+   "light": {
+    "x": 980,
+    "y": 300,
+    "r": 900,
+    "color": "#ffe0a0",
+    "dark": 0.45
+   },
+   "frame": "ots",
+   "ots": {
+    "speaker": "MARTHA",
+    "listener": "BENNY"
+   },
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 800,
+     "y": 950,
+     "prop": "bill",
+     "speaks": [
+      "L097"
+     ]
+    },
+    {
+     "who": "BENNY",
+     "x": 1200,
+     "y": 950
+    }
+   ],
+   "explains": "All the release offers is a thank-you.",
+   "camera": "still"
+  },
+  {
+   "id": "c4k13a3",
+   "cue": "L098",
+   "set": "back_shop",
+   "place": "print shop",
+   "opts": {
+    "night": true,
+    "palette": "olive",
+    "dress": "print"
+   },
+   "light": {
+    "x": 980,
+    "y": 300,
+    "r": 900,
+    "color": "#ffe0a0",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    1200,
+    420
+   ],
+   "camera": "tilt_up",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 1200,
+     "y": 950,
+     "speaks": [
+      "L098"
+     ]
+    },
+    {
+     "who": "MARTHA",
+     "x": 800,
+     "y": 950
+    }
+   ],
+   "explains": "A thank-you is not an explanation."
+  },
+  {
+   "id": "c4k13a4",
+   "cue": "L099",
+   "set": "back_shop",
+   "place": "print shop",
+   "opts": {
+    "night": true,
+    "palette": "olive",
+    "dress": "print"
+   },
+   "light": {
+    "x": 980,
+    "y": 300,
+    "r": 900,
+    "color": "#ffe0a0",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    800,
+    440
+   ],
+   "camera": "push_in",
+   "sound": "riser",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 800,
+     "y": 950,
+     "prop": "bill",
+     "speaks": [
+      "L099"
+     ]
+    },
+    {
+     "who": "BENNY",
+     "x": 1200,
+     "y": 950
+    }
+   ],
+   "explains": "Martha turns the page and the back is blank: there is no reason anywhere in it."
+  },
+  {
+   "id": "c4t04",
+   "type": "card",
+   "cue": "L100",
+   "text": "The hunt is on.",
+   "emph": [
+    "hunt"
+   ],
+   "explains": "The board starts looking for a permanent chief executive."
+  },
+  {
+   "id": "c4s16",
+   "cue": "L100",
+   "word": 10,
+   "set": "night_office",
+   "place": "recruiter's office",
+   "opts": {
+    "night": true,
+    "palette": "slate",
+    "dress": "recruiter"
+   },
+   "light": {
+    "x": 1250,
+    "y": 420,
+    "r": 900,
+    "color": "#ffe9c0",
+    "dark": 0.45
+   },
+   "camera": "pan_left",
+   "explains": "The search is open to people inside the company and outside it, and the queue starts at number one.",
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 1250,
+     "y": 950
+    },
+    {
+     "who": "CHAD",
+     "x": 650,
+     "y": 950
+    }
+   ]
+  },
+  {
+   "id": "c4k14a",
+   "cue": "L101",
+   "set": "night_office",
+   "place": "recruiter's office",
+   "opts": {
+    "night": true,
+    "palette": "slate",
+    "dress": "recruiter"
+   },
+   "light": {
+    "x": 1250,
+    "y": 420,
+    "r": 900,
+    "color": "#ffe9c0",
+    "dark": 0.45
+   },
+   "frame": "ots",
+   "ots": {
+    "speaker": "HAL",
+    "listener": "CHAD"
+   },
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 1250,
+     "y": 950,
+     "speaks": [
+      "L101"
+     ]
+    },
+    {
+     "who": "CHAD",
+     "x": 650,
+     "y": 950
+    }
+   ],
+   "explains": "Hal reads out the job ad: one chief executive wanted.",
+   "camera": "tilt_down"
+  },
+  {
+   "id": "c4k14b",
+   "cue": "L102",
+   "set": "night_office",
+   "place": "recruiter's office",
+   "opts": {
+    "night": true,
+    "palette": "slate",
+    "dress": "recruiter"
+   },
+   "light": {
+    "x": 1250,
+    "y": 420,
+    "r": 900,
+    "color": "#ffe9c0",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    650,
+    420
+   ],
+   "camera": "tilt_up",
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 650,
+     "y": 950,
+     "speaks": [
+      "L102"
+     ]
+    },
+    {
+     "who": "HAL",
+     "x": 1250,
+     "y": 950
+    }
+   ],
+   "explains": "Chad, CV in hand, asks what experience the job needs."
+  },
+  {
+   "id": "c4k14c",
+   "cue": "L103",
+   "set": "night_office",
+   "place": "recruiter's office",
+   "opts": {
+    "night": true,
+    "palette": "slate",
+    "dress": "recruiter"
+   },
+   "light": {
+    "x": 1250,
+    "y": 420,
+    "r": 900,
+    "color": "#ffe9c0",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    1250,
+    420
+   ],
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 1250,
+     "y": 950,
+     "speaks": [
+      "L103"
+     ]
+    },
+    {
+     "who": "CHAD",
+     "x": 650,
+     "y": 950
+    }
+   ],
+   "explains": "The job is running a company worth about four trillion dollars.",
+   "camera": "pan_right"
+  },
+  {
+   "id": "c4k14d",
+   "cue": "L104",
+   "set": "night_office",
+   "place": "recruiter's office",
+   "opts": {
+    "night": true,
+    "palette": "slate",
+    "dress": "recruiter"
+   },
+   "light": {
+    "x": 1250,
+    "y": 420,
+    "r": 900,
+    "color": "#ffe9c0",
+    "dark": 0.45
+   },
+   "frame": "medium",
+   "focus": [
+    650,
+    470
+   ],
+   "camera": "tilt_up",
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 650,
+     "y": 950,
+     "speaks": [
+      "L104"
+     ]
+    },
+    {
+     "who": "HAL",
+     "x": 1250,
+     "y": 950
+    }
+   ],
+   "explains": "Chad's only experience is a lemonade stand: the gap between a normal CV and this job."
+  },
+  {
+   "id": "c4k14e",
+   "cue": "L105",
+   "set": "night_office",
+   "place": "recruiter's office",
+   "opts": {
+    "night": true,
+    "palette": "slate",
+    "dress": "recruiter"
+   },
+   "light": {
+    "x": 1250,
+    "y": 420,
+    "r": 900,
+    "color": "#ffe9c0",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    1250,
+    420
+   ],
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 1250,
+     "y": 950,
+     "speaks": [
+      "L105"
+     ]
+    },
+    {
+     "who": "CHAD",
+     "x": 650,
+     "y": 950
+    }
+   ],
+   "explains": "Hal waves him off: the queue for this job is short and very hard to join.",
+   "camera": "still"
+  },
+  {
+   "id": "c4s17",
+   "cue": "L106",
+   "set": "corner_office",
+   "place": "corner office",
+   "opts": {
+    "night": false,
+    "palette": "violet",
+    "view": "desk"
+   },
+   "frame": "medium",
+   "focus": [
+    1250,
+    470
+   ],
+   "camera": "pull_out",
+   "callback": "Kress's calculator",
+   "actors": [
+    {
+     "who": "KRESS",
+     "x": 1250,
+     "y": 960,
+     "face": "neutral",
+     "pose": "think"
+    }
+   ],
+   "explains": "For now the company is run by its money person, at her same desk, calculator at hand, in the morning light."
+  }
+ ]
+}

@@ -1,0 +1,1319 @@
+{
+ "shots": [
+  {
+   "id": "c6ch",
+   "type": "chapter",
+   "cue": "L130",
+   "number": 6,
+   "title": "Four trillion",
+   "explains": "Chapter six: what the market did with the news."
+  },
+  {
+   "id": "c6t01",
+   "type": "card",
+   "cue": "L130",
+   "word": 0,
+   "explains": "The turn: the day after the announcement, the market answers.",
+   "text": "But on Thursday morning",
+   "emph": [
+    "Thursday"
+   ]
+  },
+  {
+   "id": "c6s36",
+   "cue": "L130",
+   "word": 3,
+   "explains": "At one point on Thursday the shares were down more than twelve percent, and a whole trading floor felt it.",
+   "set": "trading_floor",
+   "opts": {
+    "dress": "exchange",
+    "palette": "green",
+    "night": false
+   },
+   "place": "stock exchange floor",
+   "extras": 12,
+   "camera": "shake",
+   "grade": "red",
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 760,
+     "y": 980,
+     "scale": 0.8,
+     "enter": "none"
+    },
+    {
+     "who": "HAL",
+     "x": 1120,
+     "y": 980,
+     "scale": 0.8,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6k18a",
+   "cue": "L131",
+   "explains": "Chad sees a twelve percent drop as a bargain.",
+   "set": "trading_floor",
+   "opts": {
+    "dress": "exchange",
+    "palette": "green",
+    "night": false
+   },
+   "place": "stock exchange floor",
+   "extras": 12,
+   "frame": "medium",
+   "focus": [
+    820,
+    447
+   ],
+   "camera": "still",
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 820,
+     "y": 960,
+     "scale": 0.95,
+     "enter": "none",
+     "speaks": [
+      "L131"
+     ]
+    },
+    {
+     "who": "HAL",
+     "x": 1260,
+     "y": 960,
+     "scale": 0.95,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6k18b",
+   "cue": "L132",
+   "explains": "Hal points out the price is already recovering inside the same day.",
+   "set": "trading_floor",
+   "opts": {
+    "dress": "exchange",
+    "palette": "green",
+    "night": false
+   },
+   "place": "stock exchange floor",
+   "extras": 12,
+   "frame": "close",
+   "focus": [
+    1100,
+    420
+   ],
+   "camera": "pan_right",
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 1100,
+     "y": 960,
+     "scale": 1.0,
+     "enter": "none",
+     "speaks": [
+      "L132"
+     ]
+    },
+    {
+     "who": "CHAD",
+     "x": 600,
+     "y": 960,
+     "scale": 1.0,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6k18c",
+   "cue": "L133",
+   "explains": "Chad flips to selling the moment it rises: the swings are big both ways.",
+   "set": "trading_floor",
+   "opts": {
+    "dress": "exchange",
+    "palette": "green",
+    "night": false
+   },
+   "place": "stock exchange floor",
+   "extras": 12,
+   "frame": "ots",
+   "ots": {
+    "speaker": "CHAD",
+    "listener": "HAL"
+   },
+   "camera": "still",
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 1180,
+     "y": 960,
+     "scale": 0.95,
+     "enter": "none",
+     "speaks": [
+      "L133"
+     ]
+    },
+    {
+     "who": "HAL",
+     "x": 560,
+     "y": 960,
+     "scale": 0.95,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6k18d",
+   "cue": "L134",
+   "explains": "Chasing every swing is not a plan.",
+   "set": "trading_floor",
+   "opts": {
+    "dress": "exchange",
+    "palette": "green",
+    "night": false
+   },
+   "place": "stock exchange floor",
+   "extras": 12,
+   "frame": "medium",
+   "focus": [
+    760,
+    447
+   ],
+   "camera": "pull_out",
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 760,
+     "y": 960,
+     "scale": 0.95,
+     "enter": "none",
+     "speaks": [
+      "L134"
+     ]
+    },
+    {
+     "who": "CHAD",
+     "x": 1240,
+     "y": 960,
+     "scale": 0.95,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6t02",
+   "type": "card",
+   "cue": "L135",
+   "word": 0,
+   "explains": "We return to the four trillion dollars from the opening.",
+   "text": "The number we kept in mind",
+   "emph": [
+    "kept"
+   ],
+   "callback": "keep that number in mind (s03)"
+  },
+  {
+   "id": "c6s37a",
+   "cue": "L135",
+   "word": 3,
+   "explains": "Nvidia is the lot on the block: a week earlier it was worth four and a half trillion.",
+   "set": "auction_house",
+   "opts": {
+    "palette": "plum",
+    "night": true
+   },
+   "place": "auction house",
+   "extras": 5,
+   "grade": "gold",
+   "light": {
+    "kind": "spot",
+    "x": 960,
+    "y": 180,
+    "r": 950,
+    "color": "#ffe6a0",
+    "dark": 0.45
+   },
+   "camera": "pan_left",
+   "callback": "CHIP's price tag (running number)",
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 960,
+     "y": 900,
+     "scale": 0.75,
+     "enter": "none",
+     "label": "NVIDIA"
+    },
+    {
+     "who": "REGGIE",
+     "x": 1560,
+     "y": 960,
+     "scale": 0.8,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6s37c",
+   "cue": "L136",
+   "explains": "Between the two dates the bidders back away: nobody pays the old price.",
+   "set": "auction_house",
+   "opts": {
+    "palette": "plum",
+    "night": true
+   },
+   "place": "auction house",
+   "extras": 6,
+   "grade": "gold",
+   "light": {
+    "kind": "spot",
+    "x": 960,
+    "y": 180,
+    "r": 950,
+    "color": "#ffe6a0",
+    "dark": 0.45
+   },
+   "camera": "tilt_down",
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 900,
+     "y": 900,
+     "scale": 0.55,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6s37d",
+   "cue": "L136",
+   "word": 4,
+   "explains": "About $493 billion of market value disappeared between the Friday before and Thursday.",
+   "set": "auction_house",
+   "opts": {
+    "palette": "plum",
+    "night": true
+   },
+   "place": "auction house",
+   "extras": 5,
+   "grade": "gold",
+   "light": {
+    "kind": "spot",
+    "x": 960,
+    "y": 180,
+    "r": 950,
+    "color": "#ffe6a0",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    960,
+    690
+   ],
+   "camera": "push_in",
+   "sound": "riser",
+   "callback": "CHIP's price tag (running number)",
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 960,
+     "y": 960,
+     "scale": 0.9,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6s37e",
+   "cue": "L137",
+   "explains": "That figure is our own subtraction from Yahoo Finance's numbers, not a reported one.",
+   "set": "auction_house",
+   "opts": {
+    "palette": "plum",
+    "night": true
+   },
+   "place": "auction house",
+   "extras": 5,
+   "grade": "gold",
+   "light": {
+    "kind": "spot",
+    "x": 960,
+    "y": 180,
+    "r": 950,
+    "color": "#ffe6a0",
+    "dark": 0.45
+   },
+   "frame": "medium",
+   "focus": [
+    820,
+    474
+   ],
+   "camera": "pan_right",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 820,
+     "y": 960,
+     "scale": 0.9,
+     "enter": "none"
+    },
+    {
+     "thing": "chip",
+     "x": 1240,
+     "y": 900,
+     "scale": 0.55,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6t03",
+   "type": "card",
+   "cue": "L138",
+   "word": 0,
+   "explains": "The lost value is about to be compared with what Nvidia sells in a quarter.",
+   "text": "One quarter's sales",
+   "emph": [
+    "One quarter's"
+   ]
+  },
+  {
+   "id": "c6s37f",
+   "cue": "L138",
+   "word": 3,
+   "explains": "The value lost is more than four times the sales analysts expect for the whole quarter.",
+   "set": "auction_house",
+   "opts": {
+    "palette": "plum",
+    "night": true
+   },
+   "place": "auction house",
+   "extras": 5,
+   "grade": "gold",
+   "light": {
+    "kind": "spot",
+    "x": 960,
+    "y": 180,
+    "r": 950,
+    "color": "#ffe6a0",
+    "dark": 0.45
+   },
+   "camera": "still",
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 520,
+     "y": 900,
+     "scale": 0.5,
+     "enter": "none"
+    },
+    {
+     "who": "MARTHA",
+     "x": 1500,
+     "y": 960,
+     "scale": 0.8,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6s37g",
+   "cue": "L138",
+   "word": 15,
+   "explains": "That comparison is our arithmetic, not a forecast.",
+   "set": "auction_house",
+   "opts": {
+    "palette": "plum",
+    "night": true
+   },
+   "place": "auction house",
+   "extras": 5,
+   "grade": "gold",
+   "light": {
+    "kind": "spot",
+    "x": 960,
+    "y": 180,
+    "r": 950,
+    "color": "#ffe6a0",
+    "dark": 0.45
+   },
+   "camera": "pull_out",
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 960,
+     "y": 900,
+     "scale": 0.6,
+     "enter": "none"
+    },
+    {
+     "who": "MARTHA",
+     "x": 1440,
+     "y": 960,
+     "scale": 0.8,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6t04",
+   "type": "card",
+   "cue": "L139",
+   "word": 0,
+   "explains": "Smaller companies close to Nvidia were hit too.",
+   "text": "Next door",
+   "emph": [
+    "Next door"
+   ]
+  },
+  {
+   "id": "c6s38a",
+   "cue": "L139",
+   "word": 2,
+   "explains": "Two smaller neighbours of Nvidia wobbled the same morning.",
+   "set": "farmers_market",
+   "opts": {
+    "palette": "olive",
+    "night": true
+   },
+   "place": "night market stalls",
+   "extras": 4,
+   "light": {
+    "kind": "spot",
+    "x": 960,
+    "y": 240,
+    "r": 1000,
+    "color": "#ffd27a",
+    "dark": 0.4
+   },
+   "angle": "high",
+   "camera": "pan_left",
+   "actors": [
+    {
+     "thing": "coreweave",
+     "x": 780,
+     "y": 940,
+     "scale": 0.5,
+     "enter": "none"
+    },
+    {
+     "thing": "nebius",
+     "x": 1140,
+     "y": 940,
+     "scale": 0.5,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6s38b",
+   "cue": "L139",
+   "word": 7,
+   "explains": "CoreWeave was down about nine percent.",
+   "set": "farmers_market",
+   "opts": {
+    "palette": "olive",
+    "night": true
+   },
+   "place": "night market stalls",
+   "extras": 4,
+   "light": {
+    "kind": "spot",
+    "x": 960,
+    "y": 240,
+    "r": 1000,
+    "color": "#ffd27a",
+    "dark": 0.4
+   },
+   "frame": "close",
+   "focus": [
+    900,
+    705
+   ],
+   "camera": "tilt_up",
+   "actors": [
+    {
+     "thing": "coreweave",
+     "x": 900,
+     "y": 960,
+     "scale": 0.85,
+     "enter": "none",
+     "label": "COREWEAVE"
+    },
+    {
+     "thing": "nebius",
+     "x": 1500,
+     "y": 960,
+     "scale": 0.6,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6s38c",
+   "cue": "L139",
+   "word": 14,
+   "explains": "Nebius was down about sixteen percent, according to TechCrunch.",
+   "set": "farmers_market",
+   "opts": {
+    "palette": "olive",
+    "night": true
+   },
+   "place": "night market stalls",
+   "extras": 4,
+   "light": {
+    "kind": "spot",
+    "x": 960,
+    "y": 240,
+    "r": 1000,
+    "color": "#ffd27a",
+    "dark": 0.4
+   },
+   "frame": "close",
+   "focus": [
+    1000,
+    705
+   ],
+   "camera": "pan_right",
+   "actors": [
+    {
+     "thing": "nebius",
+     "x": 1000,
+     "y": 960,
+     "scale": 0.85,
+     "enter": "none",
+     "label": "NEBIUS"
+    },
+    {
+     "thing": "coreweave",
+     "x": 420,
+     "y": 960,
+     "scale": 0.6,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6k19a",
+   "cue": "L140",
+   "explains": "Martha finds the two neighbours patched up with ice packs.",
+   "set": "hospital",
+   "opts": {
+    "palette": "mint",
+    "night": false
+   },
+   "place": "hospital waiting room",
+   "extras": 2,
+   "frame": "medium",
+   "focus": [
+    620,
+    474
+   ],
+   "camera": "pan_left",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 620,
+     "y": 960,
+     "scale": 0.9,
+     "enter": "none",
+     "speaks": [
+      "L140"
+     ]
+    },
+    {
+     "thing": "coreweave",
+     "x": 1180,
+     "y": 960,
+     "scale": 0.5,
+     "enter": "none"
+    },
+    {
+     "thing": "nebius",
+     "x": 1480,
+     "y": 960,
+     "scale": 0.5,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6k19b",
+   "cue": "L141",
+   "explains": "CoreWeave was hurt only for being next to Nvidia.",
+   "set": "hospital",
+   "opts": {
+    "palette": "mint",
+    "night": false
+   },
+   "place": "hospital waiting room",
+   "extras": 2,
+   "frame": "close",
+   "camera": "still",
+   "actors": [
+    {
+     "thing": "coreweave",
+     "x": 960,
+     "y": 960,
+     "scale": 0.8,
+     "enter": "none",
+     "speaks": [
+      "L141"
+     ]
+    },
+    {
+     "thing": "nebius",
+     "x": 1500,
+     "y": 960,
+     "scale": 0.6,
+     "enter": "none"
+    }
+   ],
+   "focus": [
+    960,
+    720
+   ]
+  },
+  {
+   "id": "c6k19c",
+   "cue": "L142",
+   "explains": "Martha cannot believe being nearby was the whole reason.",
+   "set": "hospital",
+   "opts": {
+    "palette": "mint",
+    "night": false
+   },
+   "place": "hospital waiting room",
+   "extras": 2,
+   "frame": "ots",
+   "camera": "pull_out",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 1180,
+     "y": 960,
+     "scale": 0.95,
+     "enter": "none",
+     "speaks": [
+      "L142"
+     ]
+    },
+    {
+     "thing": "coreweave",
+     "x": 560,
+     "y": 960,
+     "scale": 0.7,
+     "enter": "none"
+    }
+   ],
+   "ots": {
+    "speaker": "MARTHA",
+    "listener": "COREWEAVE"
+   }
+  },
+  {
+   "id": "c6k19d",
+   "cue": "L143",
+   "explains": "For companies tied to Nvidia, being close was reason enough to fall.",
+   "set": "hospital",
+   "opts": {
+    "palette": "mint",
+    "night": false
+   },
+   "place": "hospital waiting room",
+   "extras": 2,
+   "frame": "close",
+   "focus": [
+    1000,
+    720
+   ],
+   "camera": "tilt_down",
+   "actors": [
+    {
+     "thing": "nebius",
+     "x": 1000,
+     "y": 960,
+     "scale": 0.8,
+     "enter": "none",
+     "speaks": [
+      "L143"
+     ]
+    },
+    {
+     "thing": "coreweave",
+     "x": 600,
+     "y": 960,
+     "scale": 0.6,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6t05",
+   "type": "card",
+   "cue": "L144",
+   "word": 0,
+   "explains": "The next day, a big bank changed its rating.",
+   "text": "One day later",
+   "emph": [
+    "One day"
+   ]
+  },
+  {
+   "id": "c6s39a",
+   "cue": "L144",
+   "word": 3,
+   "explains": "HSBC lowered its call on Nvidia to Hold: no longer a clear buy.",
+   "set": "bank",
+   "opts": {
+    "dress": "counter",
+    "palette": "blue",
+    "night": false
+   },
+   "place": "bank front office",
+   "camera": "pan_left",
+   "actors": [
+    {
+     "who": "FRANK_LEE",
+     "x": 1180,
+     "y": 960,
+     "scale": 0.85,
+     "enter": "none"
+    },
+    {
+     "thing": "bank",
+     "x": 600,
+     "y": 940,
+     "scale": 0.55,
+     "enter": "none",
+     "label": "HSBC"
+    }
+   ]
+  },
+  {
+   "id": "c6s39b",
+   "cue": "L144",
+   "word": 8,
+   "explains": "HSBC's price target for the shares started at $365.",
+   "set": "bank",
+   "opts": {
+    "dress": "counter",
+    "palette": "blue",
+    "night": false
+   },
+   "place": "bank front office",
+   "frame": "medium",
+   "focus": [
+    1200,
+    420
+   ],
+   "camera": "tilt_down",
+   "actors": [
+    {
+     "thing": "bank",
+     "x": 560,
+     "y": 940,
+     "scale": 0.5,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6s39c",
+   "cue": "L144",
+   "word": 18,
+   "explains": "The target fell to $170, off the chart.",
+   "set": "bank",
+   "opts": {
+    "dress": "counter",
+    "palette": "blue",
+    "night": false
+   },
+   "place": "bank front office",
+   "frame": "close",
+   "focus": [
+    1250,
+    760
+   ],
+   "camera": "still",
+   "actors": [
+    {
+     "thing": "bank",
+     "x": 560,
+     "y": 940,
+     "scale": 0.5,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6s39d",
+   "cue": "L146",
+   "explains": "Frank Lee is the HSBC analyst behind the cut.",
+   "set": "bank",
+   "opts": {
+    "dress": "counter",
+    "palette": "blue",
+    "night": false
+   },
+   "place": "bank front office",
+   "frame": "close",
+   "focus": [
+    960,
+    447
+   ],
+   "camera": "tilt_up",
+   "actors": [
+    {
+     "who": "FRANK_LEE",
+     "x": 960,
+     "y": 960,
+     "scale": 0.95,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6s39e",
+   "cue": "L146",
+   "word": 8,
+   "explains": "His reason, in his words: the leadership succession plan is unclear.",
+   "set": "bank",
+   "opts": {
+    "dress": "counter",
+    "palette": "blue",
+    "night": false
+   },
+   "place": "bank front office",
+   "frame": "medium",
+   "focus": [
+    760,
+    520
+   ],
+   "camera": "pan_left",
+   "actors": [
+    {
+     "who": "FRANK_LEE",
+     "x": 1400,
+     "y": 960,
+     "scale": 0.8,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6s39f",
+   "cue": "L146",
+   "word": 15,
+   "explains": "It is one bank's view, not the market's verdict.",
+   "set": "bank",
+   "opts": {
+    "dress": "counter",
+    "palette": "blue",
+    "night": false
+   },
+   "place": "bank front office",
+   "camera": "pull_out",
+   "actors": [
+    {
+     "who": "FRANK_LEE",
+     "x": 1180,
+     "y": 960,
+     "scale": 0.8,
+     "enter": "none"
+    },
+    {
+     "thing": "bank",
+     "x": 600,
+     "y": 940,
+     "scale": 0.55,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6s40a",
+   "cue": "L147",
+   "explains": "Back at the empty chief executive's door, the doubts reach the top.",
+   "set": "corridor",
+   "opts": {
+    "dress": "exec",
+    "palette": "teal",
+    "night": true
+   },
+   "place": "executive corridor",
+   "light": {
+    "kind": "spot",
+    "x": 960,
+    "y": 160,
+    "r": 820,
+    "color": "#ffe9a8",
+    "dark": 0.45
+   },
+   "camera": "pan_right",
+   "motif": "door plate: tape and CFO plate rattling",
+   "actors": []
+  },
+  {
+   "id": "c6s40b",
+   "cue": "L147",
+   "word": 8,
+   "explains": "A fund manager called the resignation the worst case, and the interim plates shake on the door.",
+   "set": "corridor",
+   "opts": {
+    "dress": "exec",
+    "palette": "teal",
+    "night": true
+   },
+   "place": "executive corridor",
+   "light": {
+    "kind": "spot",
+    "x": 960,
+    "y": 160,
+    "r": 820,
+    "color": "#ffe9a8",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    960,
+    520
+   ],
+   "camera": "still",
+   "motif": "door plate: tape and CFO plate rattling",
+   "callback": "door plate (s31)",
+   "actors": []
+  },
+  {
+   "id": "c6k20a",
+   "cue": "L148",
+   "explains": "Hal plays the bank: Hold is now the official word.",
+   "set": "bank",
+   "opts": {
+    "dress": "counter",
+    "palette": "blue",
+    "night": false
+   },
+   "place": "bank front office",
+   "extras": 1,
+   "frame": "medium",
+   "focus": [
+    960,
+    440
+   ],
+   "angle": "low",
+   "camera": "tilt_up",
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 960,
+     "y": 980,
+     "scale": 1.0,
+     "enter": "none",
+     "speaks": [
+      "L148"
+     ]
+    },
+    {
+     "thing": "chip",
+     "x": 1400,
+     "y": 960,
+     "scale": 0.5,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6k20b",
+   "cue": "L149",
+   "explains": "Nvidia does not know what it is supposed to hold.",
+   "set": "bank",
+   "opts": {
+    "dress": "counter",
+    "palette": "blue",
+    "night": false
+   },
+   "place": "bank front office",
+   "extras": 1,
+   "frame": "close",
+   "focus": [
+    900,
+    720
+   ],
+   "camera": "still",
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 900,
+     "y": 960,
+     "scale": 0.8,
+     "enter": "none",
+     "speaks": [
+      "L149"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c6k20c",
+   "cue": "L150",
+   "explains": "Hold means wait and see: nobody knows yet.",
+   "set": "bank",
+   "opts": {
+    "dress": "counter",
+    "palette": "blue",
+    "night": false
+   },
+   "place": "bank front office",
+   "extras": 1,
+   "frame": "ots",
+   "ots": {
+    "speaker": "HAL",
+    "listener": "CHIP"
+   },
+   "camera": "pull_out",
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 1180,
+     "y": 960,
+     "scale": 0.95,
+     "enter": "none",
+     "speaks": [
+      "L150"
+     ]
+    },
+    {
+     "thing": "chip",
+     "x": 560,
+     "y": 960,
+     "scale": 0.7,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6t06",
+   "type": "card",
+   "cue": "L151",
+   "word": 0,
+   "explains": "Where the price ended the week.",
+   "text": "By Friday's close",
+   "emph": [
+    "Friday"
+   ]
+  },
+  {
+   "id": "c6s41a",
+   "cue": "L151",
+   "word": 4,
+   "explains": "By Friday's close the shares sat at about $163, and Nvidia walks the street alone.",
+   "set": "street",
+   "opts": {
+    "dress": "shuttered",
+    "palette": "ochre",
+    "night": true
+   },
+   "place": "empty shuttered street at dusk",
+   "light": {
+    "kind": "spot",
+    "x": 1300,
+    "y": 220,
+    "r": 900,
+    "color": "#ffb04a",
+    "dark": 0.45
+   },
+   "angle": "high",
+   "camera": "pan_left",
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 520,
+     "y": 960,
+     "scale": 0.55,
+     "enter": "none"
+    },
+    {
+     "thing": "newspaper_box",
+     "x": 1300,
+     "y": 960,
+     "scale": 0.6,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6s41b",
+   "cue": "L151",
+   "word": 12,
+   "explains": "That is about thirty percent below their record high, says StoneX.",
+   "set": "street",
+   "opts": {
+    "dress": "shuttered",
+    "palette": "ochre",
+    "night": true
+   },
+   "place": "empty shuttered street at dusk",
+   "light": {
+    "kind": "spot",
+    "x": 1300,
+    "y": 220,
+    "r": 900,
+    "color": "#ffb04a",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    900,
+    705
+   ],
+   "camera": "tilt_up",
+   "actors": [
+    {
+     "thing": "newspaper_box",
+     "x": 900,
+     "y": 960,
+     "scale": 0.85,
+     "enter": "none"
+    },
+    {
+     "thing": "chip",
+     "x": 1500,
+     "y": 960,
+     "scale": 0.45,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6k21a",
+   "cue": "L152",
+   "explains": "The open question: who runs Nvidia after the interim boss.",
+   "set": "street",
+   "opts": {
+    "dress": "shuttered",
+    "palette": "ochre",
+    "night": true
+   },
+   "place": "empty shuttered street at dusk",
+   "light": {
+    "kind": "spot",
+    "x": 1300,
+    "y": 220,
+    "r": 900,
+    "color": "#ffb04a",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    860,
+    755
+   ],
+   "camera": "still",
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 860,
+     "y": 980,
+     "scale": 0.75,
+     "enter": "none",
+     "speaks": [
+      "L152"
+     ]
+    },
+    {
+     "who": "BENNY",
+     "x": 1340,
+     "y": 960,
+     "scale": 0.9,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6k21b",
+   "cue": "L153",
+   "explains": "Nobody can name the permanent chief executive yet.",
+   "set": "street",
+   "opts": {
+    "dress": "shuttered",
+    "palette": "ochre",
+    "night": true
+   },
+   "place": "empty shuttered street at dusk",
+   "light": {
+    "kind": "spot",
+    "x": 1300,
+    "y": 220,
+    "r": 900,
+    "color": "#ffb04a",
+    "dark": 0.45
+   },
+   "frame": "medium",
+   "focus": [
+    1000,
+    447
+   ],
+   "camera": "pan_right",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 1000,
+     "y": 960,
+     "scale": 0.95,
+     "enter": "none",
+     "speaks": [
+      "L153"
+     ]
+    },
+    {
+     "thing": "chip",
+     "x": 560,
+     "y": 980,
+     "scale": 0.6,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "id": "c6k21c",
+   "cue": "L154",
+   "explains": "That missing answer is why Tuesday's results call matters.",
+   "set": "street",
+   "opts": {
+    "dress": "shuttered",
+    "palette": "ochre",
+    "night": true
+   },
+   "place": "empty shuttered street at dusk",
+   "light": {
+    "kind": "spot",
+    "x": 1300,
+    "y": 220,
+    "r": 900,
+    "color": "#ffb04a",
+    "dark": 0.45
+   },
+   "camera": "pull_out",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 1020,
+     "y": 960,
+     "scale": 0.75,
+     "enter": "none"
+    },
+    {
+     "thing": "chip",
+     "x": 820,
+     "y": 980,
+     "scale": 0.5,
+     "enter": "none"
+    }
+   ]
+  }
+ ]
+}

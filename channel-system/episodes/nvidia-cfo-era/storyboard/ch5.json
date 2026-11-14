@@ -1,0 +1,1109 @@
+{
+ "shots": [
+  {
+   "id": "c5s00",
+   "type": "chapter",
+   "cue": "L107",
+   "number": 5,
+   "title": "Two plates, one desk"
+  },
+  {
+   "id": "c5s01",
+   "cue": "L107",
+   "set": "corridor",
+   "place": "executive corridor",
+   "opts": {
+    "dress": "exec",
+    "plate": "two",
+    "night": true,
+    "palette": "teal"
+   },
+   "light": {
+    "kind": "spot",
+    "x": 960,
+    "y": 260,
+    "r": 900,
+    "color": "#ffe9a8",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    960,
+    520
+   ],
+   "camera": "tilt_down",
+   "motif": "door plate: a CFO plate screwed on under the INTERIM tape",
+   "actors": [],
+   "explains": "The office door now wears two titles at once: the interim chief executive tape and the finance chief plate under it."
+  },
+  {
+   "id": "c5s02",
+   "type": "card",
+   "cue": "L107",
+   "word": 7,
+   "text": "Not new. Here since 2013.",
+   "emph": [
+    "2013"
+   ],
+   "explains": "Kress has run Nvidia's money for twelve years; she is not an outsider."
+  },
+  {
+   "id": "c5s03",
+   "cue": "L108",
+   "set": "corner_office",
+   "place": "Kress's desk",
+   "opts": {
+    "view": "desk",
+    "night": true,
+    "palette": "violet"
+   },
+   "light": {
+    "kind": "spot",
+    "x": 1320,
+    "y": 380,
+    "r": 900,
+    "color": "#ffd27a",
+    "dark": 0.42
+   },
+   "frame": "close",
+   "focus": [
+    960,
+    600
+   ],
+   "camera": "push_in",
+   "callback": "the calculator (s01)",
+   "actors": [
+    {
+     "who": "KRESS",
+     "x": 1240,
+     "y": 1000,
+     "scale": 0.9
+    }
+   ],
+   "explains": "One desk holds one calculator and two plates, CFO and INTERIM CEO: one person now holds both jobs."
+  },
+  {
+   "id": "c5s04",
+   "cue": "L109",
+   "set": "corner_office",
+   "place": "Kress's desk",
+   "opts": {
+    "view": "desk",
+    "night": true,
+    "palette": "violet"
+   },
+   "light": {
+    "kind": "spot",
+    "x": 1320,
+    "y": 380,
+    "r": 900,
+    "color": "#ffd27a",
+    "dark": 0.42
+   },
+   "frame": "medium",
+   "focus": [
+    1100,
+    520
+   ],
+   "camera": "still",
+   "actors": [
+    {
+     "who": "KRESS",
+     "x": 1180,
+     "y": 990,
+     "scale": 0.9
+    },
+    {
+     "thing": "desk_lamp",
+     "x": 620,
+     "y": 760,
+     "scale": 0.7
+    }
+   ],
+   "explains": "She is an experienced finance executive at work; even the desk lamp leans in to read her record."
+  },
+  {
+   "id": "c5s05",
+   "cue": "L109",
+   "word": 11,
+   "set": "garage",
+   "place": "car repair garage",
+   "opts": {
+    "night": false,
+    "palette": "red"
+   },
+   "camera": "pan_right",
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 900,
+     "y": 990,
+     "scale": 0.85
+    }
+   ],
+   "explains": "A garage wall full of tools: the server-and-tools years, a career spent under the hood of tech companies."
+  },
+  {
+   "id": "c5s06",
+   "cue": "L109",
+   "word": 18,
+   "set": "garage",
+   "place": "car repair garage",
+   "opts": {
+    "night": false,
+    "palette": "red"
+   },
+   "frame": "medium",
+   "focus": [
+    820,
+    820
+   ],
+   "camera": "pan_left",
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 820,
+     "y": 1000,
+     "scale": 0.85
+    }
+   ],
+   "explains": "Only the mechanic's legs stick out from under the car: twenty-five years of work nobody sees."
+  },
+  {
+   "id": "c5s07",
+   "cue": "L110",
+   "set": "garage",
+   "place": "car repair garage",
+   "opts": {
+    "night": false,
+    "palette": "red"
+   },
+   "frame": "medium",
+   "focus": [
+    1200,
+    470
+   ],
+   "camera": "still",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 1200,
+     "y": 980,
+     "scale": 0.85,
+     "speaks": [
+      "L110"
+     ]
+    },
+    {
+     "who": "HAL",
+     "x": 620,
+     "y": 1000,
+     "scale": 0.85
+    }
+   ],
+   "explains": "Martha sums up her career as a quarter century of work under the hood."
+  },
+  {
+   "id": "c5s08",
+   "cue": "L111",
+   "set": "garage",
+   "place": "car repair garage",
+   "opts": {
+    "night": false,
+    "palette": "red"
+   },
+   "frame": "ots",
+   "ots": {
+    "speaker": "MARTHA",
+    "listener": "HAL"
+   },
+   "camera": "tilt_up",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 1260,
+     "y": 980,
+     "scale": 0.85,
+     "speaks": [
+      "L112"
+     ]
+    },
+    {
+     "who": "HAL",
+     "x": 620,
+     "y": 980,
+     "scale": 0.85,
+     "speaks": [
+      "L111"
+     ]
+    }
+   ],
+   "explains": "Now she drives the car too: the finance chief has also taken the top job."
+  },
+  {
+   "id": "c5s09",
+   "cue": "L113",
+   "set": "garage",
+   "place": "car repair garage",
+   "opts": {
+    "night": false,
+    "palette": "red"
+   },
+   "frame": "close",
+   "focus": [
+    760,
+    560
+   ],
+   "camera": "pull_out",
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 760,
+     "y": 990,
+     "scale": 0.85,
+     "speaks": [
+      "L113"
+     ]
+    }
+   ],
+   "explains": "If she now drives, the old job of checking the engine still needs someone: who is under the hood?"
+  },
+  {
+   "id": "c5s10",
+   "cue": "L114",
+   "word": 2,
+   "set": "pitch_stage",
+   "place": "empty conference room",
+   "opts": {
+    "dress": "earnings",
+    "night": true,
+    "palette": "plum"
+   },
+   "light": {
+    "kind": "spot",
+    "x": 960,
+    "y": 180,
+    "r": 1000,
+    "color": "#e8f4ff",
+    "dark": 0.45
+   },
+   "angle": "low",
+   "camera": "tilt_up",
+   "actors": [
+    {
+     "thing": "chip",
+     "label": "NVIDIA",
+     "x": 960,
+     "y": 900,
+     "scale": 0.9
+    }
+   ],
+   "explains": "On every earnings call the finance chief is the voice that reads Nvidia's numbers to the market."
+  },
+  {
+   "id": "c5s11",
+   "cue": "L115",
+   "set": "food_truck",
+   "place": "food truck",
+   "opts": {
+    "night": false,
+    "palette": "amber"
+   },
+   "extras": 5,
+   "frame": "ots",
+   "ots": {
+    "speaker": "CHAD",
+    "listener": "HAL"
+   },
+   "angle": "high",
+   "camera": "pan_left",
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 1180,
+     "y": 960,
+     "scale": 0.85,
+     "speaks": [
+      "L115"
+     ]
+    },
+    {
+     "who": "HAL",
+     "x": 560,
+     "y": 990,
+     "scale": 0.85,
+     "speaks": [
+      "L116"
+     ]
+    }
+   ],
+   "explains": "Doing two jobs at once is hard: Chad cannot even flip burgers and work the till together."
+  },
+  {
+   "id": "c5s12",
+   "type": "card",
+   "cue": "L117",
+   "text": "One person. Three jobs.",
+   "emph": [
+    "One"
+   ],
+   "explains": "The point few people noticed: the same person now does three jobs that are normally split."
+  },
+  {
+   "id": "c5s13",
+   "type": "split",
+   "cue": "L117",
+   "word": 6,
+   "explains": "The person who signs the numbers, the person who reads them on the call and the person who runs the company are the same woman.",
+   "panels": [
+    {
+     "set": "corner_office",
+     "place": "Kress's desk",
+     "cue": "L117",
+     "word": 6,
+     "opts": {
+      "view": "desk",
+      "night": true,
+      "palette": "violet"
+     },
+     "light": {
+      "kind": "spot",
+      "x": 1320,
+      "y": 380,
+      "r": 900,
+      "color": "#ffd27a",
+      "dark": 0.42
+     },
+     "actors": [
+      {
+       "who": "KRESS",
+       "x": 960,
+       "y": 990,
+       "scale": 0.8
+      }
+     ]
+    },
+    {
+     "set": "pitch_stage",
+     "place": "empty conference room",
+     "cue": "L117",
+     "word": 12,
+     "opts": {
+      "dress": "earnings",
+      "night": true,
+      "palette": "plum"
+     },
+     "light": {
+      "kind": "spot",
+      "x": 960,
+      "y": 180,
+      "r": 1000,
+      "color": "#e8f4ff",
+      "dark": 0.45
+     },
+     "actors": [
+      {
+       "who": "KRESS",
+       "x": 960,
+       "y": 990,
+       "scale": 0.8
+      }
+     ]
+    },
+    {
+     "set": "corner_office",
+     "place": "corner office",
+     "cue": "L117",
+     "word": 17,
+     "opts": {
+      "night": true,
+      "palette": "violet"
+     },
+     "light": {
+      "kind": "spot",
+      "x": 700,
+      "y": 380,
+      "r": 900,
+      "color": "#ffd27a",
+      "dark": 0.42
+     },
+     "actors": [
+      {
+       "who": "KRESS",
+       "x": 960,
+       "y": 990,
+       "scale": 0.8
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c5s14",
+   "cue": "L117",
+   "word": 22,
+   "set": "office",
+   "place": "Benny's cubicle",
+   "opts": {
+    "dress": "cubicle",
+    "night": true,
+    "palette": "slate"
+   },
+   "light": {
+    "kind": "spot",
+    "x": 1250,
+    "y": 430,
+    "r": 850,
+    "color": "#ffe0a0",
+    "dark": 0.45
+   },
+   "frame": "ots",
+   "ots": {
+    "speaker": "BENNY",
+    "listener": "CHIP"
+   },
+   "camera": "still",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 760,
+     "y": 980,
+     "scale": 0.85,
+     "speaks": [
+      "L118"
+     ]
+    },
+    {
+     "thing": "chip",
+     "x": 1320,
+     "y": 900,
+     "scale": 0.7
+    }
+   ],
+   "explains": "Benny, the viewer, asks the episode's question again from his desk: who is in charge now?"
+  },
+  {
+   "id": "c5s15",
+   "cue": "L119",
+   "set": "office",
+   "place": "Benny's cubicle",
+   "opts": {
+    "dress": "cubicle",
+    "night": true,
+    "palette": "slate"
+   },
+   "light": {
+    "kind": "spot",
+    "x": 1250,
+    "y": 430,
+    "r": 850,
+    "color": "#ffe0a0",
+    "dark": 0.45
+   },
+   "frame": "ots",
+   "ots": {
+    "speaker": "CHIP",
+    "listener": "BENNY"
+   },
+   "camera": "pan_right",
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 1240,
+     "y": 900,
+     "scale": 0.7,
+     "speaks": [
+      "L119"
+     ]
+    },
+    {
+     "who": "BENNY",
+     "x": 600,
+     "y": 980,
+     "scale": 0.85,
+     "speaks": [
+      "L120"
+     ]
+    }
+   ],
+   "callback": "Who's in the chair? (k01)",
+   "explains": "The answer is the one with the calculator: the finance chief now sits in the chair."
+  },
+  {
+   "id": "c5s16",
+   "cue": "L121",
+   "set": "office",
+   "place": "Benny's cubicle",
+   "opts": {
+    "dress": "cubicle",
+    "night": true,
+    "palette": "slate"
+   },
+   "light": {
+    "kind": "spot",
+    "x": 1250,
+    "y": 430,
+    "r": 850,
+    "color": "#ffe0a0",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    1240,
+    690
+   ],
+   "camera": "tilt_down",
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 1240,
+     "y": 900,
+     "scale": 0.7,
+     "speaks": [
+      "L121"
+     ]
+    },
+    {
+     "who": "BENNY",
+     "x": 560,
+     "y": 980,
+     "scale": 0.85
+    }
+   ],
+   "explains": "Whether that is normal is a matter of opinion, and the experts do not agree."
+  },
+  {
+   "id": "c5s17",
+   "type": "card",
+   "cue": "L122",
+   "text": "What the analysts said",
+   "emph": [
+    "analysts"
+   ],
+   "explains": "Next come four named analysts' views, as reported by Fox Business."
+  },
+  {
+   "id": "c5s18",
+   "type": "split",
+   "cue": "L122",
+   "word": 6,
+   "explains": "Four analysts on four channels: the first, Susannah Streeter, appears.",
+   "panels": [
+    {
+     "set": "tv_studio",
+     "place": "TV studio",
+     "opts": {
+      "night": true,
+      "palette": "blue"
+     },
+     "light": {
+      "kind": "spot",
+      "x": 960,
+      "y": 300,
+      "r": 850,
+      "color": "#fff4dc",
+      "dark": 0.45
+     },
+     "actors": [
+      {
+       "who": "STREETER",
+       "x": 960,
+       "y": 980,
+       "scale": 0.8
+      }
+     ],
+     "cue": "L122",
+     "word": 6
+    },
+    {
+     "set": "tv_studio",
+     "place": "TV studio",
+     "opts": {
+      "night": true,
+      "palette": "blue"
+     },
+     "light": {
+      "kind": "spot",
+      "x": 960,
+      "y": 300,
+      "r": 850,
+      "color": "#fff4dc",
+      "dark": 0.45
+     },
+     "actors": [
+      {
+       "who": "IVES",
+       "x": 960,
+       "y": 980,
+       "scale": 0.8
+      }
+     ],
+     "cue": "L123",
+     "word": 0
+    },
+    {
+     "set": "tv_studio",
+     "place": "TV studio",
+     "opts": {
+      "night": true,
+      "palette": "blue"
+     },
+     "light": {
+      "kind": "spot",
+      "x": 960,
+      "y": 300,
+      "r": 850,
+      "color": "#fff4dc",
+      "dark": 0.45
+     },
+     "actors": [
+      {
+       "who": "KENWELL",
+       "x": 960,
+       "y": 980,
+       "scale": 0.8
+      }
+     ],
+     "cue": "L123",
+     "word": 11
+    },
+    {
+     "set": "tv_studio",
+     "place": "TV studio",
+     "opts": {
+      "night": true,
+      "palette": "blue"
+     },
+     "light": {
+      "kind": "spot",
+      "x": 960,
+      "y": 300,
+      "r": 850,
+      "color": "#fff4dc",
+      "dark": 0.45
+     },
+     "actors": [
+      {
+       "who": "LURIA",
+       "x": 960,
+       "y": 980,
+       "scale": 0.8
+      }
+     ],
+     "cue": "L124",
+     "word": 1
+    }
+   ]
+  },
+  {
+   "id": "c5s19",
+   "cue": "L122",
+   "word": 15,
+   "set": "desk_top",
+   "place": "document desk",
+   "opts": {
+    "night": true,
+    "palette": "amber"
+   },
+   "light": {
+    "kind": "spot",
+    "x": 960,
+    "y": 320,
+    "r": 1000,
+    "color": "#ffe0a0",
+    "dark": 0.4
+   },
+   "camera": "pan_left",
+   "actors": [],
+   "explains": "Streeter calls Kress a safe pair of hands, but says she lacks Huang's global status and deep commercial ties."
+  },
+  {
+   "id": "c5s20",
+   "type": "split",
+   "cue": "L123",
+   "explains": "The second analyst, Dan Ives, joins the wall of studios.",
+   "panels": [
+    {
+     "set": "tv_studio",
+     "place": "TV studio",
+     "opts": {
+      "night": true,
+      "palette": "blue"
+     },
+     "light": {
+      "kind": "spot",
+      "x": 960,
+      "y": 300,
+      "r": 850,
+      "color": "#fff4dc",
+      "dark": 0.45
+     },
+     "actors": [
+      {
+       "who": "STREETER",
+       "x": 960,
+       "y": 980,
+       "scale": 0.8
+      }
+     ],
+     "cue": "L122",
+     "word": 6
+    },
+    {
+     "set": "tv_studio",
+     "place": "TV studio",
+     "opts": {
+      "night": true,
+      "palette": "blue"
+     },
+     "light": {
+      "kind": "spot",
+      "x": 960,
+      "y": 300,
+      "r": 850,
+      "color": "#fff4dc",
+      "dark": 0.45
+     },
+     "actors": [
+      {
+       "who": "IVES",
+       "x": 960,
+       "y": 980,
+       "scale": 0.8
+      }
+     ],
+     "cue": "L123",
+     "word": 0
+    },
+    {
+     "set": "tv_studio",
+     "place": "TV studio",
+     "opts": {
+      "night": true,
+      "palette": "blue"
+     },
+     "light": {
+      "kind": "spot",
+      "x": 960,
+      "y": 300,
+      "r": 850,
+      "color": "#fff4dc",
+      "dark": 0.45
+     },
+     "actors": [
+      {
+       "who": "KENWELL",
+       "x": 960,
+       "y": 980,
+       "scale": 0.8
+      }
+     ],
+     "cue": "L123",
+     "word": 11
+    },
+    {
+     "set": "tv_studio",
+     "place": "TV studio",
+     "opts": {
+      "night": true,
+      "palette": "blue"
+     },
+     "light": {
+      "kind": "spot",
+      "x": 960,
+      "y": 300,
+      "r": 850,
+      "color": "#fff4dc",
+      "dark": 0.45
+     },
+     "actors": [
+      {
+       "who": "LURIA",
+       "x": 960,
+       "y": 980,
+       "scale": 0.8
+      }
+     ],
+     "cue": "L124",
+     "word": 1
+    }
+   ]
+  },
+  {
+   "id": "c5s21",
+   "cue": "L123",
+   "word": 7,
+   "set": "desk_top",
+   "place": "document desk",
+   "opts": {
+    "night": true,
+    "palette": "amber"
+   },
+   "light": {
+    "kind": "spot",
+    "x": 960,
+    "y": 320,
+    "r": 1000,
+    "color": "#ffe0a0",
+    "dark": 0.4
+   },
+   "frame": "medium",
+   "focus": [
+    900,
+    520
+   ],
+   "camera": "pan_right",
+   "actors": [],
+   "explains": "Ives says his firm is a big fan of her."
+  },
+  {
+   "id": "c5s22",
+   "cue": "L123",
+   "word": 12,
+   "set": "desk_top",
+   "place": "document desk",
+   "opts": {
+    "night": true,
+    "palette": "amber"
+   },
+   "light": {
+    "kind": "spot",
+    "x": 960,
+    "y": 320,
+    "r": 1000,
+    "color": "#ffe0a0",
+    "dark": 0.4
+   },
+   "frame": "close",
+   "focus": [
+    1000,
+    540
+   ],
+   "camera": "tilt_up",
+   "actors": [],
+   "explains": "Kenwell of eToro expects her to bring stability and reassurance."
+  },
+  {
+   "id": "c5s23",
+   "type": "split",
+   "cue": "L124",
+   "explains": "All four analysts are in place; the fourth, Gil Luria, says the job is heavy because so much ran through Huang.",
+   "panels": [
+    {
+     "set": "tv_studio",
+     "place": "TV studio",
+     "opts": {
+      "night": true,
+      "palette": "blue"
+     },
+     "light": {
+      "kind": "spot",
+      "x": 960,
+      "y": 300,
+      "r": 850,
+      "color": "#fff4dc",
+      "dark": 0.45
+     },
+     "actors": [
+      {
+       "who": "STREETER",
+       "x": 960,
+       "y": 980,
+       "scale": 0.8
+      }
+     ],
+     "cue": "L122",
+     "word": 6
+    },
+    {
+     "set": "tv_studio",
+     "place": "TV studio",
+     "opts": {
+      "night": true,
+      "palette": "blue"
+     },
+     "light": {
+      "kind": "spot",
+      "x": 960,
+      "y": 300,
+      "r": 850,
+      "color": "#fff4dc",
+      "dark": 0.45
+     },
+     "actors": [
+      {
+       "who": "IVES",
+       "x": 960,
+       "y": 980,
+       "scale": 0.8
+      }
+     ],
+     "cue": "L123",
+     "word": 0
+    },
+    {
+     "set": "tv_studio",
+     "place": "TV studio",
+     "opts": {
+      "night": true,
+      "palette": "blue"
+     },
+     "light": {
+      "kind": "spot",
+      "x": 960,
+      "y": 300,
+      "r": 850,
+      "color": "#fff4dc",
+      "dark": 0.45
+     },
+     "actors": [
+      {
+       "who": "KENWELL",
+       "x": 960,
+       "y": 980,
+       "scale": 0.8
+      }
+     ],
+     "cue": "L123",
+     "word": 11
+    },
+    {
+     "set": "tv_studio",
+     "place": "TV studio",
+     "opts": {
+      "night": true,
+      "palette": "blue"
+     },
+     "light": {
+      "kind": "spot",
+      "x": 960,
+      "y": 300,
+      "r": 850,
+      "color": "#fff4dc",
+      "dark": 0.45
+     },
+     "actors": [
+      {
+       "who": "LURIA",
+       "x": 960,
+       "y": 980,
+       "scale": 0.8
+      }
+     ],
+     "cue": "L124",
+     "word": 1
+    }
+   ]
+  },
+  {
+   "id": "c5s24",
+   "cue": "L125",
+   "set": "library",
+   "place": "library reading room",
+   "opts": {
+    "night": true,
+    "palette": "green"
+   },
+   "light": {
+    "kind": "spot",
+    "x": 380,
+    "y": 680,
+    "r": 1000,
+    "color": "#ffb060",
+    "dark": 0.42
+   },
+   "extras": 1,
+   "frame": "medium",
+   "focus": [
+    1150,
+    480
+   ],
+   "camera": "pan_left",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 1150,
+     "y": 980,
+     "scale": 0.85,
+     "speaks": [
+      "L125"
+     ]
+    },
+    {
+     "who": "HAL",
+     "x": 640,
+     "y": 980,
+     "scale": 0.85
+    }
+   ],
+   "explains": "The four verdicts side by side all say calm things: safe, fans, stability."
+  },
+  {
+   "id": "c5s25",
+   "cue": "L126",
+   "set": "library",
+   "place": "library reading room",
+   "opts": {
+    "night": true,
+    "palette": "green"
+   },
+   "light": {
+    "kind": "spot",
+    "x": 380,
+    "y": 680,
+    "r": 1000,
+    "color": "#ffb060",
+    "dark": 0.42
+   },
+   "extras": 1,
+   "frame": "ots",
+   "ots": {
+    "speaker": "HAL",
+    "listener": "MARTHA"
+   },
+   "camera": "still",
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 640,
+     "y": 980,
+     "scale": 0.85,
+     "speaks": [
+      "L126",
+      "L128"
+     ]
+    },
+    {
+     "who": "MARTHA",
+     "x": 1250,
+     "y": 980,
+     "scale": 0.85,
+     "speaks": [
+      "L127"
+     ]
+    }
+   ],
+   "explains": "Nobody called her the permanent chief executive: the job is still officially temporary."
+  },
+  {
+   "id": "c5s26",
+   "cue": "L129",
+   "set": "weather_station",
+   "place": "empty hilltop weather station",
+   "opts": {
+    "night": false,
+    "palette": "pink"
+   },
+   "camera": "pull_out",
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 960,
+     "y": 900,
+     "scale": 0.9
+    }
+   ],
+   "explains": "The experts were calm, but the wind was turning: the market was about to react."
+  }
+ ]
+}

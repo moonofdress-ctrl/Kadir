@@ -1,0 +1,1754 @@
+{
+ "shots": [
+  {
+   "id": "c1s01",
+   "cue": "L001",
+   "set": "corner_office",
+   "opts": {
+    "night": true,
+    "palette": "violet",
+    "view": "wide",
+    "clock_lit": false
+   },
+   "place": "corner office",
+   "camera": "pan_right",
+   "grade": "night",
+   "light": {
+    "x": 1300,
+    "y": 560,
+    "r": 900,
+    "color": "#ffd27a",
+    "dark": 0.45
+   },
+   "actors": [
+    {
+     "who": "COLETTE_KRESS",
+     "x": 1500,
+     "y": 860,
+     "scale": 0.65,
+     "face": "neutral",
+     "pose": "hold",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L001",
+       "word": 3,
+       "pose": "think"
+      }
+     ]
+    }
+   ],
+   "explains": "It is night in Nvidia's corner office: the boss's chair is empty, and one woman is still working at the next desk."
+  },
+  {
+   "id": "c1s02",
+   "cue": "L001",
+   "word": 5,
+   "set": "corner_office",
+   "opts": {
+    "night": true,
+    "palette": "violet",
+    "view": "door",
+    "plate": false
+   },
+   "place": "corner office",
+   "frame": "close",
+   "focus": [
+    960,
+    520
+   ],
+   "camera": "still",
+   "motif": "door plate",
+   "light": {
+    "x": 960,
+    "y": 300,
+    "r": 800,
+    "color": "#ffd27a",
+    "dark": 0.45
+   },
+   "props": [
+    {
+     "type": "door_plate",
+     "x": 960,
+     "y": 520,
+     "k": 1.7,
+     "state": "taped",
+     "act": "press",
+     "at": 0.1
+    }
+   ],
+   "explains": "The chief executive's title on the door has been covered with a strip of tape that says INTERIM."
+  },
+  {
+   "id": "c1s03",
+   "cue": "L001",
+   "word": 8,
+   "set": "corner_office",
+   "opts": {
+    "night": true,
+    "palette": "violet",
+    "view": "wide"
+   },
+   "place": "corner office",
+   "frame": "close",
+   "focus": [
+    700,
+    640
+   ],
+   "camera": "tilt_down",
+   "light": {
+    "x": 1380,
+    "y": 520,
+    "r": 950,
+    "color": "#ffd27a",
+    "dark": 0.45
+   },
+   "actors": [
+    {
+     "who": "COLETTE_KRESS",
+     "x": 1500,
+     "y": 860,
+     "scale": 0.65,
+     "face": "neutral",
+     "pose": "hold",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L001",
+       "word": 11,
+       "pose": "think"
+      }
+     ]
+    }
+   ],
+   "explains": "The founder's black jacket still hangs on the chair, but nobody sits in it."
+  },
+  {
+   "id": "c1s04",
+   "cue": "L001",
+   "word": 13,
+   "set": "corner_office",
+   "opts": {
+    "night": true,
+    "palette": "violet",
+    "view": "desk"
+   },
+   "place": "corner office",
+   "frame": "medium",
+   "focus": [
+    1150,
+    560
+   ],
+   "camera": "still",
+   "light": {
+    "x": 1500,
+    "y": 420,
+    "r": 900,
+    "color": "#ffd27a",
+    "dark": 0.4
+   },
+   "actors": [
+    {
+     "who": "COLETTE_KRESS",
+     "x": 1060,
+     "y": 980,
+     "scale": 0.9,
+     "face": "neutral",
+     "pose": "hold",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L001",
+       "word": 18,
+       "pose": "think"
+      }
+     ]
+    }
+   ],
+   "overlays": [
+    {
+     "type": "lower_third",
+     "name": "COLETTE KRESS",
+     "role": "Nvidia's finance chief",
+     "side": "left",
+     "at": 0.3
+    }
+   ],
+   "explains": "The person now in charge is Colette Kress, Nvidia's finance chief, still at her own desk with her calculator."
+  },
+  {
+   "id": "c1s05",
+   "cue": "L002",
+   "set": "corner_office",
+   "opts": {
+    "night": true,
+    "palette": "violet",
+    "view": "wide",
+    "clock_lit": false
+   },
+   "place": "corner office",
+   "frame": "medium",
+   "focus": [
+    1420,
+    420
+   ],
+   "camera": "pan_left",
+   "light": {
+    "x": 1380,
+    "y": 560,
+    "r": 850,
+    "color": "#ffd27a",
+    "dark": 0.45
+   },
+   "actors": [
+    {
+     "who": "COLETTE_KRESS",
+     "x": 1500,
+     "y": 860,
+     "scale": 0.65,
+     "face": "neutral",
+     "pose": "think",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L002",
+       "word": 3,
+       "pose": "hold"
+      }
+     ]
+    }
+   ],
+   "explains": "Above her, the office clock is in shadow: nobody can yet see what time it is for her."
+  },
+  {
+   "id": "c1s06",
+   "cue": "L002",
+   "word": 5,
+   "set": "corner_office",
+   "opts": {
+    "night": true,
+    "palette": "violet",
+    "view": "desk"
+   },
+   "place": "corner office",
+   "frame": "close",
+   "focus": [
+    800,
+    520
+   ],
+   "camera": "tilt_up",
+   "light": {
+    "x": 1400,
+    "y": 440,
+    "r": 850,
+    "color": "#ffd27a",
+    "dark": 0.4
+   },
+   "actors": [
+    {
+     "who": "COLETTE_KRESS",
+     "x": 800,
+     "y": 980,
+     "scale": 1.0,
+     "face": "neutral",
+     "pose": "hold",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L002",
+       "word": 8,
+       "pose": "present"
+      }
+     ]
+    }
+   ],
+   "explains": "She has the new title, interim chief executive, but the plate on her desk still says CFO."
+  },
+  {
+   "id": "c1s07",
+   "cue": "L002",
+   "word": 12,
+   "set": "boardroom",
+   "opts": {
+    "night": true,
+    "palette": "wood",
+    "dress": "head_chair"
+   },
+   "place": "boardroom",
+   "angle": "low",
+   "camera": "pull_out",
+   "grade": "night",
+   "light": {
+    "x": 960,
+    "y": 520,
+    "r": 850,
+    "color": "#b8f0a0",
+    "dark": 0.45
+   },
+   "actors": [
+    {
+     "who": "HARVEY_JONES",
+     "x": 620,
+     "y": 960,
+     "scale": 0.9,
+     "face": "neutral",
+     "pose": "hold",
+     "prop": "bill",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L002",
+       "word": 15,
+       "pose": "present"
+      }
+     ]
+    }
+   ],
+   "overlays": [
+    {
+     "type": "lower_third",
+     "name": "HARVEY C. JONES",
+     "role": "Nvidia's first board chair",
+     "side": "left",
+     "at": 0.3
+    }
+   ],
+   "explains": "Harvey Jones now leads Nvidia's board, a post the company never had before."
+  },
+  {
+   "id": "c1s08",
+   "cue": "L002",
+   "word": 17,
+   "set": "boardroom",
+   "opts": {
+    "night": true,
+    "palette": "wood",
+    "dress": "head_chair"
+   },
+   "place": "boardroom",
+   "frame": "close",
+   "focus": [
+    1000,
+    600
+   ],
+   "camera": "pan_right",
+   "light": {
+    "x": 1100,
+    "y": 480,
+    "r": 800,
+    "color": "#b8f0a0",
+    "dark": 0.45
+   },
+   "actors": [
+    {
+     "who": "HARVEY_JONES",
+     "x": 560,
+     "y": 980,
+     "scale": 1.0,
+     "face": "neutral",
+     "pose": "present",
+     "prop": "bill",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L002",
+       "word": 18,
+       "pose": "rest"
+      }
+     ]
+    }
+   ],
+   "explains": "The chair at the head of the table is so new it still wears its plastic wrap: nobody has ever sat in it."
+  },
+  {
+   "id": "c1k01a",
+   "cue": "L003",
+   "set": "corner_office",
+   "opts": {
+    "night": true,
+    "palette": "violet",
+    "view": "desk"
+   },
+   "place": "corner office",
+   "frame": "medium",
+   "focus": [
+    1100,
+    560
+   ],
+   "camera": "still",
+   "light": {
+    "x": 1450,
+    "y": 460,
+    "r": 850,
+    "color": "#ffd27a",
+    "dark": 0.4
+   },
+   "actors": [
+    {
+     "thing": "chip",
+     "label": "NVIDIA",
+     "x": 1220,
+     "y": 800,
+     "scale": 0.5,
+     "face": "confused",
+     "speaks": [
+      "L003"
+     ],
+     "enter": "rise",
+     "acts": [
+      {
+       "cue": "L003",
+       "word": 2,
+       "pose": "point"
+      }
+     ]
+    }
+   ],
+   "explains": "Nvidia itself, the chip, peeks over the calculator at the empty chair and asks who is in it."
+  },
+  {
+   "id": "c1k01b",
+   "cue": "L004",
+   "set": "corner_office",
+   "opts": {
+    "night": true,
+    "palette": "violet",
+    "view": "wide"
+   },
+   "place": "corner office",
+   "frame": "ots",
+   "ots": {
+    "speaker": "HAL",
+    "listener": "CHIP"
+   },
+   "camera": "pan_right",
+   "light": {
+    "x": 1250,
+    "y": 380,
+    "r": 900,
+    "color": "#ffd27a",
+    "dark": 0.4
+   },
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 600,
+     "y": 960,
+     "scale": 0.8,
+     "face": "confused",
+     "enter": "none"
+    },
+    {
+     "who": "HAL",
+     "x": 970,
+     "y": 820,
+     "scale": 0.62,
+     "face": "deadpan",
+     "prop": "mug",
+     "speaks": [
+      "L004"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L004",
+       "word": 1,
+       "pose": "shrug"
+      }
+     ]
+    }
+   ],
+   "explains": "Hal, leaning in the doorway, gives the answer: nobody is in the chair, and that is the news."
+  },
+  {
+   "id": "c1t01",
+   "type": "card",
+   "cue": "L005",
+   "text": "Who's running Nvidia now?",
+   "emph": [
+    "running"
+   ],
+   "explains": "The question the video answers: who is in charge of Nvidia now."
+  },
+  {
+   "id": "c1s09",
+   "cue": "L005",
+   "word": 3,
+   "set": "corner_office",
+   "opts": {
+    "night": true,
+    "palette": "violet",
+    "view": "desk"
+   },
+   "place": "corner office",
+   "frame": "close",
+   "focus": [
+    1100,
+    520
+   ],
+   "camera": "still",
+   "sound": "riser",
+   "light": {
+    "x": 1300,
+    "y": 380,
+    "r": 850,
+    "color": "#ffd27a",
+    "dark": 0.4
+   },
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 1220,
+     "y": 820,
+     "scale": 0.7,
+     "face": "neutral",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L005",
+       "word": 11,
+       "face": "shocked",
+       "pose": "panic"
+      }
+     ]
+    },
+    {
+     "who": "COLETTE_KRESS",
+     "x": 560,
+     "y": 980,
+     "scale": 0.9,
+     "face": "neutral",
+     "pose": "hold",
+     "flip": true,
+     "enter": "none"
+    }
+   ],
+   "overlays": [
+    {
+     "type": "counter",
+     "from": 0,
+     "to": 4,
+     "decimals": 1,
+     "prefix": "$",
+     "suffix": "T",
+     "roll": true,
+     "dur": 1.4,
+     "cue": "L005",
+     "word": 4,
+     "pos": "top"
+    }
+   ],
+   "explains": "The market values Nvidia at about four trillion dollars, and even the chip gulps at the size of it."
+  },
+  {
+   "id": "c1s10",
+   "cue": "L005",
+   "word": 13,
+   "set": "corner_office",
+   "opts": {
+    "night": true,
+    "palette": "violet",
+    "view": "wide"
+   },
+   "place": "corner office",
+   "camera": "pull_out",
+   "light": {
+    "x": 1380,
+    "y": 520,
+    "r": 950,
+    "color": "#ffd27a",
+    "dark": 0.45
+   },
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 1340,
+     "y": 664,
+     "scale": 0.4,
+     "face": "scared",
+     "tag": "$4.0T",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L005",
+       "word": 15,
+       "pose": "hold"
+      }
+     ]
+    },
+    {
+     "who": "COLETTE_KRESS",
+     "x": 1560,
+     "y": 860,
+     "scale": 0.65,
+     "face": "neutral",
+     "pose": "think",
+     "enter": "none"
+    }
+   ],
+   "explains": "That four-trillion price tag now hangs on a company whose top chair is empty: the number to remember."
+  },
+  {
+   "id": "c1s11",
+   "cue": "L006",
+   "set": "kitchen",
+   "opts": {
+    "palette": "amber"
+   },
+   "place": "Martha's kitchen",
+   "angle": "high",
+   "camera": "pan_left",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 700,
+     "y": 960,
+     "scale": 0.85,
+     "face": "plain",
+     "prop": "mug",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L006",
+       "word": 4,
+       "pose": "offer"
+      }
+     ]
+    },
+    {
+     "thing": "coin",
+     "x": 1000,
+     "y": 640,
+     "scale": 0.3,
+     "face": "happy",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L006",
+       "word": 6,
+       "to": [
+        1200,
+        620
+       ],
+       "dur": 0.7
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "jar",
+     "x": 1200,
+     "y": 900,
+     "t": "INDEX FUND",
+     "level": 0.6
+    }
+   ],
+   "explains": "A slice of that value sits in ordinary savings: an index fund jar on a kitchen table takes in a coin with the chip's face."
+  },
+  {
+   "id": "c1s12",
+   "cue": "L007",
+   "set": "corner_office",
+   "opts": {
+    "night": true,
+    "palette": "violet",
+    "view": "desk"
+   },
+   "place": "corner office",
+   "frame": "close",
+   "focus": [
+    1450,
+    640
+   ],
+   "camera": "push_in",
+   "light": {
+    "x": 1300,
+    "y": 360,
+    "r": 800,
+    "color": "#ffd27a",
+    "dark": 0.4
+   },
+   "actors": [
+    {
+     "who": "COLETTE_KRESS",
+     "x": 700,
+     "y": 980,
+     "scale": 0.9,
+     "face": "neutral",
+     "pose": "hold",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L007",
+       "word": 3,
+       "pose": "think"
+      }
+     ]
+    }
+   ],
+   "explains": "On her desk waits a date: a note on the phone for Tuesday's call."
+  },
+  {
+   "id": "c1s13",
+   "cue": "L007",
+   "word": 6,
+   "set": "pitch_stage",
+   "opts": {
+    "night": true,
+    "palette": "plum",
+    "dress": "earnings",
+    "empty": true
+   },
+   "place": "conference room",
+   "camera": "tilt_down",
+   "light": {
+    "x": 960,
+    "y": 260,
+    "r": 900,
+    "color": "#e8f4ff",
+    "dark": 0.45
+   },
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 1380,
+     "y": 920,
+     "scale": 0.5,
+     "face": "scared",
+     "enter": "slide_right",
+     "acts": [
+      {
+       "cue": "L007",
+       "word": 11,
+       "to": [
+        1180,
+        920
+       ],
+       "dur": 1.2
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "podium",
+     "x": 900,
+     "y": 960,
+     "t": ""
+    }
+   ],
+   "overlays": [
+    {
+     "type": "calendar",
+     "month": "NOV",
+     "day": 17,
+     "dow": "TUESDAY",
+     "pos": "tl",
+     "cue": "L007",
+     "word": 6
+    }
+   ],
+   "explains": "Tuesday 17 November brings Nvidia's results call, and the stage is set for it."
+  },
+  {
+   "id": "c1s14",
+   "cue": "L007",
+   "word": 15,
+   "set": "pitch_stage",
+   "opts": {
+    "night": true,
+    "palette": "plum",
+    "dress": "earnings",
+    "empty": true
+   },
+   "place": "conference room",
+   "frame": "close",
+   "focus": [
+    900,
+    560
+   ],
+   "camera": "pan_right",
+   "light": {
+    "x": 900,
+    "y": 300,
+    "r": 800,
+    "color": "#e8f4ff",
+    "dark": 0.45
+   },
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 1360,
+     "y": 960,
+     "scale": 0.6,
+     "face": "sad",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L007",
+       "word": 18,
+       "pose": "shrug"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "podium",
+     "x": 900,
+     "y": 960,
+     "t": ""
+    }
+   ],
+   "explains": "For the first time since Nvidia went public, the man who always stood at that microphone will not be there."
+  },
+  {
+   "id": "c1k02a",
+   "cue": "L008",
+   "set": "bus_stop",
+   "opts": {
+    "palette": "cream",
+    "night": false
+   },
+   "place": "bus stop",
+   "frame": "medium",
+   "focus": [
+    760,
+    600
+   ],
+   "camera": "pan_left",
+   "extras": 6,
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 760,
+     "y": 960,
+     "scale": 0.85,
+     "face": "shocked",
+     "prop": "phone",
+     "pose": "phone",
+     "speaks": [
+      "L008"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L008",
+       "word": 1,
+       "pose": "shrug"
+      }
+     ]
+    },
+    {
+     "who": "CHAD",
+     "x": 1240,
+     "y": 960,
+     "scale": 0.85,
+     "face": "neutral",
+     "enter": "walk"
+    }
+   ],
+   "explains": "Benny, an ordinary commuter, reads the news on his phone and cannot tell who is running Nvidia."
+  },
+  {
+   "id": "c1k02b",
+   "cue": "L009",
+   "set": "bus_stop",
+   "opts": {
+    "palette": "cream",
+    "night": false
+   },
+   "place": "bus stop",
+   "frame": "close",
+   "focus": [
+    1240,
+    560
+   ],
+   "camera": "tilt_up",
+   "extras": 6,
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 760,
+     "y": 960,
+     "scale": 0.85,
+     "face": "confused",
+     "prop": "phone",
+     "enter": "none"
+    },
+    {
+     "who": "CHAD",
+     "x": 1240,
+     "y": 960,
+     "scale": 0.85,
+     "face": "smug",
+     "prop": "mug",
+     "speaks": [
+      "L009"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L009",
+       "word": 1,
+       "pose": "point"
+      }
+     ]
+    }
+   ],
+   "explains": "Chad's answer: the money person, the finance chief, is now the boss."
+  },
+  {
+   "id": "c1k02c",
+   "cue": "L010",
+   "set": "bus_stop",
+   "opts": {
+    "palette": "cream",
+    "night": false
+   },
+   "place": "bus stop",
+   "frame": "ots",
+   "ots": {
+    "speaker": "BENNY",
+    "listener": "CHAD"
+   },
+   "camera": "tilt_down",
+   "extras": 6,
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 760,
+     "y": 960,
+     "scale": 0.85,
+     "face": "confused",
+     "prop": "phone",
+     "speaks": [
+      "L010"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L010",
+       "word": 0,
+       "pose": "shrug"
+      }
+     ]
+    },
+    {
+     "who": "CHAD",
+     "x": 1240,
+     "y": 960,
+     "scale": 0.85,
+     "face": "smug",
+     "enter": "none"
+    }
+   ],
+   "explains": "Benny asks the viewer's own question: is a finance chief in charge good or bad?"
+  },
+  {
+   "id": "c1k02d",
+   "cue": "L011",
+   "set": "bus_stop",
+   "opts": {
+    "palette": "cream",
+    "night": false
+   },
+   "place": "bus stop",
+   "frame": "close",
+   "focus": [
+    1240,
+    560
+   ],
+   "camera": "pull_out",
+   "extras": 6,
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 760,
+     "y": 960,
+     "scale": 0.85,
+     "face": "confused",
+     "prop": "phone",
+     "enter": "none"
+    },
+    {
+     "who": "CHAD",
+     "x": 1240,
+     "y": 960,
+     "scale": 0.85,
+     "face": "deadpan",
+     "prop": "mug",
+     "speaks": [
+      "L011"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L011",
+       "word": 1,
+       "pose": "shrug"
+      }
+     ]
+    }
+   ],
+   "explains": "Nobody knows yet: the answer comes on Tuesday."
+  },
+  {
+   "id": "c1s15",
+   "cue": "L012",
+   "set": "bus_stop",
+   "opts": {
+    "palette": "cream",
+    "night": false
+   },
+   "place": "bus stop",
+   "camera": "pan_right",
+   "extras": 6,
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 1240,
+     "y": 960,
+     "scale": 0.8,
+     "face": "happy",
+     "prop": "mug",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L012",
+       "word": 2,
+       "to": [
+        1700,
+        960
+       ],
+       "dur": 1.6
+      }
+     ]
+    },
+    {
+     "who": "BENNY",
+     "x": 760,
+     "y": 960,
+     "scale": 0.8,
+     "face": "plain",
+     "prop": "phone",
+     "pose": "phone",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L012",
+       "word": 10,
+       "pose": "think"
+      }
+     ]
+    }
+   ],
+   "overlays": [
+    {
+     "type": "clock",
+     "t": "4:20",
+     "ap": "PM",
+     "tz": "ET",
+     "cue": "L012",
+     "word": 10
+    }
+   ],
+   "explains": "The video promises one thing to listen for: what Nvidia says at 4:20 p.m. on Tuesday."
+  },
+  {
+   "id": "c1t02",
+   "type": "card",
+   "cue": "L013",
+   "text": "And why does Tuesday matter?",
+   "emph": [
+    "Tuesday"
+   ],
+   "explains": "The second half of the question: why Tuesday's results are the moment that counts."
+  },
+  {
+   "id": "c1s16",
+   "cue": "L013",
+   "word": 7,
+   "set": "boardroom",
+   "opts": {
+    "night": true,
+    "palette": "wood"
+   },
+   "place": "boardroom",
+   "angle": "low",
+   "camera": "tilt_up",
+   "sound": false,
+   "light": {
+    "x": 960,
+    "y": 480,
+    "r": 850,
+    "color": "#b8f0a0",
+    "dark": 0.45
+   },
+   "actors": [
+    {
+     "thing": "the_board",
+     "label": "THE BOARD",
+     "x": 960,
+     "y": 960,
+     "scale": 1.0,
+     "face": "neutral",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L013",
+       "word": 9,
+       "face": "deadpan",
+       "pose": "present"
+      }
+     ],
+     "open": 0.9
+    }
+   ],
+   "explains": "The story starts with Nvidia's board itself, which holds the power to hire and remove a chief executive."
+  },
+  {
+   "id": "c1t03",
+   "type": "card",
+   "cue": "L014",
+   "text": "But it starts on Sunday.",
+   "emph": [
+    "Sunday"
+   ],
+   "explains": "The story goes back four days, to Sunday 8 November, where the trouble began."
+  },
+  {
+   "id": "c1s17",
+   "cue": "L014",
+   "word": 8,
+   "set": "boardroom",
+   "opts": {
+    "night": true,
+    "palette": "wood"
+   },
+   "place": "boardroom",
+   "frame": "close",
+   "focus": [
+    960,
+    620
+   ],
+   "camera": "still",
+   "light": {
+    "x": 1100,
+    "y": 460,
+    "r": 800,
+    "color": "#b8f0a0",
+    "dark": 0.45
+   },
+   "actors": [
+    {
+     "thing": "the_board",
+     "x": 960,
+     "y": 1000,
+     "scale": 1.1,
+     "face": "deadpan",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L014",
+       "word": 10,
+       "face": "shocked",
+       "pose": "panic"
+      }
+     ],
+     "open": 0.0,
+     "tip": 1.2
+    }
+   ],
+   "explains": "On Sunday the board opens an independent review of its own boss, a folder so thick it knocks the lamp over."
+  },
+  {
+   "id": "c1s18",
+   "cue": "L014",
+   "word": 14,
+   "set": "newsroom",
+   "opts": {
+    "night": true,
+    "palette": "slate"
+   },
+   "place": "newsroom",
+   "camera": "pan_right",
+   "light": {
+    "kind": "screen",
+    "x": 1300,
+    "y": 600,
+    "r": 800,
+    "color": "#cfe8ff",
+    "dark": 0.45
+   },
+   "actors": [
+    {
+     "thing": "teleprinter",
+     "label": "NEWS WIRE",
+     "x": 900,
+     "y": 960,
+     "scale": 0.9,
+     "face": "shocked",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L014",
+       "word": 24,
+       "pose": "panic"
+      }
+     ]
+    }
+   ],
+   "explains": "The review was set off by press reports that Huang had been the target of a foreign spy effort."
+  },
+  {
+   "id": "c1s19",
+   "cue": "L014",
+   "word": 24,
+   "set": "newsroom",
+   "opts": {
+    "night": true,
+    "palette": "slate"
+   },
+   "place": "newsroom",
+   "frame": "close",
+   "focus": [
+    900,
+    620
+   ],
+   "camera": "tilt_down",
+   "light": {
+    "kind": "screen",
+    "x": 1200,
+    "y": 560,
+    "r": 800,
+    "color": "#cfe8ff",
+    "dark": 0.45
+   },
+   "actors": [
+    {
+     "thing": "teleprinter",
+     "x": 900,
+     "y": 1000,
+     "scale": 1.1,
+     "face": "panic",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L015",
+       "word": 2,
+       "pose": "point"
+      }
+     ]
+    }
+   ],
+   "explains": "Target is the board's own word: it says Huang was aimed at, not that he did anything."
+  },
+  {
+   "id": "c1s20",
+   "cue": "L015",
+   "word": 5,
+   "set": "newsroom",
+   "opts": {
+    "night": true,
+    "palette": "slate"
+   },
+   "place": "newsroom",
+   "frame": "medium",
+   "focus": [
+    900,
+    600
+   ],
+   "camera": "pan_left",
+   "light": {
+    "kind": "screen",
+    "x": 1300,
+    "y": 600,
+    "r": 800,
+    "color": "#cfe8ff",
+    "dark": 0.45
+   },
+   "actors": [
+    {
+     "thing": "teleprinter",
+     "x": 760,
+     "y": 960,
+     "scale": 0.9,
+     "face": "scared",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L015",
+       "word": 10,
+       "pose": "panic"
+      }
+     ]
+    }
+   ],
+   "overlays": [
+    {
+     "type": "stamp",
+     "t": "DENIED BY CHINA",
+     "tone": "red",
+     "cue": "L015",
+     "word": 13
+    }
+   ],
+   "explains": "The spy claim is only an allegation in the reports, and China denies it."
+  },
+  {
+   "id": "c1s21",
+   "cue": "L016",
+   "set": "trading_floor",
+   "opts": {
+    "palette": "blue",
+    "dress": "dawn",
+    "night": false
+   },
+   "place": "bank trading floor",
+   "angle": "high",
+   "camera": "pan_right",
+   "extras": 8,
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 1100,
+     "y": 960,
+     "scale": 0.8,
+     "face": "smug",
+     "prop": "phone",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L016",
+       "word": 3,
+       "pose": "point"
+      }
+     ]
+    }
+   ],
+   "explains": "On Monday traders start selling, and the shares slide about four percent."
+  },
+  {
+   "id": "c1t04",
+   "type": "card",
+   "cue": "L016",
+   "word": 7,
+   "text": "-9.5% in two days",
+   "emph": [
+    "-9.5%"
+   ],
+   "explains": "Over Monday and Tuesday the review alone cost the shares about nine and a half percent."
+  },
+  {
+   "id": "c1k03a",
+   "cue": "L017",
+   "set": "diner",
+   "opts": {
+    "palette": "red",
+    "night": false
+   },
+   "place": "diner",
+   "frame": "medium",
+   "focus": [
+    700,
+    600
+   ],
+   "camera": "still",
+   "extras": 3,
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 700,
+     "y": 960,
+     "scale": 0.85,
+     "face": "shocked",
+     "prop": "mug",
+     "speaks": [
+      "L017"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L017",
+       "word": 0,
+       "pose": "raise"
+      }
+     ]
+    },
+    {
+     "who": "HAL",
+     "x": 1260,
+     "y": 960,
+     "scale": 0.85,
+     "face": "smug",
+     "prop": "mug",
+     "flip": true,
+     "enter": "none"
+    }
+   ],
+   "explains": "Martha, a household saver, is shocked that a review alone moved the price so much."
+  },
+  {
+   "id": "c1k03b",
+   "cue": "L018",
+   "set": "diner",
+   "opts": {
+    "palette": "red",
+    "night": false
+   },
+   "place": "diner",
+   "frame": "close",
+   "focus": [
+    1260,
+    560
+   ],
+   "camera": "pan_left",
+   "extras": 3,
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 700,
+     "y": 960,
+     "scale": 0.85,
+     "face": "shocked",
+     "prop": "mug",
+     "enter": "none"
+    },
+    {
+     "who": "HAL",
+     "x": 1260,
+     "y": 960,
+     "scale": 0.85,
+     "face": "deadpan",
+     "prop": "mug",
+     "flip": true,
+     "speaks": [
+      "L018"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L018",
+       "word": 1,
+       "pose": "shrug"
+      }
+     ]
+    }
+   ],
+   "explains": "Hal confirms it: the drop came from a review, not from anything it found."
+  },
+  {
+   "id": "c1k03c",
+   "cue": "L019",
+   "set": "diner",
+   "opts": {
+    "palette": "red",
+    "night": false
+   },
+   "place": "diner",
+   "frame": "close",
+   "focus": [
+    700,
+    560
+   ],
+   "camera": "still",
+   "extras": 3,
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 700,
+     "y": 960,
+     "scale": 0.85,
+     "face": "confused",
+     "prop": "mug",
+     "speaks": [
+      "L019"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L019",
+       "word": 1,
+       "pose": "think"
+      }
+     ]
+    },
+    {
+     "who": "HAL",
+     "x": 1260,
+     "y": 960,
+     "scale": 0.85,
+     "face": "deadpan",
+     "flip": true,
+     "enter": "none"
+    }
+   ],
+   "explains": "A review is not a finding: nothing had been proved."
+  },
+  {
+   "id": "c1k03d",
+   "cue": "L020",
+   "set": "diner",
+   "opts": {
+    "palette": "red",
+    "night": false
+   },
+   "place": "diner",
+   "frame": "ots",
+   "ots": {
+    "speaker": "HAL",
+    "listener": "MARTHA"
+   },
+   "camera": "pan_right",
+   "extras": 3,
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 700,
+     "y": 960,
+     "scale": 0.85,
+     "face": "confused",
+     "enter": "none"
+    },
+    {
+     "who": "HAL",
+     "x": 1260,
+     "y": 960,
+     "scale": 0.85,
+     "face": "smug",
+     "prop": "mug",
+     "flip": true,
+     "speaks": [
+      "L020"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L020",
+       "word": 5,
+       "pose": "hips"
+      }
+     ]
+    }
+   ],
+   "explains": "Big traders sell on uncertainty first and wait for the facts later, and that is what moved the price."
+  },
+  {
+   "id": "c1k04a",
+   "cue": "L021",
+   "set": "corridor",
+   "opts": {
+    "night": true,
+    "palette": "teal",
+    "dress": "exec"
+   },
+   "place": "executive corridor",
+   "frame": "medium",
+   "focus": [
+    760,
+    600
+   ],
+   "camera": "tilt_up",
+   "light": {
+    "x": 1200,
+    "y": 300,
+    "r": 850,
+    "color": "#ffe9a8",
+    "dark": 0.45
+   },
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 760,
+     "y": 960,
+     "scale": 0.85,
+     "face": "confused",
+     "speaks": [
+      "L021"
+     ],
+     "enter": "walk",
+     "acts": [
+      {
+       "cue": "L021",
+       "word": 2,
+       "pose": "point"
+      }
+     ]
+    },
+    {
+     "who": "HAL",
+     "x": 1100,
+     "y": 960,
+     "scale": 0.85,
+     "face": "deadpan",
+     "prop": "mug",
+     "enter": "walk"
+    }
+   ],
+   "explains": "Martha and Hal walk up to the corner office door to ask what the real question is."
+  },
+  {
+   "id": "c1k04b",
+   "cue": "L022",
+   "set": "corridor",
+   "opts": {
+    "night": true,
+    "palette": "teal",
+    "dress": "exec"
+   },
+   "place": "executive corridor",
+   "frame": "ots",
+   "ots": {
+    "speaker": "HAL",
+    "listener": "MARTHA"
+   },
+   "camera": "pan_left",
+   "motif": "door plate",
+   "light": {
+    "x": 1300,
+    "y": 320,
+    "r": 850,
+    "color": "#ffe9a8",
+    "dark": 0.45
+   },
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 760,
+     "y": 960,
+     "scale": 0.85,
+     "face": "confused",
+     "enter": "none"
+    },
+    {
+     "who": "HAL",
+     "x": 1100,
+     "y": 960,
+     "scale": 0.85,
+     "face": "deadpan",
+     "prop": "mug",
+     "speaks": [
+      "L022"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L022",
+       "word": 2,
+       "pose": "point"
+      }
+     ]
+    }
+   ],
+   "explains": "The real question is written on the door: whose name goes on the chief executive's plate."
+  },
+  {
+   "id": "c1s22",
+   "cue": "L023",
+   "set": "corridor",
+   "opts": {
+    "night": true,
+    "palette": "teal",
+    "dress": "exec"
+   },
+   "place": "executive corridor",
+   "frame": "close",
+   "focus": [
+    960,
+    480
+   ],
+   "camera": "still",
+   "motif": "door plate",
+   "light": {
+    "x": 960,
+    "y": 260,
+    "r": 800,
+    "color": "#ffe9a8",
+    "dark": 0.45
+   },
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 1500,
+     "y": 1000,
+     "scale": 0.9,
+     "face": "deadpan",
+     "prop": "mug",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L023",
+       "word": 3,
+       "pose": "rest"
+      }
+     ]
+    }
+   ],
+   "explains": "From Sunday to Thursday the problem changed: from what happened to Huang, to whose name is on this door."
+  },
+  {
+   "id": "c1s23",
+   "cue": "L023",
+   "word": 9,
+   "set": "corridor",
+   "opts": {
+    "night": true,
+    "palette": "teal",
+    "dress": "exec"
+   },
+   "place": "executive corridor",
+   "camera": "pull_out",
+   "light": {
+    "x": 1300,
+    "y": 300,
+    "r": 900,
+    "color": "#ffe9a8",
+    "dark": 0.45
+   },
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 900,
+     "y": 960,
+     "scale": 0.75,
+     "face": "plain",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L023",
+       "word": 10,
+       "to": [
+        300,
+        960
+       ],
+       "dur": 1.8
+      }
+     ]
+    },
+    {
+     "who": "HAL",
+     "x": 1100,
+     "y": 960,
+     "scale": 0.75,
+     "face": "deadpan",
+     "prop": "mug",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L023",
+       "word": 11,
+       "to": [
+        480,
+        960
+       ],
+       "dur": 1.8
+      }
+     ]
+    }
+   ],
+   "explains": "They walk off and leave the taped door behind: the question now is who is in charge."
+  }
+ ]
+}

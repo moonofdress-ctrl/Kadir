@@ -1,0 +1,1389 @@
+{
+ "shots": [
+  {
+   "id": "c3ch",
+   "type": "chapter",
+   "cue": "L054",
+   "number": 3,
+   "title": "Wednesday night"
+  },
+  {
+   "id": "c3t01",
+   "type": "card",
+   "cue": "L054",
+   "text": "One good day",
+   "emph": [
+    "good"
+   ],
+   "explains": "We go back to Wednesday, the day before the news, and it starts well."
+  },
+  {
+   "set": "trading_floor",
+   "opts": {
+    "dress": "exchange",
+    "palette": "green",
+    "night": false
+   },
+   "place": "stock exchange floor",
+   "grade": "green",
+   "extras": 10,
+   "id": "c3s20",
+   "cue": "L054",
+   "word": 5,
+   "camera": "pan_right",
+   "explains": "On Wednesday the shares closed up almost three percent: the exchange floor cheers at the bell.",
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 1240,
+     "y": 960,
+     "scale": 0.8,
+     "enter": "none",
+     "face": "happy",
+     "acts": [
+      {
+       "word": 7,
+       "pose": "cheer"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "set": "trading_floor",
+   "opts": {
+    "dress": "exchange",
+    "palette": "green",
+    "night": false
+   },
+   "place": "stock exchange floor",
+   "grade": "green",
+   "extras": 10,
+   "id": "c3s20b",
+   "cue": "L054",
+   "word": 10,
+   "frame": "close",
+   "focus": [
+    960,
+    640
+   ],
+   "camera": "tilt_up",
+   "explains": "The price ended near $174, and traders like Chad thought the bad week was behind them.",
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 960,
+     "y": 960,
+     "face": "greedy",
+     "pose": "cheer",
+     "enter": "none",
+     "acts": [
+      {
+       "word": 12,
+       "pose": "wave"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "set": "trading_floor",
+   "opts": {
+    "dress": "exchange",
+    "palette": "green",
+    "night": false
+   },
+   "place": "stock exchange floor",
+   "grade": "gold",
+   "extras": 10,
+   "id": "c3s20c",
+   "cue": "L055",
+   "camera": "pull_out",
+   "explains": "For a few hours, the worst looked over: the floor empties in calm evening light.",
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 900,
+     "y": 960,
+     "scale": 0.75,
+     "face": "happy",
+     "enter": "none",
+     "acts": [
+      {
+       "word": 4,
+       "to": [
+        1500,
+        960
+       ],
+       "dur": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "set": "bedroom",
+   "opts": {
+    "dress": "teen",
+    "palette": "pink",
+    "night": false
+   },
+   "place": "Chad's bedroom",
+   "id": "c3k08a",
+   "cue": "L056",
+   "frame": "medium",
+   "focus": [
+    860,
+    640
+   ],
+   "camera": "pan_left",
+   "explains": "Chad, a small investor at home, celebrates the green close.",
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 860,
+     "y": 960,
+     "face": "happy",
+     "pose": "cheer",
+     "speaks": [
+      "L056"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "word": 1,
+       "pose": "wave"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "set": "bedroom",
+   "opts": {
+    "dress": "teen",
+    "palette": "pink",
+    "night": false
+   },
+   "place": "Chad's bedroom",
+   "id": "c3k08b",
+   "cue": "L057",
+   "frame": "close",
+   "focus": [
+    1380,
+    700
+   ],
+   "camera": "still",
+   "explains": "Hal, on speakerphone, warns that the closing bell does not end the day's news.",
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 760,
+     "y": 960,
+     "scale": 0.9,
+     "face": "confused",
+     "pose": "shrug",
+     "speaks": [
+      "L058"
+     ],
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "set": "bedroom",
+   "opts": {
+    "dress": "teen",
+    "palette": "pink",
+    "night": true
+   },
+   "place": "Chad's bedroom",
+   "id": "c3k08c",
+   "cue": "L059",
+   "light": {
+    "kind": "screen",
+    "x": 1450,
+    "y": 600,
+    "r": 800,
+    "color": "#7dffa0",
+    "dark": 0.45
+   },
+   "frame": "close",
+   "focus": [
+    860,
+    640
+   ],
+   "camera": "pan_right",
+   "explains": "Night falls on Chad's room: after the bell, news keeps arriving and the price keeps moving.",
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 860,
+     "y": 960,
+     "face": "confused",
+     "pose": "cheer",
+     "enter": "none",
+     "acts": [
+      {
+       "word": 2,
+       "pose": "rest",
+       "face": "scared"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3t02",
+   "type": "card",
+   "cue": "L060",
+   "text": "After the bell",
+   "emph": [
+    "After"
+   ],
+   "explains": "The turn of the chapter: the trouble comes after the market closes."
+  },
+  {
+   "set": "printing_press",
+   "opts": {
+    "palette": "olive",
+    "night": true
+   },
+   "place": "printing press",
+   "light": {
+    "kind": "spot",
+    "x": 960,
+    "y": 200,
+    "r": 850,
+    "color": "#ffe0a0",
+    "dark": 0.45
+   },
+   "id": "c3s21",
+   "cue": "L060",
+   "word": 3,
+   "camera": "pan_left",
+   "sound": "riser",
+   "explains": "Two newspapers publish reports about Huang after Wednesday's close.",
+   "actors": [
+    {
+     "thing": "newspaper",
+     "x": 560,
+     "y": 900,
+     "scale": 0.7,
+     "enter": "none",
+     "acts": [
+      {
+       "word": 4,
+       "to": [
+        760,
+        900
+       ],
+       "dur": 1.6
+      }
+     ]
+    },
+    {
+     "thing": "newspaper",
+     "x": 1180,
+     "y": 900,
+     "scale": 0.7,
+     "enter": "none",
+     "acts": [
+      {
+       "word": 5,
+       "to": [
+        1360,
+        900
+       ],
+       "dur": 1.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "set": "printing_press",
+   "opts": {
+    "palette": "olive",
+    "night": true
+   },
+   "place": "printing press",
+   "light": {
+    "kind": "spot",
+    "x": 960,
+    "y": 200,
+    "r": 850,
+    "color": "#ffe0a0",
+    "dark": 0.45
+   },
+   "id": "c3s21b",
+   "cue": "L060",
+   "word": 7,
+   "angle": "low",
+   "frame": "medium",
+   "focus": [
+    960,
+    600
+   ],
+   "camera": "tilt_up",
+   "motif": "",
+   "explains": "The market reads both reports overnight, and the chip's price tag already swings lower.",
+   "actors": [
+    {
+     "thing": "newspaper",
+     "x": 700,
+     "y": 960,
+     "scale": 0.9,
+     "enter": "none",
+     "acts": [
+      {
+       "word": 8,
+       "to": [
+        760,
+        1000
+       ],
+       "dur": 1.2
+      }
+     ]
+    },
+    {
+     "thing": "newspaper",
+     "x": 1220,
+     "y": 960,
+     "scale": 0.9,
+     "enter": "none"
+    },
+    {
+     "thing": "chip",
+     "x": 1560,
+     "y": 560,
+     "scale": 0.5,
+     "enter": "none",
+     "face": "scared"
+    }
+   ]
+  },
+  {
+   "id": "c3t03",
+   "type": "card",
+   "cue": "L061",
+   "text": "Report one",
+   "emph": [
+    "one"
+   ],
+   "explains": "The first of the two reports."
+  },
+  {
+   "set": "printing_press",
+   "opts": {
+    "palette": "olive",
+    "night": true
+   },
+   "place": "printing press",
+   "light": {
+    "kind": "spot",
+    "x": 960,
+    "y": 200,
+    "r": 850,
+    "color": "#ffe0a0",
+    "dark": 0.45
+   },
+   "id": "c3s21c",
+   "cue": "L061",
+   "word": 4,
+   "frame": "close",
+   "focus": [
+    900,
+    690
+   ],
+   "camera": "pan_left",
+   "explains": "The New York Times reports a second relationship, with a senior Nvidia executive who reported to Huang.",
+   "actors": [
+    {
+     "thing": "newspaper",
+     "x": 900,
+     "y": 960,
+     "scale": 0.9,
+     "enter": "none",
+     "face": "smug"
+    }
+   ]
+  },
+  {
+   "set": "corridor",
+   "opts": {
+    "dress": "doors",
+    "palette": "red",
+    "night": true,
+    "empty": true
+   },
+   "place": "empty dark corridor",
+   "light": {
+    "kind": "spot",
+    "x": 1500,
+    "y": 260,
+    "r": 800,
+    "color": "#ff6a5a",
+    "dark": 0.5
+   },
+   "id": "c3s22",
+   "cue": "L061",
+   "word": 8,
+   "angle": "high",
+   "camera": "pan_right",
+   "explains": "The report concerns a senior executive behind one of these closed doors, who reported to Huang.",
+   "actors": []
+  },
+  {
+   "set": "corridor",
+   "opts": {
+    "dress": "doors",
+    "palette": "red",
+    "night": true,
+    "empty": true
+   },
+   "place": "empty dark corridor",
+   "light": {
+    "kind": "spot",
+    "x": 1500,
+    "y": 260,
+    "r": 800,
+    "color": "#ff6a5a",
+    "dark": 0.5
+   },
+   "id": "c3s22b",
+   "cue": "L062",
+   "frame": "medium",
+   "focus": [
+    1100,
+    600
+   ],
+   "camera": "tilt_down",
+   "explains": "Neither Nvidia nor Huang had confirmed it: the paper tiptoes up to a door that stays shut.",
+   "actors": [
+    {
+     "thing": "newspaper",
+     "x": 600,
+     "y": 940,
+     "scale": 0.6,
+     "enter": "none",
+     "face": "confused",
+     "acts": [
+      {
+       "word": 1,
+       "to": [
+        1000,
+        940
+       ],
+       "dur": 1.8
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "set": "corridor",
+   "opts": {
+    "dress": "doors",
+    "palette": "red",
+    "night": true,
+    "empty": true
+   },
+   "place": "empty dark corridor",
+   "light": {
+    "kind": "spot",
+    "x": 1500,
+    "y": 260,
+    "r": 800,
+    "color": "#ff6a5a",
+    "dark": 0.5
+   },
+   "id": "c3s22c",
+   "cue": "L062",
+   "word": 7,
+   "frame": "close",
+   "focus": [
+    1100,
+    600
+   ],
+   "camera": "still",
+   "explains": "We are only saying it was reported, not that it is true.",
+   "actors": [
+    {
+     "thing": "newspaper",
+     "x": 1000,
+     "y": 940,
+     "scale": 0.6,
+     "enter": "none",
+     "face": "scared",
+     "acts": [
+      {
+       "word": 12,
+       "to": [
+        760,
+        940
+       ],
+       "dur": 1.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3t04",
+   "type": "card",
+   "cue": "L063",
+   "text": "Report two",
+   "emph": [
+    "two"
+   ],
+   "explains": "The second of the two reports."
+  },
+  {
+   "set": "corridor",
+   "opts": {
+    "dress": "courthouse",
+    "palette": "amber",
+    "night": true
+   },
+   "place": "courthouse corridor",
+   "light": {
+    "kind": "spot",
+    "x": 960,
+    "y": 180,
+    "r": 850,
+    "color": "#fff6c8",
+    "dark": 0.45
+   },
+   "id": "c3s21d",
+   "cue": "L063",
+   "word": 4,
+   "camera": "pan_left",
+   "explains": "The Wall Street Journal reports that the board is preparing to remove Huang.",
+   "actors": [
+    {
+     "thing": "newspaper",
+     "x": 760,
+     "y": 900,
+     "scale": 0.7,
+     "enter": "pop",
+     "face": "deadpan"
+    }
+   ]
+  },
+  {
+   "set": "corridor",
+   "opts": {
+    "dress": "courthouse",
+    "palette": "amber",
+    "night": true
+   },
+   "place": "courthouse corridor",
+   "light": {
+    "kind": "spot",
+    "x": 960,
+    "y": 180,
+    "r": 850,
+    "color": "#fff6c8",
+    "dark": 0.45
+   },
+   "id": "c3k09a1",
+   "cue": "L064",
+   "frame": "ots",
+   "ots": {
+    "speaker": "CHAD",
+    "listener": "REGGIE"
+   },
+   "camera": "still",
+   "explains": "Chad wants a simple answer: is the report true?",
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 1260,
+     "y": 960,
+     "scale": 0.85,
+     "face": "confused",
+     "speaks": [
+      "L064"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "word": 0,
+       "to": [
+        1180,
+        960
+       ],
+       "dur": 0.8
+      }
+     ]
+    },
+    {
+     "who": "REGGIE",
+     "x": 600,
+     "y": 960,
+     "scale": 0.85,
+     "prop": "stamp",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "set": "corridor",
+   "opts": {
+    "dress": "courthouse",
+    "palette": "amber",
+    "night": true
+   },
+   "place": "courthouse corridor",
+   "light": {
+    "kind": "spot",
+    "x": 960,
+    "y": 180,
+    "r": 850,
+    "color": "#fff6c8",
+    "dark": 0.45
+   },
+   "id": "c3k09a2",
+   "cue": "L065",
+   "frame": "close",
+   "focus": [
+    960,
+    640
+   ],
+   "camera": "tilt_up",
+   "explains": "Reggie, the rule keeper, gives the legal word: it is an allegation.",
+   "actors": [
+    {
+     "who": "REGGIE",
+     "x": 960,
+     "y": 960,
+     "face": "deadpan",
+     "prop": "stamp",
+     "speaks": [
+      "L065"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "word": 0,
+       "pose": "raise"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "set": "corridor",
+   "opts": {
+    "dress": "courthouse",
+    "palette": "amber",
+    "night": true
+   },
+   "place": "courthouse corridor",
+   "light": {
+    "kind": "spot",
+    "x": 960,
+    "y": 180,
+    "r": 850,
+    "color": "#fff6c8",
+    "dark": 0.45
+   },
+   "id": "c3k09a3",
+   "cue": "L066",
+   "frame": "medium",
+   "focus": [
+    1100,
+    640
+   ],
+   "camera": "pan_right",
+   "explains": "Chad tries the opposite: then it is false?",
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 800,
+     "y": 960,
+     "face": "confused",
+     "speaks": [
+      "L066"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "word": 0,
+       "to": [
+        1200,
+        960
+       ],
+       "dur": 0.9
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "set": "corridor",
+   "opts": {
+    "dress": "courthouse",
+    "palette": "amber",
+    "night": true
+   },
+   "place": "courthouse corridor",
+   "light": {
+    "kind": "spot",
+    "x": 960,
+    "y": 180,
+    "r": 850,
+    "color": "#fff6c8",
+    "dark": 0.45
+   },
+   "id": "c3k09a4",
+   "cue": "L067",
+   "frame": "close",
+   "focus": [
+    900,
+    640
+   ],
+   "camera": "pan_left",
+   "explains": "Not false either: an allegation is neither proven nor disproven.",
+   "actors": [
+    {
+     "who": "REGGIE",
+     "x": 900,
+     "y": 960,
+     "face": "deadpan",
+     "prop": "stamp",
+     "speaks": [
+      "L067"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "word": 0,
+       "pose": "point"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "set": "corridor",
+   "opts": {
+    "dress": "courthouse",
+    "palette": "amber",
+    "night": true
+   },
+   "place": "courthouse corridor",
+   "light": {
+    "kind": "spot",
+    "x": 960,
+    "y": 180,
+    "r": 850,
+    "color": "#fff6c8",
+    "dark": 0.45
+   },
+   "id": "c3k09a5",
+   "cue": "L068",
+   "frame": "close",
+   "focus": [
+    1000,
+    640
+   ],
+   "camera": "tilt_down",
+   "explains": "Chad is lost between true and false.",
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 1000,
+     "y": 960,
+     "face": "confused",
+     "speaks": [
+      "L068"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "word": 1,
+       "pose": "shrug"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "set": "corridor",
+   "opts": {
+    "dress": "courthouse",
+    "palette": "amber",
+    "night": true
+   },
+   "place": "courthouse corridor",
+   "light": {
+    "kind": "spot",
+    "x": 960,
+    "y": 180,
+    "r": 850,
+    "color": "#fff6c8",
+    "dark": 0.45
+   },
+   "id": "c3k09a6",
+   "cue": "L069",
+   "frame": "medium",
+   "focus": [
+    960,
+    640
+   ],
+   "camera": "pull_out",
+   "explains": "The honest word is 'reported': a newspaper said it, nobody has confirmed it.",
+   "actors": [
+    {
+     "who": "REGGIE",
+     "x": 900,
+     "y": 960,
+     "face": "smug",
+     "prop": "stamp",
+     "speaks": [
+      "L069"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "word": 0,
+       "act": "slam"
+      }
+     ]
+    },
+    {
+     "who": "CHAD",
+     "x": 1400,
+     "y": 960,
+     "scale": 0.9,
+     "face": "shocked",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "set": "living_room",
+   "opts": {
+    "palette": "plum",
+    "night": true
+   },
+   "place": "Benny's living room",
+   "light": {
+    "kind": "screen",
+    "x": 980,
+    "y": 700,
+    "r": 780,
+    "color": "#ff8a7a",
+    "dark": 0.5
+   },
+   "id": "c3k09b1",
+   "cue": "L070",
+   "frame": "close",
+   "angle": "high",
+   "focus": [
+    960,
+    660
+   ],
+   "camera": "pan_left",
+   "explains": "Benny, the ordinary shareholder, wakes after midnight to a drop that happened after the market closed.",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 960,
+     "y": 960,
+     "face": "shocked",
+     "prop": "phone",
+     "speaks": [
+      "L070"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "word": 3,
+       "pose": "panic"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "set": "living_room",
+   "opts": {
+    "palette": "plum",
+    "night": true
+   },
+   "place": "Benny's living room",
+   "light": {
+    "kind": "screen",
+    "x": 980,
+    "y": 700,
+    "r": 780,
+    "color": "#ff8a7a",
+    "dark": 0.5
+   },
+   "id": "c3k09b2",
+   "cue": "L071",
+   "frame": "close",
+   "focus": [
+    1080,
+    720
+   ],
+   "camera": "still",
+   "explains": "After-hours trading keeps prices moving when the main market is shut.",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 900,
+     "y": 960,
+     "face": "scared",
+     "prop": "phone",
+     "pose": "phone",
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "set": "living_room",
+   "opts": {
+    "palette": "plum",
+    "night": true
+   },
+   "place": "Benny's living room",
+   "light": {
+    "kind": "screen",
+    "x": 980,
+    "y": 700,
+    "r": 780,
+    "color": "#ff8a7a",
+    "dark": 0.5
+   },
+   "id": "c3k09b3",
+   "cue": "L072",
+   "frame": "medium",
+   "focus": [
+    960,
+    660
+   ],
+   "camera": "pull_out",
+   "explains": "For a small investor, a market that never sleeps means a night without sleep.",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 960,
+     "y": 960,
+     "face": "sad",
+     "prop": "phone",
+     "speaks": [
+      "L072"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "word": 1,
+       "act": "lean_back"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3t05",
+   "type": "card",
+   "cue": "L073",
+   "text": "The night shift",
+   "emph": [
+    "night"
+   ],
+   "explains": "Hal's warning comes true: the price falls while the main market is closed."
+  },
+  {
+   "set": "office",
+   "opts": {
+    "dress": "after_hours",
+    "palette": "blue",
+    "night": true,
+    "empty": true,
+    "poster": false
+   },
+   "place": "empty after-hours office",
+   "light": {
+    "kind": "screen",
+    "x": 960,
+    "y": 560,
+    "r": 800,
+    "color": "#d8ecff",
+    "dark": 0.5
+   },
+   "id": "c3s23",
+   "cue": "L073",
+   "word": 3,
+   "frame": "medium",
+   "focus": [
+    960,
+    560
+   ],
+   "camera": "tilt_down",
+   "explains": "In after-hours trading the shares fall eight to nine percent: the line on the screen drops off a cliff.",
+   "actors": []
+  },
+  {
+   "id": "c3p01",
+   "type": "split",
+   "cue": "L074",
+   "camera": "pan_right",
+   "explains": "Two clocks ran that night: the board deciding behind closed doors, and the market pricing every rumour.",
+   "panels": [
+    {
+     "set": "corridor",
+     "opts": {
+      "dress": "doors",
+      "palette": "red",
+      "night": true,
+      "empty": true
+     },
+     "place": "empty dark corridor",
+     "light": {
+      "kind": "spot",
+      "x": 1500,
+      "y": 260,
+      "r": 800,
+      "color": "#ff6a5a",
+      "dark": 0.5
+     },
+     "cue": "L074",
+     "word": 4,
+     "actors": []
+    },
+    {
+     "set": "living_room",
+     "opts": {
+      "palette": "plum",
+      "night": true
+     },
+     "place": "Benny's living room",
+     "light": {
+      "kind": "screen",
+      "x": 980,
+      "y": 700,
+      "r": 780,
+      "color": "#ff8a7a",
+      "dark": 0.5
+     },
+     "cue": "L074",
+     "word": 11,
+     "actors": [
+      {
+       "who": "BENNY",
+       "x": 960,
+       "y": 960,
+       "face": "scared",
+       "prop": "phone",
+       "enter": "none",
+       "acts": [
+        {
+         "word": 12,
+         "pose": "phone"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "set": "laundromat",
+   "opts": {
+    "palette": "mint",
+    "night": true
+   },
+   "place": "laundromat",
+   "extras": 2,
+   "light": {
+    "kind": "neon",
+    "x": 640,
+    "x2": 1280,
+    "y": 150,
+    "r": 820,
+    "color": "#f0fff8",
+    "color2": "#c8ffe8",
+    "dark": 0.4
+   },
+   "id": "c3k10a",
+   "cue": "L075",
+   "frame": "ots",
+   "ots": {
+    "speaker": "MARTHA",
+    "listener": "HAL"
+   },
+   "camera": "still",
+   "explains": "Martha sums up the night: two newspaper reports in a few hours.",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 1260,
+     "y": 960,
+     "scale": 0.85,
+     "face": "neutral",
+     "speaks": [
+      "L075"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "word": 1,
+       "pose": "hold"
+      }
+     ]
+    },
+    {
+     "who": "HAL",
+     "x": 600,
+     "y": 960,
+     "scale": 0.85,
+     "enter": "none"
+    }
+   ]
+  },
+  {
+   "set": "laundromat",
+   "opts": {
+    "palette": "mint",
+    "night": true
+   },
+   "place": "laundromat",
+   "extras": 2,
+   "light": {
+    "kind": "neon",
+    "x": 640,
+    "x2": 1280,
+    "y": 150,
+    "r": 820,
+    "color": "#f0fff8",
+    "color2": "#c8ffe8",
+    "dark": 0.4
+   },
+   "id": "c3k10b",
+   "cue": "L076",
+   "frame": "close",
+   "focus": [
+    800,
+    640
+   ],
+   "camera": "pan_left",
+   "explains": "That night neither report was confirmed by Nvidia or Huang.",
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 800,
+     "y": 960,
+     "face": "deadpan",
+     "speaks": [
+      "L076"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "word": 1,
+       "pose": "hold"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "set": "laundromat",
+   "opts": {
+    "palette": "mint",
+    "night": true
+   },
+   "place": "laundromat",
+   "extras": 2,
+   "light": {
+    "kind": "neon",
+    "x": 640,
+    "x2": 1280,
+    "y": 150,
+    "r": 820,
+    "color": "#f0fff8",
+    "color2": "#c8ffe8",
+    "dark": 0.4
+   },
+   "id": "c3k10c",
+   "cue": "L077",
+   "frame": "medium",
+   "focus": [
+    1100,
+    640
+   ],
+   "camera": "tilt_up",
+   "explains": "Martha concludes the reports are not proven.",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 1100,
+     "y": 960,
+     "face": "confused",
+     "speaks": [
+      "L077"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "word": 1,
+       "pose": "think"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "set": "laundromat",
+   "opts": {
+    "palette": "mint",
+    "night": true
+   },
+   "place": "laundromat",
+   "extras": 2,
+   "light": {
+    "kind": "neon",
+    "x": 640,
+    "x2": 1280,
+    "y": 150,
+    "r": 820,
+    "color": "#f0fff8",
+    "color2": "#c8ffe8",
+    "dark": 0.4
+   },
+   "id": "c3k10d",
+   "cue": "L078",
+   "frame": "close",
+   "focus": [
+    860,
+    640
+   ],
+   "camera": "still",
+   "explains": "The lesson: a report does not need to be proven for the share price to react.",
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 860,
+     "y": 960,
+     "face": "smug",
+     "speaks": [
+      "L078"
+     ],
+     "enter": "none",
+     "acts": [
+      {
+       "word": 2,
+       "pose": "present"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c3t06",
+   "type": "card",
+   "cue": "L079",
+   "text": "Meanwhile, the board",
+   "emph": [
+    "board"
+   ],
+   "explains": "While the market reacted, the board was making its own decision."
+  },
+  {
+   "set": "records_office",
+   "opts": {
+    "palette": "ochre",
+    "night": true
+   },
+   "place": "records room",
+   "light": {
+    "kind": "spot",
+    "x": 1300,
+    "y": 420,
+    "r": 800,
+    "color": "#ffd9a0",
+    "dark": 0.45
+   },
+   "id": "c3s24a",
+   "cue": "L079",
+   "word": 4,
+   "camera": "pan_right",
+   "explains": "Nvidia's own regulatory filing is the record of what the board did.",
+   "actors": []
+  },
+  {
+   "set": "records_office",
+   "opts": {
+    "palette": "ochre",
+    "night": true
+   },
+   "place": "records room",
+   "light": {
+    "kind": "spot",
+    "x": 1300,
+    "y": 420,
+    "r": 800,
+    "color": "#ffd9a0",
+    "dark": 0.45
+   },
+   "id": "c3s24b",
+   "cue": "L079",
+   "word": 11,
+   "frame": "close",
+   "focus": [
+    960,
+    600
+   ],
+   "camera": "push_in",
+   "explains": "The filing says the board accepted Huang's resignation that same Wednesday night.",
+   "actors": []
+  },
+  {
+   "set": "living_room",
+   "opts": {
+    "palette": "plum",
+    "night": true
+   },
+   "place": "Benny's living room",
+   "light": {
+    "kind": "screen",
+    "x": 980,
+    "y": 700,
+    "r": 780,
+    "color": "#ff8a7a",
+    "dark": 0.5
+   },
+   "id": "c3s24c",
+   "cue": "L080",
+   "frame": "medium",
+   "focus": [
+    900,
+    660
+   ],
+   "camera": "pan_left",
+   "callback": "Benny's couch",
+   "explains": "The public only heard on Thursday: Benny sleeps through the night the decision was made.",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 900,
+     "y": 960,
+     "face": "sad",
+     "prop": "phone",
+     "enter": "none",
+     "acts": [
+      {
+       "word": 2,
+       "act": "lean_back"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

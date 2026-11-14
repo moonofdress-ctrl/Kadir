@@ -143,6 +143,98 @@
   // A palette wash over a set that does not take palette colours itself: the dominant hue goes on the whole back layer.
   const wash = (P, night) => `<rect x="-200" y="-200" width="2320" height="1480" fill="${P.wall}" style="mix-blend-mode:color" opacity="${night ? 0.55 : 0.45}"/>` + `<rect x="-200" y="-200" width="2320" height="1480" fill="${P.wall}" style="mix-blend-mode:multiply" opacity="${night ? 0.18 : 0.12}"/>`;
 
+  /* ---- Helpers for the places of the Nvidia CFO episode (14 Nov 2026): a room, a desk, a lamp, a glass pane, rain, a lettered board. ---- */
+  const K = {
+    // back wall with a lower panel, floor and a skirting line; hz = where the wall meets the floor
+    room(P, hz, wain) { wain = wain == null ? 150 : wain; return R(0, 0, 1920, hz, P.wall, 0, "") + (wain ? R(0, hz - wain, 1920, wain, P.panel, 0, "") + `<path d="M0,${hz - wain} L1920,${hz - wain}" stroke="${INK}" stroke-width="5"/>` : "") + R(0, hz, 1920, 1080 - hz, P.floor, 0, "") + floorLine(hz); },
+    // a desk seen from the front: top slab, body with two drawers; x, y = left end of the top
+    desk(x, y, w, h, col, P) { return cut(R(x - 14, y, w + 28, 26, mixHex(col, "#ffffff", 0.16), 6) + R(x, y + 26, w, h, col, 0) + R(x + 24, y + 48, w * 0.3, h - 40, mixHex(col, "#141a3a", 0.2), 4, `stroke="${INK}" stroke-width="4"`) +
+      R(x + w - 24 - w * 0.3, y + 48, w * 0.3, h - 40, mixHex(col, "#141a3a", 0.2), 4, `stroke="${INK}" stroke-width="4"`) + R(x + w * 0.1, y + 70, 40, 8, P.trim, 4, "") + R(x + w - w * 0.1 - 40, y + 70, 40, 8, P.trim, 4, "")); },
+    // a desk lamp (banker's lamp when `green`): base, stem, shade; the glow pulses
+    lamp(x, y, k, on, col, green) { k = k || 1; const sh = green ? "#2f8f5a" : "#e8a317";
+      return (on ? halo(x, y - 190 * k, 250 * k, col || "#ffd27a", 0.3) : "") + cut(`<g transform="translate(${x},${y}) scale(${k})">${R(-50, -18, 100, 18, "#3d4a5c", 8)}<path d="M0,-18 L0,-150" stroke="${INK}" stroke-width="12"/><path d="M-70,-130 L70,-130 L48,-210 L-48,-210Z" fill="${sh}" ${st}/>${on ? `<ellipse cx="0" cy="-130" rx="62" ry="10" fill="${col || "#ffe9b0"}"/>` : ""}</g>`); },
+    // translucent glass with a reflection streak and (rain) drops
+    glass(x, y, w, h, drops) { let d = ""; if (drops) for (let i = 0; i < drops; i++) { const dx = x + 20 + ((i * 97) % Math.max(40, w - 40)), dy = y + 20 + ((i * 53) % Math.max(40, h - 60)); d += `<path d="M${dx},${dy} L${dx - 4},${dy + 30}" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".55"/>`; }
+      return R(x, y, w, h, "rgba(200,232,244,.28)", 4, `stroke="${INK}" stroke-width="6"`) + `<path d="M${x + 20},${y + h - 20} L${x + w * 0.35},${y + 20} M${x + 50},${y + h - 20} L${x + w * 0.35 + 30},${y + 20}" stroke="#fff" stroke-width="6" opacity=".45"/>` + d; },
+    // a board with lettering; fill and ink are optional
+    board(x, y, w, h, t, fill, ink, size) { return cut(R(x, y, w, h, fill || "#f6f1e4", 6) + T(x + w / 2, y + h / 2 + (size || h * 0.5) * 0.34, t, size || Math.min(h * 0.5, (w - 20) / (Math.max(2, String(t).length) * 0.62)), ink || INK)); },
+    // rain: streaks on a lattice that slides down and loops (class rain); n columns spread over the picture
+    rain(seed) { const r = rng(seed || 3); let s = ""; for (let i = 0; i < 60; i++) { const x = r() * 2000 - 40, y = r() * 1200 - 200; s += `<path d="M${x.toFixed(0)},${y.toFixed(0)} l-14,52" stroke="#dff0f8" stroke-width="3" stroke-linecap="round" opacity="${(0.35 + r() * 0.35).toFixed(2)}"/>`; }
+      return `<g class="rain">${s}</g>`; },
+    // a faceless passer-by, as a silhouette in one colour (class pass: walks across); umbrella optional
+    walker(x, y, k, col, umb) { k = k || 1; return `<g class="pass">${cut(`<g transform="translate(${x},${y}) scale(${k})"><circle cx="0" cy="-262" r="30" fill="${col}" ${st} stroke-width="6"/><path d="M-44,-226 L44,-226 L38,-90 L-38,-90Z" fill="${col}" ${st}/>${R(-34, -90, 28, 90, mixHex(col, "#141a3a", 0.3), 8)}${R(6, -90, 28, 90, mixHex(col, "#141a3a", 0.3), 8)}${umb ? `<path d="M-110,-300 Q0,-400 110,-300Z" fill="${umb}" ${st}/><path d="M0,-300 L0,-232" stroke="${INK}" stroke-width="6"/>` : ""}</g>`)}</g>`; },
+    // a lamp post with a sodium lamp head and its pool of light
+    post(x, y, h, on, col) { return cut(R(x - 9, y - h, 18, h, "#3d4a5c", 4) + `<path d="M${x},${y - h} Q${x},${y - h - 50} ${x + 70},${y - h - 50}" fill="none" ${st} stroke-width="12"/>` + R(x + 40, y - h - 62, 80, 30, "#56606f", 12)) + (on ? halo(x + 80, y - h - 24, 260, col || "#ffb347", 0.34) + beam(x + 80, y - h - 18, 60, 300, h + 10, col || "#ffb347", 0.12) + pool(x + 80, y, 300, 28, col || "#ffb347", 0.26) : ""); },
+    // a bolted letter plate: brass or cream
+    plate(x, y, w, h, t, brass, size) { return cut(R(x - w / 2, y - h / 2, w, h, brass ? "#c9a24a" : "#e8dcc0", 5) + [[-1, -1], [1, -1], [-1, 1], [1, 1]].map(([a, b]) => `<circle cx="${x + a * (w / 2 - 9)}" cy="${y + b * (h / 2 - 9)}" r="3.5" fill="${INK}"/>`).join("") + T(x, y + (size || h * 0.5) * 0.34, t, size || Math.min(h * 0.5, (w - 30) / (Math.max(2, String(t).length) * 0.62)), "#2a2a33")); },
+    // a window frame with night or day sky and a lit square or two (a view with something moving: lights that pass)
+    skylit(x, y, w, h, n, P, seed) { return D.window(x, y, w, h, n, P, seed); },
+  };
+
+  // ---- the corner office's pieces: shared by the set and by the props, so a prop lands exactly on the set's own drawing ----
+  Object.assign(K, {
+    // The plate on the glass door. Origin = the middle of the main plate. state: before | taped | unscrewed | two | rattle | frame. press: the tape is drawn bare, for the act.
+    doorPlate(state, press) { state = state || "taped"; const bs = `stroke="${INK}" stroke-width="4"`, brass = (x, t) => R(x - 62, 52, 124, 44, "#c9a24a", 5, bs) + T(x, 83, t, 22, "#2a2a33");
+      let s = `<g class="rat">` + R(-210, -48, 420, 96, "#e8dcc0", 6) + T(0, 14, "CHIEF EXECUTIVE", 40);
+      if (state === "before") s += brass(-130, "CEO") + brass(0, "PRESIDENT") + brass(130, "BOARD");
+      if (state === "unscrewed") for (const x of [-130, 0, 130]) s += `<circle cx="${x - 50}" cy="74" r="6" fill="${INK}"/><circle cx="${x + 50}" cy="74" r="6" fill="${INK}"/>`;
+      if (state === "two" || state === "rattle" || state === "frame") s += R(-90, 56, 180, 60, "#c9a24a", 5, bs) + T(0, 100, "CFO", 42, "#2a2a33");
+      if (state !== "before") s += `<g class="tape" transform="rotate(-2)"><path d="M-240,-28 l10,13 l-10,13 l10,13 l-10,13 L236,10 l-8,-12 l8,-13 l-8,-12 l8,-13Z" fill="#e7d7a4" ${st} stroke-width="5"/>` + T(0, 11, "INTERIM", 36, "#5b4a2a") + `</g>`;
+      s += `</g>`;
+      if (state === "frame") s += R(-70, -250, 140, 150, "#f6f1e4", 4, `stroke="#5b4636" stroke-width="12"`) + `<g class="q">` + T(0, -148, "?", 110, "#e0262b") + `</g>`;
+      s += `<circle cx="150" cy="96" r="38" fill="#c9a24a" ${st}/><circle cx="140" cy="86" r="10" fill="#f3e6a8"/>`;
+      if (press) s += `<g class="glove"><circle r="30" fill="#f6f1e4" ${st}/><path d="M-10,-22 q-24,-26 -34,-4" fill="#f6f1e4" ${st}/></g><g class="roll"><circle r="24" fill="#e7d7a4" ${st} stroke-width="5"/><circle r="9" fill="#9aa0b4"/></g>`;
+      return s; },
+    chair(x, y, k, state) { k = k || 1; const lea = "#8a5a48", lea2 = "#a77358", j = state === "jacket";
+      return cut(`<g transform="translate(${x},${y}) scale(${k})"><path d="M-80,-36 L80,-36 M0,-110 L0,-36" stroke="${INK}" stroke-width="14" stroke-linecap="round"/><circle cx="-80" cy="-14" r="14" fill="#3d4a5c" ${st} stroke-width="5"/><circle cx="80" cy="-14" r="14" fill="#3d4a5c" ${st} stroke-width="5"/>` +
+        R(-26, -128, 52, 26, "#3d4a5c", 6) + R(-122, -270, 28, 130, "#3d4a5c", 10) + R(122 - 28, -270, 28, 130, "#3d4a5c", 10) + R(-136, -284, 56, 28, lea2, 12) + R(80, -284, 56, 28, lea2, 12) +
+        R(-96, -560, 192, 420, lea, 56) + R(-70, -520, 140, 150, lea2, 30, `stroke="${INK}" stroke-width="4"`) + `<path d="M-90,-300 L90,-300" stroke="${INK}" stroke-width="4"/>` +
+        `<path d="M-110,-176 L110,-176 L130,-112 L-130,-112Z" fill="${lea2}" ${st}/>` + R(-130, -112, 260, 34, lea, 14) +
+        (j ? `<path d="M-104,-536 Q0,-600 104,-536 L128,-250 L84,-244 L74,-400 L-74,-400 L-84,-244 L-128,-250Z" fill="#1a1a22" ${st}/><path d="M-60,-560 L0,-470 L60,-560" fill="none" stroke="#5a5a6c" stroke-width="6"/><path d="M-90,-500 Q-100,-380 -110,-300" fill="none" stroke="#5a5a6c" stroke-width="5" opacity=".8"/><circle cx="0" cy="-440" r="7" fill="#8d9199"/>` : "") +
+        (state === "agenda" ? `<g transform="rotate(-4 0 -250)">${R(-84, -352, 168, 188, "#f6f1e4", 4)}${T(0, -300, "CALL", 40)}${T(0, -252, "5:00 PM", 38)}${T(0, -206, "ET", 38)}</g>` : "") + `</g>`); },
+    deskPhone(x, y, k, note, state) { k = k || 1; const ws = String(note == null ? "TUE 5:00 PM" : note).split(" "), l1 = ws.length > 1 ? ws[0] : "", l2 = ws.length > 1 ? ws.slice(1).join(" ") : ws[0]; let cord = "";
+      if (state === "tangled") cord = `<path d="M-60,-40 C-20,40 150,30 190,-20 C240,-90 330,-120 340,-40 C346,20 240,40 238,-30 C236,-90 330,-60 300,-20" fill="none" stroke="${INK}" stroke-width="9" stroke-linecap="round"/>` + `<path d="M-60,-40 C-20,40 150,30 190,-20 C240,-90 330,-120 340,-40 C346,20 240,40 238,-30 C236,-90 330,-60 300,-20" fill="none" stroke="#6b7384" stroke-width="3.5"/>`;
+      return `<g transform="translate(${x},${y}) scale(${k})">` + (state === "tangled" ? K.calc(250, 0, 0.8, "4.0") : "") + cut(`<path d="M-110,0 L110,0 L84,-62 L-84,-62Z" fill="#3b3f4a" ${st}/>` + [-1, 0, 1].map((a) => [0, 1].map((b) => `<circle cx="${a * 24}" cy="${-18 - b * 22}" r="6" fill="#c9ced6"/>`).join("")).join("") +
+        R(-132, -118, 70, 56, "#2c3040", 16) + R(62, -118, 70, 56, "#2c3040", 16) + R(-110, -102, 220, 28, "#2c3040", 14) +
+        `<g transform="rotate(-6 10 -150)">${R(-44, -186, 112, 104, "#ffe14d", 2, `stroke="${INK}" stroke-width="4"`)}${l1 ? T(12, -140, l1, 26) : ""}${T(12, l1 ? -108 : -128, l2, Math.min(l1 ? 25 : 30, 96 / (Math.max(2, l2.length) * 0.6)))}<path class="curl" d="M68,-84 L68,-116 L36,-84Z" fill="#e8c92e" stroke="${INK}" stroke-width="3"/></g>`) + cord + `</g>`; },
+    calc(x, y, k, t) { k = k || 1; let b = ""; for (let i = 0; i < 16; i++) b += R(-70 + (i % 4) * 36, -150 + Math.floor(i / 4) * 44, 30, 36, i === 15 ? "#e0262b" : i % 4 === 3 ? "#f0b429" : "#f6f1e4", 6, `stroke="${INK}" stroke-width="3"`);
+      return cut(`<g transform="translate(${x},${y}) scale(${k})">${R(-90, -250, 180, 250, "#b8bcc6", 16)}${R(-74, -234, 148, 60, "#a8dcae", 6, `stroke="${INK}" stroke-width="4"`)}${T(66, -188, t == null ? "0." : t, 38, "#1b3a28", "end", 'font-family="IBM Plex Mono" font-weight="700"')}${b}</g>`); },
+    namePlate(x, y, k, t, tape) { k = k || 1; return cut(`<g transform="translate(${x},${y}) scale(${k})">${R(-140, -14, 280, 14, "#5b4636", 4)}${R(-130, -76, 260, 64, "#c9a24a", 6)}${T(0, -28, t || "CFO", 44, "#2a2a33")}</g>`) +
+      (tape ? cut(`<g transform="translate(${x + 150 * k},${y - 40 * k}) rotate(-5) scale(${k})">${R(0, -34, 250, 50, "#e7d7a4", 0, `stroke="${INK}" stroke-width="4"`)}${T(125, 2, tape === true ? "INTERIM CEO" : tape, 30, "#5b4a2a")}</g>`) : ""); },
+    // the clock on the wall: the time as hands, lit or in shadow
+    clockFace(x, y, r, time, lit, n, P) { const m = /(\d+):(\d+)/.exec(time || "4:20") || [0, 4, 20], ha = ((+m[1] % 12) + m[2] / 60) * 30, ma = m[2] * 6; let s = `<circle cx="${x}" cy="${y}" r="${r}" fill="${P.trim}" ${st}/><circle cx="${x}" cy="${y}" r="${r * 0.82}" fill="${lit ? "#fff6d8" : "#fbf8ef"}"/>` + [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((i) => `<path d="M${x},${y - r * 0.76} L${x},${y - r * (i % 3 ? 0.68 : 0.6)}" stroke="${INK}" stroke-width="${i % 3 ? 3 : 6}" transform="rotate(${i * 30} ${x} ${y})"/>`).join("") +
+        `<path d="M${x},${y} L${x},${y - r * 0.44}" stroke="${INK}" stroke-width="8" stroke-linecap="round" transform="rotate(${ha} ${x} ${y})"/><path d="M${x},${y} L${x},${y - r * 0.68}" stroke="${INK}" stroke-width="6" stroke-linecap="round" transform="rotate(${ma} ${x} ${y})"/>`;
+      s = cut(s) + (lit ? `<g class="secs" data-cx="${x}" data-cy="${y}"><path d="M${x},${y + r * 0.12} L${x},${y - r * 0.7}" stroke="#e0262b" stroke-width="3"/></g>` + halo(x, y, r * 2.2, "#fff0b8", 0.3) : "");
+      return s + `<circle cx="${x}" cy="${y}" r="5" fill="${INK}"/>` + (!lit && n ? `<circle cx="${x}" cy="${y}" r="${r + 2}" fill="rgba(24,18,44,.72)"/>` : ""); },
+    jar(x, y, k, face) { k = k || 1; let c = ""; for (let i = 0; i < 4; i++) c += `<ellipse cx="${-22 + (i % 2) * 40}" cy="${-14 - i * 14}" rx="26" ry="9" fill="#f0b429" ${st} stroke-width="3"/>`;
+      return cut(`<g transform="translate(${x},${y}) scale(${k})"><path d="M-44,-110 L-50,0 L50,0 L44,-110Z" fill="rgba(200,232,244,.45)" ${st}/>${c}${R(-48, -126, 96, 20, "#8a5a3c", 6)}${R(-36, -60, 72, 30, "#f6f1e4", 3, `stroke="${INK}" stroke-width="3"`)}${T(0, -38, "INDEX FUND", 12)}` +
+        (face ? `<g transform="translate(10,-94)"><ellipse rx="26" ry="9" fill="#f0b429" ${st} stroke-width="3"/><circle cx="-8" cy="-2" r="3" fill="${INK}"/><circle cx="8" cy="-2" r="3" fill="${INK}"/></g>` : "") + `</g>`); },
+    cityWin(x, y, w, h, n, seed, dawn) { const r = rng(seed || 5), sky = n ? "#1b2347" : dawn ? "#f2c6a6" : "#bfe0ea";
+      return cut(R(x, y, w, h, sky, 6) + `<svg x="${x}" y="${y}" width="${w}" height="${h}" viewBox="${x} ${y} ${w} ${h}" overflow="hidden">` + (!n && dawn ? R(x, y + h * 0.42, w, h * 0.2, "#f7dcc0", 0, "") + R(x, y + h * 0.6, w, h * 0.14, "#f2a77a", 0, "") : "") + (n ? `<circle cx="${x + w * 0.78}" cy="${y + h * 0.2}" r="${w * 0.04}" fill="#f6f1e4"/>` : "") +
+        skyline(x + 6, x + w, y + h, r, n ? ["#232c54", "#2c3766", "#1c2340"] : ["#8aa6c8", "#9db7d1", "#7f9fc0"], n) + `<g class="pass"><circle cx="${x + w + 30}" cy="${y + h - 16}" r="5" fill="#fff1b0"/><circle cx="${x + w + 52}" cy="${y + h - 16}" r="5" fill="#fff1b0"/></g></svg>` +
+        `<path d="M${x + w / 2},${y} L${x + w / 2},${y + h} M${x},${y + h * 0.5} L${x + w},${y + h * 0.5}" ${st}/>` + R(x - 12, y + h, w + 24, 20, "#d8cfe8", 6)); },
+  });
+
+  Object.assign(K, {
+    door(x, y, w, h, col, P, knobLeft) { return cut(R(x - 10, y - 10, w + 20, h + 10, P.trim, 4) + R(x, y, w, h, col, 0) + R(x + w * 0.14, y + h * 0.1, w * 0.72, h * 0.34, "rgba(27,29,54,.16)", 3, "") + R(x + w * 0.14, y + h * 0.54, w * 0.72, h * 0.36, "rgba(27,29,54,.16)", 3, "") + `<circle cx="${knobLeft ? x + 22 : x + w - 22}" cy="${y + h * 0.52}" r="9" fill="#f0b429" ${st} stroke-width="4"/>`); },
+    // a screen: frame, dark glass, lines of colour (class tick: it flickers)
+    screen(x, y, w, h, col, tick, lines) { let s = ""; const n = lines || 4; for (let i = 0; i < n; i++) s += R(x + 18, y + 18 + i * ((h - 36) / n), (w - 36) * (0.4 + ((i * 37) % 55) / 100), 8, col, 3, "");
+      return cut(R(x, y, w, h, INK, 8) + R(x + 8, y + 8, w - 16, h - 16, "#0f1b2a", 4, "") + `<g${tick ? ' class="tick"' : ""}>${s}</g>`); },
+    neon(x, y, t, col, size) { size = size || 70; return `<g class="pulse">` + [6, 3].map((k) => T(x, y, t, size, "none", "middle", `stroke="${col}" stroke-width="${size * 0.12 + k}" stroke-linejoin="round" opacity="${k === 6 ? 0.25 : 0.5}"`)).join("") + T(x, y, t, size, "#fff6e8", "middle", `stroke="${col}" stroke-width="${size * 0.07}" paint-order="stroke" font-weight="800"`) + `</g>`; },
+    stool(x, y, k, col) { k = k || 1; return cut(`<g transform="translate(${x},${y}) scale(${k})"><path d="M-30,-110 L-40,0 M30,-110 L40,0 M0,-110 L0,-4" stroke="${INK}" stroke-width="9" stroke-linecap="round"/><ellipse cx="0" cy="-114" rx="52" ry="16" fill="${col || "#b8473d"}" ${st}/><path d="M-36,-40 L36,-40" stroke="${INK}" stroke-width="6"/></g>`); },
+    pchair(x, y, k, col) { k = k || 1; col = col || "#3d6fb6"; return cut(`<g transform="translate(${x},${y}) scale(${k})"><path d="M-40,-90 L-46,0 M40,-90 L46,0" stroke="${INK}" stroke-width="9" stroke-linecap="round"/>${R(-56, -120, 112, 34, col, 12)}${R(-50, -230, 100, 100, col, 16)}</g>`); },
+    cab(x, y, w, h, col, P) { let s = R(x, y, w, h, col, 4); const n = Math.max(2, Math.round(h / 120)); for (let i = 0; i < n; i++) { const dy = y + 8 + i * ((h - 16) / n); s += R(x + 10, dy, w - 20, (h - 16) / n - 8, mixHex(col, "#ffffff", 0.1), 3, `stroke="${INK}" stroke-width="4"`) + R(x + w / 2 - 18, dy + 14, 36, 8, "#c9ced6", 3, "") + R(x + w / 2 - 22, dy + ((h - 16) / n) * 0.48, 44, 22, "#f6f1e4", 2, `stroke="${INK}" stroke-width="3"`); } return cut(s); },
+    tube(x, y, w, flick) { return `<g${flick ? ' class="tick"' : ""}>${R(x - w / 2, y, w, 16, "#fbf8ef", 8)}</g><path d="M${x - w / 2 + 20},${y - 28} L${x - w / 2 + 20},${y} M${x + w / 2 - 20},${y - 28} L${x + w / 2 - 20},${y}" stroke="${INK}" stroke-width="4"/>`; },
+    buildings(x0, x1, base, r, cols, n, lo, hi) { let s = "", x = x0; while (x < x1) { const w = 120 + r() * 160, h = lo + r() * (hi - lo), c = cols[Math.floor(r() * cols.length)]; s += R(x, base - h, w, h + 4, c, 0, `stroke="${INK}" stroke-width="5"`);
+        for (let wy = base - h + 30; wy < base - 60; wy += 64) for (let wx = x + 18; wx < x + w - 40; wx += 48) s += R(wx, wy, 28, 36, n && r() > 0.5 ? "#ffd27a" : n ? "#2a3150" : "rgba(255,255,255,.5)", 2, `stroke="${INK}" stroke-width="3"`);
+        x += w + 8; } return cut(s); },
+    sheetsBox(x, y, w, h, P) { return cut(R(x, y, w, h, "#d8c8a8", 4) + R(x, y, w, 20, "#c9b88a", 4) + R(x + 18, y + h / 2 - 14, w - 36, 28, "#f6f1e4", 2, `stroke="${INK}" stroke-width="3"`)); },
+    beamCone(x, y, w0, w1, h, col, a) { return `<g class="pulse">${beam(x, y, w0, w1, h, col, a)}</g>`; },
+    dust(x, y, w, h, seed) { const r = rng(seed || 4); let s = ""; for (let i = 0; i < 18; i++) s += `<circle class="steam" cx="${(x + r() * w).toFixed(0)}" cy="${(y + r() * h).toFixed(0)}" r="${(2 + r() * 3).toFixed(1)}" fill="#fff6d8" opacity=".6"/>`; return s; },
+  });
+
+  // @cfo-helpers
+
   const SETS = {
     plain(o) { return { back: R(0, 0, 1920, 1080, o.color || "#efe6d0", 0, "") }; },
 
@@ -722,6 +814,177 @@
       if (n) b += pool(960, 540, 820, 470, "#ffe9b0", 0.3); else b += R(0, 0, 1920, 1080, "rgba(255,255,255,.04)", 0, "");
       return { back: b };
     },
+
+    // ---- The Nvidia CFO episode (14 Nov 2026). The anchor place: the chief executive's office. { view: wide | desk | door, night (default true), clock: "4:20", clock_lit,
+    // plate: before|taped|unscrewed|two|rattle|frame|false, chair: jacket|bare|agenda|false, note, bare_desk (leave the phone, calculator and plate to props) }
+    corner_office(o) {
+      const n = o.night !== false, v = o.view || "wide", P = pal(o, "violet", n), glow = "#ffd27a", lit = !!o.clock_lit, chair = o.chair === undefined ? "jacket" : o.chair, pl = o.plate === undefined ? "taped" : o.plate;
+      const door = (x, y, w, h, k, py) => cut(R(x - 14, y - 14, w + 28, h + 14, P.trim, 6)) + R(x, y, w, h, n ? "#16423f" : "#6fb0a8", 0, `stroke="${INK}" stroke-width="6"`) + R(x, y + h * 0.62, w, h * 0.38, n ? "#103430" : "#4f8f88", 0, "") + `<path d="M${x},${y + h * 0.62} L${x + w},${y + h * 0.62}" stroke="rgba(27,29,54,.4)" stroke-width="5"/>` +
+        (n ? halo(x + w * 0.7, y + 60 * k, 150 * k, "#ffe9b0", 0.28) + `<circle cx="${x + w * 0.7}" cy="${y + 56 * k}" r="${14 * k}" fill="#fff1b0"/>` : "") + K.glass(x, y, w, h, 0) + (n ? R(x, y + h - 8, w, 8, "#ffe14d", 0, "") : "") +
+        (pl ? `<g transform="translate(${x + w / 2},${py}) scale(${k})">${K.doorPlate(pl)}</g>` : "");
+      const deskItems = (dx, dy, kk) => o.bare_desk ? "" : K.namePlate(dx + 330 * kk, dy, kk, "CFO", true) + K.calc(dx + 600 * kk, dy, kk * 0.95, "4.0") + K.deskPhone(dx + 880 * kk, dy, kk * 0.95, o.note || "TUE 5:00 PM");
+      let b, f = "";
+      if (v === "door") {
+        b = K.room(P, 800, 150) + D.frame(120, 220, 250, 190, "chart", P) + D.frame(1560, 260, 200, 150, "landscape", P) + D.switch(1470, 560) + D.vent(1500, 40) + D.cable(0, 1920, 80, P) + D.plant(110, 830, 1, P) +
+          door(560, 130, 800, 880, 1.7, 520) + K.clockFace(1640, 160, 56, o.clock, lit, n, P) + `<circle cx="1000" cy="990" r="0" fill="none"/>`;
+        f = D.fgPlant(1900, 1090, 1.4);
+        if (n) b += pool(960, 1040, 500, 40, "#ffe14d", 0.14);
+        return { back: b, front: f };
+      }
+      if (v === "desk") {
+        b = K.room(P, 760, 120) + K.cityWin(110, 140, 520, 330, n, 21, !n) + D.frame(720, 170, 200, 150, "chart", P) + K.clockFace(1500, 230, 66, o.clock, lit, n, P) + D.shelf(1100, 420, 400, P, 14) + K.jar(1420, 420, 1.1, true) + D.cable(0, 1920, 80, P) + D.switch(1700, 460) + D.vent(960, 36) + D.plant(1840, 760, 1, P) + D.mug(1020, 420, P);
+        if (n) b += pool(960, 760, 900, 90, glow, 0.2);
+        f = cut(R(-40, 720, 2000, 28, mixHex(P.panel, "#ffffff", 0.2), 6) + R(-40, 748, 2000, 340, P.panel, 0)) + K.lamp(300, 722, 1.7, n, glow) + deskItems(560, 722, 1.1) + cut(`<g transform="rotate(-5 840 700)">${R(700, 660, 200, 62, "#f6f1e4", 2)}${R(724, 676, 140, 8, "#9aa0b4", 2, "")}${R(724, 698, 100, 8, "#9aa0b4", 2, "")}</g>`) + D.fgPlant(-30, 1090, 1.5);
+        return { back: b, front: f };
+      }
+      // wide
+      b = K.room(P, 800, 150) + K.cityWin(110, 130, 450, 300, n, 21, !n) + D.frame(1170, 150, 190, 130, "chart", P) + K.clockFace(1530, 205, 56, o.clock, lit, n, P) + D.shelf(1600, 400, 280, P, 14) + K.jar(1810, 400, 0.9, true) + D.cable(0, 1920, 70, P) + D.vent(640, 36) + D.switch(1140, 540) + D.plant(1860, 800, 0.9, P) +
+        door(850, 300, 240, 500, 0.62, 470) + R(300, 868, 1320, 150, mixHex(P.panel, "#ffffff", 0.14), 20, `stroke="${INK}" stroke-width="5"`) + K.desk(60, 640, 520, 160, "#6f4a3a", P) + K.lamp(130, 640, 0.9, false) + (o.bare_desk ? "" : K.calc(420, 640, 0.6, "0.")) + D.mug(520, 640, P) +
+        (chair ? K.chair(700, 900, 0.95, chair) : "") + cut(R(1440, 470, 150, 200, "#4a4066", 40) + R(1478, 680, 14, 150, INK, 0, "")) + cut(`<path d="M1400,840 L1580,840 M1490,780 L1490,840" stroke="${INK}" stroke-width="10"/>`);
+      f = cut(R(1220, 662, 560, 26, mixHex("#6f4a3a", "#ffffff", 0.16), 6) + R(1234, 688, 532, 130, "#6f4a3a", 0) + R(1260, 708, 150, 100, "#573a2e", 4, `stroke="${INK}" stroke-width="4"`) + R(1590, 708, 150, 100, "#573a2e", 4, `stroke="${INK}" stroke-width="4"`)) + K.lamp(1260, 664, 0.8, n, glow) +
+        (o.bare_desk ? "" : K.namePlate(1420, 664, 0.45, "CFO", true) + K.calc(1620, 664, 0.5, "4.0") + K.deskPhone(1700, 664, 0.4, o.note || "TUE 5:00 PM")) + D.fgPlant(-30, 1090, 1.5);
+      if (n) b += pool(1500, 830, 520, 50, glow, 0.2);
+      return { back: b, front: f };
+    },
+
+
+    // A bus shelter on a grey morning (night: rain under a sodium lamp). { night, rain (default = night) }. The pavement between the shelter and the kerb is free for queueing extras.
+    bus_stop(o) {
+      const n = !!o.night, P = pal(o, "cream", n), rain = o.rain === undefined ? n : o.rain, r = rng(61), sod = "#ffb347";
+      let b = R(0, 0, 1920, 1080, n ? "#1c2236" : "#b9c3cc", 0, "") + K.buildings(-20, 1940, 600, r, [P.panel, P.wall, mixHex(P.wall, "#8d9199", 0.4)], n, 260, 440);
+      if (!n) b += cloud(300, 90, 1) + cloud(1300, 140, 1.3);
+      b += R(0, 600, 1920, 120, n ? "#1a1e30" : "#8d9199", 0, "") + `<path d="M0,600 L1920,600" ${st}/>` + [0, 1, 2, 3, 4, 5, 6].map((i) => R(60 + i * 290, 656, 150, 12, n ? "#8d8a7e" : "#f6f1e4", 0, "")).join("");
+      b += `<g class="pass">${cut(R(2300, 480, 460, 150, "#e0262b", 20) + [0, 1, 2, 3, 4].map((i) => R(2330 + i * 84, 504, 64, 56, n ? "#ffd27a" : "#cfe6ee", 6)).join("") + R(2300, 590, 460, 12, INK, 0, "") + `<circle cx="2380" cy="636" r="30" fill="${INK}"/><circle cx="2680" cy="636" r="30" fill="${INK}"/>`)}</g>`;
+      b += `<g class="pass">${cut(R(1900, 560, 190, 70, "#3d6fb6", 22) + R(1930, 520, 110, 50, "#3d6fb6", 14) + R(1944, 530, 80, 34, n ? "#ffd27a" : "#cfe6ee", 6) + `<circle cx="1960" cy="636" r="22" fill="${INK}"/><circle cx="2050" cy="636" r="22" fill="${INK}"/>`)}</g>`;
+      b += R(0, 720, 1920, 360, n ? mixHex(P.floor, "#141a3a", 0.3) : "#c9c2b0", 0, "") + R(0, 720, 1920, 40, n ? "#2a2e44" : "#a7acb8", 0, "") + `<path d="M0,720 L1920,720 M0,760 L1920,760" ${st}/>`;
+      for (let x = 40; x < 1920; x += 160) b += `<path d="M${x},760 L${x - 30},1080" stroke="rgba(27,29,54,.14)" stroke-width="4"/>`;
+      // the shelter
+      b += cut(R(1040, 280, 640, 22, "#56606f", 6) + R(1050, 302, 14, 470, "#56606f", 3) + R(1656, 302, 14, 470, "#56606f", 3)) + K.glass(1070, 310, 570, 400, rain ? 14 : 0) + K.board(1270, 700, 340, 24, "", "#8d9199", INK, 10);
+      b += cut(R(1480, 350, 150, 230, "#f6f1e4", 3) + R(1492, 362, 126, 120, P.accent, 0, "") + `<circle cx="1555" cy="422" r="34" fill="#f6f1e4"/>` + R(1500, 500, 110, 10, "#9aa0b4", 3, "") + R(1500, 524, 76, 10, "#9aa0b4", 3, "")) + cut(R(1100, 330, 270, 190, "#f6f1e4", 3) + T(1235, 372, "42   BUS", 30) + [0, 1, 2, 3, 4].map((i) => R(1120, 392 + i * 24, 230, 12, i % 2 ? "#cfd4dc" : "#9aa0b4", 2, "")).join(""));
+      b += cut(R(1090, 650, 420, 20, "#8a5a3c", 6) + R(1110, 670, 14, 90, INK, 0, "") + R(1480, 670, 14, 90, INK, 0, ""));
+      b += K.board(300, 360, 150, 54, "BUS", "#3d6fb6", "#f6f1e4", 36) + cut(R(368, 414, 14, 330, "#56606f", 3)) + K.board(280, 440, 190, 150, "", "#f6f1e4", INK, 10) + T(375, 480, "42", 44) + [0, 1, 2, 3].map((i) => R(300, 504 + i * 22, 150, 10, "#9aa0b4", 2, "")).join("");
+      b += K.post(160, 770, 520, n, sod) + cut(R(1740, 640, 100, 140, "#4f8f5b", 12) + R(1730, 628, 120, 24, "#3d6fb6", 8));
+      if (n) { b += [[420, 920, 90], [880, 960, 120], [1500, 930, 100]].map(([x, y, w]) => `<ellipse cx="${x}" cy="${y}" rx="${w}" ry="14" fill="rgba(255,179,71,.18)" ${st} stroke-width="3" opacity=".7"/>`).join(""); }
+      const f = (rain ? K.rain(9) : "") + `<g class="fg">${cut(R(-10, 640, 34, 440, "#3d4a5c", 6) + R(1880, 700, 50, 380, "#3d4a5c", 6))}</g>`;
+      return { back: b, front: f };
+    },
+
+    // A wire-service desk at night: one glowing monitor, a wall of world clocks, pinned front pages, stacked paper. { night (default true), screen: "cold"|"red" }
+    newsroom(o) {
+      const n = o.night !== false, P = pal(o, "slate", n), cold = "#cfe8ff"; let b = K.room(P, 790, 140);
+      b += K.cityWin(110, 120, 430, 280, n, 33, false) + R(640, 120, 640, 260, P.panel, 8, `stroke="${INK}" stroke-width="5"`) + ["NY", "LDN", "TKY", "BJG"].map((c, i) => D.clock(710 + i * 150, 220, 56, P) + T(710 + i * 150, 330, c, 32, P.trim)).join("");
+      [0, 1, 2, 3, 4].forEach((i) => { b += `<g transform="rotate(${(i % 3) * 3 - 3} ${1380 + i * 100} 240)">${cut(R(1330 + i * 100 - (i > 2 ? 40 : 0), 150 + (i % 2) * 60, 92, 120, "#ece6d3", 2) + R(1340 + i * 100 - (i > 2 ? 40 : 0), 160 + (i % 2) * 60, 72, 22, INK, 0, "") + R(1340 + i * 100 - (i > 2 ? 40 : 0), 194 + (i % 2) * 60, 30, 30, "#9aa0b4", 0, "") + [0, 1, 2].map((k) => R(1376 + i * 100 - (i > 2 ? 40 : 0), 194 + k * 12 + (i % 2) * 60, 36, 6, "#9aa0b4", 0, "")).join(""))}</g>`; });
+      b += K.cab(60, 420, 130, 370, "#6b7384", P) + D.shelf(1400, 560, 400, P, 8) + D.vent(1520, 36) + D.cable(0, 1920, 100, P) + D.switch(600, 600) + D.plant(1850, 790, 0.9, P) + K.tube(960, 40, 260, true);
+      b += `<g class="pass">${cut(`<g transform="translate(2100,790)"><circle cx="0" cy="-262" r="30" fill="${mixHex(P.panel, "#000000", 0.2)}" ${st}/><path d="M-44,-226 L44,-226 L38,-90 L-38,-90Z" fill="#3d4a5c" ${st}/>${R(-34, -90, 28, 90, INK, 8)}${R(6, -90, 28, 90, INK, 8)}${R(-60, -190, 40, 30, "#ece6d3", 3)}</g>`)}</g>`;
+      const f = cut(R(340, 700, 1240, 36, "#6f4a3a", 8) + R(360, 736, 1200, 360, "#573a2e", 0) + R(380, 756, 1160, 90, "rgba(27,29,54,.2)", 6, "")) + K.screen(760, 480, 380, 210, o.screen === "red" ? "#ff8a80" : "#8fe0b0", true, 5) + R(930, 690, 40, 20, INK, 0, "") + `<g class="pulse">${R(740, 460, 420, 250, o.screen === "red" ? "rgba(255,90,80,.1)" : "rgba(207,232,255,.12)", 12, "")}</g>` +
+        cut(R(420, 650, 250, 50, "#ece6d3", 3) + R(440, 620, 250, 34, "#f6f1e4", 3) + R(410, 590, 270, 34, "#ece6d3", 3)) + cut(R(1280, 644, 160, 60, "#9aa0b4", 6) + R(1300, 624, 120, 24, "#c9ced6", 4)) + D.mug(1250, 702, P) + D.fgPlant(1900, 1090, 1.3);
+      return { back: b, front: f };
+    },
+
+    // A diner on a weekday morning (night: the neon sign in the window). { night }. Booths on the left and right; free floor in the aisle for extras in the other booths.
+    diner(o) {
+      const n = !!o.night, P = pal(o, "red", n); let b = K.room(P, 780, 0);
+      b = R(0, 0, 1920, 780, P.wall, 0, "") + R(0, 520, 1920, 260, P.panel, 0, "") + `<path d="M0,520 L1920,520" ${st}/>`;
+      for (let x = 0; x < 1920; x += 120) b += R(x, 520, 120, 260, "none", 0, `stroke="rgba(27,29,54,.35)" stroke-width="3"`);
+      b += R(0, 780, 1920, 300, "#e8dcc0", 0, "");
+      for (let y = 780; y < 1080; y += 60) for (let x = (y / 60) % 2 ? 0 : 60; x < 1920; x += 120) b += R(x, y, 60, 60, "rgba(27,29,54,.2)", 0, "");
+      b += floorLine(780) + K.cityWin(640, 120, 640, 330, n, 41, false).replace(/#bfe0ea/g, n ? "#1b2347" : "#cfe6ee") + K.neon(960, 540, "OPEN", n ? "#ff4f6a" : "#d8c8b0", 56).replace(/<g class="pulse">/, n ? '<g class="pulse">' : '<g>') + K.board(140, 120, 400, 220, "", "#2b2b33", INK, 10);
+      ["COFFEE  2", "EGGS  5", "PIE  4", "SOUP  3"].forEach((t, i) => { b += T(170, 190 + i * 46, t, 34, "#f6f1e4", "start"); });
+      b += K.neon(1500, 180, "DINER", "#ffd27a", 100) + cut(R(1400, 270, 440, 200, P.trim, 6) + R(1420, 290, 400, 160, n ? "#2a2036" : "#cfe6ee", 4)) + D.clock(1100, 200, 50, P) + D.cable(0, 1920, 60, P) + D.vent(300, 30);
+      // pie case and counter at the back
+      b += cut(R(1380, 570, 480, 230, "#f6f1e4", 8) + R(1396, 586, 448, 150, "rgba(200,232,244,.5)", 6) + [0, 1, 2].map((i) => `<path d="M${1420 + i * 140},726 L${1420 + i * 140},690 Q${1480 + i * 140},650 ${1540 + i * 140},690 L${1540 + i * 140},726Z" fill="${["#c9a24a", "#b8473d", "#e8b84a"][i]}" ${st} stroke-width="4"/>`).join("")) + K.stool(1160, 820, 0.8) + K.stool(1280, 820, 0.8);
+      b += cut(R(900, 690, 380, 26, "#8d9199", 6) + R(900, 716, 380, 80, "#b8473d", 0)) + `<g>${cut(R(1060, 640, 60, 50, "#e8dcc0", 6) + R(1050, 628, 80, 16, "#c9ced6", 4))}</g>` + cut(R(1190, 640, 36, 50, "#3d4a5c", 8)) + D.steam(1208, 636);
+      const booth = (x, flip) => cut(R(x, 600, 190, 200, P.accent, 18) + R(x + 20, 640, 150, 160, mixHex(P.accent, "#141a3a", 0.2), 8, "") + R(x - 10, 790, 210, 30, "#c9ced6", 6) );
+      b += booth(60, 0) + booth(1700, 1);
+      const f = cut(R(-20, 880, 520, 40, "#8a5a3c", 8) + R(240, 920, 24, 160, "#8d9199", 4)) + cut(R(1420, 880, 560, 40, "#8a5a3c", 8) + R(1660, 920, 24, 160, "#8d9199", 4)) + D.mug(300, 880, P) + cut(R(1500, 840, 90, 40, "#f6f1e4", 6) + R(1520, 820, 50, 20, "#ffe14d", 6)) + D.steam(340, 816);
+      return { back: b, front: f };
+    },
+
+    // A cinema seen from the stalls: the screen, a projector beam from the back with dust in it, rows of seats, aisle lights. { night (default true), view: front | back, house (lights up), jacket (a jacket draped over a seat) }
+    cinema(o) {
+      const n = o.night !== false && !o.house, P = pal(o, "red", n), back = o.view === "back"; let b = R(0, 0, 1920, 1080, n ? mixHex(P.wall, "#000000", 0.2) : P.wall, 0, "") + R(0, 0, 1920, 90, P.panel, 0, "");
+      for (let x = 0; x < 1920; x += 120) b += R(x, 90, 120, 560, "none", 0, `stroke="rgba(27,29,54,.3)" stroke-width="3"`);
+      if (!back) { b += cut(R(260, 150, 1400, 520, "#fbf3dc", 4)) + R(274, 164, 1372, 492, n ? "#8fa3c8" : "#ece6d3", 0, "") + `<g class="pulse">${R(274, 164, 1372, 492, n ? "rgba(255,240,200,.35)" : "rgba(0,0,0,0)", 0, "")}</g>` + (n ? `<path d="M560,560 L820,300 L1010,470 L1180,360 L1400,560Z" fill="#5d7ab0"/><circle cx="1280" cy="290" r="56" fill="#ffe9a0"/>` : "") + cut(R(120, 150, 100, 520, "#8a2f2a", 6) + R(1700, 150, 100, 520, "#8a2f2a", 6)); }
+      else { b += cut(R(660, 120, 600, 180, "#3d4a5c", 10) + R(700, 160, 180, 100, "#cfe8ff", 8) + R(900, 160, 280, 100, INK, 8)) + (n ? beam(960, 220, 120, 1400, 640, "#fff6d8", 0.13) : "") + K.dust(520, 230, 900, 520, 5); }
+      if (n && !back) b += beam(960, 100, 60, 1300, 600, "#fff6d8", 0.08) + K.dust(300, 150, 1300, 520, 6);
+      b += R(0, 650, 1920, 430, n ? mixHex(P.floor, "#000000", 0.2) : P.floor, 0, "") + floorLine(650);
+      for (let row = 0; row < 3; row++) { const y = 700 + row * 60, k = 0.6 + row * 0.12; for (let x = 70; x < 1920; x += 150 * k + 14) if (Math.abs(x - 960) > 190 || row === 0) b += cut(`<g transform="translate(${x},${y}) scale(${k})">${R(-56, -150, 112, 130, P.accent, 22)}${R(-60, -50, 120, 50, mixHex(P.accent, "#141a3a", 0.25), 12)}</g>`); }
+      b += [0, 1, 2, 3, 4, 5].map((i) => R(915, 720 + i * 60, 90, 8, n ? "#ffd27a" : "#c9ced6", 0, "")).join("") + (n ? [0, 1, 2, 3].map((i) => `<circle cx="${870 - i * 6}" cy="${760 + i * 60}" r="5" fill="#ffd27a"/><circle cx="${1050 + i * 6}" cy="${760 + i * 60}" r="5" fill="#ffd27a"/>`).join("") : "");
+      let f = cut(R(-20, 930, 2000, 200, mixHex(P.accent, "#141a3a", 0.3), 30) + R(-20, 900, 2000, 40, P.accent, 20));
+      if (o.jacket) f += cut(`<path d="M1280,900 Q1250,760 1300,720 L1420,720 Q1480,760 1440,900 L1400,900 L1380,780 L1330,780 L1320,900Z" fill="#1a1a22" ${st}/><path d="M1320,722 L1360,790 L1400,722" fill="none" stroke="#5a5a6c" stroke-width="5"/>`);
+      return { back: b, front: f };
+    },
+
+    // A county records office: filing cabinets, a counter with a bell, a window, boxes. { night (lamp), drawer: seconds the drawer FILINGS slides open, date }
+    records_office(o) {
+      const n = !!o.night, P = pal(o, "ochre", n); let b = K.room(P, 800, 130);
+      for (let i = 0; i < 4; i++) b += K.cab(70 + i * 150, 220 + (i % 2) * 40, 130, 560 - (i % 2) * 40, i === 1 ? "#6b7384" : "#7a8190", P);
+      b += `<g class="drawer">${cut(R(220, 440, 130, 100, "#6b7384", 4) + R(228, 448, 114, 84, "#9aa0b4", 3, `stroke="${INK}" stroke-width="3"`) + R(248, 474, 74, 22, "#f6f1e4", 2, `stroke="${INK}" stroke-width="3"`) + T(285, 491, "FILINGS", 14))}${cut(`<g transform="rotate(-4 330 440)">${R(250, 330, 150, 110, "#f6f1e4", 2)}${T(325, 372, "WED", 28)}${T(325, 408, "11 NOV", 28)}</g>`)}</g>`;
+      b += K.cityWin(760, 150, 360, 300, n, 55, false).replace(/#bfe0ea/g, "#d8e8ee") + D.clock(1300, 200, 52, P) + D.frame(1420, 150, 170, 120, "landscape", P) + D.shelf(1260, 460, 600, P, 22) + D.shelf(1260, 600, 600, P, 23) + D.cable(0, 1920, 70, P) + D.vent(900, 36) + D.switch(700, 560);
+      for (let i = 0; i < 5; i++) b += K.sheetsBox(1130 + i * 150, 690 + (i % 2) * 6, 130, 100, P);
+      b += `<g class="pass">${cut(`<g transform="translate(2200,800)"><circle cx="0" cy="-262" r="30" fill="#c9a36b" ${st}/><path d="M-44,-226 L44,-226 L38,-90 L-38,-90Z" fill="#4a4066" ${st}/>${R(-34, -90, 28, 90, INK, 8)}${R(6, -90, 28, 90, INK, 8)}</g>`)}</g>`;
+      if (n) b += halo(560, 640, 330, "#ffd27a", 0.26);
+      const f = cut(R(-20, 740, 1160, 30, "#8a5a3c", 8) + R(0, 770, 1100, 330, "#6f452c", 0) + R(40, 800, 440, 120, "rgba(27,29,54,.2)", 6, "") + R(560, 800, 440, 120, "rgba(27,29,54,.2)", 6, "")) + cut(`<ellipse cx="900" cy="736" rx="46" ry="14" fill="#c9ced6" ${st}/><path d="M876,732 Q900,690 924,732Z" fill="#f0b429" ${st}/>`) + K.lamp(300, 742, 0.8, n, "#ffd27a") + cut(R(560, 706, 150, 34, "#ece6d3", 3) + R(570, 680, 150, 30, "#f6f1e4", 3)) + D.fgPlant(1900, 1090, 1.4);
+      return { back: b, front: f };
+    },
+
+
+    // A television studio: anchor desk with a name strip, a monitor wall, a key light, a camera in front. { outlet: "FOX BUSINESS", night (default true), wall: screens on the wall }
+    tv_studio(o) {
+      const n = o.night !== false, P = pal(o, "blue", n), r = rng(77); let b = R(0, 0, 1920, 1080, P.wall, 0, "") + R(0, 790, 1920, 290, n ? "#1d2238" : "#cfd6e4", 0, "") + floorLine(790);
+      b += R(150, 110, 1620, 520, "#0f1b2a", 10, `stroke="${INK}" stroke-width="7"`);
+      for (let i = 0; i < 8; i++) b += K.screen(180 + (i % 4) * 400, 130 + Math.floor(i / 4) * 250, 380, 230, ["#7fd0f0", "#46e08a", "#ffd27a", "#ff8a80"][(i + Math.floor(r() * 3)) % 4], true, 4);
+      b += `<path d="M0,650 L1920,650" stroke="rgba(255,255,255,.2)" stroke-width="6"/>` + [0, 1, 2, 3, 4, 5].map((i) => R(40 + i * 330, 660, 12, 130, "#56606f", 3)).join("") + K.tube(960, 36, 700, true) + D.cable(0, 1920, 90, P) + `<g class="pulse"><ellipse cx="960" cy="800" rx="900" ry="40" fill="rgba(143,216,255,.14)"/></g>`;
+      b += cut(R(60, 40, 120, 70, "#3d4a5c", 8) + `<path d="M60,100 L-10,170 L230,170 L180,100Z" fill="#f6f1e4" ${st}/>`) + halo(110, 150, 260, "#fff6d8", 0.26);
+      const f = cut(`<path d="M300,760 L1620,760 L1700,1090 L220,1090Z" fill="${P.panel}" ${st}/>` + R(260, 730, 1400, 40, mixHex(P.panel, "#ffffff", 0.25), 8)) + K.board(660, 840, 600, 90, o.outlet || "FOX BUSINESS", "#f6f1e4", INK, 46) + cut(R(1380, 690, 150, 46, "#f6f1e4", 4) + T(1455, 722, (o.card || "NEWS").slice(0, 8), 22)) + D.fgCamera(1760, 880);
+      return { back: b, front: f };
+    },
+
+    // One building, three rooms. dress: coat_check (plum) | box_office (ochre, street) | dressing_room (pink). { night, sign: "SOLD OUT" (box office), pop: seconds (a bulb pops in the dressing room mirror) }
+    theatre(o) {
+      const d = o.dress || "box_office", n = d === "box_office" ? !!o.night : o.night !== false && d !== "coat_check" ? o.night !== false : !!o.night, P = pal(o, d === "coat_check" ? "plum" : d === "dressing_room" ? "pink" : "ochre", n);
+      let b = K.room(P, 790, d === "box_office" ? 0 : 130), f = "";
+      if (d === "coat_check") {
+        b += R(0, 0, 1920, 90, P.panel, 0) + D.sconce(300, 280, P, true) + D.sconce(1620, 280, P, true);
+        b += cut(R(160, 150, 1600, 24, "#8a5a3c", 6));
+        for (let i = 0; i < 18; i++) { const x = 220 + i * 86; b += `<path d="M${x},174 L${x},196" stroke="${INK}" stroke-width="5"/><circle cx="${x}" cy="204" r="8" fill="#f0b429" ${st} stroke-width="3"/>`;
+          if (i % 3 === 1 && i !== 10) b += cut(`<path d="M${x - 30},200 Q${x},190 ${x + 30},200 L${x + 26},440 L${x - 26},440Z" fill="${["#c95f8d", "#e8dcc0", "#3d6fb6", "#7a8a3c"][i % 4]}" ${st} stroke-width="5"/>`); }
+        b += cut(`<path d="M${220 + 10 * 86 - 40},204 Q${220 + 10 * 86},190 ${220 + 10 * 86 + 40},204 L${220 + 10 * 86 + 36},520 L${220 + 10 * 86 - 36},520Z" fill="#1a1a22" ${st}/><path d="M${220 + 10 * 86 - 20},210 L${220 + 10 * 86},270 L${220 + 10 * 86 + 20},210" fill="none" stroke="#5a5a6c" stroke-width="4"/>`);
+        b += K.board(1400, 560, 300, 100, "COATS", "#f6f1e4", INK, 56) + D.clock(1020, 120, 44, P) + D.cable(0, 1920, 60, P) + D.vent(340, 30) + D.frame(1560, 330, 120, 160, "portrait", P);
+        f = cut(R(-20, 760, 2000, 36, "#8a5a3c", 8) + R(0, 796, 1940, 300, mixHex("#8a5a3c", "#141a3a", 0.25), 0)) + [0, 1, 2, 3, 4, 5].map((i) => cut(`<g transform="rotate(${i * 5 - 12} ${300 + i * 150} 740)">${R(270 + i * 150, 690, 60, 48, "#f6f1e4", 2)}${T(300 + i * 150, 722, String(40 + i * 3), 24)}</g>`)).join("") + cut(`<ellipse cx="1500" cy="750" rx="42" ry="12" fill="#c9ced6" ${st}/><path d="M1478,746 Q1500,708 1522,746Z" fill="#f0b429" ${st}/>`) + D.fgPlant(60, 1090, 1.2);
+      } else if (d === "box_office") {
+        b = R(0, 0, 1920, 790, n ? "#1c1830" : "#8cc3de", 0, "") + K.buildings(-20, 1940, 560, rng(8), [P.panel, P.wall, "#8a6a4a"], n, 200, 340) + R(0, 560, 1920, 230, P.wall, 0) + R(0, 790, 1920, 290, n ? "#232033" : "#b0a58f", 0, "") + floorLine(790);
+        b += cut(R(220, 90, 1480, 130, "#f6f1e4", 10) + R(250, 110, 1420, 90, INK, 6, "")) + T(960, 180, "THE GRAND", 74, "#ffd27a", "middle", 'font-weight="800"');
+        for (let x = 240; x < 1700; x += 52) b += `<circle class="tick" cx="${x}" cy="102" r="9" fill="#fff1b0" stroke="${INK}" stroke-width="3"/><circle class="tick" cx="${x}" cy="208" r="9" fill="#fff1b0" stroke="${INK}" stroke-width="3"/>`;
+        b += cut(R(520, 300, 880, 440, P.panel, 10) + R(570, 340, 780, 250, "#1b2a36", 6)) + K.glass(570, 340, 780, 250, n ? 4 : 0) + R(900, 480, 120, 22, INK, 11, "") + K.board(620, 610, 680, 90, "TICKETS", "#f6f1e4", INK, 50);
+        b += K.board(660, 360, 300, 100, o.sign || "SOLD OUT", "#e0262b", "#f6f1e4", 44) + (n ? halo(960, 460, 380, "#ffe9a0", 0.22) : "") + cut(R(90, 330, 320, 400, "#f6f1e4", 4) + R(104, 344, 292, 200, P.accent, 0, "") + `<circle cx="250" cy="440" r="52" fill="#f6f1e4"/>` + R(120, 580, 260, 14, "#9aa0b4", 3, "") + R(120, 610, 180, 14, "#9aa0b4", 3, "")) + cut(R(1500, 330, 320, 400, "#f6f1e4", 4) + R(1514, 344, 292, 200, "#3d6fb6", 0, "") + R(1530, 400, 200, 40, "#f6f1e4", 0, "") + R(1520, 580, 260, 14, "#9aa0b4", 3, "")) + K.post(1800, 790, 480, n, "#ffb347");
+        f = cut(R(-20, 840, 2000, 24, "#8d9199", 6)) + D.fgPlant(40, 1090, 1.2);
+      } else {
+        b += R(0, 0, 1920, 90, P.panel, 0);
+        const mx = 560, my = 150, mw = 800, mh = 540; b += cut(R(mx - 24, my - 24, mw + 48, mh + 48, "#f6f1e4", 18)) + R(mx, my, mw, mh, "#cfe8f0", 8, `stroke="${INK}" stroke-width="6"`) + `<path d="M${mx + 60},${my + mh - 40} L${mx + 260},${my + 60} M${mx + 150},${my + mh - 40} L${mx + 300},${my + 120}" stroke="#fff" stroke-width="16" opacity=".55"/>`;
+        for (let i = 0; i < 14; i++) { const t = i / 13, bx = i < 5 ? mx - 24 + (i / 4) * (mw + 48) : i < 8 ? mx + mw + 24 : i < 13 ? mx + mw + 24 - ((i - 8) / 4) * (mw + 48) : mx - 24, by = i < 5 ? my - 24 : i < 8 ? my - 24 + ((i - 4) / 4) * (mh + 48) : i < 13 ? my + mh + 24 : my + mh + 24 - ((i - 12)) * 0; void t;
+          const pop = o.pop != null && i === 2; b += `<circle ${pop ? `class="pb" data-pop="${o.pop}"` : 'class="tick"'} cx="${bx}" cy="${by}" r="16" fill="#fff6c8" ${st} stroke-width="4"/>`; }
+        b += halo(960, 420, 460, "#ffe0f0", 0.22) + D.clock(1560, 160, 40, P) + D.frame(1500, 330, 170, 130, "portrait", P) + D.cable(0, 1920, 60, P) + cut(R(100, 160, 260, 360, P.panel, 6) + [0, 1, 2].map((i) => `<path d="M130,${230 + i * 100} L330,${230 + i * 100}" stroke="${P.trim}" stroke-width="6"/><path d="M${150 + i * 60},${230 + i * 100} l0,40" stroke="${INK}" stroke-width="5"/>`).join("")) + cut(R(1540, 560, 260, 230, "#f6f1e4", 6) + [0, 1, 2].map((i) => `<path d="M${1570 + i * 70},650 q10,-60 20,-60 q10,0 20,60Z" fill="${P.accent}" ${st} stroke-width="4"/>`).join(""));
+        f = cut(R(300, 700, 1320, 40, "#f6f1e4", 8) + R(330, 740, 1260, 360, mixHex(P.panel, "#141a3a", 0.1), 0)) + cut(R(1500, 640, 80, 60, "#c9a36b", 8) + R(1490, 700, 100, 14, "#8a5a3c", 4)) + cut(`<g transform="translate(1250,1050)"><path d="M-40,-90 L-46,0 M40,-90 L46,0" stroke="${INK}" stroke-width="9" stroke-linecap="round"/>${R(-56, -120, 112, 34, P.accent, 12)}${R(-50, -240, 100, 112, P.accent, 18)}</g>`);
+      }
+      if (n && d !== "box_office") b += halo(960, 300, 600, P.glow, 0.12);
+      return { back: b, front: f };
+    },
+
+    // A gym: a bench press with a bar that wobbles, weight racks, a mirror wall, one strip light, a water cooler. { night }
+    gym(o) {
+      const n = !!o.night, P = pal(o, "slate", n); let b = K.room(P, 790, 0);
+      b += R(60, 130, 900, 520, "rgba(200,232,244,.3)", 6, `stroke="${INK}" stroke-width="7"`) + [1, 2, 3].map((i) => `<path d="M${60 + i * 225},130 L${60 + i * 225},650" stroke="${INK}" stroke-width="4"/>`).join("") + `<path d="M120,620 L420,180 M200,620 L500,200" stroke="#fff" stroke-width="14" opacity=".35"/>`;
+      b += cut(R(1060, 150, 760, 40, "#e0262b", 6) + T(1440, 184, "NO PAIN  NO GAIN", 30, "#f6f1e4")) + D.clock(1450, 300, 46, P) + D.poster(1100, 250, 150, 200, P, -3) + D.vent(1680, 40) + K.tube(900, 40, 420, true) + D.cable(0, 1920, 100, P) + D.switch(1020, 520);
+      for (let i = 0; i < 4; i++) b += cut(R(1100 + i * 170, 520, 20, 260, "#3d4a5c", 3) + R(1100 + i * 170 - 30, 560, 80, 14, "#3d4a5c", 3)) + [0, 1, 2].map((k) => `<circle cx="${1110 + i * 170}" cy="${536 + k * 0}" r="${46 - k * 8}" fill="#2b2b33" ${st} stroke-width="5" opacity="${1 - k * 0.1}"/>`).join("");
+      b += cut(R(1140, 740, 640, 24, "#3d4a5c", 6)) + [0, 1, 2, 3, 4, 5].map((i) => cut(`<ellipse cx="${1170 + i * 100}" cy="722" rx="26" ry="24" fill="${["#e0262b", "#f0b429", "#3d6fb6"][i % 3]}" ${st} stroke-width="5"/>`)).join("");
+      b += cut(R(1760, 560, 110, 220, "#cfe6ee", 10) + R(1780, 520, 70, 50, "rgba(143,216,255,.7)", 14) + R(1790, 650, 50, 24, "#3d6fb6", 6)) + D.plant(1000, 790, 0.8, P);
+      b += `<g class="wob">${cut(R(240, 540, 560, 14, "#c9ced6", 6) + R(220, 500, 24, 100, "#2b2b33", 6) + R(780, 500, 24, 100, "#2b2b33", 6) + R(190, 470, 20, 160, "#e0262b", 6) + R(814, 470, 20, 160, "#e0262b", 6))}</g>`;
+      b += cut(R(300, 640, 420, 40, "#2b2b33", 14) + R(340, 680, 30, 110, "#3d4a5c", 4) + R(650, 680, 30, 110, "#3d4a5c", 4) + R(250, 600, 40, 190, "#56606f", 4) + R(730, 600, 40, 190, "#56606f", 4));
+      return { back: b, front: cut(R(-20, 930, 2000, 200, mixHex(P.floor, "#000000", 0.3), 0)) + cut(`<ellipse cx="160" cy="1000" rx="90" ry="36" fill="#e0262b" ${st}/><ellipse cx="160" cy="990" rx="90" ry="36" fill="#f0b429" ${st}/>`) };
+    },
+
+    // @cfo-sets
   };
 
   // Static props appear with the shot; give them "at" (or a cue) to make them land later.
@@ -1036,6 +1299,30 @@
         for (let i = 0; i < 12; i++) sp += `<circle class="dot" cx="${x - 500 + (i * 173) % 1000}" cy="${y - 220 + (i * 97) % 620}" r="${26 + (i % 3) * 10}" fill="${["#ffe14d", "#7fd0f0", "#f08a7a", "#9fd8a8"][i % 4]}" opacity=".5"/>`;
         return `<path d="M${x},0 L${x},${y - 100}" stroke="${INK}" stroke-width="6"/>` + sp + cut(`<circle cx="${x}" cy="${y}" r="100" fill="#c9ced6" ${st}/>` + g + `<path d="M${x - 70},${y - 60} Q${x - 40},${y - 90} ${x},${y - 94}" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round"/>`); },
       play(tl, el, o, t0) { pop(tl, el, o, t0); el.querySelectorAll(".dot").forEach((d, i) => tl.fromTo(d, { x: 0, opacity: 0.2 }, { x: (i % 2 ? -1 : 1) * 160, opacity: 0.6, duration: 1.2 + (i % 4) * 0.3, yoyo: true, repeat: 12, ease: "sine.inOut", immediateRender: false }, t0)); } },
+    // { type:"exec_chair", x, y, k, state: jacket | bare | agenda }: the chief executive's chair. x, y = the floor under it.
+    exec_chair: { draw(o) { return K.chair(o.x, o.y, o.k || 1, o.state || "jacket"); }, play: pop },
+    // { type:"door_plate", x, y, k, state: before | taped | unscrewed | two | rattle | frame, act: "press" | "rattle", dur }: the plate on the glass door; x, y = the middle of the main plate.
+    // Same size and place every time (corner_office puts it at k 0.62 on its wide view, k 1.7 on its door view; the corridor dress `exec` at k 1).
+    door_plate: { draw(o) { const state = o.state || "taped"; return cut(`<g transform="translate(${o.x},${o.y}) scale(${o.k || 1})">${K.doorPlate(state, o.act === "press")}</g>`); },
+      play(tl, el, o, t0) { pop(tl, el, o, t0); const a = t0 + (o.at || 0.3), k = o.k || 1;
+        if (o.act === "press") { const tape = el.querySelector(".tape"), gl = el.querySelector(".glove"), ro = el.querySelector(".roll"); if (!tape) return;
+          gsap.set(tape, { svgOrigin: "-240 0", smoothOrigin: false }); gsap.set(ro, { transformOrigin: "50% 50%", smoothOrigin: false });
+          tl.fromTo(tape, { scaleX: 0.02 }, { scaleX: 1, duration: 1.3, ease: "power1.inOut", immediateRender: false }, a);
+          tl.fromTo(gl, { x: -240, y: 0 }, { x: 236, y: 0, duration: 1.3, ease: "power1.inOut", immediateRender: false }, a); tl.fromTo(gl, { y: -4 }, { y: 4, duration: 0.16, yoyo: true, repeat: 7, ease: "sine.inOut", immediateRender: false }, a);
+          tl.fromTo(ro, { x: -240, y: -50, scale: 1 }, { x: 236, y: -50, scale: 0.2, duration: 1.3, ease: "power1.inOut", immediateRender: false }, a); tl.to(gl, { opacity: 0, y: 40, duration: 0.3, immediateRender: false }, a + 1.5); tl.to(ro, { opacity: 0, duration: 0.2, immediateRender: false }, a + 1.5);
+          tl.set([gl, ro], { opacity: 0 }, t0); tl.set([gl, ro], { opacity: 1 }, a); } else { el.querySelectorAll(".glove,.roll").forEach((e) => { e.style.opacity = 0; }); }
+        if (o.act === "rattle" || o.state === "rattle") { const g = el.querySelector(".rat"); if (g) { gsap.set(g, { transformOrigin: "50% 50%", smoothOrigin: false }); const d = o.dur || 2;
+          tl.fromTo(g, { rotation: -2.2, x: -4 }, { rotation: 2.2, x: 4, duration: 0.07, yoyo: true, repeat: Math.round(d / 0.07), ease: "sine.inOut", immediateRender: false }, a); tl.set(g, { rotation: 0, x: 0 }, a + d + 0.1); } }
+        const q = el.querySelector(".q"); if (q) { gsap.set(q, { transformOrigin: "50% 50%", smoothOrigin: false }); tl.fromTo(q, { y: 0, rotation: -5 }, { y: -8, rotation: 5, duration: 0.8, yoyo: true, repeat: 7, ease: "sine.inOut", immediateRender: false }, t0); } } },
+    // { type:"desk_phone", x, y, k, note: "TUE 5:00 PM", state: "tangled", act: "curl", at }: a desk phone with a yellow note on its receiver; x, y = the desk under the base.
+    desk_phone: { draw(o) { return K.deskPhone(o.x, o.y, o.k || 1, o.note, o.state); },
+      play(tl, el, o, t0) { pop(tl, el, o, t0); const c = el.querySelector(".curl"); if (c && o.act !== false) { gsap.set(c, { svgOrigin: "36 -84", smoothOrigin: false }); tl.fromTo(c, { scale: 1, rotation: 0 }, { scale: 2.3, rotation: -16, duration: 1.4, ease: "power2.out", immediateRender: false }, t0 + (o.at || 0.4) + 0.2); } } },
+    // { type:"calculator", x, y, k, t }: a desk calculator (t = the display); x, y = the desk under it.
+    calculator: { draw(o) { return K.calc(o.x, o.y, o.k || 1, o.t); }, play: pop },
+    // { type:"name_plate", x, y, k, t: "CFO", tape: true | "INTERIM CEO" }: a desk name plate, with masking tape beside it.
+    name_plate: { draw(o) { return K.namePlate(o.x, o.y, o.k || 1, o.t, o.tape); }, play: pop },
+
+    // @cfo-props
   };
 
   /* ---- Depth for the places Poppi used most (13 Nov 2026): eight or more things on the back wall, a foreground piece the camera passes,
@@ -1043,6 +1330,8 @@
   const cart = (x, y) => `<g class="fg">${cut(`<g transform="translate(${x},${y})"><path d="M-40,-260 L0,-260 L40,-120 L330,-120 L370,-250" fill="none" stroke="${INK}" stroke-width="14" stroke-linecap="round"/><path d="M30,-230 L360,-230 L330,-120 L50,-120Z" fill="#c9ced6" stroke="${INK}" stroke-width="8"/>` +
     [0, 1, 2, 3, 4, 5].map((i) => `<path d="M${70 + i * 50},-228 L${80 + i * 46},-122" stroke="${INK}" stroke-width="4"/>`).join("") + `<circle cx="90" cy="-60" r="34" fill="#3d4a5c" ${st}/><circle cx="300" cy="-60" r="34" fill="#3d4a5c" ${st}/></g>`)}</g>`;
   const shopper = (x, y, c) => `<g class="pass">${cut(`<g transform="translate(${x},${y})"><circle cx="0" cy="-250" r="34" fill="${c.skin}" ${st}/><path d="M-34,-262 Q0,-300 34,-262 Q20,-280 0,-282 Q-20,-280 -34,-262Z" fill="${c.hair}" ${st} stroke-width="5"/><path d="M-50,-210 L50,-210 L44,-80 L-44,-80Z" fill="${c.top}" ${st}/>${R(-38, -80, 30, 80, c.legs || "#2e3a59", 8)}${R(8, -80, 30, 80, c.legs || "#2e3a59", 8)}</g>`)}</g>`;
+  // Whole looks of an existing set under a named dress (CFO episode): VARIANT.<set>.<dress>(o) returns { back, front } and replaces the set's own drawing.
+  const VARIANT = {};
   const DRESS = {
     kitchen(o, P, n) {
       const rail = cut(R(1500, 400, 380, 14, P.trim, 6) + [1540, 1620, 1700, 1780, 1850].map((x, i) => `<path d="M${x},414 L${x},${470 + (i % 2) * 30}" stroke="${INK}" stroke-width="6"/>` + (i % 2 ? `<circle cx="${x}" cy="${508}" r="22" fill="#c9ced6" ${st} stroke-width="5"/>` : R(x - 12, 470, 24, 40, "#8a5a3c", 6, `stroke="${INK}" stroke-width="4"`))).join(""));
@@ -1086,11 +1375,91 @@
       return { back: cup + notes + phone + pens };
     },
   };
+  Object.assign(SET_PALETTE, { corner_office: "violet" });
+  Object.assign(SET_AMBIENCE, { corner_office: "office" });
+
+  // boardroom: the head chair still in plastic wrap (dress head_chair), two empty chairs (dress two_chairs); a green banker's lamp on the table
+  { const base = DRESS.boardroom;
+    DRESS.boardroom = (o, P, n) => { const x = base(o, P, n);
+      if (o.dress === "head_chair") { x.back += K.lamp(1480, 818, 1.1, true, "#b8f0a0", true) + K.chair(960, 842, 1.15, "bare") +
+        cut(`<path d="M846,300 Q836,520 860,700 L1060,700 Q1086,520 1074,300 Q960,262 846,300Z" fill="rgba(255,255,255,.34)" ${st} stroke-width="4"/><path d="M880,340 L900,640 M1020,330 L1010,520" stroke="#fff" stroke-width="7" opacity=".55" stroke-linecap="round"/>`) +
+        `<g class="sway"><path d="M1040,640 Q1100,640 1110,700" fill="none" stroke="${INK}" stroke-width="4"/>${K.board(1070, 700, 130, 70, "NEW", "#f0b429", INK, 38)}</g>`; }
+      if (o.dress === "two_chairs") x.back += K.chair(740, 842, 1, "bare") + K.chair(1180, 842, 1, "bare") + K.board(660, 640, 160, 70, "CHAIR", "#f6f1e4", INK, 38) + K.board(1100, 640, 160, 70, "CEO", "#f6f1e4", INK, 40);
+      return x; }; }
+
   // Sets whose default look is night (they take "night": false for day).
   const NIGHT_FIRST = { pitch_stage: 1, night_office: 1, bank: 1, supermarket: 1, back_shop: 1, desk_top: 1, night_city: 1, night_road: 1 };
+  Object.assign(SET_PALETTE, { bus_stop: "cream", newsroom: "slate", diner: "red", cinema: "red", records_office: "ochre" });
+  Object.assign(SET_AMBIENCE, { bus_stop: "street", newsroom: "machine", diner: "shop", cinema: "room", records_office: "room" });
+  Object.assign(NIGHT_FIRST, { newsroom: 1, cinema: 1 });
+
+  Object.assign(SET_PALETTE, { tv_studio: "blue", theatre: "ochre", gym: "slate" });
+  Object.assign(SET_AMBIENCE, { tv_studio: "studio", theatre: "room", "theatre:box_office": "street", gym: "room" });
+  Object.assign(NIGHT_FIRST, { tv_studio: 1 });
+
+  // ---- Dressings of existing sets (CFO episode): each replaces the set's drawing when the shot says "opts": { "dress": ... } ----
+  // trading_floor: dawn (blue, a bank's floor under tall grey windows, a red ticker band) and exchange (green, a stock exchange floor with a big board and a closing bell). Floor y 800+ is free for 8-12 extras.
+  VARIANT.trading_floor = {
+    dawn(o) { const n = !!o.night, P = pal(o, "blue", n), r = rng(19); let b = R(0, 0, 1920, 1080, P.wall, 0, "") + R(0, 790, 1920, 290, P.floor, 0, "") + floorLine(790);
+      for (let i = 0; i < 5; i++) { const x = 90 + i * 360; b += cut(R(x, 100, 300, 560, n ? "#1d2442" : "#c3ccd8", 6) + `<path d="M${x},${300} L${x + 300},300 M${x + 150},100 L${x + 150},660" ${st} stroke-width="5"/>` + `<svg x="${x}" y="100" width="300" height="560" viewBox="${x} 100 300 560" overflow="hidden">${skyline(x - 20, x + 320, 660, r, n ? ["#232c54", "#2c3766"] : ["#9aa6b8", "#8794aa", "#a8b3c4"], n)}</svg>` + R(x, 100, 300, 560, "none", 0, `stroke="${INK}" stroke-width="7"`)); }
+      b += R(0, 40, 1920, 56, "#1b0f12", 0) + `<g class="pass"><g>` + Array.from({ length: 24 }, (_, i) => T(i * 330, 80, ticker(r) + (r() > 0.3 ? "  -" : "  +") + (r() * 4).toFixed(1), 34, r() > 0.3 ? "#ff5a4f" : "#46e08a", "start", 'font-family="IBM Plex Mono" font-weight="700"')).join("") + `</g></g>`;
+      for (let row = 0; row < 2; row++) for (let i = 0; i < 6; i++) { const k = 0.62 + row * 0.18, x = 150 + i * 310 + row * 70, y = 650 + row * 100; b += cut(`<g transform="translate(${x},${y}) scale(${k})">${R(-130, 0, 260, 24, "#8a5a3c", 6)}${R(-110, 24, 220, 70, "#6f452c", 0)}</g>`) + K.screen(x - 70 * k, y - 110 * k, 130 * k, 100 * k, r() > 0.5 ? "#ff8a80" : "#8fe0b0", i % 2 === 0, 3) + K.screen(x + 10 * k, y - 100 * k, 110 * k, 90 * k, "#8fe0b0", i % 3 === 0, 3); }
+      return { back: b + D.clock(960, 700, 0, P).slice(0, 0) + D.vent(30, 110).slice(0, 0), front: D.fgPlant(1890, 1090, 1.3) + `<g class="fg">${cut(R(-40, 1000, 2000, 120, P.panel, 0))}</g>`.slice(0, 0) }; },
+    exchange(o) { const n = !!o.night, P = pal(o, "green", n), r = rng(29), up = o.mood !== "red"; let b = R(0, 0, 1920, 1080, P.wall, 0, "") + R(0, 790, 1920, 290, P.floor, 0, "") + floorLine(790);
+      for (let i = 0; i < 7; i++) b += cut(R(60 + i * 270, 40, 90, 300, P.panel, 4)) + `<path d="M${105 + i * 270},40 L${105 + i * 270},340" stroke="rgba(255,255,255,.2)" stroke-width="6"/>`;
+      b += cut(R(300, 80, 1320, 460, "#10182a", 12)) + `<g class="tick">`;
+      for (let c = 0; c < 4; c++) for (let rr = 0; rr < 6; rr++) { const good = r() < (up ? 0.8 : 0.15); b += T(340 + c * 320, 150 + rr * 66, ticker(r), 32, "#c9cfe6", "start", 'font-family="IBM Plex Mono" font-weight="700"') + T(340 + c * 320 + 160, 150 + rr * 66, (good ? "+" : "-") + (r() * 3).toFixed(1), 32, good ? "#46e08a" : "#ff5a4f", "start", 'font-family="IBM Plex Mono" font-weight="700"'); }
+      b += `</g>` + cut(R(1500, 560, 240, 150, "#3d4a5c", 8) + R(1500, 540, 240, 22, "#56606f", 6) + `<g class="sway"><path d="M1620,566 L1620,610" stroke="${INK}" stroke-width="5"/><path d="M1580,640 Q1620,570 1660,640Z" fill="#f0b429" ${st}/></g>`) + K.board(1500, 700, 240, 30, "", "#8a5a3c", INK, 10);
+      for (let i = 0; i < 4; i++) b += cut(R(110 + i * 330, 600, 170, 150, P.accent, 6) + R(110 + i * 330, 600, 170, 24, "#f6f1e4", 4) + R(130 + i * 330, 640, 60, 60, "#10182a", 4) + R(210 + i * 330, 650, 52, 14, "#f6f1e4", 2) + K.screen(120 + i * 330, 560, 80, 50, up ? "#8fe0b0" : "#ff8a80", true, 2));
+      return { back: b + D.cable(0, 1920, 360, P).slice(0, 0), front: D.fgPlant(60, 1090, 1.2) }; },
+  };
+  // corridor: exec (teal, glass doors and the corner office's door with its plate), doors (red, closed doors in a row, one exit sign) and courthouse (amber, panelling and a bench)
+  VARIANT.corridor = {
+    exec(o) { const n = !!o.night, P = pal(o, "teal", n); let b = R(0, 0, 1920, 800, P.wall, 0, "") + R(0, 800, 1920, 280, n ? "#2a2a3a" : "#7a6a52", 0, "") + R(0, 800, 1920, 12, P.trim, 0) + floorLine(800);
+      const xs = [90, 450, 1230, 1590], pl = o.plate === undefined ? "taped" : o.plate;
+      xs.forEach((x, i) => { b += cut(R(x - 12, 150, 264, 650, P.trim, 6)) + R(x, 164, 240, 636, n ? "#103430" : "#a8d8d8", 0, `stroke="${INK}" stroke-width="6"`) + K.glass(x, 164, 240, 636, 0) + (n ? "" : `<path d="M${x + 20},780 L${x + 130},180" stroke="#fff6d8" stroke-width="30" opacity=".4"/>`) + `<circle cx="${x + 212}" cy="500" r="11" fill="#c9a24a" ${st} stroke-width="4"/>` + K.board(x + 40, 100, 160, 38, ["ACCOUNTS", "LEGAL", "FINANCE", "HR"][i], P.trim, INK, 22); });
+      const dx = 810; b += cut(R(dx - 12, 150, 324, 650, P.trim, 6)) + R(dx, 164, 300, 636, n ? "#16423f" : "#a8d8d8", 0, `stroke="${INK}" stroke-width="6"`) + K.glass(dx, 164, 300, 636, 0) + (pl ? `<g transform="translate(${dx + 150},470)">${K.doorPlate(pl)}</g>` : "") + (n ? R(dx, 790, 300, 10, "#ffe14d", 0, "") : "");
+      b += (n ? "" : D.window(1750, 100, 130, 200, false, P, 3).slice(0, 0)) + D.clock(1000, 90, 0, P).slice(0, 0) + D.plant(40, 800, 0.9, P) + D.plant(1880, 800, 0.9, P) + D.cable(0, 1920, 60, P) + `<g class="sway">${hang(300, 0, 70, n, "#fff1b0")}</g>` + `<g class="sway">${hang(1620, 0, 70, n, "#fff1b0")}</g>`;
+      if (n) b += pool(300, 820, 360, 30, "#fff1b0", 0.3) + pool(960, 840, 500, 40, "#fff1b0", 0.12) + halo(300, 100, 300, "#fff1b0", 0.2);
+      b += `<path d="M300,1080 L800,800 M1620,1080 L1120,800" stroke="rgba(27,29,54,.1)" stroke-width="3"/>` + R(560, 880, 800, 100, mixHex(P.accent, n ? "#141a3a" : "#ffffff", 0.45), 0, "") + `<g class="pulse">${R(560, 880, 800, 100, "rgba(255,255,255,.04)", 0, "")}</g>`;
+      return { back: b, front: D.fgPlant(-20, 1090, 1.5) }; },
+    doors(o) { const n = !!o.night, P = pal(o, "red", n); let b = K.room(P, 800, 130);
+      for (let i = 0; i < 6; i++) { const x = 100 + i * 290; b += K.door(x, 260, 200, 540, mixHex(P.panel, "#000000", 0.1), P, i % 2) + K.board(x + 50, 200, 100, 36, String(101 + i), P.trim, INK, 24); if (i === 3) b += cut(R(x + 10, 790, 180, 8, n ? "#ffe14d" : "#141a3a", 0, "")); }
+      b += cut(R(1700, 90, 180, 70, "#1fa85b", 8) + T(1790, 144, "EXIT", 42, "#f6f1e4")) + `<g class="tick"><circle cx="1790" cy="125" r="0"/></g>` + D.cable(0, 1920, 60, P) + D.vent(900, 36) + D.clock(1400, 150, 40, P) + D.switch(60, 540) + K.tube(500, 40, 300, true) + D.frame(1530, 330, 100, 130, "abstract", P) + `<path d="M0,800 L400,1080 M1920,800 L1520,1080" stroke="rgba(27,29,54,.1)" stroke-width="3"/>`;
+      b += R(300, 900, 1320, 120, mixHex(P.accent, "#141a3a", 0.4), 0, "") + (n ? pool(500, 830, 300, 24, "#ffd9a0", 0.22) + pool(1300, 830, 300, 24, "#ffd9a0", 0.16) : "");
+      return { back: b, front: D.fgPlant(1890, 1090, 1.3) }; },
+    courthouse(o) { const n = !!o.night, P = pal(o, "amber", n); let b = R(0, 0, 1920, 800, mixHex(P.wall, "#5b3a22", 0.4), 0, "") + R(0, 380, 1920, 420, mixHex(P.panel, "#5b3a22", 0.3), 0, "") + R(0, 800, 1920, 280, n ? "#2b2420" : "#8a7a60", 0, "") + floorLine(800);
+      for (let x = 0; x < 1920; x += 160) b += R(x + 14, 420, 132, 300, "rgba(27,29,54,.18)", 4, `stroke="${INK}" stroke-width="4"`);
+      b += `<path d="M0,380 L1920,380" stroke="${INK}" stroke-width="8"/>` + cut(R(120, 130, 300, 210, "#6b7384", 8) + R(138, 148, 264, 174, "#b88a4a", 4) + [0, 1, 2, 3].map((i) => `<g transform="rotate(${i * 3 - 4} ${190 + i * 56} 220)">${R(150 + i * 56, 170 + (i % 2) * 14, 48, 70, "#f6f1e4", 2)}${R(158 + i * 56, 182 + (i % 2) * 14, 32, 6, "#9aa0b4", 2, "")}</g>`).join("")) + K.board(150, 90, 240, 44, "NOTICES", "#f6f1e4", INK, 28);
+      b += cut(R(1100, 120, 160, 200, "#f6f1e4", 4) + `<path d="M1180,170 L1180,260 M1130,180 L1230,180 M1140,260 L1220,260" stroke="${INK}" stroke-width="6"/>`) + D.clock(1560, 220, 60, P) + K.door(560, 330, 220, 470, "#5b3a22", P) + K.door(1320, 330, 220, 470, "#5b3a22", P, true) + K.board(600, 270, 140, 40, "COURT 2", P.trim, INK, 24) + D.vent(900, 36);
+      b += cut(R(780, 640, 500, 28, "#8a5a3c", 6) + R(780, 560, 500, 90, "#6f452c", 6) + R(800, 668, 20, 130, "#6f452c", 3) + R(1240, 668, 20, 130, "#6f452c", 3)) + `<g class="tick">${R(740, 36, 580, 20, "#fbf8ef", 10)}</g><path d="M780,0 L780,36 M1280,0 L1280,36" stroke="${INK}" stroke-width="5"/>` + (n ? beam(1030, 56, 580, 900, 760, "#fff6d8", 0.1) : "");
+      return { back: b, front: D.fgPlant(60, 1090, 1.3) }; },
+  };
+  // lawn: playground (green, noon: a slide, swings and a bench) and park (blue, night: a bench under one lamp post, hedges; the piggy bank asleep under the bench)
+  VARIANT.lawn = {
+    playground(o) { const P = pal(o, "green", false), r = rng(88); let b = R(0, 0, 1920, 780, "#9fd8f0", 0, "") + cloud(240, 100, 1) + cloud(1300, 150, 1.2) + `<circle cx="1660" cy="150" r="74" fill="#fff0a0" ${st}/>` + R(0, 780, 1920, 300, P.wall, 0, "") + floorLine(780);
+      for (let x = 0; x < 1920; x += 70 + r() * 40) b += `<circle cx="${x}" cy="${690 + r() * 20}" r="${60 + r() * 30}" fill="#3f9b5a" ${st}/>`;
+      b += R(0, 770, 1920, 30, P.panel, 0, "") + `<path d="M0,770 L1920,770" ${st}/>`;
+      b += cut(R(130, 300, 30, 480, "#c9ced6", 4) + R(130, 300, 190, 26, "#e0262b", 6) + R(280, 240, 220, 20, "#e0262b", 6) + `<path d="M130,300 L130,780 M130,420 L130,420" stroke="${INK}" stroke-width="6"/>` + `<path d="M140,330 L500,760 L560,760 L180,310Z" fill="#f0b429" ${st}/>` + [0, 1, 2, 3, 4, 5].map((i) => R(110 + i * 4, 740 - i * 80, 90, 10, "#8d9199", 2, "")).join("") + `<path d="M130,330 L90,780" stroke="${INK}" stroke-width="10"/>`);
+      b += cut(R(1100, 360, 16, 420, "#3d4a5c", 3) + R(1480, 360, 16, 420, "#3d4a5c", 3) + R(1090, 350, 420, 20, "#3d4a5c", 6)) + [1180, 1330, 1420].map((x, i) => `<g class="sway"><path d="M${x},370 L${x},620" stroke="${INK}" stroke-width="5"/>${R(x - 36, 620, 72, 14, "#8a5a3c", 5)}</g>`).join("");
+      b += cut(R(700, 700, 300, 18, "#8a5a3c", 6) + R(700, 640, 300, 16, "#8a5a3c", 6) + R(720, 718, 14, 70, INK, 3, "") + R(960, 718, 14, 70, INK, 3, "") + R(720, 640, 14, 80, INK, 3, ""));
+      b += D.plant(620, 780, 0.8, P);
+      return { back: b, front: D.fgPlant(1890, 1090, 1.3) }; },
+    park(o) { const P = pal(o, "blue", true), r = rng(91); let b = R(0, 0, 1920, 1080, "#141a36", 0, "") + `<circle cx="1500" cy="170" r="64" fill="#f6f1e4" ${st}/>` + Array.from({ length: 40 }, () => `<circle cx="${(r() * 1920).toFixed(0)}" cy="${(r() * 400).toFixed(0)}" r="${(2 + r() * 3).toFixed(1)}" fill="#f6f1e4"/>`).join("") + K.buildings(-20, 1940, 540, r, ["#232c54", "#2c3766", "#1c2340"], true, 160, 300);
+      b += R(0, 540, 1920, 540, mixHex(P.wall, "#141a3a", 0.1), 0, "") + floorLine(540) + `<path d="M760,1080 Q900,800 1000,540 L1060,540 Q1040,800 1300,1080Z" fill="${mixHex(P.floor, "#c9ced6", 0.15)}" ${st} stroke-width="5"/>`;
+      for (let x = -20; x < 1940; x += 200) b += cut(R(x, 520, 190, 90, "#1f5f48", 30));
+      b += cut(R(300, 640, 420, 20, "#8a5a3c", 6) + R(300, 600, 420, 14, "#8a5a3c", 6) + R(320, 660, 16, 100, INK, 3, "") + R(684, 660, 16, 100, INK, 3, "") + R(300, 560, 16, 100, INK, 3, "") + R(704, 560, 16, 100, INK, 3, ""));
+      b += K.post(900, 780, 560, true, "#ffe9b0") + PROPS.piggy.draw({ x: 520, y: 770, k: 0.34, state: "asleep" }) + K.post(1700, 780, 520, true, "#ffe9b0").slice(0, 0);
+      return { back: b, front: cut(R(-20, 960, 2000, 160, "#173d33", 0)) + D.fgPlant(1890, 1090, 1.3) }; },
+  };
+
+  Object.assign(SET_AMBIENCE, { "trading_floor:dawn": "office", "trading_floor:exchange": "crowd", "corridor:exec": "room", "corridor:doors": "room", "corridor:courthouse": "room", "lawn:playground": "outdoors", "lawn:park": "night" });
+
+  // @cfo-reg
   // Draw a set for a shot: the set itself, its dressing in its palette, or a palette wash over a set that draws its own colours.
   function draw(name, o) {
-    o = o || {}; const fn = SETS[name] || SETS.studio, out = fn(o), night = NIGHT_FIRST[name] ? o.night !== false : !!o.night;
+    o = o || {}; const vf = VARIANT[name] && VARIANT[name][o.dress]; if (vf && !o.bare) { const x = vf(o); return { back: x.back || "", front: x.front || "" }; }
+    const fn = SETS[name] || SETS.studio, out = fn(o), night = NIGHT_FIRST[name] ? o.night !== false : !!o.night;
     let back = out.back, front = out.front || "";
     if (DRESS[name] && !o.bare) { const x = DRESS[name](o, pal(o, SET_PALETTE[name], night), night); back += x.back || ""; front += x.front || ""; }
     else if (o.palette && !DRESS[name] && PALETTES[o.palette]) back += wash(pal(o, o.palette, night), night);
@@ -1111,9 +1480,12 @@
     // steam rises and fades again and again; a clock's second hand steps once a second; the foreground drifts a little faster than the room (depth)
     svg.querySelectorAll(".steam").forEach((p, i) => tl.fromTo(p, { y: 0, opacity: 0.75 }, { y: -46, opacity: 0, duration: 1.8, repeat: Math.ceil(d / 1.8) + 1, ease: "none", immediateRender: false }, t0 - (i % 3) * 0.6));
     svg.querySelectorAll(".secs").forEach((p) => { gsap.set(p, { svgOrigin: p.getAttribute("data-cx") + " " + p.getAttribute("data-cy"), smoothOrigin: false }); const n = Math.max(1, Math.ceil(d)); tl.fromTo(p, { rotation: 0 }, { rotation: 6 * n, duration: n, ease: "steps(" + n + ")", immediateRender: false }, t0); });
+    svg.querySelectorAll(".rain").forEach((p, i) => { tl.fromTo(p, { y: -90, x: 0 }, { y: 0, x: -24, duration: 0.45, repeat: Math.ceil(d / 0.45) + 1, ease: "none", immediateRender: false }, t0); });
+    svg.querySelectorAll(".wob").forEach((p) => { gsap.set(p, { transformOrigin: "50% 50%", smoothOrigin: false }); tl.fromTo(p, { rotation: -1.6, y: -2 }, { rotation: 1.6, y: 3, duration: 0.18, yoyo: true, repeat: Math.ceil(d / 0.18) + 1, ease: "sine.inOut", immediateRender: false }, t0); });
+    svg.querySelectorAll(".pb").forEach((p) => { gsap.set(p, { transformOrigin: "50% 50%", smoothOrigin: false }); tl.fromTo(p, { opacity: 1, scale: 1 }, { opacity: 0, scale: 2.2, duration: 0.14, ease: "none", immediateRender: false }, t0 + parseFloat(p.getAttribute("data-pop") || 1)); });
     svg.querySelectorAll(".fg").forEach((p) => tl.fromTo(p, { x: 28 }, { x: -28, duration: d, ease: "none", immediateRender: false }, t0));
     svg.querySelectorAll(".tick").forEach((k, i) => { for (let t = t0 + 0.4 + (i % 6) * 0.31; t < t1; t += 1.7 + (i % 4) * 0.4) { tl.set(k, { opacity: 0.35 }, t); tl.set(k, { opacity: 1 }, t + 0.12); } });
   }
 
-  window.Sets = { SETS, PROPS, PALETTES, SET_PALETTE, SET_AMBIENCE, DRESS, D, pal, draw, animate };
+  window.Sets = { VARIANT, K, SETS, PROPS, PALETTES, SET_PALETTE, SET_AMBIENCE, DRESS, D, pal, draw, animate };
 })();

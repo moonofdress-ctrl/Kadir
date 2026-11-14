@@ -56,7 +56,7 @@ export function soundCues(res) {
    A shot names its own with "ambience": "<bed>" (or opts.ambience), none with false; else the set's bed. Cards and chapter cards are silent. */
 export function ambienceCues(res, story) {
   if (story && story.audio && story.audio.ambience === false) return [];
-  const out = [], bedOf = (s) => { const v = s.ambience != null ? s.ambience : s.opts && s.opts.ambience != null ? s.opts.ambience : SET_AMBIENCE[s.set || "studio"]; return v || null; };
+  const out = [], bedOf = (s) => { const v = s.ambience != null ? s.ambience : s.opts && s.opts.ambience != null ? s.opts.ambience : SET_AMBIENCE[(s.set || "studio") + ":" + (s.opts && s.opts.dress)] || SET_AMBIENCE[s.set || "studio"]; return v || null; };
   for (const s of res.shots) { if (s.type === "card" || s.type === "chapter") continue;
     const src = s.type === "split" ? Object.assign({}, s.panels[0] || {}, s.ambience != null ? { ambience: s.ambience } : {}) : s, bed = bedOf(src); if (!bed) continue;
     const p = out[out.length - 1], place = src.place || src.set || "studio", places = (s.type === "split" ? s.panels : [s]).map((q) => ({ place: q.place || q.set || "studio", set: q.set || "studio" }));

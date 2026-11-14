@@ -1,0 +1,1478 @@
+{
+ "shots": [
+  {
+   "id": "c7s01",
+   "type": "chapter",
+   "cue": "L155",
+   "number": 7,
+   "title": "Your Slice",
+   "explains": "Chapter 7: what this week means for the viewer's own money."
+  },
+  {
+   "id": "c7s02",
+   "type": "card",
+   "cue": "L155",
+   "text": "So where does this touch you?",
+   "emph": [
+    "you"
+   ],
+   "explains": "The question turns from Nvidia to the viewer."
+  },
+  {
+   "id": "c7s03",
+   "cue": "L155",
+   "word": 6,
+   "set": "kitchen",
+   "opts": {
+    "palette": "amber",
+    "night": false,
+    "dress": "jar"
+   },
+   "place": "Martha's kitchen",
+   "camera": "pan_right",
+   "callback": "the coin jar on Kress's shelf (0:29)",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 1250,
+     "y": 960,
+     "scale": 0.85
+    },
+    {
+     "who": "BENNY",
+     "x": 650,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "A morning kitchen: the story is now about an ordinary person's savings, not the boardroom."
+  },
+  {
+   "id": "c7s04",
+   "type": "card",
+   "cue": "L156",
+   "word": 0,
+   "text": "Before the fall: $7 of every $100",
+   "emph": [
+    "$7"
+   ],
+   "explains": "About seven dollars of every hundred in an S&P 500 index fund was Nvidia before the fall."
+  },
+  {
+   "id": "c7s05",
+   "cue": "L156",
+   "word": 9,
+   "set": "kitchen",
+   "opts": {
+    "palette": "amber",
+    "night": false,
+    "dress": "jar"
+   },
+   "place": "Martha's kitchen",
+   "camera": "tilt_down",
+   "frame": "close",
+   "focus": [
+    960,
+    620
+   ],
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 1250,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "Inside the index-fund jar, seven coins in a hundred wear Nvidia's chip face."
+  },
+  {
+   "id": "c7s06",
+   "cue": "L156",
+   "word": 17,
+   "set": "kitchen",
+   "opts": {
+    "palette": "amber",
+    "night": false,
+    "dress": "jar"
+   },
+   "place": "Martha's kitchen",
+   "camera": "still",
+   "frame": "medium",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 1250,
+     "y": 960,
+     "scale": 0.85
+    },
+    {
+     "who": "BENNY",
+     "x": 650,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "After this week the Nvidia stack in the jar is smaller."
+  },
+  {
+   "id": "c7s07",
+   "cue": "L156",
+   "word": 24,
+   "set": "kitchen",
+   "opts": {
+    "palette": "amber",
+    "night": false,
+    "dress": "jar"
+   },
+   "place": "Martha's kitchen",
+   "camera": "pan_left",
+   "frame": "close",
+   "focus": [
+    1250,
+    560
+   ],
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 1250,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "Nobody has published the new share yet, so the channel does not guess one."
+  },
+  {
+   "id": "c7s08",
+   "cue": "L157",
+   "set": "kitchen",
+   "opts": {
+    "palette": "amber",
+    "night": false,
+    "dress": "jar"
+   },
+   "place": "Martha's kitchen",
+   "camera": "still",
+   "frame": "medium",
+   "focus": [
+    1250,
+    600
+   ],
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 1250,
+     "y": 960,
+     "scale": 0.85,
+     "speaks": [
+      "L157"
+     ]
+    },
+    {
+     "who": "BENNY",
+     "x": 650,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "Martha asks Benny whether he owns Nvidia."
+  },
+  {
+   "id": "c7s09",
+   "cue": "L158",
+   "set": "kitchen",
+   "opts": {
+    "palette": "amber",
+    "night": false,
+    "dress": "jar"
+   },
+   "place": "Martha's kitchen",
+   "camera": "pan_right",
+   "frame": "close",
+   "focus": [
+    650,
+    560
+   ],
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 650,
+     "y": 960,
+     "scale": 0.85,
+     "speaks": [
+      "L158"
+     ]
+    },
+    {
+     "who": "MARTHA",
+     "x": 1250,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "Benny is sure he owns none."
+  },
+  {
+   "id": "c7s10",
+   "cue": "L159",
+   "set": "kitchen",
+   "opts": {
+    "palette": "amber",
+    "night": false,
+    "dress": "jar"
+   },
+   "place": "Martha's kitchen",
+   "camera": "still",
+   "frame": "ots",
+   "ots": {
+    "speaker": "MARTHA",
+    "listener": "BENNY"
+   },
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 1250,
+     "y": 960,
+     "scale": 0.85,
+     "speaks": [
+      "L159"
+     ]
+    },
+    {
+     "who": "BENNY",
+     "x": 650,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "Martha, calculator in hand, asks about his index fund."
+  },
+  {
+   "id": "c7s11",
+   "cue": "L160",
+   "set": "kitchen",
+   "opts": {
+    "palette": "amber",
+    "night": false,
+    "dress": "jar"
+   },
+   "place": "Martha's kitchen",
+   "camera": "tilt_up",
+   "frame": "close",
+   "focus": [
+    650,
+    560
+   ],
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 650,
+     "y": 960,
+     "scale": 0.85,
+     "speaks": [
+      "L160"
+     ]
+    },
+    {
+     "who": "MARTHA",
+     "x": 1250,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "Benny admits he has an index fund."
+  },
+  {
+   "id": "c7s12",
+   "cue": "L161",
+   "set": "kitchen",
+   "opts": {
+    "palette": "amber",
+    "night": false,
+    "dress": "jar"
+   },
+   "place": "Martha's kitchen",
+   "camera": "still",
+   "frame": "close",
+   "focus": [
+    1250,
+    560
+   ],
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 1250,
+     "y": 960,
+     "scale": 0.85,
+     "speaks": [
+      "L161"
+     ]
+    },
+    {
+     "who": "BENNY",
+     "x": 650,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "An index fund owner owns Nvidia without choosing it."
+  },
+  {
+   "id": "c7s13",
+   "cue": "L162",
+   "set": "kitchen",
+   "opts": {
+    "palette": "amber",
+    "night": false,
+    "dress": "jar"
+   },
+   "place": "Martha's kitchen",
+   "camera": "pull_out",
+   "frame": "medium",
+   "focus": [
+    650,
+    600
+   ],
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 650,
+     "y": 960,
+     "scale": 0.85,
+     "speaks": [
+      "L162"
+     ]
+    },
+    {
+     "who": "MARTHA",
+     "x": 1250,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "Benny realises the company in the news is in his own savings."
+  },
+  {
+   "id": "c7s14",
+   "cue": "L163",
+   "set": "kitchen",
+   "opts": {
+    "palette": "amber",
+    "night": false,
+    "dress": "jar"
+   },
+   "place": "Martha's kitchen",
+   "camera": "push_in",
+   "frame": "close",
+   "focus": [
+    900,
+    520
+   ],
+   "callback": "CHIP's price tag (running number)",
+   "actors": [
+    {
+     "thing": "envelope",
+     "x": 900,
+     "y": 820,
+     "scale": 1.1,
+     "label": "401(k)"
+    },
+    {
+     "thing": "chip",
+     "x": 1350,
+     "y": 860,
+     "scale": 0.7
+    }
+   ],
+   "explains": "Benny's 401(k) statement sweats: Nvidia sits inside it."
+  },
+  {
+   "id": "c7s15",
+   "cue": "L163",
+   "word": 7,
+   "set": "kitchen",
+   "opts": {
+    "palette": "amber",
+    "night": false,
+    "dress": "jar"
+   },
+   "place": "Martha's kitchen",
+   "camera": "pan_left",
+   "frame": "medium",
+   "actors": [
+    {
+     "thing": "envelope",
+     "x": 700,
+     "y": 820,
+     "scale": 1
+    },
+    {
+     "thing": "chip",
+     "x": 1200,
+     "y": 860,
+     "scale": 0.8,
+     "label": "NVIDIA"
+    }
+   ],
+   "explains": "The company inside that fund is run, for now, by its finance chief on a temporary title."
+  },
+  {
+   "id": "c7s16",
+   "cue": "L164",
+   "set": "kitchen",
+   "opts": {
+    "palette": "amber",
+    "night": false,
+    "dress": "jar"
+   },
+   "place": "Martha's kitchen",
+   "camera": "tilt_down",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 650,
+     "y": 960,
+     "scale": 0.85
+    },
+    {
+     "who": "MARTHA",
+     "x": 1250,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "Young or old, anyone holding the index holds the same envelope."
+  },
+  {
+   "id": "c7s17",
+   "cue": "L164",
+   "word": 5,
+   "set": "kitchen",
+   "opts": {
+    "palette": "amber",
+    "night": false,
+    "dress": "jar"
+   },
+   "place": "Martha's kitchen",
+   "camera": "pan_right",
+   "frame": "close",
+   "focus": [
+    960,
+    640
+   ],
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 650,
+     "y": 960,
+     "scale": 0.85
+    },
+    {
+     "who": "MARTHA",
+     "x": 1250,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "Owning the index means owning a share of Nvidia's leadership question."
+  },
+  {
+   "id": "c7s18",
+   "type": "card",
+   "cue": "L165",
+   "word": 0,
+   "text": "Tuesday, 17 November",
+   "emph": [
+    "17 November"
+   ],
+   "explains": "The date that matters: Tuesday, 17 November."
+  },
+  {
+   "id": "c7s19",
+   "cue": "L165",
+   "word": 5,
+   "set": "corner_office",
+   "opts": {
+    "palette": "violet",
+    "night": true,
+    "view": "wide",
+    "clock_lit": true,
+    "clock": "4:20"
+   },
+   "place": "corner office",
+   "light": {
+    "x": 1250,
+    "y": 380,
+    "r": 850,
+    "color": "#ffd27a",
+    "dark": 0.45
+   },
+   "camera": "tilt_up",
+   "callback": "the wall clock (0:08)",
+   "actors": [],
+   "explains": "The wall clock that hid in shadow at the start is lit at last: results come at about 4:20 p.m. Eastern."
+  },
+  {
+   "id": "c7s20",
+   "cue": "L165",
+   "word": 11,
+   "set": "corner_office",
+   "opts": {
+    "palette": "violet",
+    "night": true,
+    "view": "desk"
+   },
+   "place": "corner office",
+   "light": {
+    "x": 960,
+    "y": 420,
+    "r": 800,
+    "color": "#ffd27a",
+    "dark": 0.45
+   },
+   "camera": "pan_left",
+   "frame": "close",
+   "focus": [
+    960,
+    540
+   ],
+   "actors": [],
+   "explains": "The numbers cover a quarter that ended on 25 October, weeks earlier."
+  },
+  {
+   "id": "c7s21",
+   "cue": "L166",
+   "set": "radio_studio",
+   "opts": {
+    "palette": "red",
+    "night": true
+   },
+   "place": "radio studio",
+   "light": {
+    "kind": "neon",
+    "x": 760,
+    "x2": 1300,
+    "y": 200,
+    "r": 900,
+    "color": "#ff5a4a",
+    "color2": "#ffb0a0",
+    "dark": 0.4
+   },
+   "camera": "pan_right",
+   "angle": "low",
+   "actors": [],
+   "explains": "At 5 p.m. Eastern the call goes on air: the voice comes after the numbers."
+  },
+  {
+   "id": "c7s22",
+   "cue": "L166",
+   "word": 5,
+   "set": "radio_studio",
+   "opts": {
+    "palette": "red",
+    "night": true
+   },
+   "place": "radio studio",
+   "light": {
+    "kind": "neon",
+    "x": 760,
+    "x2": 1300,
+    "y": 200,
+    "r": 900,
+    "color": "#ff5a4a",
+    "color2": "#ffb0a0",
+    "dark": 0.4
+   },
+   "camera": "pull_out",
+   "frame": "medium",
+   "focus": [
+    1100,
+    600
+   ],
+   "actors": [],
+   "explains": "Kress's written commentary lands on the desk right after the release, before anyone speaks."
+  },
+  {
+   "id": "c7s23",
+   "cue": "L167",
+   "set": "train_platform",
+   "opts": {
+    "palette": "teal",
+    "night": true
+   },
+   "place": "train platform",
+   "light": {
+    "kind": "screen",
+    "x": 960,
+    "y": 260,
+    "r": 900,
+    "color": "#ffcf5a",
+    "dark": 0.45
+   },
+   "camera": "pan_left",
+   "extras": 3,
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 760,
+     "y": 960,
+     "scale": 0.85
+    },
+    {
+     "who": "HAL",
+     "x": 1180,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "Look at the dates on the board."
+  },
+  {
+   "id": "c7s24",
+   "cue": "L167",
+   "word": 9,
+   "set": "train_platform",
+   "opts": {
+    "palette": "teal",
+    "night": true
+   },
+   "place": "train platform",
+   "light": {
+    "kind": "screen",
+    "x": 960,
+    "y": 260,
+    "r": 900,
+    "color": "#ffcf5a",
+    "dark": 0.45
+   },
+   "camera": "tilt_down",
+   "extras": 3,
+   "frame": "close",
+   "focus": [
+    960,
+    330
+   ],
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 760,
+     "y": 960,
+     "scale": 0.85
+    },
+    {
+     "who": "HAL",
+     "x": 1180,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "The quarter in Tuesday's numbers closed before the board's review began: old numbers, new voice."
+  },
+  {
+   "id": "c7s25",
+   "cue": "L168",
+   "set": "train_platform",
+   "opts": {
+    "palette": "teal",
+    "night": true
+   },
+   "place": "train platform",
+   "light": {
+    "kind": "screen",
+    "x": 960,
+    "y": 260,
+    "r": 900,
+    "color": "#ffcf5a",
+    "dark": 0.45
+   },
+   "camera": "still",
+   "extras": 3,
+   "frame": "close",
+   "focus": [
+    760,
+    560
+   ],
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 760,
+     "y": 960,
+     "scale": 0.85,
+     "speaks": [
+      "L168"
+     ]
+    },
+    {
+     "who": "HAL",
+     "x": 1180,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "Benny checks: the numbers are from before."
+  },
+  {
+   "id": "c7s26",
+   "cue": "L169",
+   "set": "train_platform",
+   "opts": {
+    "palette": "teal",
+    "night": true
+   },
+   "place": "train platform",
+   "light": {
+    "kind": "screen",
+    "x": 960,
+    "y": 260,
+    "r": 900,
+    "color": "#ffcf5a",
+    "dark": 0.45
+   },
+   "camera": "pan_right",
+   "extras": 3,
+   "frame": "medium",
+   "focus": [
+    1180,
+    600
+   ],
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 1180,
+     "y": 960,
+     "scale": 0.85,
+     "speaks": [
+      "L169"
+     ]
+    },
+    {
+     "who": "BENNY",
+     "x": 760,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "Hal: the numbers are from before the change, the voice reading them is from after."
+  },
+  {
+   "id": "c7s27",
+   "cue": "L170",
+   "set": "sports_bar",
+   "opts": {
+    "palette": "green",
+    "night": true
+   },
+   "place": "sports bar",
+   "light": {
+    "kind": "screen",
+    "x": 960,
+    "y": 300,
+    "r": 950,
+    "color": "#cfe8ff",
+    "dark": 0.45
+   },
+   "camera": "pan_left",
+   "extras": 10,
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 700,
+     "y": 960,
+     "scale": 0.85,
+     "speaks": [
+      "L170"
+     ]
+    },
+    {
+     "who": "HAL",
+     "x": 1300,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "A bar crowd waits for Tuesday like a big game."
+  },
+  {
+   "id": "c7s28",
+   "cue": "L171",
+   "set": "sports_bar",
+   "opts": {
+    "palette": "green",
+    "night": true
+   },
+   "place": "sports bar",
+   "light": {
+    "kind": "screen",
+    "x": 960,
+    "y": 300,
+    "r": 950,
+    "color": "#cfe8ff",
+    "dark": 0.45
+   },
+   "camera": "still",
+   "extras": 10,
+   "frame": "close",
+   "focus": [
+    1300,
+    560
+   ],
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 1300,
+     "y": 960,
+     "scale": 0.85,
+     "speaks": [
+      "L171"
+     ]
+    },
+    {
+     "who": "CHAD",
+     "x": 700,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "Kick-off is 4:20 p.m. Eastern."
+  },
+  {
+   "id": "c7s29",
+   "cue": "L172",
+   "set": "sports_bar",
+   "opts": {
+    "palette": "green",
+    "night": true
+   },
+   "place": "sports bar",
+   "light": {
+    "kind": "screen",
+    "x": 960,
+    "y": 300,
+    "r": 950,
+    "color": "#cfe8ff",
+    "dark": 0.45
+   },
+   "camera": "tilt_up",
+   "extras": 10,
+   "frame": "ots",
+   "ots": {
+    "speaker": "CHAD",
+    "listener": "HAL"
+   },
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 700,
+     "y": 960,
+     "scale": 0.85,
+     "speaks": [
+      "L172"
+     ]
+    },
+    {
+     "who": "HAL",
+     "x": 1300,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "Chad wants to know who is playing."
+  },
+  {
+   "id": "c7s30",
+   "cue": "L173",
+   "set": "sports_bar",
+   "opts": {
+    "palette": "green",
+    "night": true
+   },
+   "place": "sports bar",
+   "light": {
+    "kind": "screen",
+    "x": 960,
+    "y": 300,
+    "r": 950,
+    "color": "#cfe8ff",
+    "dark": 0.45
+   },
+   "camera": "pull_out",
+   "extras": 10,
+   "frame": "medium",
+   "focus": [
+    1300,
+    600
+   ],
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 1300,
+     "y": 960,
+     "scale": 0.85,
+     "speaks": [
+      "L173"
+     ]
+    },
+    {
+     "who": "CHAD",
+     "x": 700,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "One person plays both positions: finance chief and interim boss."
+  },
+  {
+   "id": "c7s31",
+   "type": "card",
+   "cue": "L174",
+   "word": 0,
+   "text": "Questions: analysts and big investors only",
+   "emph": [
+    "only"
+   ],
+   "explains": "Only analysts and big investors may ask questions on the call."
+  },
+  {
+   "id": "c7s32",
+   "cue": "L174",
+   "word": 9,
+   "set": "theatre",
+   "opts": {
+    "palette": "ochre",
+    "night": true,
+    "dress": "box_office"
+   },
+   "place": "theatre box office",
+   "light": {
+    "x": 1100,
+    "y": 260,
+    "r": 850,
+    "color": "#ffd890",
+    "dark": 0.45
+   },
+   "camera": "tilt_down",
+   "angle": "high",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 700,
+     "y": 960,
+     "scale": 0.8
+    },
+    {
+     "who": "REGGIE",
+     "x": 1250,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "Anyone can listen on the webcast: Benny's ticket says listen only."
+  },
+  {
+   "id": "c7s33",
+   "cue": "L175",
+   "set": "theatre",
+   "opts": {
+    "palette": "ochre",
+    "night": true,
+    "dress": "box_office"
+   },
+   "place": "theatre box office",
+   "light": {
+    "x": 1100,
+    "y": 260,
+    "r": 850,
+    "color": "#ffd890",
+    "dark": 0.45
+   },
+   "camera": "still",
+   "frame": "medium",
+   "focus": [
+    700,
+    600
+   ],
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 700,
+     "y": 960,
+     "scale": 0.85,
+     "speaks": [
+      "L175"
+     ]
+    },
+    {
+     "who": "REGGIE",
+     "x": 1250,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "Benny asks to ask a question."
+  },
+  {
+   "id": "c7s34",
+   "cue": "L176",
+   "set": "theatre",
+   "opts": {
+    "palette": "ochre",
+    "night": true,
+    "dress": "box_office"
+   },
+   "place": "theatre box office",
+   "light": {
+    "x": 1100,
+    "y": 260,
+    "r": 850,
+    "color": "#ffd890",
+    "dark": 0.45
+   },
+   "camera": "pan_left",
+   "frame": "ots",
+   "ots": {
+    "speaker": "REGGIE",
+    "listener": "BENNY"
+   },
+   "actors": [
+    {
+     "who": "REGGIE",
+     "x": 1250,
+     "y": 960,
+     "scale": 0.85,
+     "speaks": [
+      "L176"
+     ]
+    },
+    {
+     "who": "BENNY",
+     "x": 700,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "The window says no."
+  },
+  {
+   "id": "c7s35",
+   "cue": "L177",
+   "set": "theatre",
+   "opts": {
+    "palette": "ochre",
+    "night": true,
+    "dress": "box_office"
+   },
+   "place": "theatre box office",
+   "light": {
+    "x": 1100,
+    "y": 260,
+    "r": 850,
+    "color": "#ffd890",
+    "dark": 0.45
+   },
+   "camera": "still",
+   "frame": "close",
+   "focus": [
+    700,
+    560
+   ],
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 700,
+     "y": 960,
+     "scale": 0.85,
+     "speaks": [
+      "L177"
+     ]
+    },
+    {
+     "who": "REGGIE",
+     "x": 1250,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "Benny asks to listen."
+  },
+  {
+   "id": "c7s36",
+   "cue": "L178",
+   "set": "theatre",
+   "opts": {
+    "palette": "ochre",
+    "night": true,
+    "dress": "box_office"
+   },
+   "place": "theatre box office",
+   "light": {
+    "x": 1100,
+    "y": 260,
+    "r": 850,
+    "color": "#ffd890",
+    "dark": 0.45
+   },
+   "camera": "tilt_up",
+   "frame": "close",
+   "focus": [
+    1250,
+    560
+   ],
+   "actors": [
+    {
+     "who": "REGGIE",
+     "x": 1250,
+     "y": 960,
+     "scale": 0.85,
+     "speaks": [
+      "L178"
+     ]
+    },
+    {
+     "who": "BENNY",
+     "x": 700,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "Listening is free for everyone, quietly."
+  },
+  {
+   "id": "c7s37",
+   "type": "card",
+   "cue": "L179",
+   "word": 0,
+   "text": "The first call without Huang in charge",
+   "emph": [
+    "without"
+   ],
+   "explains": "Tuesday is the first Nvidia call without Jensen Huang as chief executive."
+  },
+  {
+   "id": "c7s38",
+   "cue": "L179",
+   "word": 11,
+   "set": "theatre",
+   "opts": {
+    "palette": "pink",
+    "night": true,
+    "dress": "dressing_room"
+   },
+   "place": "dressing room",
+   "light": {
+    "x": 1150,
+    "y": 400,
+    "r": 850,
+    "color": "#ffe6c0",
+    "dark": 0.4
+   },
+   "camera": "pan_right",
+   "callback": "the calculator (0:10)",
+   "actors": [],
+   "explains": "An empty chair before the mirror: Kress's first night as interim boss, the script and the calculator waiting."
+  },
+  {
+   "id": "c7s39",
+   "cue": "L180",
+   "set": "theatre",
+   "opts": {
+    "palette": "pink",
+    "night": true,
+    "dress": "dressing_room"
+   },
+   "place": "dressing room",
+   "light": {
+    "x": 1150,
+    "y": 400,
+    "r": 850,
+    "color": "#ffe6c0",
+    "dark": 0.4
+   },
+   "camera": "tilt_down",
+   "frame": "close",
+   "focus": [
+    1150,
+    560
+   ],
+   "actors": [],
+   "explains": "An outside analyst (StoneX's Matt Weller) calls it Nvidia's first test since Huang left."
+  },
+  {
+   "id": "c7s40",
+   "cue": "L181",
+   "set": "lawn",
+   "opts": {
+    "palette": "blue",
+    "night": true,
+    "dress": "park"
+   },
+   "place": "park bench",
+   "light": {
+    "x": 1250,
+    "y": 220,
+    "r": 850,
+    "color": "#ffe0a0",
+    "dark": 0.45
+   },
+   "camera": "pan_left",
+   "ambience": "night",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 750,
+     "y": 960,
+     "scale": 0.85,
+     "speaks": [
+      "L181"
+     ]
+    },
+    {
+     "who": "MARTHA",
+     "x": 1200,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "At night on a park bench, Benny asks what he should do on Tuesday."
+  },
+  {
+   "id": "c7s41",
+   "cue": "L182",
+   "set": "lawn",
+   "opts": {
+    "palette": "blue",
+    "night": true,
+    "dress": "park"
+   },
+   "place": "park bench",
+   "light": {
+    "x": 1250,
+    "y": 220,
+    "r": 850,
+    "color": "#ffe0a0",
+    "dark": 0.45
+   },
+   "camera": "still",
+   "frame": "close",
+   "focus": [
+    1200,
+    560
+   ],
+   "ambience": "night",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 1200,
+     "y": 960,
+     "scale": 0.85,
+     "speaks": [
+      "L182"
+     ]
+    },
+    {
+     "who": "BENNY",
+     "x": 750,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "Martha's answer: listen."
+  },
+  {
+   "id": "c7s42",
+   "cue": "L183",
+   "set": "lawn",
+   "opts": {
+    "palette": "blue",
+    "night": true,
+    "dress": "park"
+   },
+   "place": "park bench",
+   "light": {
+    "x": 1250,
+    "y": 220,
+    "r": 850,
+    "color": "#ffe0a0",
+    "dark": 0.45
+   },
+   "camera": "pan_right",
+   "frame": "ots",
+   "ots": {
+    "speaker": "BENNY",
+    "listener": "MARTHA"
+   },
+   "ambience": "night",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 750,
+     "y": 960,
+     "scale": 0.85,
+     "speaks": [
+      "L183"
+     ]
+    },
+    {
+     "who": "MARTHA",
+     "x": 1200,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "Benny expected more."
+  },
+  {
+   "id": "c7s43",
+   "cue": "L184",
+   "set": "lawn",
+   "opts": {
+    "palette": "blue",
+    "night": true,
+    "dress": "park"
+   },
+   "place": "park bench",
+   "light": {
+    "x": 1250,
+    "y": 220,
+    "r": 850,
+    "color": "#ffe0a0",
+    "dark": 0.45
+   },
+   "camera": "tilt_up",
+   "frame": "medium",
+   "focus": [
+    1200,
+    600
+   ],
+   "ambience": "night",
+   "actors": [
+    {
+     "who": "MARTHA",
+     "x": 1200,
+     "y": 960,
+     "scale": 0.85,
+     "speaks": [
+      "L184"
+     ]
+    },
+    {
+     "who": "BENNY",
+     "x": 750,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "Listening already puts you ahead of most people."
+  },
+  {
+   "id": "c7s44",
+   "cue": "L185",
+   "set": "lawn",
+   "opts": {
+    "palette": "blue",
+    "night": true,
+    "dress": "park"
+   },
+   "place": "park bench",
+   "light": {
+    "x": 1250,
+    "y": 220,
+    "r": 850,
+    "color": "#ffe0a0",
+    "dark": 0.45
+   },
+   "camera": "pan_left",
+   "frame": "medium",
+   "ambience": "night",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 750,
+     "y": 960,
+     "scale": 0.85
+    },
+    {
+     "who": "MARTHA",
+     "x": 1200,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "This is not a tip to buy or sell."
+  },
+  {
+   "id": "c7s45",
+   "cue": "L185",
+   "word": 7,
+   "set": "lawn",
+   "opts": {
+    "palette": "blue",
+    "night": true,
+    "dress": "park"
+   },
+   "place": "park bench",
+   "light": {
+    "x": 1250,
+    "y": 220,
+    "r": 850,
+    "color": "#ffe0a0",
+    "dark": 0.45
+   },
+   "camera": "tilt_down",
+   "frame": "close",
+   "focus": [
+    800,
+    640
+   ],
+   "ambience": "night",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 750,
+     "y": 960,
+     "scale": 0.85
+    },
+    {
+     "who": "MARTHA",
+     "x": 1200,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "It is only a date to mark: Tuesday, 17 November."
+  },
+  {
+   "id": "c7s46",
+   "cue": "L186",
+   "set": "lawn",
+   "opts": {
+    "palette": "blue",
+    "night": true,
+    "dress": "park"
+   },
+   "place": "park bench",
+   "light": {
+    "x": 1250,
+    "y": 220,
+    "r": 850,
+    "color": "#ffe0a0",
+    "dark": 0.45
+   },
+   "camera": "pull_out",
+   "ambience": "night",
+   "actors": [
+    {
+     "who": "BENNY",
+     "x": 750,
+     "y": 960,
+     "scale": 0.85
+    },
+    {
+     "who": "MARTHA",
+     "x": 1200,
+     "y": 960,
+     "scale": 0.85
+    }
+   ],
+   "explains": "Three things to watch for when the numbers land, coming next."
+  }
+ ]
+}
