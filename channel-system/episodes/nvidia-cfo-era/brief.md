@@ -4,7 +4,7 @@ Topic: Nvidia after Jensen Huang: why the CFO, Colette Kress, is running a $4 tr
 Working title: Why Nvidia Is Led by Its CFO Now (from the topics file; the packager decides)
 Why now (event and date): Huang resigned as CEO, president and director on Thu 12 Nov 2026 (Nvidia release, effective immediately); results Tue 17 Nov 2026 at about 4:20 p.m. ET and the call at 5:00 p.m. ET (= 00:20 and 01:00 Turkey time, Wed 18 Nov), the first without him
 Thumbnail money figure: not chosen. Candidates with sources: about -$493B market value, Fri 6 Nov to Thu 12 Nov ($4.498T to $4.005T; Yahoo live blog, own subtraction, must be checked); or the expected quarter, about $109B revenue (StoneX). Check before use
-Approved by the user on: 2026-11-14 (topic, Gate 1: topic #2 chosen); script and look gates not yet
+Approved by the user on: 2026-11-14 (topic, Gate 1: topic #2 chosen); 2026-11-14 (script, Gate 2: "devam edelim", after asking for a stronger opening, which the main session rewrote: the desk phone note TUE 5:00 PM); Look gate not yet
 Still moving (yes/no): yes
 State of the story as of Sat 14 Nov 2026 (research.md): Huang resigned (Nvidia release 12 Nov; board accepted it 11 Nov per TechCrunch citing the filing), no reason given; Kress is Interim CEO and keeps the CFO job; Harvey C. Jones is the first board chair; search for a permanent CEO is open (FT via Yahoo: Arm's Rene Haas approached, single source); shares about $162-166; HSBC cut to Hold 13 Nov; results Tue 17 Nov. Fri 13 Nov close not found
 Voice for this episode (scratch track / final track from <product>):
@@ -19,3 +19,4 @@ Backup: <folder of the copy after the render, SETUP.md>
 Gates the user has waived for this episode (which, and the date they said so; the Look gate's draft is sent to the user even then):
 Look gate (date the 30 s draft was sent to the user, and the verdict beside `brand/quality_reference.jpg`; say whether the user or QA gave it):
 The user's comments (on the Look gate draft, the render, the upload; dated, in their words, for the improver):
+Upload time (14 Nov 2026): the session recommends Tue 17 Nov 18:00 TR (10:00 ET, 6h20 before the results) instead of 22:00; the late-news cut-off then moves to about 15:00 TR. Waiting for the user's yes; until then 22:00 stands.
