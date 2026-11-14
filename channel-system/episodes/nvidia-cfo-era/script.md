@@ -3,7 +3,7 @@
 ROUTE: 11 The clock (from Sunday's board review to Tuesday's 4:20 p.m. results; the last bell has not rung when the video goes out at 14:00 ET, so the ending owes the state at upload time, dated, and what stays unresolved: what to look for, no claim about the outcome)
 QUESTION: Who is running Nvidia now, and why does Tuesday matter?
 ANSWER: Its finance chief, Colette Kress, on an interim title while she keeps her old job, because Jensen Huang left all three of his seats at once with no successor named; and Tuesday, 17 November, at about 4:20 p.m. Eastern, is the first time the market gets Nvidia's numbers with someone other than Huang as chief executive, from the same person who signs them.
-CHAIN: Huang held three seats and no successor was named -> so a board review (8 Nov) cost the shares about nine and a half percent in two days -> then two newspaper reports land after Wednesday's close (11 Nov) and the shares fall after hours; the filing says the board accepted his resignation that day -> so on Thursday (12 Nov) Nvidia announces it, effective immediately, with no reason -> the seat goes to the CFO as interim, who keeps her old job, a first-ever chair is named and a search starts -> but the market reads "no plan": down as much as twelve percent in a day, and HSBC cuts to Hold because the succession plan is "unclear" -> so Tuesday's results and call are the first time the numbers and the new boss are heard together
+CHAIN: Huang held three seats and no successor was named -> so a board review (8 Nov) cost the shares about nine and a half percent in two days -> then two newspaper reports land after Wednesday's close (11 Nov) and the shares fall after hours; the filing says the board accepted his resignation that day -> so on Thursday (12 Nov) Nvidia announces it, effective immediately, with no reason -> the seat goes to the CFO as interim, who keeps her old job, a first-ever chair is named and a search starts -> but the market reads "no plan": down more than twelve percent at one point in a day, and HSBC cuts to Hold because the succession plan is "unclear" -> so Tuesday's results and call are the first time the numbers and the new boss are heard together
 
 ## DEVICES
 MOTIF: the door plate | the corner office's door plate. CH1 s01: CHIEF EXECUTIVE, the name scraped off, a gloved hand pressing a strip of masking tape INTERIM over it. CH2 s12: the same plate in daylight, before, with one name and three little brass plates under it (CEO, PRESIDENT, BOARD). CH4 s25: the three brass plates unscrewed and dropped in a box. CH5 s31: a second plate, CFO, screwed on under the tape, so the door wears two. CH6 s40: the plates rattle on the door each time the ticker slams. CH8 s52: an empty frame with a question mark screwed on above the tape, for the permanent name. CH8 s58 (last shot): the same door at night, tape, CFO plate and the empty frame, the wall clock beside it reading 4:20. Eight appearances.
@@ -20,7 +20,7 @@ VIEWER: BENNY on his phone at a bus stop (CH1 k02), on his couch after midnight 
 (Notes, not spoken. Kept: A. The other two can be swapped in for the first 15 seconds.)
 - A, kept (the worst moment): Thursday, 12 November, the corner office at night. The chief executive's chair is empty, a black jacket on its back; at the next desk Colette Kress, the finance chief, now the interim boss, her CFO plate and calculator still in front of her. "Thursday, the twelfth of November. The chief executive's chair at Nvidia is empty... and the person now in charge is still sitting at her old desk."
 - B (an impossible question): CHIP alone on a dark desk under the INTERIM tape. N: "How do you run a four-trillion-dollar company... when the title on your door says 'for now'?" CHIP: "Who's in the chair?"
-- C (a shocking figure and its contradiction): a ticker sign slamming down in the dark. N: "On Thursday, Nvidia's shares fell as much as twelve percent in a day. The person now running it... is the person who counts its money."
+- C (a shocking figure and its contradiction): a ticker sign slamming down in the dark. N: "On Thursday, Nvidia's shares fell more than twelve percent at one point. The person now running it... is the person who counts its money."
 
 ## CH1 The empty chair
 [SCENE s01 | set: a corner office at night, one desk lamp; a black leather jacket hangs on the back of an empty chief executive's chair; through the glass door, a gloved hand presses a strip of masking tape over the plate CHIEF EXECUTIVE, and the tape roll runs out on the last letter; close on the next desk, where a woman works under the lamp beside a calculator and a CFO plate (Colette Kress caricature, neutral, working) | text: COLETTE KRESS]
@@ -82,7 +82,7 @@ REGGIE: It will.
 [SCENE s12 | set: a sunny office corridor of glass doors; the corner door's plate reads CHIEF EXECUTIVE with one name, and three small brass plates under it: CEO, PRESIDENT, BOARD, stacked so low the last one hides behind the doorknob]
 [CARD]
 N: Until this week, Nvidia's board had no chair at all. The man at the top held the company's three biggest seats himself.
-[SCENE s13 | set: a TV studio at night, one key light, an analyst figure in glasses at a desk with a name strip (Gil Luria caricature) and a small card reading FOX BUSINESS; on the monitor behind him a seesaw tips with all its weight on one end | text: GIL LURIA, DA DAVIDSON]
+[SCENE s13 | set: a TV studio at night, one key light, an analyst figure in glasses at a desk with a name strip (Gil Luria caricature, neutral) and a small card reading FOX BUSINESS; on the monitor behind him a seesaw tips with all its weight on one end | text: GIL LURIA, DA DAVIDSON]
 N: Gil Luria of DA Davidson told Fox Business that much of the decision-making was concentrated in Huang.
 N: So the risk was never only the reports. It was the empty seats they could leave behind.
 [SKIT k06a | set: a theatre coat check at night, one lamp over the counter, Reggie holding three claim tickets, a single black jacket on one hook, the chip peering over the counter]
@@ -117,7 +117,7 @@ CHAD: So?
 HAL: So the night shift starts.
 [SCENE s21 | set: a printing press at night, one hanging lamp, two folded newspapers with faces rolling off the belt: THE NEW YORK TIMES and THE WALL STREET JOURNAL; the chip's price tag swings behind them with a red sticker | text: -8% AFTER HOURS]
 [CARD]
-N: After the close, two newspapers publish reports. Both rest on people they don't name.
+N: After the close, two newspapers publish reports. The market reads both overnight.
 [CARD]
 N: The New York Times reports a second relationship, with a senior Nvidia executive who reports to Huang.
 [SCENE s22 | set: a dark corridor of closed office doors, one exit sign; a stamp on the wall reads NOT CONFIRMED BY NVIDIA OR HUANG; nobody is drawn in the doorways]
@@ -141,12 +141,12 @@ N: In after-hours trading, the shares fall eight to nine percent.
 N: So on Wednesday night, two clocks ran at once. The board's... and the market's.
 [SKIT k10 | set: a 24-hour laundromat at night, fluorescent light, Martha folding towels, Hal reading a newspaper on a plastic chair]
 MARTHA: Two reports in one night.
-HAL: Both from people with no names.
+HAL: Neither confirmed that night.
 MARTHA: So it's not proven.
 HAL: Not proven. Still priced.
 [SCENE s24a | set: a filing cabinet in a dark records room, one desk lamp; a drawer marked FILINGS slides open by itself, a sheet inside dated WED 11 NOV]
 [CARD]
-N: And according to a regulatory filing, as reported by TechCrunch, the board accepted his resignation that same Wednesday.
+N: And according to Nvidia's own regulatory filing, the board accepted his resignation that same Wednesday.
 N: Nvidia would announce it on Thursday.
 
 ## CH4 Effective immediately
@@ -174,7 +174,7 @@ REGGIE: Which chair? There are two now.
 CHIP: Is that better?
 REGGIE: It's more chairs.
 [SCENE s28 | set: a document card on a dark desk under one lamp, quote highlighted, with the source line NVIDIA RELEASE, 12 NOV 2026]
-N: In the release, Jones says the board has "full confidence in Colette and the leadership team". The board says, "Jensen's contributions to NVIDIA are profound."
+N: In the release, Jones says the board has "full confidence in Colette and the leadership team". The release adds, "Jensen's contributions to NVIDIA are profound."
 [SCENE s29 | set: a second document card, Kress's words highlighted, source line NVIDIA RELEASE, 12 NOV 2026]
 N: And Kress says, "Our focus remains on serving our customers, partners, developers and shareholders."
 [SKIT k13a | set: a print shop at night, one lamp over the counter, Martha reading the release, Benny looking over her shoulder; on the last line Martha flips the page and the back is blank]
@@ -206,7 +206,7 @@ HAL: And now?
 MARTHA: Now she drives it too.
 HAL: Then who's under the hood?
 [SCENE s33 | set: a darkened conference room, one projector beam on a screen marked EARNINGS CALL, an empty lectern; the chip sits on the front table, its tag reading $4.0T, and taps the microphone, which squeals]
-N: On Nvidia's earnings calls, she's the one who normally gives the numbers, according to Fox Business.
+N: On Nvidia's earnings calls, she's the one who normally walks through the numbers.
 [SKIT k15a | set: a busy food truck at lunchtime, daylight, a queue of customers (extras), Chad flipping a burger and taking cash at once, the burger landing in the till, Hal at the window with his espresso]
 CHAD: Two jobs at once? I can't do one.
 HAL: We know.
@@ -217,13 +217,13 @@ BENNY: So who's in the chair?
 CHIP: The one with the calculator.
 BENNY: Is that normal?
 CHIP: Ask four analysts. Get five opinions.
-[SCENE s34 | set: a split screen of four small TV studios, each lit by one key light, an analyst caricature in each with a name strip; panels appear one at a time with the voice; in a corner the chip hops from panel to panel like a viewer flipping channels | text: FOX BUSINESS]
+[SCENE s34 | set: a split screen of four small TV studios, each lit by one key light, an analyst caricature in each with a name strip (neutral likenesses); panels appear one at a time with the voice; in a corner the chip hops from panel to panel like a viewer flipping channels | text: FOX BUSINESS]
 [CARD]
-N: Fox Business asked four of them. One: Susannah Streeter of Wealth Club calls her a "safe pair of hands"... but says she lacks Huang's global status and deal-making ties.
-N: Two: Dan Ives of Yorkville Ives says he's a "big fan". Three: Bret Kenwell of eToro expects her to "provide stability and reassurance".
+N: Fox Business asked four of them. One: Susannah Streeter of Wealth Club calls her a "safe pair of hands"... but says she lacks Huang's global status and his deep commercial ties.
+N: Two: Dan Ives of Yorkville Ives says, "we are big fans". Three: Bret Kenwell of eToro expects her to "provide stability and reassurance".
 N: Four: Gil Luria says the task is a heavy one, because so much ran through Huang.
 [SKIT k17 | set: a quiet library reading room at night, green lamps, Martha and Hal at a long table with four newspaper clippings laid out]
-MARTHA: Safe pair of hands. Big fan. Stability.
+MARTHA: Safe pair of hands. Big fans. Stability.
 HAL: Notice the word nobody used.
 MARTHA: Which?
 HAL: Permanent.
@@ -231,9 +231,9 @@ HAL: Permanent.
 N: The analysts were calm. The market was not.
 
 ## CH6 Four trillion
-[SCENE s36 | set: a stock exchange floor on Thursday morning, bright daylight, a crowd of traders (extras) staring up at a ticker board that slams red, the whole crowd leaning back in one wave | text: UP TO -12%]
+[SCENE s36 | set: a stock exchange floor on Thursday morning, bright daylight, a crowd of traders (extras) staring up at a ticker board that slams red, the whole crowd leaning back in one wave | text: OVER 12% DOWN]
 [CARD]
-N: Thursday, the shares fell as much as twelve percent during the day.
+N: Thursday, the shares fell more than twelve percent at one point.
 [SKIT k18 | set: the trading floor, Chad in the crowd with his phone held sideways, Hal beside him with his espresso]
 CHAD: Down twelve! Buy the dip!
 HAL: It's climbing back.
@@ -248,7 +248,7 @@ N: That's our subtraction, from figures in Yahoo Finance's live blog.
 N: That's more than four times what analysts expect Nvidia to sell in the whole quarter. Our arithmetic, not a forecast.
 [SCENE s38 | set: a row of neighbouring market stalls at night under string lights, two smaller chips with faces, COREWEAVE and NEBIUS written on them, wobbling on their stools | text: -9% / -16%]
 [CARD]
-N: The neighbours shook too. CoreWeave fell nine percent and Nebius sixteen, according to TechCrunch.
+N: The neighbours shook too. On Thursday morning, CoreWeave was down about nine percent and Nebius about sixteen, according to TechCrunch.
 [SKIT k19 | set: a hospital waiting room in daylight, the two smaller chips sitting with ice packs, Martha in her scrubs with a clipboard]
 MARTHA: What happened to you two?
 COREWEAVE: We stood next to him.
@@ -260,14 +260,14 @@ N: Friday, the thirteenth. HSBC cuts Nvidia to Hold... and its price target from
 [SCENE s40 | set: the corner office door at night, the INTERIM tape and the CFO plate rattling on their screws as somewhere a ticker slams]
 N: The new target is less than half the old one.
 N: Its analyst, Frank Lee, said confidence was "shaken", as the "leadership succession plan is unclear". That's one bank's view.
-N: Michael Landsberg called the resignation "the worst-case scenario" in the saga, Fox Business reports.
+N: Michael Landsberg of Landsberg Bennett called the resignation "the worst-case scenario" in the saga, Fox Business reports.
 [SKIT k20 | set: the bank office, Hal behind the desk with a rubber stamp marked HOLD, the chip on the desk with its tag]
 HAL: Hold.
 CHIP: Hold what?
 HAL: Your breath.
 [SCENE s41 | set: a quiet street of shuttered shops at dusk, one street lamp, a newspaper box with a face; the chip walks past it alone and the box turns to watch it go | text: ~30% BELOW THE RECORD]
 [CARD]
-N: On Friday, the shares traded around one hundred and sixty-three dollars. StoneX puts them about thirty percent below their record high.
+N: On Friday, the shares closed at about one hundred and sixty-three dollars. StoneX puts them about thirty percent below their record high.
 [SKIT k21 | set: the street lamp, the chip sitting on the kerb, Benny sitting down beside it]
 CHIP: And who's in the chair after her?
 BENNY: That's the bit nobody can tell you.
@@ -328,9 +328,9 @@ N: So when the numbers land, here's what to look for. Three things.
 [SCENE s50 | set: a giant scoreboard in an empty stadium at night, floodlights on; the left column reads EXPECTED and a counter rolls up to ~$109B, the right column RESULT is blank; a lone cleaner (extra) stops sweeping to stare up at it | text: ~$109B EXPECTED]
 [CARD]
 N: One: the big number. Analysts expect revenue of about one hundred and nine billion dollars for the quarter, according to StoneX. That's three months of sales.
-N: Nvidia's own forecast was one hundred and eight billion, give or take two percent, StoneX reports. Both are estimates, not results.
+N: Nvidia's own forecast, given in August, was one hundred and eight billion, give or take two percent. Both are estimates, not results.
 [CARD]
-N: Two details in the fine print: Nvidia guided its gross margin to about seventy-four percent. And its forecast leaves out data-center chips for China, StoneX reports.
+N: Two details in that August fine print: Nvidia guided its gross margin to about seventy-four percent. And it assumed no data-center chip sales to China.
 [SKIT k26a | set: the stadium scoreboard from below, Chad pointing up at a small line reading MARGIN ~74%, Hal beside him with his thermos lid]
 CHAD: Seventy-four percent of what?
 HAL: Of each sales dollar, left after making the product.
@@ -353,12 +353,12 @@ CHIP: Ask me Tuesday.
 N: Three: any word on the search. As of Saturday, the fourteenth of November, no permanent chief executive has been named.
 [SCENE s53 | set: a phone booth on a rainy street in grey afternoon daylight; inside, a silhouette with no face holds the receiver; a stamp on the glass reads ONE REPORT, NOT CONFIRMED; behind, the office wall clock's hands race | text: A PERSON REPORTED AS APPROACHED]
 [CARD]
-N: On Friday, the Financial Times reported, as relayed by Yahoo Finance, that the board had approached an executive at another chip company. Nvidia did not confirm it. It's one report.
+N: On Friday, the Financial Times reported, as relayed by Reuters, that the board had approached an executive at another chip company. Nvidia's board says it has not formally engaged any candidate, and calls speculation about names "premature". It's one report.
 [SKIT k28 | set: the phone booth from outside, Benny and Martha under one umbrella reading the stamp on the glass]
 BENNY: Is that the new boss?
 MARTHA: It's a shadow with a phone.
-[SCENE s54 | set: a document card on a dark desk under one lamp, quote highlighted, source line HARVEY C. JONES, AS QUOTED BY CNBC]
-N: Jones, as quoted by CNBC, says the board expects "the company's operations, customer commitments and product roadmap to continue without interruption".
+[SCENE s54 | set: a document card on a dark desk under one lamp, quote highlighted, source line NVIDIA RELEASE, 12 NOV 2026]
+N: In the same release, Jones says the board expects "the company's operations, customer commitments and product roadmap to continue without interruption".
 N: As of Saturday, we found no statement from Huang on his resignation. And no report we read says whether the board's review goes on.
 [SKIT k29 | set: the bus stop at night, rain, one street lamp, Benny with his phone, the chip on the bench beside him]
 CHIP: Who's in the chair on Tuesday?
@@ -418,4 +418,4 @@ N: And why does Tuesday matter? Because at four twenty, the numbers and the new 
 
 **Still moving (CH8 only, each dated "as of Saturday, the fourteenth of November"):** no permanent chief executive named; the FT report of an approach; no statement from Huang; whether the board's review goes on. The Tuesday-morning currency check (brief.md) touches only these lines, k28 and k29.
 
-**Open:** fact-check and Gate 2. CHIP, COREWEAVE and NEBIUS need voices from the voice producer. The packager decides the title (the working title in brief.md is the CFO angle, which measured weak). Punch-up pass done 14 Nov (punchup.md; any row can be undone).
+**Open:** Gate 2 (fact-check on the script done 14 Nov: factcheck.md, 20 lines corrected). CHIP, COREWEAVE and NEBIUS need voices from the voice producer. The packager decides the title (the working title in brief.md is the CFO angle, which measured weak). Punch-up pass done 14 Nov (punchup.md; any row can be undone).
