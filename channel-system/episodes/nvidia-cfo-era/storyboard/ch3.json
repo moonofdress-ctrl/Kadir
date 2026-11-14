@@ -65,7 +65,7 @@
    "frame": "close",
    "focus": [
     960,
-    640
+    600
    ],
    "camera": "tilt_up",
    "explains": "The price ended near $174, and traders like Chad thought the bad week was behind them.",
@@ -168,10 +168,10 @@
    "place": "Chad's bedroom",
    "id": "c3k08b",
    "cue": "L057",
-   "frame": "close",
+   "frame": "medium",
    "focus": [
-    1380,
-    700
+    1000,
+    640
    ],
    "camera": "still",
    "explains": "Hal, on speakerphone, warns that the closing bell does not end the day's news.",
@@ -211,7 +211,7 @@
    "frame": "close",
    "focus": [
     860,
-    640
+    600
    ],
    "camera": "pan_right",
    "explains": "Night falls on Chad's room: after the bell, news keeps arriving and the price keeps moving.",
@@ -355,8 +355,8 @@
     },
     {
      "thing": "chip",
-     "x": 1560,
-     "y": 560,
+     "x": 1380,
+     "y": 620,
      "scale": 0.5,
      "enter": "none",
      "face": "scared"
@@ -649,7 +649,7 @@
    "frame": "close",
    "focus": [
     960,
-    640
+    600
    ],
    "camera": "tilt_up",
    "explains": "Reggie, the rule keeper, gives the legal word: it is an allegation.",
@@ -742,7 +742,7 @@
    "frame": "close",
    "focus": [
     900,
-    640
+    600
    ],
    "camera": "pan_left",
    "explains": "Not false either: an allegation is neither proven nor disproven.",
@@ -787,7 +787,7 @@
    "frame": "close",
    "focus": [
     1000,
-    640
+    600
    ],
    "camera": "tilt_down",
    "explains": "Chad is lost between true and false.",
@@ -1169,7 +1169,7 @@
    "frame": "close",
    "focus": [
     800,
-    640
+    600
    ],
    "camera": "pan_left",
    "explains": "That night neither report was confirmed by Nvidia or Huang.",
@@ -1261,7 +1261,7 @@
    "frame": "close",
    "focus": [
     860,
-    640
+    600
    ],
    "camera": "still",
    "explains": "The lesson: a report does not need to be proven for the share price to react.",

@@ -236,7 +236,7 @@
    "frame": "medium",
    "focus": [
     700,
-    420
+    510
    ],
    "explains": "Benny asks the obvious question on the bench: who was next in line?",
    "actors": [
@@ -272,7 +272,7 @@
    "frame": "close",
    "focus": [
     1120,
-    420
+    510
    ],
    "explains": "Martha's answer: nobody ever said who was next.",
    "actors": [
@@ -374,7 +374,7 @@
    "frame": "medium",
    "focus": [
     1200,
-    420
+    510
    ],
    "explains": "The records clerk asks the company who chairs its board.",
    "actors": [
@@ -416,15 +416,6 @@
    "explains": "Nobody chairs the board, and the clerk cannot believe it.",
    "actors": [
     {
-     "thing": "chip",
-     "x": 620,
-     "y": 760,
-     "scale": 0.45,
-     "speaks": [
-      "L033"
-     ]
-    },
-    {
      "who": "REGGIE",
      "x": 1260,
      "y": 980,
@@ -433,6 +424,15 @@
       "L034"
      ],
      "prop": "stamp"
+    },
+    {
+     "thing": "chip",
+     "x": 620,
+     "y": 760,
+     "scale": 0.45,
+     "speaks": [
+      "L033"
+     ]
     }
    ],
    "camera": "still"
@@ -589,7 +589,7 @@
    },
    "focus": [
     760,
-    504
+    580
    ],
    "explains": "An analyst on Fox Business says so on air.",
    "actors": [
@@ -728,7 +728,7 @@
    },
    "focus": [
     1180,
-    420
+    510
    ],
    "explains": "Three claim tickets for one coat: one man with three seats.",
    "actors": [
@@ -824,21 +824,21 @@
    "explains": "It is allowed; whether it is wise is another matter.",
    "actors": [
     {
-     "thing": "chip",
-     "x": 600,
-     "y": 780,
-     "scale": 0.45,
-     "speaks": [
-      "L043"
-     ]
-    },
-    {
      "who": "REGGIE",
      "x": 1260,
      "y": 980,
      "scale": 0.85,
      "speaks": [
       "L042"
+     ]
+    },
+    {
+     "thing": "chip",
+     "x": 600,
+     "y": 780,
+     "scale": 0.45,
+     "speaks": [
+      "L043"
      ]
     }
    ],
@@ -949,7 +949,7 @@
    },
    "focus": [
     1240,
-    420
+    510
    ],
    "explains": "Hal's catch: it works until he leaves all three at once.",
    "actors": [
@@ -1094,7 +1094,7 @@
    "frame": "medium",
    "focus": [
     620,
-    420
+    510
    ],
    "explains": "Benny brings the chip a lemonade: a big week.",
    "actors": [
@@ -1162,7 +1162,7 @@
    "frame": "close",
    "focus": [
     620,
-    420
+    510
    ],
    "explains": "Benny's warning: it is only Friday.",
    "actors": [
