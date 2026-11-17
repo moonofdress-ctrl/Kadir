@@ -88,7 +88,14 @@
      "y": 960,
      "scale": 0.8,
      "back": true,
-     "pose": "rest"
+     "pose": "rest",
+     "acts": [
+      {
+       "cue": "L025",
+       "word": 11,
+       "pose": "fold"
+      }
+     ]
     }
    ],
    "props": [
@@ -152,6 +159,32 @@
      "k": 0.26,
      "state": "asleep"
     }
+   ],
+   "actors": [
+    {
+     "who": "REGGIE",
+     "x": 560,
+     "y": 980,
+     "scale": 0.8,
+     "face": "confused",
+     "pose": "raise",
+     "acts": [
+      {
+       "cue": "L026",
+       "word": 1,
+       "to": [
+        760,
+        980
+       ],
+       "dur": 1.2
+      },
+      {
+       "cue": "L026",
+       "word": 6,
+       "pose": "shrug"
+      }
+     ]
+    }
    ]
   },
   {
@@ -178,20 +211,49 @@
      "thing": "coin",
      "label": "INVESTORS",
      "x": 600,
-     "y": 980,
-     "scale": 0.5
+     "y": 900,
+     "scale": 0.5,
+     "acts": [
+      {
+       "cue": "L027",
+       "word": 4,
+       "pose": "cheer"
+      }
+     ]
     },
     {
      "thing": "coin",
      "x": 960,
-     "y": 990,
-     "scale": 0.5
+     "y": 900,
+     "scale": 0.5,
+     "acts": [
+      {
+       "cue": "L027",
+       "word": 5,
+       "pose": "cheer"
+      }
+     ]
     },
     {
      "thing": "coin",
      "x": 1320,
-     "y": 980,
-     "scale": 0.5
+     "y": 900,
+     "scale": 0.5,
+     "acts": [
+      {
+       "cue": "L027",
+       "word": 6,
+       "pose": "cheer"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "jacket",
+     "x": 960,
+     "y": 700,
+     "k": 0.7
     }
    ]
   },
@@ -223,17 +285,44 @@
     {
      "type": "jacket",
      "x": 700,
-     "y": 820
+     "y": 820,
+     "move": {
+      "to": [
+       700,
+       1400
+      ],
+      "cue": "L027",
+      "word": 13,
+      "dur": 0.6
+     }
     },
     {
      "type": "jacket",
      "x": 960,
-     "y": 820
+     "y": 820,
+     "move": {
+      "to": [
+       960,
+       1400
+      ],
+      "cue": "L027",
+      "word": 13,
+      "dur": 0.6
+     }
     },
     {
      "type": "jacket",
      "x": 1220,
-     "y": 820
+     "y": 820,
+     "move": {
+      "to": [
+       1220,
+       1400
+      ],
+      "cue": "L027",
+      "word": 13,
+      "dur": 0.6
+     }
     }
    ],
    "camera": "tilt_down"
@@ -263,13 +352,23 @@
      "scale": 0.85,
      "speaks": [
       "L028"
+     ],
+     "prop": "phone",
+     "acts": [
+      {
+       "cue": "L028",
+       "word": 0,
+       "pose": "think"
+      }
      ]
     },
     {
      "who": "MARTHA",
      "x": 1120,
      "y": 980,
-     "scale": 0.85
+     "scale": 0.85,
+     "prop": "mug",
+     "face": "deadpan"
     }
    ],
    "camera": "still"
@@ -296,7 +395,8 @@
      "who": "BENNY",
      "x": 700,
      "y": 980,
-     "scale": 0.85
+     "scale": 0.85,
+     "prop": "phone"
     },
     {
      "who": "MARTHA",
@@ -305,6 +405,14 @@
      "scale": 0.85,
      "speaks": [
       "L029"
+     ],
+     "prop": "mug",
+     "acts": [
+      {
+       "cue": "L029",
+       "word": 0,
+       "pose": "shrug"
+      }
      ]
     }
    ],
@@ -332,7 +440,8 @@
      "who": "MARTHA",
      "x": 1260,
      "y": 980,
-     "scale": 0.85
+     "scale": 0.85,
+     "prop": "mug"
     },
     {
      "who": "BENNY",
@@ -341,6 +450,14 @@
      "scale": 0.85,
      "speaks": [
       "L030"
+     ],
+     "prop": "phone",
+     "acts": [
+      {
+       "cue": "L030",
+       "word": 0,
+       "pose": "raise"
+      }
      ]
     }
    ],
@@ -364,7 +481,16 @@
      "who": "BENNY",
      "x": 700,
      "y": 980,
-     "scale": 0.85
+     "scale": 0.85,
+     "prop": "phone",
+     "acts": [
+      {
+       "cue": "L031",
+       "word": 0,
+       "face": "shocked",
+       "pose": "panic"
+      }
+     ]
     },
     {
      "who": "MARTHA",
@@ -373,6 +499,14 @@
      "scale": 0.85,
      "speaks": [
       "L031"
+     ],
+     "prop": "mug",
+     "acts": [
+      {
+       "cue": "L031",
+       "word": 0,
+       "pose": "point"
+      }
      ]
     }
    ]
@@ -402,12 +536,19 @@
      "speaks": [
       "L032"
      ],
-     "prop": "stamp"
+     "prop": "stamp",
+     "acts": [
+      {
+       "cue": "L032",
+       "word": 2,
+       "pose": "point"
+      }
+     ]
     },
     {
      "thing": "chip",
      "x": 700,
-     "y": 760,
+     "y": 700,
      "scale": 0.45,
      "label": "NVIDIA"
     }
@@ -438,6 +579,13 @@
      "scale": 0.45,
      "speaks": [
       "L033"
+     ],
+     "acts": [
+      {
+       "cue": "L033",
+       "word": 0,
+       "pose": "shrug"
+      }
      ]
     },
     {
@@ -448,7 +596,15 @@
      "speaks": [
       "L034"
      ],
-     "prop": "stamp"
+     "prop": "stamp",
+     "acts": [
+      {
+       "cue": "L034",
+       "word": 0,
+       "pose": "raise",
+       "face": "shocked"
+      }
+     ]
     }
    ],
    "camera": "still"
@@ -477,6 +633,14 @@
      "scale": 0.45,
      "speaks": [
       "L035"
+     ],
+     "face": "confused",
+     "acts": [
+      {
+       "cue": "L035",
+       "word": 1,
+       "pose": "shrug"
+      }
      ]
     },
     {
@@ -509,13 +673,22 @@
      "speaks": [
       "L036"
      ],
-     "prop": "stamp"
+     "prop": "stamp",
+     "acts": [
+      {
+       "cue": "L036",
+       "word": 0,
+       "pose": "slam",
+       "face": "smug"
+      }
+     ]
     },
     {
      "thing": "chip",
      "x": 700,
      "y": 760,
-     "scale": 0.45
+     "scale": 0.45,
+     "face": "scared"
     }
    ],
    "camera": "tilt_up"
@@ -553,6 +726,26 @@
      "x": 960,
      "y": 520
     }
+   ],
+   "actors": [
+    {
+     "who": "JENSEN_HUANG",
+     "back": true,
+     "x": 1750,
+     "y": 980,
+     "scale": 0.8,
+     "acts": [
+      {
+       "cue": "L037",
+       "word": 4,
+       "to": [
+        1480,
+        980
+       ],
+       "dur": 1.6
+      }
+     ]
+    }
    ]
   },
   {
@@ -582,6 +775,12 @@
      "state": "before",
      "x": 960,
      "y": 520
+    },
+    {
+     "type": "jacket",
+     "x": 1380,
+     "y": 820,
+     "k": 0.8
     }
    ]
   },
@@ -615,7 +814,15 @@
      "y": 980,
      "scale": 0.85,
      "face": "neutral",
-     "pose": "rest"
+     "pose": "rest",
+     "acts": [
+      {
+       "cue": "L038",
+       "word": 6,
+       "pose": "present"
+      }
+     ],
+     "prop": "pen"
     }
    ],
    "overlays": [
@@ -626,7 +833,16 @@
      "at": 0.4
     }
    ],
-   "camera": "still"
+   "camera": "still",
+   "props": [
+    {
+     "type": "piggy",
+     "x": 1250,
+     "y": 880,
+     "k": 0.22,
+     "state": "calm"
+    }
+   ]
   },
   {
    "set": "tv_studio",
@@ -659,6 +875,21 @@
      "y": 600,
      "w": 520,
      "tilt": -18
+    },
+    {
+     "type": "jacket",
+     "x": 1100,
+     "y": 150,
+     "k": 0.45,
+     "move": {
+      "to": [
+       1100,
+       560
+      ],
+      "cue": "L038",
+      "word": 11,
+      "dur": 0.5
+     }
     }
    ],
    "camera": "tilt_down"
@@ -693,7 +924,6 @@
     },
     {
      "thing": "chip",
-     "label": "NVIDIA",
      "x": 1120,
      "y": 600,
      "scale": 0.32,
@@ -738,7 +968,39 @@
     "dark": 0.5
    },
    "callback": "the three seats from c2s10, now bare",
-   "explains": "What the reports could leave behind: three empty seats at once."
+   "explains": "What the reports could leave behind: three empty seats at once.",
+   "actors": [
+    {
+     "who": "REGGIE",
+     "x": 420,
+     "y": 980,
+     "scale": 0.75,
+     "face": "sad",
+     "acts": [
+      {
+       "cue": "L039",
+       "word": 9,
+       "to": [
+        820,
+        980
+       ],
+       "dur": 1.6
+      },
+      {
+       "cue": "L039",
+       "word": 14,
+       "pose": "shrug"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "chair",
+     "x": 1300,
+     "y": 900
+    }
+   ]
   },
   {
    "set": "theatre",
@@ -771,13 +1033,28 @@
      "scale": 0.85,
      "speaks": [
       "L040"
+     ],
+     "prop": "bill",
+     "acts": [
+      {
+       "cue": "L040",
+       "word": 0,
+       "pose": "present"
+      }
      ]
     },
     {
      "thing": "chip",
      "x": 640,
      "y": 780,
-     "scale": 0.45
+     "scale": 0.45,
+     "acts": [
+      {
+       "cue": "L040",
+       "word": 3,
+       "pose": "think"
+      }
+     ]
     }
    ],
    "props": [
@@ -820,11 +1097,18 @@
      "scale": 0.45,
      "speaks": [
       "L041"
+     ],
+     "acts": [
+      {
+       "cue": "L041",
+       "word": 0,
+       "pose": "raise"
+      }
      ]
     },
     {
      "who": "REGGIE",
-     "x": 600,
+     "x": 380,
      "y": 980,
      "scale": 0.85
     }
@@ -862,6 +1146,14 @@
      "scale": 0.85,
      "speaks": [
       "L042"
+     ],
+     "acts": [
+      {
+       "cue": "L042",
+       "word": 0,
+       "pose": "shrug",
+       "face": "deadpan"
+      }
      ]
     },
     {
@@ -904,6 +1196,13 @@
      "scale": 0.45,
      "speaks": [
       "L043"
+     ],
+     "acts": [
+      {
+       "cue": "L043",
+       "word": 0,
+       "pose": "think"
+      }
      ]
     },
     {
@@ -936,13 +1235,20 @@
    "actors": [
     {
      "who": "REGGIE",
-     "x": 1180,
+     "x": 900,
      "y": 980,
      "scale": 0.85,
      "speaks": [
       "L044"
      ],
-     "pose": "point"
+     "pose": "rest",
+     "acts": [
+      {
+       "cue": "L044",
+       "word": 0,
+       "pose": "point"
+      }
+     ]
     },
     {
      "thing": "chip",
@@ -990,13 +1296,22 @@
      "scale": 0.85,
      "speaks": [
       "L045"
+     ],
+     "prop": "phone",
+     "acts": [
+      {
+       "cue": "L045",
+       "word": 0,
+       "pose": "cheer"
+      }
      ]
     },
     {
      "who": "HAL",
      "x": 1240,
      "y": 980,
-     "scale": 0.85
+     "scale": 0.85,
+     "prop": "espresso"
     }
    ],
    "camera": "still"
@@ -1028,7 +1343,9 @@
      "who": "CHAD",
      "x": 860,
      "y": 900,
-     "scale": 0.85
+     "scale": 0.85,
+     "prop": "phone",
+     "face": "smug"
     },
     {
      "who": "HAL",
@@ -1037,6 +1354,14 @@
      "scale": 0.85,
      "speaks": [
       "L046"
+     ],
+     "prop": "espresso",
+     "acts": [
+      {
+       "cue": "L046",
+       "word": 0,
+       "pose": "raise"
+      }
      ]
     }
    ],
@@ -1069,7 +1394,8 @@
      "who": "HAL",
      "x": 1260,
      "y": 980,
-     "scale": 0.85
+     "scale": 0.85,
+     "prop": "espresso"
     },
     {
      "who": "CHAD",
@@ -1078,6 +1404,14 @@
      "scale": 0.85,
      "speaks": [
       "L047"
+     ],
+     "prop": "phone",
+     "acts": [
+      {
+       "cue": "L047",
+       "word": 0,
+       "pose": "shrug"
+      }
      ]
     }
    ],
@@ -1106,7 +1440,15 @@
      "who": "CHAD",
      "x": 860,
      "y": 900,
-     "scale": 0.85
+     "scale": 0.85,
+     "acts": [
+      {
+       "cue": "L048",
+       "word": 1,
+       "pose": "panic",
+       "face": "scared"
+      }
+     ]
     },
     {
      "who": "HAL",
@@ -1115,6 +1457,14 @@
      "scale": 0.85,
      "speaks": [
       "L048"
+     ],
+     "prop": "espresso",
+     "acts": [
+      {
+       "cue": "L048",
+       "word": 0,
+       "pose": "point"
+      }
      ]
     }
    ],
@@ -1149,7 +1499,24 @@
      "x": 1000,
      "y": 900,
      "scale": 0.6,
-     "tag": "$4.5T"
+     "tag": "$4.5T",
+     "acts": [
+      {
+       "cue": "L049",
+       "word": 8,
+       "pose": "fold"
+      }
+     ],
+     "face": "smug"
+    }
+   ],
+   "props": [
+    {
+     "type": "piggy",
+     "x": 1680,
+     "y": 990,
+     "k": 0.26,
+     "state": "rich"
     }
    ]
   },
@@ -1176,6 +1543,14 @@
      "scale": 0.85,
      "speaks": [
       "L050"
+     ],
+     "prop": "soda",
+     "acts": [
+      {
+       "cue": "L050",
+       "word": 0,
+       "pose": "offer"
+      }
      ]
     },
     {
@@ -1205,17 +1580,26 @@
    "actors": [
     {
      "who": "BENNY",
-     "x": 600,
+     "x": 1320,
      "y": 980,
-     "scale": 0.85
+     "scale": 0.85,
+     "prop": "soda"
     },
     {
      "thing": "chip",
-     "x": 1260,
+     "x": 640,
      "y": 900,
      "scale": 0.55,
      "speaks": [
       "L051"
+     ],
+     "face": "happy",
+     "acts": [
+      {
+       "cue": "L051",
+       "word": 0,
+       "pose": "cheer"
+      }
      ]
     }
    ],
@@ -1244,13 +1628,22 @@
      "scale": 0.85,
      "speaks": [
       "L052"
-     ]
+     ],
+     "acts": [
+      {
+       "cue": "L052",
+       "word": 0,
+       "pose": "raise"
+      }
+     ],
+     "prop": "soda"
     },
     {
      "thing": "chip",
      "x": 1200,
      "y": 900,
-     "scale": 0.55
+     "scale": 0.55,
+     "face": "smug"
     }
    ],
    "camera": "pan_right"
@@ -1282,10 +1675,27 @@
       "dow": "FRIDAY"
      },
      "x": 1300,
-     "y": 560
+     "y": 560,
+     "flipAt": 0.35
     }
    ],
-   "camera": "tilt_down"
+   "camera": "tilt_down",
+   "actors": [
+    {
+     "thing": "chip",
+     "x": 620,
+     "y": 900,
+     "scale": 0.5,
+     "face": "shocked",
+     "acts": [
+      {
+       "cue": "L053",
+       "word": 2,
+       "pose": "panic"
+      }
+     ]
+    }
+   ]
   }
  ]
 }

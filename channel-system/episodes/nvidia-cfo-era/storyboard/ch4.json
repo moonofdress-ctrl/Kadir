@@ -46,7 +46,8 @@
        "pose": "panic",
        "face": "shocked"
       }
-     ]
+     ],
+     "enter": "none"
     }
    ],
    "props": [
@@ -57,10 +58,11 @@
      "y": 900
     },
     {
-     "type": "desk_phone",
-     "x": 1700,
-     "y": 900,
-     "k": 0.9
+     "type": "piggy",
+     "x": 1720,
+     "y": 1000,
+     "k": 0.5,
+     "state": "calm"
     }
    ],
    "explains": "At dawn the company's own printer pushes out the release that says Huang has resigned."
@@ -78,7 +80,7 @@
    },
    "frame": "close",
    "focus": [
-    560,
+    820,
     620
    ],
    "camera": "tilt_down",
@@ -92,17 +94,17 @@
     },
     {
      "type": "jacket",
-     "x": 560,
-     "y": 700,
+     "x": 600,
+     "y": 660,
      "k": 1.0,
      "move": {
       "to": [
-       -300,
-       760
+       -400,
+       700
       ],
       "cue": "L081",
-      "word": 16,
-      "dur": 1.6
+      "word": 15,
+      "dur": 1.2
      }
     }
    ],
@@ -324,13 +326,22 @@
    "actors": [
     {
      "who": "CHAD",
-     "x": 620,
+     "x": 500,
      "y": 950,
      "speaks": [
       "L084"
      ],
-     "enter": "walk",
+     "enter": "none",
      "acts": [
+      {
+       "cue": "L084",
+       "word": 0,
+       "to": [
+        620,
+        950
+       ],
+       "dur": 0.6
+      },
       {
        "cue": "L084",
        "word": 3,
@@ -343,18 +354,11 @@
      "who": "MARTHA",
      "x": 1300,
      "y": 950,
-     "prop": "pen"
+     "prop": "pen",
+     "enter": "none"
     }
    ],
-   "explains": "Chad orders a plate that says boss, as if a title were a thing you buy over a counter.",
-   "props": [
-    {
-     "type": "name_plate",
-     "x": 1000,
-     "y": 860,
-     "k": 0.9
-    }
-   ]
+   "explains": "Chad orders a plate that says boss, as if a title were a thing you buy over a counter."
   },
   {
    "id": "c4k11b",
@@ -387,12 +391,14 @@
        "pose": "raise",
        "face": "deadpan"
       }
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "CHAD",
      "x": 620,
-     "y": 950
+     "y": 950,
+     "enter": "none"
     }
    ],
    "explains": "Martha asks the question the whole chapter turns on: permanent or temporary.",
@@ -428,13 +434,15 @@
        "pose": "shrug",
        "face": "confused"
       }
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "MARTHA",
      "x": 1300,
      "y": 950,
-     "prop": "pen"
+     "prop": "pen",
+     "enter": "none"
     }
    ],
    "explains": "Chad does not see the difference between a permanent and a temporary boss.",
@@ -472,12 +480,14 @@
        "pose": "present",
        "face": "smug"
       }
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "CHAD",
      "x": 620,
-     "y": 950
+     "y": 950,
+     "enter": "none"
     }
    ],
    "explains": "The difference is tape: a temporary title is stuck on, not engraved.",
@@ -578,7 +588,7 @@
    },
    "frame": "close",
    "focus": [
-    1060,
+    1150,
     640
    ],
    "camera": "still",
@@ -587,7 +597,7 @@
    "props": [
     {
      "type": "name_plate",
-     "x": 923,
+     "x": 1060,
      "y": 690,
      "k": 1.1,
      "t": "CFO",
@@ -595,7 +605,7 @@
     },
     {
      "type": "calculator",
-     "x": 1220,
+     "x": 1330,
      "y": 722,
      "k": 1.045,
      "t": "4.0"
@@ -706,20 +716,16 @@
        "dur": 0.4,
        "pose": "shrug"
       }
-     ]
+     ],
+     "enter": "none"
     }
    ],
    "explains": "The board makes a second chair: there is now a chair of the board as well as a chief executive.",
    "props": [
     {
-     "type": "chair",
-     "x": 560,
-     "y": 960
-    },
-    {
-     "type": "chair",
-     "x": 1360,
-     "y": 960
+     "type": "briefcase",
+     "x": 1550,
+     "y": 1000
     }
    ]
   },
@@ -838,13 +844,15 @@
        "pose": "point",
        "face": "confused"
       }
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "REGGIE",
      "x": 1450,
      "y": 950,
-     "prop": "stamp"
+     "prop": "stamp",
+     "enter": "none"
     }
    ],
    "explains": "CHIP asks his question again, now that the empty chair has been filled.",
@@ -887,13 +895,15 @@
        "word": 2,
        "pose": "point"
       }
-     ]
+     ],
+     "enter": "none"
     },
     {
      "thing": "chip",
-     "x": 800,
+     "x": 960,
      "y": 700,
-     "scale": 0.6
+     "scale": 0.6,
+     "enter": "none"
     }
    ],
    "explains": "Reggie points out the answer is not one chair but two: chief executive and board chair.",
@@ -926,7 +936,7 @@
    "actors": [
     {
      "thing": "chip",
-     "x": 760,
+     "x": 960,
      "y": 700,
      "scale": 0.6,
      "speaks": [
@@ -938,13 +948,15 @@
        "word": 1,
        "pose": "think"
       }
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "REGGIE",
      "x": 1450,
      "y": 950,
-     "prop": "stamp"
+     "prop": "stamp",
+     "enter": "none"
     }
    ],
    "explains": "CHIP wonders whether splitting the jobs is an improvement.",
@@ -988,13 +1000,15 @@
        "pose": "raise",
        "face": "deadpan"
       }
-     ]
+     ],
+     "enter": "none"
     },
     {
      "thing": "chip",
-     "x": 800,
+     "x": 960,
      "y": 700,
-     "scale": 0.6
+     "scale": 0.6,
+     "enter": "none"
     }
    ],
    "explains": "Reggie will not say it is better, only that it is more chairs.",
@@ -1237,13 +1251,15 @@
        "dur": 0.8,
        "pose": "point"
       }
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "MARTHA",
      "x": 800,
      "y": 950,
-     "prop": "bill"
+     "prop": "bill",
+     "enter": "none"
     }
    ],
    "explains": "Benny reads the release over Martha's shoulder, looking for the reason."
@@ -1285,12 +1301,14 @@
        "word": 1,
        "pose": "present"
       }
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "BENNY",
      "x": 1200,
-     "y": 950
+     "y": 950,
+     "enter": "none"
     }
    ],
    "explains": "All the release offers is a thank-you.",
@@ -1335,13 +1353,15 @@
        "pose": "shrug",
        "face": "confused"
       }
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "MARTHA",
      "x": 800,
      "y": 950,
-     "prop": "bill"
+     "prop": "bill",
+     "enter": "none"
     }
    ],
    "explains": "A thank-you is not an explanation."
@@ -1386,12 +1406,14 @@
        "pose": "present",
        "face": "deadpan"
       }
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "BENNY",
      "x": 1200,
-     "y": 950
+     "y": 950,
+     "enter": "none"
     }
    ],
    "explains": "Martha turns the page and the back is blank: there is no reason anywhere in it."
@@ -1475,7 +1497,8 @@
        "word": 12,
        "pose": "think"
       }
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "CHAD",
@@ -1489,7 +1512,8 @@
        "pose": "raise",
        "face": "happy"
       }
-     ]
+     ],
+     "enter": "none"
     }
    ]
   },
@@ -1518,7 +1542,7 @@
    "actors": [
     {
      "who": "HAL",
-     "x": 1250,
+     "x": 1330,
      "y": 950,
      "speaks": [
       "L101"
@@ -1531,13 +1555,15 @@
        "pose": "hold",
        "face": "deadpan"
       }
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "CHAD",
      "x": 650,
      "y": 950,
-     "prop": "bill"
+     "prop": "bill",
+     "enter": "none"
     }
    ],
    "explains": "Hal reads out the job ad: one chief executive wanted.",
@@ -1582,12 +1608,14 @@
        "pose": "raise",
        "face": "happy"
       }
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "HAL",
      "x": 1250,
-     "y": 950
+     "y": 950,
+     "enter": "none"
     }
    ],
    "explains": "Chad, CV in hand, asks what experience the job needs."
@@ -1611,7 +1639,7 @@
    },
    "frame": "close",
    "focus": [
-    1250,
+    1400,
     420
    ],
    "actors": [
@@ -1630,13 +1658,15 @@
        "pose": "point",
        "face": "smug"
       }
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "CHAD",
      "x": 650,
      "y": 950,
-     "prop": "bill"
+     "prop": "bill",
+     "enter": "none"
     }
    ],
    "explains": "The job is running a company worth about four trillion dollars.",
@@ -1681,12 +1711,14 @@
        "pose": "present",
        "face": "greedy"
       }
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "HAL",
      "x": 1250,
-     "y": 950
+     "y": 950,
+     "enter": "none"
     }
    ],
    "explains": "Chad's only experience is a lemonade stand: the gap between a normal CV and this job."
@@ -1710,7 +1742,7 @@
    },
    "frame": "close",
    "focus": [
-    1250,
+    1400,
     420
    ],
    "actors": [
@@ -1728,7 +1760,8 @@
        "pose": "point",
        "face": "deadpan"
       }
-     ]
+     ],
+     "enter": "none"
     },
     {
      "who": "CHAD",
@@ -1746,7 +1779,8 @@
        "dur": 0.7,
        "face": "sad"
       }
-     ]
+     ],
+     "enter": "none"
     }
    ],
    "explains": "Hal waves him off: the queue for this job is short and very hard to join.",
