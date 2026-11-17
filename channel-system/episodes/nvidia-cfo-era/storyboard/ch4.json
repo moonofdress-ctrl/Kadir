@@ -168,8 +168,8 @@
    "extras": 2,
    "frame": "close",
    "focus": [
-    960,
-    640
+    1000,
+    620
    ],
    "camera": "pan_left",
    "explains": "The door keeps turning with nobody in it: no reason given and no handover date.",
@@ -177,9 +177,9 @@
     {
      "thing": "chip",
      "label": "NVIDIA",
-     "x": 700,
-     "y": 960,
-     "scale": 0.45,
+     "x": 820,
+     "y": 800,
+     "scale": 0.5,
      "face": "confused",
      "enter": "none",
      "acts": [
@@ -193,9 +193,9 @@
    ],
    "props": [
     {
-     "type": "wall_calendar",
-     "x": 1350,
-     "y": 480
+     "type": "briefcase",
+     "x": 1180,
+     "y": 850
     }
    ]
   },
