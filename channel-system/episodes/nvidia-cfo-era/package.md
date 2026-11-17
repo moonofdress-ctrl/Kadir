@@ -27,9 +27,9 @@ Start with: C's title with picture C (the fact people search, then one plain que
 `thumbnail_a.png`, `thumbnail_b.png`, `thumbnail_c.png` (1280x720, painted by the illustrator, band added by `stills.mjs thumb`) are owed. Concepts are in `thumbnails.md` (updated with the three pairs above; `prompts.md` is the illustrator's). Commands, once the pictures exist (frames shown are in the build; the first 30 s are final):
 
 ```bash
-node studio/tools/stills.mjs thumb channel-system/episodes/nvidia-cfo-era --white "HER FIRST CALL" --red "4:20" --t 0 --out channel-system/episodes/nvidia-cfo-era/images/thumbnail_a.png
-node studio/tools/stills.mjs thumb channel-system/episodes/nvidia-cfo-era --white "THE FIX:" --red "TAPE" --t 3 --out channel-system/episodes/nvidia-cfo-era/images/thumbnail_b.png
-node studio/tools/stills.mjs thumb channel-system/episodes/nvidia-cfo-era --white "WHO'S IN" --red "THE CHAIR" --t 17.2 --out channel-system/episodes/nvidia-cfo-era/images/thumbnail_c.png
+node studio/tools/stills.mjs thumb channel-system/episodes/nvidia-cfo-era --white "HER FIRST CALL" --red "4:20" --t 12.5 --out channel-system/episodes/nvidia-cfo-era/images/thumbnail_a.png
+node studio/tools/stills.mjs thumb channel-system/episodes/nvidia-cfo-era --white "THE FIX:" --red "TAPE" --t 3.8 --out channel-system/episodes/nvidia-cfo-era/images/thumbnail_b.png
+node studio/tools/stills.mjs thumb channel-system/episodes/nvidia-cfo-era --white "WHO'S IN" --red "THE CHAIR" --t 16.2 --out channel-system/episodes/nvidia-cfo-era/images/thumbnail_c.png
 ```
 
 Checks owed before upload, for each `_small.png` (160x90): the face (A) or the glowing object (B, C) and the band read; nothing important in the lower right corner. **A matches the first frame**: its scene is `c1s01` at 0:00 (the same office, jacket on the chair, Kress at her desk). Safeguards (brief.md): Kress is a neutral likeness, calm face, no gag pose; Huang is not shown; nothing shows what the video does not show.
