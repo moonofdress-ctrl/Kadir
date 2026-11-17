@@ -1,0 +1,1353 @@
+1
+00:00:00,200 --> 00:00:02,416
+Thursday, the twelfth of November.
+
+2
+00:00:02,436 --> 00:00:05,215
+Nvidia's chief executive
+chair is empty...
+
+3
+00:00:05,235 --> 00:00:08,560
+and the person now in charge
+is still at her old desk.
+
+4
+00:00:08,580 --> 00:00:13,507
+Colette Kress, the finance chief, has
+just been named interim chief executive.
+
+5
+00:00:13,527 --> 00:00:16,660
+Harvey Jones becomes the
+board's first-ever chair.
+
+6
+00:00:16,690 --> 00:00:17,710
+Who's in the chair?
+
+7
+00:00:17,730 --> 00:00:19,660
+Nobody. That's the news.
+
+8
+00:00:19,690 --> 00:00:23,842
+By Thursday's close, the market put
+this company at about four trillion
+
+9
+00:00:23,862 --> 00:00:26,190
+dollars. Keep that number in mind.
+
+10
+00:00:26,210 --> 00:00:30,020
+A slice of it sits in
+every S&P 500 index fund.
+
+11
+00:00:30,040 --> 00:00:35,268
+And on her desk... a date. Tuesday:
+the first results call since Nvidia
+
+12
+00:00:35,288 --> 00:00:38,830
+went public... with Jensen
+Huang gone from the top job.
+
+13
+00:00:38,860 --> 00:00:40,350
+Wait. Who's running Nvidia?
+
+14
+00:00:40,370 --> 00:00:41,490
+The money person.
+
+15
+00:00:41,510 --> 00:00:42,260
+Is that good?
+
+16
+00:00:42,280 --> 00:00:43,480
+Ask me Tuesday.
+
+17
+00:00:43,510 --> 00:00:47,140
+By the end, you'll know exactly
+what to listen for at four twenty.
+
+18
+00:00:47,160 --> 00:00:49,195
+So who is running Nvidia now...
+
+19
+00:00:49,215 --> 00:00:50,940
+and why does Tuesday matter?
+
+20
+00:00:50,960 --> 00:00:54,079
+It starts on Sunday,
+the eighth of November.
+
+21
+00:00:54,099 --> 00:00:57,154
+Nvidia's board opens an
+independent review...
+
+22
+00:00:57,174 --> 00:01:01,589
+in light of reporting that Jensen
+Huang had been the target of a foreign
+
+23
+00:01:01,609 --> 00:01:02,870
+intelligence effort.
+
+24
+00:01:02,890 --> 00:01:07,509
+The board's word is target. The claim
+itself is an allegation, as reported,
+
+25
+00:01:07,529 --> 00:01:08,920
+and China denies it.
+
+26
+00:01:08,940 --> 00:01:11,987
+Monday, the shares fall
+about four percent.
+
+27
+00:01:12,007 --> 00:01:14,680
+Tuesday, about five and a half more.
+
+28
+00:01:14,710 --> 00:01:16,020
+Nine and a half percent?
+
+29
+00:01:16,040 --> 00:01:17,070
+Over a review.
+
+30
+00:01:17,090 --> 00:01:17,980
+Not a finding?
+
+31
+00:01:18,000 --> 00:01:20,430
+I don't wait for
+findings. I sold Monday.
+
+32
+00:01:20,450 --> 00:01:21,720
+So what's the question?
+
+33
+00:01:21,740 --> 00:01:23,020
+The one on the door.
+
+34
+00:01:23,050 --> 00:01:26,505
+That was Sunday. By Thursday,
+the question had moved...
+
+35
+00:01:26,525 --> 00:01:28,840
+from what happened,
+to who's in charge.
+
+36
+00:01:29,830 --> 00:01:32,100
+To see why that hurts,
+count his seats.
+
+37
+00:01:32,120 --> 00:01:35,614
+Jensen Huang founded Nvidia
+thirty-three years ago.
+
+38
+00:01:35,634 --> 00:01:38,727
+He was its chief
+executive. Its president.
+
+39
+00:01:38,747 --> 00:01:40,400
+And a member of its board.
+
+40
+00:01:40,420 --> 00:01:43,010
+And no successor had
+been named in public.
+
+41
+00:01:43,030 --> 00:01:46,963
+For investors, that was
+simple: one face, one voice.
+
+42
+00:01:46,983 --> 00:01:51,070
+It also meant that if he ever left,
+three seats would empty at once.
+
+43
+00:01:51,100 --> 00:01:52,440
+So who was next in line?
+
+44
+00:01:52,460 --> 00:01:53,420
+Nobody said.
+
+45
+00:01:53,440 --> 00:01:54,580
+Did anybody ask?
+
+46
+00:01:54,600 --> 00:01:55,900
+Everybody. Now.
+
+47
+00:01:55,920 --> 00:01:57,060
+Who chairs your board?
+
+48
+00:01:57,080 --> 00:01:57,737
+Nobody.
+
+49
+00:01:57,757 --> 00:01:58,417
+Nobody?
+
+50
+00:01:58,437 --> 00:01:59,587
+It never came up.
+
+51
+00:01:59,607 --> 00:02:00,467
+It will.
+
+52
+00:02:00,497 --> 00:02:04,231
+Until this week, Nvidia's
+board had no chair at all.
+
+53
+00:02:04,251 --> 00:02:08,087
+The man at the top held the company's
+three biggest seats himself.
+
+54
+00:02:08,107 --> 00:02:13,474
+Gil Luria of DA Davidson told Fox
+Business that much of the decision-making
+
+55
+00:02:13,494 --> 00:02:15,297
+was concentrated in Huang.
+
+56
+00:02:15,317 --> 00:02:17,845
+So the risk was never
+only the reports.
+
+57
+00:02:17,865 --> 00:02:20,507
+It was the empty seats
+they could leave behind.
+
+58
+00:02:20,537 --> 00:02:22,097
+Three tickets. One coat.
+
+59
+00:02:22,117 --> 00:02:23,212
+Is that allowed?
+
+60
+00:02:23,232 --> 00:02:23,962
+Allowed.
+
+61
+00:02:23,982 --> 00:02:24,382
+Wise?
+
+62
+00:02:24,402 --> 00:02:25,362
+Different counter.
+
+63
+00:02:25,382 --> 00:02:27,072
+One guy, three jobs? Efficient.
+
+64
+00:02:27,092 --> 00:02:28,762
+Until he leaves all three.
+
+65
+00:02:28,782 --> 00:02:30,012
+Who leaves all three?
+
+66
+00:02:30,032 --> 00:02:30,982
+Keep lifting.
+
+67
+00:02:31,012 --> 00:02:35,686
+On Friday, the sixth, the market
+valued Nvidia at about four and a half
+
+68
+00:02:35,706 --> 00:02:37,042
+trillion dollars.
+
+69
+00:02:37,072 --> 00:02:37,772
+Big week?
+
+70
+00:02:37,792 --> 00:02:39,342
+Huge. Nothing can go wrong.
+
+71
+00:02:39,362 --> 00:02:40,432
+It's only Friday.
+
+72
+00:02:40,462 --> 00:02:41,972
+And then came Wednesday.
+
+73
+00:02:42,962 --> 00:02:47,877
+Wednesday, the eleventh. The shares
+close up almost three percent, at about
+
+74
+00:02:47,940 --> 00:02:50,142
+one hundred and seventy-four dollars.
+
+75
+00:02:50,162 --> 00:02:53,552
+For a few hours, it looked
+as if the worst was over.
+
+76
+00:02:53,582 --> 00:02:54,612
+Green! We're back!
+
+77
+00:02:54,632 --> 00:02:56,072
+The bell rang, Chad.
+
+78
+00:02:56,092 --> 00:02:56,602
+So?
+
+79
+00:02:56,622 --> 00:02:58,079
+So the night shift starts.
+
+80
+00:02:58,109 --> 00:03:01,492
+After the close, two
+newspapers publish reports.
+
+81
+00:03:01,512 --> 00:03:03,709
+The market reads both overnight.
+
+82
+00:03:03,729 --> 00:03:08,163
+The New York Times reports a second
+relationship, with a senior Nvidia
+
+83
+00:03:08,183 --> 00:03:10,299
+executive who reports to Huang.
+
+84
+00:03:10,319 --> 00:03:13,257
+Neither Nvidia nor
+Huang had confirmed it.
+
+85
+00:03:13,277 --> 00:03:16,849
+We're not saying it's true.
+We're saying it was reported.
+
+86
+00:03:16,869 --> 00:03:21,069
+The Wall Street Journal reports that
+the board is preparing to remove him.
+
+87
+00:03:21,099 --> 00:03:21,989
+So it's true?
+
+88
+00:03:22,009 --> 00:03:22,989
+Allegation.
+
+89
+00:03:23,009 --> 00:03:24,019
+So it's false?
+
+90
+00:03:24,039 --> 00:03:25,079
+Allegation.
+
+91
+00:03:25,099 --> 00:03:26,009
+So what is it?
+
+92
+00:03:26,029 --> 00:03:26,769
+Reported.
+
+93
+00:03:26,789 --> 00:03:28,749
+Down eight percent? After the bell?
+
+94
+00:03:28,769 --> 00:03:31,139
+After-hours, bro. Market never sleeps.
+
+95
+00:03:31,159 --> 00:03:32,049
+I'd like to.
+
+96
+00:03:32,079 --> 00:03:36,019
+In after-hours trading, the shares
+fall eight to nine percent.
+
+97
+00:03:36,039 --> 00:03:39,426
+So on Wednesday night,
+two clocks ran at once.
+
+98
+00:03:39,446 --> 00:03:41,709
+The board's... and the market's.
+
+99
+00:03:41,739 --> 00:03:43,249
+Two reports in one night.
+
+100
+00:03:43,269 --> 00:03:44,829
+Neither confirmed that night.
+
+101
+00:03:44,849 --> 00:03:46,239
+So it's not proven.
+
+102
+00:03:46,259 --> 00:03:48,039
+Not proven. Still priced.
+
+103
+00:03:48,069 --> 00:03:52,819
+And according to Nvidia's own regulatory
+filing, the board accepted his
+
+104
+00:03:52,839 --> 00:03:55,149
+resignation that same Wednesday.
+
+105
+00:03:55,169 --> 00:03:57,489
+Nvidia would announce it on Thursday.
+
+106
+00:03:58,479 --> 00:04:01,206
+Thursday. Nvidia puts out a release.
+
+107
+00:04:01,226 --> 00:04:04,534
+The board announces that
+Jensen Huang has resigned...
+
+108
+00:04:04,674 --> 00:04:10,139
+as president, chief executive and a member
+of the board, effective immediately.
+
+109
+00:04:10,159 --> 00:04:12,045
+The release gives no reason.
+
+110
+00:04:12,065 --> 00:04:15,849
+And no handover date: effective
+immediately means now.
+
+111
+00:04:15,869 --> 00:04:19,003
+Some founders step down
+and stay on as chairman.
+
+112
+00:04:19,062 --> 00:04:21,379
+Not here. He has no seat left.
+
+113
+00:04:21,409 --> 00:04:23,019
+One plate, please. Says boss.
+
+114
+00:04:23,039 --> 00:04:24,439
+Permanent or temporary?
+
+115
+00:04:24,459 --> 00:04:25,489
+What's the difference?
+
+116
+00:04:25,509 --> 00:04:26,279
+Tape.
+
+117
+00:04:26,309 --> 00:04:31,233
+The chief executive's job goes to
+Colette Kress, Nvidia's finance chief
+
+118
+00:04:31,253 --> 00:04:35,870
+since 2013. Her new title:
+interim chief executive...
+
+119
+00:04:35,890 --> 00:04:38,330
+and chief financial officer.
+
+120
+00:04:38,350 --> 00:04:39,549
+She keeps both.
+
+121
+00:04:39,569 --> 00:04:45,718
+Harvey Jones, on the board since 1993
+and a former chief executive of Synopsys,
+
+122
+00:04:45,738 --> 00:04:48,459
+becomes Nvidia's
+first-ever board chair.
+
+123
+00:04:48,489 --> 00:04:49,499
+Who's in the chair?
+
+124
+00:04:49,519 --> 00:04:51,509
+Which chair? There are two now.
+
+125
+00:04:51,529 --> 00:04:52,519
+Is that better?
+
+126
+00:04:52,539 --> 00:04:53,629
+It's more chairs.
+
+127
+00:04:53,659 --> 00:04:57,677
+In the release, Jones says the board
+has "full confidence in Colette and
+
+128
+00:04:57,697 --> 00:05:02,476
+the leadership team". The release
+adds, "Jensen's contributions to NVIDIA
+
+129
+00:05:02,496 --> 00:05:03,679
+are profound."
+
+130
+00:05:03,699 --> 00:05:08,853
+And Kress says, "Our focus remains
+on serving our customers, partners,
+
+131
+00:05:08,873 --> 00:05:11,039
+developers and shareholders."
+
+132
+00:05:11,069 --> 00:05:12,339
+Does it say why?
+
+133
+00:05:12,359 --> 00:05:13,519
+It says thank you.
+
+134
+00:05:13,539 --> 00:05:14,649
+That's not why.
+
+135
+00:05:14,669 --> 00:05:15,999
+Both sides checked.
+
+136
+00:05:16,029 --> 00:05:21,044
+The board starts a search for a permanent
+chief executive, looking at candidates
+
+137
+00:05:21,064 --> 00:05:23,359
+inside and outside the company.
+
+138
+00:05:23,389 --> 00:05:25,939
+Wanted: one chief executive.
+
+139
+00:05:25,959 --> 00:05:26,789
+Experience?
+
+140
+00:05:26,809 --> 00:05:28,439
+Running four trillion dollars.
+
+141
+00:05:28,459 --> 00:05:29,799
+I ran a lemonade stand.
+
+142
+00:05:29,819 --> 00:05:30,549
+Next.
+
+143
+00:05:30,579 --> 00:05:34,991
+So for now, Nvidia is run by
+the person who counts its money.
+
+144
+00:05:35,011 --> 00:05:35,949
+Who is she?
+
+145
+00:05:36,939 --> 00:05:41,898
+Colette Kress isn't new. She joined
+Nvidia as finance chief in September
+
+146
+00:05:41,918 --> 00:05:43,059
+2013.
+
+147
+00:05:43,079 --> 00:05:46,009
+She's fifty-nine,
+according to Yahoo Finance.
+
+148
+00:05:46,029 --> 00:05:51,520
+Before that job, she ran finance for
+a unit at Cisco, and for Microsoft's
+
+149
+00:05:51,540 --> 00:05:55,814
+server and tools division. Nearly
+twenty-five years in finance at tech
+
+150
+00:05:55,834 --> 00:05:56,619
+companies.
+
+151
+00:05:56,649 --> 00:05:58,952
+A quarter century under the hood.
+
+152
+00:05:58,972 --> 00:05:59,712
+And now?
+
+153
+00:05:59,732 --> 00:06:01,162
+Now she drives it too.
+
+154
+00:06:01,182 --> 00:06:02,422
+Then who's under the hood?
+
+155
+00:06:02,452 --> 00:06:06,170
+On Nvidia's earnings calls, she's the
+one who normally walks through the
+
+156
+00:06:06,190 --> 00:06:06,882
+numbers.
+
+157
+00:06:06,912 --> 00:06:08,747
+Two jobs at once? I can't do one.
+
+158
+00:06:08,767 --> 00:06:09,497
+We know.
+
+159
+00:06:09,527 --> 00:06:11,720
+Here's the part few people noticed.
+
+160
+00:06:11,740 --> 00:06:13,743
+The person who signs the numbers...
+
+161
+00:06:13,763 --> 00:06:16,800
+reads them to the market...
+and now runs the company.
+
+162
+00:06:16,820 --> 00:06:17,787
+Same person.
+
+163
+00:06:17,817 --> 00:06:19,067
+So who's in the chair?
+
+164
+00:06:19,087 --> 00:06:20,288
+The one with the calculator.
+
+165
+00:06:20,308 --> 00:06:21,228
+Is that normal?
+
+166
+00:06:21,248 --> 00:06:23,528
+Ask four analysts. Get five opinions.
+
+167
+00:06:23,558 --> 00:06:25,895
+Fox Business asked four of them.
+
+168
+00:06:25,915 --> 00:06:31,205
+One: Susannah Streeter of Wealth Club
+calls her a "safe pair of hands"...
+
+169
+00:06:31,225 --> 00:06:36,448
+but says she lacks Huang's global
+status and his deep commercial ties.
+
+170
+00:06:36,468 --> 00:06:41,880
+Two: Dan Ives of Yorkville
+Ives says, "we are big fans".
+
+171
+00:06:41,900 --> 00:06:47,398
+Three: Bret Kenwell of eToro expects her
+to "provide stability and reassurance".
+
+172
+00:06:47,418 --> 00:06:52,589
+Four: Gil Luria says the task is a
+heavy one, because so much ran through
+
+173
+00:06:52,609 --> 00:06:53,198
+Huang.
+
+174
+00:06:53,228 --> 00:06:55,182
+Safe pair of hands. Big fans.
+
+175
+00:06:55,202 --> 00:06:56,134
+Stability.
+
+176
+00:06:56,154 --> 00:06:57,944
+Notice the word nobody used.
+
+177
+00:06:57,964 --> 00:06:58,614
+Which?
+
+178
+00:06:58,634 --> 00:06:59,444
+Permanent.
+
+179
+00:06:59,474 --> 00:07:02,562
+The analysts were calm.
+The market was not.
+
+180
+00:07:03,552 --> 00:07:07,832
+Thursday, the shares fell more
+than twelve percent at one point.
+
+181
+00:07:07,862 --> 00:07:09,252
+Down twelve! Buy the dip!
+
+182
+00:07:09,272 --> 00:07:10,542
+It's climbing back.
+
+183
+00:07:10,562 --> 00:07:11,332
+Sell the rip!
+
+184
+00:07:11,352 --> 00:07:12,512
+Pick one, Chad.
+
+185
+00:07:12,542 --> 00:07:14,771
+Remember that four trillion dollars?
+
+186
+00:07:14,791 --> 00:07:17,342
+The Friday before, it
+was four and a half.
+
+187
+00:07:17,362 --> 00:07:21,605
+Between those two dates, about four
+hundred and ninety billion dollars
+
+188
+00:07:21,625 --> 00:07:23,452
+of market value disappeared.
+
+189
+00:07:23,472 --> 00:07:27,762
+That's our subtraction, from figures
+in Yahoo Finance's live blog.
+
+190
+00:07:27,782 --> 00:07:31,956
+That's more than four times what
+analysts expect Nvidia to sell in the
+
+191
+00:07:31,976 --> 00:07:35,402
+whole quarter. Our
+arithmetic, not a forecast.
+
+192
+00:07:35,422 --> 00:07:40,120
+The neighbours shook too. On Thursday
+morning, CoreWeave was down about
+
+193
+00:07:40,140 --> 00:07:44,712
+nine percent and Nebius about
+sixteen, according to TechCrunch.
+
+194
+00:07:44,742 --> 00:07:46,052
+What happened to you two?
+
+195
+00:07:46,072 --> 00:07:47,432
+We stood next to him.
+
+196
+00:07:47,452 --> 00:07:48,192
+That's it?
+
+197
+00:07:48,212 --> 00:07:48,842
+That's enough.
+
+198
+00:07:48,872 --> 00:07:53,273
+Friday, the thirteenth.
+HSBC cuts Nvidia to Hold...
+
+199
+00:07:53,293 --> 00:07:57,638
+and its price target from three hundred
+and sixty-five dollars to one hundred
+
+200
+00:07:57,658 --> 00:07:58,552
+and seventy.
+
+201
+00:07:58,572 --> 00:08:01,332
+The new target is less
+than half the old one.
+
+202
+00:08:01,352 --> 00:08:06,439
+Its analyst, Frank Lee, said confidence
+was "shaken", as the "leadership
+
+203
+00:08:06,459 --> 00:08:08,406
+succession plan is unclear".
+
+204
+00:08:08,426 --> 00:08:10,092
+That's one bank's view.
+
+205
+00:08:10,112 --> 00:08:14,803
+Michael Landsberg of Landsberg Bennett
+called the resignation "the worst-case
+
+206
+00:08:14,823 --> 00:08:18,272
+scenario" in the saga,
+Fox Business reports.
+
+207
+00:08:18,302 --> 00:08:19,022
+Hold.
+
+208
+00:08:19,042 --> 00:08:19,702
+Hold what?
+
+209
+00:08:19,722 --> 00:08:20,602
+Your breath.
+
+210
+00:08:20,632 --> 00:08:25,402
+On Friday, the shares closed at about
+one hundred and sixty-three dollars.
+
+211
+00:08:25,422 --> 00:08:29,272
+StoneX puts them about thirty
+percent below their record high.
+
+212
+00:08:29,302 --> 00:08:30,812
+And who's in the chair after her?
+
+213
+00:08:30,832 --> 00:08:32,752
+That's the bit nobody can tell you.
+
+214
+00:08:32,782 --> 00:08:34,652
+Which is why Tuesday matters.
+
+215
+00:08:35,642 --> 00:08:37,359
+So where does this touch you?
+
+216
+00:08:37,379 --> 00:08:39,232
+In a fund you may never open.
+
+217
+00:08:39,252 --> 00:08:44,946
+Before the fall, about seven dollars
+of every hundred in an S&P 500 index
+
+218
+00:08:44,966 --> 00:08:49,174
+fund was Nvidia. After this
+week the slice is smaller.
+
+219
+00:08:49,194 --> 00:08:51,222
+We haven't seen a current figure.
+
+220
+00:08:51,252 --> 00:08:52,592
+Do you own Nvidia?
+
+221
+00:08:52,612 --> 00:08:53,202
+No.
+
+222
+00:08:53,222 --> 00:08:54,782
+Own an index fund?
+
+223
+00:08:54,802 --> 00:08:55,252
+...Yes.
+
+224
+00:08:55,272 --> 00:08:56,752
+Then you own Nvidia.
+
+225
+00:08:56,772 --> 00:08:58,092
+Wait. I own that?
+
+226
+00:08:58,122 --> 00:09:03,670
+Which means a company inside your
+401(k) is run by a finance executive
+
+227
+00:09:03,690 --> 00:09:05,302
+on a temporary title.
+
+228
+00:09:05,322 --> 00:09:09,585
+Whether you're thirty or sixty, if
+you own the index, you own a piece of
+
+229
+00:09:09,605 --> 00:09:10,542
+this question.
+
+230
+00:09:10,562 --> 00:09:13,049
+Tuesday, the seventeenth of November.
+
+231
+00:09:13,069 --> 00:09:17,710
+At about four twenty p.m. Eastern,
+Nvidia releases its results for the
+
+232
+00:09:17,730 --> 00:09:20,832
+quarter that ended on the
+twenty-fifth of October.
+
+233
+00:09:20,852 --> 00:09:26,033
+At five, the call begins. Kress's
+written finance commentary goes up right
+
+234
+00:09:26,053 --> 00:09:27,142
+after the release.
+
+235
+00:09:27,162 --> 00:09:31,667
+Notice the dates. Tuesday's numbers
+cover a quarter that closed before
+
+236
+00:09:31,687 --> 00:09:33,342
+the board's review began.
+
+237
+00:09:33,372 --> 00:09:34,922
+So the numbers are from before?
+
+238
+00:09:34,942 --> 00:09:36,862
+Before. The voice is after.
+
+239
+00:09:36,882 --> 00:09:37,982
+What time's the game?
+
+240
+00:09:38,002 --> 00:09:39,462
+Four twenty. Eastern.
+
+241
+00:09:39,482 --> 00:09:40,252
+Who's playing?
+
+242
+00:09:40,272 --> 00:09:41,932
+One person. Two jobs.
+
+243
+00:09:41,962 --> 00:09:45,511
+Only analysts and big
+investors get to ask questions.
+
+244
+00:09:45,531 --> 00:09:49,092
+Anyone can listen on the webcast
+at Nvidia's investor site.
+
+245
+00:09:49,122 --> 00:09:50,332
+Can I ask a question?
+
+246
+00:09:50,352 --> 00:09:50,812
+No.
+
+247
+00:09:50,832 --> 00:09:51,632
+Can I listen?
+
+248
+00:09:51,652 --> 00:09:52,662
+Yes. Quietly.
+
+249
+00:09:52,692 --> 00:09:56,857
+It's the first Nvidia call without
+Jensen Huang as chief executive...
+
+250
+00:09:56,877 --> 00:09:59,442
+and Kress's first as interim boss.
+
+251
+00:09:59,462 --> 00:10:04,333
+StoneX's Matt Weller calls this report
+Nvidia's first test since Huang
+
+252
+00:10:04,353 --> 00:10:04,842
+left.
+
+253
+00:10:04,872 --> 00:10:06,582
+So what do I do on Tuesday?
+
+254
+00:10:06,602 --> 00:10:07,222
+Listen.
+
+255
+00:10:07,242 --> 00:10:07,882
+That's it?
+
+256
+00:10:07,902 --> 00:10:09,863
+That's more than most people do.
+
+257
+00:10:09,893 --> 00:10:12,094
+This isn't advice to buy or sell.
+
+258
+00:10:12,114 --> 00:10:13,833
+It's a date on the calendar.
+
+259
+00:10:13,853 --> 00:10:16,585
+So when the numbers land,
+here's what to look for.
+
+260
+00:10:16,605 --> 00:10:17,623
+Three things.
+
+261
+00:10:18,613 --> 00:10:23,715
+One: the big number. Analysts expect
+revenue of about one hundred and nine
+
+262
+00:10:23,735 --> 00:10:27,122
+billion dollars for the
+quarter, according to StoneX.
+
+263
+00:10:27,142 --> 00:10:29,003
+That's three months of sales.
+
+264
+00:10:29,023 --> 00:10:34,007
+Nvidia's own forecast, given in August,
+was one hundred and eight billion,
+
+265
+00:10:34,027 --> 00:10:38,163
+give or take two percent. Both
+are estimates, not results.
+
+266
+00:10:38,183 --> 00:10:43,272
+Two details in that August fine print:
+Nvidia guided its gross margin to
+
+267
+00:10:43,292 --> 00:10:48,027
+about seventy-four percent. And it
+assumed no data-center chip sales to
+
+268
+00:10:48,047 --> 00:10:48,753
+China.
+
+269
+00:10:48,783 --> 00:10:50,173
+Seventy-four percent of what?
+
+270
+00:10:50,193 --> 00:10:53,313
+Of each sales dollar, left
+after making the product.
+
+271
+00:10:53,333 --> 00:10:54,663
+That's a lot of dollar.
+
+272
+00:10:54,683 --> 00:10:55,732
+What if they beat it?
+
+273
+00:10:55,752 --> 00:10:57,142
+Then we listen to part two.
+
+274
+00:10:57,162 --> 00:10:58,192
+And if they miss?
+
+275
+00:10:58,212 --> 00:10:59,432
+Then we listen harder.
+
+276
+00:10:59,462 --> 00:11:02,138
+Two: the forecast
+for the next quarter.
+
+277
+00:11:02,158 --> 00:11:05,272
+It's the first one given
+with Kress as interim boss.
+
+278
+00:11:05,302 --> 00:11:06,642
+I see... fog.
+
+279
+00:11:06,662 --> 00:11:07,747
+That's the guidance.
+
+280
+00:11:07,767 --> 00:11:08,947
+Is it good fog?
+
+281
+00:11:08,967 --> 00:11:10,092
+Ask me Tuesday.
+
+282
+00:11:10,122 --> 00:11:12,692
+Three: any word on the search.
+
+283
+00:11:12,712 --> 00:11:17,517
+As of Saturday, the fourteenth of
+November, no permanent chief executive
+
+284
+00:11:17,537 --> 00:11:18,492
+has been named.
+
+285
+00:11:18,512 --> 00:11:22,973
+On Friday, the Financial Times reported,
+as relayed by Reuters, that the
+
+286
+00:11:22,993 --> 00:11:26,534
+board had approached an executive
+at another chip company.
+
+287
+00:11:26,554 --> 00:11:31,331
+Nvidia's board says it has not formally
+engaged any candidate, and calls
+
+288
+00:11:31,351 --> 00:11:34,025
+speculation about names "premature".
+
+289
+00:11:34,045 --> 00:11:35,372
+It's one report.
+
+290
+00:11:35,402 --> 00:11:36,672
+Is that the new boss?
+
+291
+00:11:36,692 --> 00:11:38,512
+It's a shadow with a phone.
+
+292
+00:11:38,542 --> 00:11:43,289
+In the same release, Jones says the
+board expects "the company's operations,
+
+293
+00:11:43,309 --> 00:11:48,152
+customer commitments and product roadmap
+to continue without interruption".
+
+294
+00:11:48,172 --> 00:11:52,588
+As of Saturday, we found no statement
+from Huang on his resignation.
+
+295
+00:11:52,608 --> 00:11:56,342
+And no report we read says whether
+the board's review goes on.
+
+296
+00:11:56,372 --> 00:11:57,935
+Who's in the chair on Tuesday?
+
+297
+00:11:57,955 --> 00:11:58,695
+She is.
+
+298
+00:11:58,715 --> 00:11:59,704
+And the stock?
+
+299
+00:11:59,724 --> 00:12:01,764
+Nobody knows that yet. Including us.
+
+300
+00:12:01,794 --> 00:12:05,856
+And here's the twist. On Tuesday,
+the person reporting the quarter...
+
+301
+00:12:05,876 --> 00:12:08,964
+is also the person the
+market is judging by it.
+
+302
+00:12:08,994 --> 00:12:10,774
+Interim. And a question mark.
+
+303
+00:12:10,794 --> 00:12:11,674
+And a clock.
+
+304
+00:12:11,694 --> 00:12:12,754
+So who's in the chair?
+
+305
+00:12:12,774 --> 00:12:14,764
+For now? The one with the calculator.
+
+306
+00:12:14,794 --> 00:12:16,929
+So who is running Nvidia now?
+
+307
+00:12:16,988 --> 00:12:20,014
+Its finance chief, on
+a temporary title.
+
+308
+00:12:20,034 --> 00:12:21,686
+And why does Tuesday matter?
+
+309
+00:12:21,706 --> 00:12:25,646
+Because at four twenty, the numbers
+and the new boss arrive together...
+
+310
+00:12:25,666 --> 00:12:26,714
+for the first time.

@@ -1,0 +1,59 @@
+YOUTUBE UPLOAD: nvidia-cfo-era (prepared 17 Nov 2026; paste each block)
+
+TITLE (pair C, the one that fits all three pictures; pairs A and B are the A/B test options in package.md)
+Nvidia's CEO Resigned. Who Is Running It Now?
+(A: Nvidia's CEO Resigned. Its Finance Chief Runs It Now / B: Nvidia Is Worth Trillions. Its Boss Is Temporary.)
+
+DESCRIPTION (2742 characters; limit 5,000)
+-----
+Nvidia founder Jensen Huang resigned as president, chief executive and board member on 12 November 2026, effective immediately, and Nvidia's release gave no reason. The job went to the company's finance chief, Colette Kress, as interim chief executive; she keeps her CFO role. Harvey Jones became the board's first-ever chair, and the board started a search for a permanent chief executive. This video follows the week: the board's review that opened on 8 November, the shares' fall of about 9.5 percent on 9 and 10 November, the two reports on the night of 11 November, and the resignation itself.
+
+Nvidia's market value went from about $4.498 trillion on Friday 6 November to about $4.005 trillion on Thursday 12 November, a difference of about $490 billion (our subtraction from Yahoo Finance's figures). On 13 November HSBC cut Nvidia to Hold and its price target from $365 to $170. Nvidia reports results on Tuesday 17 November at about 4:20 p.m. Eastern, with the call at 5:00 p.m., the first without Huang as chief executive. Analysts expect revenue of about $109 billion (StoneX); Nvidia's own forecast was $108 billion, give or take 2 percent. The video says what to look for and makes no claim about the result.
+
+Do you own Nvidia through an index fund without knowing it? Does the company need a permanent chief executive fast, or is its finance chief a safe pair of hands for now? Tell us in the comments.
+
+Chapters
+0:00 The empty chair
+1:28 Three seats
+2:42 Wednesday night
+3:57 Effective Immediately
+5:35 Two plates, one desk
+7:02 Four trillion
+8:34 Your Slice
+10:17 Four twenty
+
+Figures as of 14 November 2026, from reporting by Yahoo Finance, CNBC, Fox Business, TechCrunch, Reuters (relaying the Financial Times), StoneX and Tom's Hardware, and from Nvidia's release and its SEC filing.
+
+Sources
+Nvidia, "NVIDIA Announces CEO Transition", 12 Nov 2026: https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition
+Nvidia 8-K exhibit (SEC EDGAR), 12 Nov 2026: https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm
+Nvidia, "Sets Conference Call for Third Quarter Financial Results": https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/
+StoneX, "Nvidia earnings preview", 13 Nov 2026: https://www.stonex.com/en-gb/news-and-analysis/nvidia-earnings-preview-nvda-s-first-test-of-the-post-jenson-huang-era/
+More sources are in the pinned comment.
+
+The narration is a synthetic voice. The characters are cartoons and say only comic lines; people named in the reports are caricatures, and they speak only words they are on record saying. This video is not financial advice. Allegations described are unproven.
+-----
+
+RESULT UPDATE (paste as the FIRST line of the description after the call, Wed 18 Nov; fact-checker checks the figures first)
+Update 18 Nov: Nvidia reported revenue of $___ billion for the quarter (analysts expected about $109 billion, StoneX) and guided to $___ billion for the next quarter. On the permanent chief executive: ___. Source: Nvidia's release of 17 Nov 2026, ___.
+
+TAGS (228 characters; limit 500)
+Nvidia,Nvidia CEO,Jensen Huang,Jensen Huang resigns,Colette Kress,interim CEO,Nvidia earnings,Nvidia earnings call,Harvey Jones,Nvidia stock,S&P 500 index fund,Nvidia CEO search,business story,finance explained,cartoon explainer
+
+PINNED COMMENT (554 characters)
+Does Nvidia need a permanent chief executive fast, or is Colette Kress a safe pair of hands for now? Pick a side and tell us why.
+
+More sources: Yahoo Finance live blog, 12-13 Nov 2026; CNBC, 12-13 Nov 2026; Fox Business, 12 Nov 2026 (analyst quotes); TechCrunch, 12-13 Nov 2026 (timeline; board accepted the resignation on 11 Nov per the filing); Reuters, 13 Nov 2026 (relaying the Financial Times report; Nvidia did not confirm it); Tom's Hardware via Yahoo, 13 Nov 2026. (Add the exact links from research.md at upload, only those opened and checked.)
+
+PINNED COMMENT UPDATE (after the call; edit or add, never silently: say "Update 18 Nov")
+Update 18 Nov: results are out. Revenue $___ billion (analysts expected about $109 billion, StoneX); next-quarter guidance $___ billion; gross margin ___ percent; on the search for a permanent chief executive: ___. Kress said, in the call: "___" (quote exactly, or leave out). Source: Nvidia's release, 17 Nov 2026, ___. The video above was published before the results and says nothing about them.
+
+STUDIO SETTINGS
+- Video file: render/nvidia-cfo-era.mp4 (12:27 on the current timing; not in git; render after the Tuesday currency check)
+- Thumbnails: images/thumbnail_a.png, thumbnail_b.png, thumbnail_c.png (painted; NOT YET MADE; A matches the first frame)
+- Language: English. Category: Education.
+- Altered content label: the narration is a synthetic voice (ElevenLabs, Lawrence). Set the label as README.md records (yes); re-read YouTube's current text first.
+- Not made for kids. Captions: upload nvidia-cfo-era.srt, language English (re-generate after the detail pass if timing.json changed).
+- A/B test: add the three thumbnails and the three titles from package.md.
+- End screen: start at 12:07 (last 20 s, right half clear). Video element: nvidia-ceo-probe (https://www.youtube.com/watch?v=_cfb_NZ1haE). Add a Subscribe element. Studio changes need the user's yes.
+- Playlist: CEO Stories. Schedule: Tue 17 Nov 2026, 18:00 Turkey time (10:00 ET), approved 14 Nov.
