@@ -1542,7 +1542,7 @@
    "actors": [
     {
      "who": "HAL",
-     "x": 1330,
+     "x": 1480,
      "y": 950,
      "speaks": [
       "L101"
@@ -1637,10 +1637,10 @@
     "color": "#ffe9c0",
     "dark": 0.45
    },
-   "frame": "close",
+   "frame": "medium",
    "focus": [
-    1400,
-    420
+    1300,
+    450
    ],
    "actors": [
     {
@@ -1740,10 +1740,10 @@
     "color": "#ffe9c0",
     "dark": 0.45
    },
-   "frame": "close",
+   "frame": "medium",
    "focus": [
-    1400,
-    420
+    1300,
+    450
    ],
    "actors": [
     {

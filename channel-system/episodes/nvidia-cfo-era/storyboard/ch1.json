@@ -33,10 +33,16 @@
      "acts": [
       {
        "cue": "L001",
-       "word": 3,
+       "word": 1,
+       "pose": "raise"
+      },
+      {
+       "cue": "L001",
+       "word": 4,
        "pose": "think"
       }
-     ]
+     ],
+     "prop": "bill"
     }
    ],
    "explains": "It is night in Nvidia's corner office: the boss's chair is empty, and one woman is still working at the next desk.",
@@ -83,8 +89,12 @@
      "y": 520,
      "k": 1.7,
      "state": "taped",
-     "act": "press",
-     "at": 0.1
+     "act": "press"
+    },
+    {
+     "type": "briefcase",
+     "x": 1250,
+     "y": 1010
     }
    ],
    "explains": "The chief executive's title on the door has been covered with a strip of tape that says INTERIM."
@@ -157,7 +167,7 @@
    "place": "corner office",
    "frame": "medium",
    "focus": [
-    1000,
+    1080,
     560
    ],
    "camera": "still",
@@ -199,25 +209,28 @@
    "props": [
     {
      "type": "name_plate",
-     "x": 923,
+     "x": 1060,
      "y": 722,
      "k": 1.1,
      "t": "CFO",
-     "tape": true
+     "tape": true,
+     "layer": "front"
     },
     {
      "type": "calculator",
-     "x": 1220,
+     "x": 1330,
      "y": 722,
      "k": 1.045,
-     "t": "4.0"
+     "t": "4.0",
+     "layer": "front"
     },
     {
      "type": "desk_phone",
-     "x": 1528,
+     "x": 1600,
      "y": 722,
      "k": 1.045,
-     "note": "TUE 5:00 PM"
+     "note": "TUE 5:00 PM",
+     "layer": "front"
     }
    ]
   },
@@ -235,8 +248,8 @@
    "place": "corner office",
    "frame": "medium",
    "focus": [
-    1420,
-    420
+    1150,
+    560
    ],
    "camera": "pan_left",
    "light": {
@@ -253,15 +266,21 @@
      "y": 860,
      "scale": 0.65,
      "face": "neutral",
-     "pose": "think",
+     "pose": "hold",
      "enter": "none",
      "acts": [
       {
        "cue": "L002",
-       "word": 3,
-       "pose": "hold"
+       "word": 2,
+       "pose": "raise"
+      },
+      {
+       "cue": "L002",
+       "word": 4,
+       "pose": "think"
       }
-     ]
+     ],
+     "prop": "bill"
     }
    ],
    "explains": "Above her, the office clock is in shadow: nobody can yet see what time it is for her.",
@@ -273,7 +292,8 @@
      "k": 0.95,
      "state": "jacket"
     }
-   ]
+   ],
+   "angle": "low"
   },
   {
    "id": "c1s06",
@@ -289,7 +309,7 @@
    "place": "corner office",
    "frame": "close",
    "focus": [
-    940,
+    1000,
     520
    ],
    "camera": "tilt_up",
@@ -303,7 +323,7 @@
    "actors": [
     {
      "who": "COLETTE_KRESS",
-     "x": 880,
+     "x": 760,
      "y": 980,
      "scale": 1.0,
      "face": "neutral",
@@ -322,25 +342,20 @@
    "props": [
     {
      "type": "name_plate",
-     "x": 923,
+     "x": 1060,
      "y": 722,
      "k": 1.1,
      "t": "CFO",
-     "tape": true
+     "tape": true,
+     "layer": "front"
     },
     {
      "type": "calculator",
-     "x": 1220,
+     "x": 1330,
      "y": 722,
      "k": 1.045,
-     "t": "4.0"
-    },
-    {
-     "type": "desk_phone",
-     "x": 1528,
-     "y": 722,
-     "k": 1.045,
-     "note": "TUE 5:00 PM"
+     "t": "4.0",
+     "layer": "front"
     }
    ]
   },
@@ -447,7 +462,23 @@
      ]
     }
    ],
-   "explains": "The chair at the head of the table is so new it still wears its plastic wrap: nobody has ever sat in it."
+   "explains": "The chair at the head of the table is so new it still wears its plastic wrap: nobody has ever sat in it.",
+   "props": [
+    {
+     "type": "briefcase",
+     "x": 560,
+     "y": 1010,
+     "move": {
+      "to": [
+       860,
+       1010
+      ],
+      "cue": "L002",
+      "word": 18,
+      "dur": 0.6
+     }
+    }
+   ]
   },
   {
    "id": "c1k01a",
@@ -477,15 +508,24 @@
     {
      "thing": "chip",
      "label": "NVIDIA",
-     "x": 1000,
+     "x": 1250,
      "y": 900,
      "scale": 0.45,
      "face": "confused",
      "speaks": [
       "L003"
      ],
-     "enter": "rise",
+     "enter": "none",
      "acts": [
+      {
+       "cue": "L003",
+       "word": 0,
+       "to": [
+        1000,
+        900
+       ],
+       "dur": 0.9
+      },
       {
        "cue": "L003",
        "word": 2,
@@ -541,9 +581,9 @@
     },
     {
      "who": "HAL",
-     "x": 970,
-     "y": 820,
-     "scale": 0.62,
+     "x": 1130,
+     "y": 900,
+     "scale": 0.85,
      "face": "deadpan",
      "prop": "mug",
      "speaks": [
@@ -553,7 +593,16 @@
      "acts": [
       {
        "cue": "L004",
-       "word": 1,
+       "word": 0,
+       "to": [
+        1050,
+        900
+       ],
+       "dur": 0.6
+      },
+      {
+       "cue": "L004",
+       "word": 2,
        "pose": "shrug"
       }
      ]
@@ -580,13 +629,15 @@
     "night": true,
     "palette": "violet",
     "view": "wide",
-    "chair": false
+    "chair": false,
+    "bare_desk": true,
+    "plate": false
    },
    "place": "corner office",
    "frame": "close",
    "focus": [
-    1430,
-    560
+    1600,
+    520
    ],
    "camera": "still",
    "sound": "riser",
@@ -600,9 +651,9 @@
    "actors": [
     {
      "thing": "chip",
-     "x": 1430,
+     "x": 1500,
      "y": 664,
-     "scale": 0.6,
+     "scale": 0.42,
      "face": "neutral",
      "enter": "none",
      "acts": [
@@ -617,12 +668,20 @@
     },
     {
      "who": "COLETTE_KRESS",
-     "x": 1700,
+     "x": 1660,
      "y": 860,
      "scale": 0.65,
      "face": "neutral",
      "pose": "think",
-     "enter": "none"
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L005",
+       "word": 11,
+       "face": "shocked",
+       "pose": "raise"
+      }
+     ]
     }
    ],
    "overlays": [
@@ -661,7 +720,8 @@
     "night": true,
     "palette": "violet",
     "view": "wide",
-    "chair": false
+    "chair": false,
+    "bare_desk": true
    },
    "place": "corner office",
    "camera": "pull_out",
@@ -675,9 +735,9 @@
    "actors": [
     {
      "thing": "chip",
-     "x": 1430,
+     "x": 1500,
      "y": 664,
-     "scale": 0.6,
+     "scale": 0.42,
      "face": "scared",
      "tag": "$4.0T",
      "enter": "none",
@@ -691,12 +751,19 @@
     },
     {
      "who": "COLETTE_KRESS",
-     "x": 1700,
+     "x": 1660,
      "y": 860,
      "scale": 0.65,
      "face": "neutral",
      "pose": "think",
-     "enter": "none"
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L005",
+       "word": 14,
+       "pose": "point"
+      }
+     ]
     }
    ],
    "explains": "That four-trillion price tag now hangs on a company whose top chair is empty: the number to remember.",
@@ -708,6 +775,12 @@
      "k": 0.95,
      "state": "jacket"
     }
+   ],
+   "angle": "high",
+   "frame": "medium",
+   "focus": [
+    1170,
+    560
    ]
   },
   {
@@ -781,8 +854,8 @@
    "place": "corner office",
    "frame": "close",
    "focus": [
-    1530,
-    620
+    1420,
+    600
    ],
    "camera": "push_in",
    "light": {
@@ -795,7 +868,7 @@
    "actors": [
     {
      "who": "COLETTE_KRESS",
-     "x": 700,
+     "x": 1200,
      "y": 980,
      "scale": 0.9,
      "face": "neutral",
@@ -805,7 +878,7 @@
       {
        "cue": "L007",
        "word": 3,
-       "pose": "think"
+       "pose": "point"
       }
      ]
     }
@@ -813,29 +886,15 @@
    "explains": "On her desk waits a date: a note on the phone for Tuesday's call.",
    "props": [
     {
-     "type": "name_plate",
-     "x": 923,
-     "y": 722,
-     "k": 1.1,
-     "t": "CFO",
-     "tape": true
-    },
-    {
-     "type": "calculator",
-     "x": 1220,
-     "y": 722,
-     "k": 1.045,
-     "t": "4.0"
-    },
-    {
      "type": "desk_phone",
-     "x": 1528,
+     "x": 1560,
      "y": 722,
      "k": 1.045,
      "note": "TUE 5:00 PM",
      "act": "curl",
      "cue": "L007",
-     "word": 4
+     "word": 4,
+     "layer": "front"
     }
    ]
   },
@@ -964,7 +1023,7 @@
    "place": "bus stop",
    "frame": "medium",
    "focus": [
-    760,
+    700,
     600
    ],
    "camera": "pan_left",
@@ -972,7 +1031,7 @@
    "actors": [
     {
      "who": "BENNY",
-     "x": 760,
+     "x": 700,
      "y": 960,
      "scale": 0.85,
      "face": "shocked",
@@ -1020,7 +1079,7 @@
    "actors": [
     {
      "who": "BENNY",
-     "x": 760,
+     "x": 700,
      "y": 960,
      "scale": 0.85,
      "face": "confused",
@@ -1068,7 +1127,7 @@
    "actors": [
     {
      "who": "BENNY",
-     "x": 760,
+     "x": 700,
      "y": 960,
      "scale": 0.85,
      "face": "confused",
@@ -1115,7 +1174,7 @@
    "actors": [
     {
      "who": "BENNY",
-     "x": 760,
+     "x": 700,
      "y": 960,
      "scale": 0.85,
      "face": "confused",
@@ -1178,7 +1237,7 @@
     },
     {
      "who": "BENNY",
-     "x": 760,
+     "x": 700,
      "y": 960,
      "scale": 0.8,
      "face": "plain",
@@ -1220,7 +1279,7 @@
    "actors": [
     {
      "who": "BENNY",
-     "x": 760,
+     "x": 700,
      "y": 960,
      "scale": 0.85,
      "face": "confused",
@@ -1297,7 +1356,7 @@
     {
      "thing": "the_board",
      "label": "THE BOARD",
-     "x": 960,
+     "x": 860,
      "y": 960,
      "scale": 1.0,
      "face": "neutral",
@@ -1313,7 +1372,16 @@
      "open": 0.9
     }
    ],
-   "explains": "The story starts with Nvidia's board itself, which holds the power to hire and remove a chief executive."
+   "explains": "The story starts with Nvidia's board itself, which holds the power to hire and remove a chief executive.",
+   "props": [
+    {
+     "type": "exec_chair",
+     "x": 1560,
+     "y": 1000,
+     "k": 0.8,
+     "state": "bare"
+    }
+   ]
   },
   {
    "id": "c1t03",
@@ -1335,10 +1403,10 @@
     "palette": "wood"
    },
    "place": "boardroom",
-   "frame": "close",
+   "frame": "medium",
    "focus": [
     960,
-    620
+    600
    ],
    "camera": "still",
    "light": {
@@ -1351,7 +1419,7 @@
    "actors": [
     {
      "thing": "the_board",
-     "x": 960,
+     "x": 860,
      "y": 1000,
      "scale": 1.1,
      "face": "deadpan",
@@ -1366,6 +1434,22 @@
      ],
      "open": 0.0,
      "tip": 1.2
+    },
+    {
+     "thing": "chip",
+     "x": 1500,
+     "y": 920,
+     "scale": 0.42,
+     "face": "scared",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L014",
+       "word": 11,
+       "pose": "panic"
+      }
+     ],
+     "flip": true
     }
    ],
    "explains": "On Sunday the board opens an independent review of its own boss, a folder so thick it knocks the lamp over."
@@ -1402,6 +1486,21 @@
        "cue": "L014",
        "word": 24,
        "pose": "panic"
+      }
+     ]
+    },
+    {
+     "thing": "chip",
+     "x": 700,
+     "y": 900,
+     "scale": 0.45,
+     "face": "neutral",
+     "enter": "slide_left",
+     "acts": [
+      {
+       "cue": "L014",
+       "word": 22,
+       "face": "shocked"
       }
      ]
     }
@@ -1448,7 +1547,23 @@
      ]
     }
    ],
-   "explains": "Target is the board's own word: it says Huang was aimed at, not that he did anything."
+   "explains": "Target is the board's own word: it says Huang was aimed at, not that he did anything.",
+   "props": [
+    {
+     "type": "magnifier_big",
+     "x": 1150,
+     "y": 660,
+     "move": {
+      "to": [
+       1250,
+       620
+      ],
+      "cue": "L015",
+      "word": 1,
+      "dur": 0.8
+     }
+    }
+   ]
   },
   {
    "id": "c1s20",
@@ -1486,6 +1601,22 @@
        "cue": "L015",
        "word": 10,
        "pose": "panic"
+      }
+     ]
+    },
+    {
+     "thing": "chip",
+     "x": 800,
+     "y": 900,
+     "scale": 0.45,
+     "face": "scared",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L015",
+       "word": 13,
+       "face": "relieved",
+       "pose": "shrug"
       }
      ]
     }
@@ -1530,6 +1661,25 @@
        "pose": "point"
       }
      ]
+    },
+    {
+     "thing": "chip",
+     "x": 1550,
+     "y": 880,
+     "scale": 0.45,
+     "face": "scared",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L016",
+       "word": 4,
+       "to": [
+        1580,
+        960
+       ],
+       "dur": 0.8
+      }
+     ]
     }
    ],
    "explains": "On Monday traders start selling, and the shares slide about four percent."
@@ -1555,7 +1705,6 @@
    "actors": [
     {
      "thing": "chip",
-     "label": "NVIDIA",
      "x": 960,
      "y": 900,
      "scale": 0.6,
@@ -1711,10 +1860,10 @@
     "night": false
    },
    "place": "diner",
-   "frame": "close",
+   "frame": "medium",
    "focus": [
     700,
-    560
+    540
    ],
    "camera": "still",
    "extras": 3,
@@ -1953,8 +2102,23 @@
    },
    "actors": [
     {
+     "who": "MARTHA",
+     "x": 560,
+     "y": 1000,
+     "scale": 0.9,
+     "face": "plain",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L023",
+       "word": 2,
+       "pose": "think"
+      }
+     ]
+    },
+    {
      "who": "HAL",
-     "x": 1500,
+     "x": 1380,
      "y": 1000,
      "scale": 0.9,
      "face": "deadpan",
