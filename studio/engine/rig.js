@@ -699,6 +699,9 @@
   // A living thing (see THINGS): the same face, gloves and timeline hooks as a person.
   function makeThing(o) {
     const T = THINGS[o.thing](o), g = document.createElementNS(NS, "g"); g.setAttribute("class", "actor cut");
+    // { tag: "$4.0T" } on any thing that does not draw its own tag (only the can does): a plain price tag on a string at the top right
+    if (o.tag != null && !/class="tagg"/.test(T.body)) { const text = String(o.tag), tw = Math.max(150, text.length * 40 + 80), fit = Math.min(54, (tw - 60) / Math.max(2, text.length * 0.55)), tx = Math.round(T.w * 0.75), ty = -Math.round(T.h * 0.78);
+      T.body += `<path d="M${Math.round(T.w * 0.35)},${-T.h + 10} Q${tx},${-T.h - 20} ${tx + 10},${ty - 40}" fill="none" stroke="${INK}" stroke-width="5"/><g class="tagg" transform="translate(${tx + tw / 2 - 20},${ty}) rotate(8)"><path d="M${-tw / 2},-44 L${tw / 2 - 30},-44 L${tw / 2},0 L${tw / 2 - 30},44 L${-tw / 2},44Z" fill="#f6f1e4" ${st}/><circle cx="${tw / 2 - 28}" cy="0" r="7" fill="${INK}"/>${txt(-14, 16, text, fit, "#e0262b")}</g>`; }
     const mouths = Object.keys(MOUTHS).map((k) => `<g class="m-${k}">${MOUTHS[k]}</g>`).join(""), glove = o.glove || "#f6f1e4", lift = T.hover ? -70 : 0;
     const prop = o.prop && PROPS[o.prop] ? `<g class="prop">${PROPS[o.prop](o)}</g>` : "", hide = o.hands === false ? ' style="display:none"' : "";
     g.innerHTML = (`

@@ -26,6 +26,7 @@
     "acts.to": "a walk (a person walks with legs; a living thing rocks)",
     "enter": ["walk", "pop", "slide_left", "slide_right", "rise", "none"],
     "enter.default": { "person": "walk", "thing": "pop" },
+    "thing.tag": "any living thing draws { tag } as a price tag at its top right (17 Nov 2026)",
     "poses": ["rest", "hips", "shrug", "cheer", "point", "think", "facepalm", "hold", "phone", "wave", "present", "raise", "fold", "carry", "panic", "grab", "offer", "reach", "give", "slam", "lap"]
   },
   "defaults": {
