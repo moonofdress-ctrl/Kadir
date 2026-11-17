@@ -29,7 +29,7 @@
     "palette": "green",
     "dress": "scoreboard"
    },
-   "camera": "tilt_up",
+   "camera": "still",
    "light": {
     "x": 960,
     "y": 140,
@@ -41,23 +41,69 @@
    "ambience": "outdoors",
    "actors": [
     {
-     "who": "CHAD",
-     "x": 1500,
+     "who": "HAL",
+     "x": 760,
      "y": 980,
      "scale": 0.7,
-     "enter": "walk",
-     "cue": "L187",
-     "word": 11,
+     "prop": "mug",
+     "face": "shocked",
+     "enter": "none",
      "acts": [
       {
        "cue": "L187",
-       "word": 16,
+       "word": 9,
        "pose": "point"
+      }
+     ]
+    },
+    {
+     "who": "CHAD",
+     "x": 1460,
+     "y": 980,
+     "scale": 0.7,
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L187",
+       "word": 6,
+       "to": [
+        1260
+       ],
+       "dur": 1
+      },
+      {
+       "cue": "L187",
+       "word": 14,
+       "pose": "point",
+       "face": "shocked"
       }
      ]
     }
    ],
-   "explains": "Analysts expect about $109 billion of revenue; the RESULT column is still blank."
+   "explains": "Analysts expect about $109 billion of revenue for the quarter: the number Tuesday is measured against.",
+   "frame": "close",
+   "focus": [
+    1000,
+    800
+   ],
+   "overlays": [
+    {
+     "type": "counter",
+     "from": 0,
+     "to": [
+      109
+     ],
+     "prefix": "~$",
+     "suffix": "B",
+     "roll": true,
+     "tone": "green",
+     "pos": "tc",
+     "cap": "EXPECTED",
+     "at": 0.3,
+     "dur": 2.4,
+     "plate": true
+    }
+   ]
   },
   {
    "id": "c8s50a",
@@ -91,17 +137,32 @@
      "x": 760,
      "y": 980,
      "scale": 0.9,
-     "enter": "none"
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L187",
+       "word": 22,
+       "pose": "point"
+      }
+     ]
     },
     {
      "who": "HAL",
      "x": 1180,
      "y": 980,
      "scale": 0.9,
-     "enter": "none"
+     "enter": "none",
+     "prop": "mug",
+     "acts": [
+      {
+       "cue": "L187",
+       "word": 24,
+       "pose": "think"
+      }
+     ]
     }
    ],
-   "explains": "That figure is only three months of sales, counted in the empty seats."
+   "explains": "The board now reads $109B EXPECTED, RESULT still blank: that is only three months of sales."
   },
   {
    "id": "c8s50c",
@@ -128,13 +189,47 @@
      "who": "HAL",
      "x": 760,
      "y": 980,
-     "enter": "none"
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L188",
+       "word": 2,
+       "pose": "point"
+      }
+     ]
     },
     {
      "who": "CHAD",
      "x": 1160,
      "y": 980,
-     "enter": "none"
+     "enter": "none",
+     "face": "confused"
+    },
+    {
+     "thing": "chip",
+     "label": "NVIDIA",
+     "x": 1560,
+     "y": 980,
+     "scale": 0.5,
+     "face": "smug",
+     "enter": "walk",
+     "cue": "L188",
+     "word": 0,
+     "acts": [
+      {
+       "cue": "L188",
+       "word": 3,
+       "to": [
+        1480
+       ],
+       "dur": 0.8
+      },
+      {
+       "cue": "L188",
+       "word": 6,
+       "pose": "present"
+      }
+     ]
     }
    ],
    "explains": "Nvidia's own August forecast was about $108 billion."
@@ -165,7 +260,36 @@
     960,
     380
    ],
-   "actors": [],
+   "actors": [
+    {
+     "who": "CHAD",
+     "x": 640,
+     "y": 1000,
+     "face": "confused",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L188",
+       "word": 13,
+       "pose": "think"
+      }
+     ]
+    },
+    {
+     "who": "HAL",
+     "x": 1300,
+     "y": 1000,
+     "prop": "mug",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L188",
+       "word": 15,
+       "pose": "shrug"
+      }
+     ]
+    }
+   ],
    "explains": "Give or take two percent: the forecast is a range, not a point."
   },
   {
@@ -196,14 +320,29 @@
      "x": 820,
      "y": 980,
      "scale": 0.7,
-     "enter": "none"
+     "enter": "none",
+     "prop": "mug",
+     "acts": [
+      {
+       "cue": "L188",
+       "word": 20,
+       "pose": "point"
+      }
+     ]
     },
     {
      "who": "CHAD",
      "x": 1100,
      "y": 980,
      "scale": 0.7,
-     "enter": "none"
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L188",
+       "word": 19,
+       "pose": "shrug"
+      }
+     ]
     }
    ],
    "explains": "Both figures are guesses: nothing is in the RESULT column yet."
@@ -246,13 +385,21 @@
      "who": "CHAD",
      "x": 700,
      "y": 980,
-     "enter": "none"
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L189",
+       "word": 9,
+       "pose": "point"
+      }
+     ]
     },
     {
      "who": "HAL",
-     "x": 1060,
+     "x": 1200,
      "y": 980,
-     "enter": "none"
+     "enter": "none",
+     "prop": "mug"
     }
    ],
    "explains": "Nvidia expects to keep about 74% of each sales dollar as gross margin."
@@ -280,21 +427,36 @@
    "ambience": "outdoors",
    "frame": "medium",
    "focus": [
-    900,
+    880,
     620
    ],
    "actors": [
     {
      "who": "HAL",
-     "x": 900,
+     "x": 760,
      "y": 980,
-     "enter": "none"
+     "enter": "none",
+     "prop": "mug",
+     "acts": [
+      {
+       "cue": "L189",
+       "word": 18,
+       "pose": "raise"
+      }
+     ]
     },
     {
      "who": "CHAD",
      "x": 1240,
      "y": 980,
-     "enter": "none"
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L189",
+       "word": 20,
+       "pose": "think"
+      }
+     ]
     }
    ],
    "explains": "The forecast counts on zero data-center chip sales to China."
@@ -332,13 +494,22 @@
      "speaks": [
       "L190"
      ],
-     "enter": "none"
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L190",
+       "word": 0,
+       "pose": "think",
+       "face": "confused"
+      }
+     ]
     },
     {
      "who": "HAL",
      "x": 1200,
      "y": 980,
-     "enter": "none"
+     "enter": "none",
+     "prop": "mug"
     }
    ],
    "explains": "Chad does not know what the margin is a percentage of."
@@ -353,7 +524,7 @@
     "palette": "green",
     "dress": "scoreboard"
    },
-   "camera": "pan_left",
+   "camera": "tilt_down",
    "light": {
     "x": 960,
     "y": 140,
@@ -371,18 +542,26 @@
    "actors": [
     {
      "who": "CHAD",
-     "x": 640,
+     "x": 600,
      "y": 980,
      "enter": "none"
     },
     {
      "who": "HAL",
-     "x": 1240,
+     "x": 1080,
      "y": 980,
      "speaks": [
       "L191"
      ],
-     "enter": "none"
+     "enter": "none",
+     "prop": "mug",
+     "acts": [
+      {
+       "cue": "L191",
+       "word": 1,
+       "pose": "present"
+      }
+     ]
     }
    ],
    "explains": "Gross margin is what is left of each sales dollar after making the product."
@@ -420,13 +599,22 @@
      "speaks": [
       "L192"
      ],
-     "enter": "none"
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L192",
+       "word": 1,
+       "pose": "raise",
+       "face": "happy"
+      }
+     ]
     },
     {
      "who": "HAL",
      "x": 1200,
      "y": 980,
-     "enter": "none"
+     "enter": "none",
+     "prop": "mug"
     }
    ],
    "explains": "Seventy-four cents of every dollar is a lot."
@@ -459,13 +647,21 @@
      "speaks": [
       "L193"
      ],
-     "enter": "none"
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L193",
+       "word": 1,
+       "pose": "think"
+      }
+     ]
     },
     {
      "who": "HAL",
      "x": 1120,
      "y": 980,
-     "enter": "none"
+     "enter": "none",
+     "prop": "mug"
     }
    ],
    "explains": "Even the regulars only know what to do next, not what will happen."
@@ -509,7 +705,15 @@
      "speaks": [
       "L194"
      ],
-     "enter": "none"
+     "enter": "none",
+     "prop": "mug",
+     "acts": [
+      {
+       "cue": "L194",
+       "word": 1,
+       "pose": "point"
+      }
+     ]
     }
    ],
    "explains": "If the numbers beat the forecast, the call is the next thing to hear."
@@ -547,7 +751,15 @@
      "speaks": [
       "L195"
      ],
-     "enter": "none"
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L195",
+       "word": 1,
+       "pose": "grab",
+       "face": "scared"
+      }
+     ]
     },
     {
      "who": "HAL",
@@ -581,7 +793,7 @@
    "frame": "close",
    "focus": [
     1120,
-    600
+    680
    ],
    "actors": [
     {
@@ -597,7 +809,16 @@
      "speaks": [
       "L196"
      ],
-     "enter": "none"
+     "enter": "none",
+     "prop": "mug",
+     "acts": [
+      {
+       "cue": "L196",
+       "word": 1,
+       "pose": "raise",
+       "face": "deadpan"
+      }
+     ]
     }
    ],
    "explains": "Either way the call matters more than the headline number."
@@ -686,7 +907,15 @@
      "speaks": [
       "L198"
      ],
-     "enter": "none"
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L198",
+       "word": 0,
+       "pose": "think",
+       "face": "confused"
+      }
+     ]
     },
     {
      "thing": "chip",
@@ -717,25 +946,32 @@
    },
    "frame": "medium",
    "focus": [
-    1220,
-    640
+    880,
+    700
    ],
    "actors": [
     {
      "who": "CHAD",
-     "x": 700,
+     "x": 1300,
      "y": 980,
      "enter": "none"
     },
     {
      "thing": "chip",
-     "x": 1220,
+     "x": 860,
      "y": 900,
      "scale": 0.45,
      "speaks": [
       "L199"
      ],
-     "enter": "none"
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L199",
+       "word": 0,
+       "pose": "present"
+      }
+     ]
     }
    ],
    "explains": "A company's forecast for the coming months is called guidance."
@@ -765,19 +1001,34 @@
    "actors": [
     {
      "thing": "chip",
-     "x": 640,
+     "x": 900,
      "y": 900,
      "scale": 0.45,
      "enter": "none"
     },
     {
      "who": "CHAD",
-     "x": 1220,
+     "x": 1450,
      "y": 980,
      "speaks": [
       "L200"
      ],
-     "enter": "none"
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L200",
+       "word": 0,
+       "to": [
+        1500
+       ],
+       "dur": 0.6
+      },
+      {
+       "cue": "L200",
+       "word": 2,
+       "pose": "shrug"
+      }
+     ]
     }
    ],
    "explains": "Nobody can yet say if the guidance is good."
@@ -801,25 +1052,40 @@
    },
    "frame": "close",
    "focus": [
-    1100,
-    640
+    1250,
+    760
    ],
    "actors": [
     {
      "who": "CHAD",
-     "x": 700,
+     "x": 1640,
      "y": 980,
-     "enter": "none"
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L201",
+       "word": 2,
+       "pose": "facepalm"
+      }
+     ]
     },
     {
      "thing": "chip",
-     "x": 1100,
+     "x": 1250,
      "y": 900,
      "scale": 0.45,
      "speaks": [
       "L201"
      ],
-     "enter": "none"
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L201",
+       "word": 0,
+       "pose": "shrug",
+       "face": "smug"
+      }
+     ]
     }
    ],
    "explains": "The answer comes on Tuesday."
@@ -856,8 +1122,42 @@
    },
    "motif": "door plate",
    "callback": "the door plate",
-   "actors": [],
-   "explains": "An empty frame waits on the door for a permanent name."
+   "actors": [
+    {
+     "who": "HAL",
+     "x": 140,
+     "y": 980,
+     "enter": "walk",
+     "cue": "L202",
+     "word": 5,
+     "acts": [
+      {
+       "cue": "L202",
+       "word": 6,
+       "to": [
+        520
+       ],
+       "dur": 1.4
+      },
+      {
+       "cue": "L202",
+       "word": 10,
+       "pose": "point",
+       "face": "confused"
+      }
+     ]
+    }
+   ],
+   "explains": "An empty frame waits on the door for a permanent name.",
+   "props": [
+    {
+     "type": "piggy",
+     "x": 1800,
+     "y": 1010,
+     "k": 0.22,
+     "state": "calm"
+    }
+   ]
   },
   {
    "id": "c8s52b",
@@ -882,16 +1182,15 @@
    "frame": "close",
    "focus": [
     960,
-    420
+    500
    ],
    "motif": "door plate",
    "actors": [
     {
      "thing": "chip",
-     "label": "NVIDIA",
-     "x": 1350,
-     "y": 930,
-     "scale": 0.42,
+     "x": 1330,
+     "y": 800,
+     "scale": 0.5,
      "face": "confused",
      "enter": "pop",
      "acts": [
@@ -899,6 +1198,20 @@
        "cue": "L202",
        "word": 15,
        "pose": "shrug"
+      }
+     ]
+    },
+    {
+     "who": "HAL",
+     "x": 600,
+     "y": 980,
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L202",
+       "word": 16,
+       "pose": "shrug",
+       "face": "deadpan"
       }
      ]
     }
@@ -924,13 +1237,58 @@
    "opts": {
     "night": false,
     "palette": "red",
-    "rain": true
+    "rain": true,
+    "stamp": "ONE REPORT"
    },
    "camera": "pan_right",
    "extras": 3,
    "ambience": "street",
-   "actors": [],
-   "explains": "A report says the board approached an executive at another chip company."
+   "actors": [
+    {
+     "thing": "newspaper",
+     "x": 120,
+     "y": 940,
+     "scale": 0.55,
+     "face": "smug",
+     "enter": "walk",
+     "cue": "L203",
+     "word": 6,
+     "acts": [
+      {
+       "cue": "L203",
+       "word": 7,
+       "to": [
+        400
+       ],
+       "dur": 1.2
+      },
+      {
+       "cue": "L203",
+       "word": 12,
+       "pose": "point"
+      }
+     ]
+    },
+    {
+     "thing": "newspaper",
+     "x": 1480,
+     "y": 940,
+     "scale": 0.5,
+     "face": "plain",
+     "enter": "pop",
+     "cue": "L203",
+     "word": 10,
+     "acts": [
+      {
+       "cue": "L203",
+       "word": 13,
+       "pose": "point"
+      }
+     ]
+    }
+   ],
+   "explains": "A report says the board approached an executive at another chip company.",
+   "callback": "the two newspapers"
   },
   {
    "id": "c8s53b",
@@ -941,7 +1299,8 @@
    "opts": {
     "night": false,
     "palette": "red",
-    "rain": true
+    "rain": true,
+    "stamp": "ONE REPORT"
    },
    "camera": "tilt_down",
    "extras": 3,
@@ -951,7 +1310,38 @@
     960,
     560
    ],
-   "actors": [],
+   "actors": [
+    {
+     "thing": "newspaper",
+     "x": 420,
+     "y": 940,
+     "scale": 0.55,
+     "face": "smug",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L203",
+       "word": 16,
+       "pose": "present"
+      }
+     ]
+    },
+    {
+     "thing": "newspaper",
+     "x": 1500,
+     "y": 940,
+     "scale": 0.5,
+     "face": "confused",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L203",
+       "word": 18,
+       "pose": "shrug"
+      }
+     ]
+    }
+   ],
    "explains": "Who that executive is stays a shadow: no name is confirmed."
   },
   {
@@ -963,41 +1353,49 @@
    "opts": {
     "night": false,
     "palette": "red",
-    "rain": true
+    "rain": true,
+    "stamp": "ONE REPORT"
    },
    "camera": "still",
    "extras": 3,
    "ambience": "street",
-   "frame": "medium",
-   "focus": [
-    1150,
-    560
-   ],
    "actors": [
     {
-     "who": "BENNY",
-     "x": 1450,
-     "y": 980,
-     "scale": 0.75,
-     "enter": "none",
+     "thing": "the_board",
+     "x": 1420,
+     "y": 900,
+     "scale": 0.55,
+     "face": "deadpan",
+     "enter": "walk",
+     "cue": "L203",
+     "word": 21,
      "acts": [
       {
        "cue": "L203",
-       "word": 23,
-       "pose": "think"
+       "word": 22,
+       "to": [
+        1360
+       ],
+       "dur": 0.6
+      },
+      {
+       "cue": "L203",
+       "word": 26,
+       "pose": "wave"
       }
      ]
     },
     {
-     "who": "MARTHA",
-     "x": 1700,
-     "y": 980,
-     "scale": 0.75,
+     "thing": "newspaper",
+     "x": 420,
+     "y": 940,
+     "scale": 0.55,
+     "face": "shocked",
      "enter": "none",
      "acts": [
       {
        "cue": "L203",
-       "word": 25,
+       "word": 29,
        "pose": "shrug"
       }
      ]
@@ -1014,12 +1412,44 @@
    "opts": {
     "night": false,
     "palette": "red",
-    "rain": true
+    "rain": true,
+    "stamp": "ONE REPORT"
    },
    "camera": "pull_out",
    "extras": 3,
    "ambience": "street",
-   "actors": [],
+   "actors": [
+    {
+     "thing": "the_board",
+     "x": 1360,
+     "y": 900,
+     "scale": 0.55,
+     "face": "deadpan",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L203",
+       "word": 33,
+       "pose": "raise"
+      }
+     ]
+    },
+    {
+     "thing": "newspaper",
+     "x": 420,
+     "y": 940,
+     "scale": 0.55,
+     "face": "sad",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L203",
+       "word": 36,
+       "pose": "shrug"
+      }
+     ]
+    }
+   ],
    "explains": "The board calls talk about names premature: it is one report."
   },
   {
@@ -1030,31 +1460,46 @@
    "opts": {
     "night": false,
     "palette": "red",
-    "rain": true
+    "rain": true,
+    "stamp": "ONE REPORT"
    },
    "camera": "pan_left",
    "extras": 3,
    "ambience": "street",
    "frame": "medium",
    "focus": [
-    860,
+    560,
     620
    ],
    "actors": [
     {
      "who": "BENNY",
-     "x": 860,
+     "x": 560,
      "y": 980,
      "speaks": [
       "L204"
      ],
-     "enter": "none"
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L204",
+       "word": 0,
+       "pose": "point"
+      }
+     ]
     },
     {
      "who": "MARTHA",
-     "x": 1160,
+     "x": 320,
      "y": 980,
-     "enter": "none"
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L204",
+       "word": 3,
+       "pose": "think"
+      }
+     ]
     }
    ],
    "explains": "Benny takes the report for the new boss."
@@ -1067,31 +1512,41 @@
    "opts": {
     "night": false,
     "palette": "red",
-    "rain": true
+    "rain": true,
+    "stamp": "ONE REPORT"
    },
    "camera": "still",
    "extras": 3,
    "ambience": "street",
    "frame": "close",
    "focus": [
-    1100,
+    640,
     600
    ],
    "actors": [
     {
      "who": "BENNY",
-     "x": 760,
+     "x": 230,
      "y": 980,
-     "enter": "none"
+     "enter": "none",
+     "face": "confused"
     },
     {
      "who": "MARTHA",
-     "x": 1100,
+     "x": 480,
      "y": 980,
      "speaks": [
       "L205"
      ],
-     "enter": "none"
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L205",
+       "word": 0,
+       "pose": "shrug",
+       "face": "deadpan"
+      }
+     ]
     }
    ],
    "explains": "Martha: a report is not a name."
@@ -1367,7 +1822,15 @@
      "who": "BENNY",
      "x": 760,
      "y": 980,
-     "enter": "none"
+     "enter": "none",
+     "prop": "phone",
+     "acts": [
+      {
+       "cue": "L208",
+       "word": 0,
+       "pose": "phone"
+      }
+     ]
     },
     {
      "thing": "chip",
@@ -1377,7 +1840,15 @@
      "speaks": [
       "L208"
      ],
-     "enter": "none"
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L208",
+       "word": 2,
+       "pose": "shrug",
+       "face": "confused"
+      }
+     ]
     }
    ],
    "explains": "Benny and the chip wait alone in the rain for Tuesday."
@@ -1420,7 +1891,15 @@
      "speaks": [
       "L209"
      ],
-     "enter": "none"
+     "enter": "none",
+     "prop": "phone",
+     "acts": [
+      {
+       "cue": "L209",
+       "word": 0,
+       "pose": "present"
+      }
+     ]
     }
    ],
    "explains": "On Tuesday the interim chief executive is in the chair."
@@ -1453,7 +1932,8 @@
      "who": "BENNY",
      "x": 700,
      "y": 980,
-     "enter": "none"
+     "enter": "none",
+     "prop": "phone"
     },
     {
      "thing": "chip",
@@ -1463,7 +1943,14 @@
      "speaks": [
       "L210"
      ],
-     "enter": "none"
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L210",
+       "word": 0,
+       "pose": "raise"
+      }
+     ]
     }
    ],
    "explains": "The stock's reaction is the open question."
@@ -1478,7 +1965,7 @@
     "palette": "cream",
     "rain": true
    },
-   "camera": "tilt_up",
+   "camera": "still",
    "light": {
     "x": 1450,
     "y": 180,
@@ -1488,22 +1975,31 @@
    },
    "frame": "close",
    "focus": [
-    760,
+    1000,
     600
    ],
    "actors": [
     {
      "who": "BENNY",
-     "x": 760,
+     "x": 1000,
      "y": 980,
      "speaks": [
       "L211"
      ],
-     "enter": "none"
+     "enter": "none",
+     "prop": "phone",
+     "acts": [
+      {
+       "cue": "L211",
+       "word": 1,
+       "pose": "shrug",
+       "face": "deadpan"
+      }
+     ]
     },
     {
      "thing": "chip",
-     "x": 1180,
+     "x": 1400,
      "y": 900,
      "scale": 0.4,
      "enter": "none"
@@ -1552,14 +2048,6 @@
    "explains": "The note on the phone now says TODAY: the call she signs is her own first test.",
    "props": [
     {
-     "type": "name_plate",
-     "x": 923,
-     "y": 690,
-     "k": 1.1,
-     "t": "CFO",
-     "tape": "INTERIM CEO"
-    },
-    {
      "type": "calculator",
      "x": 1220,
      "y": 722,
@@ -1574,7 +2062,8 @@
      "note": "TODAY",
      "act": "curl",
      "cue": "L212",
-     "word": 6
+     "word": 6,
+     "state": "tangled"
     }
    ]
   },
@@ -1656,25 +2145,44 @@
    "frame": "medium",
    "focus": [
     960,
-    600
+    560
    ],
    "motif": "door plate",
    "callback": "the one on the door",
    "actors": [
     {
      "who": "BENNY",
-     "x": 620,
+     "x": 520,
      "y": 980,
      "speaks": [
       "L213"
      ],
-     "enter": "none"
+     "enter": "walk",
+     "cue": "L213",
+     "word": 0,
+     "acts": [
+      {
+       "cue": "L213",
+       "word": 0,
+       "to": [
+        560
+       ],
+       "dur": 0.6
+      },
+      {
+       "cue": "L213",
+       "word": 2,
+       "pose": "point"
+      }
+     ]
     },
     {
      "who": "HAL",
-     "x": 880,
+     "x": 1400,
      "y": 980,
-     "enter": "none"
+     "enter": "none",
+     "prop": "mug",
+     "flip": true
     }
    ],
    "explains": "The door now reads interim, with an empty frame for whoever comes next."
@@ -1700,24 +2208,33 @@
    },
    "frame": "close",
    "focus": [
-    960,
-    600
+    1215,
+    580
    ],
    "actors": [
     {
      "who": "BENNY",
-     "x": 560,
+     "x": 600,
      "y": 980,
      "enter": "none"
     },
     {
      "who": "HAL",
-     "x": 840,
+     "x": 1380,
      "y": 980,
      "speaks": [
       "L214"
      ],
-     "enter": "none"
+     "enter": "none",
+     "prop": "mug",
+     "acts": [
+      {
+       "cue": "L214",
+       "word": 1,
+       "pose": "point",
+       "face": "smug"
+      }
+     ]
     }
    ],
    "explains": "And the clock is running toward Tuesday's call."
@@ -1733,10 +2250,11 @@
     "view": "wide",
     "clock_lit": true,
     "clock": "4:20",
-    "plate": "frame",
-    "chair": "agenda"
+    "plate": false,
+    "chair": "agenda",
+    "note": "TODAY"
    },
-   "camera": "pan_right",
+   "camera": "pan_left",
    "light": {
     "x": 760,
     "y": 340,
@@ -1744,25 +2262,52 @@
     "color": "#ffd27a",
     "dark": 0.45
    },
-   "frame": "close",
-   "focus": [
-    960,
-    620
-   ],
    "callback": "who's in the chair",
    "actors": [
     {
      "thing": "chip",
-     "x": 720,
-     "y": 900,
-     "scale": 0.45,
+     "x": 1530,
+     "y": 662,
+     "scale": 0.3,
      "speaks": [
       "L215"
      ],
-     "enter": "none"
+     "enter": "none",
+     "face": "confused",
+     "acts": [
+      {
+       "cue": "L215",
+       "word": 1,
+       "pose": "shrug"
+      }
+     ]
+    },
+    {
+     "who": "BENNY",
+     "x": 970,
+     "y": 800,
+     "scale": 0.62,
+     "enter": "none",
+     "face": "plain",
+     "acts": [
+      {
+       "cue": "L215",
+       "word": 3,
+       "pose": "think"
+      }
+     ]
     }
    ],
-   "explains": "The company still asks who is in the chair, its value with a question mark."
+   "explains": "The company still asks who is in the chair, its value with a question mark.",
+   "overlays": [
+    {
+     "type": "tag",
+     "t": "$4.0T ... ?",
+     "x": 1380,
+     "y": 430,
+     "at": 0.2
+    }
+   ]
   },
   {
    "id": "c8k31b",
@@ -1775,8 +2320,9 @@
     "view": "wide",
     "clock_lit": true,
     "clock": "4:20",
-    "plate": "frame",
-    "chair": "agenda"
+    "plate": false,
+    "chair": "agenda",
+    "note": "TODAY"
    },
    "camera": "tilt_up",
    "light": {
@@ -1788,24 +2334,42 @@
    },
    "frame": "medium",
    "focus": [
-    960,
-    600
+    1230,
+    520
    ],
    "actors": [
     {
      "who": "BENNY",
-     "x": 520,
-     "y": 980,
+     "x": 970,
+     "y": 800,
      "speaks": [
       "L216"
      ],
-     "enter": "none"
+     "enter": "none",
+     "scale": 0.62,
+     "flip": true,
+     "acts": [
+      {
+       "cue": "L216",
+       "word": 0,
+       "to": [
+        1110
+       ],
+       "dur": 0.8
+      },
+      {
+       "cue": "L216",
+       "word": 3,
+       "pose": "point",
+       "face": "smug"
+      }
+     ]
     },
     {
      "thing": "chip",
-     "x": 860,
-     "y": 900,
-     "scale": 0.4,
+     "x": 1530,
+     "y": 662,
+     "scale": 0.3,
      "enter": "none"
     }
    ],
@@ -1835,13 +2399,14 @@
     "clock_lit": true,
     "clock": "4:20",
     "plate": "frame",
-    "chair": "agenda"
+    "chair": false,
+    "note": "TODAY"
    },
    "camera": "pull_out",
    "light": {
-    "x": 760,
-    "y": 340,
-    "r": 820,
+    "x": 600,
+    "y": 360,
+    "r": 900,
     "color": "#ffd27a",
     "dark": 0.45
    },
@@ -1849,10 +2414,19 @@
    "actors": [
     {
      "who": "BENNY",
-     "x": 420,
+     "x": 110,
      "y": 980,
+     "scale": 0.9,
      "enter": "none",
      "acts": [
+      {
+       "cue": "L217",
+       "word": 6,
+       "to": [
+        260
+       ],
+       "dur": 1.2
+      },
       {
        "cue": "L217",
        "word": 10,
@@ -1861,7 +2435,16 @@
      ]
     }
    ],
-   "explains": "Its finance chief runs it, on a temporary title; the boss's chair is still bare."
+   "explains": "Its finance chief runs it, on a temporary title; the boss's chair is still bare.",
+   "props": [
+    {
+     "type": "exec_chair",
+     "x": 700,
+     "y": 900,
+     "k": 0.95,
+     "state": "agenda"
+    }
+   ]
   },
   {
    "id": "c8s58",
@@ -1875,13 +2458,15 @@
     "view": "wide",
     "clock_lit": true,
     "clock": "4:20",
-    "plate": "frame",
-    "chair": "agenda"
+    "plate": false,
+    "chair": false,
+    "dark_right": true,
+    "bare_desk": true
    },
    "camera": "tilt_down",
    "light": {
-    "x": 760,
-    "y": 340,
+    "x": 420,
+    "y": 380,
     "r": 820,
     "color": "#ffd27a",
     "dark": 0.45
@@ -1891,20 +2476,54 @@
    "actors": [
     {
      "who": "BENNY",
-     "x": 330,
+     "x": 60,
      "y": 980,
+     "scale": 0.9,
      "enter": "none",
      "acts": [
       {
        "cue": "L218",
        "word": 5,
-       "at": 3.0,
+       "to": [
+        200
+       ],
+       "dur": 1.2
+      },
+      {
+       "cue": "L218",
+       "word": 5,
+       "at": 3,
        "act": "turn"
       }
      ]
     }
    ],
-   "explains": "At 4:20 on Tuesday the numbers and the new boss arrive together for the first time."
+   "explains": "At 4:20 on Tuesday the numbers and the new boss arrive together for the first time: interim tape, CFO plate, an empty frame, a bare chair with the call agenda.",
+   "props": [
+    {
+     "type": "exec_chair",
+     "x": 700,
+     "y": 900,
+     "k": 0.95,
+     "state": "agenda"
+    },
+    {
+     "type": "door_plate",
+     "x": 460,
+     "y": 500,
+     "k": 0.7,
+     "state": "frame"
+    }
+   ],
+   "overlays": [
+    {
+     "type": "clock",
+     "t": "4:20",
+     "ap": "PM",
+     "tz": "ET",
+     "at": 0.4
+    }
+   ]
   }
  ]
 }
