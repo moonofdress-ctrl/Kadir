@@ -1,5 +1,5 @@
 {
-  "signature": "94567af2598639bf",
+  "signature": "ccb6da7937c2123e",
   "total": 748.444,
   "lufs": -14.02,
   "true_peak_db": -1.1,
@@ -68,8 +68,8 @@
     "uncredited": []
   },
   "effects": {
-    "count": 56,
-    "per_minute": 4.5,
+    "count": 58,
+    "per_minute": 4.6,
     "list": [
       {
         "t": 19.69,
@@ -267,6 +267,11 @@
         "why": "c6s39e doc"
       },
       {
+        "t": 493.762,
+        "name": "paper",
+        "why": "c6s40b doc"
+      },
+      {
         "t": 500.632,
         "name": "card",
         "why": "c6t06 card"
@@ -295,6 +300,11 @@
         "t": 592.692,
         "name": "card",
         "why": "c7s37 card"
+      },
+      {
+        "t": 599.762,
+        "name": "paper",
+        "why": "c7s39 doc"
       },
       {
         "t": 617.713,
@@ -522,7 +532,7 @@
     {
       "place": "empty conference room",
       "set": "pitch_stage",
-      "bed": "office"
+      "bed": "studio"
     },
     {
       "place": "food truck",
@@ -622,8 +632,8 @@
   ],
   "ambience_default": true,
   "foley": {
-    "count": 264,
-    "sounds": 594
+    "count": 432,
+    "sounds": 691
   },
   "dead_air": {
     "pauses_over_250ms": 18,
