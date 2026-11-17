@@ -36,7 +36,17 @@
      "label": "NVIDIA",
      "x": 1380,
      "y": 800,
-     "scale": 0.6
+     "scale": 0.6,
+     "face": "scared",
+     "page": 0.6,
+     "acts": [
+      {
+       "cue": "L081",
+       "word": 9,
+       "pose": "panic",
+       "face": "shocked"
+      }
+     ]
     }
    ],
    "props": [
@@ -45,6 +55,12 @@
      "state": "bare",
      "x": 560,
      "y": 900
+    },
+    {
+     "type": "desk_phone",
+     "x": 1700,
+     "y": 900,
+     "k": 0.9
     }
    ],
    "explains": "At dawn the company's own printer pushes out the release that says Huang has resigned."
@@ -73,6 +89,21 @@
      "state": "bare",
      "x": 560,
      "y": 900
+    },
+    {
+     "type": "jacket",
+     "x": 560,
+     "y": 700,
+     "k": 1.0,
+     "move": {
+      "to": [
+       -300,
+       760
+      ],
+      "cue": "L081",
+      "word": 16,
+      "dur": 1.6
+     }
     }
    ],
    "explains": "The jacket is gone from the chair: all three of his titles go at once, president, chief executive and board member."
@@ -92,19 +123,33 @@
    "actors": [
     {
      "who": "JENSEN_HUANG",
-     "x": 1000,
-     "y": 930,
+     "x": 900,
+     "y": 960,
      "scale": 0.8,
+     "back": true,
+     "pose": "rest",
+     "enter": "none",
      "acts": [
       {
        "cue": "L081",
-       "word": 24,
-       "act": "turn"
+       "word": 25,
+       "to": [
+        1080,
+        900
+       ],
+       "dur": 2.6
       }
      ]
     }
    ],
-   "explains": "Effective immediately: the founder walks out through the revolving door the same day, seen only from behind."
+   "explains": "Effective immediately: the founder walks out through the revolving door the same day, seen only from behind.",
+   "props": [
+    {
+     "type": "briefcase",
+     "x": 520,
+     "y": 960
+    }
+   ]
   },
   {
    "id": "c4s04",
@@ -119,11 +164,36 @@
    "extras": 2,
    "frame": "close",
    "focus": [
-    1000,
-    560
+    960,
+    640
    ],
    "camera": "pan_left",
-   "explains": "The door keeps turning with nobody in it: no reason given and no handover date."
+   "explains": "The door keeps turning with nobody in it: no reason given and no handover date.",
+   "actors": [
+    {
+     "thing": "chip",
+     "label": "NVIDIA",
+     "x": 700,
+     "y": 960,
+     "scale": 0.45,
+     "face": "confused",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L082",
+       "word": 7,
+       "pose": "shrug"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "wall_calendar",
+     "x": 1350,
+     "y": 480
+    }
+   ]
   },
   {
    "id": "c4s05",
@@ -139,7 +209,7 @@
    "frame": "medium",
    "focus": [
     960,
-    460
+    620
    ],
    "camera": "pull_out",
    "motif": "door plate",
@@ -147,8 +217,8 @@
    "props": [
     {
      "type": "crates",
-     "x": 1300,
-     "y": 1000,
+     "x": 1250,
+     "y": 980,
      "n": 1,
      "t": "MISC"
     }
@@ -156,8 +226,7 @@
    "actors": [
     {
      "thing": "chip",
-     "label": "NVIDIA",
-     "x": 560,
+     "x": 680,
      "y": 960,
      "scale": 0.45,
      "face": "sad",
@@ -166,7 +235,8 @@
       {
        "cue": "L083",
        "word": 4,
-       "pose": "shrug"
+       "pose": "point",
+       "face": "sad"
       }
      ]
     }
@@ -196,17 +266,31 @@
    "props": [
     {
      "type": "crates",
-     "x": 1300,
-     "y": 1000,
+     "x": 1250,
+     "y": 980,
      "n": 1,
      "t": "MISC"
+    },
+    {
+     "type": "name_plate",
+     "x": 960,
+     "y": 420,
+     "k": 0.8,
+     "move": {
+      "to": [
+       1250,
+       760
+      ],
+      "cue": "L083",
+      "word": 10,
+      "dur": 0.9
+     }
     }
    ],
    "actors": [
     {
      "thing": "chip",
-     "label": "NVIDIA",
-     "x": 560,
+     "x": 680,
      "y": 960,
      "scale": 0.45,
      "face": "sad",
@@ -244,15 +328,33 @@
      "y": 950,
      "speaks": [
       "L084"
+     ],
+     "enter": "walk",
+     "acts": [
+      {
+       "cue": "L084",
+       "word": 3,
+       "pose": "point",
+       "face": "happy"
+      }
      ]
     },
     {
      "who": "MARTHA",
      "x": 1300,
-     "y": 950
+     "y": 950,
+     "prop": "pen"
     }
    ],
-   "explains": "Chad orders a plate that says boss, as if a title were a thing you buy over a counter."
+   "explains": "Chad orders a plate that says boss, as if a title were a thing you buy over a counter.",
+   "props": [
+    {
+     "type": "name_plate",
+     "x": 1000,
+     "y": 860,
+     "k": 0.9
+    }
+   ]
   },
   {
    "id": "c4k11b",
@@ -276,6 +378,15 @@
      "y": 950,
      "speaks": [
       "L085"
+     ],
+     "prop": "pen",
+     "acts": [
+      {
+       "cue": "L085",
+       "word": 1,
+       "pose": "raise",
+       "face": "deadpan"
+      }
      ]
     },
     {
@@ -309,12 +420,21 @@
      "y": 950,
      "speaks": [
       "L086"
+     ],
+     "acts": [
+      {
+       "cue": "L086",
+       "word": 1,
+       "pose": "shrug",
+       "face": "confused"
+      }
      ]
     },
     {
      "who": "MARTHA",
      "x": 1300,
-     "y": 950
+     "y": 950,
+     "prop": "pen"
     }
    ],
    "explains": "Chad does not see the difference between a permanent and a temporary boss.",
@@ -343,6 +463,15 @@
      "y": 950,
      "speaks": [
       "L087"
+     ],
+     "prop": "tape",
+     "acts": [
+      {
+       "cue": "L087",
+       "word": 0,
+       "pose": "present",
+       "face": "smug"
+      }
      ]
     },
     {
@@ -351,7 +480,17 @@
      "y": 950
     }
    ],
-   "explains": "The difference is tape: a temporary title is stuck on, not engraved."
+   "explains": "The difference is tape: a temporary title is stuck on, not engraved.",
+   "props": [
+    {
+     "type": "name_plate",
+     "x": 1000,
+     "y": 860,
+     "k": 1.0,
+     "t": "BOSS",
+     "tape": true
+    }
+   ]
   },
   {
    "id": "c4t02",
@@ -545,11 +684,44 @@
      "x": 960,
      "y": 640,
      "scale": 0.5,
-     "label": "NVIDIA",
-     "tag": "$4.0T"
+     "tag": "$4.0T",
+     "acts": [
+      {
+       "cue": "L089",
+       "word": 2,
+       "to": [
+        900,
+        640
+       ],
+       "dur": 0.4,
+       "pose": "point"
+      },
+      {
+       "cue": "L089",
+       "word": 5,
+       "to": [
+        1020,
+        640
+       ],
+       "dur": 0.4,
+       "pose": "shrug"
+      }
+     ]
     }
    ],
-   "explains": "The board makes a second chair: there is now a chair of the board as well as a chief executive."
+   "explains": "The board makes a second chair: there is now a chair of the board as well as a chief executive.",
+   "props": [
+    {
+     "type": "chair",
+     "x": 560,
+     "y": 960
+    },
+    {
+     "type": "chair",
+     "x": 1360,
+     "y": 960
+    }
+   ]
   },
   {
    "id": "c4s11",
@@ -560,7 +732,7 @@
    "opts": {
     "night": true,
     "palette": "wood",
-    "dress": "two_chairs"
+    "dress": "head_chair"
    },
    "light": {
     "x": 960,
@@ -571,12 +743,49 @@
    },
    "frame": "close",
    "focus": [
-    700,
+    960,
     600
    ],
    "camera": "tilt_down",
    "callback": "the chair still in its plastic wrap (CH1 s02)",
-   "explains": "The new chair of the board is a long-time director, and the seat has never been sat in."
+   "explains": "The new chair of the board is a long-time director, and the seat has never been sat in.",
+   "actors": [
+    {
+     "who": "HARVEY_JONES",
+     "x": 1500,
+     "y": 980,
+     "scale": 1.0,
+     "face": "neutral",
+     "pose": "hold",
+     "prop": "bill",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L089",
+       "word": 8,
+       "to": [
+        1300,
+        980
+       ],
+       "dur": 1.4
+      },
+      {
+       "cue": "L089",
+       "word": 11,
+       "pose": "present"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "piggy",
+     "x": 300,
+     "y": 1010,
+     "k": 0.5,
+     "state": "asleep"
+    }
+   ]
   },
   {
    "id": "c4t03",
@@ -621,15 +830,25 @@
      "scale": 0.6,
      "speaks": [
       "L090"
+     ],
+     "acts": [
+      {
+       "cue": "L090",
+       "word": 1,
+       "pose": "point",
+       "face": "confused"
+      }
      ]
     },
     {
      "who": "REGGIE",
      "x": 1450,
-     "y": 950
+     "y": 950,
+     "prop": "stamp"
     }
    ],
-   "explains": "CHIP asks his question again, now that the empty chair has been filled."
+   "explains": "CHIP asks his question again, now that the empty chair has been filled.",
+   "props": []
   },
   {
    "id": "c4k13b",
@@ -661,6 +880,13 @@
      "prop": "stamp",
      "speaks": [
       "L091"
+     ],
+     "acts": [
+      {
+       "cue": "L091",
+       "word": 2,
+       "pose": "point"
+      }
      ]
     },
     {
@@ -671,7 +897,8 @@
     }
    ],
    "explains": "Reggie points out the answer is not one chair but two: chief executive and board chair.",
-   "camera": "tilt_up"
+   "camera": "tilt_up",
+   "props": []
   },
   {
    "id": "c4k13c",
@@ -704,15 +931,24 @@
      "scale": 0.6,
      "speaks": [
       "L092"
+     ],
+     "acts": [
+      {
+       "cue": "L092",
+       "word": 1,
+       "pose": "think"
+      }
      ]
     },
     {
      "who": "REGGIE",
      "x": 1450,
-     "y": 950
+     "y": 950,
+     "prop": "stamp"
     }
    ],
-   "explains": "CHIP wonders whether splitting the jobs is an improvement."
+   "explains": "CHIP wonders whether splitting the jobs is an improvement.",
+   "props": []
   },
   {
    "id": "c4k13d",
@@ -744,6 +980,14 @@
      "prop": "stamp",
      "speaks": [
       "L093"
+     ],
+     "acts": [
+      {
+       "cue": "L093",
+       "word": 2,
+       "pose": "raise",
+       "face": "deadpan"
+      }
      ]
     },
     {
@@ -754,7 +998,8 @@
     }
    ],
    "explains": "Reggie will not say it is better, only that it is more chairs.",
-   "camera": "still"
+   "camera": "still",
+   "props": []
   },
   {
    "id": "c4s12",
@@ -785,7 +1030,22 @@
      "at": 0.3
     }
    ],
-   "explains": "The release's own words: the board says it has full confidence in Kress and her team."
+   "explains": "The release's own words: the board says it has full confidence in Kress and her team.",
+   "props": [
+    {
+     "type": "piggy",
+     "x": 1720,
+     "y": 1000,
+     "k": 0.55,
+     "state": "asleep"
+    },
+    {
+     "type": "desk_phone",
+     "x": 220,
+     "y": 960,
+     "k": 0.8
+    }
+   ]
   },
   {
    "id": "c4s13",
@@ -822,7 +1082,21 @@
      "at": 0.3
     }
    ],
-   "explains": "The release thanks Huang warmly, and says nothing about why he left."
+   "explains": "The release thanks Huang warmly, and says nothing about why he left.",
+   "props": [
+    {
+     "type": "jacket",
+     "x": 230,
+     "y": 1010,
+     "k": 0.7
+    },
+    {
+     "type": "desk_phone",
+     "x": 1720,
+     "y": 960,
+     "k": 0.8
+    }
+   ]
   },
   {
    "id": "c4s14",
@@ -853,7 +1127,21 @@
      "at": 0.3
     }
    ],
-   "explains": "Kress's first words as boss promise business as usual."
+   "explains": "Kress's first words as boss promise business as usual.",
+   "props": [
+    {
+     "type": "calculator",
+     "x": 230,
+     "y": 980,
+     "k": 0.9,
+     "t": "0"
+    },
+    {
+     "type": "jar",
+     "x": 1720,
+     "y": 1010
+    }
+   ]
   },
   {
    "id": "c4s15",
@@ -890,7 +1178,21 @@
      "at": 0
     }
    ],
-   "explains": "Customers, partners, developers, shareholders: everyone is named, no reason is given."
+   "explains": "Customers, partners, developers, shareholders: everyone is named, no reason is given.",
+   "props": [
+    {
+     "type": "calculator",
+     "x": 1700,
+     "y": 980,
+     "k": 0.9,
+     "t": "0"
+    },
+    {
+     "type": "jar",
+     "x": 240,
+     "y": 1010
+    }
+   ]
   },
   {
    "id": "c4k13a1",
@@ -922,6 +1224,19 @@
      "y": 950,
      "speaks": [
       "L096"
+     ],
+     "prop": "phone",
+     "acts": [
+      {
+       "cue": "L096",
+       "word": 0,
+       "to": [
+        1120,
+        950
+       ],
+       "dur": 0.8,
+       "pose": "point"
+      }
      ]
     },
     {
@@ -963,6 +1278,13 @@
      "prop": "bill",
      "speaks": [
       "L097"
+     ],
+     "acts": [
+      {
+       "cue": "L097",
+       "word": 1,
+       "pose": "present"
+      }
      ]
     },
     {
@@ -1004,12 +1326,22 @@
      "y": 950,
      "speaks": [
       "L098"
+     ],
+     "prop": "phone",
+     "acts": [
+      {
+       "cue": "L098",
+       "word": 1,
+       "pose": "shrug",
+       "face": "confused"
+      }
      ]
     },
     {
      "who": "MARTHA",
      "x": 800,
-     "y": 950
+     "y": 950,
+     "prop": "bill"
     }
    ],
    "explains": "A thank-you is not an explanation."
@@ -1046,6 +1378,14 @@
      "prop": "bill",
      "speaks": [
       "L099"
+     ],
+     "acts": [
+      {
+       "cue": "L099",
+       "word": 2,
+       "pose": "present",
+       "face": "deadpan"
+      }
      ]
     },
     {
@@ -1127,12 +1467,29 @@
     {
      "who": "HAL",
      "x": 1250,
-     "y": 950
+     "y": 950,
+     "prop": "espresso",
+     "acts": [
+      {
+       "cue": "L100",
+       "word": 12,
+       "pose": "think"
+      }
+     ]
     },
     {
      "who": "CHAD",
      "x": 650,
-     "y": 950
+     "y": 950,
+     "prop": "bill",
+     "acts": [
+      {
+       "cue": "L100",
+       "word": 14,
+       "pose": "raise",
+       "face": "happy"
+      }
+     ]
     }
    ]
   },
@@ -1165,12 +1522,22 @@
      "y": 950,
      "speaks": [
       "L101"
+     ],
+     "prop": "clipboard",
+     "acts": [
+      {
+       "cue": "L101",
+       "word": 0,
+       "pose": "hold",
+       "face": "deadpan"
+      }
      ]
     },
     {
      "who": "CHAD",
      "x": 650,
-     "y": 950
+     "y": 950,
+     "prop": "bill"
     }
    ],
    "explains": "Hal reads out the job ad: one chief executive wanted.",
@@ -1206,6 +1573,15 @@
      "y": 950,
      "speaks": [
       "L102"
+     ],
+     "prop": "bill",
+     "acts": [
+      {
+       "cue": "L102",
+       "word": 0,
+       "pose": "raise",
+       "face": "happy"
+      }
      ]
     },
     {
@@ -1245,12 +1621,22 @@
      "y": 950,
      "speaks": [
       "L103"
+     ],
+     "prop": "espresso",
+     "acts": [
+      {
+       "cue": "L103",
+       "word": 1,
+       "pose": "point",
+       "face": "smug"
+      }
      ]
     },
     {
      "who": "CHAD",
      "x": 650,
-     "y": 950
+     "y": 950,
+     "prop": "bill"
     }
    ],
    "explains": "The job is running a company worth about four trillion dollars.",
@@ -1286,6 +1672,15 @@
      "y": 950,
      "speaks": [
       "L104"
+     ],
+     "prop": "bill",
+     "acts": [
+      {
+       "cue": "L104",
+       "word": 1,
+       "pose": "present",
+       "face": "greedy"
+      }
      ]
     },
     {
@@ -1325,12 +1720,33 @@
      "y": 950,
      "speaks": [
       "L105"
+     ],
+     "acts": [
+      {
+       "cue": "L105",
+       "word": 0,
+       "pose": "point",
+       "face": "deadpan"
+      }
      ]
     },
     {
      "who": "CHAD",
      "x": 650,
-     "y": 950
+     "y": 950,
+     "prop": "bill",
+     "acts": [
+      {
+       "cue": "L105",
+       "word": 0,
+       "to": [
+        150,
+        950
+       ],
+       "dur": 0.7,
+       "face": "sad"
+      }
+     ]
     }
    ],
    "explains": "Hal waves him off: the queue for this job is short and very hard to join.",
@@ -1359,10 +1775,26 @@
      "x": 1250,
      "y": 960,
      "face": "neutral",
-     "pose": "think"
+     "pose": "think",
+     "enter": "none",
+     "acts": [
+      {
+       "cue": "L106",
+       "word": 7,
+       "pose": "hold"
+      }
+     ]
     }
    ],
-   "explains": "For now the company is run by its money person, at her same desk, calculator at hand, in the morning light."
+   "explains": "For now the company is run by its money person, at her same desk, calculator at hand, in the morning light.",
+   "props": [
+    {
+     "type": "calculator",
+     "x": 1560,
+     "y": 722,
+     "k": 1.0
+    }
+   ]
   }
  ]
 }

@@ -354,7 +354,7 @@ CHAD: Is it good fog?
 CHIP: Ask me Tuesday.
 [SCENE s52 | set: the corner office door at night: above the INTERIM tape, someone has screwed on an empty frame with a question mark inside | text: ?]
 [CARD]
-N: Three: any word on the search. As of Saturday, the fourteenth of November, no permanent chief executive has been named.
+N: Three: any word on the search. As of Tuesday morning, the seventeenth of November, no permanent chief executive has been named.
 [SCENE s53 | set: a phone booth on a rainy street in grey afternoon daylight; inside, a silhouette with no face holds the receiver; a stamp on the glass reads ONE REPORT, NOT CONFIRMED; behind, the office wall clock's hands race | text: A PERSON REPORTED AS APPROACHED]
 [CARD]
 N: On Friday, the Financial Times reported, as relayed by Reuters, that the board had approached an executive at another chip company. Nvidia's board says it has not formally engaged any candidate, and calls speculation about names "premature". It's one report.
@@ -363,7 +363,7 @@ BENNY: Is that the new boss?
 MARTHA: It's a shadow with a phone.
 [SCENE s54 | set: a document card on a dark desk under one lamp, quote highlighted, source line NVIDIA RELEASE, 12 NOV 2026]
 N: In the same release, Jones says the board expects "the company's operations, customer commitments and product roadmap to continue without interruption".
-N: As of Saturday, we found no statement from Huang on his resignation. And no report we read says whether the board's review goes on.
+N: As of Tuesday morning, we found no statement from Huang on his resignation. And the board hasn't said in public whether its review goes on.
 [SKIT k29 | set: the bus stop at night, rain, one street lamp, Benny with his phone, the chip on the bench beside him]
 CHIP: Who's in the chair on Tuesday?
 BENNY: She is.

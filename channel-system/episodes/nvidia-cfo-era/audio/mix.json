@@ -1,6 +1,6 @@
 {
-  "signature": "9c28952786fd445d",
-  "total": 747.714,
+  "signature": "94567af2598639bf",
+  "total": 748.444,
   "lufs": -14.02,
   "true_peak_db": -1.1,
   "limiter": {
@@ -27,7 +27,7 @@
       },
       "CHAD": {
         "clips": 23,
-        "gain_db": -2.7
+        "gain_db": -2.8
       },
       "MARTHA": {
         "clips": 25,
@@ -35,7 +35,7 @@
       },
       "REGGIE": {
         "clips": 13,
-        "gain_db": -0.2
+        "gain_db": -0.3
       },
       "COREWEAVE": {
         "clips": 1,
@@ -322,32 +322,32 @@
         "why": "c8t04 card"
       },
       {
-        "t": 678.512,
+        "t": 678.992,
         "name": "card",
         "why": "c8t05 card"
       },
       {
-        "t": 698.842,
+        "t": 699.322,
         "name": "paper",
         "why": "c8s54 doc"
       },
       {
-        "t": 701.428,
+        "t": 701.908,
         "name": "paper",
         "why": "c8s54b doc"
       },
       {
-        "t": 721.794,
+        "t": 722.524,
         "name": "card",
         "why": "c8t06 card"
       },
       {
-        "t": 723.186,
+        "t": 723.916,
         "name": "riser",
         "why": "c8s56 shot"
       },
       {
-        "t": 734.794,
+        "t": 735.524,
         "name": "card",
         "why": "c8t07 card"
       }
@@ -622,8 +622,8 @@
   ],
   "ambience_default": true,
   "foley": {
-    "count": 239,
-    "sounds": 557
+    "count": 264,
+    "sounds": 594
   },
   "dead_air": {
     "pauses_over_250ms": 18,
@@ -645,7 +645,7 @@
         "d": 0.35
       },
       {
-        "t": 736.68,
+        "t": 737.41,
         "d": 0.33
       }
     ]

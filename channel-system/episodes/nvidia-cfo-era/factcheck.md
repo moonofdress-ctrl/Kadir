@@ -116,3 +116,57 @@ Checked `guests.json` against brief.md safeguards (1) and (5) and the public rec
 | ANALYST_4 | none | - | "hook" nose -> straight; left UNBOUND (s34 panel 4 is GIL_LURIA). Landsberg and Weller are narrated, not drawn: do not bind | reserve |
 
 Bindings follow brief.md: only analysts the script names on screen with the outlet that quoted them (s34 "FOX BUSINESS"); they are on-record commentators, not people in the reports, so line 1's two-outlet test applies to the report subjects (unchanged rows above). Genders: Streeter woman, Ives, Kenwell, Luria, Lee men (outlet bylines and quotes use he/she). Art director: copy the `_who` name into the s34 name strips; faces neutral, poses rest/hold/present/think. Open: no photo was opened for Ives, Kenwell, Luria, Lee in this pass, so their hair colours are plausible defaults, not likenesses; the storyboard contact sheet check (second pass) confirms no mocking pose.
+
+## Currency check (17 Nov)
+
+Upload day, Tue 17 Nov 2026 (upload 18:00 TR = 10:00 ET; results about 4:20 p.m. ET, call 5:00 p.m. ET). Searched Tuesday morning; nothing dated Tue 17 Nov (premarket price, board decision, Huang statement) was found. Script and storyboard not edited (art directors at work); no re-voice. Rule applied: only what a primary source or two outlets confirm.
+
+**What moved since Sat 14 Nov**
+
+| Item | State on 17 Nov | Sources (date) | Use |
+|---|---|---|---|
+| Fri 13 Nov close | $162.85, -2.01% (confirmed) | Motley Fool via Yahoo (13 Nov); stocktitan (16 Nov) | L151 stands |
+| Mon 16 Nov close | $156.14, -4.12% ($6.71); lowest close since July 2025; Nasdaq -2.49%; new US export-licence rule for advanced chips to five countries; "several" analysts cut targets | Motley Fool (16 Nov); Yahoo Finance, Zack Chase (16 Nov, "fell 4.12%"); stocktitan (16 Nov, "down 4.12%") | description only. By our arithmetic: 156.14 x 24.10B shares = about $3.76T market value; 156.14/173.73 = 10% below the Wed 11 Nov close |
+| Tue 17 Nov premarket | not found | - | none |
+| Board decision / permanent CEO | none. Board representative to CNBC 16 Nov: "in the process of selecting a search firm for the Nvidia CEO role" (same as 13 Nov) | CNBC (16 Nov); Fortune (16 Nov: "Nobody, not even Nvidia's board, knows who will lead") | L202, L203 still true |
+| Rene Haas (FT) | still one originating report (FT 13 Nov), relayed by Reuters, Fox Business, US News; Arm "no comment" (Fox); Nvidia no comment on the name; board 13 Nov "premature" stands; Arm shares -6.72% Mon | Fox Business (13 Nov); Yahoo (16 Nov); US News/Reuters (13 Nov) | L203 still true; no second originating outlet, so no name |
+| NEW: Huang return | FT (Sun 15 Nov): Huang "had discussed coming back with allies". CNBC and ABC News (16 Nov, people familiar), NY Post (sources): the board "is not considering" reinstating him; Huang's representative "declined to comment on speculation" (CNBC). Trump said he "would not mind" a return | CNBC 16 Nov; Yahoo Finance (Chase) 16 Nov citing CNBC and ABC; NY Post via Yahoo 16 Nov; Yahoo live blog 16 Nov | not in the video (length fixed); description and pinned comment, worded as reported |
+| NEW: review status | "The board remains focused on investigating Huang's conduct, a person familiar with the matter told CNBC" (Wachtell Lipton probe); NY Post: board "tapped" Wachtell. No board statement on it | CNBC 16 Nov; Yahoo (Chase) 16 Nov; NY Post 16 Nov | makes L207's second sentence stale (see below); single anonymous source for "goes on", so not stated as fact |
+| Huang statement | none found; his representative declined to comment (Sun 15 Nov) | CNBC 16 Nov; Yahoo live blog 16 Nov (no Huang statement) | L207 first half still true; c8s54c true |
+| HSBC / Frank Lee | downgrade to Hold, target $170, Fri 13 Nov: confirmed (MarketBeat, Yahoo, 24/7 Wall St). Prior target conflicts: $365 (Yahoo live blog 13 Nov, CNBC as relayed) vs $375 (Motley Fool via Yahoo 13 Nov; 24/7 Wall St says "either"). Lee's words "shaken" / "leadership succession plan is unclear": verified 14 Nov in the Yahoo live blog; not re-found 17 Nov (the blog's URL is not in research.md; other outlets paraphrase only: "will struggle until Nvidia names a permanent CEO") | as listed | L144-L146, c6s39b/c, c6s39e stand (two outlets say $365); open: record the live-blog URL in research.md |
+| Streeter, Ives, Kenwell, Luria, Landsberg | all re-confirmed verbatim: "safe pair of hands", "lacks global status", "deep commercial ties", "we are big fans", "provide stability and reassurance", "task is daunting... concentrated much of the decision-making", "the worst-case scenario during this entire saga" | Fox Business, Eric Revell, 12 Nov 2026 4:50 p.m. EST (opened 17 Nov) | L122-L124, L147, c5s19, c5s21, c5s22 verified |
+| ~$109B expected | still true: Bloomberg $109.15B; Visible Alpha $109.3B (Fortune); LSEG about $109.2B; EPS $2.47 | Yahoo live blog 16 Nov; Fortune 16 Nov; StoneX 13 Nov | L187 stands |
+| Call time | unchanged: results about 1:20 p.m. PT, call Tue 17 Nov 2 p.m. PT / 5 p.m. ET; no revision note | PRIMARY Nvidia notice 28 Oct (opened 17 Nov); Fortune 16 Nov | L165, L166, clocks 4:20 and CALL 5:00 PM ET stand |
+
+**Every line of CH8 and every dated line elsewhere**
+
+| Line / shot | Text (short) | Status | Replacement (same id; only if the main session re-voices) |
+|---|---|---|---|
+| L005, c1s09 `$4T`, c1s10/c4s10 `$4.0T` | "By Thursday's close... about four trillion" | still true (dated Thursday) | none |
+| L016, L023, L049, L080-L082 | Mon/Tue falls, 6 Nov value, Thursday release | still true (dated) | none |
+| L037 | "Until this week, Nvidia's board had no chair" | still true | none |
+| L103 HAL | "Running four trillion dollars." | still true as a round number (about $3.76T at Monday's close, our arithmetic; cast line) | none |
+| L122-L124, c5s19/21/22 | analyst quotes | verified 17 Nov | none |
+| L130-L139 | Thursday, -$493B, CoreWeave/Nebius | still true (dated) | none |
+| L144-L147, c6s39b-e | HSBC, Lee, Landsberg | still true; $365 vs $375 conflict noted | none |
+| L151, c6t06 | "On Friday, the shares closed at about $163... StoneX about thirty percent below" | still true (dated Friday); stale as "latest price" | none recommended (a Monday line would need a new record-high base: Yahoo says Friday was 32% below the 6 Oct record, ep. 1's $243.37 gives 33%). Monday close goes to the description |
+| L156 | "After this week the slice is smaller" | still true | none |
+| L165-L166, c7s18, c7s19, c7s20 | 17 Nov, 4:20, 5:00, quarter ended 25 Oct | verified (primary) | none |
+| L179, L180, L186 | first call without Huang; Weller | still true | none |
+| L187-L189 | ~$109B, $108B guide, 74%, no China | still true | none |
+| L197 | first forecast with Kress as interim boss | still true | none |
+| L202, c8t04, c8s52 | "As of Saturday, the fourteenth of November, no permanent chief executive has been named." | still true but stale date | "Three: any word on the search. As of Tuesday morning, the seventeenth of November, no permanent chief executive has been named." (+1 word) |
+| L203, c8t05, c8s53 `A PERSON REPORTED AS APPROACHED` | FT via Reuters; board "premature"; one report | still true | none |
+| L204-L205 | cast | joke | none |
+| L206, c8s54/c8s54b | Jones quote, release 12 Nov | verified (primary) | none |
+| L207 | "As of Saturday, we found no statement from Huang on his resignation. And no report we read says whether the board's review goes on." | first sentence still true; second STALE (CNBC 16 Nov, one person familiar: the board "remains focused on investigating Huang's conduct") | "As of Tuesday morning, we found no statement from Huang on his resignation. And the board hasn't said in public whether its review goes on." (2 words shorter) |
+| c8s54c `HUANG: NO STATEMENT FOUND` | sign | still true | none |
+| c8s54d `REVIEW: STILL ON?` | sign (a question) | still true (no board statement) | none |
+| L208-L218, c8s56 calculator `4.0`, clocks 4:20, agenda CALL 5:00 PM ET | Kress on the call; "Nobody knows that yet" | still true (Fortune 16 Nov: Kress leads the call) | none |
+
+**Shot ids whose screen text must change: none.** If L202 and L207 are re-voiced, their shots (c8t04, c8s52, c8s52b; c8s54c, c8s54d) keep their text and only re-time to the new clips.
+
+**If no re-voice (the caller's instruction): nothing in the video is false**, because every dated line carries its date ("As of Saturday"). Then the news goes into the description and the pinned comment at upload, worded:
+"Update, Tue 17 Nov, before the results: Nvidia closed Monday at $156.14, down 4.1% (Motley Fool, Yahoo Finance). The Financial Times reported Huang had discussed a return with allies; CNBC and ABC News, citing people familiar with the matter, report the board is not considering it. Huang's representative declined to comment (CNBC). No permanent CEO has been named; the board says it is still selecting a search firm (CNBC)."
+
+Sources opened 17 Nov: fool.com/coverage/stock-market-today/2026/11/16/...; stocktitan.net/articles/stock-market-today-live-november-16-2026; cnbc.com/2026/11/16/nvidia-ceo-jensen-huang.html; finance.yahoo.com (Chase, "Nvidia directors rule out Huang return", 16 Nov; NY Post "board not considering reinstating", 16 Nov; live blog "Interim CEO Kress prepares for Q3 earnings", 16 Nov; Motley Fool "Stock Market Today, Nov. 13"; 24/7 Wall St "HSBC just downgraded Nvidia", 14 Nov); foxbusiness.com (Revell 12 Nov; "new candidate emerges", 13 Nov); fortune.com/2026/11/16/nvidia-stock-earnings-jensen-huang-colette-kress/; marketbeat.com HSBC alert 13 Nov; investor.nvidia.com call notice (28 Oct).
