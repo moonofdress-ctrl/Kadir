@@ -27,7 +27,8 @@
    "opts": {
     "night": false,
     "palette": "violet",
-    "view": "wide"
+    "view": "wide",
+    "chair": "bare"
    },
    "camera": "pan_right",
    "actors": [
@@ -76,7 +77,8 @@
    "opts": {
     "night": false,
     "palette": "violet",
-    "view": "wide"
+    "view": "wide",
+    "chair": "bare"
    },
    "frame": "close",
    "focus": [
@@ -211,7 +213,7 @@
    "frame": "medium",
    "focus": [
     960,
-    620
+    640
    ],
    "camera": "pull_out",
    "motif": "door plate",
@@ -220,7 +222,7 @@
     {
      "type": "crates",
      "x": 1250,
-     "y": 980,
+     "y": 870,
      "n": 1,
      "t": "MISC"
     }
@@ -229,7 +231,7 @@
     {
      "thing": "chip",
      "x": 680,
-     "y": 960,
+     "y": 890,
      "scale": 0.45,
      "face": "sad",
      "enter": "none",
@@ -269,7 +271,7 @@
     {
      "type": "crates",
      "x": 1250,
-     "y": 980,
+     "y": 870,
      "n": 1,
      "t": "MISC"
     },
@@ -281,7 +283,7 @@
      "move": {
       "to": [
        1250,
-       760
+       700
       ],
       "cue": "L083",
       "word": 10,
@@ -293,7 +295,7 @@
     {
      "thing": "chip",
      "x": 680,
-     "y": 960,
+     "y": 890,
      "scale": 0.45,
      "face": "sad",
      "enter": "none",
